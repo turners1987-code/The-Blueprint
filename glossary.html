@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary — The Blueprint</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .glossary-page { padding-top: 60px; }
+    .glossary-header { padding: var(--space-2xl) 0; border-bottom: 1px solid var(--border); }
+    .glossary-search { width: 100%; max-width: 500px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; color: var(--text-primary); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-lg); outline: none; transition: border-color var(--transition); }
+    .glossary-search:focus { border-color: var(--gold-dark); }
+    .glossary-search::placeholder { color: var(--text-muted); }
+    .glossary-body { padding: var(--space-2xl) 0; }
+    .glossary-letter { font-family: var(--font-display); font-weight: 900; font-size: 2rem; color: var(--gold); margin: var(--space-xl) 0 var(--space-md); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border); }
+    .glossary-entry { padding: var(--space-md) 0; border-bottom: 1px solid var(--border); }
+    .glossary-entry:last-child { border-bottom: none; }
+    .glossary-entry-term { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-primary); margin-bottom: var(--space-xs); }
+    .glossary-entry-def { font-size: 0.95rem; color: var(--text-secondary); max-width: 70ch; }
+    .glossary-entry-tag { font-size: 0.75rem; color: var(--text-muted); margin-top: var(--space-xs); font-family: var(--font-mono); }
+    .glossary-entry.hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container container--wide">
+      <a href="index.html" class="nav-logo">The <span>Blueprint</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#course">Modules</a></li>
+        <li><a href="glossary.html" class="active">Glossary</a></li>
+        <li><a href="index.html" class="btn btn--ghost btn--sm">← Home</a></li>
+      </ul>
+    </div>
+    <div class="nav-progress-bar"></div>
+  </nav>
+
+  <div class="glossary-page">
+    <header class="glossary-header">
+      <div class="container">
+        <div class="eyebrow">Reference</div>
+        <h1>Glossary</h1>
+        <p class="lead mt-sm">Every term used in The Blueprint — defined clearly, in plain language.</p>
+        <input type="text" class="glossary-search" id="glossary-search" placeholder="Search terms..." autocomplete="off">
+      </div>
+    </header>
+
+    <div class="glossary-body">
+      <div class="container" id="glossary-container">
+
+        <div class="glossary-letter">D</div>
+        <div class="glossary-entry" data-term="delta">
+          <div class="glossary-entry-term">Delta</div>
+          <div class="glossary-entry-def">In footprint charts, delta is the difference between buying volume (contracts traded at the ask) and selling volume (contracts traded at the bid). Positive delta means more buying; negative delta means more selling. It reveals the aggression behind a move.</div>
+          <div class="glossary-entry-tag">Footprint · Order Flow</div>
+        </div>
+        <div class="glossary-entry" data-term="daily max loss">
+          <div class="glossary-entry-term">Daily Max Loss (MLL)</div>
+          <div class="glossary-entry-def">The maximum amount you're allowed to lose in a single trading session. Once hit, you stop trading for the day — no exceptions. Protects your account from catastrophic drawdown on bad days.</div>
+          <div class="glossary-entry-tag">Risk Management</div>
+        </div>
+
+        <div class="glossary-letter">E</div>
+        <div class="glossary-entry" data-term="ema exponential moving average">
+          <div class="glossary-entry-term">EMA (Exponential Moving Average)</div>
+          <div class="glossary-entry-def">A moving average that gives more weight to recent price data, making it more responsive to current conditions than a simple moving average. The 9 EMA is the primary trend indicator in The Blueprint — it shows the immediate trend direction and acts as dynamic support/resistance.</div>
+          <div class="glossary-entry-tag">Technical Analysis · Indicator</div>
+        </div>
+
+        <div class="glossary-letter">F</div>
+        <div class="glossary-entry" data-term="footprint chart">
+          <div class="glossary-entry-term">Footprint Chart</div>
+          <div class="glossary-entry-def">An advanced chart type that shows the volume traded at each price level within each candle, split into buying (bid) and selling (ask) volume. Reveals the actual order flow behind price movement — who is in control at any given level.</div>
+          <div class="glossary-entry-tag">Order Flow · Advanced</div>
+        </div>
+        <div class="glossary-entry" data-term="fomo fear of missing out">
+          <div class="glossary-entry-term">FOMO (Fear of Missing Out)</div>
+          <div class="glossary-entry-def">The emotional urge to enter a trade because price is moving without you. One of the most destructive forces in trading — it leads to chasing moves, ignoring confirmation, and abandoning your rules. The Blueprint explicitly addresses FOMO in every setup's common mistakes.</div>
+          <div class="glossary-entry-tag">Psychology</div>
+        </div>
+        <div class="glossary-entry" data-term="futures">
+          <div class="glossary-entry-term">Futures</div>
+          <div class="glossary-entry-def">A financial contract to buy or sell an asset at a predetermined price at a specified time in the future. Futures trade on exchanges, are leveraged, and have no PDT rule restriction. MNQ is a micro futures contract tracking the Nasdaq-100 index.</div>
+          <div class="glossary-entry-tag">Instrument</div>
+        </div>
+
+        <div class="glossary-letter">G</div>
+        <div class="glossary-entry" data-term="gap">
+          <div class="glossary-entry-term">Gap</div>
+          <div class="glossary-entry-def">When today's opening price is different from yesterday's closing price, leaving an unfilled area on the chart. Gaps have a statistical tendency to fill — meaning price often returns to close the gap — forming the basis of the Gap Fill setup.</div>
+          <div class="glossary-entry-tag">Price Action</div>
+        </div>
+        <div class="glossary-entry" data-term="globex overnight session">
+          <div class="glossary-entry-term">Globex (Overnight Session)</div>
+          <div class="glossary-entry-def">The electronic trading session for futures that runs outside regular market hours. For MNQ, Globex runs nearly 23 hours a day. The overnight high (ON High) and low (ON Low) from Globex are key levels marked before each regular session.</div>
+          <div class="glossary-entry-tag">Futures · Session</div>
+        </div>
+
+        <div class="glossary-letter">K</div>
+        <div class="glossary-entry" data-term="kill switch kill condition">
+          <div class="glossary-entry-term">Kill Switch / Kill Condition</div>
+          <div class="glossary-entry-def">A specific price action signal that invalidates a trade idea and requires an immediate exit. Each setup in The Blueprint has defined kill conditions — non-negotiable rules for when the original thesis is dead and you must get out.</div>
+          <div class="glossary-entry-tag">Risk Management · Setup Rules</div>
+        </div>
+
+        <div class="glossary-letter">L</div>
+        <div class="glossary-entry" data-term="long">
+          <div class="glossary-entry-term">Long / Going Long</div>
+          <div class="glossary-entry-def">Buying a contract or asset with the expectation that price will rise. You profit when price goes up. The opposite of short.</div>
+          <div class="glossary-entry-tag">Basics</div>
+        </div>
+        <div class="glossary-entry" data-term="limit order">
+          <div class="glossary-entry-term">Limit Order</div>
+          <div class="glossary-entry-def">An order to buy or sell at a specific price or better. A buy limit order fills at or below your price; a sell limit fills at or above. You control the price but not whether the order fills.</div>
+          <div class="glossary-entry-tag">Order Types</div>
+        </div>
+
+        <div class="glossary-letter">M</div>
+        <div class="glossary-entry" data-term="mnq micro e-mini nasdaq">
+          <div class="glossary-entry-term">MNQ (Micro E-Mini Nasdaq-100)</div>
+          <div class="glossary-entry-def">A micro futures contract that tracks the Nasdaq-100 index at 1/10th the size of the standard NQ contract. Each point is worth $2. MNQ is ideal for small accounts because of its lower margin requirements and tight spreads. It is the primary instrument in The Blueprint.</div>
+          <div class="glossary-entry-tag">Instrument</div>
+        </div>
+
+        <div class="glossary-letter">O</div>
+        <div class="glossary-entry" data-term="orb opening range breakout">
+          <div class="glossary-entry-term">ORB (Opening Range Breakout)</div>
+          <div class="glossary-entry-def">A setup based on the price range established in the first 5 or 15 minutes of the regular session. A breakout of that range, followed by a successful retest with footprint confirmation, provides a directional entry in the breakout direction.</div>
+          <div class="glossary-entry-tag">Setup</div>
+        </div>
+
+        <div class="glossary-letter">P</div>
+        <div class="glossary-entry" data-term="poc point of control">
+          <div class="glossary-entry-term">POC (Point of Control)</div>
+          <div class="glossary-entry-def">The price level with the highest traded volume in a given session or time period. The POC represents the "fairest price" where the most business was done — it acts as a magnet and key support/resistance level.</div>
+          <div class="glossary-entry-tag">Volume Profile</div>
+        </div>
+        <div class="glossary-entry" data-term="prior day high low pdh pdl">
+          <div class="glossary-entry-term">PD High / PD Low (Prior Day High/Low)</div>
+          <div class="glossary-entry-def">The highest and lowest prices reached in yesterday's regular trading session. These are primary named levels — key reference points that frequently act as resistance (PDH) and support (PDL) the following day.</div>
+          <div class="glossary-entry-tag">Key Levels</div>
+        </div>
+
+        <div class="glossary-letter">R</div>
+        <div class="glossary-entry" data-term="r risk reward">
+          <div class="glossary-entry-term">R (Risk Unit)</div>
+          <div class="glossary-entry-def">The dollar amount risked on a single trade, based on your stop loss. If your stop is 10 ticks away and each tick is $0.50, your R = $5. All targets in The Blueprint are expressed as multiples of R (e.g., 2R = two times your risk). This standardizes performance regardless of position size.</div>
+          <div class="glossary-entry-tag">Risk Management</div>
+        </div>
+
+        <div class="glossary-letter">S</div>
+        <div class="glossary-entry" data-term="short going short">
+          <div class="glossary-entry-term">Short / Going Short</div>
+          <div class="glossary-entry-def">Selling a contract you don't own, with the expectation that price will fall, allowing you to buy it back cheaper. You profit when price goes down. In futures, shorting is as easy as going long — no borrowing required.</div>
+          <div class="glossary-entry-tag">Basics</div>
+        </div>
+        <div class="glossary-entry" data-term="stop order stop loss">
+          <div class="glossary-entry-term">Stop Order / Stop Loss</div>
+          <div class="glossary-entry-def">An order that triggers when price reaches a specified level, converting to a market order at that point. Used as a stop loss to limit losses when a trade goes against you. Every trade in The Blueprint has a defined stop loss before entry.</div>
+          <div class="glossary-entry-tag">Order Types · Risk Management</div>
+        </div>
+
+        <div class="glossary-letter">V</div>
+        <div class="glossary-entry" data-term="vah val value area high low">
+          <div class="glossary-entry-term">VAH / VAL (Value Area High/Low)</div>
+          <div class="glossary-entry-def">The upper and lower boundaries of the Value Area — the price range where approximately 70% of yesterday's volume was traded. VAH and VAL are primary named levels. Price inside the value area is "accepted"; price outside is testing new territory.</div>
+          <div class="glossary-entry-tag">Volume Profile · Key Levels</div>
+        </div>
+        <div class="glossary-entry" data-term="vwap volume weighted average price">
+          <div class="glossary-entry-term">VWAP (Volume Weighted Average Price)</div>
+          <div class="glossary-entry-def">The average price weighted by volume for the current session. Acts as a dynamic support/resistance and a measure of fair value intraday. Institutional traders use VWAP as a benchmark — price above VWAP is generally bullish; below is bearish.</div>
+          <div class="glossary-entry-tag">Indicator · Key Level</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/progress.js"></script>
+  <script>
+    // Glossary search
+    const searchInput = document.getElementById('glossary-search');
+    const entries = document.querySelectorAll('.glossary-entry');
+    const letters = document.querySelectorAll('.glossary-letter');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.toLowerCase().trim();
+      entries.forEach(entry => {
+        const term = entry.dataset.term || '';
+        entry.classList.toggle('hidden', q && !term.includes(q));
+      });
+      // Hide letter headers with no visible entries
+      letters.forEach(letter => {
+        let next = letter.nextElementSibling;
+        let hasVisible = false;
+        while (next && !next.classList.contains('glossary-letter')) {
+          if (!next.classList.contains('hidden')) hasVisible = true;
+          next = next.nextElementSibling;
+        }
+        letter.style.display = (!q || hasVisible) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
