@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toothbrush Therapy — The Blueprint</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+  <style>
+
+    .tb-hero {
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tb-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--cyan), transparent);
+    }
+
+    .tb-hero-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .tb-hero h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: var(--space-lg);
+    }
+
+    .tb-hero h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--gold);
+      opacity: 0.5;
+    }
+
+    .tb-tagline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: var(--space-lg);
+    }
+
+    .tb-tagline em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    /* Habit cards */
+    .habits-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+      margin: var(--space-2xl) 0;
+    }
+
+    .habit-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-xl);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-lg);
+      align-items: start;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .habit-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .habit-card:hover {
+      border-color: var(--gold-dark);
+      background: var(--bg-elevated);
+      transform: translateX(4px);
+    }
+
+    .habit-card:hover::before {
+      opacity: 1;
+    }
+
+    .habit-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .habit-card:hover .habit-icon {
+      border-color: var(--gold-dark);
+      background: var(--gold-glow);
+    }
+
+    .habit-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .habit-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+    }
+
+    .habit-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 100%;
+    }
+
+    .habit-desc strong {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* Closer */
+    .tb-closer {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-2xl);
+      text-align: center;
+      position: relative;
+      margin: var(--space-2xl) 0;
+      overflow: hidden;
+    }
+
+    .tb-closer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 40%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .tb-closer::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 40%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .tb-closer-text {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      line-height: 1.5;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .tb-closer-text span {
+      color: var(--gold);
+    }
+
+    /* Toothbrush icon decoration */
+    .tb-decoration {
+      font-size: 3rem;
+      margin-bottom: var(--space-md);
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      .habit-card {
+        padding: var(--space-md) var(--space-lg);
+        gap: var(--space-md);
+      }
+      .habit-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="container container--wide">
+      <a href="../index.html" class="nav-logo">The <span>Blueprint</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#course">Modules</a></li>
+        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../index.html" class="btn btn--ghost btn--sm">← Home</a></li>
+      </ul>
+    </div>
+    <div class="nav-progress-bar"></div>
+  </nav>
+
+  <div class="module-page">
+
+    <!-- HERO -->
+    <header class="tb-hero">
+      <div class="container">
+        <div class="tb-hero-label">The Blueprint — Core Philosophy</div>
+        <h1>
+          Toothbrush
+          <span>Therapy</span>
+        </h1>
+        <div class="tb-tagline"><em>Do the common uncommonly well.</em></div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <div class="module-body">
+      <div class="container">
+
+        <p class="lead" style="max-width: 60ch;">Every successful trader has a set of habits they do without thinking. Not strategies. Not secrets. Just simple, repeatable actions done consistently — every session, every day. This is yours.</p>
+
+        <!-- HABITS -->
+        <div class="habits-grid mt-xl">
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">🎯</div>
+            <div class="habit-content">
+              <div class="habit-name">Know Your Bias</div>
+              <div class="habit-desc">Before the open — is today a gap fill, a balance day, or a trend day? Know it before price moves.</div>
+            </div>
+          </div>
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">📋</div>
+            <div class="habit-content">
+              <div class="habit-name">Have A Plan</div>
+              <div class="habit-desc"><strong>"If price does X, I will do Y."</strong> Write it down. Say it out loud. Walk in with a roadmap, not a reaction.</div>
+            </div>
+          </div>
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">♟️</div>
+            <div class="habit-content">
+              <div class="habit-name">Have A Second Plan</div>
+              <div class="habit-desc"><strong>"If my first plan fails because X happens, I will do ABC."</strong> The market will surprise you. Be ready.</div>
+            </div>
+          </div>
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">🎯</div>
+            <div class="habit-content">
+              <div class="habit-name">Set Your Process Goal</div>
+              <div class="habit-desc">Pick one weakness. Set one goal. Say it out loud before you trade. <strong>"Today I will wait for confirmation before entering."</strong></div>
+            </div>
+          </div>
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">📖</div>
+            <div class="habit-content">
+              <div class="habit-name">Only Trade Your Setups</div>
+              <div class="habit-desc">Not someone else's. Not a gut feeling. Yours. Refined. Trusted.</div>
+            </div>
+          </div>
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">🛑</div>
+            <div class="habit-content">
+              <div class="habit-name">Honor Your Stop</div>
+              <div class="habit-desc">Always. No exceptions. Ever.</div>
+            </div>
+          </div>
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">📊</div>
+            <div class="habit-content">
+              <div class="habit-name">Review and Grade Every Trade</div>
+              <div class="habit-desc">A+, B, or C. One line minimum. Every trade. Every day.</div>
+            </div>
+          </div>
+
+          <div class="habit-card scroll-reveal">
+            <div class="habit-icon">🤝</div>
+            <div class="habit-content">
+              <div class="habit-name">Find Your People</div>
+              <div class="habit-desc">Find a trading partner or group who speaks the language and shares the passion. Talk about it regularly. The competition makes you better. The community keeps you honest.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CLOSER -->
+        <div class="tb-closer scroll-reveal">
+          <div class="tb-decoration">🪥</div>
+          <p class="tb-closer-text">
+            When these eight habits become as automatic as brushing your teeth —<br>
+            you will be well on your way to becoming<br>
+            <span>a disciplined trader.</span>
+          </p>
+        </div>
+
+        <!-- NAV -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <a href="../index.html" class="module-nav-title">Course Home</a>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next →</span>
+            <a href="00-welcome.html" class="module-nav-title">Welcome & Orientation</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/progress.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
