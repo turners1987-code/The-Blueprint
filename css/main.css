@@ -203,16 +203,20 @@ code {
 
 .nav-mobile-menu {
   display: none;
-  position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(4, 12, 24, 0.98);
-  backdrop-filter: blur(16px);
-  z-index: 99;
+  z-index: 9999;
   flex-direction: column;
-  padding: var(--space-xl) var(--space-lg);
+  padding: 80px 32px 40px;
   overflow-y: auto;
-  border-top: 1px solid rgba(56,217,255,0.18);
 }
-.nav-mobile-menu.open { display: flex; animation: fadeIn 0.2s ease forwards; }
+.nav-mobile-menu.open {
+  display: flex !important;
+}
 
 .nav-mobile-links { list-style: none; display: flex; flex-direction: column; gap: 2px; flex: 1; }
 .nav-mobile-links li a {
