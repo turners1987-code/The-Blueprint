@@ -5,15 +5,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Mobile nav toggle ──────────────────────────────────────
-const navToggle = document.getElementById('nav-hamburger');
+  const navToggle = document.getElementById('nav-hamburger');
 const navMenu   = document.getElementById('nav-mobile-menu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+  }
 
-if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    navMenu.classList.toggle('open');
-  });
-}
   // ── Quiz logic ─────────────────────────────────────────────
   document.querySelectorAll('.quiz-block').forEach(quiz => {
     const options  = quiz.querySelectorAll('.quiz-option');
