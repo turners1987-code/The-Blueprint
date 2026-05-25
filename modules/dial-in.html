@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dial In — Find Your Path — The Blueprint</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+
+    .dial-page {
+      padding-top: 60px;
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .dial-hero {
+      padding: var(--space-2xl) 0 var(--space-xl);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dial-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--cyan), transparent);
+    }
+
+    .dial-hero-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--space-md);
+    }
+
+    .dial-hero h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      line-height: 0.9;
+      margin-bottom: var(--space-md);
+    }
+
+    .dial-hero h1 span {
+      color: transparent;
+      -webkit-text-stroke: 2px var(--gold);
+      opacity: 0.5;
+      display: block;
+    }
+
+    .dial-hero-sub {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 48ch;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── QUIZ WRAPPER ── */
+    .quiz-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    /* ── PROGRESS BAR ── */
+    .quiz-progress-track {
+      width: 100%;
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      margin-bottom: var(--space-2xl);
+      overflow: hidden;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--cyan));
+      border-radius: 2px;
+      transition: width 0.5s ease;
+      width: 0%;
+    }
+
+    .quiz-step-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.15em;
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    /* ── QUESTION CARD ── */
+    .question-card {
+      display: none;
+      animation: fadeUp 0.4s ease forwards;
+    }
+
+    .question-card.active {
+      display: block;
+    }
+
+    .question-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.3rem, 4vw, 1.8rem);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: var(--space-xl);
+      text-align: center;
+    }
+
+    .question-text span {
+      color: var(--gold);
+    }
+
+    /* ── ANSWER OPTIONS ── */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .option-btn {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      width: 100%;
+      text-align: left;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-xl);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .option-btn::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .option-btn:hover {
+      border-color: var(--gold-dark);
+      background: var(--bg-elevated);
+      transform: translateX(4px);
+    }
+
+    .option-btn:hover::before {
+      opacity: 1;
+    }
+
+    .option-btn.selected {
+      border-color: var(--gold);
+      background: var(--gold-glow);
+    }
+
+    .option-btn.selected::before {
+      opacity: 1;
+    }
+
+    .option-letter {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      min-width: 28px;
+      transition: color 0.25s ease;
+    }
+
+    .option-btn:hover .option-letter,
+    .option-btn.selected .option-letter {
+      color: var(--gold);
+    }
+
+    .option-text {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      transition: color 0.25s ease;
+    }
+
+    .option-btn:hover .option-text,
+    .option-btn.selected .option-text {
+      color: var(--text-primary);
+    }
+
+    /* ── NAV BUTTONS ── */
+    .quiz-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: var(--space-xl);
+      gap: var(--space-md);
+    }
+
+    .btn-back {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .btn-back:hover {
+      border-color: var(--border-light);
+      color: var(--text-secondary);
+    }
+
+    .btn-next {
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .btn-next.enabled {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .btn-next.enabled:hover {
+      background: #ffc030;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px var(--gold-glow);
+    }
+
+    /* ── RESULT SCREEN ── */
+    .result-screen {
+      display: none;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .result-screen.active {
+      display: block;
+    }
+
+    .result-profile-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: var(--space-md);
+    }
+
+    .result-name {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(3rem, 10vw, 6rem);
+      text-transform: uppercase;
+      line-height: 0.9;
+      text-align: center;
+      color: var(--text-primary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .result-name .the {
+      display: block;
+      font-size: 0.4em;
+      color: var(--text-muted);
+      letter-spacing: 0.3em;
+      margin-bottom: 4px;
+    }
+
+    .result-tagline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .result-divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--cyan));
+      margin: 0 auto var(--space-2xl);
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+
+    .result-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+    }
+
+    .result-card-label {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: var(--space-sm);
+    }
+
+    .result-card-content {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .result-card-content strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .result-instruments {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-top: var(--space-sm);
+    }
+
+    .instrument-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 3px 8px;
+      color: var(--cyan);
+    }
+
+    .result-warning {
+      background: var(--bg-elevated);
+      border-left: 3px solid var(--red);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: var(--space-md) var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .result-warning-label {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: var(--space-xs);
+    }
+
+    .result-warning p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .result-cta {
+      text-align: center;
+      padding: var(--space-xl) 0;
+    }
+
+    .result-cta p {
+      text-align: center;
+      margin: 0 auto var(--space-lg);
+      font-size: 0.95rem;
+    }
+
+    .retake-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--transition);
+      margin-top: var(--space-md);
+    }
+
+    .retake-btn:hover {
+      border-color: var(--border-light);
+      color: var(--text-secondary);
+    }
+
+    /* Profile accent colors */
+    .profile-newyorker .result-name { color: var(--gold); }
+    .profile-londoner .result-name { color: var(--cyan); }
+    .profile-ghost .result-name { color: #a855f7; }
+    .profile-wanderer .result-name { color: var(--green); }
+
+    .profile-newyorker .result-divider { background: linear-gradient(90deg, var(--gold), #ffc030); }
+    .profile-londoner .result-divider { background: linear-gradient(90deg, var(--cyan), #00e8ff); }
+    .profile-ghost .result-divider { background: linear-gradient(90deg, #a855f7, #7c3aed); }
+    .profile-wanderer .result-divider { background: linear-gradient(90deg, var(--green), var(--cyan)); }
+
+    @media (max-width: 600px) {
+      .result-grid { grid-template-columns: 1fr; }
+      .quiz-wrapper { padding: var(--space-xl) var(--space-md); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="container container--wide">
+      <a href="../index.html" class="nav-logo">The <span>Blueprint</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#course">Modules</a></li>
+        <li><a href="toothbrush-therapy.html">Toothbrush Therapy</a></li>
+        <li><a href="../glossary.html">Glossary</a></li>
+        <li><a href="../index.html" class="btn btn--ghost btn--sm">← Home</a></li>
+      </ul>
+    </div>
+    <div class="nav-progress-bar"></div>
+  </nav>
+
+  <div class="dial-page">
+
+    <!-- HERO -->
+    <header class="dial-hero">
+      <div class="container">
+        <div class="dial-hero-label">The Blueprint — Trader Profile</div>
+        <h1>
+          Dial
+          <span>In</span>
+        </h1>
+        <p class="dial-hero-sub">Five questions. Your profile. Your path. Let's find where you belong.</p>
+      </div>
+    </header>
+
+    <!-- QUIZ -->
+    <div class="quiz-wrapper">
+
+      <!-- Progress -->
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-fill" id="progressFill"></div>
+      </div>
+      <div class="quiz-step-label" id="stepLabel">Question 1 of 5</div>
+
+      <!-- Q1 -->
+      <div class="question-card active" id="q1">
+        <div class="question-text">When are you most likely to <span>sit down and trade?</span></div>
+        <div class="options-grid">
+          <button class="option-btn" data-q="1" data-profile="newyorker" data-weight="3">
+            <span class="option-letter">A</span>
+            <span class="option-text">During the day — market hours (9:30am–4pm ET)</span>
+          </button>
+          <button class="option-btn" data-q="1" data-profile="londoner" data-weight="3">
+            <span class="option-letter">B</span>
+            <span class="option-text">Early morning — before most people are up (3am–9am ET)</span>
+          </button>
+          <button class="option-btn" data-q="1" data-profile="ghost" data-weight="3">
+            <span class="option-letter">C</span>
+            <span class="option-text">Nights and weekends — that's all I've got</span>
+          </button>
+          <button class="option-btn" data-q="1" data-profile="wanderer" data-weight="3">
+            <span class="option-letter">D</span>
+            <span class="option-text">My schedule is all over the place</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <div></div>
+          <button class="btn-next" id="next1" onclick="nextQuestion(1)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-card" id="q2">
+        <div class="question-text">Where are you <span>right now?</span></div>
+        <div class="options-grid">
+          <button class="option-btn" data-q="2" data-profile="newyorker" data-weight="2">
+            <span class="option-letter">A</span>
+            <span class="option-text">Complete beginner — I know almost nothing yet</span>
+          </button>
+          <button class="option-btn" data-q="2" data-profile="newyorker" data-weight="1" data-secondary="londoner">
+            <span class="option-letter">B</span>
+            <span class="option-text">I know the basics but haven't traded live</span>
+          </button>
+          <button class="option-btn" data-q="2" data-profile="newyorker" data-weight="1" data-secondary="ghost">
+            <span class="option-letter">C</span>
+            <span class="option-text">I've traded before but I'm looking for a real framework</span>
+          </button>
+          <button class="option-btn" data-q="2" data-profile="wanderer" data-weight="2">
+            <span class="option-letter">D</span>
+            <span class="option-text">I'm active but inconsistent — I need discipline</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevQuestion(2)">← Back</button>
+          <button class="btn-next" id="next2" onclick="nextQuestion(2)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-card" id="q3">
+        <div class="question-text">What <span>excites you most?</span></div>
+        <div class="options-grid">
+          <button class="option-btn" data-q="3" data-profile="newyorker" data-weight="3">
+            <span class="option-letter">A</span>
+            <span class="option-text">Trading the Nasdaq — the most talked-about market in the world</span>
+          </button>
+          <button class="option-btn" data-q="3" data-profile="londoner" data-weight="3">
+            <span class="option-letter">B</span>
+            <span class="option-text">Currency markets — global money flows, European opens</span>
+          </button>
+          <button class="option-btn" data-q="3" data-profile="ghost" data-weight="3">
+            <span class="option-letter">C</span>
+            <span class="option-text">Crypto — Bitcoin, Ethereum, markets that never sleep</span>
+          </button>
+          <button class="option-btn" data-q="3" data-profile="wanderer" data-weight="3">
+            <span class="option-letter">D</span>
+            <span class="option-text">All of it — I want to learn every market</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevQuestion(3)">← Back</button>
+          <button class="btn-next" id="next3" onclick="nextQuestion(3)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question-card" id="q4">
+        <div class="question-text">How do you feel about <span>volatility?</span></div>
+        <div class="options-grid">
+          <button class="option-btn" data-q="4" data-profile="newyorker" data-weight="2">
+            <span class="option-letter">A</span>
+            <span class="option-text">I want structure and predictability first</span>
+          </button>
+          <button class="option-btn" data-q="4" data-profile="londoner" data-weight="2">
+            <span class="option-letter">B</span>
+            <span class="option-text">I can handle some volatility if the setup is clear</span>
+          </button>
+          <button class="option-btn" data-q="4" data-profile="ghost" data-weight="2">
+            <span class="option-letter">C</span>
+            <span class="option-text">I actually like volatility — bigger moves, bigger opportunity</span>
+          </button>
+          <button class="option-btn" data-q="4" data-profile="wanderer" data-weight="2">
+            <span class="option-letter">D</span>
+            <span class="option-text">Depends on the day — I adapt to whatever the market gives me</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevQuestion(4)">← Back</button>
+          <button class="btn-next" id="next4" onclick="nextQuestion(4)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question-card" id="q5">
+        <div class="question-text">What does <span>success</span> look like in the next 6 months?</div>
+        <div class="options-grid">
+          <button class="option-btn" data-q="5" data-profile="newyorker" data-weight="2">
+            <span class="option-letter">A</span>
+            <span class="option-text">Learn the framework, trade consistently on sim — build the habit first</span>
+          </button>
+          <button class="option-btn" data-q="5" data-profile="londoner" data-weight="2">
+            <span class="option-letter">B</span>
+            <span class="option-text">Get comfortable with one real setup I can repeat every day</span>
+          </button>
+          <button class="option-btn" data-q="5" data-profile="ghost" data-weight="2">
+            <span class="option-letter">C</span>
+            <span class="option-text">Pass a prop firm evaluation and get funded</span>
+          </button>
+          <button class="option-btn" data-q="5" data-profile="wanderer" data-weight="3">
+            <span class="option-letter">D</span>
+            <span class="option-text">Be profitable across multiple instruments and sessions</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevQuestion(5)">← Back</button>
+          <button class="btn-next" id="next5" onclick="calculateResult()">See My Profile →</button>
+        </div>
+      </div>
+
+      <!-- RESULT -->
+      <div class="result-screen" id="resultScreen">
+        <div class="result-profile-label">Your Blueprint Profile</div>
+        <div class="result-name" id="resultName">
+          <span class="the">THE</span>
+          <span id="resultNameText">New Yorker</span>
+        </div>
+        <div class="result-tagline" id="resultTagline"></div>
+        <div class="result-divider" id="resultDivider"></div>
+
+        <div class="result-grid">
+          <div class="result-card">
+            <div class="result-card-label">Your Session</div>
+            <div class="result-card-content" id="resultSession"></div>
+          </div>
+          <div class="result-card">
+            <div class="result-card-label">Your Path</div>
+            <div class="result-card-content" id="resultPath"></div>
+          </div>
+          <div class="result-card">
+            <div class="result-card-label">Your Instruments</div>
+            <div class="result-instruments" id="resultInstruments"></div>
+          </div>
+          <div class="result-card">
+            <div class="result-card-label">Prop Firm</div>
+            <div class="result-card-content" id="resultFirm"></div>
+          </div>
+        </div>
+
+        <div class="result-warning">
+          <div class="result-warning-label">⚠ Know This</div>
+          <p id="resultWarning"></p>
+        </div>
+
+        <div class="result-cta">
+          <p>Your path starts with Module 01. The framework is the same for every profile — the instruments and sessions are what change.</p>
+          <a href="01-market-foundation.html" class="btn btn--primary btn--lg">Start The Course →</a>
+          <br>
+          <button class="retake-btn" onclick="resetQuiz()">↺ Retake</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/progress.js"></script>
+  <script>
+
+    // ── SCORING ──────────────────────────────────────────────
+    const scores = { newyorker: 0, londoner: 0, ghost: 0, wanderer: 0 };
+    const answers = {};
+    let currentQ = 1;
+    const totalQ = 5;
+
+    // ── PROFILE DATA ─────────────────────────────────────────
+    const profiles = {
+      newyorker: {
+        name: 'New Yorker',
+        tagline: 'The world\'s most liquid session. The full Blueprint. Your time.',
+        session: '9:30am–4pm ET. The NY open. Maximum liquidity, maximum setup quality.',
+        path: 'Start with Module 01. The full Blueprint framework was built for this session. Master MNQ first.',
+        instruments: ['MNQ', 'MES', 'MGC', 'MCL'],
+        firm: 'Any firm works — Apex, Lucid, and TopStep all fully support your instruments.',
+        warning: 'Check the economic calendar every morning before you open the platform. CPI, NFP, and FOMC can invalidate your setup in seconds.',
+        className: 'profile-newyorker'
+      },
+      londoner: {
+        name: 'Londoner',
+        tagline: 'Early hours. European momentum. Gold and forex when the world wakes up.',
+        session: '3am–12pm ET. London open into the London/NY overlap — the highest forex liquidity window on earth.',
+        path: 'Start with Module 01, then study the session awareness modules carefully. Add forex instruments when ready.',
+        instruments: ['MGC', '6E', '6B', 'MCL'],
+        firm: 'Use Lucid or Apex. TopStep does not support forex futures.',
+        warning: 'Spreads are wider early. Do not trade the first 5 minutes of London open until you understand what you\'re watching.',
+        className: 'profile-londoner'
+      },
+      ghost: {
+        name: 'Ghost',
+        tagline: 'You trade while the world sleeps. Crypto. Oil. Gold. No closing bell.',
+        session: 'Nights and weekends. Globex reopens Sunday 5pm ET. CME crypto goes 24/7 from May 29, 2026.',
+        path: 'Start with Module 01 — the setups are identical. Then study the crypto and overnight awareness sections carefully.',
+        instruments: ['MBT', 'MET', 'MCL', 'MGC'],
+        firm: 'Use Apex or TopStep for crypto. Lucid does not support MBT or MET.',
+        warning: 'Crypto has no circuit breakers, no halts, no Fed. News hits any time. Size down and use wider stops than you think you need.',
+        className: 'profile-ghost'
+      },
+      wanderer: {
+        name: 'Wanderer',
+        tagline: 'Every session. Every instrument. You go where the opportunity is.',
+        session: 'All sessions — you rotate based on what\'s open and active. Session awareness is your edge.',
+        path: 'Complete the full Blueprint framework first. Add one session at a time — don\'t try to trade everything at once.',
+        instruments: ['MNQ', 'MGC', '6E', 'MBT'],
+        firm: 'Use Apex — broadest instrument access including crypto, forex futures, energy, and EUREX.',
+        warning: 'Master one instrument before adding another. The Wanderer who trades everything inconsistently beats no one.',
+        className: 'profile-wanderer'
+      }
+    };
+
+    // ── OPTION SELECTION ──────────────────────────────────────
+    document.querySelectorAll('.option-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const q = this.dataset.q;
+        // Deselect others in same question
+        document.querySelectorAll(`.option-btn[data-q="${q}"]`).forEach(b => b.classList.remove('selected'));
+        // Select this one
+        this.classList.add('selected');
+        // Store answer
+        answers[q] = {
+          profile: this.dataset.profile,
+          weight: parseInt(this.dataset.weight),
+          secondary: this.dataset.secondary || null
+        };
+        // Enable next button
+        const nextBtn = document.getElementById(`next${q}`);
+        if (nextBtn) nextBtn.classList.add('enabled');
+      });
+    });
+
+    // ── NAVIGATION ────────────────────────────────────────────
+    function nextQuestion(current) {
+      if (!answers[current]) return;
+      document.getElementById(`q${current}`).classList.remove('active');
+      currentQ = current + 1;
+      if (currentQ <= totalQ) {
+        document.getElementById(`q${currentQ}`).classList.add('active');
+        updateProgress();
+      }
+    }
+
+    function prevQuestion(current) {
+      document.getElementById(`q${current}`).classList.remove('active');
+      currentQ = current - 1;
+      document.getElementById(`q${currentQ}`).classList.add('active');
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const pct = ((currentQ - 1) / totalQ) * 100;
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('stepLabel').textContent =
+        currentQ <= totalQ ? `Question ${currentQ} of ${totalQ}` : 'Calculating your profile...';
+    }
+
+    // ── CALCULATE RESULT ──────────────────────────────────────
+    function calculateResult() {
+      if (!answers[5]) return;
+
+      // Reset scores
+      Object.keys(scores).forEach(k => scores[k] = 0);
+
+      // Tally scores
+      Object.values(answers).forEach(ans => {
+        scores[ans.profile] += ans.weight;
+        if (ans.secondary) scores[ans.secondary] += 1;
+      });
+
+      // Find winner
+      const winner = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+      const profile = profiles[winner];
+
+      // Fill result screen
+      document.getElementById('resultNameText').textContent = profile.name;
+      document.getElementById('resultTagline').textContent = profile.tagline;
+      document.getElementById('resultSession').textContent = profile.session;
+      document.getElementById('resultPath').textContent = profile.path;
+      document.getElementById('resultFirm').textContent = profile.firm;
+      document.getElementById('resultWarning').textContent = profile.warning;
+
+      // Instruments
+      const instrEl = document.getElementById('resultInstruments');
+      instrEl.innerHTML = '';
+      profile.instruments.forEach(i => {
+        const tag = document.createElement('span');
+        tag.className = 'instrument-tag';
+        tag.textContent = i;
+        instrEl.appendChild(tag);
+      });
+
+      // Apply profile class
+      const resultScreen = document.getElementById('resultScreen');
+      resultScreen.className = 'result-screen active ' + profile.className;
+
+      // Hide all questions
+      document.querySelectorAll('.question-card').forEach(q => q.classList.remove('active'));
+      document.getElementById('progressFill').style.width = '100%';
+      document.getElementById('stepLabel').textContent = 'Profile unlocked';
+
+      // Show result
+      resultScreen.style.display = 'block';
+      setTimeout(() => resultScreen.classList.add('active'), 50);
+      resultScreen.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ── RESET ─────────────────────────────────────────────────
+    function resetQuiz() {
+      Object.keys(answers).forEach(k => delete answers[k]);
+      Object.keys(scores).forEach(k => scores[k] = 0);
+      currentQ = 1;
+
+      document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+      document.querySelectorAll('.btn-next').forEach(b => b.classList.remove('enabled'));
+      document.querySelectorAll('.question-card').forEach(q => q.classList.remove('active'));
+      document.getElementById('resultScreen').className = 'result-screen';
+      document.getElementById('resultScreen').style.display = 'none';
+      document.getElementById('q1').classList.add('active');
+      document.getElementById('progressFill').style.width = '0%';
+      document.getElementById('stepLabel').textContent = 'Question 1 of 5';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+  </script>
+</body>
+</html>
