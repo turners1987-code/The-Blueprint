@@ -15,6 +15,43 @@
     .blueprint-page {
       position: relative;
       overflow: hidden;
+      isolation: isolate;
+    }
+
+    .blueprint-page > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Weathered blueprint paper layer — subtle, tough, not noisy */
+    .blueprint-page::before,
+    .blueprint-page::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .blueprint-page::before {
+      background:
+        radial-gradient(ellipse at 18% 14%, var(--cyan-glow), transparent 34%),
+        radial-gradient(ellipse at 86% 22%, var(--gold-glow), transparent 30%),
+        radial-gradient(ellipse at 42% 78%, var(--bg-elevated), transparent 48%),
+        linear-gradient(90deg, transparent 0%, var(--cyan-glow) 48%, transparent 100%);
+      opacity: 0.58;
+      mix-blend-mode: screen;
+    }
+
+    .blueprint-page::after {
+      background-image:
+        repeating-linear-gradient(104deg, transparent 0 26px, var(--border) 27px, transparent 28px),
+        repeating-linear-gradient(8deg, transparent 0 52px, var(--border-light) 53px, transparent 54px),
+        radial-gradient(circle at 12% 20%, var(--border-light) 0 1px, transparent 2px),
+        radial-gradient(circle at 72% 68%, var(--border) 0 1px, transparent 2px);
+      background-size: auto, auto, 38px 38px, 54px 54px;
+      opacity: 0.16;
+      mix-blend-mode: screen;
     }
 
     .bp-shell {
@@ -253,7 +290,20 @@
       position: relative;
       overflow: hidden;
       background:
+        radial-gradient(ellipse at 50% 52%, var(--cyan-glow), transparent 52%),
         linear-gradient(90deg, transparent, var(--cyan-glow), transparent);
+    }
+
+    .chart-blueprint::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: 0.22;
+      pointer-events: none;
     }
 
     .axis-line,
@@ -261,58 +311,83 @@
     .measure-line {
       position: absolute;
       background: var(--border-light);
-      opacity: 0.7;
+      opacity: 0.55;
     }
 
     .axis-line.vertical {
       width: 1px;
-      top: 7%;
-      bottom: 8%;
-      left: 17%;
+      top: 10%;
+      bottom: 10%;
+      left: 14%;
     }
 
     .axis-line.horizontal {
       height: 1px;
       left: 8%;
       right: 8%;
-      bottom: 20%;
+      bottom: 22%;
     }
 
     .level-line {
       height: 1px;
-      left: 12%;
+      left: 10%;
       right: 8%;
     }
 
-    .level-line.l1 { top: 24%; }
-    .level-line.l2 { top: 45%; opacity: 0.4; }
-    .level-line.l3 { top: 66%; opacity: 0.5; }
+    .level-line.l1 { top: 25%; }
+    .level-line.l2 { top: 48%; opacity: 0.35; }
+    .level-line.l3 { top: 68%; opacity: 0.4; }
 
     .demand-zone {
       position: absolute;
-      left: 34%;
-      right: 16%;
-      bottom: 27%;
+      left: 36%;
+      right: 15%;
+      bottom: 28%;
       height: 18%;
       border: 1px solid var(--cyan);
       background: var(--cyan-glow);
-      opacity: 0.8;
+      opacity: 0.72;
+    }
+
+    .structure-arc {
+      position: absolute;
+      border: 1px solid var(--cyan);
+      background: var(--cyan-glow);
+      border-radius: 50%;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .structure-arc.a1 { width: 72px; height: 52px; left: 16%; top: 33%; }
+    .structure-arc.a2 { width: 96px; height: 70px; left: 44%; top: 18%; }
+    .structure-arc.a3 { width: 76px; height: 56px; right: 12%; top: 30%; }
+
+    .swing-line {
+      position: absolute;
+      left: 10%;
+      right: 9%;
+      bottom: 25%;
+      height: 1px;
+      border-top: 1px dashed var(--border-light);
+      transform: rotate(-4deg);
+      opacity: 0.5;
+      transform-origin: left center;
     }
 
     .candle-sequence {
       position: absolute;
-      inset: 12% 18% 17% 22%;
-      display: flex;
-      align-items: flex-end;
-      gap: 8px;
+      inset: 9% 11% 13% 12%;
     }
 
     .bp-candle {
-      width: 10px;
+      position: absolute;
+      left: var(--l);
+      bottom: var(--b);
+      width: var(--w, 9px);
+      height: var(--h);
       background: var(--cyan);
-      position: relative;
-      opacity: 0.75;
-      align-self: flex-end;
+      opacity: 0.82;
+      box-shadow: 0 0 16px var(--cyan-glow);
     }
 
     .bp-candle::before {
@@ -322,22 +397,35 @@
       width: 1px;
       background: var(--border-light);
       transform: translateX(-50%);
-      top: -18px;
-      bottom: -18px;
+      top: var(--wt, -14px);
+      bottom: var(--wb, -14px);
+      opacity: 0.8;
     }
 
-    .bp-candle.down { background: var(--bg-hover); border: 1px solid var(--cyan); }
-    .bp-candle.c1 { height: 34%; }
-    .bp-candle.c2 { height: 52%; }
-    .bp-candle.c3 { height: 46%; }
-    .bp-candle.c4 { height: 66%; }
-    .bp-candle.c5 { height: 74%; }
-    .bp-candle.c6 { height: 42%; }
-    .bp-candle.c7 { height: 26%; }
-    .bp-candle.c8 { height: 18%; }
-    .bp-candle.c9 { height: 31%; }
-    .bp-candle.c10 { height: 58%; }
-    .bp-candle.c11 { height: 73%; }
+    .bp-candle.down {
+      background: transparent;
+      border: 1px solid var(--cyan);
+      box-shadow: none;
+    }
+
+    .bp-candle.c1  { --l: 5%;  --b: 38%; --h: 18%; --wt: -11px; --wb: -8px; }
+    .bp-candle.c2  { --l: 9%;  --b: 43%; --h: 26%; --wt: -18px; --wb: -11px; }
+    .bp-candle.c3  { --l: 13%; --b: 48%; --h: 20%; --wt: -9px;  --wb: -16px; }
+    .bp-candle.c4  { --l: 17%; --b: 36%; --h: 31%; --wt: -20px; --wb: -10px; }
+    .bp-candle.c5  { --l: 22%; --b: 31%; --h: 16%; --wt: -8px;  --wb: -18px; }
+    .bp-candle.c6  { --l: 27%; --b: 27%; --h: 21%; --wt: -13px; --wb: -12px; }
+    .bp-candle.c7  { --l: 33%; --b: 32%; --h: 28%; --wt: -10px; --wb: -10px; }
+    .bp-candle.c8  { --l: 38%; --b: 41%; --h: 34%; --w: 10px; --wt: -16px; --wb: -13px; }
+    .bp-candle.c9  { --l: 43%; --b: 50%; --h: 24%; --wt: -12px; --wb: -21px; }
+    .bp-candle.c10 { --l: 48%; --b: 45%; --h: 20%; --wt: -9px;  --wb: -13px; }
+    .bp-candle.c11 { --l: 53%; --b: 38%; --h: 35%; --w: 10px; --wt: -18px; --wb: -10px; }
+    .bp-candle.c12 { --l: 58%; --b: 28%; --h: 30%; --wt: -14px; --wb: -22px; }
+    .bp-candle.c13 { --l: 63%; --b: 23%; --h: 22%; --wt: -11px; --wb: -16px; }
+    .bp-candle.c14 { --l: 68%; --b: 30%; --h: 28%; --wt: -15px; --wb: -9px; }
+    .bp-candle.c15 { --l: 72%; --b: 40%; --h: 34%; --w: 10px; --wt: -18px; --wb: -13px; }
+    .bp-candle.c16 { --l: 77%; --b: 52%; --h: 22%; --wt: -9px;  --wb: -18px; }
+    .bp-candle.c17 { --l: 82%; --b: 44%; --h: 27%; --wt: -14px; --wb: -11px; }
+    .bp-candle.c18 { --l: 86%; --b: 34%; --h: 35%; --w: 10px; --wt: -26px; --wb: -12px; }
 
     .model-note {
       position: absolute;
@@ -350,18 +438,18 @@
       opacity: 0.9;
     }
 
-    .model-note.n1 { top: 18%; right: 8%; }
-    .model-note.n2 { top: 46%; right: 5%; color: var(--gold); }
-    .model-note.n3 { bottom: 9%; left: 32%; }
+    .model-note.n1 { top: 24%; right: 7%; }
+    .model-note.n2 { top: 48%; right: 6%; color: var(--gold); }
+    .model-note.n3 { bottom: 12%; left: 33%; }
 
     .model-angle {
       position: absolute;
       width: 1px;
       height: 74%;
       background: var(--cyan);
-      right: 26%;
-      top: 11%;
-      transform: rotate(12deg);
+      right: 23%;
+      top: 15%;
+      transform: rotate(14deg);
       opacity: 0.65;
       transform-origin: center;
     }
@@ -449,7 +537,7 @@
 
     .section-tag {
       font-family: var(--font-mono);
-      color: var(--black);
+      color: var(--bg);
       background: var(--text-secondary);
       text-transform: uppercase;
       letter-spacing: 0.12em;
@@ -957,7 +1045,7 @@
                 <div class="bp-label">Fig. 01</div>
                 <div class="bp-small">The Model</div>
               </div>
-              <div class="bp-small" style="text-align:right;">Blueprint ID<br>ICT-EDU-Framework</div>
+              <div class="bp-small" style="text-align:right;">Blueprint ID<br>BP-FRAMEWORK-V1</div>
             </div>
 
             <div class="chart-blueprint">
@@ -967,20 +1055,31 @@
               <div class="level-line l2"></div>
               <div class="level-line l3"></div>
               <div class="demand-zone"></div>
+              <div class="swing-line"></div>
+              <div class="structure-arc a1"></div>
+              <div class="structure-arc a2"></div>
+              <div class="structure-arc a3"></div>
               <div class="model-angle"></div>
 
               <div class="candle-sequence">
-                <div class="bp-candle c1"></div>
-                <div class="bp-candle c2 down"></div>
+                <div class="bp-candle c1 down"></div>
+                <div class="bp-candle c2"></div>
                 <div class="bp-candle c3 down"></div>
-                <div class="bp-candle c4"></div>
-                <div class="bp-candle c5 down"></div>
+                <div class="bp-candle c4 down"></div>
+                <div class="bp-candle c5"></div>
                 <div class="bp-candle c6 down"></div>
-                <div class="bp-candle c7 down"></div>
+                <div class="bp-candle c7"></div>
                 <div class="bp-candle c8"></div>
-                <div class="bp-candle c9"></div>
-                <div class="bp-candle c10"></div>
-                <div class="bp-candle c11"></div>
+                <div class="bp-candle c9 down"></div>
+                <div class="bp-candle c10 down"></div>
+                <div class="bp-candle c11 down"></div>
+                <div class="bp-candle c12 down"></div>
+                <div class="bp-candle c13"></div>
+                <div class="bp-candle c14"></div>
+                <div class="bp-candle c15"></div>
+                <div class="bp-candle c16 down"></div>
+                <div class="bp-candle c17 down"></div>
+                <div class="bp-candle c18"></div>
               </div>
 
               <div class="model-note n1">Sell Side<br>Liquidity</div>
@@ -1382,7 +1481,7 @@
           <div class="side-panel bp-frame">
             <div class="bp-label">Blueprint ID</div>
             <div class="bp-small mt-md">
-              ICT-EDU-Framework-v2<br>
+              BP-FRAMEWORK-V1<br>
               Status: Operational<br>
               Access: Public
             </div>
