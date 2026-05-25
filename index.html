@@ -7,391 +7,869 @@
   <meta name="description" content="Learn to trade MNQ futures using a disciplined, setup-based framework. The Blueprint is a free eLearning course built around real trading setups, routines, and risk management.">
   <link rel="stylesheet" href="css/main.css">
   <style>
-    /* ── LANDING PAGE SPECIFIC STYLES ── */
+    /* ─────────────────────────────────────────────
+       LANDING PAGE — TACTICAL BLUEPRINT FACADE
+       Uses existing main.css variables only.
+       ───────────────────────────────────────────── */
 
-    /* Hero */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+    .blueprint-page {
       position: relative;
       overflow: hidden;
+    }
+
+    .bp-shell {
+      width: 100%;
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+      position: relative;
+    }
+
+    .bp-frame {
+      position: relative;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      box-shadow: inset 0 1px 0 var(--border-light);
+    }
+
+    .bp-frame::before,
+    .bp-frame::after {
+      content: '';
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      pointer-events: none;
+      border-color: var(--cyan);
+      opacity: 0.65;
+    }
+
+    .bp-frame::before {
+      top: var(--space-sm);
+      left: var(--space-sm);
+      border-top: 1px solid;
+      border-left: 1px solid;
+    }
+
+    .bp-frame::after {
+      right: var(--space-sm);
+      bottom: var(--space-sm);
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+    }
+
+    .bp-label {
+      font-family: var(--font-mono);
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+    }
+
+    .bp-small {
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.72rem;
+      line-height: 1.6;
+    }
+
+    .bp-rule {
+      height: 1px;
+      background: linear-gradient(90deg, var(--cyan), transparent);
+      width: 100%;
+      opacity: 0.55;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
       padding-top: 60px;
+      display: flex;
+      align-items: stretch;
+      position: relative;
     }
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(240,165,0,0.06) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 80% 50%, rgba(0,200,224,0.04) 0%, transparent 60%);
-      pointer-events: none;
+    .hero-canvas {
+      width: 100%;
+      min-height: calc(100vh - 60px);
+      padding: var(--space-xl) 0 var(--space-2xl);
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr);
+      gap: var(--space-lg);
     }
 
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
+    .hero-ruler {
+      border-right: 1px solid var(--border);
+      padding-top: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2xl);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      opacity: 0.72;
     }
 
-    .hero-content {
+    .hero-ruler span {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .hero-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+      gap: var(--space-xl);
+      align-items: center;
+      min-height: calc(100vh - 160px);
+    }
+
+    .hero-copy {
+      padding: var(--space-xl);
       position: relative;
       z-index: 1;
-      padding: var(--space-3xl) 0;
     }
 
-    .hero-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--gold);
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-lg);
-      opacity: 0;
-      animation: fadeUp 0.6s ease 0.2s forwards;
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+
+    .hero-kicker::before {
+      content: '';
+      width: 42px;
+      height: 1px;
+      background: var(--cyan);
+      opacity: 0.7;
     }
 
     .hero-title {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(4rem, 12vw, 9rem);
-      line-height: 0.9;
+      font-size: clamp(4.3rem, 10vw, 9.5rem);
+      line-height: 0.82;
       text-transform: uppercase;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.03em;
       color: var(--text-primary);
       margin-bottom: var(--space-lg);
-      opacity: 0;
-      animation: fadeUp 0.6s ease 0.35s forwards;
+      text-shadow: 0 0 24px var(--cyan-glow);
     }
 
-    .hero-title .accent {
+    .hero-title .top-word {
       display: block;
-      color: transparent;
-      -webkit-text-stroke: 2px var(--gold);
-      opacity: 0.6;
+      font-size: 0.33em;
+      letter-spacing: 0.16em;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xs);
     }
 
-    .hero-divider {
-      width: 80px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold), var(--cyan));
-      margin: var(--space-lg) 0;
-      opacity: 0;
-      animation: fadeUp 0.6s ease 0.45s forwards;
+    .hero-title .main-word {
+      display: block;
+      -webkit-text-stroke: 1px var(--text-muted);
+    }
+
+    .hero-subplate {
+      display: inline-flex;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.82rem;
+      padding: var(--space-sm) var(--space-md);
+      margin-bottom: var(--space-lg);
+      background: var(--gold-glow);
     }
 
     .hero-subtitle {
-      font-size: 1.1rem;
       color: var(--text-secondary);
-      font-weight: 300;
-      max-width: 52ch;
-      line-height: 1.7;
+      max-width: 54ch;
       margin-bottom: var(--space-xl);
-      opacity: 0;
-      animation: fadeUp 0.6s ease 0.55s forwards;
-    }
-
-    .hero-subtitle strong {
-      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-size: 0.96rem;
+      line-height: 1.85;
     }
 
     .hero-actions {
       display: flex;
-      align-items: center;
       gap: var(--space-md);
       flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.6s ease 0.65s forwards;
+      margin-bottom: var(--space-xl);
     }
 
-    .hero-tagline {
-      margin-top: var(--space-2xl);
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
+    .hero-status-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(160px, 1fr));
+      gap: var(--space-md);
+      max-width: 520px;
+    }
+
+    .status-plate {
+      border: 1px solid var(--border);
+      background: var(--cyan-glow);
+      padding: var(--space-md);
+      position: relative;
+      font-family: var(--font-mono);
       text-transform: uppercase;
-      color: var(--text-muted);
-      opacity: 0;
-      animation: fadeUp 0.6s ease 0.8s forwards;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      color: var(--text-secondary);
     }
 
-    .hero-tagline span { color: var(--gold); }
+    .status-plate strong {
+      display: block;
+      color: var(--cyan);
+      margin-top: var(--space-xs);
+      font-family: var(--font-mono);
+    }
 
-    /* Stats strip */
+    .hero-model {
+      min-height: 560px;
+      padding: var(--space-xl);
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .model-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .chart-blueprint {
+      flex: 1;
+      min-height: 360px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, transparent, var(--cyan-glow), transparent);
+    }
+
+    .axis-line,
+    .level-line,
+    .measure-line {
+      position: absolute;
+      background: var(--border-light);
+      opacity: 0.7;
+    }
+
+    .axis-line.vertical {
+      width: 1px;
+      top: 7%;
+      bottom: 8%;
+      left: 17%;
+    }
+
+    .axis-line.horizontal {
+      height: 1px;
+      left: 8%;
+      right: 8%;
+      bottom: 20%;
+    }
+
+    .level-line {
+      height: 1px;
+      left: 12%;
+      right: 8%;
+    }
+
+    .level-line.l1 { top: 24%; }
+    .level-line.l2 { top: 45%; opacity: 0.4; }
+    .level-line.l3 { top: 66%; opacity: 0.5; }
+
+    .demand-zone {
+      position: absolute;
+      left: 34%;
+      right: 16%;
+      bottom: 27%;
+      height: 18%;
+      border: 1px solid var(--cyan);
+      background: var(--cyan-glow);
+      opacity: 0.8;
+    }
+
+    .candle-sequence {
+      position: absolute;
+      inset: 12% 18% 17% 22%;
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .bp-candle {
+      width: 10px;
+      background: var(--cyan);
+      position: relative;
+      opacity: 0.75;
+      align-self: flex-end;
+    }
+
+    .bp-candle::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      background: var(--border-light);
+      transform: translateX(-50%);
+      top: -18px;
+      bottom: -18px;
+    }
+
+    .bp-candle.down { background: var(--bg-hover); border: 1px solid var(--cyan); }
+    .bp-candle.c1 { height: 34%; }
+    .bp-candle.c2 { height: 52%; }
+    .bp-candle.c3 { height: 46%; }
+    .bp-candle.c4 { height: 66%; }
+    .bp-candle.c5 { height: 74%; }
+    .bp-candle.c6 { height: 42%; }
+    .bp-candle.c7 { height: 26%; }
+    .bp-candle.c8 { height: 18%; }
+    .bp-candle.c9 { height: 31%; }
+    .bp-candle.c10 { height: 58%; }
+    .bp-candle.c11 { height: 73%; }
+
+    .model-note {
+      position: absolute;
+      font-family: var(--font-mono);
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.68rem;
+      line-height: 1.45;
+      opacity: 0.9;
+    }
+
+    .model-note.n1 { top: 18%; right: 8%; }
+    .model-note.n2 { top: 46%; right: 5%; color: var(--gold); }
+    .model-note.n3 { bottom: 9%; left: 32%; }
+
+    .model-angle {
+      position: absolute;
+      width: 1px;
+      height: 74%;
+      background: var(--cyan);
+      right: 26%;
+      top: 11%;
+      transform: rotate(12deg);
+      opacity: 0.65;
+      transform-origin: center;
+    }
+
+    .model-footer {
+      margin-top: var(--space-lg);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--space-md);
+      align-items: end;
+    }
+
+    .gold-callout {
+      border: 1px solid var(--gold);
+      background: var(--gold-glow);
+      padding: var(--space-md);
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    /* STATS */
+
     .stats-strip {
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: var(--space-xl) 0;
       background: var(--bg-card);
     }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-lg);
-      text-align: center;
     }
 
     .stat-item {
-      padding: var(--space-md);
+      padding: var(--space-lg);
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .stat-item:last-child {
+      border-right: 0;
     }
 
     .stat-number {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 2.5rem;
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      color: var(--cyan);
       line-height: 1;
-      color: var(--gold);
       margin-bottom: var(--space-xs);
     }
 
     .stat-label {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-family: var(--font-mono);
       color: var(--text-muted);
-    }
-
-    /* What you'll learn */
-    .learn-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-md);
-      margin-top: var(--space-xl);
-    }
-
-    .learn-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      transition: border-color var(--transition), transform var(--transition);
-    }
-
-    .learn-card:hover {
-      border-color: var(--gold-dark);
-      transform: translateY(-2px);
-    }
-
-    .learn-icon {
-      font-size: 1.8rem;
-      margin-bottom: var(--space-md);
-    }
-
-    .learn-title {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--text-primary);
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+    }
+
+    /* COURSE INDEX */
+
+    .course-index-section {
+      padding: var(--space-3xl) 0;
+      position: relative;
+    }
+
+    .index-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: var(--space-lg);
+      align-items: start;
+    }
+
+    .section-header-plate {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: end;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .section-tag {
+      font-family: var(--font-mono);
+      color: var(--black);
+      background: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.62rem;
+      padding: 2px 6px;
+      display: inline-block;
       margin-bottom: var(--space-sm);
     }
 
-    .learn-desc {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-      max-width: 100%;
+    .section-header-plate h2 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: var(--text-primary);
     }
 
-    /* Course map */
-    .course-map {
-      margin-top: var(--space-xl);
+    .section-header-plate .bp-rule {
+      align-self: center;
     }
 
-    .module-list {
+    .module-table {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 4px;
     }
 
-    .module-item {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      padding: var(--space-md) var(--space-lg);
-      background: var(--bg-card);
+    .module-row {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr) 150px 90px 42px;
+      align-items: stretch;
+      min-height: 76px;
       border: 1px solid var(--border);
-      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      color: var(--text-secondary);
       text-decoration: none;
-      transition: all var(--transition);
       position: relative;
+      transition: all var(--transition);
       overflow: hidden;
     }
 
-    .module-item:hover {
-      border-color: var(--gold-dark);
-      background: var(--bg-elevated);
+    .module-row::before,
+    .module-row::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: var(--cyan);
+      opacity: 0.55;
     }
 
-    .module-item.completed {
+    .module-row::before {
+      left: 5px;
+      top: 5px;
+      border-left: 1px solid;
+      border-top: 1px solid;
+    }
+
+    .module-row::after {
+      right: 5px;
+      bottom: 5px;
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+    }
+
+    .module-row:hover {
+      border-color: var(--cyan);
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+    }
+
+    .module-row.completed {
       border-color: var(--green-dark);
     }
 
-    .module-item.completed::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: var(--green);
+    .module-row.featured {
+      border-color: var(--gold);
+      background: var(--gold-glow);
+    }
+
+    .module-cell {
+      padding: var(--space-md);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .module-cell:last-child {
+      border-right: 0;
     }
 
     .module-num {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      min-width: 28px;
+      color: var(--cyan);
+      font-size: 2rem;
+      line-height: 1;
+      text-align: center;
+      align-items: center;
+    }
+
+    .module-row.featured .module-num {
+      color: var(--gold);
     }
 
     .module-title {
       font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
+      color: var(--text-primary);
       text-transform: uppercase;
-      color: var(--text-secondary);
-      flex: 1;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: var(--space-xs);
     }
 
-    .module-item:hover .module-title { color: var(--text-primary); }
-    .module-item.completed .module-title { color: var(--text-primary); }
+    .module-desc {
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      line-height: 1.45;
+    }
 
-    .module-tag {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.65rem;
+    .module-status-label,
+    .module-grade-label {
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      text-transform: uppercase;
       letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: var(--radius-sm);
+      font-size: 0.66rem;
+      margin-bottom: var(--space-xs);
     }
 
-    .module-tag.foundation { background: var(--cyan-glow);  color: var(--cyan); }
-    .module-tag.setup      { background: var(--gold-glow);  color: var(--gold); }
-    .module-tag.routine    { background: var(--green-glow); color: var(--green); }
+    .module-status-value {
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+    }
 
-    .module-check {
-      width: 20px;
-      height: 20px;
-      border: 2px solid var(--border-light);
-      border-radius: 50%;
-      display: flex;
+    .module-row.completed .module-status-value {
+      color: var(--green);
+    }
+
+    .module-row.featured .module-status-value {
+      color: var(--gold);
+    }
+
+    .module-grade-value {
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      font-size: 1.15rem;
+    }
+
+    .module-row.completed .module-grade-value {
+      color: var(--green);
+    }
+
+    .module-arrow {
       align-items: center;
       justify-content: center;
-      font-size: 10px;
-      flex-shrink: 0;
-      transition: all var(--transition);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
     }
 
-    .module-item.completed .module-check {
-      background: var(--green);
-      border-color: var(--green);
-      color: black;
+    .side-panels {
+      display: grid;
+      gap: var(--space-md);
     }
 
-    /* Philosophy section */
-    .philosophy {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-2xl);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+    .side-panel {
+      padding: var(--space-lg);
+      min-height: 150px;
     }
 
-    .philosophy::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%; transform: translateX(-50%);
-      width: 60%; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    .field-note {
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      font-style: italic;
     }
 
-    .philosophy-quote {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    .legend-list {
+      list-style: none;
+      display: grid;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+
+    .legend-list li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-primary);
-      line-height: 1.3;
-      margin-bottom: var(--space-md);
+      letter-spacing: 0.08em;
+      font-size: 0.7rem;
     }
 
-    .philosophy-quote .highlight { color: var(--gold); }
+    .legend-mark {
+      width: 12px;
+      height: 12px;
+      border: 1px solid var(--cyan);
+      background: var(--cyan-glow);
+    }
 
-    /* Setups preview */
+    .legend-mark.gold {
+      border-color: var(--gold);
+      background: var(--gold-glow);
+    }
+
+    .legend-mark.green {
+      border-color: var(--green);
+      background: var(--green-glow);
+    }
+
+    /* GENERAL SECTIONS */
+
+    .learn-grid,
     .setups-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
       gap: var(--space-md);
       margin-top: var(--space-xl);
     }
 
-    .setup-card {
+    .learn-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .setups-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .learn-card,
+    .setup-card,
+    .philosophy {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: var(--space-lg);
-      transition: all var(--transition);
-      cursor: default;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 var(--border-light);
     }
 
+    .learn-card::before,
+    .setup-card::before,
+    .philosophy::before {
+      content: '';
+      position: absolute;
+      top: var(--space-sm);
+      left: var(--space-sm);
+      width: 16px;
+      height: 16px;
+      border-top: 1px solid var(--cyan);
+      border-left: 1px solid var(--cyan);
+      opacity: 0.45;
+    }
+
+    .learn-card:hover,
     .setup-card:hover {
-      border-color: var(--gold-dark);
+      border-color: var(--cyan);
       background: var(--bg-elevated);
+    }
+
+    .learn-icon {
+      font-family: var(--font-mono);
+      color: var(--cyan);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .learn-title,
+    .setup-card-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .learn-desc,
+    .setup-card-type {
+      color: var(--text-secondary);
+      max-width: 100%;
     }
 
     .setup-card-num {
       font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--text-muted);
+      color: var(--cyan);
+      font-size: 0.72rem;
       margin-bottom: var(--space-sm);
     }
 
-    .setup-card-name {
+    .philosophy {
+      text-align: center;
+      padding: var(--space-2xl);
+    }
+
+    .philosophy-quote {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
       color: var(--text-primary);
-      margin-bottom: var(--space-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      line-height: 1.25;
     }
 
-    .setup-card-type {
-      font-size: 0.78rem;
-      color: var(--text-muted);
+    .philosophy-quote .highlight {
+      color: var(--gold);
     }
 
-    /* CTA section */
     .cta-section {
       text-align: center;
       padding: var(--space-3xl) 0;
     }
 
-    @media (max-width: 768px) {
-      .stats-grid    { grid-template-columns: repeat(2, 1fr); }
-      .learn-grid    { grid-template-columns: 1fr; }
-      .setups-grid   { grid-template-columns: repeat(2, 1fr); }
-      .hero-title    { font-size: clamp(3rem, 15vw, 6rem); }
+    @media (max-width: 980px) {
+      .hero-main,
+      .index-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-model {
+        min-height: 460px;
+      }
+
+      .module-row {
+        grid-template-columns: 72px minmax(0, 1fr) 42px;
+      }
+
+      .module-status,
+      .module-grade {
+        display: none;
+      }
     }
 
-    @media (max-width: 480px) {
-      .setups-grid { grid-template-columns: 1fr; }
+    @media (max-width: 768px) {
+      .hero-canvas {
+        grid-template-columns: 1fr;
+        padding-top: var(--space-lg);
+      }
+
+      .hero-ruler {
+        display: none;
+      }
+
+      .hero-copy {
+        padding: var(--space-lg) 0;
+      }
+
+      .hero-title {
+        font-size: clamp(3.6rem, 16vw, 6rem);
+      }
+
+      .hero-model {
+        min-height: 390px;
+        padding: var(--space-md);
+      }
+
+      .chart-blueprint {
+        min-height: 280px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .section-header-plate {
+        grid-template-columns: 1fr;
+      }
+
+      .learn-grid,
+      .setups-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-status-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .module-row {
+        grid-template-columns: 58px minmax(0, 1fr) 34px;
+        min-height: 84px;
+      }
+
+      .module-cell {
+        padding: var(--space-sm);
+      }
+
+      .module-num {
+        font-size: 1.35rem;
+      }
+
+      .module-title {
+        font-size: 0.92rem;
+      }
+
+      .module-desc {
+        font-size: 0.68rem;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="blueprint-page">
 
   <!-- ── NAVIGATION ── -->
   <nav class="site-nav">
@@ -400,39 +878,121 @@
       <ul class="nav-links">
         <li><a href="#course">Course</a></li>
         <li><a href="#setups">Setups</a></li>
+        <li><a href="modules/dial-in.html">Dial In</a></li>
         <li><a href="modules/toothbrush-therapy.html">Toothbrush Therapy</a></li>
         <li><a href="glossary.html">Glossary</a></li>
-        <li><a href="#course" id="continue-btn" class="btn btn--primary btn--sm">Start Course</a></li>
+        <li><a href="modules/00-welcome.html" id="continue-btn" class="btn btn--primary btn--sm">Start Course</a></li>
       </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="nav-mobile-menu">
+      <ul class="nav-mobile-links">
+        <li><a href="#course">Course</a></li>
+        <li><a href="#setups">Setups</a></li>
+        <li><a href="modules/dial-in.html">Dial In</a></li>
+        <li><a href="modules/toothbrush-therapy.html">Toothbrush Therapy</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+      </ul>
+      <div class="nav-mobile-cta">
+        <a href="modules/00-welcome.html" class="btn btn--primary">Start The Course →</a>
+      </div>
     </div>
     <div class="nav-progress-bar"></div>
   </nav>
 
+
   <!-- ── HERO ── -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-eyebrow">MNQ · Micro E-Mini Nasdaq-100 Futures</div>
-        <h1 class="hero-title">
-          The
-          <span class="accent">Blueprint</span>
-        </h1>
-        <div class="hero-divider"></div>
-        <p class="hero-subtitle">
-          A <strong>complete beginner's course</strong> in high-probability futures trading —
-          built around a real, personal framework. From your first candlestick
-          to executing live setups with discipline.
-        </p>
-        <div class="hero-actions">
-          <a href="modules/00-welcome.html" id="continue-btn" class="btn btn--primary btn--lg">
-            Start The Course →
-          </a>
-          <a href="#course" class="btn btn--ghost">View All Modules</a>
-        </div>
-        <div class="hero-tagline">
-          <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+    <div class="bp-shell">
+      <div class="hero-canvas">
+        <aside class="hero-ruler" aria-hidden="true">
+          <span>A</span>
+          <span>B</span>
+          <span>C</span>
+          <span>D</span>
+          <span>E</span>
+          <span>F</span>
+        </aside>
+
+        <div class="hero-main">
+          <div class="hero-copy">
+            <div class="hero-kicker">
+              <div class="bp-label">// MNQ Futures Framework</div>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="top-word">The</span>
+              <span class="main-word">Blueprint</span>
+            </h1>
+
+            <div class="hero-subplate">A Complete Trading Education Framework</div>
+
+            <p class="hero-subtitle">
+              Master the methodology. Understand the logic. Execute with precision.
+              This is the blueprint for building a disciplined trading framework from zero.
+            </p>
+
+            <div class="hero-actions">
+              <a href="modules/00-welcome.html" class="btn btn--primary btn--lg">Start The Course →</a>
+              <a href="#course" class="btn btn--ghost">View Module Index</a>
+            </div>
+
+            <div class="hero-status-grid">
+              <div class="status-plate">
+                System Status
+                <strong>Operational</strong>
+              </div>
+              <div class="status-plate">
+                Clearance
+                <strong>Level 01</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-model bp-frame">
+            <div class="model-header">
+              <div>
+                <div class="bp-label">Fig. 01</div>
+                <div class="bp-small">The Model</div>
+              </div>
+              <div class="bp-small" style="text-align:right;">Blueprint ID<br>ICT-EDU-Framework</div>
+            </div>
+
+            <div class="chart-blueprint">
+              <div class="axis-line vertical"></div>
+              <div class="axis-line horizontal"></div>
+              <div class="level-line l1"></div>
+              <div class="level-line l2"></div>
+              <div class="level-line l3"></div>
+              <div class="demand-zone"></div>
+              <div class="model-angle"></div>
+
+              <div class="candle-sequence">
+                <div class="bp-candle c1"></div>
+                <div class="bp-candle c2 down"></div>
+                <div class="bp-candle c3 down"></div>
+                <div class="bp-candle c4"></div>
+                <div class="bp-candle c5 down"></div>
+                <div class="bp-candle c6 down"></div>
+                <div class="bp-candle c7 down"></div>
+                <div class="bp-candle c8"></div>
+                <div class="bp-candle c9"></div>
+                <div class="bp-candle c10"></div>
+                <div class="bp-candle c11"></div>
+              </div>
+
+              <div class="model-note n1">Sell Side<br>Liquidity</div>
+              <div class="model-note n2">Demand Zone</div>
+              <div class="model-note n3">Buy Side<br>Liquidity</div>
+            </div>
+
+            <div class="model-footer">
+              <div class="gold-callout">Built by logic.<br>Backed by structure.<br>Executed by discipline.</div>
+              <div class="bp-small">N 40.7128°<br>W 74.0060°</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -440,14 +1000,14 @@
 
   <!-- ── STATS STRIP ── -->
   <div class="stats-strip">
-    <div class="container container--wide">
+    <div class="bp-shell">
       <div class="stats-grid">
         <div class="stat-item scroll-reveal">
           <div class="stat-number">19</div>
           <div class="stat-label">Modules</div>
         </div>
         <div class="stat-item scroll-reveal">
-          <div class="stat-number">7</div>
+          <div class="stat-number">07</div>
           <div class="stat-label">Trading Setups</div>
         </div>
         <div class="stat-item scroll-reveal">
@@ -455,12 +1015,382 @@
           <div class="stat-label">Free</div>
         </div>
         <div class="stat-item scroll-reveal">
-          <div class="stat-number">0</div>
+          <div class="stat-number">00</div>
           <div class="stat-label">Experience Required</div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- ── COURSE MAP ── -->
+  <section class="course-index-section" id="course">
+    <div class="bp-shell">
+      <div class="section-header-plate">
+        <div>
+          <span class="section-tag">Section 1.0</span>
+          <h2>Module Index</h2>
+        </div>
+        <div class="bp-rule"></div>
+        <div class="bp-small">Follow the sequence.<br>Build the foundation.<br>Master the blueprint.</div>
+      </div>
+
+      <div class="index-layout">
+        <div class="module-table">
+            <a href="modules/00-welcome.html" class="module-row completed" data-module-id="00-welcome">
+              <div class="module-cell module-num">00</div>
+              <div class="module-cell">
+                <div class="module-title">Welcome & Orientation</div>
+                <div class="module-desc">Start here. How to use the system.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Complete</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">A</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/01-market-foundation.html" class="module-row completed" data-module-id="01-market-foundation">
+              <div class="module-cell module-num">01</div>
+              <div class="module-cell">
+                <div class="module-title">The Market Foundation</div>
+                <div class="module-desc">What markets are and why futures matter.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Complete</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">A</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/02-reading-charts.html" class="module-row featured" data-module-id="02-reading-charts">
+              <div class="module-cell module-num">02</div>
+              <div class="module-cell">
+                <div class="module-title">Reading the Chart</div>
+                <div class="module-desc">Candles, timeframes, chart behavior.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">In Progress</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/03-market-concepts.html" class="module-row" data-module-id="03-market-concepts">
+              <div class="module-cell module-num">03</div>
+              <div class="module-cell">
+                <div class="module-title">Market Concepts</div>
+                <div class="module-desc">Trend, range, levels, bullish and bearish.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/04-tools-of-the-trade.html" class="module-row" data-module-id="04-tools-of-the-trade">
+              <div class="module-cell module-num">04</div>
+              <div class="module-cell">
+                <div class="module-title">Tools of the Trade</div>
+                <div class="module-desc">EMA, VWAP, volume, key levels.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/05-order-types.html" class="module-row" data-module-id="05-order-types">
+              <div class="module-cell module-num">05</div>
+              <div class="module-cell">
+                <div class="module-title">Order Types & Execution</div>
+                <div class="module-desc">Entries, exits, stops, limits, triggers.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/06-risk-and-psychology.html" class="module-row" data-module-id="06-risk-and-psychology">
+              <div class="module-cell module-num">06</div>
+              <div class="module-cell">
+                <div class="module-title">Risk & Psychology Foundation</div>
+                <div class="module-desc">R, max loss, discipline, behavior.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/07-playbook-intro.html" class="module-row" data-module-id="07-playbook-intro">
+              <div class="module-cell module-num">07</div>
+              <div class="module-cell">
+                <div class="module-title">The PlayBook Introduction</div>
+                <div class="module-desc">What a setup is and how it is graded.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/08-range-rejection.html" class="module-row" data-module-id="08-range-rejection">
+              <div class="module-cell module-num">08</div>
+              <div class="module-cell">
+                <div class="module-title">Range Rejection</div>
+                <div class="module-desc">Fade the push. Read the rejection.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/09-failed-breakdown.html" class="module-row" data-module-id="09-failed-breakdown">
+              <div class="module-cell module-num">09</div>
+              <div class="module-cell">
+                <div class="module-title">Failed Breakdown</div>
+                <div class="module-desc">Reclaim failure and reversal logic.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/10-pause-n-go.html" class="module-row" data-module-id="10-pause-n-go">
+              <div class="module-cell module-num">10</div>
+              <div class="module-cell">
+                <div class="module-title">Pause N Go</div>
+                <div class="module-desc">Trend continuation after controlled pause.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/11-gap-n-go.html" class="module-row" data-module-id="11-gap-n-go">
+              <div class="module-cell module-num">11</div>
+              <div class="module-cell">
+                <div class="module-title">Gap N Go / Opening Drive</div>
+                <div class="module-desc">Opening strength and continuation.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/12-gap-fill.html" class="module-row" data-module-id="12-gap-fill">
+              <div class="module-cell module-num">12</div>
+              <div class="module-cell">
+                <div class="module-title">Gap Fill</div>
+                <div class="module-desc">Counter-trend movement back to prior close.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/13-orb.html" class="module-row" data-module-id="13-orb">
+              <div class="module-cell module-num">13</div>
+              <div class="module-cell">
+                <div class="module-title">Opening Range Breakout</div>
+                <div class="module-desc">Structured directional breakout logic.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/14-second-chance.html" class="module-row" data-module-id="14-second-chance">
+              <div class="module-cell module-num">14</div>
+              <div class="module-cell">
+                <div class="module-title">Second Chance Entry</div>
+                <div class="module-desc">Re-entry when the first trigger is missed.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/15-routines.html" class="module-row" data-module-id="15-routines">
+              <div class="module-cell module-num">15</div>
+              <div class="module-cell">
+                <div class="module-title">The Daily Routines</div>
+                <div class="module-desc">Pre-market, end-of-day, weekly review.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/16-journaling.html" class="module-row" data-module-id="16-journaling">
+              <div class="module-cell module-num">16</div>
+              <div class="module-cell">
+                <div class="module-title">Journaling & Review</div>
+                <div class="module-desc">Track behavior, process, and outcomes.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/17-putting-it-together.html" class="module-row" data-module-id="17-putting-it-together">
+              <div class="module-cell module-num">17</div>
+              <div class="module-cell">
+                <div class="module-title">Putting It All Together</div>
+                <div class="module-desc">A full trading day walkthrough.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+            <a href="modules/18-beyond-mnq.html" class="module-row" data-module-id="18-beyond-mnq">
+              <div class="module-cell module-num">18</div>
+              <div class="module-cell">
+                <div class="module-title">Trading Beyond MNQ</div>
+                <div class="module-desc">Apply the framework across markets.</div>
+              </div>
+              <div class="module-cell module-status">
+                <div class="module-status-label">Status</div>
+                <div class="module-status-value">Not Started</div>
+              </div>
+              <div class="module-cell module-grade">
+                <div class="module-grade-label">Grade</div>
+                <div class="module-grade-value">-</div>
+              </div>
+              <div class="module-cell module-arrow">→</div>
+            </a>
+
+        </div>
+
+        <aside class="side-panels">
+          <div class="side-panel bp-frame">
+            <div class="bp-label">Field Notes</div>
+            <p class="field-note mt-md">
+              It is not about predicting the market.<br><br>
+              It is about understanding probability and executing with precision.
+            </p>
+          </div>
+
+          <div class="side-panel bp-frame">
+            <div class="bp-label">System Legend</div>
+            <ul class="legend-list">
+              <li><span class="legend-mark"></span> Foundation</li>
+              <li><span class="legend-mark gold"></span> Setup Work</li>
+              <li><span class="legend-mark green"></span> Routine</li>
+            </ul>
+          </div>
+
+          <div class="side-panel bp-frame">
+            <div class="bp-label">Blueprint ID</div>
+            <div class="bp-small mt-md">
+              ICT-EDU-Framework-v2<br>
+              Status: Operational<br>
+              Access: Public
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
 
   <!-- ── WHAT YOU'LL LEARN ── -->
   <section class="section">
@@ -471,32 +1401,32 @@
 
       <div class="learn-grid mt-xl">
         <div class="learn-card scroll-reveal">
-          <div class="learn-icon">📈</div>
+          <div class="learn-icon">01</div>
           <div class="learn-title">Market Foundations</div>
           <p class="learn-desc">What futures are, how charts work, what candlesticks mean, and why MNQ is one of the best instruments for small-account traders.</p>
         </div>
         <div class="learn-card scroll-reveal">
-          <div class="learn-icon">🎯</div>
+          <div class="learn-icon">02</div>
           <div class="learn-title">7 High-Probability Setups</div>
           <p class="learn-desc">Range Rejection, Pause N Go, Failed Breakdown, Gap N Go, Gap Fill, ORB, and Second Chance Entry — each with full context, grading, and execution rules.</p>
         </div>
         <div class="learn-card scroll-reveal">
-          <div class="learn-icon">🧠</div>
+          <div class="learn-icon">03</div>
           <div class="learn-title">Trading Psychology</div>
           <p class="learn-desc">Why discipline beats prediction. How to manage FOMO, revenge trading, and the mental habits that separate consistent traders from gamblers.</p>
         </div>
         <div class="learn-card scroll-reveal">
-          <div class="learn-icon">⚠️</div>
+          <div class="learn-icon">04</div>
           <div class="learn-title">Risk Management</div>
           <p class="learn-desc">The R-based sizing system, daily max loss rules, kill switches, and how to protect your account while still growing it.</p>
         </div>
         <div class="learn-card scroll-reveal">
-          <div class="learn-icon">📋</div>
+          <div class="learn-icon">05</div>
           <div class="learn-title">Daily Routines</div>
           <p class="learn-desc">Pre-market preparation, end-of-day review, weekly and monthly analysis — the full professional trading routine, step by step.</p>
         </div>
         <div class="learn-card scroll-reveal">
-          <div class="learn-icon">🌐</div>
+          <div class="learn-icon">06</div>
           <div class="learn-title">Any Instrument</div>
           <p class="learn-desc">These setups work on stocks, ETFs, and crypto too. Learn how to apply the same framework across markets with instrument-specific awareness.</p>
         </div>
@@ -513,7 +1443,7 @@
           Discipline is the execution.<br>
           Everything else is noise."
         </div>
-        <p style="color: var(--text-muted); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--font-display);">— The Blueprint Framework</p>
+        <p style="color: var(--text-muted); font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; font-family:var(--font-display); margin: var(--space-md) auto 0;">— The Blueprint Framework</p>
       </div>
     </div>
   </section>
@@ -526,194 +1456,18 @@
       <p class="lead mt-md">Every setup has a defined context, confirmation requirements, execution rules, grading criteria, and kill conditions. No guessing. No improvising.</p>
 
       <div class="setups-grid">
-        <div class="setup-card scroll-reveal">
-          <div class="setup-card-num">01</div>
-          <div class="setup-card-name">Range Rejection</div>
-          <div class="setup-card-type">Fade Setup · Counter-trend</div>
-        </div>
-        <div class="setup-card scroll-reveal">
-          <div class="setup-card-num">02</div>
-          <div class="setup-card-name">Failed Breakdown</div>
-          <div class="setup-card-type">Reversal Setup · Long</div>
-        </div>
-        <div class="setup-card scroll-reveal">
-          <div class="setup-card-num">03</div>
-          <div class="setup-card-name">Pause N Go</div>
-          <div class="setup-card-type">Trend Continuation</div>
-        </div>
-        <div class="setup-card scroll-reveal">
-          <div class="setup-card-num">04</div>
-          <div class="setup-card-name">Gap N Go</div>
-          <div class="setup-card-type">Opening Drive · Long</div>
-        </div>
-        <div class="setup-card scroll-reveal">
-          <div class="setup-card-num">05</div>
-          <div class="setup-card-name">Gap Fill</div>
-          <div class="setup-card-type">Counter-trend · Fade Gap</div>
-        </div>
-        <div class="setup-card scroll-reveal">
-          <div class="setup-card-num">06</div>
-          <div class="setup-card-name">Opening Range Breakout</div>
-          <div class="setup-card-type">Directional · ORB</div>
-        </div>
-        <div class="setup-card scroll-reveal">
-          <div class="setup-card-num">07</div>
-          <div class="setup-card-name">Second Chance Entry</div>
-          <div class="setup-card-type">Re-entry · Meta Setup</div>
-        </div>
-        <div class="setup-card scroll-reveal" style="border-style: dashed; display:flex; align-items:center; justify-content:center; text-align:center;">
+        <div class="setup-card scroll-reveal"><div class="setup-card-num">01</div><div class="setup-card-name">Range Rejection</div><div class="setup-card-type">Fade Setup · Counter-trend</div></div>
+        <div class="setup-card scroll-reveal"><div class="setup-card-num">02</div><div class="setup-card-name">Failed Breakdown</div><div class="setup-card-type">Reversal Setup · Long</div></div>
+        <div class="setup-card scroll-reveal"><div class="setup-card-num">03</div><div class="setup-card-name">Pause N Go</div><div class="setup-card-type">Trend Continuation</div></div>
+        <div class="setup-card scroll-reveal"><div class="setup-card-num">04</div><div class="setup-card-name">Gap N Go</div><div class="setup-card-type">Opening Drive · Long</div></div>
+        <div class="setup-card scroll-reveal"><div class="setup-card-num">05</div><div class="setup-card-name">Gap Fill</div><div class="setup-card-type">Counter-trend · Fade Gap</div></div>
+        <div class="setup-card scroll-reveal"><div class="setup-card-num">06</div><div class="setup-card-name">Opening Range Breakout</div><div class="setup-card-type">Directional · ORB</div></div>
+        <div class="setup-card scroll-reveal"><div class="setup-card-num">07</div><div class="setup-card-name">Second Chance Entry</div><div class="setup-card-type">Re-entry · Meta Setup</div></div>
+        <div class="setup-card scroll-reveal" style="border-style:dashed;display:flex;align-items:center;justify-content:center;text-align:center;">
           <div>
-            <div style="font-size:1.5rem; margin-bottom: 8px;">+</div>
+            <div class="setup-card-num">+</div>
             <div class="setup-card-name" style="font-size:0.85rem;">More Coming</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── COURSE MAP ── -->
-  <section class="section" id="course">
-    <div class="container">
-      <div class="eyebrow">Course Modules</div>
-      <h2>Your <span class="text-gold">Learning Path</span></h2>
-      <p class="lead mt-md">19 modules, built in sequence. Each one unlocks the next. Work at your own pace.</p>
-
-      <div class="course-map mt-xl">
-        <div class="module-list">
-
-          <a href="modules/00-welcome.html" class="module-item" data-module-id="00-welcome">
-            <span class="module-num">00</span>
-            <span class="module-title">Welcome & Orientation</span>
-            <span class="module-tag foundation">Foundation</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/01-market-foundation.html" class="module-item" data-module-id="01-market-foundation">
-            <span class="module-num">01</span>
-            <span class="module-title">The Market Foundation</span>
-            <span class="module-tag foundation">Foundation</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/02-reading-charts.html" class="module-item" data-module-id="02-reading-charts">
-            <span class="module-num">02</span>
-            <span class="module-title">Reading the Chart</span>
-            <span class="module-tag foundation">Foundation</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/03-market-concepts.html" class="module-item" data-module-id="03-market-concepts">
-            <span class="module-num">03</span>
-            <span class="module-title">Market Concepts</span>
-            <span class="module-tag foundation">Foundation</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/04-tools-of-the-trade.html" class="module-item" data-module-id="04-tools-of-the-trade">
-            <span class="module-num">04</span>
-            <span class="module-title">Tools of the Trade</span>
-            <span class="module-tag foundation">Foundation</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/05-order-types.html" class="module-item" data-module-id="05-order-types">
-            <span class="module-num">05</span>
-            <span class="module-title">Order Types & Execution</span>
-            <span class="module-tag foundation">Foundation</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/06-risk-and-psychology.html" class="module-item" data-module-id="06-risk-and-psychology">
-            <span class="module-num">06</span>
-            <span class="module-title">Risk & Psychology Foundation</span>
-            <span class="module-tag foundation">Foundation</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/07-playbook-intro.html" class="module-item" data-module-id="07-playbook-intro">
-            <span class="module-num">07</span>
-            <span class="module-title">The PlayBook Introduction</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/08-range-rejection.html" class="module-item" data-module-id="08-range-rejection">
-            <span class="module-num">08</span>
-            <span class="module-title">Range Rejection</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/09-failed-breakdown.html" class="module-item" data-module-id="09-failed-breakdown">
-            <span class="module-num">09</span>
-            <span class="module-title">Failed Breakdown</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/10-pause-n-go.html" class="module-item" data-module-id="10-pause-n-go">
-            <span class="module-num">10</span>
-            <span class="module-title">Pause N Go</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/11-gap-n-go.html" class="module-item" data-module-id="11-gap-n-go">
-            <span class="module-num">11</span>
-            <span class="module-title">Gap N Go / Opening Drive</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/12-gap-fill.html" class="module-item" data-module-id="12-gap-fill">
-            <span class="module-num">12</span>
-            <span class="module-title">Gap Fill</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/13-orb.html" class="module-item" data-module-id="13-orb">
-            <span class="module-num">13</span>
-            <span class="module-title">Opening Range Breakout</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/14-second-chance.html" class="module-item" data-module-id="14-second-chance">
-            <span class="module-num">14</span>
-            <span class="module-title">Second Chance Entry</span>
-            <span class="module-tag setup">Setup</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/15-routines.html" class="module-item" data-module-id="15-routines">
-            <span class="module-num">15</span>
-            <span class="module-title">The Daily Routines</span>
-            <span class="module-tag routine">Routine</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/16-journaling.html" class="module-item" data-module-id="16-journaling">
-            <span class="module-num">16</span>
-            <span class="module-title">Journaling & Review</span>
-            <span class="module-tag routine">Routine</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/17-putting-it-together.html" class="module-item" data-module-id="17-putting-it-together">
-            <span class="module-num">17</span>
-            <span class="module-title">Putting It All Together</span>
-            <span class="module-tag routine">Routine</span>
-            <span class="module-check">→</span>
-          </a>
-
-          <a href="modules/18-beyond-mnq.html" class="module-item" data-module-id="18-beyond-mnq">
-            <span class="module-num">18</span>
-            <span class="module-title">Trading Beyond MNQ</span>
-            <span class="module-tag foundation">Bonus</span>
-            <span class="module-check">→</span>
-          </a>
-
         </div>
       </div>
     </div>
@@ -743,6 +1497,8 @@
       </p>
     </div>
   </footer>
+
+  </div>
 
   <script src="js/progress.js"></script>
   <script src="js/main.js"></script>
