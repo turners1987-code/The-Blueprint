@@ -86,7 +86,7 @@ body {
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(circle at 20% 0%, rgba(56,217,255,0.08), transparent 34rem),
     radial-gradient(circle at 88% 12%, rgba(245,185,76,0.06), transparent 28rem),
