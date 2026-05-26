@@ -393,7 +393,7 @@
       <div class="fc-shell">
         <div class="eyebrow">Interactive Study System</div>
         <h1 style="font-size:clamp(2rem,8vw,3.5rem);">Card <span class="text-gold">Deck</span></h1>
-        <p class="lead mt-sm" style="font-size:0.9rem;">32 cards. Tap to flip. Study or quiz yourself.</p>
+        <p class="lead mt-sm" style="font-size:0.9rem;">32 cards. Use the Flip Card button below. Study or quiz yourself.</p>
       </div>
     </header>
 
@@ -444,7 +444,7 @@
       <!-- Nav -->
       <div class="card-nav">
         <button class="nav-btn" id="prevBtn" onclick="navigate(-1)">← Prev</button>
-        <button class="nav-btn flip-btn" onclick="flipCard()">Flip</button>
+        <button class="nav-btn flip-btn" onclick="flipCard()">Flip Card</button>
         <button class="nav-btn" id="nextBtn" onclick="navigate(1)">Next →</button>
       </div>
 
@@ -791,20 +791,7 @@
     }
   }
 
-  // Touch swipe support
-  let touchStartX = 0;
-  document.getElementById('card').addEventListener('touchstart', e => {
-    touchStartX = e.touches[0].clientX;
-  }, {passive:true});
-  document.getElementById('card').addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    if(Math.abs(dx) > 60){
-      dx < 0 ? navigate(1) : navigate(-1);
-    } else {
-      flipCard();
-    }
-  }, {passive:true});
-
+  
   </script>
 </body>
 </html>
