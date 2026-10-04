@@ -1,0 +1,75 @@
+TurtleMetrics — Trading Setups (exported 2026-10-04, verbatim)
+These are Shane's setup descriptions as written in TurtleMetrics Management > Setups.
+Copied exactly, including definitions now superseded by v2. The stale ones are evidence
+of how the method moved. See METHODOLOGY_v2.md for current status of each.
+
+=== 9 EMA Pullback Entry ===
+Context: Confirmed trend already established (via stacked imbalance/footprint absorption,
+HTF structure, or price action). Not a standalone read - this is an entry trigger layered
+onto an existing Trend Continuation or missed-stack scenario.
+Trigger: Price pulls back to the 9 EMA (1-min chart). Confirmation is either (a) a wick
+through the EMA followed by a close back on the trend side, or (b) a full close through the
+EMA against trend, followed by a close back beyond it in trend direction on a subsequent
+bar. Either counts as rejection/reclaim.
+Stop: Above (short) or below (long) the nearest relevant structure - swing high/low or key
+level, discretionary judgment call. Keep it simple for now; revisit only if it starts
+costing you.
+Target: Next structural level in trend direction - today that was ON Low. Standard 2R target
+otherwise.
+Management: Trail to swing structure as trend extends (same trail logic you already used
+today - 2 consecutive closes beyond active trendline/EMA still applies as your exit signal
+on a runner).
+
+=== Breakout/Breakdown ===
+(no description - field empty in TurtleMetrics)
+
+=== Failed Breakdown/Breakout ===
+Failed Breakdown is Bearish. Failed Breakout is Bullish. Price puts in some sort of
+manipulation below a level, exact criteria is 2 closes on the 1 min chart... then buys back
+above. Enter on a pause n go
+
+=== Gap Fill ===
+trade from the open til the gap fills
+
+=== No Set Up ===
+Trading based off feel. Gambling.
+
+=== Pause n Go ===
+price shows absorption in the footprint - or - blue orders holding it up (long) or pink
+holding it down (short) - before continuing in the direction toward the next target.
+
+=== Range Rejection ===
+Fade a push into a named range extreme (ON High, PD High, VAH) when price opens inside prior
+day range and value area. Confirmed by shooting star candle(s) at the level, dominant pink
+footprint, minimal blue orders on pullback, and bullish candle with wick piercing 9 EMA
+closing below it as entry signal. Entry at break of that candle's low. Stop above candle
+high. Target 2R.
+
+=== Stacked Imbalance Setup ===
+Context: 5-min footprint (Bid x Ask) shows a stacked imbalance cluster - multiple adjacent
+price levels with sustained one-sided imbalance (per current settings: ratio 5, min delta 15)
+plus sustained negative or positive bar delta / cumulative delta trending in one direction
+across the sequence. This is the location - the level(s) where the setup can trigger.
+Regime read (hypothesis, not yet validated): Trending/momo day -> enter early, at or near the
+stack itself (Trend Continuation logic). Price is unlikely to give a clean retest.
+Chop/range day -> wait for a pullback/retest of the stack before entering (Range Rejection
+logic, Dale's method). Missed the stack entirely -> fall back to the 9 EMA Pullback Entry on
+the subsequent trend continuation.
+Confirmation: Price revisits the stacked-imbalance zone and gets rejected rather than
+reclaiming it - Trapped Traders signal on the footprint. Rejection on revisit is the trigger
+to act (or, on a trending day, the stack forming with sustained delta is itself the trigger
+without waiting for a revisit).
+Entry trigger: Pause N Go or 9 EMA Pullback Entry, whichever fits the depth of the move at
+that moment - Stacked Imbalance is the read/location, not the trigger itself.
+Stop: Above (short) or below (long) nearest structure - swing high/low or key level,
+discretionary.
+Target: Next structural level in trend direction (key level, ON High/Low, etc.).
+Management: Trail to swing structure as trend extends; 2 consecutive closes beyond active
+trendline/9 EMA = flatten runner.
+Open item: Ratio 5 setting is untested against MNQ-specific data - origin was fewer signals
+on screen, not backtested. If a loss shows an un-colored stack nearby, that's a flag the
+setting may be too tight.
+
+=== Trend Continuation ===
+Entry placed bullish, above pink orders, in a pull back, stop below low of forming swing...
+Or vice versa for bearish

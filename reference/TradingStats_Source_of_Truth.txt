@@ -1,0 +1,1471 @@
+TRADINGSTATS RESEARCH — COMPLETE SOURCE OF TRUTH
+==================================================
+Compiled: May 27, 2026 | Updated: June 8, 2026 (changelog — IB v2, Gap Fill, Weekly Open, Q-Chain, IB opposite-side break fix)
+Source: tradingstats.net
+Data: NQ (Nasdaq 100 Futures) — applies equally to MNQ (Micro E-mini Nasdaq-100)
+Coverage: 2014 onward · 12+ years · 1-minute bar resolution
+Instruments: NQ · ES · YM · RTY (4 index futures)
+ 
+NOTE ON NQ vs MNQ
+MNQ is the Micro E-mini Nasdaq-100 — identical instrument to NQ, one-tenth the contract size.
+Same price, same levels, same probabilities. All TradingStats data applies equally to MNQ.
+QQQ is an ETF tracking the same Nasdaq-100 index but is a different instrument entirely.
+TradingStats uses NQ futures data (continuous front-month via InsightSentry).
+ 
+==================================================
+PLATFORM OVERVIEW
+==================================================
+ 
+URL: tradingstats.net
+App: tradingstats.net/app (PC only, requires account)
+Blog: tradingstats.net/blog
+Discord: discord.com/invite/YPAWdRXCH6
+Status: Pre-public alpha. Actively shipping. Multiple updates per week.
+Creator: Andrey (STAT) — built as personal tool, now opening to community.
+Shane's access: Alpha/Tester Member (whitelisted May 26, 2026, ticket #82)
+ 
+Platform description:
+"Research-grade futures data. Built by a trader."
+"We don't sell signals. We don't predict the market. We give you the raw numbers — and let you decide."
+"12,000+ trading days of statistical data. Interactive dashboards. Zero guesswork."
+ 
+Who it's for:
+- Intraday futures traders on NQ, ES, YM, RTY
+- Traders using session structure, VWAP, VPOC, volume profile, session levels
+- Anyone who wants base-rate context before making a decision
+ 
+Not for:
+- Options, stocks, crypto, or FX
+- Swing, position, or long-term investing
+- Complete beginners (assumes basic TA knowledge)
+- Anyone looking for signals, auto-trades, or "enter here" calls
+ 
+==================================================
+HOW TO INTERPRET PROBABILITIES
+==================================================
+ 
+Base rates, not forecasts.
+"70% hit rate" means the event occurred in 70% of past cases under similar conditions — not that today has a 70% chance.
+ 
+Sample size matters.
+Check n in the tooltip. n=15 is noisy. n=500+ is stable.
+ 
+Confidence intervals widen with small n.
+65% with CI [45–82%] tells you less than 65% with CI [62–68%].
+ 
+Conditional probability ≠ base rate.
+condProb updates as time and price move. Use the live value, not the static table.
+ 
+Edge ≠ conviction.
+A 62% edge with discipline beats 85% with bad sizing. Probability is input, not a trade plan.
+ 
+Non-directional events (retest, fill) do not signal trade direction — context only.
+ 
+==================================================
+PLATFORM NAVIGATION — LEFT SIDEBAR
+==================================================
+ 
+1. Command Center — live chart with all active edge modules, real-time probabilities
+2. Analytics — historical backtests across symbols, date ranges, context filters
+3. Earnings — weekly earnings calendar for US-listed companies
+4. Macro Events — NFP, CPI, FOMC historical behavior data
+5. Positioning — CFTC COT smart money vs speculator positioning
+6. Correlations — cross-index correlation regime detection
+7. Methodology — documentation (bottom of sidebar)
+ 
+==================================================
+COMMAND CENTER — FULL LAYOUT
+==================================================
+ 
+Header (sticky top bar):
+- Symbol tabs: NQ / ES / YM / RTY with live price and % change
+- Date, market status (LIVE / MARKET CLOSED), ET clock
+ 
+Phase Timeline:
+- Day-phase progress bar: Pre-Market → Market Open → Midday → Afternoon
+- Times in ET. Active phase fills in real time.
+ 
+Chart Area:
+- Main chart, ETH session (18:00–16:00 ET on intraday TFs)
+- Default: 1-minute timeframe (configurable: 30s / 1m / 5m / 15m / 30m)
+ 
+Chart Toolbar Overlays (toggleable):
+- Big Trades
+- Single Prints
+- VWAP
+- VPOC
+- HR Levels (Hourly Retracement)
+- Prisma
+- Reach
+- Wick Fade
+- PWH/PWL
+- StDev (SD Bands)
+ 
+Module Edges Grid (14/15 active in live session):
+- Gap Fill
+- Initial Balance
+- Opening Range
+- Prev RTH
+- OVN Levels
+- Weekly Open
+- Midnight Open
+- ALN Session
+- London Breakout
+- NY Open Breakout
+- Hourly Breakouts
+- Globex Open
+- PDH/PDL Forecast
+- P12 Range
+- Asia Extensions
+ 
+Each card shows:
+- Status: Waiting / Active / Done / Missed
+- Bias: LONG or SHORT
+- Probability (with uplift vs baseline)
+- Target level and price
+- Accuracy range and sample size
+- Expandable detail view with full breakdown
+ 
+PWHL Dashboard:
+- Prev-week high / low / mid edge
+- Tier (S / A / B / C / AVOID)
+- Factor gauges, level probabilities, live tracking
+ 
+HOD / LOD Engine:
+- Live session high / low formation vs key levels
+- Current price position (within range / beyond range / extended)
+- ATR Coverage percentage
+- Reversal Rate
+- Session Timeline showing HOD SET % and LOD SET %
+- Statistical Zones (distance from session open)
+- SD Levels table (0.5σ through 3.0σ)
+- HOD/LOD Price Targets (p30/p50/p70/Beyond Range)
+- MFE/MAE from RTH open
+- Streaks (reversal rate streak, HOD in AM streak)
+- Noon Pattern (AM-High/PM-Low distribution)
+- Weekly Context (weekly low/high held by which day)
+- Session Range Breakdown (ASN/LDN/NY AM/NY PM vs 20d median)
+- Formation Distribution (HOD and LOD formation time histograms)
+- Session Probability by phase (ASN/LDN/NY AM/NY PM HOD% and LOD%)
+ 
+ Edge Accuracy (rebuilt June 10, 2026 — full trust & calibration layer):
+Purpose: Answers "Can I actually trust this %?" for every module.
+Methodology: Walk-forward backtest over ~2 years of prior-only data — zero look-ahead, no cherry-picking.
+Access: Command Center → scroll to Edge Accuracy block.
+ 
+Filters (top right):
+- Period: 1M / 3M / 6M / 2Y — applies to win rate display
+- Min Signal Strength slider: 50%–90% — recomputes live, filters out low-confidence calls
+ 
+Per-module columns:
+- Win Rate + 95% CI — actual hit rate with confidence interval. Modules under n=30 are visually dimmed (noisy sample — read with extra skepticism).
+- Calibration Grade (A–D) — gap between stated % and actual outcome. A = honest. D = stated % is misleading. A low grade doesn't mean the module is useless — it means apply a discount to the stated probability.
+- Base — coin-flip or baseline for that module type (typically 50%)
+- Edge — win rate minus base. The real number. This is what beats randomness.
+- Trust Score — overall reliability score combining edge + calibration. Primary sort key. Higher = more dependable.
+- Sample (n) — dataset size. Check this before weighting any module.
+- Drift — sparkline showing edge curve over time. Flat/rising = stable. Declining = degrading.
+ 
+Track Record panel:
+- Win/loss history grid (color-coded, newest first)
+- Current streak / Longest win streak / Longest loss streak / Last 30 / Overall WR
+ 
+Where It Works panel (per module, expandable):
+- Win rate by direction: Long vs Short — identifies whether a module's edge is directional or symmetric
+- Win rate by day of week: Mon–Fri — identifies if a module prints better on specific days. Use this during pre-market prep when a module is active.
+ 
+Confluence signal:
+- When 4+ directional modules align the same way, historical resolution rate is displayed
+- This is a measured consensus signal — use it as a conviction input alongside ATR and RSI, not as a standalone entry trigger
+- Appears automatically when threshold is met; no manual action needed
+ 
+How to read it in practice:
+- Trust Score is the primary filter. High trust + high edge = lean on it. High win rate + low calibration grade = the % is misleading, size down.
+- Check the Long/Short split before assuming a module applies to your trade direction. Some modules have strong Long edge but weak Short edge (or vice versa).
+- Check the day-of-week row — if today is a historically weak day for a module, weight it less even if the probability looks good.
+- n matters. A 90% win rate on n=16 (e.g., Weekly Open) is far less stable than 87% on n=85. Treat low-n modules as directional context only, not high-confidence edges.
+- Confluence signal at 4+ modules is meaningful. Note it in Part B session read when it fires.
+ 
+Calibration grades — what they mean operationally:
+  A: Stated % closely matches actual outcome. Use the number as shown.
+  B: Minor gap. Small discount appropriate.
+  C: Moderate gap. Read the % directionally, not literally.
+  D: Significant gap. Module may still be useful directionally but stated probability is unreliable — do not use the % for sizing decisions.
+ 
+ 
+Market Context:
+- Narrative summary of every active edge module
+- Status, bias, and key levels in plain language
+- Updates live throughout session
+ 
+Key Levels Panel (right sidebar, always visible):
+- All active levels sorted by distance from current price
+- Color-coded by module
+- Distance in points shown
+ 
+==================================================
+ANALYTICS — FULL MODULE LIST
+==================================================
+ 
+Previous RTH — prior RTH high/low break and retest behavior
+Overnight Levels — touch and break rates for OVN high, low, mid
+Weekly Open — touch rates and directional bias relative to weekly open
+ALN Session Map — Asia/London/NY sequence patterns and cascade probabilities
+London Breakout — pre-London range break and touch probabilities
+NY Open Breakout — first-move bias and follow-through around NY open
+Gap Fill — fill rates by gap size, direction, and context
+Initial Balance — IB extension, retest, and break rates by width tier
+Opening Range — configurable ORB break and continuation statistics
+Session Open — touch probabilities from RTH open to prior session levels
+Hourly Breakouts — per-hour range break and reversion statistics
+Midnight Open — touch and bias behavior around 00:00 ET open
+P12 Range — overnight (Q1+Q2) range — mid, high, and low touch behavior
+Asia Range — Asia-session range break, extension, and reversion behavior
+ 
+Analytics interface:
+- Symbol selector: NQ / ES / YM / RTY
+- Date range: All Data / YTD / Last 12m / Last 6m / Last 3m / Custom
+- Refine Context sidebar: module-specific filters (gap size, volatility, weekday, etc.)
+- Results update dynamically on every filter change
+- Data stays fresh — updates daily through most recent closed RTH session
+ 
+==================================================
+SESSION TIMES (ALL ET, DST HANDLED AUTOMATICALLY)
+==================================================
+ 
+CORE:
+ETH: 18:00 Sun → 17:00 Fri (break 17:00–18:00)
+RTH: 09:30 → 16:00 weekdays
+OVN: 18:00 prev day → 09:30
+ 
+INTRADAY PHASES:
+Globex Open: 18:00
+Midnight Open: 00:00
+IB: 09:30 → 10:30
+NY Open phase: 08:00 → 09:30
+ 
+REGIONAL (ALN):
+Asia: 20:00 → 02:00
+London: 02:00 → 08:00
+NY: 08:00+
+ 
+Note: London Breakout module uses tighter split:
+Asia: 20:00 → 00:00
+Pre-London: 00:00 → 02:00
+London: 02:00 → 05:00
+ 
+==================================================
+CHART OVERLAYS — DETAIL
+==================================================
+ 
+PRISMA ZONES
+Quantile reaction zones from historical bar ranges.
+Six timeframes: 1H, 4H, 8H, 12H, D, W
+Two modes: Extension (EXT) when price breaks prior bar range, Interior (INT) when inside
+Four percentile bands: p50 (median), p75, p85, p99
+p50: 50% of historical reactions bounded here — typical first stall
+p75: 75% of reactions stop within — common reversal area
+p85: 85% of reactions don't exceed — strong move territory
+p99: only ~1% reach — exhaustion/capitulation signal
+Color: Red = high-side bands, Green = low-side bands
+Coefficients derived from cross-instrument backtests (NQ, ES, YM, RTY) over 12 years
+Universal coefficients hold within ±0.01 across instruments
+Multi-TF stacking: when multiple TFs cluster at same price = structurally significant
+ 
+VWAP + SD BANDS
+Volume-Weighted Average Price with ±1 and ±2 standard deviation bands
+Two anchors: ETH (18:00 ET — full Globex day) or RTH (09:30 ET — cash session only)
+VWAP = sum of (typical price × volume) / total volume since anchor
+Typical price = (High + Low + Close) / 3
+SD bands = volume-weighted standard deviation of typical prices around VWAP
+Bands widen in high volatility, tighten in consolidation
+ 
+SINGLE PRINTS
+Single-print gaps from prior RTH market profile — act as magnets
+Based on 30-minute TPO blocks — price levels with exactly one TPO letter
+Tracked over last 10 trading days
+Size bucket: Tiny (<0.10%), Small, Normal, Wide (>0.40%)
+Tiny zones fill at ~77% — by far strongest predictor
+Age decay: D+0 = full base prob, D+2 = 65%, D+5 = 32%, D+10 = 8%
+Direction bias: aligning with today's momentum = 1.2× multiplier
+Chain position: sequential filling logic when zones stack
+Open-inside override: if RTH opened inside an SP zone = 90% fill rating
+3,157 zones analyzed across backtest
+Backtest: 2014–present across NQ, ES, YM, RTY
+ 
+BIG TRADES
+Live tape of large-size prints from CME futures order flow
+Aggregated in 2-second windows
+Buys (lifts) = green, Sells (hits) = red
+Newest 25 prints visible, 36-hour memory
+NQ threshold: 50 contracts minimum
+Tiers: 50–100 / 100–200 / 200+ contracts (small / medium / large)
+~$24M minimum notional across all instruments
+Color = aggressor side only, not directional signal
+ 
+==================================================
+PROBABILITY MODULES — DETAIL
+==================================================
+ 
+REACH
+Post-breakout extension zones at 5 percentile depths
+Activates only when price breaks prior bar's range
+Timeframes: 4H, 6H, 8H, 12H
+Five bands: p25, p50 (median/retest), p75, p85, p95
+p25: first shallow extension — 25% of breaks go this far before open retest
+p50: half of breakouts run this far — typical retracement target
+p75: 75% of breakouts stop within — common reversal area
+p85: strong-move territory — 85% don't exceed
+p95: rare extension — only ~5% of breakouts run this deep
+Open-retest probability: conditional on current peak extension, bar open position, time elapsed
+Coefficients calibrated from 97–221 historical break events per timeframe/slot
+Universal across NQ, ES, YM, RTY within std dev under 0.01
+ 
+HOURLY RETRACEMENT
+Projects each overnight hourly candle's Open and Mid into RTH session
+Hours tracked: 02:00–07:00 ET (Asia hours 20:00–02:00 hidden — weakest edge)
+Two levels per candle: Open (actual traded price) and Mid ((high+low)/2)
+Hit rate = historical % of days RTH price returned to touch level before cash close
+7am Mid hit rate: 94.1% — strongest level
+7am Open hit rate: 88.9% — second strongest
+Mid levels consistently outperform Open levels at every hour
+Conditional decay checkpoints: 9am, 10am, 11am, 12pm, 2pm ET
+Levels not hit by 11am lose roughly 15–30 percentage points of remaining probability
+P2 ALN pattern adds +5–17 percentage points above baseline
+Priority Score (0–100): combines hit rate with distance from price
+MAE zones available: median overshoot (inner) and p75 overshoot (outer) per level
+ALN Pattern effect:
+P1 — London engulfs Asia: variable
+P2 — London inside Asia: +5 to +17pp above baseline (strongest)
+P3 — London breaks above Asia: upside directional bias
+P4 — London breaks below Asia: downside directional bias
+Dataset: 3,115 NQ sessions, 10+ years
+ 
+PWH / PWL EDGE
+Directional bias based on price position relative to previous week's high/low midpoint
+Midpoint = (PWH + PWL) / 2
+Above midpoint → PWH touched first: 81–88% of the time
+Below midpoint → PWL touched first: 73–78% of the time
+Asymmetry reflects natural upward drift in equity index futures
+Mid-first collapse: when price crosses midpoint before touching either level, edge collapses to ~50% — does NOT flip direction
+After directional week: hit rate jumps to 91–95%
+After indecisive week: hit rate drops to 66–71%
+Near-extreme positions (Q1/Q4 quartiles): 86–96% hit rates
+Mid-range positions (Q2/Q3): only 56–73% hit rates
+Most weeks resolve by Tuesday (~76%) — by Wednesday ~89% have touched a level
+P(Opposite also touched): typically only 10–15%
+Four weighted factors:
+  Distance: 35% — price quartile position (strongest factor)
+  Previous Week: 30% — was last week directional or indecisive?
+  Direction: 20% — above or below midpoint
+  Consensus: 15% — do NQ, ES, YM, RTY all agree?
+Edge tiers:
+  S-TIER: 90%+ — extreme position + directional week + consensus
+  A-TIER: 82%+ — strong edge
+  B-TIER: 72%+ — moderate edge
+  C-TIER: 65%+ — weak edge
+  AVOID: below 65% — no reliable edge or mid-first collapse
+Dataset: 2,226 inside-range weeks, 12 years
+ 
+WICK FADE
+Live session-wick extension probability
+Tracks HIGH wick when price < session open, LOW wick when price > session open
+Wick % = (running extreme − body edge) / session open × 100
+Body edge = max(open, currentClose) for HIGH side, min for LOW side
+Hourly-conditional percentile from 16-year NQ backtest (4,204 sessions)
+Exceedance probability = historical % of sessions where wick extended further from this percentile at this hour
+Score = probability × (100 − percentile) / 100
+Color zones:
+  Green (≥75%): strong expectation of further extension
+  Lime (60–74%)
+  Yellow (45–59%)
+  Orange (30–44%)
+  Red (<30%): extension likely exhausted
+Session anchor: 18:00 ET
+ 
+==================================================
+EDGE MODULES — DETAIL
+==================================================
+ 
+GLOBEX OPEN
+Globex (18:00 ET) open as pivot level into RTH
+Retrace probability and timing back to 18:00 open after drifting away
+Conditional remaining odds update through overnight
+ 
+P12 RANGE
+Overnight Globex 12-hour range: 18:00 → 06:00 ET (Asia + early European)
+Three levels: P12 High, P12 Mid ((High+Low)/2), P12 Low
+Tracking window: 06:00 → 16:00 ET
+Touch base rates (all sessions):
+  Any level: 99.87% — virtually always
+  P12 Mid: 82.85% (CI 81.47–84.14)
+  P12 High: 72.82% (CI 71.22–74.37)
+  P12 Low: 66.02% (CI 64.33–67.68)
+  All three: 40.54% modal case
+06:00 side drives near-side vs far-side asymmetry:
+  06:00 above Mid → High touches 84.43%, Low only 53.92%
+  06:00 below Mid → Low touches 82.4%, High only 57.11%
+Range regime (14-day ATR normalized):
+  Narrow (<0.45×): higher touch rates — mean reverting auctions
+  Wide (>0.85×): lower touch rates — directional drives leave one side untouched
+Touch sequence (valid permutations only — Mid must be crossed between High and Low):
+  Low → Mid → High: 44.86% (most common)
+  Mid → High → Low: 31.96%
+  Mid → Low → High: 22.99%
+  High → Mid → Low: 0.19%
+Cascade after first touch:
+  Mid touched first → 96.91% chance neighbor follows
+  High first → 63.44% neighbor, 41.02% opposite
+  Low first → 68.67% neighbor, 42.65% opposite
+Time × Distance Matrix: probability of touching by 16:00 given current time and distance
+Distance buckets: VC (≤0.25× ATR), C (0.25–0.5×), F (0.5–1.0×), VF (1.0×+)
+Scenario Calculator available: input time, current price, P12 levels, level status
+Dataset: 3,061 sessions
+ 
+ASIA EXTENSIONS
+Asia range: 20:00 → 02:00 ET
+Tracking window: London session 02:00 → 08:00 ET
+Extension levels: 10% / 25% / 50% / 75% / 100% of Asia range past first-broken side
+Marginal hit rates (all sessions):
+  Reach 10%: 91.6%
+  Reach 25%: 76.3%
+  Reach 100%: 29.3%
+  Mean revert by 08:00: 96.8%
+Conditional cascade ladder (once level hit, probability of next):
+  10% → 25%: 88.7%
+  25% → 50%: 74.0%
+  50% → 75%: 71.5%
+  75% → 100%: 72.6%
+First-break timing vs extension (key relationship):
+  02:00–02:30 break → 35.4% reach 100%
+  07:00–08:00 break → only 2.9% reach 100%
+  Early breaks carry ~12× more extension potential than late breaks
+Range size vs extension:
+  Narrow: 40.0% reach 100%
+  Normal: 29.3%
+  Wide: 17.3%
+  Narrow regimes carry ~2× the 100% hit rate of wide
+First-broken asymmetry:
+  Low first: 33.8% reach 100%
+  High first: 25.7% reach 100%
+  Downside breaks extend further
+Stalled decay — continuation drops sharply when price pauses:
+  0–5 min stall at 50%: 71.5% continue to 75%
+  5–15 min: 64.9%
+  15–30 min: 55.1%
+  30–60 min: 45.7%
+  60+ min: only 34.4%
+Mean reversion by max extension reached:
+  Failed break (<10%): 99.6% revert
+  Stopped at 25%: 98.8%
+  Stopped at 50%: 98.5%
+  Stopped at 75%: 96.6%
+  Reached 100%: 92.5%
+Post-touch bounce after reversion (60 min window, % of day range):
+  Low: median 12%, P75 23%
+  Mid: median 9%, P75 17%
+  High: median 9%, P75 17%
+Dataset: 3,163 sessions
+ 
+OVN LEVELS
+Overnight session (18:00–09:30 ET) high, low, mid as live reaction levels
+OVN breakout rate: 95.1% of days break at least one OVN level during RTH
+Breakout class:
+  Only one side: 69.8%
+  Both sides: 25.3%
+  No breakout: 4.9%
+First broken: High first 54.1%, Low first 45.9%
+Timing: median 10 minutes from RTH open
+  72% break within 30 minutes
+  83% break within 60 minutes
+  75% break by 10:05am
+  90% break by 11:12am
+Open vs OVN Mid is strongest directional signal:
+  Above OVN mid → 76% OVN High first (+22% directional lift)
+  Gap up → 69% OVN High first
+Best single factors:
+  Above mid: +22pp directional (strongest)
+  Gap up: +14pp
+Dataset: 3,156 days
+ 
+INITIAL BALANCE
+[Updated June 5, 2026 — IB v2 overhaul]
+First-hour RTH range: 09:30–10:30 ET
+IB High and IB Low define the range
+Breakout = price moves beyond IB High (up) or IB Low (down) after 10:30
+ 
+Pre-break view (v2): Card now simultaneously displays three things before IB breaks:
+  (1) First-break side probability (up vs down)
+  (2) Contained-live probability (chance price stays inside IB by close)
+  (3) Top-3 day-type cohort (most likely session archetypes given current conditions)
+ 
+Post-break behavior (v2): After IB breaks, card pivots to:
+  Chain ladder: extension targets at 25% / 50% / 75% / 100% past the broken level
+  Retrace ladder: probability of price returning back inside IB
+  Decay is now continuous minute-by-minute (previously stepped every 30–60 min at checkpoints)
+  Survival data renders as a single row with full tooltips on hover
+  Opposite-side break (updated 6/8/26): if IB breaks the side opposite to prediction, card
+  no longer goes dark — pivots to track actual break direction with live extension and retrace
+  levels; original predicted probability preserved in result strip as a miss; symmetric for
+  both directions
+ 
+IB tier based on IB size vs 14-day ATR:
+  Narrow (<0.5× ATR), Normal (0.5–1.0×), Wide (1.0–1.5×), Extreme (>1.5×)
+Breakout distribution (all sessions):
+  Single break: 73.8%
+  Double break: 22.3%
+  No break: 4.0%
+  False break rate: 35.1%
+  IB High = Day High: 36.8%
+Single break direction: Up 41%, Down 33%
+Extension ladder (probability of reaching target beyond IB level):
+  25% extension either side: 80%
+  50% extension either side: 60%
+  1× IB extension either side: 29%
+  1.5× either side: 13%
+  2× either side: 6%
+IB tier vs extension and false break:
+  Narrow: 70% single break, 38.4% reach 1×, 31.6% false break
+  Normal: 78.5% single break, 17.4% reach 1×, 39% false break
+  Wide: 79.4% single break, 4.7% reach 1×, 44% false break
+  Extreme: 71.4% single break, 0% reach 1×, 70% false break
+C-Period confirmation (10:30–11:00):
+  C close above IBH: 62.6% continuation rate
+  C close below IBL: 61.6% continuation rate
+  C closes inside after break = reversal signal
+Which extreme forms first (highly predictive):
+  Low forms first → breaks up 80.1% of the time
+  High forms first → breaks down 70.6% of the time
+MAE from breakout level:
+  Long MAE median: 25.8pts (0.19× ATR)
+  Short MAE median: 31.8pts (0.25× ATR)
+Retracement after breakout:
+  100% of sessions retrace into IB at some point
+  Touch 50% level: 50.5%
+  Touch opposite IB: 23.3%
+  Median retracement depth: 50.5% of IB range
+Best single-break scenarios:
+  Normal IB + Above VA + Inside Day: 91.8% single break
+  Gap Up + Inside Day + Monday: 89.4% single break
+Weekday false break rates:
+  Wednesday: 33.9% (lowest — cleanest IB breaks)
+  Thursday: 37.1% (highest)
+Dataset: 3,163 days
+ 
+PREV RTH
+Prior RTH range (09:30–16:00 ET) breakout behavior
+Universe: only days where RTH opens inside prior RTH range (gap opens excluded)
+Breakout rate: 81% of days break prior RTH high or low
+Breakout class:
+  Only High: 39.1%
+  Only Low: 32.9%
+  Both sides: 9%
+  No breakout: 19%
+First broken: High first 54.9%, Low first 45.1%
+Timing:
+  Median time: 24 minutes
+  55% break within 30 minutes
+  68% break within 60 minutes
+  75% break by 10:56am
+  90% break by 1:12pm
+Best single factors:
+  OVN hit both sides: up to 100% breakout rate (small sample)
+  Wednesday: 85.5% breakout rate (strongest weekday)
+  OVN hit PDH + gap up: 92.1% breakout rate
+Best context (3 conditions):
+  Wed + Above mid + Gap Up + OVN hit PDH: 98.3%, 91% High first
+Dataset: 1,879 days
+ 
+LONDON BREAKOUT
+Pre-London range: 00:00–02:00 ET (reference high and low)
+London session: 02:00–05:00 ET (primary analysis window)
+Asia: 20:00–00:00 ET (context only)
+First sweep distribution (3,103 sweep days, 41 no-sweep):
+  First High: 53.3%
+  First Low: 46.7%
+  No sweep: 41 days (1.3%)
+Sweep both: 40.3%
+Fail rates:
+  Fail H→L (broke high first, reversed and broke low): 39.9%
+  Fail L→H: 41.9%
+  Overall ~40% of first breaks reverse
+Timing vs fail rate (most important finding):
+  0–5 min: 47.6% fail — HIGH RISK
+  5–15 min: 45.1% fail — HIGH RISK
+  15–30 min: 39.6% fail — ELEVATED
+  30–60 min: 38.8% fail — ELEVATED
+  60+ min: 22.6% fail — LOW RISK
+  EARLY (≤15m): 46.3% fail vs LATE (60+m): 21.7% fail — difference of +24.6pp
+First Low in 0–5 min: 50.2% fail — essentially a coin flip
+Median time to first sweep: 9 minutes
+Penetration depth:
+  Upside move: +15.0 median, P75 +32.9, P90 +61.9
+  Downside move: -14.0 median, P75 -36.5, P90 -68.6
+Top contexts (strongest statistical edges):
+  Wide Asia + PL below mid + Asia L swept + Ldn above PL: 87.8% High first, 88% direction
+  Narrow Asia + PL at mid + Asia L swept + Ldn below PL: 14.3% High first, 86% Low direction
+Dataset: 3,144 days
+ 
+NY OPEN BREAKOUT
+Reference range: London High / London Low (02:00–08:00 ET)
+NY session analyzed: 08:00–16:00 ET
+First sweep distribution (3,075 sweep days, 78 no-sweep):
+  First High: 54.4%
+  First Low: 45.6%
+  No sweep: 78 days (2.5%)
+Sweep both: 35.3%
+Fail rates:
+  Fail H→L: 36.5%
+  Fail L→H: 35.0%
+  Slightly lower than London Breakout
+London direction is strongest single predictor:
+  London closed up → NY breaks High first 73.1%
+  London closed down → NY breaks Low first 67.8%
+NY open vs London Mid adds confirmation:
+  NY opens above → High first strongly favored
+  NY opens below → Low first strongly favored
+  All top contexts (85%+ accuracy) involve NY opening below LDN Mid → Low first
+Level hit rates during NY session (independent):
+  Asia High: 74.2%
+  London High: 69.2%
+  Asia Low: 67.5%
+  London Low: 64.4%
+Timing vs fail rate:
+  0–5 min: 40.9% fail — ELEVATED
+  5–15 min: 44.2% fail — ELEVATED (high upside breaks 50.3%)
+  15–30 min: 40% fail — ELEVATED
+  30–60 min: 43.9% fail — ELEVATED
+  60+ min: 28.2% fail — LOW RISK
+  EARLY (≤15m): 42.5% fail vs LATE (60+m): 28% fail — difference 14.5pp
+Median time to first break: 55 minutes (much later than London's 9 min)
+Long extension targets: +29 median, P75 +72.6, P90 +140.3
+Short extension targets: -34.8 median, P75 -83.2, P90 -162.6
+Dataset: 3,169 days
+ 
+WEEKLY OPEN
+[Updated June 5, 2026 — stable DONE state]
+Weekly Open (WO) = Monday's RTH opening price at 09:30 ET
+Analysis window: Tuesday–Friday RTH
+DONE state (v2): Once WO is touched, probability freezes at the Tuesday-classified cohort prediction instead of switching to the unconditional baseline. The number stays consistent with the pre-touch view — eliminates the "headline drop" after the level gets hit.
+Touch rate: 70.3% of weeks touch WO during Tue–Fri
+Touch path breakdown (of touched weeks):
+  ETH first then RTH: 46.17%
+  Straight to WO during RTH: 40.32%
+  Move away then return: 13.51%
+Timing:
+  65% of first touches happen Tuesday
+  45% of touches in 09:30–10:00 window on Tuesday
+  By Tuesday close: 46% remaining probability if not yet touched
+  By Wednesday close: 28% remaining
+  By Thursday close: 13% remaining
+RTH touch window:
+  09:30–10:00: 45% (201 weeks)
+  10:00–11:30: 29%
+  11:30–13:30: 13%
+  13:30–15:00: 8%
+  15:00–16:00: 5%
+Tuesday distance vs touch rate:
+  <0.25%: 93.2% touch rate (148 weeks)
+  0.25–0.50%: 75.0% (116 weeks)
+  0.50–1.00%: 69.6% (184 weeks)
+  1.00–1.50%: 52.8% (89 weeks)
+  >1.50%: 46.3% (95 weeks)
+Best context chains:
+  Below WO + Distance <0.25%: 98.4% touch rate (63 weeks) — near guaranteed
+  Above WO + Distance <0.25%: 89.2%
+  Below WO + ETH first: 87.7%
+  Distance <0.25% + ETH first: 93.5%
+Best single factors:
+  Distance <0.25%: +22.9pp above average
+  ETH touched first: +13.1pp
+  Below WO direction: +6.6pp
+After 4+ consecutive touched weeks → next week touched: 76.4%
+Dataset: 632 weeks
+ 
+GAP FILL
+[Updated June 5, 2026 — 5-column ladder display]
+Universe: days where RTH open differs from prior RTH close by more than 1 tick
+Gap Up = open > prev close. Gap Down = open < prev close
+Fill target = previous RTH close
+Fill level measurement: 25% / 50% / 75% / 100%
+Time horizons: By IB (10:30) / By Noon (12:00) / By Close (16:00)
+ 
+Display (v2 — 5-column ladder): Each fill level (25/50/75/100/Target) now shows historical and live percentages side-by-side. Chart labels follow the format "25% gap fill ▲N%". Monotonicity clamped so live probabilities never invert (25 ≥ 50 ≥ 75 ≥ 100). Gap fill levels are hidden until 09:30 ET — before RTH open the gap is undefined and levels would drift with every tick.
+Fill ladder (all gaps baseline):
+  25% fill by IB: 80% | by Noon: 84% | by Close: 87%
+  50% fill by IB: 64% | by Noon: 71% | by Close: 76%
+  75% fill by IB: 53% | by Noon: 61% | by Close: 68%
+  100% fill by IB: 44% | by Noon: 53% | by Close: 61%
+Headline: 100% fill by Close = 60.8% baseline (3,113 cases)
+Median time to 100% fill: 16 minutes
+Peak fill window: 09:30–09:45 (most fills happen early)
+Cumulative:
+  50% fill by 10:00: 57.9%
+  100% fill by 10:30: 44.2%
+  100% fill by 11:30: 50.9%
+  100% fill by 12:00: 52.7%
+Gap size is dominant factor (+54% importance):
+  Tiny (<0.3× ATR): highest fill rate
+  Small (0.3–0.7×): ~42% by close — coin flip
+  Medium (0.7–1.2×): ~25% — Gap N Go bias
+  Large (>1.2×): ~8% — strong Gap N Go
+Opening location modifier:
+  Opening inside prior range: fills ~70%
+  Opening outside prior range: fills only ~43–47%
+MAE before fill:
+  Typical (P50): 10pts
+  P75: 28pts (0.17× ATR)
+  P90: 60pts (0.37× ATR)
+  87% of fills are low drawdown (<0.3× ATR)
+Move after fill: 35pts typical, P75 90pts
+Price path analysis:
+  Gap Up days (1,765): fill first 19.8%, extend first 29.0%, neither 51.2%
+  Gap Down days (1,348): fill first 26.7%, extend first 30.9%, neither 42.4%
+Chop index: 0.70 (mixed, some chop)
+Whipsaw (both sides hit): 10.4%
+Scenario finder top results:
+  Inside + Aligned: 88.8% 50% fill by Close (+12.6pp)
+  Tiny + Low Vol: 82.2% 50% fill by IB (+18.6pp)
+  Tiny + Low Vol: 66.6% 100% fill by IB (+22.4pp)
+Factor importance for 100% by Close:
+  Gap Size: +54%
+  Position: +25%
+  Weekday: +8%
+  Volatility: +7%
+  Direction: +4%
+Recent cases (last 10 days):
+  2026-05-26: ↓ tiny (0.13×) — filled ✓ 15min, 75pt drawdown
+  2026-05-25: ↑ medium (0.82×) — did NOT fill (8% max)
+  2026-05-22: ↑ tiny (0.28×) — did NOT fill (67% max)
+  2026-05-21: ↓ small (0.38×) — filled ✓ 3h 46m, 90pt drawdown
+  2026-05-20: ↑ small (0.32×) — did NOT fill (44% max)
+  2026-05-19: ↓ small (0.53×) — filled ✓ 3h 47m, 187pt drawdown
+  2026-05-18: ↑ tiny (0.24×) — filled ✓ 12min, 18pt drawdown
+  2026-05-15: ↓ medium (0.93×) — did NOT fill (51% max)
+  2026-05-13: ↑ tiny (0.27×) — filled ✓ 15min, 2pt drawdown
+  2026-05-12: ↓ small (0.51×) — did NOT fill (38% max)
+Dataset: 3,113 days
+ 
+ALN SESSION
+Four patterns based on London session range vs Asia session range:
+  P1 — London Engulfs Asia: London High > Asia High AND London Low < Asia Low
+        Outer levels = London High (top) and London Low (bottom)
+  P2 — London Inside Asia: London High < Asia High AND London Low > Asia Low
+        Outer levels = Asia High (top) and Asia Low (bottom)
+  P3 — London Partial Up: London High > Asia High AND London Low > Asia Low
+        Outer levels = London High (top) and Asia Low (bottom)
+  P4 — London Partial Down: London Low < Asia Low AND London High < Asia High
+        Outer levels = Asia High (top) and London Low (bottom)
+ 
+P3 Data (1,270 days — Shane's current pattern as of 5/26/26):
+  Outer High (London High) taken by NY: 81.0%
+  Outer Low (Asia Low) taken by NY: 53.5%
+  Both taken: 36.9%
+  Either taken: 97.6%
+  
+  NY opens above London Mid → LH taken 87%, AL taken 46%
+  NY opens below London Mid → LH taken 65%, AL taken 71%
+  
+  London closed up → LH taken 85%, AL taken 49%
+  London closed down → LH taken 61%, AL taken 74%
+  
+  First outer break timing:
+    Median: 09:10 — before RTH opens
+    87% of first outer breaks by 10:00am
+    95% by 11:00am
+    
+  HOD median: 11:27am
+  LOD median: 10:44am (forms earlier than HOD on P3 days)
+  
+  Penetration depth:
+    LH median: 41pts (93% of LH range)
+    AL median: 43pts (101% of AL range)
+    
+  Top contexts:
+    LDN down + NY below LDN mid: 75.6% outer low, 60.1% outer high
+    LDN down: 74.3% outer low
+    NY below LDN mid: 71.4% outer low
+ 
+MIDNIGHT OPEN
+MO = price at exactly 00:00 ET
+Retrace = any RTH bar touches MO during 09:30–16:00
+Retrace rate: 67.7% of days (2,131 of 3,150)
+Direction split:
+  Opened above MO: 65.7% retrace (median 46 min)
+  Opened below MO: 70% retrace (median 49 min)
+Distance tier (rolling 30-day percentile):
+  Close: 87% retrace
+  Moderate: 69%
+  Far: 46%
+Gap direction effect:
+  Opened above + Gap Down: 76.6% retrace
+  Opened above + Gap Up: 61.7% retrace
+  Opened below + Gap Up: 82.5% retrace (strongest)
+  Opened below + Gap Down: 64.3%
+  Flat gap: 80% retrace
+Timing:
+  36.4% retrace within first 5 minutes
+  Median time: 09:41 (11 minutes from open)
+  65.5% by 10:00am
+  82.4% by 11:00am
+Weekday: Wednesday 70.3% (highest), Monday 63% (lowest)
+Excursion before retrace:
+  Opened above: median 40.8%, mean 49.6%, P75 72.6% of daily range
+  Opened below: median 38.9%, mean 53.6%, P75 76.4%
+Extension past MO after retrace:
+  Opened above: median 31.3%, P75 59.1%
+  Opened below: median 25.6%, P75 46.5%
+Dataset: 3,150 days
+ 
+HOURLY BREAKOUTS (MAGIC HOURS)
+Magic Hours: 06:00, 07:00, 08:00 ET — historically strongest mean reversion hours
+Overall reversion probability (50% midpoint): 78.8%
+Best hour: 07:00 at 82.0%
+06:00: 77.5% (2,049 breakouts)
+07:00: 82.0% (2,111 breakouts)
+08:00: 77.0% (2,202 breakouts)
+Median reversion time: 31 minutes
+Open target probability: 75.5% (vs 78.8% midpoint — 3.3pp lower)
+Extension ladder from hourly boundary:
+  25%: 88.5%
+  50%: 78.8% (primary target)
+  75%: 69.8%
+  100%: 61.2%
+  125%: 53.7%
+Entry zones vs reversion:
+  0–25% extension: 97% revert
+  25–50%: 95%
+  50–75%: 92%
+  75–100%: 88%
+  >100%: 70%
+Breakout timing within hour:
+  First 20 min: 80.8% reversion (4,082 breakouts)
+  Mid 20 min: 76.8%
+  Last 20 min: 67.9%
+Weekday breakdown:
+  07:00: Thursday/Friday strongest at 85%
+  Wednesday weakest at 77% across all three hours
+Excursion beyond range (P50/P75/P90):
+  P50: 141% of range (49.1 pts)
+  P75: 261% of range (90.7 pts)
+  P90: 433% of range (150.5 pts)
+Hourly range size:
+  P25: 21.3 pts
+  P50: 34.8 pts
+  P75: 54.4 pts
+Dataset: 2,583 trading days, 10 years
+ 
+PDH/PDL FORECAST
+Prior day high/low sweep probability by session context
+Timing distribution for PDH sweep (across all patterns):
+  ASN (overnight): 70.1%
+  LDN (London): 14.2%
+  NYAM (NY morning): 11.2%
+  NYPM (NY afternoon): 4.5%
+Bull continuation pattern:
+  PDH sweep: 89.3% (150 days, +32.3% uplift)
+  PDL sweep: 16.3% (135 days)
+  Day type: Bull Ext 77%
+  HOD Zone: 30,118.75–30,212.44 (31%–100%→125%)
+  LOD Zone: 29,931.38–30,025.06 (27%–50→75%)
+ 
+OPENING RANGE
+Configurable ORB: 5 / 15 / 30 minutes
+Break criteria: Wick / 1m Close / 5m Close
+15-min ORB, 1-min close criteria data (3,158 sessions):
+Outcome distribution:
+  Double Break: 47.2%
+  Breakout Up only: 28.7%
+  Breakdown Down only: 23.9%
+  No Break: 0.2%
+Continuation rate: 65.1% (first break direction matches session close)
+First break direction:
+  Up first: 51.7% → 70.0% continuation
+  Down first: 48.3% → 59.9% continuation
+Double break detail:
+  2nd break matches close: 68.1%
+  Median time 1st → 2nd break: 74 minutes
+  Median extension of close-aligned break: 1.2× ORB
+Extension ladder from ORB level:
+  0.25×: 68.7% up, 64.1% down
+  0.50×: 57.9% up, 54.2% down
+  0.75×: 47.5% up, 45.7% down
+  1.0×: 38.0% up, 38.9% down
+  1.5×: 25.1% up, 28.1% down
+  2.0×: 16.6% up, 20.4% down
+ORB size distribution (current median 43 pts = 0.29 ATR — Narrow):
+  Narrow (<0.33× ATR): 63% of sessions
+  Normal (0.33–0.67×): 32%
+  Wide (>0.67×): 2%
+ORB → IB alignment:
+  ORB breaks up → IB closes up 72.6%
+  ORB breaks down → IB closes down 63.3%
+Timing vs continuation: remarkably flat (63–67%) regardless of when break happens
+Context splits (continuation rate vs 65.0% average):
+  Wide ORB: 72.6% (+7.6pp)
+  Normal ORB: 67.4% (+2.4pp)
+  Narrow ORB: 63.6% (-1.4pp)
+  Monday: 67.4% (+2.4pp)
+  Friday: 68.3% (+3.3pp)
+  Wednesday: 60.7% (-4.3pp) — worst day for ORB continuation
+Weekday breakout by type:
+  Monday: 35.3% BO up, 22.6% BD down, 42% double
+  Wednesday: 24.3% BO up, 21.8% BD down, 53.6% double (most rotational)
+  Friday: 31.2% BO up, 26.8% BD down, 42% double
+Dataset: 3,158 sessions
+ 
+==================================================
+ANALYTICS MODULES — ADDITIONAL DATA
+==================================================
+ 
+PREVIOUS RTH (ANALYTICS)
+Universe: only days where RTH opens inside prior RTH range
+Breakout rate: 81.0%
+Breakout class:
+  No breakout: 19.0% (357 days)
+  Only High: 39.1% (734 days)
+  Only Low: 32.9% (619 days)
+  Both sides: 9.0% (169 days)
+First broken: High first 54.9% (835 cases), Low first 45.1% (687 cases)
+Typical time to first breakout: 24 minutes
+55% break within 30 min, 68% within 60 min
+75% break by 10:56am, 90% break by 1:12pm
+OVN hit both sides: strongest single factor (+17.1pp above avg)
+Context (Gap Up + OVN hit both sides):
+  No hit: 69.4%–72.2%
+  Hit PDH: 92.1%–86.2%
+  Hit PDL: 80.9%–93.9%
+  Hit both: 100%–96.6%
+Dataset: 1,879 days
+ 
+OVERNIGHT LEVELS (ANALYTICS)
+OVN breakout rate: 95.1%
+Both broken: 25.3%, Only 1 side: 69.8%, None: 4.9%
+High first: 54.1%, Low first: 45.9%
+Median time: 10 minutes from RTH open
+72% break within 30 min, 83% within 60 min
+75% break by 10:05am, 90% by 11:12am
+Above OVN mid → 76% High first (+22pp directional lift)
+Tuesday: highest breakout rate at +2.6pp above avg
+Dataset: 3,156 days
+ 
+WEEKLY OPEN (ANALYTICS)
+Same data as edge module — see Weekly Open section above
+ 
+ALN SESSION MAP (ANALYTICS)
+Patterns P1–P4 defined — see ALN Session section above
+Full 72-context combinations built from 4 axes:
+  Axis 1: Asia range size
+  Axis 2: London open vs Asia levels
+  Axis 3: London sweep pattern
+  Axis 4: NY open vs London range
+Penetration depth after outer level break:
+  LH (P3): p25 17pts (44% of range), median 41pts (93%), p75 98pts (177%)
+  AL (P3): p25 17pts (42%), median 43pts (101%), p75 110pts (202%)
+ 
+LONDON BREAKOUT (ANALYTICS)
+Same core data as edge module — see London Breakout section above
+ 
+NY OPEN BREAKOUT (ANALYTICS)
+Same core data as edge module — see NY Open Breakout section above
+ 
+GAP FILL (ANALYTICS)
+Same core data as edge module — see Gap Fill section above
+ 
+INITIAL BALANCE (ANALYTICS)
+Same core data as edge module — see Initial Balance section above
+ 
+OPENING RANGE (ANALYTICS)
+Same core data as edge module — see Opening Range section above
+ 
+SESSION OPEN (ANALYTICS)
+Open type distribution:
+  Gap Up: 25.6% (811 days)
+  In Range: 59.4% (1,879 days)
+  Gap Down: 15.0% (473 days)
+Value area breakdown (In Range only):
+  In Value: 52.9% (994 days)
+  Above Value: 26.3% (495 days)
+  Below Value: 20.8% (390 days)
+ 
+Gap Up (811 sessions) level touch probabilities:
+  Prior Session High: 64.1%
+  Prior VAH: 47.6%
+  Prior VPOC: 35.0%
+  Prior VAL: 22.6%
+  Prior Session Low: 12.7%
+  Prior Close: 46.7%
+  Conditional: VAH Touch → VPOC: 73.6%
+  IB: High Only 40.1%, Low Only 35.1%, Both 19.5%, None 5.3%
+ 
+Gap Down (473 sessions) level touch probabilities:
+  Prior Session High: 10.8%
+  Prior VAH: 21.4%
+  Prior VPOC: 31.7%
+  Prior VAL: 48.4%
+  Prior Session Low: 67.0%
+  Prior Close: 45.9%
+  Conditional: VAL Touch → VPOC: 65.5%
+  IB: High Only 40.4%, Low Only 34.2%, Both 22.6%, None 2.7%
+ 
+Open In Range (1,879 sessions):
+  Prior Session High: 48.5%
+  Prior VAH: 65.0%
+  Prior VPOC: 69.9%
+  Prior VAL: 61.1%
+  Prior Session Low: 42.2%
+  Prior Close: 71.6%
+  Conditional: VAH Touch → VPOC: 82.5%
+  Conditional: VAL Touch → VPOC: 84.5%
+  IB: High Only 41.8%, Low Only 31.9%, Both 22.2%, None 4.0%
+ 
+In Value (994 sessions — opens between VAL and VAH):
+  Prior VPOC: 82.4% — near certain
+  Prior VAH: 70.1%
+  Prior Close: 72.3%
+  Prior VAL: 65.4%
+  Conditional: VAH → VPOC: 87.4%
+  Conditional: VAL → VPOC: 87.4%
+ 
+Above Value (495 sessions — in range but above VAH):
+  Prior Session High: 71.5%
+  Prior VAH: 78.0%
+  Prior VPOC: 52.5%
+  Prior VAL: 33.9%
+  Conditional: VAH → VPOC: 67.4%
+ 
+Below Value (390 sessions — in range but below VAL):
+  Prior VAL: 84.6%
+  Prior Session Low: 74.1%
+  Prior VPOC: 60.0%
+  Prior VAH: 35.6%
+  Conditional: VAL → VPOC: 70.9%
+ 
+IB break direction consistent across all open types:
+  High Only: 40–42% (always most common)
+  Low Only: 30–36%
+  Both: 19–23%
+  Upside IB breaks consistently more common regardless of open type
+Dataset: 3,163 days
+ 
+HOURLY BREAKOUTS (ANALYTICS)
+Magic Hours (06:00, 07:00, 08:00 ET) — same data as Command Center module above
+Classic Magic Hours best hours: 06:00, 07:00, 08:00 ET (pre-market)
+Historically strongest mean reversion hours of the full 24-hour session
+Dataset: 2,583 trading days, 10 years, 6,362 total breakouts
+ 
+MIDNIGHT OPEN (ANALYTICS)
+Same core data as edge module — see Midnight Open section above
+ 
+P12 RANGE (ANALYTICS)
+Same core data as Command Center module — see P12 Range section above
+Additional scenario calculator inputs:
+  Time (ET), current price, 06:00 price, P12 High, P12 Low, level statuses
+  Auto-derives: range regime, 06:00 vs Mid position, distance buckets, remaining probability
+ 
+ASIA RANGE (ANALYTICS)
+Same core data as Command Center module — see Asia Extensions section above
+ 
+==================================================
+MACRO CONTEXT MODULES
+==================================================
+ 
+EARNINGS CALENDAR
+Weekly view of US-listed company earnings reports
+This Week / Next Week / Next Month toggle
+Filterable by:
+  Importance: $100B+ / $10B–100B / <$10B market cap
+  Sectors: All (20) or specific sectors
+Each entry shows:
+  Ticker, company name, market cap
+  Timing: Pre Market / Post Market / During
+  Est. EPS and Est. Revenue
+  Last earnings result (Beat/Miss + %)
+Current week (May 25–29, 2026) key earnings:
+  Wednesday 5/27: MRVL ($175B), CRM ($146B), SNPS ($101B), SNOW ($61B) — all Post Market
+  Thursday 5/28: DELL ($200B), ADSK ($50B), NTAP ($28B), MDB ($24B) — all Post Market
+  Friday 5/29: BKE, GCO — Pre Market
+ 
+MACRO EVENTS
+Event types: NFP / CPI (soon) / FOMC (soon)
+Instruments: NQ / ES / YM / RTY toggle
+Date range: 1Y / 3Y / 5Y
+ 
+NFP Data — NQ, Jun 2020–May 2026 (72 events):
+  Median Delivery 30m: 0.36% (61.5 pts in move direction)
+  Median Wick 1m: 0.14% (22.5 pts counter-move)
+  ATR Expansion: 3.3× post/pre release
+  Range vs Normal: 1.23× rolling 30-day baseline
+  
+  Event IB (08:30–09:30), n=72 days:
+    IB Range median: 0.77% (133 pts)
+    IBH Hit: 71%
+    IBL Hit: 62%
+    Both Hit: 40%
+    Neither Hit: 7%
+    First Break: IBH 57% / IBL 43%
+    Return Probability: Broke IBL first → IBH: 45% | Broke IBH first → IBL: 42%
+    IBH Extension median: 0.55% (79.2 pts)
+    IBL Extension median: 0.67% (114 pts)
+    
+  Classic IB (09:30–10:30), n=69 days:
+    IB Range median: 1.04% (159 pts)
+    IBH Hit: 64%
+    IBL Hit: 49%
+    Both Hit: 22%
+    Neither Hit: 9%
+    First Break: IBH 63% / IBL 37%
+    Return Probability: Broke IBL first → IBH: 17% | Broke IBH first → IBL: 28%
+    IBH Extension median: 0.41% (55.9 pts)
+    IBL Extension median: 0.56% (82.1 pts)
+    
+  Delivery Timeline (median from pre-release close):
+    30m: 0.36% (61.5 pts)
+    1h: 0.40% (67.9 pts)
+    2h: 0.85% (142 pts)
+    RTH: 1.31% (205 pts)
+    
+  Direction: LONG 53% (38 events) / SHORT 47% (34 events)
+  Surprise → Price Direction: 33 of 70 matched — NOT predictive
+ 
+POSITIONING (CFTC COT TFF)
+Updated: 2026-05-19 | Next: ~2026-05-29
+Active Regime: Neutral regime · 3/4 align
+Bias: Neutral (base regime)
+Confidence: Medium (3/4 instruments aligned)
+Historical 60-day: 87% average return +5.20% (based on 43 prior weeks)
+ 
+Cross-Instrument Matrix (as of 2026-05-19):
+  NQ: Smart Money +93,680 (+2,036 wk) | Speculators -65,822 (+7,915 wk) | Dealers -44,801 | OI 320,044 | Neutral
+  ES: Smart Money +1,008,168 (-49,882 wk) | Speculators -402,312 (+27,043 wk) | Dealers -708,559 | OI 2,097,761 | Neutral
+  YM: Smart Money -7,189 (-5,233 wk) | Speculators -14,578 (-577 wk) | Dealers +18,703 | OI 88,152 | Mixed
+  RTY: Smart Money -2,073 (+7,275 wk) | Speculators -67,429 (-6,798 wk) | Dealers +64,332 | OI 421,242 | Neutral
+ 
+Smart Money Index (composite z-score across NQ ES YM RTY):
+  Current SMI: +0.36 (Balanced)
+  5-year average: 0.27
+  5-year range: -3.2 → 2.3
+  Percentile: 43rd
+  4-week trend: -0.77
+ 
+NQ specific:
+  Smart Money: +93,680 (29.3% of OI)
+  Speculators: -65,822 (20.6% of OI)
+  Dealers: -44,801 (14.0% of OI)
+  Retail: +10,359 (3.2% of OI)
+ 
+Position Percentiles (5-year window, 4-week trail):
+  Smart Money: 87th percentile — EXTREME LONG
+  Speculators: 7th percentile — EXTREME SHORT
+  Dealers: 40th — normal
+  Retail: 76th — normal
+ 
+Forward Expectation (82 prior weeks same positioning):
+  5-day: +0.52% (57.3% win rate)
+  20-day: +1.84% (63.4% win rate)
+  60-day: +4.75% (72.0% win rate)
+ 
+CORRELATIONS — Last updated: June 10, 2026
+Current Regime (7-day window): Tech Capitulation
+  All down; NQ worst. Growth/tech underperforming.
+  Day in regime: 1 day
+  Avg historical duration: 1 day
+  Occurrences (5y): 52 times
+
+  What typically follows:
+    33.3% → Small Cap Selloff (avg 1d before transition)
+    27.5% → Risk-On Rotation (avg 1d before transition)
+    13.7% → Broad Market Selloff (avg 3d before transition)
+    25.6% → Other
+
+Cumulative returns (last 7d):
+  NQ: -6.69%
+  ES: -4.44%
+  YM: -2.26%
+  RTY: -2.48%
+
+Average pairwise correlation (30d): 0.789
+Correlation tier: HIGH — top 62% of last 5 years
+  Median duration: 4 days, max 89 days
+  Followed by Moderate 75% of cases
+
+Rotation strength (30d vs 365d): Moderate
+  Biggest decoupling: NQ-YM -25.1pp
+
+Dispersion (30d cumulative): 2.87%
+  NQ +4.35%, ES +1.47%, YM +1.95%, RTY +3.26%
+  Std dev 1.13%, Max-min spread 2.87%
+  High dispersion historically lasted 2 days median, followed by reversion 100% of cases
+
+Correlation Matrix (30d):
+  NQ-ES: 0.92
+  NQ-YM: 0.56 ⚠️ REGIME SHIFT (-25.1pp from 0.81 baseline)
+  NQ-RTY: 0.78 (-3.6pp)
+  ES-YM: 0.81 ⚠️ REGIME SHIFT (-10.6pp)
+  ES-RTY: 0.87
+  YM-RTY: 0.79 (-7.8pp)
+
+Deviation alerts:
+  NQ-YM: 365d baseline 0.81, last 30d 0.56, shift -25.1pp ⚠️ REGIME SHIFT
+  ES-YM: 365d baseline 0.91, last 30d 0.81, shift -10.6pp ⚠️ REGIME SHIFT
+  YM-RTY: -7.8pp
+  NQ-ES: -4.4pp
+  NQ-RTY: -3.6pp
+
+Spread monitor (90-day Z-scores): ALL CLEAR — no pairs stretched or extreme
+  NQ/ES: Z +1.37 — Normal
+  ES/RTY: Z -1.27 — Normal
+  YM/NQ: Z -1.05 — Normal
+  NQ/RTY: Z +0.84 — Normal
+  NQ/YM: Z +1.02 — Normal
+  ES/YM: Z +0.54 — Normal
+  Note: As of 6/10/26, all 5 extreme Z-scores from prior snapshot have resolved.
+
+Historical resolution when spreads hit extremes:
+  Stretched (Z ≥ 1.5): reverted within 10 days median (194 episodes)
+  Extreme (Z ≥ 2.0): reverted within 18 days median (120 episodes)
+  Outlier (Z ≥ 2.5): reverted within 24 days median (72 episodes)
+
+Recent regime transitions (last 90 days):
+  2026-06-10: Value Rotation → Tech Capitulation (1 day & counting)
+  2026-06-08: Value Rotation → Value Rotation (1 day)
+  2026-06-05: Tech Outperformance → Value Rotation (1 day) 
+==================================================
+DISCORD — COMMUNITY CONTEXT
+==================================================
+ 
+Server: TradingStats Hub
+Channels:
+  Welcome & Info: #start-here, #new-members
+  Main Corner: #announcements, #lobby, #research, #ideas-requests
+  Alpha Member Corner: #alpha-welcome, #alpha-lobby, #feature-requests, #bugs
+ 
+Alpha access rules:
+  - Keep what you see inside this category
+  - No public screenshots of unreleased modules
+  - No sharing of internal data
+  - "This is confusing" is more useful than "looks great"
+  - Fast questions → #alpha-lobby
+  - Anything private → DM Andrey
+ 
+Research channel contents visible (selected):
+  "London Breakout: 83% Break Rate" — 83% directional accuracy
+  "Opening Range Close Probability: 70–72%"
+  "Hourly Retracement: Do OVN Levels Get Retested? 94.1%"
+  "Gap Fill Probability Indicator — 2,700+ sessions"
+  "Gap Up, Gap Down, or In Range — What Happens Next? 72–81%"
+  "Single Prints: 65% Fill Within One Week"
+  "Overnight Range Breakout: 94% Break Rate"
+  "PDH/PDL Breakout: 80.8% Break Rate"
+  "Intraday Bias: Session Analysis — 80–97%"
+  "Session Probability Indicator — 2,800 sessions"
+  "Initial Balance Indicator — 2,600 sessions"
+  "Gap Fill: 60% Baseline → 93% With Filters"
+ 
+Recent announcements:
+  6/8/26: IB opposite-side break now tracked live — card pivots to actual break direction instead of going dark; original predicted probability preserved as a miss.
+  6/5/26: IB v2 overhaul — pre-break view (first-break / contained / day type) + continuous decay + chain & retrace ladders. Q-Chain alignment fix — Live & Analytics now match (was off up to 36pp on edge cases); chain rule now magnitude-based. Gap Fill 5-column ladder + monotonic clamp. Weekly Open stable DONE state. Memory leak fixed (72× improvement — tab now ~50-100MB vs 1.2GB). UI: modules dropdown grouped by session phase (Overnight → Pre-market → RTH → Mid-Session).
+  5/21/26: Q-Chain Continuation research dropping — 12-year study on overnight Q2 drive breaking Q1 extreme
+  4/24/26: P12 Range module shipped to Command Center
+    - Under the hood: Logistic regression per symbol, 21 features, 10+ years backtest
+    - Calibrated within 1–3pp across all range buckets
+  4/27/26: Changes being made to product version (takes a few minutes, after 14:00 ET takes longer)
+  4/28/26: Small data missing on live chart — fixing fast
+ 
+==================================================
+LIVE SESSION EXAMPLE (May 26, 2026 — 14:08 ET)
+==================================================
+ 
+Market: Nasdaq 100 at 29,973–30,050 range during afternoon session
+Phase: Afternoon (14:00–16:00)
+ 
+Edge Cards Status (14 of 15 active):
+  P12 Range: DONE — 100% (+56.5%) — All P12 levels reached
+  PDH/PDL Forecast: DONE — 89.3% (+32.3%) LONG — 89% PDH sweep, 16% PDL sweep — Target 30,118.75
+  OVN Levels: ACTIVE (Draft Test Mode) — 83.7% (+9.2%) LONG — 84% OVN Mid — Target 30,203.75
+  ALN Session: DONE — 79.4% (+24.4%) LONG — Outer high first (LDN High) — Touched 08:19
+  NY Open Breakout: DONE — 77.9% (+23.2%) LONG — London high first — Touched 08:19 — Target 30,297
+  Initial Balance: DONE — 77.3% (+22.2%) SHORT — IB broke down — Touched 10:33 — Target 29,888
+  London Breakout: MISS — Predicted High 76.9% — PL low first — Resolved 02:32
+  Weekly Open: DONE — 70.3% — WO touched Tuesday 09:30–10:00
+  Prev RTH: ACTIVE (Draft Test Mode) — 70.15% (+42.2%) LONG — Outside-open (Z3) gap reversion — Target 29,972.75
+  Hourly Breakouts: DONE — 66.3% Z1 (+9.2%) LONG — 12:00 mid hit, tracking 75% — Target 29,983
+  Midnight Open: DONE — 62.9% (-4.8%) SHORT — MO level retraced — Touched 09:37
+  Opening Range: ACTIVE — 59.1% (+17.3%) SHORT — ORB broke down → 0/4 extensions hit — Broke 09:46 — Target 29,852
+  Globex Open: DONE — No clear edge — GO level retraced — Touched 09:41
+  Gap Fill: DONE (Draft Test Mode) — 8.4% (-52.4%) SHORT — 8% follow-through past fill — Target 30,079.75
+  Asia Extensions: Window opens 20:00 ET, tracking 02:00–08:00 ET
+ 
+HOD/LOD Engine (14:08 ET):
+  Current Price: 29,977–30,050
+  HOD: 30,379 (set 08:25 ET) — -402 pts from HOD
+  LOD: 29,877.50 (set 10:33 ET) — +100 pts from LOD
+  ATR Coverage: 97% covered (502pt range, ~16 pts remaining)
+  Reversal Rate: 72.4% (vs 74.6% base)
+  HOD SET probability: 98.3%
+  LOD SET probability: 52.3%
+  HOD Zone: 329pts BEYOND RANGE
+  LOD Zone: 172.5pts WITHIN RANGE
+  SD Levels: HOD at 1.76σ, LOD at -0.80σ
+  MFE from RTH open: 343.2pts median (favorable)
+  MAE from RTH open: 45.2pts median (adverse) — 310pts now = 150% of median
+  Noon Pattern: 62.2% AM-High/PM-Low
+  Weekly Context: Weekly Low held by Monday, 42% beaten (69 days)
+ 
+Session Range Breakdown (20d Median Range: 450.2 pts):
+  ASN (18:00–03:00): 130.8 / 224.2 median = 58%
+  LDN (03:00–09:30): 302.8 / 185.6 median = 163% EXHAUSTED
+  NY AM (09:30–12:00): 314.5 / 292.5 median = 108% EXTENDED
+  NY PM (12:00–16:00): 153.5 / 209.6 median = 73% (room left)
+ 
+Session Probability by phase:
+  ASN: 16% HOD, 3% LOD
+  LDN: 66% HOD, 0% LOD
+  NY AM: 12% HOD, 31% LOD
+  NY PM: 7% HOD, 66% LOD
+ 
+Formation Distribution:
+  HOD Formation: mode 09:30, median 05:30
+  LOD Formation: mode 15:30, median 13:30
+ 
+Edge Accuracy (30 days, 263/346 = 76% overall):
+  1. Weekly Open: 93.8% (15/16) +8.8%
+  2. London Breakout: 90% (27/30) +10.5%
+  3. Previous RTH: 86.7% (26/30) +13.2%
+  4. Overnight Levels: 80% (24/30) +6.8%
+  5. NY Open Breakout: 80% (24/30) -1.5%
+  6. Globex Open: 76.7% (23/30) -3.9%
+  7. Midnight Open: 73.3% (22/30) -10.4%
+  8. Initial Balance: 70% (21/30) -10.7%
+  9. Gap Fill: 70% (21/30) -6.7%
+  10. PDH/PDL Forecast: 70% (21/30) -11.3%
+  11. ALN Session: 70% (21/30) -7.7%
+  12. Opening Range: 60% (18/30) -10.2%
+ 
+Market Context (plain language summary active, updating live)
+Key Levels Panel (right sidebar, sorted by distance from current price)
+ 
+==================================================
+BLOG POSTS — AVAILABLE RESEARCH
+==================================================
+ 
+Recent posts at tradingstats.net/blog (as of May 2026):
+- The Q-Chain: Does the Overnight Q2 Drive Carry Into the Morning?
+- How Often Does Price Close Outside the Opening Range?
+- Asia Range Cascade: A 12-Year Backtest on CME Index Futures
+- P12 Range: How Often Does Price Touch the Overnight Globex High, Mid, and Low?
+- ALN Cascade: How NY Reaches Its Outer Levels
+- ALN Patterns: A Framework for Asia-London Session Behavior
+- Hourly Retracement: How Often Does Price Return to Overnight Levels?
+- Gap Up, Gap Down, or In Range — What Happens Next? (12,390 Sessions Analyzed)
+- Single Prints: Fill Rates, Reversal Odds, and Decay — 12 Years of Futures Data
+ 
+==================================================
+KEY NUMBERS — MASTER REFERENCE
+==================================================
+ 
+HOURLY RETRACEMENT:
+7am Mid hit rate: 94.1%
+7am Open hit rate: 88.9%
+P2 ALN boost: +5 to +17 percentage points
+ 
+IB / INITIAL BALANCE:
+NQ no-break rate: 3.8% (from study guide — confirm against live data)
+NQ single-direction breakout: ~73.8%
+Double break rate: 22.3%
+False break rate: 35.1%
+Narrow IB false break: 31.6%
+Extreme IB false break: 70%
+C-period continuation rate: 62.6%
+Low forms first → breaks up: 80.1%
+High forms first → breaks down: 70.6%
+ 
+GAP FILL:
+Tiny gap fill rate by close: ~61%+ (filtered), baseline 60.8%
+Large gap fill rate: ~8%
+Gap inside prior range fills: ~70%
+Gap outside prior range fills: ~43–47%
+ 
+PWH/PWL MIDPOINT:
+Above midpoint → PWH first: 81–88%
+Below midpoint → PWL first: 73–78%
+S-Tier edge threshold: 90%+
+Mid-first collapse = ~50% (coin flip — not bearish flip)
+ 
+STDEV / SD BANDS:
+1 STDEV captures: ~68% of closes (normal distribution)
+2 STDEV captures: ~95% of closes
+ 
+OVN LEVELS:
+OVN breakout rate: 95.1%
+Above OVN mid → High first: 76%
+ 
+LONDON BREAKOUT:
+Early break (0–5 min) fail rate: 47.6%
+Late break (60+min) fail rate: 22.6%
+First Low in 0–5 min fail rate: 50.2% — coin flip
+ 
+NY OPEN BREAKOUT:
+London up → NY High first: 73.1%
+London down → NY Low first: 67.8%
+Late break (60+min) fail rate: 28%
+ 
+WEEKLY OPEN:
+Touch rate: 70.3%
+Distance <0.25% touch rate: 93.2%
+Below WO + Distance <0.25%: 98.4%
+ 
+MIDNIGHT OPEN:
+Base retrace rate: 67.7%
+Close distance: 87%, Far distance: 46%
+Opened below + Gap Up: 82.5% (strongest)
+ 
+HOURLY BREAKOUTS (MAGIC HOURS):
+07:00 hour: 82.0% reversion to midpoint
+Overall: 78.8%
+Small breakout (0–25% ext): 97% revert
+Large breakout (>100% ext): 70% revert
+ 
+P12 RANGE:
+Any level: 99.87%
+Mid: 82.85%
+High: 72.82%
+Low: 66.02%
+Below Mid → Low touches: 82.4%
+Above Mid → High touches: 84.43%
+All three: 40.54%
+ 
+ASIA EXTENSIONS:
+Reach 10%: 91.6%
+Reach 25%: 76.3%
+Reach 100%: 29.3%
+Mean revert: 96.8%
+Cascade 75% → 100%: 72.6%
+ 
+SINGLE PRINTS:
+Tiny zones fill: ~77%
+Wide zones fill: <1%
+ 
+PREVIOUS RTH:
+Breakout rate: 81%
+No breakout: 19%
+Wednesday: 85.5% (strongest day)
+ 
+SESSION OPEN (IN VALUE):
+VPOC touched: 82.4%
+VAH → VPOC: 87.4%
+VAL → VPOC: 87.4%
+ 
+OPENING RANGE (15-min ORB):
+Continuation rate: 65.1%
+Double break: 47.2%
+Wednesday: 60.7% continuation (weakest)
+ 
+==================================================
+END OF DOCUMENT
+==================================================
+Compiled from live TradingStats.net data pulled May 26–27, 2026
+Updated June 5, 2026 — changelog: IB v2 overhaul, Gap Fill 5-column ladder, Weekly Open stable DONE state, Q-Chain alignment fix
+All statistics are historical base rates, not forecasts
+Data subject to daily updates as new sessions close
+For current live probabilities, always reference the live Command Center

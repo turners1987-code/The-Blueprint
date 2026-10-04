@@ -1,0 +1,19 @@
+TurtleMetrics — Review Questions (exported 2026-10-04, verbatim)
+Six yes/no questions answered after each trade. Discipline % = share of answers matching the
+stated ideal. Ideal answer is Yes on all six.
+
+NOTE: the review history behind these questions was lost (account cleared in error).
+The questions themselves survive. These seed the Blueprint journal's checklist.
+
+1. Did I enter or exit because of what I saw? (not what I felt)
+2. Was I trading the chart? (not my P&L)
+3. Did I notice my emotional state shift during this trade, and I stay with my process
+   anyway? (If detached, select yes)
+4. Did I follow my setup rules without breaking them?
+5. Did I follow my exit plan without changing it? (for no good reason, out of fear or greed)
+6. If I took a loss, did I complete the Post-Loss Reset before re-entering after a loss?
+
+Design note for the journal build: split these into pre-entry commitments (locked at
+submission, immutable) and post-trade reflection. Compute Discipline % only from the locked
+half plus order-event data. Answering all six after the result is known invites hindsight
+bias, which TurtleMetrics does not solve.
