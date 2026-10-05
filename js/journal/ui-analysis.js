@@ -52,7 +52,7 @@ const OCC_NOTE = 'occurrences only — not edge';
 
 const DIM_TITLE = { row: 'Sample too small to trust (under 30 trades or 20 sessions). Shown, never hidden.' };
 
-function cohortTable(cohorts, keyName, firstCol) {
+function cohortTable(cohorts, keyName, firstCol, firstColTitle) {
   const rows = cohorts.map((c) => `
       <tr class="${c.dimmed ? 'dimmed' : ''}"${c.dimmed ? ` title="${esc(DIM_TITLE.row)}"` : ''}>
         <td>${esc(firstCol(c.keys[keyName]))}</td>
@@ -66,21 +66,24 @@ function cohortTable(cohorts, keyName, firstCol) {
     <div class="table-wrap">
       <table class="data-table">
         <thead><tr>
-          <th>${esc(firstCol.name || 'Cohort')}</th><th class="num">n</th><th class="num">Sessions</th>
+          <th>${esc(firstColTitle)}</th><th class="num">n</th><th class="num">Sessions</th>
           <th class="num">Expectancy</th><th class="num">Win rate</th><th class="num">Total R</th>
         </tr></thead>
-        <tbody>${rows.join('') || '<tr><td colspan="6">No closed trades.</td></tr>'}</tbody>
+        <tbody>${rows.join('') || `<tr><td colspan="6">No closed live trades yet.</td></tr>`}</tbody>
       </table>
     </div>`;
 }
 
 // Sim and replay for one dimension: counts side by side, labelled.
+// Even one sim trade shows here; none yet is said out loud, not blank.
 function occurrencesTable(result, keyName, firstCol) {
   const keys = [...new Set([
     ...result.sim.map((c) => c.keys[keyName]),
     ...result.replay.map((c) => c.keys[keyName]),
   ])];
-  if (!keys.length) return '';
+  if (!keys.length) {
+    return `<p class="field-hint">No sim or replay trades in this view yet — ${esc(OCC_NOTE)}.</p>`;
+  }
   const find = (list, k) => { const c = list.find((x) => x.keys[keyName] === k); return c ? c.n : 0; };
   const rows = keys.map((k) => `
       <tr>
@@ -125,25 +128,35 @@ function summarySection(s) {
       </div>
     </div>`;
 
+  const noLive = live.n === 0
+    ? '<p class="field-hint">No closed live trades yet — that is a result, not a missing page. Every live figure is blank until a live trade closes with an R multiple.</p>'
+    : '';
+  const openLine = `<p class="field-hint">Open trades: <strong>${s.open}</strong> — open trades are counted and never analysed. A blank figure above means either no closed live trade yet, or a trade still waiting on its exit.</p>`;
+
   const notes = [];
   if (live.unpriced) notes.push(`${live.unpriced} trade${live.unpriced === 1 ? '' : 's'} without commissions applied — those figures are gross R`);
-  if (s.open) notes.push(`${s.open} open trade${s.open === 1 ? '' : 's'} counted nowhere above`);
   if (s.unknownEnvironment) notes.push(`${s.unknownEnvironment} record${s.unknownEnvironment === 1 ? '' : 's'} with no usable environment, counted only`);
-  const simLine = [ ['sim', s.sim], ['replay', s.replay] ]
-    .filter(([, v]) => v.n > 0)
-    .map(([name, v]) => `${name}: ${v.n} occurrence${v.n === 1 ? '' : 's'} across ${v.sessions} session${v.sessions === 1 ? '' : 's'}`)
+  const simLine = ['sim', 'replay']
+    .map((name) => {
+      const v = s[name];
+      return `${name}: ${v.n} occurrence${v.n === 1 ? '' : 's'} across ${v.sessions} session${v.sessions === 1 ? '' : 's'}`;
+    })
     .join(' · ');
 
   return `
     <h2>Summary — live trades</h2>
     ${cards}
-    ${simLine ? `<p class="field-hint"><span class="badge badge--cyan">${esc(OCC_NOTE)}</span> ${esc(simLine)}</p>` : ''}
+    ${noLive}
+    ${openLine}
+    <p class="field-hint"><span class="badge badge--cyan">${esc(OCC_NOTE)}</span> ${esc(simLine)}</p>
     ${notes.length ? `<p class="field-hint">${notes.map(esc).join(' · ')}</p>` : ''}`;
 }
 
 function mixedSection(mv) {
-  if (!mv.mixed) return '';
   const counts = Object.entries(mv.versions).map(([v, n]) => `${v}: ${n}`).join(', ');
+  if (!mv.mixed) {
+    return `<p class="field-hint">All records are stamped taxonomy ${esc(mv.newest)} — no mixed versions.</p>`;
+  }
   return `
     <div class="callout callout--cyan mt-lg">
       <div class="callout-title">Records span taxonomy versions (newest: ${esc(mv.newest)})</div>
@@ -181,13 +194,14 @@ function gateSection(g) {
     <p>Met at ${g.gate.minLiveTrades} live trades, ${g.gate.minSessions} distinct sessions and expectancy of at least +${g.gate.minExpectancyR}R after commissions — all three, and every trade priced.</p>
     ${table(g.bySetup.map((r) => row(r, label(r.key))), 'Per setup')}
     ${table(g.byTrigger.map((r) => row(r, label(r.key))), 'Per trigger')}
+    ${g.open ? `<p class="field-hint">${g.open} open trade${g.open === 1 ? '' : 's'} — an open trade has no R yet, so it cannot count toward any gate.</p>` : ''}
     <p class="rule-note">Sim and replay columns are ${esc(OCC_NOTE)}; they never count toward Gate 2.</p>`;
 }
 
-function cohortSection(title, result, keyName, firstCol) {
+function cohortSection(title, result, keyName, firstCol, firstColTitle) {
   return `
     <h2>${esc(title)}</h2>
-    ${cohortTable(result.live, keyName, firstCol)}
+    ${cohortTable(result.live, keyName, firstCol, firstColTitle)}
     ${occurrencesTable(result, keyName, firstCol)}`;
 }
 
@@ -233,7 +247,7 @@ function sequenceSection(q) {
             <tr class="${c.dimmed ? 'dimmed' : ''}">
               <td>${esc(c.tradeNumber)}</td><td class="num">${c.n}</td><td class="num">${c.sessions}</td>
               <td class="num">${rSpan(c.expectancy)}</td><td class="num">${pct(c.winRate, c.n)}</td>
-            </tr>`).join('') || '<tr><td colspan="5">No closed trades.</td></tr>'}
+            </tr>`).join('') || '<tr><td colspan="5">No closed live trades yet.</td></tr>'}
         </tbody>
       </table>
     </div>`;
@@ -264,6 +278,9 @@ function stopSection(st) {
       <div class="stat-sub">n ${s.n} · p90 ${orDash(s.p90)} t · max ${orDash(s.max)} t</div>
     </div>`;
   const overlap = live.losersWithinWinnerRange === null ? '—' : pct(live.losersWithinWinnerRange, live.losers.n);
+  const noMae = live.winners.n === 0 && live.losers.n === 0
+    ? '<p class="field-hint">No closed live trades with MAE yet — the cards above stay blank until trades record how far price went against them.</p>'
+    : '';
   const buckets = `
     <div class="table-wrap mt-md">
       <table class="data-table">
@@ -274,7 +291,7 @@ function stopSection(st) {
             <tr>
               <td class="num">${b.fromTicks}–${b.toTicks}</td>
               <td class="num">${b.winners}</td><td class="num">${b.losers}</td>
-            </tr>`).join('') || '<tr><td colspan="3">No closed trades with MAE.</td></tr>'}
+            </tr>`).join('') || '<tr><td colspan="3">No closed live trades with MAE yet.</td></tr>'}
         </tbody>
       </table>
     </div>`;
@@ -287,6 +304,7 @@ function stopSection(st) {
         <div class="stat-sub">${overlap === '—' ? 'not enough data yet' : 'share of losers whose MAE sat under the winners’ p90'}</div>
       </div>
     </div>
+    ${noMae}
     ${buckets}`;
 }
 
@@ -311,7 +329,7 @@ function exitSection(e) {
           <th>Setup</th><th class="num">n</th><th class="num">Sessions</th>
           <th class="num">Mean realized</th><th class="num">Mean MFE</th><th class="num">Efficiency</th><th class="num">Given back</th>
         </tr></thead>
-        <tbody>${rows.join('') || '<tr><td colspan="7">No closed trades with MFE.</td></tr>'}</tbody>
+        <tbody>${rows.join('') || '<tr><td colspan="7">No closed live trades with MFE yet.</td></tr>'}</tbody>
       </table>
     </div>
     ${live.unconverted ? `<p class="field-hint">${live.unconverted} trade${live.unconverted === 1 ? '' : 's'} left out (no MFE, no stop, or unknown instrument).</p>` : ''}`;
@@ -327,6 +345,9 @@ function durationSection(d) {
         <td class="num">${s.meanSeconds === null ? '—' : fmtDur(s.meanSeconds)}</td>
       </tr>`;
   const ratio = live.loserToWinnerMedian;
+  const noDuration = live.winners.n === 0 && live.losers.n === 0
+    ? '<p class="field-hint">No closed live trades with a time in trade yet.</p>'
+    : '';
   return `
     <h2>Time in trade</h2>
     <div class="table-wrap">
@@ -335,10 +356,32 @@ function durationSection(d) {
         <tbody>${row('Winners', live.winners)}${row('Losers', live.losers)}</tbody>
       </table>
     </div>
+    ${noDuration}
     ${ratio !== null ? `<p class="field-hint">Losers are held ${ratio.toFixed(2)}× as long as winners (median).</p>` : ''}`;
 }
 
 // ── Boot ───────────────────────────────────────────────────────
+
+// One section = one heading + one renderer. A section that throws
+// degrades to its heading and an error note of its own; the rest of
+// the page still renders. No section can blank the page.
+function renderSections(sections) {
+  return sections.map(({ title, render }) => {
+    try {
+      return render();
+    } catch (e) {
+      const why = e && e.message ? e.message : String(e);
+      return `
+        <section>
+          <h2>${esc(title)}</h2>
+          <div class="callout callout--red">
+            <div class="callout-title">This section could not be rendered</div>
+            ${esc(why)}
+          </div>
+        </section>`;
+    }
+  }).join('\n');
+}
 
 async function run() {
   const root = $('analysis-root');
@@ -374,26 +417,21 @@ async function run() {
     return;
   }
 
-  const setupCol = Object.assign((k) => label(k), { name: 'Setup' });
-  const triggerCol = Object.assign((k) => label(k), { name: 'Trigger' });
-  const gradeCol = Object.assign((k) => label(k), { name: 'Grade' });
-  const timeCol = Object.assign((k) => k, { name: 'Entry window (New York)' });
-
   const sum = A.summary(records);
-  root.innerHTML = [
-    summarySection(sum),
-    mixedSection(sum.mixedVersions),
-    gateSection(A.gateTwoStatus(records)),
-    cohortSection('Expectancy by setup', A.byDimension(records, 'setup'), 'setup', setupCol),
-    cohortSection('Expectancy by trigger', A.byDimension(records, 'trigger'), 'trigger', triggerCol),
-    cohortSection('Expectancy by grade', A.byDimension(records, 'grade'), 'grade', gradeCol),
-    cohortSection('Time of day', A.byDimension(records, 'time_bucket'), 'time_bucket', timeCol),
-    disciplineSection(A.disciplineCohorts(records)),
-    sequenceSection(A.sequenceEffects(records)),
-    stopSection(A.stopSurvival(records)),
-    exitSection(A.exitEfficiency(records)),
-    durationSection(A.durationSignature(records)),
-  ].join('\n');
+  root.innerHTML = renderSections([
+    { title: 'Summary — live trades', render: () => summarySection(sum) },
+    { title: 'Taxonomy versions', render: () => mixedSection(sum.mixedVersions) },
+    { title: 'Gate 2 — own execution', render: () => gateSection(A.gateTwoStatus(records)) },
+    { title: 'Expectancy by setup', render: () => cohortSection('Expectancy by setup', A.byDimension(records, 'setup'), 'setup', label, 'Setup') },
+    { title: 'Expectancy by trigger', render: () => cohortSection('Expectancy by trigger', A.byDimension(records, 'trigger'), 'trigger', label, 'Trigger') },
+    { title: 'Expectancy by grade', render: () => cohortSection('Expectancy by grade', A.byDimension(records, 'grade'), 'grade', label, 'Grade') },
+    { title: 'Time of day', render: () => cohortSection('Time of day', A.byDimension(records, 'time_bucket'), 'time_bucket', (k) => k, 'Entry window (New York)') },
+    { title: 'Discipline', render: () => disciplineSection(A.disciplineCohorts(records)) },
+    { title: 'Sequence', render: () => sequenceSection(A.sequenceEffects(records)) },
+    { title: 'Stop survival', render: () => stopSection(A.stopSurvival(records)) },
+    { title: 'Exit efficiency', render: () => exitSection(A.exitEfficiency(records)) },
+    { title: 'Time in trade', render: () => durationSection(A.durationSignature(records)) },
+  ]);
 }
 
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);

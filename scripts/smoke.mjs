@@ -1,0 +1,290 @@
+#!/usr/bin/env node
+/* ============================================================
+   THE BLUEPRINT — browser smoke test (scripts/smoke.mjs)
+   ============================================================
+   Node only, no dependencies (needs Node 22+ for the built-in
+   WebSocket; the CDP client is hand-rolled on top of it).
+
+   Run:  npm run test:smoke
+
+   Serves the repo over a local HTTP server, launches headless
+   Chrome (Edge as fallback — both Chromium), loads every HTML page
+   in the repo, and fails on any console error, uncaught exception
+   or unhandled rejection.
+
+   Ignored, deliberately:
+     - favicon.ico 404s (the site ships favicon.svg)
+     - failed loads of cross-origin resources (the Google Fonts
+       CDN in main.css) — an offline test machine is not a site bug
+
+   Exit code 1 if any page reports a real error, 0 otherwise.
+   ============================================================ */
+
+import { spawn } from 'node:child_process';
+import { createServer } from 'node:http';
+import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const SETTLE_MS = 1200;   // after load: modules, the service worker, async renders
+const PAGE_TIMEOUT_MS = 20000;
+const LAUNCH_TIMEOUT_MS = 20000;
+
+if (typeof WebSocket === 'undefined') {
+  console.error('smoke: this Node has no built-in WebSocket client; use Node 22 or newer.');
+  process.exit(1);
+}
+
+// ── Find a Chromium to drive ───────────────────────────────────
+function findBrowser() {
+  const candidates = [
+    process.env.CHROME_PATH,
+    ...(['win32'].includes(process.platform)
+      ? [
+          'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+          'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+          path.join(os.homedir(), 'AppData', 'Local', 'Google', 'Chrome', 'Application', 'chrome.exe'),
+          'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+          'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
+        ]
+      : process.platform === 'darwin'
+        ? [
+            '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+            '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+            '/Applications/Chromium.app/Contents/MacOS/Chromium',
+          ]
+        : [
+            '/usr/bin/google-chrome',
+            '/usr/bin/google-chrome-stable',
+            '/usr/bin/chromium-browser',
+            '/usr/bin/chromium',
+            '/usr/bin/microsoft-edge',
+          ]),
+  ].filter(Boolean);
+  const found = candidates.find((p) => existsSync(p));
+  if (!found) {
+    console.error('smoke: no Chrome/Edge/Chromium found. Set CHROME_PATH to a Chromium executable.');
+    process.exit(1);
+  }
+  return found;
+}
+
+// ── Static server ──────────────────────────────────────────────
+const MIME = {
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.mjs': 'text/javascript; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.ico': 'image/x-icon',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.txt': 'text/plain; charset=utf-8',
+};
+
+function walkHtml(dir, out = []) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name.startsWith('.') || entry.name === 'node_modules') continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) walkHtml(full, out);
+    else if (entry.name.endsWith('.html')) out.push(full);
+  }
+  return out;
+}
+
+const server = createServer((req, res) => {
+  const raw = (req.url || '/').split('?')[0];
+  let clean;
+  try { clean = decodeURIComponent(raw); } catch { clean = raw; }
+  if (clean === '/') clean = '/index.html';
+  // 404.html carries <base href="/The-Blueprint/"> for GitHub Pages
+  // project paths; serve the repo under that prefix too so the page
+  // loads here exactly as it does in production.
+  clean = clean.replace(/^\/The-Blueprint\b(?![-\w])/, '');
+  const within = path.posix.normalize(clean.replace(/^\/+/, '')); // repo-relative, no leading slash
+  const file = path.resolve(ROOT, within);
+  if (file !== ROOT && !file.startsWith(ROOT + path.sep)) { res.writeHead(403); res.end('forbidden'); return; }
+  try {
+    const body = readFileSync(file);
+    res.writeHead(200, { 'Content-Type': MIME[path.extname(file).toLowerCase()] || 'application/octet-stream' });
+    res.end(body);
+  } catch {
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('not found');
+  }
+});
+await new Promise((res) => server.listen(0, '127.0.0.1', res));
+const ORIGIN = `http://127.0.0.1:${server.address().port}`;
+const PAGES = walkHtml(ROOT)
+  .map((f) => path.relative(ROOT, f).split(path.sep).join('/'))
+  .sort();
+
+// ── Minimal CDP client over WebSocket ──────────────────────────
+function cdpConnect(url) {
+  return new Promise((resolve, reject) => {
+    const ws = new WebSocket(url);
+    const pending = new Map();
+    const listeners = [];
+    let seq = 0;
+    const api = {
+      send(method, params = {}) {
+        return new Promise((res, rej) => {
+          const id = ++seq;
+          pending.set(id, { res, rej });
+          ws.send(JSON.stringify({ id, method, params }));
+        });
+      },
+      on(fn) { listeners.push(fn); },
+      close() { try { ws.close(); } catch { /* already closed */ } },
+    };
+    ws.addEventListener('open', () => resolve(api));
+    ws.addEventListener('error', () => reject(new Error(`CDP socket failed for ${url}`)));
+    ws.addEventListener('message', (ev) => {
+      const msg = JSON.parse(ev.data);
+      if (msg.id !== undefined && pending.has(msg.id)) {
+        const { res, rej } = pending.get(msg.id);
+        pending.delete(msg.id);
+        if (msg.error) rej(new Error(msg.error.message || 'CDP error'));
+        else res(msg.result);
+      } else if (msg.method) {
+        for (const fn of listeners) fn(msg);
+      }
+    });
+  });
+}
+
+// ── Error bookkeeping ──────────────────────────────────────────
+const sameOrigin = (url) => {
+  try { return new URL(url, ORIGIN).origin === ORIGIN; } catch { return true; }
+};
+
+// The two deliberate ignores, and nothing else.
+const ignored = (text, url) => {
+  if (/favicon\.ico/i.test(`${url} ${text}`) && /(404|not found)/i.test(text)) return true;
+  if (/failed to load resource/i.test(text) && !sameOrigin(url)) return true; // fonts CDN
+  return false;
+};
+
+function collector() {
+  const errors = [];
+  const seen = new Set();
+  const note = (rawText, url) => {
+    const text = String(rawText).replace(/\s+/g, ' ').trim();
+    if (!text || ignored(text, url)) return;
+    const key = `${text} ${url}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    errors.push({ text: text.slice(0, 200), url });
+  };
+  const listen = (api) => api.on((m) => {
+    if (m.method === 'Runtime.exceptionThrown') {
+      const d = m.params.exceptionDetails;
+      const detail = d.exception && (d.exception.description || d.exception.value);
+      note(`${d.text}${detail ? `: ${detail}` : ''}`, d.url || '');
+    } else if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') {
+      const text = m.params.args.map((a) => (a.value !== undefined ? a.value : a.description) || '').join(' ');
+      const frame = m.params.stackTrace && m.params.stackTrace.callFrames && m.params.stackTrace.callFrames[0];
+      note(text, (frame && frame.url) || '');
+    } else if (m.method === 'Log.entryAdded' && m.params.entry.level === 'error') {
+      note(m.params.entry.text, m.params.entry.url || '');
+    }
+  });
+  return { errors, listen };
+}
+
+// ── Launch the browser ─────────────────────────────────────────
+const browserPath = findBrowser();
+const userDataDir = mkdtempSync(path.join(os.tmpdir(), 'blueprint-smoke-'));
+const child = spawn(browserPath, [
+  '--headless=new',
+  '--remote-debugging-port=0',
+  `--user-data-dir=${userDataDir}`,
+  '--no-first-run',
+  '--no-default-browser-check',
+  '--disable-extensions',
+  '--disable-gpu',
+  'about:blank',
+], { stdio: ['ignore', 'ignore', 'pipe'] });
+
+const devtoolsWs = await new Promise((resolve, reject) => {
+  let buf = '';
+  const timer = setTimeout(() => reject(new Error(`browser did not expose DevTools within ${LAUNCH_TIMEOUT_MS / 1000}s (${browserPath})`)), LAUNCH_TIMEOUT_MS);
+  child.stderr.on('data', (d) => {
+    buf += d;
+    const m = buf.match(/DevTools listening on (ws:\/\/\S+)/);
+    if (m) { clearTimeout(timer); resolve(m[1]); }
+  });
+  child.on('exit', (code) => { clearTimeout(timer); reject(new Error(`browser exited during launch (code ${code})`)); });
+});
+const httpBase = devtoolsWs.replace(/^ws:/, 'http:').replace(/\/devtools\/browser\/.*$/, '');
+
+async function newTab() {
+  let res = await fetch(`${httpBase}/json/new?about%3Ablank`, { method: 'PUT' });
+  if (!res.ok) res = await fetch(`${httpBase}/json/new?about%3Ablank`); // older builds accept GET only
+  if (!res.ok) throw new Error(`/json/new failed: HTTP ${res.status}`);
+  return res.json();
+}
+const closeTab = (id) => fetch(`${httpBase}/json/close/${id}`).catch(() => {});
+
+const withTimeout = (p, ms, what) => Promise.race([
+  p,
+  new Promise((_, rej) => setTimeout(() => rej(new Error(`${what} timed out after ${ms / 1000}s`)), ms)),
+]);
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+// ── Load every page ────────────────────────────────────────────
+let failed = 0;
+console.log(`smoke: ${PAGES.length} pages on ${ORIGIN} (${path.basename(browserPath)})`);
+for (const page of PAGES) {
+  const url = `${ORIGIN}/${page}`;
+  let api = null;
+  let tab = null;
+  try {
+    tab = await newTab();
+    api = await withTimeout(cdpConnect(tab.webSocketDebuggerUrl), PAGE_TIMEOUT_MS, 'connecting to the tab');
+    const { errors, listen } = collector();
+    listen(api);
+    await api.send('Runtime.enable');
+    await api.send('Log.enable');
+    await api.send('Page.enable');
+    const loaded = new Promise((res) => api.on((m) => { if (m.method === 'Page.loadEventFired') res(); }));
+    await api.send('Page.navigate', { url });
+    await withTimeout(loaded, PAGE_TIMEOUT_MS, `loading ${page}`);
+    await sleep(SETTLE_MS); // modules run after load; async renders finish here
+    if (errors.length) {
+      failed++;
+      console.log(`✗ /${page}`);
+      errors.slice(0, 5).forEach((e) => console.log(`    ${e.text}${e.url ? `  [${e.url.replace(ORIGIN, '')}]` : ''}`));
+      if (errors.length > 5) console.log(`    … ${errors.length - 5} more`);
+    } else {
+      console.log(`✓ /${page}`);
+    }
+  } catch (e) {
+    failed++;
+    console.log(`✗ /${page}`);
+    console.log(`    ${e && e.message ? e.message : e}`);
+  } finally {
+    if (api) api.close();
+    if (tab) await closeTab(tab.id);
+  }
+}
+
+// ── Shut down ──────────────────────────────────────────────────
+child.kill();
+await new Promise((res) => { child.on('exit', res); setTimeout(res, 3000); });
+server.close();
+for (const delay of [0, 500]) {
+  await sleep(delay);
+  try { rmSync(userDataDir, { recursive: true, force: true }); break; } catch { /* files still held */ }
+}
+
+console.log('─'.repeat(40));
+console.log(`${PAGES.length - failed} passed, ${failed} failed`);
+process.exit(failed ? 1 : 0);
