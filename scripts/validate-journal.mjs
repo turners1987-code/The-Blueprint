@@ -124,7 +124,8 @@ const PARITY = {
 for (const [field, list] of Object.entries(PARITY)) {
   if (!sameSet(enumOf(field), list.map(e => e.slug))) fail(`enum mismatch for "${field}" between journal-schema.json and schema.js`);
 }
-if (schema.properties.taxonomy_version.const !== TAXONOMY_VERSION) fail('taxonomy_version mismatch between journal-schema.json and schema.js');
+if (!new RegExp(schema.properties.taxonomy_version.pattern).test(TAXONOMY_VERSION)) fail('TAXONOMY_VERSION does not match the taxonomy_version pattern in journal-schema.json');
+if (schema.properties.taxonomy_version.const !== undefined) fail('taxonomy_version must not be a const in journal-schema.json');
 for (const f of schema.required) {
   if (!(f in emptyRecord())) fail(`emptyRecord() is missing required field "${f}"`);
 }
@@ -154,7 +155,11 @@ const NEGATIVE = {
   'confirmation not an array': { ...base, confirmation: 'big-orders' },
   'inactive location london-high': { ...base, location: 'london-high' },
   'retired setup': { ...base, setup: 'opening-range-breakout' },
-  'old taxonomy version': { ...base, taxonomy_version: '1.2' },
+  'malformed taxonomy_version "1.x"': { ...base, taxonomy_version: '1.x' },
+  'malformed taxonomy_version "1"': { ...base, taxonomy_version: '1' },
+  'malformed taxonomy_version "v1.4"': { ...base, taxonomy_version: 'v1.4' },
+  'malformed taxonomy_version "1.4.0"': { ...base, taxonomy_version: '1.4.0' },
+  'numeric taxonomy_version': { ...base, taxonomy_version: 1.4 },
   'invented field': { ...base, trigger_subform: 'big-orders' },
   'bad entry_time': { ...base, entry_time: '2026-09-29 09:52' },
   'size zero': { ...base, size: 0 },
@@ -171,6 +176,28 @@ for (const [name, rec] of Object.entries(NEGATIVE)) {
 // A date that fits the pattern but is not on the calendar: JSON Schema's
 // pattern cannot tell, so only schema.js is expected to reject it.
 if (validate({ ...base, session_date: '2026-02-30' }).valid) fail('schema.js accepted the impossible date 2026-02-30');
+// A version newer than the supported one also fits the pattern; only
+// schema.js can compare versions, so only it is expected to reject it.
+const [maj, min] = TAXONOMY_VERSION.split('.').map(Number);
+for (const newer of [`${maj}.${min + 1}`, `${maj + 1}.0`]) {
+  if (validate({ ...base, taxonomy_version: newer }).valid) fail(`schema.js accepted taxonomy_version "${newer}", newer than ${TAXONOMY_VERSION}`);
+}
+
+// Positive controls: records stamped with an older taxonomy version must
+// still validate under both checkers; schema.js warns but does not error.
+const OLDER = [`${maj}.${Math.max(min - 1, 0)}`, '1.0', '0.9'].filter(v => v !== TAXONOMY_VERSION);
+for (const v of OLDER) {
+  const rec = { ...base, taxonomy_version: v };
+  for (const e of validateAgainstJsonSchema(rec)) fail(`older taxonomy_version "${v}" rejected by JSON Schema: ${e}`);
+  const r = validate(rec);
+  if (!r.valid) fail(`older taxonomy_version "${v}" rejected by schema.js: ${r.errors.map(e => e.field + ' ' + e.message).join('; ')}`);
+  if (!r.warnings.some(w => w.field === 'taxonomy_version')) fail(`older taxonomy_version "${v}" produced no warning`);
+}
+// The current version validates with no warning at all.
+for (const rec of examples) {
+  if (validate(rec).warnings.length) fail(`example stamped "${rec.taxonomy_version}" produced warnings under taxonomy ${TAXONOMY_VERSION}`);
+}
+
 const blank = emptyRecord();
 if (validate(blank).valid) fail('emptyRecord() must not validate until the required fields are filled in');
 
@@ -182,4 +209,5 @@ if (failures.length) {
 console.log(`✓ journal schema v${JOURNAL_SCHEMA_VERSION} (taxonomy ${TAXONOMY_VERSION})`);
 console.log(`✓ ${examples.length} example records validate under JSON Schema and schema.js`);
 console.log(`✓ enums agree between journal-schema.json and schema.js`);
-console.log(`✓ ${Object.keys(NEGATIVE).length} negative controls rejected by both checkers; impossible calendar dates rejected by schema.js (JSON Schema patterns cannot check the calendar)`);
+console.log(`✓ ${Object.keys(NEGATIVE).length} negative controls rejected by both checkers; impossible dates and newer taxonomy versions rejected by schema.js (a JSON Schema pattern cannot check those)`);
+console.log(`✓ older taxonomy versions (${OLDER.join(', ')}) still validate, with a warning from schema.js`);

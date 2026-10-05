@@ -21,8 +21,11 @@
 // taxonomy_version; the journal schema version belongs to this module.
 export const JOURNAL_SCHEMA_VERSION = 1;
 
-// TAXONOMY version this schema covers. Stamped on every record.
-export const TAXONOMY_VERSION = '1.3';
+// The TAXONOMY version in force: the single source for it in this repo.
+// New records are stamped with it. Bump it whenever reference/TAXONOMY.md
+// changes the enums or the field names. Records stamped with an older
+// version stay valid (validate() only warns); one stamped newer is an error.
+export const TAXONOMY_VERSION = '1.4';
 
 // ── Units of every numeric field ──────────────────────────────
 //   intended_price, actual_fill, stop_price, target_price
@@ -164,16 +167,29 @@ const isRealDateTime = (str) => {
 
 const isBlank = (v) => v === undefined || v === null;
 
+// "major.minor" -> [major, minor], or null when malformed.
+const VERSION_RE = /^([0-9]+)[.]([0-9]+)$/;
+const parseVersion = (v) => {
+  const m = typeof v === 'string' ? VERSION_RE.exec(v) : null;
+  return m ? [Number(m[1]), Number(m[2])] : null;
+};
+// negative if a < b, 0 if equal, positive if a > b
+const compareVersions = (a, b) => (a[0] - b[0]) || (a[1] - b[1]);
+
 // ── validate ──────────────────────────────────────────────────
 
-// Returns { valid, errors }. Each error is { field, message }.
+// Returns { valid, errors, warnings }. Each entry is { field, message }.
+// warnings never affect valid. A record stamped with an older
+// taxonomy_version is checked against the CURRENT vocabulary and gets a
+// warning; a value that has since been retired will still fail as an error.
 export function validate(record) {
   const errors = [];
+  const warnings = [];
   const fail = (field, message) => errors.push({ field, message });
 
   if (record === null || typeof record !== 'object' || Array.isArray(record)) {
     fail('(record)', 'must be an object');
-    return { valid: false, errors };
+    return { valid: false, errors, warnings };
   }
 
   for (const key of Object.keys(record)) {
@@ -190,8 +206,21 @@ export function validate(record) {
     if (!allowed.includes(v)) fail(key, `must be one of: ${allowed.join(', ')}`);
   };
 
-  if (!isBlank(record.taxonomy_version) && record.taxonomy_version !== TAXONOMY_VERSION) {
-    fail('taxonomy_version', `must be "${TAXONOMY_VERSION}"`);
+  if (!isBlank(record.taxonomy_version)) {
+    const stamped = parseVersion(record.taxonomy_version);
+    if (!stamped) {
+      fail('taxonomy_version', 'must be a version number such as "1.4"');
+    } else {
+      const order = compareVersions(stamped, parseVersion(TAXONOMY_VERSION));
+      if (order > 0) {
+        fail('taxonomy_version', `"${record.taxonomy_version}" is newer than the supported "${TAXONOMY_VERSION}"`);
+      } else if (order < 0) {
+        warnings.push({
+          field: 'taxonomy_version',
+          message: `"${record.taxonomy_version}" is older than the current "${TAXONOMY_VERSION}"; checked against the current vocabulary`,
+        });
+      }
+    }
   }
   checkEnum('setup', slugs(SETUPS));
   checkEnum('location', slugs(LOCATIONS));
@@ -255,7 +284,7 @@ export function validate(record) {
     else if (min !== null && v < min) fail(key, `must be at least ${min}`);
   }
 
-  return { valid: errors.length === 0, errors };
+  return { valid: errors.length === 0, errors, warnings };
 }
 
 // ── emptyRecord ───────────────────────────────────────────────
