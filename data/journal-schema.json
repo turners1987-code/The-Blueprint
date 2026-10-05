@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turners1987-code.github.io/The-Blueprint/data/journal-schema.json",
+  "title": "The Blueprint - trade record",
+  "description": "A single journal trade record. Field model: reference/TAXONOMY.md sections 1.1 and 1.2. Vocabularies: sections 2, 3, 4 and 5. Slugs are immutable (TAXONOMY section 0); labels live in js/journal/schema.js and may change freely.",
+  "$comment": "Selectable values only. Reserved but INACTIVE location slugs (london-high, london-low, asia-high, asia-low; TAXONOMY 4.1) are deliberately absent until the NT8 fix ships. Confirmation values other than the four aggression-fails sub-forms (Trapped Traders; Trader Dale's four; TAXONOMY 3.4) have no slugs yet and are absent until TAXONOMY assigns them.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "taxonomy_version",
+    "setup",
+    "location",
+    "grade",
+    "environment",
+    "instrument",
+    "direction",
+    "session_date",
+    "entry_time"
+  ],
+  "properties": {
+    "taxonomy_version": {
+      "description": "TAXONOMY version the trade was tagged under, stamped at write time (section 0). This schema covers 1.3.",
+      "const": "1.3"
+    },
+
+    "setup": {
+      "description": "Exactly 1. The read: what price is doing (section 2).",
+      "enum": ["trend-continuation", "range-rejection", "gap-fill", "gap-n-go", "no-setup"]
+    },
+    "location": {
+      "description": "Exactly 1. Where it happened: the named level or level type (section 4). mid-range means no named level.",
+      "enum": [
+        "pd-high", "pd-low", "pd-vah", "pd-val", "pd-vpoc", "settlement",
+        "on-high", "on-low", "on-poc",
+        "prior-week-high", "prior-week-low",
+        "htf-hvn", "htf-lvn",
+        "or-high", "or-low",
+        "defended-pullback-high", "defended-pullback-low",
+        "developing-vpoc", "developing-vah", "developing-val",
+        "unfinished-business", "stacked-imbalance",
+        "mid-range"
+      ]
+    },
+    "trigger": {
+      "description": "0 or 1. The entry event, and it is a PRICE event (section 3). Absent or null when nothing fired; none is the explicit no-trigger slug (3.6). Order-flow evidence is never a trigger: it goes in confirmation.",
+      "enum": ["pause-n-go", "resting-limit", "ema-pullback", "level-reclaim", "none", null]
+    },
+    "confirmation": {
+      "description": "0 or many. Order-flow evidence supporting the entry (section 3.4). Separate from trigger. Each value is an aggression-fails sub-form, so the sub-form that 3.4 requires is always present.",
+      "type": ["array", "null"],
+      "uniqueItems": true,
+      "items": {
+        "enum": ["big-orders", "failing-delta", "delta-divergence", "two-bar-exhaustion"]
+      }
+    },
+    "grade": {
+      "description": "Exactly 1. Entry-plan compliance only, assigned at entry and never reading the outcome (section 5.1). Exit compliance is execution_mark.",
+      "enum": ["A+", "A", "B", "C"]
+    },
+    "execution_mark": {
+      "description": "Exactly 1 once the trade has exited; null until then. Did the exit follow the plan (section 5.2). Separate from grade.",
+      "enum": ["Pass", "Fail", null]
+    },
+    "environment": {
+      "description": "Exactly 1, required on every record. Sim is counted separately and never pooled into expectancy (section 6.4).",
+      "enum": ["live", "sim", "replay"]
+    },
+    "tags": {
+      "description": "0 or many. Process and behavioral tags (section 5). TAXONOMY does not enumerate tag values, so any non-empty string is accepted. legacy_ tags are not selectable on new trades.",
+      "type": ["array", "null"],
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+
+    "instrument": {
+      "description": "Identity (section 1.2).",
+      "type": "string",
+      "minLength": 1
+    },
+    "direction": {
+      "description": "Identity (section 1.2). TAXONOMY does not list the values; long and short.",
+      "enum": ["long", "short"]
+    },
+    "session_date": {
+      "description": "Trading session date, YYYY-MM-DD.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "entry_time": {
+      "description": "ISO 8601 date-time with a UTC offset.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "exit_time": {
+      "description": "ISO 8601 date-time with a UTC offset. Absent or null while the trade is open.",
+      "type": ["string", "null"],
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+
+    "intended_price": {
+      "description": "Where the plan said to get filled.",
+      "type": ["number", "null"]
+    },
+    "actual_fill": {
+      "description": "Where the fill happened. actual_fill minus intended_price is the fill-placement gap.",
+      "type": ["number", "null"]
+    },
+    "stop_price": {
+      "description": "Plan geometry, for grade evaluation.",
+      "type": ["number", "null"]
+    },
+    "target_price": {
+      "description": "Plan geometry, for grade evaluation.",
+      "type": ["number", "null"]
+    },
+    "size": {
+      "description": "Position size in contracts.",
+      "type": ["integer", "null"],
+      "minimum": 1
+    },
+
+    "r_multiple": {
+      "description": "Outcome. Null while the trade is open.",
+      "type": ["number", "null"]
+    },
+    "mae": {
+      "description": "Maximum adverse excursion. The unit is not fixed by TAXONOMY 1.2.",
+      "type": ["number", "null"]
+    },
+    "mfe": {
+      "description": "Maximum favorable excursion. The unit is not fixed by TAXONOMY 1.2.",
+      "type": ["number", "null"]
+    },
+    "time_in_trade": {
+      "description": "Outcome. The unit is not fixed by TAXONOMY 1.2.",
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "commissions": {
+      "description": "Gate 2 expectancy is after commissions.",
+      "type": ["number", "null"],
+      "minimum": 0
+    }
+  }
+}
