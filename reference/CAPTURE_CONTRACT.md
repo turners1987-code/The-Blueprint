@@ -1,6 +1,6 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.4 · 2026-10-05
+Version 1.5 · 2026-10-05
 Status: SPEC, corrected after the NT8 project review. This is the document the NinjaTrader 8
 capture addon builds against. This repo holds the contract, not the addon; no addon code lives
 here.
@@ -41,7 +41,7 @@ check) on every emitted record in its own build.
   the top level**. The JSONL lives under `nt8/`, never at the top level.
 - **Subfolder `nt8/` is the addon's space.** The journal scans only top-level `*.json` files and
   skips anything that is not a valid record; subfolders are invisible to it. Everything that is
-  not a trade record — the JSONL intermediate, audit sidecars, pending zero-touch records, local
+  not a trade record — the JSONL intermediate, audit sidecars, local
   logs — lives under `nt8/`.
 - **Life cycle:** the file appears when the position opens (with `r_multiple`, `exit_time`,
   `execution_mark` null) and is updated in place when the position closes and again when
@@ -97,20 +97,21 @@ check) on every emitted record in its own build.
 | `intended_price`, `stop_price`, `target_price` | as submitted | **null** |
 | `instrument`, `direction`, `session_date`, `entry_time`, `environment`, `size`, `actual_fill` | captured | captured |
 | `exit_time`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` | post-exit | post-exit |
-| `r_multiple` | computed (stop known) | **null** — no stop, no R; the trader supplies the plan on completion |
+| `r_multiple` | computed (stop known) | **null** — no stop, no R; the journal computes it once the trader supplies the stop (7.1) |
 | `tags` | as submitted | carries the reserved tag `zero-touch` |
 
 - A zero-touch record is **written with the plan fields null and flagged for completion in the
   journal UI** (the `zero-touch` tag plus null plan fields is the flag; surfacing them in the UI
   is journal-side work, referenced here so the contract is complete).
-- **Prerequisite, stated plainly:** `journal-schema.json` v2 requires non-null `setup`,
-  `location` and `grade`. Writing them null — as this tier must — requires **journal schema v3**
-  making those three nullable for unclassified captures (Q2). Until v3 ships, a zero-touch file
-  fails validation and the journal's folder scan **silently skips it**. Sequencing rule: until
-  the journal validates null classification, the addon parks zero-touch captures under
-  `nt8/pending/` and writes nothing at the top level for them. The analysis layer already
-  buckets null `setup`/`location`/`grade` as `unknown` cohorts, so v3 is a schema and validator
-  change, not an analysis change.
+- **Schema v3 (shipped).** `setup`, `location` and `grade` are nullable in
+  `journal-schema.json` v3 (Q2), so a zero-touch record validates and the journal's folder scan
+  picks it up. The keys are still always present (7.2), and `validate()` still requires all
+  three to be non-null once a **live** trade is **closed**: an unclassified zero-touch capture is
+  not an error, an unclassified closed live trade is. The addon writes zero-touch records to the
+  top level like any other; `nt8/pending/` is retired. A journal older than schema v3 skips
+  such a file silently, so the journal must be upgraded before the addon's zero-touch tier is
+  enabled. The analysis layer already buckets null `setup`/`location`/`grade` as `unknown`
+  cohorts.
 
 ## 4. Copier dedup
 
@@ -222,9 +223,24 @@ The write is still atomic (section 1).
   shared field only if the file still holds exactly that value (or null).
 - **Reserved tags.** `tags` is journal-owned with one exception: the addon sets the reserved tags
   (7.4) at creation. Neither writer ever removes them.
-- **`r_multiple`** is addon-owned and derived. It is null while `stop_price` is null; the addon
-  re-derives it from the file's current `stop_price` on each of its own writes. The journal never
-  writes it.
+- **`r_multiple`** is derived, and ownership follows who can compute it:
+  - **Addon-owned** when, at close, the addon has both a `stop_price` (non-null in the file) and
+    the exit. It computes the value and writes `"r_multiple_source": "addon"` to
+    `nt8/audit/<id>.json`.
+  - **Journal-computed otherwise.** When `r_multiple` is null, the trade is closed and
+    `stop_price` is non-null — the zero-touch case, once the trader supplies the stop — the
+    journal derives it and writes `"r_multiple_source": "journal"` to the same sidecar.
+  - **Formula** (both writers): direction-signed `(average exit price − actual_fill)` divided by
+    `|actual_fill − stop_price|`, rounded per 7.3. The schema has no exit-price field, so the
+    addon records the size-weighted average exit price as `exit_price` in the audit sidecar at
+    close; the journal reads it from there. With no sidecar there is no exit price, and
+    `r_multiple` stays null.
+  - **Later writes.** A value whose source is `journal` is left alone by the addon; one whose
+    source is `addon` is re-derived only by the addon. A null stays null until one of the two
+    can compute it.
+  - **Sidecar exception.** The journal writes only the `r_multiple_source` key of the audit
+    sidecar. This is the one place the journal writes under `nt8/` (section 1 otherwise reserves
+    it for the addon; prohibition 3 in section 6 binds the addon only).
 - **Lost-update guard.** A read-modify-write is not atomic across two processes. Before replacing
   the file, a writer checks that the file's last-modified time is unchanged since its read; if it
   changed, the writer re-reads and redoes the merge.
@@ -281,7 +297,7 @@ records take the new literal.
 | File | State |
 | --- | --- |
 | `rich-tier.json` | Rich-tier record as written at open: plan fields populated, outcome fields null |
-| `zero-touch.json` | Zero-touch record at open: classification and plan null, tagged `zero-touch`. **Fails `validate()` on `setup`, `location` and `grade` until journal schema v3** (section 3, Q2) — and on nothing else |
+| `zero-touch.json` | Zero-touch record at open: classification and plan null, tagged `zero-touch`. **Passes `validate()`** under journal schema v3, because it is unclassified but not a closed live trade (section 3, Q2) |
 | `post-reconciliation.json` | The rich-tier trade after close and reconciliation: every field final |
 
 ## 8. Open questions for the NT8 project
@@ -297,14 +313,15 @@ Each one can change a section above. Questions answered by the NT8 review are re
    needs **measuring on Shane's data connection, not documenting**: request ticks at increasing
    look-back per instrument and record where the request stops returning data. Until that is
    done, 5.2 is a design, not a guarantee.
-2. **Journal schema v3 sequencing.** Making `setup`/`location`/`grade` nullable so zero-touch
-   records validate (section 3). The journal side ships first; the addon's zero-touch write
-   stays parked in `nt8/pending/` until it does.
 5. **PWH/PWL session convention** — RTH-only today while every other level is ETH (TAXONOMY
    OPEN #6, already owned by the NT8 project). Location capture depends on the decision.
 
 ### 8.2 Answered
 
+2. **Journal schema v3.** Shipped. `setup`, `location` and `grade` are nullable so zero-touch
+   records validate (section 3); `validate()` still requires them non-null on a closed live
+   trade. Existing records need no migration. The addon's zero-touch tier needs a journal at
+   schema v3 or later.
 3. **`decision_id` transport through the copier.** *Partly answered; propagation is an
    unverified assumption.*
    - **Carrier (answered):** `Execution.Name` is documented as the order's name, settable at
@@ -344,3 +361,4 @@ Each one can change a section above. Questions answered by the NT8 review are re
 | 1.2 | 2026-10-05 | Section 7 split into Open (Q1, Q2, Q5) and Answered (Q3, Q4, Q6, Q7, Q8, Q9). Q1 marked as gating 5.2. Q3 carrier answered, copier propagation recorded as unverified. |
 | 1.3 | 2026-10-05 | `decision_id` is 12 base36 characters throughout (section 4, Q3); tag format `decision:<decision_id>`. |
 | 1.4 | 2026-10-05 | New section 7: field-level ownership between addon and journal writers, null representation, numeric formatting, tag constraints, validation decision, TAXONOMY_VERSION rule, golden samples. Open questions renumbered to 8, change log to 9. `execution_mark` is no longer written by the addon. |
+| 1.5 | 2026-10-05 | `r_multiple` ownership follows who can compute it, with the source recorded in the audit sidecar (7.1). Journal schema v3 shipped: `setup`/`location`/`grade` nullable, required non-null on a closed live trade; `nt8/pending/` retired; Q2 answered; `zero-touch.json` now passes `validate()`. |

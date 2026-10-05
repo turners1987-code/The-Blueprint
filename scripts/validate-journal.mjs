@@ -201,6 +201,23 @@ for (const rec of examples) {
   if (validate(rec).warnings.length) fail(`example stamped "${rec.taxonomy_version}" produced warnings under taxonomy ${TAXONOMY_VERSION}`);
 }
 
+// v3: classification may be null (zero-touch), but not absent, and not on a
+// closed live trade. The last rule lives in validate() only.
+{
+  const open = { ...base, environment: 'sim', exit_time: null, setup: null, location: null, grade: null };
+  for (const e of validateAgainstJsonSchema(open)) fail(`unclassified record rejected by JSON Schema: ${e}`);
+  const r = validate(open);
+  if (!r.valid) fail(`unclassified sim record rejected by schema.js: ${r.errors.map(e => e.field + ' ' + e.message).join('; ')}`);
+
+  const live = { ...base, environment: 'live', setup: null, location: null, grade: null };
+  if (!validate({ ...live, exit_time: null }).valid) fail('unclassified OPEN live record must validate (zero-touch)');
+  const closed = validate(live);
+  for (const k of ['setup', 'location', 'grade']) {
+    if (!closed.errors.some(e => e.field === k)) fail(`unclassified CLOSED live record must fail on "${k}"`);
+  }
+  if (!validate({ ...live, setup: 'trend-continuation', location: 'pd-high', grade: 'A' }).valid) fail('classified closed live record must validate');
+}
+
 // A well-formed id is accepted by both checkers.
 {
   const rec = { ...base, id: '2026-09-29-k3f9a' };

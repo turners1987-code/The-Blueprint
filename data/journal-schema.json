@@ -3,7 +3,7 @@
   "$id": "https://turners1987-code.github.io/The-Blueprint/data/journal-schema.json",
   "title": "The Blueprint - trade record",
   "description": "A single journal trade record. Field model: reference/TAXONOMY.md sections 1.1 and 1.2. Vocabularies: sections 2, 3, 4 and 5. Slugs are immutable (TAXONOMY section 0); labels live in js/journal/schema.js and may change freely.",
-  "$comment": "Selectable values only. Reserved but INACTIVE location slugs (london-high, london-low, asia-high, asia-low; TAXONOMY 4.1) are deliberately absent until the NT8 fix ships. Confirmation values other than the four aggression-fails sub-forms (Trapped Traders; Trader Dale's four; TAXONOMY 3.4) have no slugs yet and are absent until TAXONOMY assigns them.",
+  "$comment": "Schema v3: setup, location and grade are nullable (present, never absent) so zero-touch captures validate. validate() in js/journal/schema.js additionally rejects null for all three when environment is live and exit_time is set; a JSON Schema pattern cannot express that without keywords the repo checker does not support. Selectable values only. Reserved but INACTIVE location slugs (london-high, london-low, asia-high, asia-low; TAXONOMY 4.1) are deliberately absent until the NT8 fix ships. Confirmation values other than the four aggression-fails sub-forms (Trapped Traders; Trader Dale's four; TAXONOMY 3.4) have no slugs yet and are absent until TAXONOMY assigns them.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -30,11 +30,11 @@
     },
 
     "setup": {
-      "description": "Exactly 1. The read: what price is doing (section 2).",
-      "enum": ["trend-continuation", "range-rejection", "gap-fill", "gap-n-go", "no-setup"]
+      "description": "Exactly 1 once classified. Null on an unclassified zero-touch capture (schema v3). The read: what price is doing (section 2).",
+      "enum": ["trend-continuation", "range-rejection", "gap-fill", "gap-n-go", "no-setup", null]
     },
     "location": {
-      "description": "Exactly 1. Where it happened: the named level or level type (section 4). mid-range means no named level.",
+      "description": "Exactly 1 once classified. Null on an unclassified zero-touch capture (schema v3). Where it happened: the named level or level type (section 4). mid-range means no named level.",
       "enum": [
         "pd-high", "pd-low", "pd-vah", "pd-val", "pd-vpoc", "settlement",
         "on-high", "on-low", "on-poc",
@@ -44,7 +44,8 @@
         "defended-pullback-high", "defended-pullback-low",
         "developing-vpoc", "developing-vah", "developing-val",
         "unfinished-business", "stacked-imbalance",
-        "mid-range"
+        "mid-range",
+        null
       ]
     },
     "trigger": {
@@ -60,8 +61,8 @@
       }
     },
     "grade": {
-      "description": "Exactly 1. Entry-plan compliance only, assigned at entry and never reading the outcome (section 5.1). Exit compliance is execution_mark.",
-      "enum": ["A+", "A", "B", "C"]
+      "description": "Exactly 1 once classified. Null on an unclassified zero-touch capture (schema v3). Entry-plan compliance only, assigned at entry and never reading the outcome (section 5.1). Exit compliance is execution_mark.",
+      "enum": ["A+", "A", "B", "C", null]
     },
     "execution_mark": {
       "description": "Exactly 1 once the trade has exited; null until then. Did the exit follow the plan (section 5.2). Separate from grade.",

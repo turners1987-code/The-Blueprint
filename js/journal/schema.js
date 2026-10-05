@@ -20,7 +20,15 @@
 // change need not touch the vocabulary. Every record carries
 // taxonomy_version; the journal schema version belongs to this module.
 // v2: added the optional id field (assigned by the storage layer).
-export const JOURNAL_SCHEMA_VERSION = 2;
+// v3: setup, location and grade are nullable, so a zero-touch capture
+//     (reference/CAPTURE_CONTRACT.md section 3) validates before the trader
+//     classifies it. The keys must still be PRESENT (null, never absent),
+//     and validate() still requires all three to be non-null when the
+//     record is a closed live trade. Migration: none. This only widens what
+//     is accepted, so every v1 and v2 record is a valid v3 record unchanged,
+//     and no stored record is rewritten. A v3 export imported into a v2
+//     journal is rejected there if it contains an unclassified record.
+export const JOURNAL_SCHEMA_VERSION = 3;
 
 // The TAXONOMY version in force: the single source for it in this repo.
 // New records are stamped with it. Bump it whenever reference/TAXONOMY.md
@@ -136,6 +144,10 @@ const REQUIRED = [
   'instrument', 'direction', 'session_date', 'entry_time',
 ];
 
+// Nullable since v3, but never absent. Null is an error only on a closed live
+// trade (see validate()).
+const CLASSIFICATION = ['setup', 'location', 'grade'];
+
 const NUMBER_FIELDS = {
   // field: minimum (null = unbounded)
   intended_price: null, actual_fill: null, stop_price: null, target_price: null,
@@ -203,7 +215,18 @@ export function validate(record) {
   }
 
   for (const key of REQUIRED) {
-    if (isBlank(record[key])) fail(key, 'is required');
+    if (CLASSIFICATION.includes(key)) {
+      if (record[key] === undefined) fail(key, 'is required');
+    } else if (isBlank(record[key])) {
+      fail(key, 'is required');
+    }
+  }
+  // An unclassified zero-touch capture is fine; an unclassified closed live
+  // trade is not. Closed means exit_time is set.
+  if (record.environment === 'live' && !isBlank(record.exit_time)) {
+    for (const key of CLASSIFICATION) {
+      if (record[key] === null) fail(key, 'is required once a live trade is closed');
+    }
   }
 
   const checkEnum = (key, allowed) => {
