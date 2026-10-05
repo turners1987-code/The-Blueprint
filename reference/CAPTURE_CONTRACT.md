@@ -118,9 +118,10 @@ One decision produces fills across multiple accounts. The addon must record **on
 one per account.
 
 - **The unit of record is the leader account trade.** Exactly one `<id>.json` per decision.
-- **`decision_id`** is generated at submission by the order-entry tool — a UUID v4, lowercase —
-  and stamped on every order in the decision, such that the copier propagates it and every
-  follower execution carries it back (transport: Q3).
+- **`decision_id`** is generated at submission by the order-entry tool — **12 base36 characters**
+  (`[0-9a-z]`, lowercase) — and stamped on every order in the decision, such that the copier
+  propagates it and every follower execution carries it back (transport: Q3; copier propagation
+  is unverified).
 - **Do NOT match by time and price.** Two fills at the same price in the same second are two
   trades until a shared `decision_id` says otherwise; time-and-price matching is how copied
   trades get silently merged with genuinely distinct ones. This is a hard rule, not a default.
@@ -128,7 +129,7 @@ one per account.
   `nt8/audit/<decision_id>.json`: account, fill price, size, slippage versus the leader fill in
   ticks, timestamps. Analysis never reads these files; they exist to answer "what did copying
   this decision cost across accounts."
-- The leader record carries the link in-band as the tag `decision:<uuid>` (tags are free-form
+- The leader record carries the link in-band as the tag `decision:<id>` (tags are free-form
   strings the analysis layer never cohorts on), so the pairing survives the loss of a sidecar.
 
 ## 5. MAE/MFE: derivation and post-exit reconciliation
@@ -216,9 +217,8 @@ Each one can change a section above. Questions answered by the NT8 review are re
    - **Carrier (answered):** `Execution.Name` is documented as the order's name, settable at
      submission; `Account.CreateOrder` takes a name parameter. The addon stamps `decision_id`
      there.
-   - **Id length (answered):** a UUID v4 may exceed whatever length the field tolerates, so the
-     `decision_id` is a **shorter id**, not a UUID v4. This supersedes the UUID wording in
-     section 4.
+   - **Id length (answered):** the name field may not tolerate a long id, so `decision_id` is 12
+     base36 characters, generated at submission.
    - **Propagation (UNVERIFIED):** whether Replikanto carries the name through to follower fills
      is unknown and cannot be settled from documentation. It needs one Sim trade with a tagged
      name, then reading `Execution.Name` on a follower fill. Until that test is run, copier
@@ -249,3 +249,4 @@ Each one can change a section above. Questions answered by the NT8 review are re
 | 1.0 | 2026-10-05 | Initial. File layout and id format; record semantics; rich and zero-touch tiers; copier dedup by `decision_id`; post-exit MAE/MFE reconciliation with NinjaTrader's per-trade values ruled out; hard prohibitions; nine open questions. |
 | 1.1 | 2026-10-05 | Corrections from NT8 review: `environment` from the connection (replay fills land in Sim101); `session_date` from the Trading Hours template; commissions via `Execution.Commission`; grade from the BP Draft tool; 5.2 full-trading-day `BarsRequest` clamped in code, with disposal and pre-roll contract selection; fifth prohibition (local folder only). |
 | 1.2 | 2026-10-05 | Section 7 split into Open (Q1, Q2, Q5) and Answered (Q3, Q4, Q6, Q7, Q8, Q9). Q1 marked as gating 5.2. Q3 carrier answered, copier propagation recorded as unverified. |
+| 1.3 | 2026-10-05 | `decision_id` is 12 base36 characters throughout (section 4, Q3); tag format `decision:<id>`. |
