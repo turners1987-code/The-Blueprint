@@ -544,6 +544,19 @@
   gap: 4px;
 }
 
+.module-group-heading {
+  margin: var(--space-lg) 0 var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.module-group-heading:first-child {
+  margin-top: 0;
+}
+
 .module-row {
   display: grid;
   grid-template-columns: 92px minmax(0, 1fr) 150px 90px 42px;

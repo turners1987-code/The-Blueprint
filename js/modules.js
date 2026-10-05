@@ -48,9 +48,30 @@ if (table) {
           </div>`;
   };
 
+  // Group the grid by part, in this order, each with a heading.
+  const PARTS = [
+    { id: 'start',     label: 'Start' },
+    { id: 'blueprint', label: 'The Blueprint' },
+    { id: 'process',   label: 'Process' },
+    { id: 'capstone',  label: 'Capstone' },
+  ];
+
+  const grid = (modules) => {
+    const known = new Set(PARTS.map(p => p.id));
+    // A part missing from PARTS still renders, after the known ones.
+    const extra = [...new Set(modules.map(m => m.part))].filter(id => !known.has(id))
+      .map(id => ({ id, label: id.charAt(0).toUpperCase() + id.slice(1) }));
+    return [...PARTS, ...extra].map(part => {
+      const rows = modules.filter(m => m.part === part.id);
+      if (!rows.length) return '';
+      return `<h3 class="module-group-heading" data-part="${escapeHtml(part.id)}">${escapeHtml(part.label)}</h3>
+            ${rows.map(row).join('\n            ')}`;
+    }).filter(Boolean).join('\n            ');
+  };
+
   Progress.ready
     .then((modules) => {
-      table.innerHTML = modules.map(row).join('\n            ');
+      table.innerHTML = grid(modules);
       Progress.updateUI();
     })
     .catch(() => {

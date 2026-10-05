@@ -7,15 +7,39 @@
 const STORAGE_KEY = 'blueprint_progress';
 
 // Shape of stored progress: { version, completed: [moduleId], lastVisited }.
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 // MIGRATIONS[n] maps old module ids to new ones, applied when stored
-// progress is upgraded to schema version n. Seed empty; it is for the
-// upcoming curriculum renumber. Example:
-//   2: { '05-order-types': '04-order-types' }
-// Ids that appear in no map are left as they are, and so are ids that
-// match no known module. They may belong to a past or future schema.
-const MIGRATIONS = {};
+// progress is upgraded to schema version n. A string value is the new id;
+// null means the module was retired and the id is dropped. Ids that appear
+// in no map are left as they are, so unknown ids (from a past or future
+// schema) are kept rather than discarded.
+const MIGRATIONS = {
+  // v2: the 19-module curriculum became the 17-module structure
+  // (parts: start, blueprint, process, capstone).
+  2: {
+    '00-welcome': '00-welcome',
+    '08-range-rejection': '05-range-rejection',
+    '09-failed-breakdown': '05-range-rejection',
+    '11-gap-n-go': '06-gap-setups',
+    '12-gap-fill': '06-gap-setups',
+    '10-pause-n-go': '07-triggers',
+    '15-routines': '10-premarket-routine',
+    '16-journaling': '12-journaling',
+    '07-playbook-intro': '02-three-tiers',
+    '06-risk-and-psychology': '08-trade-construction',
+    // Retired: no equivalent in the new structure.
+    '01-market-foundation': null,
+    '02-reading-charts': null,
+    '03-market-concepts': null,
+    '04-tools-of-the-trade': null,
+    '05-order-types': null,
+    '13-orb': null,
+    '14-second-chance': null,
+    '17-putting-it-together': null,
+    '18-beyond-mnq': null,
+  },
+};
 
 let MODULES = [];
 
@@ -36,7 +60,7 @@ const migrate = (raw, from) => {
     const map = MIGRATIONS[v];
     if (!map) continue;
     const remap = (id) => (Object.prototype.hasOwnProperty.call(map, id) ? map[id] : id);
-    completed = [...new Set(completed.map(remap))];
+    completed = [...new Set(completed.map(remap).filter(id => id !== null))];
     if (lastVisited) lastVisited = remap(lastVisited);
   }
   return { version: SCHEMA_VERSION, completed, lastVisited };
