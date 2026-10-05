@@ -1,6 +1,6 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.2 · 2026-10-05
+Version 1.4 · 2026-10-05
 Status: SPEC, corrected after the NT8 project review. This is the document the NinjaTrader 8
 capture addon builds against. This repo holds the contract, not the addon; no addon code lives
 here.
@@ -83,9 +83,9 @@ check) on every emitted record in its own build.
   and **comes from which BP Draft tool was used** (Q9, answered) — the tool carries its rubric
   context at submission. The A+ fill tolerance (within 2 ticks of `intended_price`) resolves
   when the fill returns — still pre-outcome.
-- **`execution_mark`** is written only when the exit was mechanical — stop, target, planned
-  scale, or session end (5.2 Pass conditions the platform can see). A manual flatten leaves it
-  null for the trader to judge in the journal.
+- **`execution_mark`** is journal-owned (7.1): the addon writes it null and never sets it. A
+  mechanical exit (stop, target, planned scale, session end) is a signal the journal can use,
+  but the trader makes the call.
 
 ## 3. Two capture tiers
 
@@ -191,11 +191,104 @@ not as a value, not as a fallback, not as a tiebreaker.
 
 ---
 
-## 7. Open questions for the NT8 project
+## 7. Two writers, one file
 
-Each one can change a section above. Questions answered by the NT8 review are recorded in 7.2.
+The addon and the journal both write `<id>.json`. The addon writes it at open, at close and again
+after reconciliation; the journal writes it when the trader completes a zero-touch record or edits
+anything. Without a rule, a reconciliation write landing after a user edit silently erases the
+edit. The rule is **field-level ownership**.
 
-### 7.1 Open
+### 7.1 Field ownership
+
+| Owner | Fields |
+| --- | --- |
+| **Addon** — anything the platform observes | `id`, `taxonomy_version`, `environment`, `instrument`, `direction`, `session_date`, `entry_time`, `exit_time`, `actual_fill`, `r_multiple`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` |
+| **Journal** — anything the trader decides | `setup`, `location`, `trigger`, `confirmation`, `grade`, `execution_mark`, `tags` (and `notes`, if the schema ever gains it — see below) |
+| **Shared, addon-first** | `intended_price`, `stop_price`, `target_price`, `size` |
+
+**The rule.** Each writer **reads the current file, changes only the fields it owns, and writes
+the whole record back**. Neither clears, nulls, reformats or "refreshes" a field it does not own.
+The write is still atomic (section 1).
+
+- **Creation write.** The record's first write may populate journal-owned fields, but only with
+  what the trader submitted in the BP Draft tool (rich tier, section 3). From then on those
+  fields are the journal's: every later addon write carries them through untouched. A zero-touch
+  record is created with them null. `execution_mark` is never written by the addon — the trader
+  judges the exit in the journal.
+- **Shared fields.** The addon writes `intended_price`, `stop_price`, `target_price` and `size`
+  when the rich tier knows them at submission. For zero-touch records the journal fills them. The
+  addon **never overwrites a non-null value it did not write**: it records in
+  `nt8/audit/<id>.json` which shared fields it wrote and with what value, and later touches a
+  shared field only if the file still holds exactly that value (or null).
+- **Reserved tags.** `tags` is journal-owned with one exception: the addon sets the reserved tags
+  (7.4) at creation. Neither writer ever removes them.
+- **`r_multiple`** is addon-owned and derived. It is null while `stop_price` is null; the addon
+  re-derives it from the file's current `stop_price` on each of its own writes. The journal never
+  writes it.
+- **Lost-update guard.** A read-modify-write is not atomic across two processes. Before replacing
+  the file, a writer checks that the file's last-modified time is unchanged since its read; if it
+  changed, the writer re-reads and redoes the merge.
+- **Not in the schema:** `notes`. `journal-schema.json` has no such field and
+  `additionalProperties: false` rejects it. It is listed as journal-owned so that adding it later
+  needs no ownership decision, but until the schema gains it, neither writer may emit it.
+
+### 7.2 Null representation
+
+Every nullable schema field is **present with the value `null`, never absent**, in every record
+either writer emits. This applies to both writers. Required fields are never null in a record
+that is meant to validate (the zero-touch exception is section 3).
+
+### 7.3 Numeric formatting
+
+Both writers round identically, **half away from zero**:
+
+| Field | Format |
+| --- | --- |
+| `intended_price`, `actual_fill`, `stop_price`, `target_price` | rounded to the instrument's **tick size**, written with the tick's decimal places (MNQ, MES: 0.25 → 2 places; MGC: 0.10 → 1; MCL: 0.01 → 2) |
+| `r_multiple` | 2 decimal places |
+| `commissions` | 2 decimal places (US dollars) |
+| `time_in_trade_seconds` | integer |
+
+### 7.4 Tag constraints
+
+- At most **64 characters** per tag.
+- **Lowercase alphanumeric plus hyphen and colon** only: `^[0-9a-z:-]{1,64}$`.
+- **Reserved:** `zero-touch` (the exact tag) and the prefix `decision:` (section 4). Only the addon
+  creates them; neither writer removes them (7.1).
+- These are contract rules for tags a writer adds, and are stricter than the schema, which
+  accepts any non-empty string. Tags already in a file — including `legacy_` tags, which contain
+  an underscore — are preserved exactly as found, never rewritten to fit.
+
+### 7.5 Validation decision
+
+The addon **hand-rolls field checks generated from `data/journal-schema.json` at release time**,
+with the golden sample records (`reference/golden-samples/`) as the regression test: every
+fixture must produce the result recorded for it. **No external JSON Schema assembly inside
+NinjaTrader.** The schema stays the contract (precedence, top of this file); the generated checks
+are its in-addon enforcement.
+
+### 7.6 TAXONOMY_VERSION
+
+The current literal is **`"1.4"`** (`TAXONOMY_VERSION` in `js/journal/schema.js`). A bump
+mid-session does **not** rewrite existing records: each record keeps the version it was stamped
+with, and neither writer restamps `taxonomy_version` on a later write. Only newly created
+records take the new literal.
+
+### 7.7 Golden samples
+
+`reference/golden-samples/` holds the addon's regression fixtures:
+
+| File | State |
+| --- | --- |
+| `rich-tier.json` | Rich-tier record as written at open: plan fields populated, outcome fields null |
+| `zero-touch.json` | Zero-touch record at open: classification and plan null, tagged `zero-touch`. **Fails `validate()` on `setup`, `location` and `grade` until journal schema v3** (section 3, Q2) — and on nothing else |
+| `post-reconciliation.json` | The rich-tier trade after close and reconciliation: every field final |
+
+## 8. Open questions for the NT8 project
+
+Each one can change a section above. Questions answered by the NT8 review are recorded in 8.2.
+
+### 8.1 Open
 
 1. **Tick history depth on Shane's data connection — gates section 5.2.** TAXONOMY 6.3 assumes
    roughly a year of NT8 tick history as a general platform limit; the depth that actually
@@ -210,7 +303,7 @@ Each one can change a section above. Questions answered by the NT8 review are re
 5. **PWH/PWL session convention** — RTH-only today while every other level is ETH (TAXONOMY
    OPEN #6, already owned by the NT8 project). Location capture depends on the decision.
 
-### 7.2 Answered
+### 8.2 Answered
 
 3. **`decision_id` transport through the copier.** *Partly answered; propagation is an
    unverified assumption.*
@@ -242,7 +335,7 @@ Each one can change a section above. Questions answered by the NT8 review are re
 
 ---
 
-## 8. Change log
+## 9. Change log
 
 | Version | Date | Change |
 | --- | --- | --- |
@@ -250,3 +343,4 @@ Each one can change a section above. Questions answered by the NT8 review are re
 | 1.1 | 2026-10-05 | Corrections from NT8 review: `environment` from the connection (replay fills land in Sim101); `session_date` from the Trading Hours template; commissions via `Execution.Commission`; grade from the BP Draft tool; 5.2 full-trading-day `BarsRequest` clamped in code, with disposal and pre-roll contract selection; fifth prohibition (local folder only). |
 | 1.2 | 2026-10-05 | Section 7 split into Open (Q1, Q2, Q5) and Answered (Q3, Q4, Q6, Q7, Q8, Q9). Q1 marked as gating 5.2. Q3 carrier answered, copier propagation recorded as unverified. |
 | 1.3 | 2026-10-05 | `decision_id` is 12 base36 characters throughout (section 4, Q3); tag format `decision:<decision_id>`. |
+| 1.4 | 2026-10-05 | New section 7: field-level ownership between addon and journal writers, null representation, numeric formatting, tag constraints, validation decision, TAXONOMY_VERSION rule, golden samples. Open questions renumbered to 8, change log to 9. `execution_mark` is no longer written by the addon. |
