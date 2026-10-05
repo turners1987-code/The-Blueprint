@@ -9,17 +9,8 @@
 </head>
 <body>
 
-  <nav class="site-nav">
-    <div class="container container--wide">
-      <a href="index.html" class="nav-logo">The <span>Blueprint</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html#course">Modules</a></li>
-        <li><a href="glossary.html" class="active">Glossary</a></li>
-        <li><a href="index.html" class="btn btn--ghost btn--sm">← Home</a></li>
-      </ul>
-    </div>
-    <div class="nav-progress-bar"></div>
-  </nav>
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
 
   <div class="glossary-page">
     <header class="glossary-header">
@@ -170,6 +161,7 @@
     </div>
   </footer>
 
+  <script src="js/nav.js"></script>
   <script src="js/progress.js"></script>
   <script>
     // Glossary search
