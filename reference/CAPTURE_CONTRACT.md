@@ -129,7 +129,7 @@ one per account.
   `nt8/audit/<decision_id>.json`: account, fill price, size, slippage versus the leader fill in
   ticks, timestamps. Analysis never reads these files; they exist to answer "what did copying
   this decision cost across accounts."
-- The leader record carries the link in-band as the tag `decision:<id>` (tags are free-form
+- The leader record carries the link in-band as the tag `decision:<decision_id>` (tags are free-form
   strings the analysis layer never cohorts on), so the pairing survives the loss of a sidecar.
 
 ## 5. MAE/MFE: derivation and post-exit reconciliation
@@ -249,4 +249,4 @@ Each one can change a section above. Questions answered by the NT8 review are re
 | 1.0 | 2026-10-05 | Initial. File layout and id format; record semantics; rich and zero-touch tiers; copier dedup by `decision_id`; post-exit MAE/MFE reconciliation with NinjaTrader's per-trade values ruled out; hard prohibitions; nine open questions. |
 | 1.1 | 2026-10-05 | Corrections from NT8 review: `environment` from the connection (replay fills land in Sim101); `session_date` from the Trading Hours template; commissions via `Execution.Commission`; grade from the BP Draft tool; 5.2 full-trading-day `BarsRequest` clamped in code, with disposal and pre-roll contract selection; fifth prohibition (local folder only). |
 | 1.2 | 2026-10-05 | Section 7 split into Open (Q1, Q2, Q5) and Answered (Q3, Q4, Q6, Q7, Q8, Q9). Q1 marked as gating 5.2. Q3 carrier answered, copier propagation recorded as unverified. |
-| 1.3 | 2026-10-05 | `decision_id` is 12 base36 characters throughout (section 4, Q3); tag format `decision:<id>`. |
+| 1.3 | 2026-10-05 | `decision_id` is 12 base36 characters throughout (section 4, Q3); tag format `decision:<decision_id>`. |
