@@ -155,6 +155,9 @@ const NEGATIVE = {
   'confirmation not an array': { ...base, confirmation: 'big-orders' },
   'inactive location london-high': { ...base, location: 'london-high' },
   'retired setup': { ...base, setup: 'opening-range-breakout' },
+  'malformed id': { ...base, id: 'trade-1' },
+  'id without a session date': { ...base, id: 'k3f9a' },
+  'numeric id': { ...base, id: 12345 },
   'malformed taxonomy_version "1.x"': { ...base, taxonomy_version: '1.x' },
   'malformed taxonomy_version "1"': { ...base, taxonomy_version: '1' },
   'malformed taxonomy_version "v1.4"': { ...base, taxonomy_version: 'v1.4' },
@@ -196,6 +199,14 @@ for (const v of OLDER) {
 // The current version validates with no warning at all.
 for (const rec of examples) {
   if (validate(rec).warnings.length) fail(`example stamped "${rec.taxonomy_version}" produced warnings under taxonomy ${TAXONOMY_VERSION}`);
+}
+
+// A well-formed id is accepted by both checkers.
+{
+  const rec = { ...base, id: '2026-09-29-k3f9a' };
+  for (const e of validateAgainstJsonSchema(rec)) fail(`valid id rejected by JSON Schema: ${e}`);
+  const r = validate(rec);
+  if (!r.valid) fail(`valid id rejected by schema.js: ${r.errors.map(e => e.field + ' ' + e.message).join('; ')}`);
 }
 
 const blank = emptyRecord();

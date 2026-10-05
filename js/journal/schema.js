@@ -19,7 +19,8 @@
 // A new taxonomy version need not change the record shape, and a shape
 // change need not touch the vocabulary. Every record carries
 // taxonomy_version; the journal schema version belongs to this module.
-export const JOURNAL_SCHEMA_VERSION = 1;
+// v2: added the optional id field (assigned by the storage layer).
+export const JOURNAL_SCHEMA_VERSION = 2;
 
 // The TAXONOMY version in force: the single source for it in this repo.
 // New records are stamped with it. Bump it whenever reference/TAXONOMY.md
@@ -142,8 +143,13 @@ const NUMBER_FIELDS = {
   time_in_trade_seconds: 0, commissions: 0,
 };
 
+// Record id: the session date plus a short random suffix, e.g.
+// 2026-09-29-k3f9a. Sorts by date. Assigned by js/journal/storage.js on put.
+export const ID_RE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-z]{4,12}$/;
+
 const KNOWN_FIELDS = new Set([
   ...REQUIRED,
+  'id',
   'trigger', 'confirmation', 'execution_mark', 'tags',
   'exit_time', 'size', ...Object.keys(NUMBER_FIELDS),
 ]);
@@ -257,6 +263,10 @@ export function validate(record) {
     }
   }
 
+  if (!isBlank(record.id) && !(typeof record.id === 'string' && ID_RE.test(record.id))) {
+    fail('id', 'must look like YYYY-MM-DD-xxxxx (session date plus a short random suffix)');
+  }
+
   if (!isBlank(record.instrument) && (typeof record.instrument !== 'string' || record.instrument.length === 0)) {
     fail('instrument', 'must be a non-empty string');
   }
@@ -298,6 +308,7 @@ export function validate(record) {
 // logged before it closes.
 export function emptyRecord() {
   return {
+    id: null,
     taxonomy_version: TAXONOMY_VERSION,
     setup: null,
     location: null,

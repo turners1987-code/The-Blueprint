@@ -18,6 +18,11 @@
     "entry_time"
   ],
   "properties": {
+    "id": {
+      "description": "Record id: the session date plus a short random suffix (for example 2026-09-29-k3f9a), so ids sort by date. Optional on input; the storage layer assigns one on put.",
+      "type": ["string", "null"],
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-z]{4,12}$"
+    },
     "taxonomy_version": {
       "description": "TAXONOMY version the trade was tagged under, stamped at write time (section 0). Any major.minor version number: records from older taxonomy versions stay valid. Whether the version is newer than the supported one is checked by validate() in js/journal/schema.js, which a pattern cannot express.",
       "type": "string",
