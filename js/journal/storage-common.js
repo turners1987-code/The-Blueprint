@@ -82,6 +82,8 @@ export async function prepare(record, taken = async () => false) {
       delete copy.id; // validate() reports the missing session_date
     }
   }
+  // Schema v4 migration: a record from an older journal has no exit_price key.
+  if (copy.exit_price === undefined) copy.exit_price = null;
   const { valid, errors } = validate(copy);
   if (!valid) throw new ValidationError(errors);
   return copy;

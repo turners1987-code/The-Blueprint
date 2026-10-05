@@ -1,6 +1,6 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.5 · 2026-10-05
+Version 1.6 · 2026-10-05
 Status: SPEC, corrected after the NT8 project review. This is the document the NinjaTrader 8
 capture addon builds against. This repo holds the contract, not the addon; no addon code lives
 here.
@@ -43,7 +43,7 @@ check) on every emitted record in its own build.
   skips anything that is not a valid record; subfolders are invisible to it. Everything that is
   not a trade record — the JSONL intermediate, audit sidecars, local
   logs — lives under `nt8/`.
-- **Life cycle:** the file appears when the position opens (with `r_multiple`, `exit_time`,
+- **Life cycle:** the file appears when the position opens (with `r_multiple`, `exit_price`, `exit_time`,
   `execution_mark` null) and is updated in place when the position closes and again when
   reconciliation (section 5) completes. One decision, one id, one file, from open to final.
 
@@ -96,17 +96,17 @@ check) on every emitted record in its own build.
 | `grade` | as submitted (5.1) | **null** |
 | `intended_price`, `stop_price`, `target_price` | as submitted | **null** |
 | `instrument`, `direction`, `session_date`, `entry_time`, `environment`, `size`, `actual_fill` | captured | captured |
-| `exit_time`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` | post-exit | post-exit |
+| `exit_time`, `exit_price`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` | post-exit | post-exit |
 | `r_multiple` | computed (stop known) | **null** — no stop, no R; the journal computes it once the trader supplies the stop (7.1) |
 | `tags` | as submitted | carries the reserved tag `zero-touch` |
 
 - A zero-touch record is **written with the plan fields null and flagged for completion in the
   journal UI** (the `zero-touch` tag plus null plan fields is the flag; surfacing them in the UI
   is journal-side work, referenced here so the contract is complete).
-- **Schema v3 (shipped).** `setup`, `location` and `grade` are nullable in
+- **Schema v3 (shipped; current schema is v4).** `setup`, `location` and `grade` are nullable in
   `journal-schema.json` v3 (Q2), so a zero-touch record validates and the journal's folder scan
   picks it up. The keys are still always present (7.2), and `validate()` still requires all
-  three to be non-null once a **live** trade is **closed**: an unclassified zero-touch capture is
+  three to be non-null once a **live** trade is **closed** (`if`/`then` in the schema, 7.5): an unclassified zero-touch capture is
   not an error, an unclassified closed live trade is. The addon writes zero-touch records to the
   top level like any other; `nt8/pending/` is retired. A journal older than schema v3 skips
   such a file silently, so the journal must be upgraded before the addon's zero-touch tier is
@@ -203,7 +203,7 @@ edit. The rule is **field-level ownership**.
 
 | Owner | Fields |
 | --- | --- |
-| **Addon** — anything the platform observes | `id`, `taxonomy_version`, `environment`, `instrument`, `direction`, `session_date`, `entry_time`, `exit_time`, `actual_fill`, `r_multiple`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` |
+| **Addon** — anything the platform observes | `id`, `taxonomy_version`, `environment`, `instrument`, `direction`, `session_date`, `entry_time`, `exit_time`, `actual_fill`, `exit_price`, `r_multiple`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` |
 | **Journal** — anything the trader decides | `setup`, `location`, `trigger`, `confirmation`, `grade`, `execution_mark`, `tags` (and `notes`, if the schema ever gains it — see below) |
 | **Shared, addon-first** | `intended_price`, `stop_price`, `target_price`, `size` |
 
@@ -223,24 +223,22 @@ The write is still atomic (section 1).
   shared field only if the file still holds exactly that value (or null).
 - **Reserved tags.** `tags` is journal-owned with one exception: the addon sets the reserved tags
   (7.4) at creation. Neither writer ever removes them.
+- **`exit_price`** is the size-weighted average exit price, observed by the platform, so the addon
+  owns it; null while the trade is open. On a record the journal itself creates, the trader
+  enters it. Schema v4 added the field, so no sidecar is needed to carry it.
 - **`r_multiple`** is derived, and ownership follows who can compute it:
   - **Addon-owned** when, at close, the addon has both a `stop_price` (non-null in the file) and
-    the exit. It computes the value and writes `"r_multiple_source": "addon"` to
+    an `exit_price`. It computes the value and writes `"r_multiple_source": "addon"` to
     `nt8/audit/<id>.json`.
-  - **Journal-computed otherwise.** When `r_multiple` is null, the trade is closed and
-    `stop_price` is non-null — the zero-touch case, once the trader supplies the stop — the
-    journal derives it and writes `"r_multiple_source": "journal"` to the same sidecar.
-  - **Formula** (both writers): direction-signed `(average exit price − actual_fill)` divided by
-    `|actual_fill − stop_price|`, rounded per 7.3. The schema has no exit-price field, so the
-    addon records the size-weighted average exit price as `exit_price` in the audit sidecar at
-    close; the journal reads it from there. With no sidecar there is no exit price, and
-    `r_multiple` stays null.
-  - **Later writes.** A value whose source is `journal` is left alone by the addon; one whose
-    source is `addon` is re-derived only by the addon. A null stays null until one of the two
-    can compute it.
-  - **Sidecar exception.** The journal writes only the `r_multiple_source` key of the audit
-    sidecar. This is the one place the journal writes under `nt8/` (section 1 otherwise reserves
-    it for the addon; prohibition 3 in section 6 binds the addon only).
+  - **Journal-computed otherwise.** When `r_multiple` is null, `exit_time` is set and both
+    `stop_price` and `exit_price` are non-null — the zero-touch case, once the trader supplies
+    the stop — the journal derives it. The journal writes nothing under `nt8/`; a non-null
+    `r_multiple` with no `"r_multiple_source": "addon"` marker in the sidecar is, by
+    definition, not the addon's.
+  - **Formula** (both writers), read from the record: direction-signed
+    `(exit_price − actual_fill)` divided by `|actual_fill − stop_price|`, rounded per 7.3.
+  - **Later writes.** The addon re-derives `r_multiple` only when its own marker is present; it
+    leaves any other non-null value alone. A null stays null until one of the two can compute it.
 - **Lost-update guard.** A read-modify-write is not atomic across two processes. Before replacing
   the file, a writer checks that the file's last-modified time is unchanged since its read; if it
   changed, the writer re-reads and redoes the merge.
@@ -260,7 +258,7 @@ Both writers round identically, **half away from zero**:
 
 | Field | Format |
 | --- | --- |
-| `intended_price`, `actual_fill`, `stop_price`, `target_price` | rounded to the instrument's **tick size**, written with the tick's decimal places (MNQ, MES: 0.25 → 2 places; MGC: 0.10 → 1; MCL: 0.01 → 2) |
+| `intended_price`, `actual_fill`, `stop_price`, `target_price`, `exit_price` | rounded to the instrument's **tick size**, written with the tick's decimal places (MNQ, MES: 0.25 → 2 places; MGC: 0.10 → 1; MCL: 0.01 → 2) |
 | `r_multiple` | 2 decimal places |
 | `commissions` | 2 decimal places (US dollars) |
 | `time_in_trade_seconds` | integer |
@@ -283,6 +281,13 @@ fixture must produce the result recorded for it. **No external JSON Schema assem
 NinjaTrader.** The schema stays the contract (precedence, top of this file); the generated checks
 are its in-addon enforcement.
 
+**The generated checks must include the top-level `if`/`then` rule**: when `environment` is
+`"live"` and `exit_time` is a string (a closed live trade), `setup`, `location` and `grade`
+must be non-null. A generator that reads only `properties` and `required` would accept an
+unclassified closed live trade, which the journal rejects. `rich-tier.json` and
+`post-reconciliation.json` are classified; the regression set must also include a closed live
+record with a null classification field and expect it to fail.
+
 ### 7.6 TAXONOMY_VERSION
 
 The current literal is **`"1.4"`** (`TAXONOMY_VERSION` in `js/journal/schema.js`). A bump
@@ -298,7 +303,7 @@ records take the new literal.
 | --- | --- |
 | `rich-tier.json` | Rich-tier record as written at open: plan fields populated, outcome fields null |
 | `zero-touch.json` | Zero-touch record at open: classification and plan null, tagged `zero-touch`. **Passes `validate()`** under journal schema v3, because it is unclassified but not a closed live trade (section 3, Q2) |
-| `post-reconciliation.json` | The rich-tier trade after close and reconciliation: every field final |
+| `post-reconciliation.json` | The rich-tier trade after close and reconciliation: every field final, including `exit_price` |
 
 ## 8. Open questions for the NT8 project
 
@@ -362,3 +367,4 @@ Each one can change a section above. Questions answered by the NT8 review are re
 | 1.3 | 2026-10-05 | `decision_id` is 12 base36 characters throughout (section 4, Q3); tag format `decision:<decision_id>`. |
 | 1.4 | 2026-10-05 | New section 7: field-level ownership between addon and journal writers, null representation, numeric formatting, tag constraints, validation decision, TAXONOMY_VERSION rule, golden samples. Open questions renumbered to 8, change log to 9. `execution_mark` is no longer written by the addon. |
 | 1.5 | 2026-10-05 | `r_multiple` ownership follows who can compute it, with the source recorded in the audit sidecar (7.1). Journal schema v3 shipped: `setup`/`location`/`grade` nullable, required non-null on a closed live trade; `nt8/pending/` retired; Q2 answered; `zero-touch.json` now passes `validate()`. |
+| 1.6 | 2026-10-05 | Schema v4: `exit_price` (size-weighted average exit; nullable, required as a key). `r_multiple` is derived from `exit_price` in the record, not the sidecar; the journal-writes-under-`nt8/` exception is removed. The closed-live classification rule is an `if`/`then` in the schema and the addon's generated checks must carry it. Golden samples carry `exit_price`. |

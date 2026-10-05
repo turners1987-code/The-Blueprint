@@ -16,6 +16,7 @@
   "exit_time": null,
   "intended_price": 25012.50,
   "actual_fill": 25012.50,
+  "exit_price": null,
   "stop_price": 25004.50,
   "target_price": 25028.50,
   "size": 2,

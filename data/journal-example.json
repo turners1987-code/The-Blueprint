@@ -16,6 +16,7 @@
     "exit_time": "2026-09-29T10:30:00-04:00",
     "intended_price": 24816.5,
     "actual_fill": 24817.25,
+    "exit_price": 24835.75,
     "stop_price": 24808.0,
     "target_price": 24835.75,
     "size": 2,
@@ -42,6 +43,7 @@
     "exit_time": "2026-09-30T10:41:00-04:00",
     "intended_price": 24905.25,
     "actual_fill": 24905.25,
+    "exit_price": 24914.25,
     "stop_price": 24914.25,
     "target_price": 24887.25,
     "size": 3,
@@ -64,6 +66,7 @@
     "entry_time": "2026-10-02T10:07:00-04:00",
     "intended_price": 24742.0,
     "actual_fill": 24742.5,
+    "exit_price": null,
     "stop_price": 24733.5,
     "target_price": 24760.5,
     "size": 1

@@ -37,13 +37,14 @@ const examples = readJson('data/journal-example.json');
 // ── Minimal JSON Schema (2020-12) checker ─────────────────────
 // Supports: type (string or array), enum, const, required, properties,
 // additionalProperties:false, pattern, minLength, minimum, items,
-// uniqueItems. Throws on any other keyword so the checker cannot
+// uniqueItems, if/then (no else). Throws on any other keyword so the checker cannot
 // silently ignore a rule the schema starts to use.
 
 const SUPPORTED = new Set([
   '$schema', '$id', 'title', 'description', '$comment',
   'type', 'enum', 'const', 'required', 'properties', 'additionalProperties',
   'pattern', 'minLength', 'minimum', 'items', 'uniqueItems',
+  'if', 'then',
 ]);
 
 const typeOf = (v) => {
@@ -61,6 +62,14 @@ const typeMatches = (v, t) => {
 function check(value, node, where, errors) {
   for (const key of Object.keys(node)) {
     if (!SUPPORTED.has(key)) throw new Error(`validate-journal: unsupported schema keyword "${key}" at ${where}`);
+  }
+  // if/then: when the value satisfies "if", it must also satisfy "then".
+  if ('if' in node) {
+    const probe = [];
+    check(value, node.if, where, probe);
+    if (probe.length === 0 && node.then) check(value, node.then, where, errors);
+  } else if ('then' in node) {
+    throw new Error(`validate-journal: "then" without "if" at ${where}`);
   }
   if ('const' in node && value !== node.const) errors.push(`${where}: must be ${JSON.stringify(node.const)}`);
   if ('enum' in node && !node.enum.some(e => e === value)) errors.push(`${where}: not one of ${JSON.stringify(node.enum)}`);
@@ -155,6 +164,11 @@ const NEGATIVE = {
   'confirmation not an array': { ...base, confirmation: 'big-orders' },
   'inactive location london-high': { ...base, location: 'london-high' },
   'retired setup': { ...base, setup: 'opening-range-breakout' },
+  'unclassified closed live trade (setup)': { ...base, environment: 'live', setup: null },
+  'unclassified closed live trade (location)': { ...base, environment: 'live', location: null },
+  'unclassified closed live trade (grade)': { ...base, environment: 'live', grade: null },
+  'missing exit_price': without('exit_price'),
+  'exit_price a string': { ...base, exit_price: '24835.75' },
   'malformed id': { ...base, id: 'trade-1' },
   'id without a session date': { ...base, id: 'k3f9a' },
   'numeric id': { ...base, id: 12345 },
@@ -210,12 +224,17 @@ for (const rec of examples) {
   if (!r.valid) fail(`unclassified sim record rejected by schema.js: ${r.errors.map(e => e.field + ' ' + e.message).join('; ')}`);
 
   const live = { ...base, environment: 'live', setup: null, location: null, grade: null };
-  if (!validate({ ...live, exit_time: null }).valid) fail('unclassified OPEN live record must validate (zero-touch)');
+  const liveOpen = { ...live, exit_time: null, exit_price: null };
+  if (!validate(liveOpen).valid) fail('unclassified OPEN live record must validate (zero-touch)');
+  for (const e of validateAgainstJsonSchema(liveOpen)) fail(`unclassified OPEN live record rejected by JSON Schema: ${e}`);
+  if (validateAgainstJsonSchema(live).length === 0) fail('JSON Schema accepted an unclassified CLOSED live record');
   const closed = validate(live);
   for (const k of ['setup', 'location', 'grade']) {
     if (!closed.errors.some(e => e.field === k)) fail(`unclassified CLOSED live record must fail on "${k}"`);
   }
-  if (!validate({ ...live, setup: 'trend-continuation', location: 'pd-high', grade: 'A' }).valid) fail('classified closed live record must validate');
+  const classified = { ...live, setup: 'trend-continuation', location: 'pd-high', grade: 'A' };
+  if (!validate(classified).valid) fail('classified closed live record must validate');
+  for (const e of validateAgainstJsonSchema(classified)) fail(`classified closed live record rejected by JSON Schema: ${e}`);
 }
 
 // A well-formed id is accepted by both checkers.

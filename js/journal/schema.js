@@ -28,7 +28,13 @@
 //     is accepted, so every v1 and v2 record is a valid v3 record unchanged,
 //     and no stored record is rewritten. A v3 export imported into a v2
 //     journal is rejected there if it contains an unclassified record.
-export const JOURNAL_SCHEMA_VERSION = 3;
+// v4: added exit_price, the size-weighted average exit in price points. Nullable
+//     but required as a key. A closed trade without one is incomplete, and the
+//     R derivation needs it. Migration: a record without the key is read as
+//     exit_price null (storage-common prepare() adds it before validating), so
+//     v1-v3 records and exports import unchanged. Stored records are not
+//     rewritten until they are next saved.
+export const JOURNAL_SCHEMA_VERSION = 4;
 
 // The TAXONOMY version in force: the single source for it in this repo.
 // New records are stamped with it. Bump it whenever reference/TAXONOMY.md
@@ -37,7 +43,7 @@ export const JOURNAL_SCHEMA_VERSION = 3;
 export const TAXONOMY_VERSION = '1.4';
 
 // ── Units of every numeric field ──────────────────────────────
-//   intended_price, actual_fill, stop_price, target_price
+//   intended_price, actual_fill, stop_price, target_price, exit_price
 //                         price points of the instrument (for MNQ one
 //                         tick = 0.25 points)
 //   size                  whole contracts
@@ -151,6 +157,7 @@ const CLASSIFICATION = ['setup', 'location', 'grade'];
 const NUMBER_FIELDS = {
   // field: minimum (null = unbounded)
   intended_price: null, actual_fill: null, stop_price: null, target_price: null,
+  exit_price: null,
   r_multiple: null, mae_ticks: 0, mfe_ticks: 0,
   time_in_trade_seconds: 0, commissions: 0,
 };
@@ -213,6 +220,9 @@ export function validate(record) {
   for (const key of Object.keys(record)) {
     if (!KNOWN_FIELDS.has(key)) fail(key, 'unknown field');
   }
+
+  // v4: exit_price is nullable but the key must be present.
+  if (record.exit_price === undefined) fail('exit_price', 'is required');
 
   for (const key of REQUIRED) {
     if (CLASSIFICATION.includes(key)) {
@@ -348,6 +358,7 @@ export function emptyRecord() {
     exit_time: null,
     intended_price: null,
     actual_fill: null,
+    exit_price: null,
     stop_price: null,
     target_price: null,
     size: null,

@@ -163,6 +163,7 @@ function readForm() {
   rec.stop_price = num($('f-stop-price').value);
   rec.target_price = num($('f-target-price').value);
   rec.size = num($('f-size').value);
+  rec.exit_price = num($('f-exit-price').value);
   rec.r_multiple = num($('f-r-multiple').value);
   rec.mae_ticks = num($('f-mae-ticks').value);
   rec.mfe_ticks = num($('f-mfe-ticks').value);
@@ -200,6 +201,7 @@ function fillForm(rec) {
   $('f-stop-price').value = rec.stop_price ?? '';
   $('f-target-price').value = rec.target_price ?? '';
   $('f-size').value = rec.size ?? '';
+  $('f-exit-price').value = rec.exit_price ?? '';
   $('f-r-multiple').value = rec.r_multiple ?? '';
   $('f-mae-ticks').value = rec.mae_ticks ?? '';
   $('f-mfe-ticks').value = rec.mfe_ticks ?? '';
@@ -374,7 +376,18 @@ function wireForm() {
     clearErrors();
     message('');
     const rec = readForm();
-    const { valid, errors, warnings } = validate(rec);
+    const result = validate(rec);
+    const { warnings } = result;
+    // A person filling this form always classifies, whatever the environment.
+    // Null classification is for addon-written zero-touch captures only, so
+    // schema.js tolerates it and the form does not.
+    const errors = [...result.errors];
+    for (const [field, what] of [['setup', 'a setup'], ['location', 'a location'], ['grade', 'a grade']]) {
+      if (rec[field] === null && !errors.some((e) => e.field === field)) {
+        errors.push({ field, message: `Choose ${what}.` });
+      }
+    }
+    const valid = errors.length === 0;
     const elsewhere = showErrors(errors);
     if (warnings.length) {
       message(warnings.map((w) => `${w.field}: ${w.message}`).join(' · '), 'cyan');
