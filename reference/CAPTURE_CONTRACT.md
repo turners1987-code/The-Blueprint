@@ -1,6 +1,6 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.1 · 2026-10-05
+Version 1.2 · 2026-10-05
 Status: SPEC, corrected after the NT8 project review. This is the document the NinjaTrader 8
 capture addon builds against. This repo holds the contract, not the addon; no addon code lives
 here.
@@ -192,32 +192,53 @@ not as a value, not as a fallback, not as a tiebreaker.
 
 ## 7. Open questions for the NT8 project
 
-Listed explicitly; each one can change a section above.
+Each one can change a section above. Questions answered by the NT8 review are recorded in 7.2.
 
-1. **Tick history depth on Shane's data connection.** TAXONOMY 6.3 assumes roughly a year of NT8
-   tick history as a general platform limit; the depth that actually resolves on Shane's
-   connection, per instrument, is unverified. It bounds how far back reconciliation (5.2) can
-   run and whether historical records can be re-derived at all.
+### 7.1 Open
+
+1. **Tick history depth on Shane's data connection — gates section 5.2.** TAXONOMY 6.3 assumes
+   roughly a year of NT8 tick history as a general platform limit; the depth that actually
+   resolves on Shane's connection, per instrument, is unverified. It bounds how far back
+   reconciliation (5.2) can run and whether historical records can be re-derived at all. This
+   needs **measuring on Shane's data connection, not documenting**: request ticks at increasing
+   look-back per instrument and record where the request stops returning data. Until that is
+   done, 5.2 is a design, not a guarantee.
 2. **Journal schema v3 sequencing.** Making `setup`/`location`/`grade` nullable so zero-touch
    records validate (section 3). The journal side ships first; the addon's zero-touch write
    stays parked in `nt8/pending/` until it does.
-3. **`decision_id` transport through the copier.** Which copier product is in use, and does it
-   propagate a custom stamp (order tag) from leader to follower orders? If not, what mapping
-   API exposes the leader↔follower relationship?
-4. **Leader account identification.** Configured account name, or detected? What happens to a
-   decision whose leader fill never appears (rejected leader order, filled followers)?
 5. **PWH/PWL session convention** — RTH-only today while every other level is ETH (TAXONOMY
    OPEN #6, already owned by the NT8 project). Location capture depends on the decision.
-6. **`session_date` convention confirmation.** The next-session-date rule for ETH fills between
-   18:00 and 24:00 ET (section 2) is proposed, not ratified.
-7. **Commission data availability.** Is per-execution commission exposed on Shane's broker
-   connection in a way the addon can sum? If not, `commissions` stays null and Gate 2 rows will
-   not declare themselves met (by design, TAXONOMY 6.2).
-8. **Market Replay captures.** The schema has an `environment: replay` value; decide whether
-   the addon captures replay fills at all, given the 90-day replay window.
-9. **Grade capture UX in the order-entry tool.** The 5.1 rubric's four checks: prompted,
-   computed, or both? "Stop behind structure" is a judgment — who holds it, the tool or the
-   trader?
+
+### 7.2 Answered
+
+3. **`decision_id` transport through the copier.** *Partly answered; propagation is an
+   unverified assumption.*
+   - **Carrier (answered):** `Execution.Name` is documented as the order's name, settable at
+     submission; `Account.CreateOrder` takes a name parameter. The addon stamps `decision_id`
+     there.
+   - **Id length (answered):** a UUID v4 may exceed whatever length the field tolerates, so the
+     `decision_id` is a **shorter id**, not a UUID v4. This supersedes the UUID wording in
+     section 4.
+   - **Propagation (UNVERIFIED):** whether Replikanto carries the name through to follower fills
+     is unknown and cannot be settled from documentation. It needs one Sim trade with a tagged
+     name, then reading `Execution.Name` on a follower fill. Until that test is run, copier
+     dedup by `decision_id` (section 4) rests on an assumption.
+4. **Leader account identification.** **Configured explicitly by name. Never detected.** A
+   decision whose leader fill never appears writes **no top-level record at all** — follower
+   fills are audit material by definition — and the orphan is noted in the audit sidecar.
+6. **`session_date` convention.** Derived from the instrument's Trading Hours template — its
+   session boundaries and trading-day convention — never from a hardcoded rule. A fill in the
+   overnight portion of the template's session carries that session's date (section 2).
+7. **Commission data availability.** Summed from `Execution.Commission` per execution. It
+   requires a Commission template configured on the account; without one it comes back empty,
+   `commissions` stays null, and Gate 2 rows will not declare themselves met (by design,
+   TAXONOMY 6.2) (section 2).
+8. **Market Replay captures.** `BarsRequest` in Playback yields bars only up to the current
+   playback position, so reconciliation inside replay works only for a trade already behind the
+   slider. Replay fills **are captured**, marked `environment: replay`, and **excluded from
+   expectancy** — they are practice reps, not evidence.
+9. **Grade capture.** The grade comes from which BP Draft tool was used; the tool carries its
+   rubric context at submission (section 2).
 
 ---
 
@@ -227,3 +248,4 @@ Listed explicitly; each one can change a section above.
 | --- | --- | --- |
 | 1.0 | 2026-10-05 | Initial. File layout and id format; record semantics; rich and zero-touch tiers; copier dedup by `decision_id`; post-exit MAE/MFE reconciliation with NinjaTrader's per-trade values ruled out; hard prohibitions; nine open questions. |
 | 1.1 | 2026-10-05 | Corrections from NT8 review: `environment` from the connection (replay fills land in Sim101); `session_date` from the Trading Hours template; commissions via `Execution.Commission`; grade from the BP Draft tool; 5.2 full-trading-day `BarsRequest` clamped in code, with disposal and pre-roll contract selection; fifth prohibition (local folder only). |
+| 1.2 | 2026-10-05 | Section 7 split into Open (Q1, Q2, Q5) and Answered (Q3, Q4, Q6, Q7, Q8, Q9). Q1 marked as gating 5.2. Q3 carrier answered, copier propagation recorded as unverified. |
