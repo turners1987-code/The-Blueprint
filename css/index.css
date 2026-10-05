@@ -609,6 +609,11 @@
   border-right: 0;
 }
 
+/* Planned rows have no Grade cell; keep the arrow cell in the last column */
+.module-row--planned .module-arrow {
+  grid-column: -2 / -1;
+}
+
 .module-num {
   font-family: var(--font-mono);
   color: var(--cyan);

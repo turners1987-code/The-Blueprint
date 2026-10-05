@@ -1,0 +1,192 @@
+[
+  {
+    "id": "00-welcome",
+    "number": "00",
+    "title": "Welcome & Orientation",
+    "slug": "welcome",
+    "part": "foundation",
+    "summary": "Start here. How to use the system.",
+    "status": "published",
+    "prereq": []
+  },
+  {
+    "id": "01-market-foundation",
+    "number": "01",
+    "title": "The Market Foundation",
+    "slug": "market-foundation",
+    "part": "foundation",
+    "summary": "What markets are and why futures matter.",
+    "status": "planned",
+    "prereq": ["00-welcome"]
+  },
+  {
+    "id": "02-reading-charts",
+    "number": "02",
+    "title": "Reading the Chart",
+    "slug": "reading-charts",
+    "part": "foundation",
+    "summary": "Candles, timeframes, chart behavior.",
+    "status": "planned",
+    "prereq": ["01-market-foundation"]
+  },
+  {
+    "id": "03-market-concepts",
+    "number": "03",
+    "title": "Market Concepts",
+    "slug": "market-concepts",
+    "part": "foundation",
+    "summary": "Trend, range, levels, bullish and bearish.",
+    "status": "planned",
+    "prereq": ["02-reading-charts"]
+  },
+  {
+    "id": "04-tools-of-the-trade",
+    "number": "04",
+    "title": "Tools of the Trade",
+    "slug": "tools-of-the-trade",
+    "part": "foundation",
+    "summary": "EMA, VWAP, volume, key levels.",
+    "status": "planned",
+    "prereq": ["03-market-concepts"]
+  },
+  {
+    "id": "05-order-types",
+    "number": "05",
+    "title": "Order Types & Execution",
+    "slug": "order-types",
+    "part": "foundation",
+    "summary": "Entries, exits, stops, limits, triggers.",
+    "status": "planned",
+    "prereq": ["04-tools-of-the-trade"]
+  },
+  {
+    "id": "06-risk-and-psychology",
+    "number": "06",
+    "title": "Risk & Psychology Foundation",
+    "slug": "risk-and-psychology",
+    "part": "foundation",
+    "summary": "R, max loss, discipline, behavior.",
+    "status": "planned",
+    "prereq": ["05-order-types"]
+  },
+  {
+    "id": "07-playbook-intro",
+    "number": "07",
+    "title": "The PlayBook Introduction",
+    "slug": "playbook-intro",
+    "part": "foundation",
+    "summary": "What a setup is and how it is graded.",
+    "status": "planned",
+    "prereq": ["06-risk-and-psychology"]
+  },
+  {
+    "id": "08-range-rejection",
+    "number": "08",
+    "title": "Range Rejection",
+    "slug": "range-rejection",
+    "part": "setups",
+    "summary": "Fade the push. Read the rejection.",
+    "status": "planned",
+    "prereq": ["07-playbook-intro"]
+  },
+  {
+    "id": "09-failed-breakdown",
+    "number": "09",
+    "title": "Failed Breakdown",
+    "slug": "failed-breakdown",
+    "part": "setups",
+    "summary": "Reclaim failure and reversal logic.",
+    "status": "planned",
+    "prereq": ["08-range-rejection"]
+  },
+  {
+    "id": "10-pause-n-go",
+    "number": "10",
+    "title": "Pause N Go",
+    "slug": "pause-n-go",
+    "part": "setups",
+    "summary": "Trend continuation after controlled pause.",
+    "status": "planned",
+    "prereq": ["09-failed-breakdown"]
+  },
+  {
+    "id": "11-gap-n-go",
+    "number": "11",
+    "title": "Gap N Go / Opening Drive",
+    "slug": "gap-n-go",
+    "part": "setups",
+    "summary": "Opening strength and continuation.",
+    "status": "planned",
+    "prereq": ["10-pause-n-go"]
+  },
+  {
+    "id": "12-gap-fill",
+    "number": "12",
+    "title": "Gap Fill",
+    "slug": "gap-fill",
+    "part": "setups",
+    "summary": "Counter-trend movement back to prior close.",
+    "status": "planned",
+    "prereq": ["11-gap-n-go"]
+  },
+  {
+    "id": "13-orb",
+    "number": "13",
+    "title": "Opening Range Breakout",
+    "slug": "orb",
+    "part": "setups",
+    "summary": "Structured directional breakout logic.",
+    "status": "planned",
+    "prereq": ["12-gap-fill"]
+  },
+  {
+    "id": "14-second-chance",
+    "number": "14",
+    "title": "Second Chance Entry",
+    "slug": "second-chance",
+    "part": "setups",
+    "summary": "Re-entry when the first trigger is missed.",
+    "status": "planned",
+    "prereq": ["13-orb"]
+  },
+  {
+    "id": "15-routines",
+    "number": "15",
+    "title": "The Daily Routines",
+    "slug": "routines",
+    "part": "routines",
+    "summary": "Pre-market, end-of-day, weekly review.",
+    "status": "planned",
+    "prereq": ["14-second-chance"]
+  },
+  {
+    "id": "16-journaling",
+    "number": "16",
+    "title": "Journaling & Review",
+    "slug": "journaling",
+    "part": "routines",
+    "summary": "Track behavior, process, and outcomes.",
+    "status": "planned",
+    "prereq": ["15-routines"]
+  },
+  {
+    "id": "17-putting-it-together",
+    "number": "17",
+    "title": "Putting It All Together",
+    "slug": "putting-it-together",
+    "part": "routines",
+    "summary": "A full trading day walkthrough.",
+    "status": "planned",
+    "prereq": ["16-journaling"]
+  },
+  {
+    "id": "18-beyond-mnq",
+    "number": "18",
+    "title": "Trading Beyond MNQ",
+    "slug": "beyond-mnq",
+    "part": "beyond",
+    "summary": "Apply the framework across markets.",
+    "status": "planned",
+    "prereq": ["17-putting-it-together"]
+  }
+]

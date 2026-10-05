@@ -1,33 +1,27 @@
 /* ============================================================
    THE BLUEPRINT — Progress Tracking System
+   Module list lives in data/modules.json (single source of truth).
    Uses localStorage — no login, no backend required
    ============================================================ */
 
 const STORAGE_KEY = 'blueprint_progress';
 
-const MODULES = [
-  { id: '00-welcome',            title: 'Welcome',               path: 'modules/00-welcome.html' },
-  { id: '01-market-foundation',  title: 'Market Foundation',     path: 'modules/01-market-foundation.html' },
-  { id: '02-reading-charts',     title: 'Reading Charts',        path: 'modules/02-reading-charts.html' },
-  { id: '03-market-concepts',    title: 'Market Concepts',       path: 'modules/03-market-concepts.html' },
-  { id: '04-tools-of-the-trade', title: 'Tools of the Trade',   path: 'modules/04-tools-of-the-trade.html' },
-  { id: '05-order-types',        title: 'Order Types',           path: 'modules/05-order-types.html' },
-  { id: '06-risk-and-psychology','title': 'Risk & Psychology',   path: 'modules/06-risk-and-psychology.html' },
-  { id: '07-playbook-intro',     title: 'PlayBook Intro',        path: 'modules/07-playbook-intro.html' },
-  { id: '08-range-rejection',    title: 'Range Rejection',       path: 'modules/08-range-rejection.html' },
-  { id: '09-failed-breakdown',   title: 'Failed Breakdown',      path: 'modules/09-failed-breakdown.html' },
-  { id: '10-pause-n-go',         title: 'Pause N Go',            path: 'modules/10-pause-n-go.html' },
-  { id: '11-gap-n-go',           title: 'Gap N Go',              path: 'modules/11-gap-n-go.html' },
-  { id: '12-gap-fill',           title: 'Gap Fill',              path: 'modules/12-gap-fill.html' },
-  { id: '13-orb',                title: 'Opening Range Breakout',path: 'modules/13-orb.html' },
-  { id: '14-second-chance',      title: 'Second Chance Entry',   path: 'modules/14-second-chance.html' },
-  { id: '15-routines',           title: 'The Routines',          path: 'modules/15-routines.html' },
-  { id: '16-journaling',         title: 'Journaling',            path: 'modules/16-journaling.html' },
-  { id: '17-putting-it-together','title':'Putting It Together',  path: 'modules/17-putting-it-together.html' },
-  { id: '18-beyond-mnq',         title: 'Beyond MNQ',            path: 'modules/18-beyond-mnq.html' },
-];
+let MODULES = [];
+
+// Resolve data/modules.json relative to this script so it works
+// from both the repo root and pages inside modules/.
+const DATA_URL = (document.currentScript && document.currentScript.src)
+  ? new URL('../data/modules.json', document.currentScript.src).href
+  : (window.location.pathname.includes('/modules/') ? '../data/modules.json' : 'data/modules.json');
+
+const modulePath = (m) => `modules/${m.number}-${m.slug}.html`;
 
 const Progress = {
+  // Resolves with the module list once data/modules.json is loaded.
+  ready: fetch(DATA_URL)
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then(list => { MODULES = list; return list; }),
+
   // Load saved progress from localStorage
   load() {
     try {
@@ -56,26 +50,34 @@ const Progress = {
     return this.load().completed.includes(moduleId);
   },
 
-  // Get overall completion percentage
+  // Overall completion percentage — calculated against
+  // PUBLISHED modules only. Planned modules don't count.
   getPercent() {
     const data = this.load();
-    return Math.round((data.completed.length / MODULES.length) * 100);
+    const published = MODULES.filter(m => m.status === 'published');
+    if (!published.length) return 0;
+    const done = published.filter(m => data.completed.includes(m.id));
+    return Math.round((done.length / published.length) * 100);
   },
 
-  // Get the next incomplete module
+  // Get the next incomplete published module
   getNextModule() {
     const data = this.load();
-    return MODULES.find(m => !data.completed.includes(m.id)) || MODULES[MODULES.length - 1];
+    const published = MODULES.filter(m => m.status === 'published');
+    return published.find(m => !data.completed.includes(m.id))
+      || published[published.length - 1]
+      || MODULES[0];
   },
 
   // Get continue/start button text and link
   getContinueInfo() {
     const data = this.load();
-    if (data.completed.length === 0) {
-      return { text: 'Start The Course', path: MODULES[0].path };
+    const first = MODULES.find(m => m.status === 'published') || MODULES[0];
+    if (data.completed.length === 0 || !first) {
+      return { text: 'Start The Course', path: first ? modulePath(first) : 'modules/00-welcome.html' };
     }
     const next = this.getNextModule();
-    return { text: 'Continue Learning', path: next.path };
+    return { text: 'Continue Learning', path: next ? modulePath(next) : 'index.html' };
   },
 
   // Update all UI elements that reflect progress
@@ -107,11 +109,7 @@ const Progress = {
   }
 };
 
-// Auto-update UI on page load
-document.addEventListener('DOMContentLoaded', () => {
-  Progress.updateUI();
-
-  // Update continue button on landing page
+const updateContinueBtn = () => {
   const continueBtn = document.getElementById('continue-btn');
   if (continueBtn) {
     const info = Progress.getContinueInfo();
@@ -121,6 +119,17 @@ document.addEventListener('DOMContentLoaded', () => {
     continueBtn.textContent = info.text;
     continueBtn.href = prefix + info.path;
   }
+};
+
+// Re-sync the UI once the module list has loaded
+Progress.ready
+  .then(() => { Progress.updateUI(); updateContinueBtn(); })
+  .catch(() => console.warn('Blueprint: data/modules.json could not be loaded.'));
+
+// Auto-update UI on page load
+document.addEventListener('DOMContentLoaded', () => {
+  Progress.updateUI();
+  updateContinueBtn();
 
   // Interactive checklists
   document.querySelectorAll('.checklist li').forEach(item => {
