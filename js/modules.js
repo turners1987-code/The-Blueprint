@@ -18,7 +18,10 @@ if (table) {
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
   const row = (m) => {
-    const published = m.status === 'published';
+    // Published and drafting modules both have a page and link to it;
+    // drafting ones carry a "Being revised" marker. Only planned ones don't.
+    const drafting = m.status === 'drafting';
+    const published = m.status === 'published' || drafting;
     const head = `
           <div class="module-cell module-num">${escapeHtml(m.number)}</div>
           <div class="module-cell">
@@ -28,10 +31,10 @@ if (table) {
 
     if (published) {
       const done = Progress.isComplete(m.id);
-      return `<a href="modules/${m.number}-${m.slug}.html" class="module-row${done ? ' completed' : ''}" data-module-id="${escapeHtml(m.id)}">${head}
+      return `<a href="modules/${m.number}-${m.slug}.html" class="module-row${done ? ' completed' : ''}${drafting ? ' module-row--drafting' : ''}" data-module-id="${escapeHtml(m.id)}">${head}
           <div class="module-cell module-status">
             <div class="module-status-label">Status</div>
-            <div class="module-status-value">Published</div>
+            <div class="module-status-value">${drafting ? 'Being revised' : 'Published'}</div>
           </div>
           <div class="module-cell module-grade">
             <div class="module-grade-label">Grade</div>
