@@ -6,16 +6,19 @@
 
    Usage:
      1. Put <div id="nav-root"></div> where the nav belongs.
-     2. Load this script before main.js:
-          root pages:   <script src="js/nav.js"></script>
-          modules/ pages: <script src="../js/nav.js"></script>
+     2. Load this script as a module (order relative to other
+        scripts does not matter):
+          root pages:   <script type="module" src="js/nav.js"></script>
+          modules/ pages: <script type="module" src="../js/nav.js"></script>
 
    The mobile menu is injected as a SIBLING of <nav>, never a
    child of it — nesting it inside <nav> creates a stacking
    context that breaks position:fixed in Safari.
    ============================================================ */
 
-(function () {
+import { Progress } from './progress.js';
+
+function initNav() {
   const root = document.getElementById('nav-root');
   if (!root) return;
 
@@ -101,11 +104,8 @@
     document.body.style.overflow = '';
   };
 
-  // nav.js owns the hamburger. stopImmediatePropagation() keeps
-  // main.js's legacy toggle (it binds to these same IDs on
-  // DOMContentLoaded) from double-firing on this click.
-  toggle.addEventListener('click', (e) => {
-    e.stopImmediatePropagation();
+  // nav.js owns the hamburger.
+  toggle.addEventListener('click', () => {
     isOpen() ? closeMenu() : openMenu();
   });
 
@@ -125,4 +125,13 @@
   // Close when a menu link is picked, so navigation never leaves
   // the page with a locked body (bfcache restores it on Back)
   menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-})();
+
+  // The progress bar and Continue button now exist; sync them in case
+  // progress.js finished its own pass before the nav was injected.
+  Progress.updateUI();
+  Progress.updateContinueBtn();
+}
+
+// Module scripts are deferred, so the DOM is normally parsed already.
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNav);
+else initNav();

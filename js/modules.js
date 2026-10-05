@@ -8,9 +8,10 @@
    "Coming soon" — no link to an empty page.
    ============================================================ */
 
-(function () {
-  const table = document.getElementById('module-table');
-  if (!table) return;
+import { Progress } from './progress.js';
+
+const table = document.getElementById('module-table');
+if (table) {
 
   const escapeHtml = (s) => String(s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -26,7 +27,7 @@
           </div>`;
 
     if (published) {
-      const done = typeof Progress !== 'undefined' && Progress.isComplete(m.id);
+      const done = Progress.isComplete(m.id);
       return `<a href="modules/${m.number}-${m.slug}.html" class="module-row${done ? ' completed' : ''}" data-module-id="${escapeHtml(m.id)}">${head}
           <div class="module-cell module-status">
             <div class="module-status-label">Status</div>
@@ -47,8 +48,6 @@
           </div>`;
   };
 
-  if (typeof Progress === 'undefined') return;
-
   Progress.ready
     .then((modules) => {
       table.innerHTML = modules.map(row).join('\n            ');
@@ -57,4 +56,4 @@
     .catch(() => {
       table.innerHTML = '<div class="module-cell">Module list unavailable.</div>';
     });
-})();
+}

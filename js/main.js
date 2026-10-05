@@ -2,14 +2,9 @@
    THE BLUEPRINT — Main JS Utilities
    ============================================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
+import { Progress } from './progress.js';
 
-  // ── Mobile nav toggle ──────────────────────────────────────
-  const navToggle = document.getElementById('nav-hamburger');
-const navMenu   = document.getElementById('nav-mobile-menu');
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
-  }
+const init = () => {
 
   // ── Quiz logic ─────────────────────────────────────────────
   document.querySelectorAll('.quiz-block').forEach(quiz => {
@@ -76,7 +71,11 @@ const navMenu   = document.getElementById('nav-mobile-menu');
     });
   });
 
-});
+};
+
+// Module scripts are deferred, so the DOM is normally parsed already.
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+else init();
 
 // ── Scroll reveal CSS (added dynamically) ─────────────────────
 const style = document.createElement('style');

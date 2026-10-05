@@ -19,11 +19,9 @@ const MIGRATIONS = {};
 
 let MODULES = [];
 
-// Resolve data/modules.json relative to this script so it works
+// Resolve data/modules.json relative to this module so it works
 // from both the repo root and pages inside modules/.
-const DATA_URL = (document.currentScript && document.currentScript.src)
-  ? new URL('../data/modules.json', document.currentScript.src).href
-  : (window.location.pathname.includes('/modules/') ? '../data/modules.json' : 'data/modules.json');
+const DATA_URL = new URL('../data/modules.json', import.meta.url).href;
 
 const modulePath = (m) => `modules/${m.number}-${m.slug}.html`;
 
@@ -44,7 +42,7 @@ const migrate = (raw, from) => {
   return { version: SCHEMA_VERSION, completed, lastVisited };
 };
 
-const Progress = {
+export const Progress = {
   // Resolves with the module list once data/modules.json is loaded.
   ready: fetch(DATA_URL)
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
@@ -170,6 +168,18 @@ const Progress = {
     });
   },
 
+  // Point #continue-btn (if present) at the right module. Safe to call
+  // before the module list has loaded; it re-runs when it arrives.
+  updateContinueBtn() {
+    const continueBtn = document.getElementById('continue-btn');
+    if (!continueBtn) return;
+    const info = this.getContinueInfo();
+    // Determine correct path prefix based on current page location
+    const prefix = window.location.pathname.includes('/modules/') ? '../' : '';
+    continueBtn.textContent = info.text;
+    continueBtn.href = prefix + info.path;
+  },
+
   // Reset all progress (for testing)
   reset() {
     localStorage.removeItem(STORAGE_KEY);
@@ -177,27 +187,16 @@ const Progress = {
   }
 };
 
-const updateContinueBtn = () => {
-  const continueBtn = document.getElementById('continue-btn');
-  if (continueBtn) {
-    const info = Progress.getContinueInfo();
-    // Determine correct path prefix based on current page location
-    const isInModules = window.location.pathname.includes('/modules/');
-    const prefix = isInModules ? '../' : '';
-    continueBtn.textContent = info.text;
-    continueBtn.href = prefix + info.path;
-  }
-};
-
 // Re-sync the UI once the module list has loaded
 Progress.ready
-  .then(() => { Progress.updateUI(); updateContinueBtn(); })
+  .then(() => { Progress.updateUI(); Progress.updateContinueBtn(); })
   .catch(() => console.warn('Blueprint: data/modules.json could not be loaded.'));
 
-// Auto-update UI on page load
-document.addEventListener('DOMContentLoaded', () => {
+// Auto-update UI on page load. Module scripts are deferred, so the DOM
+// is normally parsed already; handle both cases.
+const onReady = () => {
   Progress.updateUI();
-  updateContinueBtn();
+  Progress.updateContinueBtn();
 
   // Interactive checklists
   document.querySelectorAll('.checklist li').forEach(item => {
@@ -205,4 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('checked');
     });
   });
-});
+};
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', onReady);
+else onReady();
