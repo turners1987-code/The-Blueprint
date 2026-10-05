@@ -135,7 +135,7 @@ const REQUIRED = [
 const NUMBER_FIELDS = {
   // field: minimum (null = unbounded)
   intended_price: null, actual_fill: null, stop_price: null, target_price: null,
-  r_multiple: null, mae_ticks: null, mfe_ticks: null,
+  r_multiple: null, mae_ticks: 0, mfe_ticks: 0,
   time_in_trade_seconds: 0, commissions: 0,
 };
 
