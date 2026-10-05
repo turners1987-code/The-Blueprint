@@ -261,6 +261,41 @@ test('operations before init() fail with not-ready', async () => {
   await rejects(() => store.list(), e => assert.equal(e.code, 'not-ready'));
 });
 
+test('meta: settings merge, survive a re-init, and are never records', async () => {
+  const { store, shim } = await fresh();
+  assert.deepEqual(await store.getMeta(), {});
+  await store.setMeta({ lastExport: '2026-10-05T12:00:00.000Z' });
+  await store.setMeta({ note: 'backup drive' });
+  assert.deepEqual(await store.getMeta(), { lastExport: '2026-10-05T12:00:00.000Z', note: 'backup drive' });
+  assert.deepEqual((await store.list()).length, 0, 'a setting is not a trade');
+  assert.equal((await store.stats()).count, 0, 'a setting is not counted');
+  const again = createLocalStorageAdapter({ storage: shim });
+  assert.equal((await again.init()).ok, true);
+  assert.equal((await again.getMeta()).lastExport, '2026-10-05T12:00:00.000Z');
+});
+
+test('meta: a damaged value reads as empty and can be replaced', async () => {
+  const { store, shim } = await fresh();
+  shim.setItem('blueprint_journal:meta', '{ not json');
+  assert.deepEqual(await store.getMeta(), {});
+  assert.deepEqual(await store.setMeta({ lastExport: 'x' }), { lastExport: 'x' });
+  assert.deepEqual(JSON.parse(shim.getItem('blueprint_journal:meta')), { lastExport: 'x' });
+});
+
+test('importAll keeps settings: they are not records', async () => {
+  const { store } = await fresh();
+  await store.put(winner);
+  await store.setMeta({ lastExport: '2026-10-05T12:00:00.000Z' });
+  await store.importAll(await store.exportAll());
+  assert.equal((await store.getMeta()).lastExport, '2026-10-05T12:00:00.000Z');
+});
+
+test('setMeta rejects a non-object', async () => {
+  const { store } = await fresh();
+  await rejects(() => store.setMeta('nope'), e => assert.equal(e.code, 'bad-argument'));
+  await rejects(() => store.setMeta(['nope']), e => assert.equal(e.code, 'bad-argument'));
+});
+
 test('storage.js picks localStorage without a stored folder, and exposes switching', async () => {
   globalThis.localStorage = makeShim();
   const api = await import('../js/journal/storage.js');
@@ -278,6 +313,10 @@ test('storage.js picks localStorage without a stored folder, and exposes switchi
   assert.equal(fsTry.code, 'unsupported');
   assert.equal(api.backend(), 'local', 'a failed switch leaves the current backend selected');
   assert.equal((await api.useLocal()).backend, 'local');
+  // UI settings ride behind the same facade, whatever the backend.
+  assert.deepEqual(await api.getMeta(), {});
+  await api.setMeta({ lastExport: '2026-10-05T12:00:00.000Z' });
+  assert.equal((await api.getMeta()).lastExport, '2026-10-05T12:00:00.000Z');
 });
 
 // ── Run ───────────────────────────────────────────────────────

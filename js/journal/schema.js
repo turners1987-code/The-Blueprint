@@ -122,10 +122,10 @@ export const ENVIRONMENTS = [
 ];
 
 // Section 5.2. Exit-plan compliance, separate from grade.
-const EXECUTION_MARKS = ['Pass', 'Fail'];
+export const EXECUTION_MARKS = ['Pass', 'Fail'];
 
 // TAXONOMY lists no direction values; long and short.
-const DIRECTIONS = ['long', 'short'];
+export const DIRECTIONS = ['long', 'short'];
 
 const slugs = (list) => list.map(e => e.slug);
 

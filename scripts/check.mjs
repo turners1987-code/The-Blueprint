@@ -32,6 +32,13 @@
         "n …"), or "sessions"/"trades" with a number — within its
         own subtree. Sibling elements don't count. No statistic
         publishes without its n.
+    10. (js/journal + the journal pages) The journal UI reaches
+        storage ONLY through js/journal/storage.js, awaited. A UI
+        file may import just schema.js, analysis.js and storage.js
+        from js/journal — never a storage implementation (storage-
+        local.js, storage-fs.js) — and must not touch a browser
+        store itself. This is what makes a future hosted backend a
+        drop-in.
 
    Exit code 1 on any error, 0 otherwise.
    ============================================================ */
@@ -296,6 +303,84 @@ for (const dir of ['css', 'js']) {
       totalWarnings++;
     }
   }
+}
+
+console.log('────────────────────────────────────────');
+
+// ── Check 10: the journal UI reaches storage only via storage.js ──
+// The UI layer is every js/journal/*.js that is not part of the
+// storage layer itself, plus the two journal pages. Rules:
+//   a. no import of a storage implementation (storage-local.js /
+//      storage-fs.js), and relative .js imports are limited to
+//      schema.js, analysis.js and storage.js;
+//   b. no direct reach for a browser store, by word or API;
+//   c. every call on the storage facade is awaited on the same line
+//      (a sync-looking call today would break under an async,
+//      hosted backend tomorrow).
+// Comments are stripped first, so wording cannot trip a rule and
+// code cannot hide behind a comment.
+const JOURNAL_JS = path.join(ROOT, 'js', 'journal');
+const STORAGE_LAYER = new Set(['storage.js', 'storage-local.js', 'storage-fs.js', 'storage-common.js']);
+const UI_ALLOWED_IMPORTS = new Set(['schema.js', 'analysis.js', 'storage.js']);
+const BROWSER_STORE_API = /\b(localStorage|indexedDB|showDirectoryPicker)\b/;
+const FACADE_CALL = /\bstorage\.[A-Za-z_$][\w$]*\s*\(/;
+const DIRECT_BACKEND_REF = /['"][^'"]*storage-(?:local|fs)\.js['"]/;
+
+function stripJsComments(src) {
+  return src
+    .replace(/\/\*[\s\S]*?\*\//g, ' ')
+    .replace(/(^|[\s(;,{}])\/\/[^\n]*/g, ' ');
+}
+
+function checkJournalUi() {
+  const problems = [];
+  let scanned = 0;
+  const report = (file, msg) => problems.push(`E10: js/journal/${file} — ${msg}`);
+
+  if (existsSync(JOURNAL_JS)) {
+    for (const f of readdirSync(JOURNAL_JS).filter(n => n.endsWith('.js')).sort()) {
+      scanned++;
+      if (STORAGE_LAYER.has(f)) continue; // the storage layer is the thing being guarded
+      const code = stripJsComments(readFileSync(path.join(JOURNAL_JS, f), 'utf8'));
+
+      if (DIRECT_BACKEND_REF.test(code)) report(f, 'imports a storage implementation directly — go through js/journal/storage.js');
+
+      for (const m of code.matchAll(/(?:from|import\s*\()\s*['"](\.[^'"]+)['"]/g)) {
+        if (!UI_ALLOWED_IMPORTS.has(path.basename(m[1]))) {
+          report(f, `may import only schema.js, analysis.js and storage.js from js/journal (found "${m[1]}")`);
+        }
+      }
+
+      if (BROWSER_STORE_API.test(code)) report(f, 'touches a browser store directly — every persistence call goes through js/journal/storage.js');
+
+      code.split('\n').forEach((line) => {
+        if (FACADE_CALL.test(line) && !/\bawait\b/.test(line)) {
+          report(f, `storage call not awaited: ${line.trim().slice(0, 60)}`);
+        }
+      });
+    }
+  }
+
+  // The journal pages get the same two structural rules, so nothing
+  // can sneak past the modules through an inline script.
+  for (const page of ['journal.html', 'journal-analysis.html']) {
+    const p = path.join(ROOT, page);
+    if (!existsSync(p)) continue;
+    scanned++;
+    const html = readFileSync(p, 'utf8');
+    if (BROWSER_STORE_API.test(html)) problems.push(`E10: ${page} — names a browser store directly; persistence belongs in js/journal/`);
+    if (DIRECT_BACKEND_REF.test(html)) problems.push(`E10: ${page} — references a storage implementation; load the ui modules instead`);
+  }
+
+  return { problems, scanned };
+}
+
+const ui = checkJournalUi();
+if (ui.problems.length) {
+  ui.problems.forEach(p => console.log(`✗ ${p}`));
+  totalErrors += ui.problems.length;
+} else {
+  console.log(`✓ journal UI: ${ui.scanned} file(s) reach storage only through js/journal/storage.js, awaited`);
 }
 
 console.log('────────────────────────────────────────');

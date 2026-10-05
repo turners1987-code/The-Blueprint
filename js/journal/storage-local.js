@@ -7,6 +7,9 @@
    Layout, under a key prefix:
      <prefix>rec:<id>   one JSON record per key
      <prefix>index      { v, entries: { <id>: { d: session_date, t: entry_time } } }
+     <prefix>meta       UI-level settings (e.g. the last-export time);
+                       written lazily, so a store that never called
+                       setMeta() has no meta key
 
    The index lets list() and stats() avoid parsing every record. If it
    is missing or damaged, init() rebuilds it from the record keys.
@@ -32,9 +35,19 @@ const QUOTA_MESSAGE =
   'Browser storage is full, so this change was not saved. Export your journal, ' +
   'free some space (delete old records or other site data), then try again.';
 
+// A stored meta value is an object, or unreadable garbage reads as none.
+const parseMetaValue = (raw) => {
+  if (raw === null || raw === undefined) return {};
+  try {
+    const v = JSON.parse(raw);
+    return (v && typeof v === 'object' && !Array.isArray(v)) ? v : {};
+  } catch { return {}; }
+};
+
 // `storage` is injectable so the adapter can be tested without a browser.
 export function createLocalStorageAdapter({ storage = globalThis.localStorage, prefix = DEFAULT_PREFIX } = {}) {
   const INDEX_KEY = `${prefix}index`;
+  const META_KEY = `${prefix}meta`;
   const RECORD_PREFIX = `${prefix}rec:`;
   const recordKey = (id) => `${RECORD_PREFIX}${id}`;
 
@@ -201,7 +214,8 @@ export function createLocalStorageAdapter({ storage = globalThis.localStorage, p
         const snapshot = allKeys().map(k => [k, storage.getItem(k)]);
         const previousIndex = index;
         try {
-          for (const [k] of snapshot) storage.removeItem(k);
+          // Records and the index go; settings (the meta key) stay.
+          for (const [k] of snapshot) if (k !== META_KEY) storage.removeItem(k);
           index = { v: 1, entries: {} };
           for (const rec of records) {
             storage.setItem(recordKey(rec.id), JSON.stringify(rec));
@@ -226,6 +240,23 @@ export function createLocalStorageAdapter({ storage = globalThis.localStorage, p
         let bytes = byteLength(storage.getItem(INDEX_KEY) || '');
         for (const { id } of entryList()) bytes += byteLength(storage.getItem(recordKey(id)) || '');
         return summarise(entryList(), bytes);
+      });
+    },
+
+    // UI-level settings (e.g. the last-export time). Settings are not
+    // records: they need no init() and are never touched by importAll().
+    async getMeta() {
+      return guard(() => parseMetaValue(storage.getItem(META_KEY)));
+    },
+
+    async setMeta(partial) {
+      if (partial === null || typeof partial !== 'object' || Array.isArray(partial)) {
+        throw new StorageError('bad-argument', 'setMeta(): expected an object of settings.');
+      }
+      return guard(() => {
+        const next = { ...parseMetaValue(storage.getItem(META_KEY)), ...partial };
+        storage.setItem(META_KEY, JSON.stringify(next));
+        return next;
       });
     },
   };

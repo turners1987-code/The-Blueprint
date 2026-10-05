@@ -37,6 +37,7 @@ function initNav() {
   const LINKS = [
     { key: 'modules',  label: 'Modules',   href: 'index.html#course' },
     { key: 'glossary', label: 'Glossary',  href: 'glossary.html' },
+    { key: 'journal',  label: 'Journal',   href: 'journal.html' },
     { key: 'deck',     label: 'Card Deck', href: 'modules/flashcards.html' },
     { key: 'dial',     label: 'Dial In',   href: 'modules/dial-in.html' },
     { key: 'home',     label: 'Home',      href: 'index.html' },
@@ -46,6 +47,8 @@ function initNav() {
   // page inside modules/ is course content → Modules.
   const EXACT = {
     'glossary.html': 'glossary',
+    'journal.html': 'journal',
+    'journal-analysis.html': 'journal', // the journal's review page
     'flashcards.html': 'deck',
     'dial-in.html': 'dial',
     'index.html': 'home',

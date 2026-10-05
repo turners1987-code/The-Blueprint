@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal — The Blueprint</title>
+  <meta name="description" content="Log trades against The Blueprint taxonomy: the pre-entry plan and its grade, the post-exit outcome, recent trades, storage status, and export/import.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Journal — The Blueprint">
+  <meta property="og:description" content="Log trades against The Blueprint taxonomy: the pre-entry plan and its grade, the post-exit outcome, recent trades, storage status, and export/import.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://turners1987-code.github.io/The-Blueprint/journal.html">
+  <meta property="og:image" content="https://turners1987-code.github.io/The-Blueprint/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://turners1987-code.github.io/The-Blueprint/assets/og-image.jpg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/journal.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="journal-page" id="main-content" tabindex="-1">
+    <header class="journal-header">
+      <div class="container">
+        <div class="eyebrow">Trade Journal</div>
+        <h1>Journal</h1>
+        <p class="lead mt-sm">Write the plan down before the entry. Grade it while the outcome is still unknown. Fill in the exit later, honestly.</p>
+      </div>
+    </header>
+
+    <div class="journal-body">
+      <div class="container">
+
+        <!-- Storage status: which backend holds the journal -->
+        <div class="storage-line card" id="storage-line">
+          <span class="storage-dot" aria-hidden="true"></span>
+          <span id="storage-text">Checking storage…</span>
+          <span class="storage-facts" id="storage-facts"></span>
+          <button class="btn btn--outline btn--sm" id="btn-regrant" type="button" hidden>Re-grant access</button>
+          <button class="btn btn--outline btn--sm" id="btn-folder" type="button" hidden>Choose folder…</button>
+          <button class="btn btn--ghost btn--sm" id="btn-usefs" type="button" hidden>Save to a folder instead</button>
+        </div>
+
+        <!-- The form: pre-entry plan, seam, post-exit outcome -->
+        <section class="mt-lg" aria-labelledby="form-heading">
+          <h2 id="form-heading">Log a trade</h2>
+
+          <div class="callout callout--cyan" id="form-messages" hidden></div>
+
+          <form id="trade-form" novalidate>
+            <input type="hidden" id="f-id" name="id" value="">
+
+            <section class="phase" aria-labelledby="phase-pre-title">
+              <div class="phase-title" id="phase-pre-title">
+                <div class="eyebrow">1 · Before the entry — the plan</div>
+                <p>Everything here is decided before the trade, including the grade. The grade marks the plan, never the result.</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="f-session-date">Session date <span class="req" aria-hidden="true">*</span></label>
+                  <input type="date" id="f-session-date" name="session_date">
+                  <div class="field-error" id="err-session_date"></div>
+                </div>
+                <div class="field">
+                  <label for="f-instrument">Instrument <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="f-instrument" name="instrument" list="instrument-list" placeholder="MNQ" autocomplete="off">
+                  <datalist id="instrument-list"></datalist>
+                  <div class="field-error" id="err-instrument"></div>
+                </div>
+                <div class="field">
+                  <label for="f-direction">Direction <span class="req" aria-hidden="true">*</span></label>
+                  <select id="f-direction" name="direction">
+                    <option value="">— choose —</option>
+                  </select>
+                  <div class="field-error" id="err-direction"></div>
+                </div>
+                <div class="field">
+                  <label for="f-environment">Environment <span class="req" aria-hidden="true">*</span></label>
+                  <select id="f-environment" name="environment">
+                    <option value="">— choose —</option>
+                  </select>
+                  <div class="field-hint">Live, sim or replay. Sim never touches an expectancy.</div>
+                  <div class="field-error" id="err-environment"></div>
+                </div>
+                <div class="field">
+                  <label for="f-entry-time">Entry time <span class="req" aria-hidden="true">*</span></label>
+                  <input type="datetime-local" id="f-entry-time" name="entry_time">
+                  <div class="field-hint">Local clock; stored with its UTC offset.</div>
+                  <div class="field-error" id="err-entry_time"></div>
+                </div>
+                <div class="field">
+                  <label for="f-setup">Setup <span class="req" aria-hidden="true">*</span></label>
+                  <select id="f-setup" name="setup">
+                    <option value="">— choose —</option>
+                  </select>
+                  <div class="field-error" id="err-setup"></div>
+                </div>
+                <div class="field">
+                  <label for="f-location">Location <span class="req" aria-hidden="true">*</span></label>
+                  <select id="f-location" name="location">
+                    <option value="">— choose —</option>
+                  </select>
+                  <div class="field-error" id="err-location"></div>
+                </div>
+                <div class="field">
+                  <label for="f-trigger">Trigger</label>
+                  <select id="f-trigger" name="trigger">
+                    <option value="">— none —</option>
+                  </select>
+                  <div class="field-hint">The price event that started the trade. A blank and “No Trigger” count as the same thing.</div>
+                  <div class="field-error" id="err-trigger"></div>
+                </div>
+                <div class="field field--wide">
+                  <label>Confirmation — order-flow evidence (any number)</label>
+                  <div class="check-group" id="f-confirmation"></div>
+                  <div class="field-error" id="err-confirmation"></div>
+                </div>
+                <div class="field">
+                  <label for="f-intended-price">Intended price</label>
+                  <input type="number" id="f-intended-price" name="intended_price" step="any" inputmode="decimal" placeholder="24816.50">
+                  <div class="field-error" id="err-intended_price"></div>
+                </div>
+                <div class="field">
+                  <label for="f-actual-fill">Actual fill</label>
+                  <input type="number" id="f-actual-fill" name="actual_fill" step="any" inputmode="decimal" placeholder="24817.25">
+                  <div class="field-error" id="err-actual_fill"></div>
+                </div>
+                <div class="field">
+                  <label for="f-stop-price">Stop price <span class="req" aria-hidden="true">*</span></label>
+                  <input type="number" id="f-stop-price" name="stop_price" step="any" inputmode="decimal" placeholder="24808.00">
+                  <div class="field-hint">The risk in R is measured from fill to stop.</div>
+                  <div class="field-error" id="err-stop_price"></div>
+                </div>
+                <div class="field">
+                  <label for="f-target-price">Target price <span class="req" aria-hidden="true">*</span></label>
+                  <input type="number" id="f-target-price" name="target_price" step="any" inputmode="decimal" placeholder="24835.75">
+                  <div class="field-error" id="err-target_price"></div>
+                </div>
+                <div class="field">
+                  <label for="f-size">Size (contracts) <span class="req" aria-hidden="true">*</span></label>
+                  <input type="number" id="f-size" name="size" min="1" step="1" inputmode="numeric" placeholder="1">
+                  <div class="field-error" id="err-size"></div>
+                </div>
+                <div class="field">
+                  <label for="f-grade">Grade — the plan, not the outcome <span class="req" aria-hidden="true">*</span></label>
+                  <select id="f-grade" name="grade">
+                    <option value="">— choose —</option>
+                  </select>
+                  <div class="field-hint">Entry-plan compliance only (A+ to C). Assigned here, above the seam, on purpose.</div>
+                  <div class="field-error" id="err-grade"></div>
+                </div>
+              </div>
+            </section>
+
+            <div class="phase-seam" role="presentation">
+              <span class="badge badge--gold">the trade happens here — the grade above is already fixed</span>
+            </div>
+
+            <section class="phase" aria-labelledby="phase-post-title">
+              <div class="phase-title" id="phase-post-title">
+                <div class="eyebrow">2 · After the exit — the outcome</div>
+                <p>Left blank while the trade is open. Fill it in when it closes; the numbers only mean something if they are true.</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="f-exit-time">Exit time</label>
+                  <input type="datetime-local" id="f-exit-time" name="exit_time">
+                  <div class="field-error" id="err-exit_time"></div>
+                </div>
+                <div class="field">
+                  <label for="f-r-multiple">R multiple</label>
+                  <input type="number" id="f-r-multiple" name="r_multiple" step="any" inputmode="decimal" placeholder="2.0">
+                  <div class="field-hint">A number turns the trade “closed”; blank means still open.</div>
+                  <div class="field-error" id="err-r_multiple"></div>
+                </div>
+                <div class="field">
+                  <label for="f-mae-ticks">MAE (ticks against you)</label>
+                  <input type="number" id="f-mae-ticks" name="mae_ticks" min="0" step="any" inputmode="numeric" placeholder="14">
+                  <div class="field-error" id="err-mae_ticks"></div>
+                </div>
+                <div class="field">
+                  <label for="f-mfe-ticks">MFE (ticks for you)</label>
+                  <input type="number" id="f-mfe-ticks" name="mfe_ticks" min="0" step="any" inputmode="numeric" placeholder="74">
+                  <div class="field-error" id="err-mfe_ticks"></div>
+                </div>
+                <div class="field">
+                  <label for="f-time-in-trade">Time in trade (seconds)</label>
+                  <input type="number" id="f-time-in-trade" name="time_in_trade_seconds" min="0" step="1" inputmode="numeric" placeholder="2280">
+                  <div class="field-hint">Worked out from the entry and exit times when left blank.</div>
+                  <div class="field-error" id="err-time_in_trade_seconds"></div>
+                </div>
+                <div class="field">
+                  <label for="f-commissions">Commissions ($, whole trade)</label>
+                  <input type="number" id="f-commissions" name="commissions" min="0" step="0.01" inputmode="decimal" placeholder="2.48">
+                  <div class="field-hint">Gate 2 is judged after commissions — a missing fee can sink a row.</div>
+                  <div class="field-error" id="err-commissions"></div>
+                </div>
+                <div class="field">
+                  <label for="f-execution-mark">Execution mark — the exit</label>
+                  <select id="f-execution-mark" name="execution_mark">
+                    <option value="">— unmarked —</option>
+                  </select>
+                  <div class="field-hint">Exit-plan compliance (Pass/Fail), separate from the grade.</div>
+                  <div class="field-error" id="err-execution_mark"></div>
+                </div>
+                <div class="field">
+                  <label for="f-tags">Tags</label>
+                  <input type="text" id="f-tags" name="tags" placeholder="revisited, news-driven" autocomplete="off">
+                  <div class="field-hint">Comma-separated. Free text lives here; the numbers live above.</div>
+                  <div class="field-error" id="err-tags"></div>
+                </div>
+              </div>
+            </section>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit" id="btn-save">Save trade</button>
+              <button class="btn btn--ghost" type="button" id="btn-new">New trade</button>
+              <button class="btn btn--ghost text-red" type="button" id="btn-delete" hidden>Delete</button>
+            </div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <!-- Backups -->
+        <section class="mt-xl" aria-labelledby="backup-heading">
+          <h2 id="backup-heading">Backups</h2>
+          <div class="card">
+            <div class="flex gap-md">
+              <button class="btn btn--outline btn--sm" id="btn-export" type="button">Export journal</button>
+              <button class="btn btn--outline btn--sm" id="btn-import" type="button">Import…</button>
+              <input type="file" id="import-file" accept=".json,application/json" hidden>
+            </div>
+            <div id="export-status" class="mt-md" aria-live="polite"></div>
+            <p class="field-hint mt-sm">Export downloads every trade as one JSON file. Import replaces the whole journal in this store with the file’s contents.</p>
+          </div>
+        </section>
+
+        <!-- Recent trades -->
+        <section class="mt-xl" aria-labelledby="recent-heading">
+          <h2 id="recent-heading">Recent trades</h2>
+          <div id="trade-list" class="trade-list"></div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/progress.js"></script>
+  <script type="module" src="js/journal/ui.js"></script>
+</body>
+</html>

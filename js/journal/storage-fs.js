@@ -21,8 +21,9 @@ import {
 } from './storage-common.js';
 
 const DB_NAME = 'blueprint-journal';
-const STORE = 'handles';
+const STORE = 'handles';   // holds the folder handle, and UI settings under META_KEY
 const HANDLE_KEY = 'journal-folder';
+const META_KEY = 'meta';
 const MODE = { mode: 'readwrite' };
 
 // ── Support and stored handle (IndexedDB) ─────────────────────
@@ -313,6 +314,25 @@ export function createFileSystemAdapter({
       const entries = [...index.entries()].map(([id, e]) => ({ id, d: e.d }));
       const bytes = [...index.values()].reduce((sum, e) => sum + e.size, 0);
       return summarise(entries, bytes);
+    },
+
+    // UI-level settings (e.g. the last-export time), kept in IndexedDB
+    // beside the folder handle: they are not records, they are not files
+    // in the folder (so the folder scan never sees them), and they stay
+    // readable whatever the folder's permission state.
+    async getMeta() {
+      try { return (await withStore(idb, 'readonly', s => s.get(META_KEY))) || {}; } catch { return {}; }
+    },
+
+    async setMeta(partial) {
+      if (partial === null || typeof partial !== 'object' || Array.isArray(partial)) {
+        throw new StorageError('bad-argument', 'setMeta(): expected an object of settings.');
+      }
+      try {
+        const next = { ...(await adapter.getMeta()), ...partial };
+        await withStore(idb, 'readwrite', s => s.put(next, META_KEY));
+        return next;
+      } catch (e) { throw wrap(e, 'saving journal settings'); }
     },
   };
 

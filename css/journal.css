@@ -1,0 +1,149 @@
+/* ============================================================
+   THE BLUEPRINT — Journal pages (css/journal.css)
+   journal.html (log and review trades) and journal-analysis.html
+   (read-only review). Everything here builds on css/main.css:
+   every colour, font, radius and spacing comes from its variables
+   — nothing new is introduced.
+   ============================================================ */
+
+.journal-page { padding-top: 60px; }
+.journal-header { padding: var(--space-2xl) 0 var(--space-lg); border-bottom: 1px solid var(--border); }
+.journal-body { padding: var(--space-xl) 0; }
+.journal-body h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin: var(--space-2xl) 0 var(--space-md); }
+.journal-body h2:first-child { margin-top: 0; }
+
+/* --- STATUS LINES ---------------------------------------------- */
+.storage-line {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg); font-size: 0.9rem; color: var(--text-secondary);
+}
+.storage-line .storage-dot {
+  width: 8px; height: 8px; min-width: 8px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 8px var(--green-glow);
+}
+.storage-line.is-bad .storage-dot { background: var(--red); box-shadow: 0 0 8px var(--red-glow); }
+.storage-line .storage-facts { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); }
+
+/* --- FORM ------------------------------------------------------- */
+.phase {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: var(--space-lg);
+}
+.phase-title { margin-bottom: var(--space-md); }
+.phase-title .eyebrow { margin-bottom: 0; }
+.phase-title p { font-size: 0.85rem; margin-top: var(--space-xs); }
+
+/* The seam between plan and outcome: the trade happens on this line,
+   and the grade above it was already fixed. */
+.phase-seam {
+  display: flex; align-items: center; gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+.phase-seam::before, .phase-seam::after {
+  content: ''; height: 1px; flex: 1;
+  background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+}
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md) var(--space-lg); }
+.form-grid .field--wide { grid-column: 1 / -1; }
+
+.field { display: flex; flex-direction: column; gap: var(--space-xs); }
+.field > label {
+  font-family: var(--font-display); font-weight: 600; font-size: 0.78rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary);
+}
+.field > label .req { color: var(--gold); }
+.field input, .field select {
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 10px 12px;
+  color: var(--text-primary); font-family: var(--font-body); font-size: 0.95rem;
+  outline: none; transition: border-color var(--transition); width: 100%;
+}
+.field input:focus, .field select:focus { border-color: var(--cyan); }
+.field input::placeholder { color: var(--text-muted); }
+.field input[aria-invalid="true"], .field select[aria-invalid="true"] { border-color: var(--red); }
+.field-hint { font-size: 0.75rem; color: var(--text-muted); }
+.field-error { color: var(--red); font-size: 0.78rem; }
+.field-error:empty { display: none; }
+
+.check-group { display: flex; flex-direction: column; gap: var(--space-xs); }
+.check-group label {
+  display: flex; align-items: center; gap: var(--space-sm);
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem; color: var(--text-secondary); cursor: pointer;
+  transition: all var(--transition);
+}
+.check-group label:hover { border-color: rgba(56,217,255,0.35); color: var(--text-primary); }
+.check-group input { width: auto; accent-color: var(--cyan); }
+.check-group label:has(input:checked) { border-color: rgba(49,224,139,0.4); background: var(--green-glow); color: var(--text-primary); }
+
+.form-actions { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-lg); align-items: center; }
+.form-status { font-size: 0.85rem; margin-top: var(--space-md); min-height: 1.2em; }
+
+/* --- TRADE LIST -------------------------------------------------- */
+.trade-list { display: flex; flex-direction: column; gap: var(--space-sm); }
+.trade-item {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md);
+  width: 100%; text-align: left;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg);
+  cursor: pointer; color: var(--text-secondary); font-family: var(--font-body);
+  font-size: 0.92rem; transition: border-color var(--transition), color var(--transition);
+}
+.trade-item:hover { border-color: rgba(56,217,255,0.4); color: var(--text-primary); }
+.trade-item.editing { border-color: rgba(245,185,76,0.5); background: linear-gradient(135deg, var(--bg-card), var(--gold-glow)); }
+.trade-item .trade-when { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); min-width: 11ch; }
+.trade-item .trade-what { flex: 1; min-width: 24ch; }
+.trade-item .trade-what strong { font-weight: 600; }
+.trade-item .trade-r { font-family: var(--font-mono); font-size: 0.85rem; min-width: 7ch; text-align: right; }
+
+/* --- DATA TABLES -------------------------------------------------- */
+.table-wrap { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.data-table caption {
+  caption-side: top; text-align: left; font-family: var(--font-display);
+  font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted); padding-bottom: var(--space-sm);
+}
+.data-table th {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.72rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+  text-align: left; padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--border-light); white-space: nowrap;
+}
+.data-table td { padding: var(--space-sm) var(--space-md); border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.data-table .num { text-align: right; font-family: var(--font-mono); font-size: 0.82rem; white-space: nowrap; }
+.data-table tr.dimmed td { opacity: 0.5; }
+.data-table .why { font-size: 0.78rem; color: var(--text-muted); max-width: 40ch; }
+
+/* --- STAT CARDS --------------------------------------------------- */
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin: var(--space-lg) 0; }
+.stat-card { padding: var(--space-md) var(--space-lg); }
+.stat-card .stat-value {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.7rem;
+  line-height: 1.1; color: var(--text-primary);
+}
+.stat-card .stat-label {
+  font-family: var(--font-display); font-weight: 600; font-size: 0.72rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+.stat-card .stat-sub { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-top: var(--space-xs); }
+.card.dimmed { opacity: 0.55; }
+.n-note { color: var(--text-muted); font-size: 0.78em; }
+
+/* Small, always-visible markers of the two journal laws. */
+.rule-note {
+  font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);
+  margin-top: var(--space-md);
+}
+
+/* --- RESPONSIVE ---------------------------------------------------- */
+@media(max-width:768px){
+  .form-grid { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: 1fr; }
+  .data-table { font-size: 0.82rem; }
+  .data-table td, .data-table th { padding: var(--space-xs) var(--space-sm); }
+  .trade-item .trade-when { min-width: 0; }
+}

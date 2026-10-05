@@ -16,6 +16,9 @@
      exportAll()          -> JSON string of every record
      importAll(json)      -> { count }; validates everything, then replaces
      stats()              -> { count, oldest, newest, bytes }
+     getMeta()            -> UI-level settings object ({} when none), e.g.
+                             the last-export time
+     setMeta(partial)     -> the merged settings object
 
    Which backend: File System Access if the browser has it AND a
    folder handle is already stored, otherwise localStorage. Use
@@ -122,3 +125,13 @@ export const remove = async (id) => (await ready()).remove(id);
 export const exportAll = async () => (await ready()).exportAll();
 export const importAll = async (json) => (await ready()).importAll(json);
 export const stats = async () => (await ready()).stats();
+
+// ── UI-level settings ─────────────────────────────────────────
+// Small facts the pages want to remember (today: the last-export time).
+// They live wherever the active backend keeps them, so a page never
+// reaches for a browser store directly. Settings are not records:
+// importAll() does not touch them, and they are readable even when
+// init() did not succeed (the last-export date is still worth showing).
+const activeAdapter = async () => { if (!active) await init(); return active; };
+export const getMeta = async () => (await activeAdapter()).getMeta();
+export const setMeta = async (partial) => (await activeAdapter()).setMeta(partial);
