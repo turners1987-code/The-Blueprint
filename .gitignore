@@ -1,0 +1,5 @@
+# Personal trade data: kept on this machine, never committed
+data/import/*.csv
+data/import/imported-trades.json
+data/import/import-report.txt
+data/import/no-setup-audit.json
