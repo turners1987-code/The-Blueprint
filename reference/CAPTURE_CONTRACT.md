@@ -1,8 +1,9 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.0 · 2026-10-05
-Status: SPEC. This is the document the NinjaTrader 8 capture addon builds against. This repo
-holds the contract, not the addon; no addon code lives here.
+Version 1.1 · 2026-10-05
+Status: SPEC, corrected after the NT8 project review. This is the document the NinjaTrader 8
+capture addon builds against. This repo holds the contract, not the addon; no addon code lives
+here.
 
 **Division of sources — read this before building anything.**
 
@@ -52,13 +53,16 @@ check) on every emitted record in its own build.
   addon ships a constant, synced from `js/journal/schema.js` at release. A record stamped newer
   than the journal supports is rejected outright; an addon release that bumps TAXONOMY ships in
   step with the journal.
-- **`environment`** is derived from the account, never defaulted blank: Sim101 → `sim`,
-  Market Replay → `replay`, everything else → `live`.
+- **`environment`** is derived from the **connection**, never defaulted blank: a Market Replay
+  connection → `replay`, Sim101 → `sim`, live connections → `live`. Detection must come from
+  the connection, not the account name — **Market Replay fills land in Sim101**, so
+  account-name detection would mislabel every replay trade as `sim`.
 - **`entry_time` / `exit_time`** are ISO 8601 **with an explicit UTC offset** (machine-local plus
   offset, or converted to `Z`). A naive local timestamp is invalid and will be rejected.
-- **`session_date`** is the RTH session the trade belongs to, not the calendar date of the fill:
-  an ETH fill between 18:00 and 24:00 ET belongs to the **next** day's session date (proposed
-  convention — Q6).
+- **`session_date`** is the session the trade belongs to, not the calendar date of the fill, and
+  it is **derived from the instrument's Trading Hours template** — its session boundaries and
+  trading-day convention (Q6, answered) — never from a hardcoded 18:00 ET rule. A fill in the
+  overnight portion of the template's session carries that session's date.
 - **`instrument`** is the root symbol only, uppercase: `MNQ`, `MES`, `MGC`, `MCL`. No expiry
   suffix. The analysis layer prices risk by root symbol; `MNQ 12-26` reads as an unknown
   instrument and the trade goes `unpriced`.
@@ -72,10 +76,13 @@ check) on every emitted record in its own build.
   `actual_fill`, in instrument ticks. Their only source is reconciliation (section 5) — never
   NinjaTrader's per-trade MAE/MFE.
 - **`commissions`** is US dollars for the **entire trade** — all contracts, both sides — summed
-  from per-execution commission data (Q7).
-- **`grade`** (rich tier only) follows the 5.1 rubric and is assigned before the outcome is
-  known. The A+ fill tolerance (within 2 ticks of `intended_price`) resolves when the fill
-  returns — still pre-outcome.
+  from `Execution.Commission` per execution (Q7, answered). That property requires a
+  **Commission template configured on the account**; without one it comes back empty and
+  `commissions` stays null (and Gate 2 rows will not declare themselves met, by design).
+- **`grade`** (rich tier only) follows the 5.1 rubric, is assigned before the outcome is known,
+  and **comes from which BP Draft tool was used** (Q9, answered) — the tool carries its rubric
+  context at submission. The A+ fill tolerance (within 2 ticks of `intended_price`) resolves
+  when the fill returns — still pre-outcome.
 - **`execution_mark`** is written only when the exit was mechanical — stop, target, planned
   scale, or session end (5.2 Pass conditions the platform can see). A manual flatten leaves it
   null for the trader to judge in the journal.
@@ -138,11 +145,20 @@ not as a value, not as a fallback, not as a tiebreaker.
 
 - While the trade is open, the addon tracks running MAE/MFE from live market data. These values
   are a **cross-check only**.
-- When the position goes flat, the addon issues a **tick `BarsRequest` covering entry time minus
-  5 minutes through exit time plus 15 minutes**, re-derives MAE/MFE from `actual_fill`
-  (direction-aware, positive magnitudes, instrument ticks), and **overwrites** the record's
-  values with the post-hoc result. The margins exist to absorb clock skew between the execution
-  engine and the tick stream; the computation itself clamps to `[entry_time, exit_time]`.
+- When the position goes flat, the addon issues a **tick `BarsRequest` for the full trading day**
+  of the trade (the session from the instrument's Trading Hours template), then **clamps to
+  `[entry_time, exit_time]` in code** — the request is never trusted to return only the window.
+  It re-derives MAE/MFE from `actual_fill` (direction-aware, positive magnitudes, instrument
+  ticks) and **overwrites** the record's values with the post-hoc result. Requesting the whole
+  day absorbs clock skew between the execution engine and the tick stream; the clamp in code is
+  what defines the window.
+- **Disposal.** The `BarsRequest` is disposed on every path — success, empty result, timeout,
+  exception. A leaked request holds a data subscription open.
+- **Contract selection.** The request is made against the specific contract the trade filled on
+  (the `instrument` root plus the expiry actually traded), **including across a roll** — a trade
+  entered on the expiring contract is reconciled on that contract's ticks, not the front month's
+  at reconciliation time. Pre-roll trades therefore pick the pre-roll contract; the root-only
+  `instrument` field is for the record, not for the request.
 - The live-tracked pair and its delta versus the post-hoc pair are written to
   `nt8/audit/<id>.json`. A disagreement beyond 2 ticks is recorded there as a data-quality flag.
   **The post-hoc values win every time.**
@@ -167,6 +183,10 @@ not as a value, not as a fallback, not as a tiebreaker.
    thrown into an order or execution handler. A capture problem must never delay, reject, or
    alter an order — the journal can tolerate a missing trade; the account cannot tolerate a
    mangled one.
+5. **The configured folder must be local — never OneDrive, Google Drive, or any synced or
+   network location.** Sync clients lock, delay, and conflict-copy files, which breaks atomic
+   replace (section 2) and can hand the journal a half-synced record. The addon refuses to start
+   capture if the folder resolves into a known sync root or a network path.
 
 ---
 
@@ -206,3 +226,4 @@ Listed explicitly; each one can change a section above.
 | Version | Date | Change |
 | --- | --- | --- |
 | 1.0 | 2026-10-05 | Initial. File layout and id format; record semantics; rich and zero-touch tiers; copier dedup by `decision_id`; post-exit MAE/MFE reconciliation with NinjaTrader's per-trade values ruled out; hard prohibitions; nine open questions. |
+| 1.1 | 2026-10-05 | Corrections from NT8 review: `environment` from the connection (replay fills land in Sim101); `session_date` from the Trading Hours template; commissions via `Execution.Commission`; grade from the BP Draft tool; 5.2 full-trading-day `BarsRequest` clamped in code, with disposal and pre-roll contract selection; fifth prohibition (local folder only). |
