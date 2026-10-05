@@ -86,13 +86,3 @@ style.textContent = `
   .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
 `;
 document.head.appendChild(style);
-
-// ── Offline support ────────────────────────────────────────────
-// sw.js lives at the site root; its folder is the scope.
-if ('serviceWorker' in navigator) {
-  const register = () => navigator.serviceWorker
-    .register(new URL('../sw.js', import.meta.url))
-    .catch(err => console.warn('Blueprint: service worker registration failed.', err));
-  if (document.readyState === 'complete') register();
-  else window.addEventListener('load', register);
-}

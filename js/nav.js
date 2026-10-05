@@ -142,3 +142,14 @@ function initNav() {
 // Module scripts are deferred, so the DOM is normally parsed already.
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNav);
 else initNav();
+
+// ── Offline support ────────────────────────────────────────────
+// Registered here because every page loads nav.js. sw.js lives at the
+// site root; its folder is the scope.
+if ('serviceWorker' in navigator) {
+  const register = () => navigator.serviceWorker
+    .register(new URL('../sw.js', import.meta.url))
+    .catch(err => console.warn('Blueprint: service worker registration failed.', err));
+  if (document.readyState === 'complete') register();
+  else window.addEventListener('load', register);
+}
