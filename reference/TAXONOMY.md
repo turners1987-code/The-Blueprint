@@ -1,6 +1,6 @@
 # The Blueprint — Canonical Taxonomy
 
-Version 1.3 · 2026-10-04
+Version 1.4 · 2026-10-05
 Status: APPROVED structure. Four items remain OPEN; none block the build.
 
 This file freezes the **vocabulary and the record structure**. The journal schema, the
@@ -67,14 +67,26 @@ change, not a schema migration.
 
 ### 1.2 Measurement fields
 
-| Field | Purpose |
-| --- | --- |
-| `instrument` · `direction` · `session_date` · `entry_time` · `exit_time` | Identity and time context. |
-| `intended_price` | Where the plan said to get filled. |
-| `actual_fill` | Where the fill happened. `actual_fill − intended_price` is the fill-placement gap — the known skill gap, measured instead of merely noted. |
-| `stop_price` · `target_price` · `size` | Plan geometry, for grade evaluation. |
-| `r_multiple` · `mae` · `mfe` · `time_in_trade` | Outcome. MAE/MFE and time-in-trade are journal must-haves. |
-| `commissions` | Gate 2 expectancy is after commissions. |
+| Field | Unit | Purpose |
+| --- | --- | --- |
+| `instrument` · `direction` · `session_date` · `entry_time` · `exit_time` | not numeric: text; `session_date` is YYYY-MM-DD; times are ISO 8601 with a UTC offset | Identity and time context. |
+| `intended_price` | price points | Where the plan said to get filled. |
+| `actual_fill` | price points | Where the fill happened. `actual_fill − intended_price` is the fill-placement gap — the known skill gap, measured instead of merely noted. |
+| `stop_price` · `target_price` | price points | Plan geometry, for grade evaluation. |
+| `size` | contracts | Plan geometry, for grade evaluation. |
+| `r_multiple` | R (a multiple of the planned risk) | Outcome. |
+| `mae_ticks` · `mfe_ticks` | ticks | Outcome. Maximum adverse and maximum favorable excursion; journal must-haves. |
+| `time_in_trade_seconds` | seconds | Outcome. Time from entry to exit; a journal must-have. |
+| `commissions` | US dollars | Gate 2 expectancy is after commissions. |
+
+A price point is one index point; for MNQ one tick is 0.25 points.
+
+`mae_ticks` and `mfe_ticks` are **positive magnitudes regardless of direction**: how far price went
+against the trade (`mae_ticks`) or for it (`mfe_ticks`) from the fill, never a signed value, on
+longs and shorts alike. `commissions` is **US dollars for the entire trade** — both sides, all
+contracts — not per contract and not per side.
+
+Renamed in 1.4 from `mae`, `mfe` and `time_in_trade` so the unit is in the name.
 
 Classification answers "what was this." Measurement answers "what happened." Grade draws only on
 the plan, never on `r_multiple` (see 5.1).
@@ -464,6 +476,7 @@ Legacy entry tags keep their values with a `legacy_` prefix and are unselectable
 | 1.1 | 2026-10-04 | Badge rule added: badge cannot exceed Gate 1 status. Badges corrected. R1 Gate 1 shortfall stated. Range Rejection Gate 2 flagged. Live/sim split required. Trigger rankings removed. Footprint Gate 1 data block stated. London/Asia slugs marked inactive. |
 | 1.2 | 2026-10-04 | Evidence moved out to the register; items carry register ID + badge + `[cite register]`. Section 0 versioning added. Measurement fields named. `confirmation` frozen as nullable. Grade rubric written. Taxonomy dispositions separated from evidence states. Sections 8 and 9 added. Display floor gains a 20-session requirement. OPEN #4–#7 promoted. |
 | 1.3 | 2026-10-04 | **OPEN #1 RESOLVED — confirmation.** Governing rule reworded: triggers are price events, order flow confirms. `trigger_subform` removed; sub-forms moved to `confirmation`. Pause N Go's absorption clause moved to `big-orders`; its definition narrowed to pause-then-resume. Section 3 retitled "Triggers and confirmations." **OPEN #3 RESOLVED** — Trend Continuation wording approved and locked into 2.1. **OPEN #4 RESOLVED** — Range Rejection Gate 2 count verified as Shane's own. Section 0 back-fill contradiction fixed (one-time import stamp permitted and recorded). **Grade rubric split (5.1 / 5.2):** grade is entry-plan compliance, assigned before resolution; new `execution_mark` field carries exit compliance. A+ fill tolerance defined as within 2 ticks. Display floor clarified: dim means shown with a warning, never suppressed. Legacy mapping gains a row for aggression-based entry tags. |
+| 1.4 | 2026-10-05 | **Field names and units aligned with the journal schema.** Section 1.2: `mae` → `mae_ticks`, `mfe` → `mfe_ticks`, `time_in_trade` → `time_in_trade_seconds`. Units column added to the measurement table (price points, contracts, R, ticks, seconds, US dollars). `mae_ticks` and `mfe_ticks` stated as positive magnitudes regardless of direction; `commissions` stated as US dollars for the entire trade, both sides, all contracts. `execution_mark` was already in the 1.1 table (Pass / Fail, 5.2); no change. No enum, gate or OPEN item changed. |
 
 **Migration 1.2 → 1.3:**
 - `trigger_subform` → `confirmation`. Same values, new field. No value renames.
@@ -473,3 +486,7 @@ Legacy entry tags keep their values with a `legacy_` prefix and are unselectable
   states the exit reason; otherwise leave null.
 - `grade` values predating 5.1 remain flagged for re-grading — they were assigned without a
   rubric, and 1.3 narrows the rubric from five checks to four.
+
+**Migration 1.3 → 1.4:**
+- No values changed; only field names. `mae` → `mae_ticks`, `mfe` → `mfe_ticks`,
+  `time_in_trade` → `time_in_trade_seconds`. Same values, new names.
