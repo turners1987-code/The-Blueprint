@@ -66,6 +66,17 @@
 .field-error { color: var(--red); font-size: 0.78rem; }
 .field-error:empty { display: none; }
 
+/* Computed readout under Size: stop distance, risk per contract,
+   planned R:R. Warnings only — the 78-tick floor is under review
+   (R4) and never blocks saving. */
+.risk-readout {
+  background: var(--bg-elevated); border: 1px dashed var(--border);
+  border-radius: var(--radius-md); padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);
+}
+.risk-readout .warn { display: block; color: var(--red); }
+.risk-readout.is-warn { border-color: rgba(255,77,99,0.4); }
+
 .check-group { display: flex; flex-direction: column; gap: var(--space-xs); }
 .check-group label {
   display: flex; align-items: center; gap: var(--space-sm);

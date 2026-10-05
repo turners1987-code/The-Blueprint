@@ -73,13 +73,6 @@
                   <div class="field-error" id="err-instrument"></div>
                 </div>
                 <div class="field">
-                  <label for="f-direction">Direction <span class="req" aria-hidden="true">*</span></label>
-                  <select id="f-direction" name="direction">
-                    <option value="">— choose —</option>
-                  </select>
-                  <div class="field-error" id="err-direction"></div>
-                </div>
-                <div class="field">
                   <label for="f-environment">Environment <span class="req" aria-hidden="true">*</span></label>
                   <select id="f-environment" name="environment">
                     <option value="">— choose —</option>
@@ -88,10 +81,11 @@
                   <div class="field-error" id="err-environment"></div>
                 </div>
                 <div class="field">
-                  <label for="f-entry-time">Entry time <span class="req" aria-hidden="true">*</span></label>
-                  <input type="datetime-local" id="f-entry-time" name="entry_time">
-                  <div class="field-hint">Local clock; stored with its UTC offset.</div>
-                  <div class="field-error" id="err-entry_time"></div>
+                  <label for="f-direction">Direction <span class="req" aria-hidden="true">*</span></label>
+                  <select id="f-direction" name="direction">
+                    <option value="">— choose —</option>
+                  </select>
+                  <div class="field-error" id="err-direction"></div>
                 </div>
                 <div class="field">
                   <label for="f-setup">Setup <span class="req" aria-hidden="true">*</span></label>
@@ -121,16 +115,6 @@
                   <div class="field-error" id="err-confirmation"></div>
                 </div>
                 <div class="field">
-                  <label for="f-intended-price">Intended price</label>
-                  <input type="number" id="f-intended-price" name="intended_price" step="any" inputmode="decimal" placeholder="24816.50">
-                  <div class="field-error" id="err-intended_price"></div>
-                </div>
-                <div class="field">
-                  <label for="f-actual-fill">Actual fill</label>
-                  <input type="number" id="f-actual-fill" name="actual_fill" step="any" inputmode="decimal" placeholder="24817.25">
-                  <div class="field-error" id="err-actual_fill"></div>
-                </div>
-                <div class="field">
                   <label for="f-stop-price">Stop price <span class="req" aria-hidden="true">*</span></label>
                   <input type="number" id="f-stop-price" name="stop_price" step="any" inputmode="decimal" placeholder="24808.00">
                   <div class="field-hint">The risk in R is measured from fill to stop.</div>
@@ -145,6 +129,23 @@
                   <label for="f-size">Size (contracts) <span class="req" aria-hidden="true">*</span></label>
                   <input type="number" id="f-size" name="size" min="1" step="1" inputmode="numeric" placeholder="1">
                   <div class="field-error" id="err-size"></div>
+                </div>
+                <div class="risk-readout field--wide" id="risk-readout" aria-live="polite"></div>
+                <div class="field">
+                  <label for="f-intended-price">Intended price</label>
+                  <input type="number" id="f-intended-price" name="intended_price" step="any" inputmode="decimal" placeholder="24816.50">
+                  <div class="field-error" id="err-intended_price"></div>
+                </div>
+                <div class="field">
+                  <label for="f-actual-fill">Actual fill</label>
+                  <input type="number" id="f-actual-fill" name="actual_fill" step="any" inputmode="decimal" placeholder="24817.25">
+                  <div class="field-error" id="err-actual_fill"></div>
+                </div>
+                <div class="field">
+                  <label for="f-entry-time">Entry time <span class="req" aria-hidden="true">*</span></label>
+                  <input type="datetime-local" id="f-entry-time" name="entry_time">
+                  <div class="field-hint">Local clock; stored with its UTC offset.</div>
+                  <div class="field-error" id="err-entry_time"></div>
                 </div>
                 <div class="field">
                   <label for="f-grade">Grade — the plan, not the outcome <span class="req" aria-hidden="true">*</span></label>

@@ -28,6 +28,11 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
 const RECENT_LIMIT = 30;
 const EXPORT_WARN_DAYS = 7;
 
+// Construction readout thresholds. Warnings only: the 78-tick stop
+// floor is under review as R4, so neither ever blocks saving.
+const STOP_FLOOR_TICKS = 78;
+const MIN_PLANNED_RR = 2;
+
 // slug -> display label, for anything rendered back to the page.
 const LABELS = {};
 for (const list of [SETUPS, LOCATIONS, TRIGGERS, CONFIRMATIONS, GRADES, ENVIRONMENTS]) {
@@ -90,6 +95,54 @@ const num = (v) => {
   const n = Number(v);
   return Number.isFinite(n) ? n : null;
 };
+
+// ── Construction readout (below Size) ─────────────────────────
+// Live figures for the trade being planned: stop distance in ticks,
+// risk per contract in dollars, planned R:R from the fill (or the
+// intended price when the fill is blank) to the target. Red warns
+// under the 78-tick floor (R4, under review) and under 2:1 — never
+// blockers, so the save path is untouched.
+function updateRiskReadout() {
+  const el = $('risk-readout');
+  if (!el) return;
+  const spec = INSTRUMENTS[$('f-instrument').value.trim().toUpperCase()] || null;
+  const entry = num($('f-actual-fill').value) ?? num($('f-intended-price').value);
+  const stop = num($('f-stop-price').value);
+  const target = num($('f-target-price').value);
+  const riskPts = entry !== null && stop !== null ? Math.abs(entry - stop) : null;
+  const rewardPts = entry !== null && target !== null ? Math.abs(target - entry) : null;
+
+  const bits = [];
+  const warns = [];
+  let note = '';
+
+  if (spec && riskPts !== null && riskPts > 0) {
+    const ticks = riskPts / spec.tickSize;
+    const shown = Number.isInteger(ticks) ? String(ticks) : ticks.toFixed(1);
+    bits.push(`stop distance ${shown} ticks`);
+    bits.push(`risk $${(riskPts * spec.pointValue).toFixed(2)} per contract`);
+    if (ticks < STOP_FLOOR_TICKS) warns.push(`stop distance ${shown} ticks is under the ${STOP_FLOOR_TICKS}-tick floor (R4, under review)`);
+  } else if (riskPts !== null && riskPts > 0) {
+    note = `instrument unknown — ticks and dollars need one of ${Object.keys(INSTRUMENTS).join(', ')}`;
+  }
+
+  if (riskPts !== null && riskPts > 0 && rewardPts !== null && rewardPts > 0) {
+    const rr = rewardPts / riskPts;
+    bits.push(`planned R:R ${rr.toFixed(2)} : 1`);
+    if (rr < MIN_PLANNED_RR) warns.push(`planned R:R ${rr.toFixed(2)} : 1 is below ${MIN_PLANNED_RR} : 1`);
+  }
+
+  if (!bits.length) {
+    el.className = 'risk-readout field--wide';
+    el.textContent = 'Stop distance, risk per contract and planned R:R appear here as the prices go in.';
+    return;
+  }
+  el.className = `risk-readout field--wide${warns.length ? ' is-warn' : ''}`;
+  el.innerHTML =
+    esc(bits.join(' · ')) +
+    (note ? ` <span class="n-note">${esc(note)}</span>` : '') +
+    warns.map((w) => `<span class="warn">⚠ ${esc(w)}</span>`).join('');
+}
 
 function readForm() {
   const rec = emptyRecord(); // fresh each time: nothing stale survives an edit
@@ -293,6 +346,7 @@ let form;
 function setEditing(rec) {
   editingId = rec.id || null;
   fillForm(rec);
+  updateRiskReadout();
   clearErrors();
   message('');
   $('btn-delete').hidden = !editingId;
@@ -309,6 +363,11 @@ async function refresh() {
 
 function wireForm() {
   form = $('trade-form');
+
+  // The construction readout follows the price fields live.
+  for (const id of ['f-instrument', 'f-intended-price', 'f-actual-fill', 'f-stop-price', 'f-target-price']) {
+    $(id).addEventListener('input', updateRiskReadout);
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
