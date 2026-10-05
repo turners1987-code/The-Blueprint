@@ -6,6 +6,17 @@
 
 const STORAGE_KEY = 'blueprint_progress';
 
+// Shape of stored progress: { version, completed: [moduleId], lastVisited }.
+const SCHEMA_VERSION = 1;
+
+// MIGRATIONS[n] maps old module ids to new ones, applied when stored
+// progress is upgraded to schema version n. Seed empty; it is for the
+// upcoming curriculum renumber. Example:
+//   2: { '05-order-types': '04-order-types' }
+// Ids that appear in no map are left as they are, and so are ids that
+// match no known module. They may belong to a past or future schema.
+const MIGRATIONS = {};
+
 let MODULES = [];
 
 // Resolve data/modules.json relative to this script so it works
@@ -16,22 +27,79 @@ const DATA_URL = (document.currentScript && document.currentScript.src)
 
 const modulePath = (m) => `modules/${m.number}-${m.slug}.html`;
 
+const defaultProgress = () => ({ version: SCHEMA_VERSION, completed: [], lastVisited: null });
+
+// Upgrade a stored object from schema `from` to SCHEMA_VERSION.
+// 0 -> 1 only adds the version key; completed is carried over unchanged.
+const migrate = (raw, from) => {
+  let completed = Array.isArray(raw.completed) ? raw.completed.slice() : [];
+  let lastVisited = typeof raw.lastVisited === 'string' ? raw.lastVisited : null;
+  for (let v = from + 1; v <= SCHEMA_VERSION; v++) {
+    const map = MIGRATIONS[v];
+    if (!map) continue;
+    const remap = (id) => (Object.prototype.hasOwnProperty.call(map, id) ? map[id] : id);
+    completed = [...new Set(completed.map(remap))];
+    if (lastVisited) lastVisited = remap(lastVisited);
+  }
+  return { version: SCHEMA_VERSION, completed, lastVisited };
+};
+
 const Progress = {
   // Resolves with the module list once data/modules.json is loaded.
   ready: fetch(DATA_URL)
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
     .then(list => { MODULES = list; return list; }),
 
-  // Load saved progress from localStorage
+  // Load saved progress from localStorage, migrating older schemas
+  // to the current version and writing the result back.
   load() {
-    try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { completed: [], lastVisited: null };
-    } catch { return { completed: [], lastVisited: null }; }
+    let raw = null;
+    try { raw = JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch { /* fall through */ }
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return defaultProgress();
+
+    const stored = Number.isInteger(raw.version) ? raw.version : 0;
+    // Written by a newer schema: leave it untouched rather than downgrade it.
+    if (stored >= SCHEMA_VERSION) return raw;
+
+    const data = migrate(raw, stored);
+    this.save(data);
+    return data;
   },
 
   // Save progress
   save(data) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  },
+
+  // Stored progress as a JSON string, for backup or transfer.
+  export() {
+    return JSON.stringify(this.load());
+  },
+
+  // Validate a JSON string from export() and replace stored progress with it.
+  // Throws on invalid input and leaves stored progress unchanged.
+  import(json) {
+    let obj;
+    try { obj = JSON.parse(json); } catch { throw new Error('Progress import: not valid JSON.'); }
+    if (!obj || typeof obj !== 'object' || Array.isArray(obj)) {
+      throw new Error('Progress import: expected an object.');
+    }
+    if (obj.version !== undefined && !(Number.isInteger(obj.version) && obj.version >= 0)) {
+      throw new Error('Progress import: invalid version.');
+    }
+    if (obj.version > SCHEMA_VERSION) {
+      throw new Error(`Progress import: version ${obj.version} is newer than supported (${SCHEMA_VERSION}).`);
+    }
+    if (!Array.isArray(obj.completed) || !obj.completed.every(id => typeof id === 'string')) {
+      throw new Error('Progress import: completed must be an array of module ids.');
+    }
+    if (obj.lastVisited != null && typeof obj.lastVisited !== 'string') {
+      throw new Error('Progress import: lastVisited must be a string or null.');
+    }
+    const data = migrate(obj, obj.version === undefined ? 0 : obj.version);
+    this.save(data);
+    this.updateUI();
+    return data;
   },
 
   // Mark a module as complete
