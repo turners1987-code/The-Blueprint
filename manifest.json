@@ -1,0 +1,18 @@
+{
+  "name": "The Blueprint",
+  "short_name": "Blueprint",
+  "description": "A personal framework for high-probability futures trading.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#071426",
+  "background_color": "#071426",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

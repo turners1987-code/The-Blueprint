@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>The Blueprint</title>
+  <rect width="64" height="64" fill="#071426"/>
+  <!-- blueprint grid -->
+  <g stroke="#f5b94c" stroke-width="1.5" opacity="0.4">
+    <path d="M16 0V64M32 0V64M48 0V64M0 16H64M0 32H64M0 48H64"/>
+  </g>
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#f5b94c" stroke-width="2" opacity="0.8"/>
+  <!-- bold condensed B, drawn as paths so it renders without any web font -->
+  <path fill="#f5b94c" fill-rule="evenodd" d="M19 12H35C42 12 46 16 46 22C46 26.5 43.5 29.5 40 30.8C44.5 32 47 35.5 47 40.5C47 47.5 42.5 52 35 52H19ZM28 19V28H33C35.5 28 37 26.5 37 23.5C37 20.5 35.5 19 33 19ZM28 35V45H34C37 45 38.5 43 38.5 40C38.5 37 37 35 34 35Z"/>
+</svg>
