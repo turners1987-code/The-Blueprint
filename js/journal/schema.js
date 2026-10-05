@@ -10,11 +10,32 @@
    scripts/validate-journal.mjs checks that the two agree.
    ============================================================ */
 
-// Version of this journal schema (not of the taxonomy).
-export const SCHEMA_VERSION = 1;
+// Two version numbers, independent of each other:
+//   JOURNAL_SCHEMA_VERSION tracks the record SHAPE: which fields exist,
+//     their names, types and units. Bump it when a field is added,
+//     renamed or re-typed, or a unit changes.
+//   taxonomy_version (TAXONOMY_VERSION here) tracks the VOCABULARY: the
+//     slugs and rules in reference/TAXONOMY.md. Bump it when TAXONOMY does.
+// A new taxonomy version need not change the record shape, and a shape
+// change need not touch the vocabulary. Every record carries
+// taxonomy_version; the journal schema version belongs to this module.
+export const JOURNAL_SCHEMA_VERSION = 1;
 
 // TAXONOMY version this schema covers. Stamped on every record.
 export const TAXONOMY_VERSION = '1.3';
+
+// ── Units of every numeric field ──────────────────────────────
+//   intended_price, actual_fill, stop_price, target_price
+//                         price points of the instrument (for MNQ one
+//                         tick = 0.25 points)
+//   size                  whole contracts
+//   r_multiple            R, a multiple of the planned risk (stop distance)
+//   mae_ticks, mfe_ticks  ticks, as a positive magnitude: how far price
+//                         went against (mae_ticks) or for (mfe_ticks) the trade
+//                         from the fill
+//   time_in_trade_seconds seconds, entry to exit
+//   commissions           US dollars, the total for the whole trade
+//                         (all contracts, both sides)
 
 // ── Vocabularies (TAXONOMY sections 2-5) ──────────────────────
 
@@ -114,8 +135,8 @@ const REQUIRED = [
 const NUMBER_FIELDS = {
   // field: minimum (null = unbounded)
   intended_price: null, actual_fill: null, stop_price: null, target_price: null,
-  r_multiple: null, mae: null, mfe: null,
-  time_in_trade: 0, commissions: 0,
+  r_multiple: null, mae_ticks: null, mfe_ticks: null,
+  time_in_trade_seconds: 0, commissions: 0,
 };
 
 const KNOWN_FIELDS = new Set([
@@ -268,9 +289,9 @@ export function emptyRecord() {
     target_price: null,
     size: null,
     r_multiple: null,
-    mae: null,
-    mfe: null,
-    time_in_trade: null,
+    mae_ticks: null,
+    mfe_ticks: null,
+    time_in_trade_seconds: null,
     commissions: null,
   };
 }

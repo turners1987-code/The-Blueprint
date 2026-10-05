@@ -23,7 +23,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  SCHEMA_VERSION, TAXONOMY_VERSION,
+  JOURNAL_SCHEMA_VERSION, TAXONOMY_VERSION,
   SETUPS, LOCATIONS, TRIGGERS, CONFIRMATIONS, GRADES, ENVIRONMENTS,
   validate, emptyRecord,
 } from '../js/journal/schema.js';
@@ -159,6 +159,10 @@ const NEGATIVE = {
   'bad entry_time': { ...base, entry_time: '2026-09-29 09:52' },
   'size zero': { ...base, size: 0 },
   'negative commissions': { ...base, commissions: -1 },
+  'old field name mae': { ...base, mae: 14 },
+  'old field name time_in_trade': { ...base, time_in_trade: 2280 },
+  'negative mae_ticks': { ...base, mae_ticks: -1 },
+  'negative time_in_trade_seconds': { ...base, time_in_trade_seconds: -1 },
 };
 for (const [name, rec] of Object.entries(NEGATIVE)) {
   if (validateAgainstJsonSchema(rec).length === 0) fail(`negative control "${name}" was accepted by the JSON Schema checker`);
@@ -175,7 +179,7 @@ if (failures.length) {
   for (const f of failures) console.error(`    ${f}`);
   process.exit(1);
 }
-console.log(`✓ journal schema v${SCHEMA_VERSION} (taxonomy ${TAXONOMY_VERSION})`);
+console.log(`✓ journal schema v${JOURNAL_SCHEMA_VERSION} (taxonomy ${TAXONOMY_VERSION})`);
 console.log(`✓ ${examples.length} example records validate under JSON Schema and schema.js`);
 console.log(`✓ enums agree between journal-schema.json and schema.js`);
 console.log(`✓ ${Object.keys(NEGATIVE).length} negative controls rejected by both checkers; impossible calendar dates rejected by schema.js (JSON Schema patterns cannot check the calendar)`);

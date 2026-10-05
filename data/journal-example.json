@@ -20,9 +20,9 @@
     "target_price": 24835.75,
     "size": 2,
     "r_multiple": 2.0,
-    "mae": 3.5,
-    "mfe": 18.5,
-    "time_in_trade": 38,
+    "mae_ticks": 14,
+    "mfe_ticks": 74,
+    "time_in_trade_seconds": 2280,
     "commissions": 2.48
   },
   {
@@ -46,9 +46,9 @@
     "target_price": 24887.25,
     "size": 3,
     "r_multiple": -1.0,
-    "mae": 9.0,
-    "mfe": 3.25,
-    "time_in_trade": 27,
+    "mae_ticks": 36,
+    "mfe_ticks": 13,
+    "time_in_trade_seconds": 1620,
     "commissions": 3.72
   },
   {

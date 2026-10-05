@@ -98,19 +98,19 @@
     },
 
     "intended_price": {
-      "description": "Where the plan said to get filled.",
+      "description": "Where the plan said to get filled, in price points.",
       "type": ["number", "null"]
     },
     "actual_fill": {
-      "description": "Where the fill happened. actual_fill minus intended_price is the fill-placement gap.",
+      "description": "Where the fill happened, in price points. actual_fill minus intended_price is the fill-placement gap.",
       "type": ["number", "null"]
     },
     "stop_price": {
-      "description": "Plan geometry, for grade evaluation.",
+      "description": "Plan geometry, for grade evaluation. Price points.",
       "type": ["number", "null"]
     },
     "target_price": {
-      "description": "Plan geometry, for grade evaluation.",
+      "description": "Plan geometry, for grade evaluation. Price points.",
       "type": ["number", "null"]
     },
     "size": {
@@ -120,24 +120,26 @@
     },
 
     "r_multiple": {
-      "description": "Outcome. Null while the trade is open.",
+      "description": "Outcome in R, a multiple of the planned risk. Null while the trade is open.",
       "type": ["number", "null"]
     },
-    "mae": {
-      "description": "Maximum adverse excursion. The unit is not fixed by TAXONOMY 1.2.",
-      "type": ["number", "null"]
+    "mae_ticks": {
+      "description": "Maximum adverse excursion, in ticks, as a positive magnitude. TAXONOMY 1.2 field mae.",
+      "type": ["number", "null"],
+      "minimum": 0
     },
-    "mfe": {
-      "description": "Maximum favorable excursion. The unit is not fixed by TAXONOMY 1.2.",
-      "type": ["number", "null"]
+    "mfe_ticks": {
+      "description": "Maximum favorable excursion, in ticks, as a positive magnitude. TAXONOMY 1.2 field mfe.",
+      "type": ["number", "null"],
+      "minimum": 0
     },
-    "time_in_trade": {
-      "description": "Outcome. The unit is not fixed by TAXONOMY 1.2.",
+    "time_in_trade_seconds": {
+      "description": "Seconds from entry to exit. TAXONOMY 1.2 field time_in_trade.",
       "type": ["number", "null"],
       "minimum": 0
     },
     "commissions": {
-      "description": "Gate 2 expectancy is after commissions.",
+      "description": "US dollars, the total for the whole trade (all contracts, both sides). Gate 2 expectancy is after commissions.",
       "type": ["number", "null"],
       "minimum": 0
     }
