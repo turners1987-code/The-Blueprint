@@ -2,6 +2,7 @@
   {
     "id": "keylevels",
     "name": "KeyLevels",
+    "display_name": "Key Levels",
     "summary": "Auto-draws 19 reference levels across monthly, weekly, daily (including PD POC/VAH/VAL and settlement) and overnight, Asia and London sessions. Repopulates daily.",
     "category": "Indicators",
     "requires_orderflow": true,
@@ -14,6 +15,7 @@
   {
     "id": "deltaheatmap",
     "name": "DeltaHeatMap",
+    "display_name": "Delta Heat Map",
     "summary": "Heat map of delta across price and time.",
     "category": "Indicators",
     "requires_orderflow": true,
@@ -26,6 +28,7 @@
   {
     "id": "overnightohlc",
     "name": "OvernightOHLC",
+    "display_name": "Overnight OHLC",
     "summary": "Plots the overnight session open, high, low and close.",
     "category": "Indicators",
     "requires_orderflow": false,
@@ -38,6 +41,7 @@
   {
     "id": "sessionrangeboxes",
     "name": "SessionRangeBoxes",
+    "display_name": "Session Range Boxes",
     "summary": "Draws a box around each session range.",
     "category": "Indicators",
     "requires_orderflow": false,
@@ -50,6 +54,7 @@
   {
     "id": "sessioncumulativedelta",
     "name": "SessionCumulativeDelta",
+    "display_name": "Session Cumulative Delta",
     "summary": "Cumulative delta that resets at each session.",
     "category": "Indicators",
     "requires_orderflow": true,
@@ -62,6 +67,7 @@
   {
     "id": "multiplehvn",
     "name": "MultipleHVN",
+    "display_name": "Multiple HVN",
     "summary": "Marks multiple high volume nodes on the chart.",
     "category": "Indicators",
     "requires_orderflow": true,
@@ -74,6 +80,7 @@
   {
     "id": "unfinishedbusiness",
     "name": "UnfinishedBusiness",
+    "display_name": "Unfinished Business",
     "summary": "Flags unfinished auctions left at the extremes of the profile.",
     "category": "Indicators",
     "requires_orderflow": true,
@@ -86,6 +93,7 @@
   {
     "id": "bp-draft-cockpit",
     "name": "BP Draft and BP Cockpit",
+    "display_name": "BP Draft and BP Cockpit",
     "summary": "Order entry tools for placing and managing trades from the chart.",
     "category": "Tools",
     "requires_orderflow": false,
@@ -98,6 +106,7 @@
   {
     "id": "chartsnap",
     "name": "ChartSnap",
+    "display_name": "ChartSnap",
     "summary": "Captures the chart as an image.",
     "category": "Tools",
     "requires_orderflow": false,
@@ -110,6 +119,7 @@
   {
     "id": "journal-capture",
     "name": "Journal Capture AddOn",
+    "display_name": "Journal Capture AddOn",
     "summary": "Writes your trades to the journal folder.",
     "category": "Tools",
     "requires_orderflow": false,

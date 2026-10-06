@@ -22,9 +22,13 @@ function card(tool) {
   const c = el('article', 'card tool-card');
 
   const head = el('div', 'tool-card-head');
-  head.append(el('h3', null, tool.name));
+  head.append(el('h3', null, tool.display_name || tool.name));
   if (tool.version) head.append(el('span', 'tool-version', `v${tool.version}`));
   c.append(head);
+
+  // The exact NinjaScript name, as it appears in NT8 after import.
+  // Skipped when it would only repeat the heading.
+  if (tool.display_name && tool.display_name !== tool.name) c.append(el('code', 'tool-ns-name', tool.name));
 
   const badges = el('div', 'tool-badges');
   const s = STATUS[tool.status];
