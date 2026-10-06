@@ -171,7 +171,7 @@ function gateSection(g) {
         <td class="num">${r.n}</td>
         <td class="num">${r.sessions}</td>
         <td class="num">${rSpan(r.expectancy)}</td>
-        <td>${r.met ? '<span class="badge badge--green">MET</span>' : '<span class="badge badge--cyan">not yet</span>'}${r.commissionsComplete ? '' : ' <span class="badge badge--gold">commissions incomplete</span>'}</td>
+        <td>${r.met ? '<span class="badge badge--green">enough</span>' : '<span class="badge badge--cyan">not yet</span>'}${r.commissionsComplete ? '' : ' <span class="badge badge--gold">commissions incomplete</span>'}</td>
         <td class="why">${esc(r.reasons.join('; ') || '—')}</td>
         <td class="num">${r.simTrades}</td>
         <td class="num">${r.replayTrades}</td>
@@ -179,7 +179,7 @@ function gateSection(g) {
   const head = `
       <thead><tr>
         <th></th><th class="num">Live n</th><th class="num">Sessions</th><th class="num">Expectancy (net)</th>
-        <th>Gate 2</th><th>Why</th><th class="num">Sim</th><th class="num">Replay</th>
+        <th>Enough history</th><th>Why</th><th class="num">Sim</th><th class="num">Replay</th>
       </tr></thead>`;
   const table = (rows, caption) => `
     <div class="table-wrap mt-md">
@@ -190,12 +190,12 @@ function gateSection(g) {
       </table>
     </div>`;
   return `
-    <h2>Gate 2 — own execution</h2>
-    <p>Met at ${g.gate.minLiveTrades} live trades, ${g.gate.minSessions} distinct sessions and expectancy of at least +${g.gate.minExpectancyR}R after commissions — all three, and every trade priced.</p>
+    <h2>Enough of your own history?</h2>
+    <p>Shown as met at ${g.gate.minLiveTrades} live trades, across ${g.gate.minSessions} distinct sessions, with expectancy of at least +${g.gate.minExpectancyR}R after commissions — all three, and every trade priced.</p>
     ${table(g.bySetup.map((r) => row(r, label(r.key))), 'Per setup')}
     ${table(g.byTrigger.map((r) => row(r, label(r.key))), 'Per trigger')}
-    ${g.open ? `<p class="field-hint">${g.open} open trade${g.open === 1 ? '' : 's'} — an open trade has no R yet, so it cannot count toward any gate.</p>` : ''}
-    <p class="rule-note">Sim and replay columns are ${esc(OCC_NOTE)}; they never count toward Gate 2.</p>`;
+    ${g.open ? `<p class="field-hint">${g.open} open trade${g.open === 1 ? '' : 's'} — an open trade has no R yet, so it cannot count toward your history.</p>` : ''}
+    <p class="rule-note">Sim and replay columns are ${esc(OCC_NOTE)}; they never count toward your own history.</p>`;
 }
 
 function cohortSection(title, result, keyName, firstCol, firstColTitle) {
@@ -421,7 +421,7 @@ async function run() {
   root.innerHTML = renderSections([
     { title: 'Summary — live trades', render: () => summarySection(sum) },
     { title: 'Taxonomy versions', render: () => mixedSection(sum.mixedVersions) },
-    { title: 'Gate 2 — own execution', render: () => gateSection(A.gateTwoStatus(records)) },
+    { title: 'Enough of your own history?', render: () => gateSection(A.gateTwoStatus(records)) },
     { title: 'Expectancy by setup', render: () => cohortSection('Expectancy by setup', A.byDimension(records, 'setup'), 'setup', label, 'Setup') },
     { title: 'Expectancy by trigger', render: () => cohortSection('Expectancy by trigger', A.byDimension(records, 'trigger'), 'trigger', label, 'Trigger') },
     { title: 'Expectancy by grade', render: () => cohortSection('Expectancy by grade', A.byDimension(records, 'grade'), 'grade', label, 'Grade') },

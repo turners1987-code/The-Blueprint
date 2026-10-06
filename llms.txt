@@ -23,7 +23,7 @@ The Blueprint is a trading education site built around one trader's own intraday
 
 ## Optional
 
-- [Journal analysis](https://bptrade.co/journal-analysis.html): read-only review of the trade journal — expectancy by setup, trigger and grade, discipline cohorts, stop survival, exit efficiency, sequence effects and Gate 2 status.
+- [Journal analysis](https://bptrade.co/journal-analysis.html): read-only review of the trade journal — expectancy by setup, trigger and grade, discipline cohorts, stop survival, exit efficiency, sequence effects, and whether your own trades have accumulated enough history, across enough sessions, for the numbers to mean anything.
 - [Unlock Full Access](https://bptrade.co/unlock.html): enter the access code from your receipt. No account, no password.
 - [Welcome module](https://bptrade.co/modules/00-welcome.html): what the course covers, how the modules are sequenced, and who it is for.
 - [Toothbrush Therapy](https://bptrade.co/modules/13-toothbrush-therapy.html): the course's core philosophy page — building consistency by repeating the basic routines until they become automatic.
