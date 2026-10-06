@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="ai-seal-title">
+  <title id="ai-seal-title">AI-assisted, verified by a human</title>
+  <defs>
+    <path id="arc-top" d="M 34,100 A 66,66 0 0 1 166,100"/>
+    <path id="arc-bottom" d="M 18,100 A 82,82 0 0 0 182,100"/>
+  </defs>
+  <!-- navy field with gold border ring -->
+  <circle cx="100" cy="100" r="95" fill="#071426" stroke="#f5b94c" stroke-width="8"/>
+  <circle cx="100" cy="100" r="57" fill="#0a1d33" stroke="#f5b94c" stroke-width="3"/>
+  <!-- lettering: generic sans stack, spacing fixed so any fallback font fits -->
+  <g fill="#f5b94c" font-family="Helvetica, Arial, 'Segoe UI', sans-serif" font-weight="700" font-size="17" text-anchor="middle">
+    <text><textPath href="#arc-top" startOffset="50%" textLength="150" lengthAdjust="spacing">AI-ASSISTED</textPath></text>
+    <text><textPath href="#arc-bottom" startOffset="50%" textLength="196" lengthAdjust="spacing">VERIFIED BY A HUMAN</textPath></text>
+  </g>
+  <!-- separator dots at 9 and 3 o'clock -->
+  <circle cx="22" cy="100" r="4" fill="#38d9ff"/>
+  <circle cx="178" cy="100" r="4" fill="#38d9ff"/>
+  <!-- centre mark: a check, verified -->
+  <path d="M 72,102 L 93,123 L 130,78" fill="none" stroke="#f5b94c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

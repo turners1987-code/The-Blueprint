@@ -479,3 +479,7 @@ code {
 }
 .skip-link:focus { left: var(--space-sm); }
 #main-content:focus { outline: none; }
+
+/* --- AI SEAL (footer, fixed in flow — never floating) --- */
+.footer-seal { display: block; width: 64px; height: 64px; margin: var(--space-md) auto 0; }
+.footer-seal img { display: block; width: 64px; height: 64px; }

@@ -1,0 +1,8 @@
+.ai-page { padding-top: 60px; }
+.ai-header { padding: var(--space-2xl) 0; border-bottom: 1px solid var(--border); }
+.ai-body { padding: var(--space-xl) 0 var(--space-2xl); }
+.ai-body section { margin-top: var(--space-xl); }
+.ai-body h2 { font-size: 1.6rem; margin-bottom: var(--space-md); }
+.ai-body ul { padding-left: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-sm); }
+.ai-body p + p { margin-top: var(--space-md); }
+.ai-seal-large { display: block; width: 160px; height: 160px; margin-bottom: var(--space-lg); }

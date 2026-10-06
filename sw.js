@@ -7,7 +7,7 @@
    cache is deleted when the new worker activates.
    ============================================================ */
 
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 const CACHE_NAME = `blueprint-${CACHE_VERSION}`;
 
 // App shell: paths are relative to this file (the site root).
@@ -16,6 +16,7 @@ const SHELL = [
   'index.html',
   '404.html',
   'glossary.html',
+  'ai.html',
   'journal.html',
   'journal-analysis.html',
   'modules/flashcards.html',
@@ -45,6 +46,8 @@ const SHELL = [
   'data/modules.json',
   'manifest.json',
   'assets/favicon.svg',
+  'assets/ai-seal.svg',
+  'css/ai.css',
 ];
 
 // Module pages that exist (published, or drafting and linked) come from
