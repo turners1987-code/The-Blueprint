@@ -13,8 +13,8 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish",
           "visual": "bull-candle",
-          "desc": "Price closed above where it opened. Buyers were in control for this candle. The larger the body, the stronger the conviction.",
-          "note": "Color alone means nothing without context. A bullish candle inside a downtrend is noise. At key support, it is a signal."
+          "desc": "Price closed above where it opened. Buyers were in control for this candle. A larger body is read as stronger conviction.",
+          "note": "Color alone means nothing without context. Traders read a bullish candle inside a downtrend differently from one at key support."
         },
         {
           "id": "01-02",
@@ -22,8 +22,8 @@
           "sentiment": "bearish",
           "sentimentLabel": "Bearish",
           "visual": "bear-candle",
-          "desc": "Price closed below where it opened. Sellers were in control for this candle. The larger the body, the stronger the selling pressure.",
-          "note": "A bearish candle at support in an uptrend is a pullback. The same candle at resistance after a rally is a warning."
+          "desc": "Price closed below where it opened. Sellers were in control for this candle. A larger body is read as stronger selling pressure.",
+          "note": "In an uptrend, a bearish candle at support is read as a pullback. The same candle at resistance after a rally is read as a warning."
         },
         {
           "id": "01-03",
@@ -31,8 +31,8 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish or Bearish",
           "visual": "marubozu",
-          "desc": "No wicks. Price opened at one extreme and closed at the other. Pure momentum — no rejection, no hesitation. Whoever was in control, dominated.",
-          "note": "A bullish marubozu shows total buyer control. A bearish marubozu shows total seller control. Treat these as momentum signals."
+          "desc": "No wicks. Price opened at one extreme and closed at the other. No wicks means price did not trade back from either extreme during the candle.",
+          "note": "A bullish marubozu is read as buyers in control for the whole candle; a bearish marubozu as sellers in control."
         },
         {
           "id": "01-04",
@@ -40,8 +40,8 @@
           "sentiment": "neutral",
           "sentimentLabel": "Neutral — Indecision",
           "visual": "doji",
-          "desc": "Open and close are nearly identical. Neither side won. The market is pausing — waiting. The longer the wicks, the more contested the price.",
-          "note": "A doji is not a signal. It is a warning. Look left for context before acting. Common variants: Standard, Long-Legged, Dragonfly, Gravestone."
+          "desc": "Open and close are nearly identical. Neither side won. Traders read it as a pause. The longer the wicks, the more contested the price.",
+          "note": "Traders read a doji as indecision and look left for context. Common variants: Standard, Long-Legged, Dragonfly, Gravestone."
         },
         {
           "id": "01-05",
@@ -50,7 +50,7 @@
           "sentimentLabel": "Bullish — Context Required",
           "visual": "hammer",
           "desc": "Long lower wick, small body near the top. Sellers pushed price hard — buyers fought back and closed near the open. The wick is the story. The body color is irrelevant.",
-          "note": "Must appear after a downtrend or at support. A red hammer is still bullish. Same shape as Hanging Man — location defines meaning."
+          "note": "Traders look for it after a downtrend or at support. Body color is not what defines it. Same shape as Hanging Man — location defines how it is read."
         },
         {
           "id": "01-06",
@@ -58,8 +58,8 @@
           "sentiment": "context",
           "sentimentLabel": "Bearish — Context Required",
           "visual": "hanging-man",
-          "desc": "Long lower wick, small body near the top. Identical shape to the Hammer. At the top of an uptrend, buyers could not hold gains — warning that sellers are entering.",
-          "note": "Must appear after an uptrend or at resistance. Body color does not define sentiment. Location is everything."
+          "desc": "Long lower wick, small body near the top. Identical shape to the Hammer. At the top of an uptrend it is read as buyers failing to hold gains, and as a possible sign that sellers are entering.",
+          "note": "Traders look for it after an uptrend or at resistance. Body color does not define how it is read; location does."
         },
         {
           "id": "01-07",
@@ -67,8 +67,8 @@
           "sentiment": "context",
           "sentimentLabel": "Bullish — Context Required",
           "visual": "inverted-hammer",
-          "desc": "Long upper wick, small body near the bottom. Buyers tried to push higher — sellers rejected the move. But the attempt itself signals buyer interest. Needs confirmation.",
-          "note": "Must appear after a downtrend or at support. A green body does not make it more bullish. Same shape as Shooting Star — location defines meaning."
+          "desc": "Long upper wick, small body near the bottom. Buyers tried to push higher — sellers rejected the move. Traders read the attempt as buyer interest and wait for confirmation.",
+          "note": "Traders look for it after a downtrend or at support. Body color does not change how it is read. Same shape as Shooting Star — location defines how it is read."
         },
         {
           "id": "01-08",
@@ -77,7 +77,7 @@
           "sentimentLabel": "Bearish — Context Required",
           "visual": "shooting-star",
           "desc": "Long upper wick, small body near the bottom. Buyers pushed price up hard — sellers rejected the move and closed near the open. A green body does not make this bullish.",
-          "note": "Must appear after an uptrend or at resistance. Same shape as Inverted Hammer — location is everything."
+          "note": "Traders look for it after an uptrend or at resistance. Same shape as Inverted Hammer — location defines how it is read."
         },
         {
           "id": "01-09",
@@ -86,7 +86,7 @@
           "sentimentLabel": "Concept",
           "visual": "shadows-wicks",
           "desc": "The thin lines above and below the candle body. Upper wick = buyers pushed price here but got rejected. Lower wick = sellers pushed price here but got rejected. Wicks show the battlefield.",
-          "note": "Long wicks at key levels are high-value information. They show where price was refused — and often where it will be refused again."
+          "note": "Traders mark long wicks at key levels as places where price was refused, and watch those levels on later approaches."
         },
         {
           "id": "01-10",
@@ -95,7 +95,7 @@
           "sentimentLabel": "Bullish or Bearish",
           "visual": "engulfing",
           "desc": "A candle that completely engulfs the prior candle's body. Bullish engulfing: large green candle swallows prior red. Bearish engulfing: large red candle swallows prior green. One side overwhelmed the other.",
-          "note": "Most powerful at key levels after an extended move. The larger the engulf, the stronger the signal. Volume confirms."
+          "note": "Traders look for it at key levels after an extended move. A larger engulf is read as a stronger one, and volume is checked alongside."
         },
         {
           "id": "01-11",
@@ -103,8 +103,8 @@
           "sentiment": "both",
           "sentimentLabel": "Bullish or Bearish",
           "visual": "harami",
-          "desc": "A small candle contained entirely within the prior candle's body. The large candle sets the range — the small candle shows momentum is slowing. A pause, not a reversal.",
-          "note": "Weaker than the engulfing. Needs confirmation from the next candle. Bullish harami after downtrend, bearish harami after uptrend."
+          "desc": "A small candle contained entirely within the prior candle's body. The large candle sets the range — the small candle is read as momentum slowing.",
+          "note": "Traders read it as a weaker sign than the engulfing and wait for the next candle. Bullish harami is looked for after a downtrend, bearish harami after an uptrend."
         },
         {
           "id": "01-12",
@@ -112,8 +112,8 @@
           "sentiment": "both",
           "sentimentLabel": "Bullish or Bearish",
           "visual": "kicker",
-          "desc": "Two candles in opposite directions with a gap between them. The strongest single reversal signal in candlestick analysis. Represents a complete shift in sentiment — often driven by news.",
-          "note": "Rare but powerful. Bullish kicker: red candle followed by green that gaps above. Bearish kicker: green followed by red that gaps below."
+          "desc": "Two candles in opposite directions with a gap between them. Traders read it as a complete shift in sentiment, often around news.",
+          "note": "Bullish kicker: red candle followed by green that gaps above. Bearish kicker: green followed by red that gaps below."
         }
       ]
     },
@@ -127,8 +127,8 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish",
           "visual": "morning-star",
-          "desc": "Three candles: a large bearish candle, a small indecision candle, then a large bullish candle closing above the midpoint of the first. A reversal pattern that signals seller exhaustion.",
-          "note": "The middle candle is the pivot — the exact moment selling momentum ran out. The third candle is the confirmation."
+          "desc": "Three candles: a large bearish candle, a small indecision candle, then a large bullish candle closing above the midpoint of the first. Traders read it as a possible reversal and as selling losing momentum.",
+          "note": "The middle candle is the pivot, where the move stalls. The third candle is what traders look to as confirmation."
         },
         {
           "id": "02-02",
@@ -145,8 +145,8 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish",
           "visual": "three-white-soldiers",
-          "desc": "Three consecutive bullish candles, each opening within the prior body and closing progressively higher. Strong, sustained buying pressure across three sessions.",
-          "note": "After a downtrend, this pattern signals a genuine shift. After a long uptrend, be cautious — exhaustion can follow."
+          "desc": "Three consecutive bullish candles, each opening within the prior body and closing progressively higher. Read as sustained buying pressure across three sessions.",
+          "note": "Traders read it by location: after a downtrend as a possible shift, after a long uptrend with caution about exhaustion."
         },
         {
           "id": "02-04",
@@ -154,7 +154,7 @@
           "sentiment": "bearish",
           "sentimentLabel": "Bearish",
           "visual": "three-black-crows",
-          "desc": "Three consecutive bearish candles, each opening within the prior body and closing progressively lower. The mirror of Three White Soldiers. Sustained, relentless selling.",
+          "desc": "Three consecutive bearish candles, each opening within the prior body and closing progressively lower. The mirror of Three White Soldiers. Read as sustained selling.",
           "note": "Traders look for it after an extended uptrend. Each candle has a small or no lower wick, which is read as sellers holding control through the session."
         },
         {
@@ -164,7 +164,7 @@
           "sentimentLabel": "Bullish or Bearish",
           "visual": "piercing-dark-cloud",
           "desc": "Two-candle reversal patterns. Piercing: bearish candle followed by bullish that closes above the midpoint of the first (bullish). Dark Cloud Cover: opposite direction (bearish).",
-          "note": "The key requirement: the second candle must close above (or below) the 50% midpoint of the first candle's body. Less than 50% is just noise."
+          "note": "The key requirement: the second candle must close above (or below) the 50% midpoint of the first candle's body. A close short of the midpoint does not count as the pattern."
         }
       ]
     },
@@ -178,8 +178,8 @@
           "sentiment": "bearish",
           "sentimentLabel": "Bearish",
           "visual": "double-top",
-          "desc": "Price reaches the same high twice and fails to break through. Two rejections at resistance. The neckline break confirms the pattern and signals a reversal lower.",
-          "note": "Measure the distance from tops to neckline — that is the projected target after the break. Volume typically decreases on the second top."
+          "desc": "Price reaches the same high twice and fails to break through. Two rejections at resistance. A break of the neckline is what traders treat as confirmation.",
+          "note": "Traders measure the distance from the tops to the neckline to set a projected target after a break, and watch for lower volume on the second top."
         },
         {
           "id": "03-02",
@@ -187,8 +187,8 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish",
           "visual": "double-bottom",
-          "desc": "Price tests the same low twice and holds. Two rejections at support. The neckline break to the upside confirms the reversal.",
-          "note": "The mirror of Double Top. The second bottom ideally holds slightly higher than the first, showing less selling pressure."
+          "desc": "Price tests the same low twice and holds. Two rejections at support. A break of the neckline to the upside is what traders treat as confirmation.",
+          "note": "The mirror of Double Top. A second bottom slightly higher than the first is read as less selling pressure."
         },
         {
           "id": "03-03",
@@ -196,8 +196,8 @@
           "sentiment": "bearish",
           "sentimentLabel": "Bearish",
           "visual": "triple-top",
-          "desc": "Three failed attempts to break through the same resistance level. Each failure adds weight to the rejection. When the neckline breaks, the move is typically decisive.",
-          "note": "More reliable than a double top because of the third confirmation. The longer price spends forming the pattern, the more significant the eventual break."
+          "desc": "Three failed attempts to break through the same resistance level. Traders read each failure as adding weight to the rejection.",
+          "note": "A third test is read as carrying more weight than a double top. Traders often treat a longer formation as more significant."
         },
         {
           "id": "03-04",
@@ -205,8 +205,8 @@
           "sentiment": "bearish",
           "sentimentLabel": "Bearish",
           "visual": "head-shoulders",
-          "desc": "Three peaks: a smaller left shoulder, a higher head, a smaller right shoulder. The neckline connects the two troughs. Break below neckline signals reversal.",
-          "note": "One of the most recognized and reliable reversal patterns. Volume typically peaks on the left shoulder and declines on the head and right shoulder."
+          "desc": "Three peaks: a smaller left shoulder, a higher head, a smaller right shoulder. The neckline connects the two troughs. A break below the neckline is what traders treat as the reversal signal.",
+          "note": "One of the most widely recognized reversal patterns. Traders often look for volume to peak on the left shoulder and decline through the head and right shoulder."
         },
         {
           "id": "03-05",
@@ -214,8 +214,8 @@
           "sentiment": "bearish",
           "sentimentLabel": "Bearish",
           "visual": "rounding-top",
-          "desc": "A gradual, curved peak showing slow distribution over time. Unlike sharp reversals, this pattern develops slowly as buyers lose control incrementally.",
-          "note": "Common in longer timeframes. The slow curve reflects institutional distribution — smart money selling into strength over weeks or months."
+          "desc": "A gradual, curved peak, read as slow distribution over time. Unlike sharp reversals, it develops slowly and is read as buyers losing control gradually.",
+          "note": "Looked for on longer timeframes. Traders read the slow curve as distribution: selling into strength over weeks or months."
         }
       ]
     },
@@ -229,8 +229,8 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish",
           "visual": "bull-flag",
-          "desc": "A sharp upward move (the pole) followed by a controlled, downward-sloping consolidation (the flag). The flag is a pause — buyers catching breath before the next leg up.",
-          "note": "The tighter and more orderly the flag, the cleaner the breakout. Volume should decrease during the flag and expand on the breakout."
+          "desc": "A sharp upward move (the pole) followed by a controlled, downward-sloping consolidation (the flag). Traders read the flag as a pause, with buyers regrouping.",
+          "note": "Traders prefer a tight, orderly flag, and look for volume to fall during the flag and rise on a breakout."
         },
         {
           "id": "04-02",
@@ -238,8 +238,8 @@
           "sentiment": "bearish",
           "sentimentLabel": "Bearish",
           "visual": "bear-flag",
-          "desc": "A sharp downward move followed by a controlled, upward-sloping consolidation. The consolidation is a dead-cat bounce — sellers regrouping before continuing lower.",
-          "note": "Mirror of Bull Flag. The upward drift in the flag is read as sellers allowing a relief bounce before the next leg down."
+          "desc": "A sharp downward move followed by a controlled, upward-sloping consolidation. Traders read the consolidation as a relief bounce, with sellers regrouping.",
+          "note": "Mirror of Bull Flag. The upward drift in the flag is read as sellers allowing a relief bounce."
         },
         {
           "id": "04-03",
@@ -247,7 +247,7 @@
           "sentiment": "neutral",
           "sentimentLabel": "Continuation — Both Directions",
           "visual": "pennant",
-          "desc": "A sharp move followed by a symmetrical triangle consolidation — converging trendlines forming a small symmetrical triangle. Price coils tighter before breaking in the direction of the original move.",
+          "desc": "A sharp move followed by a symmetrical triangle consolidation — converging trendlines forming a small symmetrical triangle. Price coils tighter inside the triangle.",
           "note": "Similar to a flag but with converging lines rather than parallel. Traders watch for a break in the direction of the original move."
         },
         {
@@ -265,8 +265,8 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish",
           "visual": "ascending-triangle",
-          "desc": "Flat resistance at the top, rising support below. Buyers keep making higher lows while sellers defend a fixed level. Pressure builds — when resistance breaks, the move is typically strong.",
-          "note": "The flat top is where sellers are positioned. Each time buyers make a higher low, sellers weaken. A clean break above resolves the standoff."
+          "desc": "Flat resistance at the top, rising support below. Buyers keep making higher lows while sellers defend a fixed level. Traders read this as pressure building under resistance.",
+          "note": "The flat top is where sellers are read to be positioned. Each higher low is read as buyers pressing against them. A break above is what traders watch for."
         },
         {
           "id": "04-06",
@@ -275,7 +275,7 @@
           "sentimentLabel": "Bearish",
           "visual": "descending-triangle",
           "desc": "Flat support at the bottom, declining resistance above. Sellers keep making lower highs while buyers defend a fixed level. Mirror of Ascending Triangle.",
-          "note": "The flat bottom is where buyers are positioned. Each lower high shows sellers are more aggressive. A clean break below resolves the standoff."
+          "note": "The flat bottom is where buyers are read to be positioned. Each lower high is read as sellers pressing against them. A break below is what traders watch for."
         },
         {
           "id": "04-07",
@@ -283,8 +283,8 @@
           "sentiment": "neutral",
           "sentimentLabel": "Neutral — Direction Pending",
           "visual": "symmetrical-triangle",
-          "desc": "Converging trendlines with lower highs and higher lows. Neither buyers nor sellers are winning. Price coils — energy builds. The breakout direction is the answer.",
-          "note": "Do not predict the direction. Wait for the break. Volume contraction during formation, expansion on the break is the ideal setup."
+          "desc": "Converging trendlines with lower highs and higher lows. Neither side has taken control. Price coils tighter.",
+          "note": "Traders do not assume a direction and wait for the break. Contracting volume during formation and expanding volume on the break is what many look for."
         }
       ]
     },
@@ -307,7 +307,7 @@
           "sentiment": "neutral",
           "sentimentLabel": "Price Behavior",
           "visual": "gap",
-          "desc": "When price opens significantly higher or lower than the prior close, leaving an unfilled area on the chart. Gaps represent a sudden shift in sentiment — often from news or overnight events.",
+          "desc": "When price opens significantly higher or lower than the prior close, leaving an unfilled area on the chart. Gaps are read as a sudden shift in sentiment, often around news or overnight events.",
           "note": "Gap N Go: price continues in the gap direction. Gap Fill: price reverses to close the gap. Which of the two a trader is looking for depends on context."
         },
         {
@@ -317,7 +317,7 @@
           "sentimentLabel": "Foundational Concept",
           "visual": "trend-range",
           "desc": "Trend: price making consistent higher highs and higher lows (uptrend) or lower highs and lower lows (downtrend). Range: price oscillating between defined support and resistance without direction.",
-          "note": "The most important question before every trade: is this market trending or ranging? The wrong answer leads to the wrong setup."
+          "note": "Traders ask before each trade whether the market is trending or ranging, since the answer decides which setup they look for."
         }
       ]
     }
