@@ -275,7 +275,14 @@ if (htmlFiles.length === 0) {
 let moduleIds = null; // null → check 7 skipped
 if (existsSync(MODULES_JSON)) {
   try {
-    moduleIds = moduleIdsFrom(JSON.parse(readFileSync(MODULES_JSON, 'utf8')));
+    const parsed = JSON.parse(readFileSync(MODULES_JSON, 'utf8'));
+    moduleIds = moduleIdsFrom(parsed);
+    const bad = (Array.isArray(parsed) ? parsed : parsed.modules || [])
+      .filter(m => m && m.tier !== 'free' && m.tier !== 'paid').map(m => m.id);
+    if (bad.length) {
+      console.error(`data/modules.json: "tier" must be "free" or "paid" on every entry (bad: ${bad.join(', ')})`);
+      process.exit(1);
+    }
   } catch (e) {
     console.error(`data/modules.json exists but is not valid JSON: ${e.message}`);
     process.exit(1);

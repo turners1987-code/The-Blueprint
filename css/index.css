@@ -675,6 +675,15 @@
   font-size: 0.72rem;
 }
 
+.module-lock {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-left: var(--space-sm);
+  color: var(--gold);
+  vertical-align: middle;
+}
+
 .module-row.completed .module-status-value {
   color: var(--green);
 }

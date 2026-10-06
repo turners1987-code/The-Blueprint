@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — The Blueprint</title>
+  <meta name="description" content="The Blueprint has a free tier and a Full Access tier. See what each includes and the current opening rate.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Pricing — The Blueprint">
+  <meta property="og:description" content="The Blueprint has a free tier and a Full Access tier. See what each includes and the current opening rate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bptrade.co/pricing.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pricing.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="pricing-page" id="main-content" tabindex="-1">
+    <header class="pricing-header">
+      <div class="container">
+        <div class="eyebrow">Pricing</div>
+        <h1>Free to read. Paid to use.</h1>
+        <p class="lead mt-sm">The foundations and the daily process are free. Full Access adds the setups, the capstone and the tools that put them to work.</p>
+      </div>
+    </header>
+
+    <div class="pricing-body">
+      <div class="container container--wide">
+        <div class="pricing-grid">
+
+          <section class="card pricing-plan" aria-labelledby="plan-free">
+            <div>
+              <h2 id="plan-free">Free</h2>
+              <div class="pricing-plan-sub">No card required</div>
+            </div>
+            <ul class="pricing-list">
+              <li>All Start and Process modules</li>
+              <li>Glossary</li>
+              <li>Card deck</li>
+              <li>Dial In</li>
+              <li>Reference pages</li>
+            </ul>
+            <div class="pricing-actions">
+              <a href="index.html#course" class="btn btn--ghost">Browse the modules</a>
+            </div>
+          </section>
+
+          <section class="card card--gold pricing-plan" aria-labelledby="plan-full">
+            <div>
+              <h2 id="plan-full">Full Access</h2>
+              <div class="pricing-plan-sub">Everything in Free, plus:</div>
+            </div>
+            <ul class="pricing-list">
+              <li class="pricing-inherit">Everything in Free</li>
+              <li>The Blueprint modules</li>
+              <li>The capstone</li>
+              <li>The trade journal</li>
+              <li>The NT8 tools</li>
+              <li>The cockpit cards</li>
+            </ul>
+            <div>
+              <div class="pricing-amount">
+                <s class="pricing-old"><span class="sr-only">Regular price </span>$47/month</s>
+                <span class="pricing-now"><span class="sr-only">Opening rate </span>$7/month</span>
+              </div>
+              <p class="pricing-note mt-sm">$7/month is the opening rate and is temporary. The regular price is $47/month.</p>
+            </div>
+            <div class="pricing-actions">
+              <!-- TODO: replace this placeholder with the Lemon Squeezy checkout URL. -->
+              <a href="https://bptrade.co/pricing#checkout" class="btn btn--primary" id="checkout">Get Full Access</a>
+              <!-- TODO: /unlock.html does not exist yet. Build it before this link goes live. -->
+              <a href="https://bptrade.co/unlock.html">Have a code? Enter it here</a>
+            </div>
+          </section>
+
+        </div>
+
+        <p class="pricing-note pricing-aside">The journal and tools require NinjaTrader 8 on Windows.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+      <p style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:var(--space-md); max-width:100%;">
+        The Blueprint is an educational resource. Trading futures involves substantial risk. Past performance does not guarantee future results.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+</body>
+</html>

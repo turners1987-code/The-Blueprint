@@ -6,6 +6,11 @@
    Published modules render as clickable rows linking to their
    page. Planned modules render as non-clickable rows marked
    "Coming soon" — no link to an empty page.
+
+   Tier is independent of status. A paid module that has a page
+   (published or drafting) carries a small lock marker; a planned
+   module never does — an unwritten module is not locked, it is
+   unwritten. A row shows "Coming soon" or the lock, never both.
    ============================================================ */
 
 import { Progress } from './progress.js';
@@ -16,6 +21,9 @@ if (table) {
   const escapeHtml = (s) => String(s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+  // Inline SVG so it inherits colour; the text label is for screen readers.
+  const LOCK = `<span class="module-lock" title="Full Access"><svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 1a3.5 3.5 0 0 0-3.5 3.5V6H4a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-.5V4.5A3.5 3.5 0 0 0 8 1zm-2 3.5a2 2 0 1 1 4 0V6H6V4.5z"/></svg><span class="sr-only">Full Access</span></span>`;
 
   const row = (m) => {
     // Published and drafting modules both have a page and link to it;
@@ -34,7 +42,7 @@ if (table) {
       return `<a href="modules/${m.number}-${m.slug}.html" class="module-row${done ? ' completed' : ''}${drafting ? ' module-row--drafting' : ''}" data-module-id="${escapeHtml(m.id)}">${head}
           <div class="module-cell module-status">
             <div class="module-status-label">Status</div>
-            <div class="module-status-value">${drafting ? 'Being revised' : 'Published'}</div>
+            <div class="module-status-value">${drafting ? 'Being revised' : 'Published'}${m.tier === 'paid' ? LOCK : ''}</div>
           </div>
           <div class="module-cell module-grade">
             <div class="module-grade-label">Grade</div>

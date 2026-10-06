@@ -7,6 +7,7 @@
     "part": "start",
     "summary": "What this is, how it is sequenced, and how to move through it.",
     "status": "published",
+    "tier": "free",
     "prereq": []
   },
   {
@@ -17,6 +18,7 @@
     "part": "start",
     "summary": "The two gates, the status badges, and why nothing here is presented as proven.",
     "status": "planned",
+    "tier": "free",
     "prereq": ["00-welcome"]
   },
   {
@@ -27,6 +29,7 @@
     "part": "blueprint",
     "summary": "Idea, setup, trigger. Every trade traces up through all three, in order.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["01-evidence-standard"]
   },
   {
@@ -37,6 +40,7 @@
     "part": "blueprint",
     "summary": "Pre-marked and in-session levels, zones not lines, and the stop-structure test.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["02-three-tiers"]
   },
   {
@@ -47,6 +51,7 @@
     "part": "blueprint",
     "summary": "The level holds. Acceptance beyond a level, and the one form with history behind it.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["03-what-counts-as-a-level"]
   },
   {
@@ -57,6 +62,7 @@
     "part": "blueprint",
     "summary": "The level fails. Includes the failed breakdown and breakout variant.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["04-trend-continuation"]
   },
   {
@@ -67,6 +73,7 @@
     "part": "blueprint",
     "summary": "Gap Fill and Gap N Go. What a gap is, where it targets, and what the data killed.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["05-range-rejection"]
   },
   {
@@ -77,6 +84,7 @@
     "part": "blueprint",
     "summary": "The price event that starts a trade, and why order flow confirms rather than triggers.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["06-gap-setups"]
   },
   {
@@ -87,6 +95,7 @@
     "part": "blueprint",
     "summary": "Level, stop, risk, size, entry. In that order, every time.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["07-triggers"]
   },
   {
@@ -97,6 +106,7 @@
     "part": "blueprint",
     "summary": "The window, the kill switch, the reset protocol, and the news blackout.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["08-trade-construction"]
   },
   {
@@ -107,6 +117,7 @@
     "part": "process",
     "summary": "What happens before the open, finished by 09:25.",
     "status": "planned",
+    "tier": "free",
     "prereq": ["09-hard-rules"]
   },
   {
@@ -117,6 +128,7 @@
     "part": "process",
     "summary": "Closing the day: review, grade, record, and stop.",
     "status": "planned",
+    "tier": "free",
     "prereq": ["10-premarket-routine"]
   },
   {
@@ -127,6 +139,7 @@
     "part": "process",
     "summary": "Grading entries, marking execution, and the weekly and monthly review.",
     "status": "planned",
+    "tier": "free",
     "prereq": ["11-post-session-routine"]
   },
   {
@@ -137,6 +150,7 @@
     "part": "process",
     "summary": "Do the common uncommonly well. The eight daily habits.",
     "status": "published",
+    "tier": "free",
     "prereq": ["12-journaling"]
   },
   {
@@ -147,6 +161,7 @@
     "part": "capstone",
     "summary": "Base rate versus conditional, sample size, and why an edge is not a forecast.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["13-toothbrush-therapy"]
   },
   {
@@ -157,6 +172,7 @@
     "part": "capstone",
     "summary": "Lock the rule, test against a null, split halves, check recency, then execute it yourself.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["14-reading-a-probability"]
   },
   {
@@ -167,6 +183,7 @@
     "part": "capstone",
     "summary": "The killed list, with reasons and reopen conditions.",
     "status": "planned",
+    "tier": "paid",
     "prereq": ["15-building-your-own-playbook"]
   }
 ]

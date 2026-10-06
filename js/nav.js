@@ -34,6 +34,7 @@ function initNav() {
     { key: 'journal',  label: 'Journal',   href: 'journal.html' },
     { key: 'deck',     label: 'Card Deck', href: 'modules/flashcards.html' },
     { key: 'dial',     label: 'Dial In',   href: 'modules/dial-in.html' },
+    { key: 'pricing',  label: 'Pricing',   href: 'pricing.html' },
     { key: 'home',     label: 'Home',      href: 'index.html' },
   ];
 
@@ -45,6 +46,7 @@ function initNav() {
     'journal-analysis.html': 'journal', // the journal's review page
     'flashcards.html': 'deck',
     'dial-in.html': 'dial',
+    'pricing.html': 'pricing',
     'index.html': 'home',
   };
   const activeKey = EXACT[page] || (prefix ? 'modules' : null);

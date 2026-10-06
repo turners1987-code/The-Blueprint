@@ -1,0 +1,23 @@
+.pricing-page { padding-top: 60px; }
+.pricing-header { padding: var(--space-2xl) 0; border-bottom: 1px solid var(--border); }
+.pricing-body { padding: var(--space-2xl) 0; }
+
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); align-items: stretch; }
+.pricing-plan { display: flex; flex-direction: column; gap: var(--space-md); }
+.pricing-plan h2 { font-size: 1.4rem; }
+.pricing-plan-sub { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
+.pricing-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-sm); flex: 1; }
+.pricing-list li { font-size: 0.95rem; color: var(--text-secondary); padding-left: var(--space-lg); position: relative; }
+.pricing-list li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-family: var(--font-mono); }
+.pricing-list li.pricing-inherit { color: var(--text-primary); }
+
+.pricing-amount { font-family: var(--font-display); font-weight: 900; color: var(--text-primary); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-md); }
+.pricing-old { font-size: 1.2rem; color: var(--text-muted); text-decoration: line-through; }
+.pricing-now { font-size: 2.4rem; color: var(--gold); line-height: 1; }
+.pricing-note { font-size: 0.85rem; color: var(--text-muted); }
+.pricing-actions { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-md); }
+.pricing-aside { margin-top: var(--space-xl); }
+
+@media (max-width: 768px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
