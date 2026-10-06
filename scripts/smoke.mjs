@@ -112,8 +112,9 @@ const server = createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': MIME[path.extname(file).toLowerCase()] || 'application/octet-stream' });
     res.end(body);
   } catch {
-    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-    res.end('not found');
+    // Like Cloudflare Pages: a missing URL gets 404.html, with a 404 status.
+    res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.end(readFileSync(path.join(ROOT, '404.html')));
   }
 });
 await new Promise((res) => server.listen(0, '127.0.0.1', res));
@@ -121,6 +122,9 @@ const ORIGIN = `http://127.0.0.1:${server.address().port}`;
 const PAGES = walkHtml(ROOT)
   .map((f) => path.relative(ROOT, f).split(path.sep).join('/'))
   .sort();
+
+// Missing URLs at several depths must still serve a styled 404 page.
+const NOT_FOUND_PROBES = ['nope', 'modules/nope', 'modules/deep/nope'];
 
 // ── Minimal CDP client over WebSocket ──────────────────────────
 function cdpConnect(url) {
@@ -238,7 +242,8 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 // ── Load every page ────────────────────────────────────────────
 let failed = 0;
 console.log(`smoke: ${PAGES.length} pages on ${ORIGIN} (${path.basename(browserPath)})`);
-for (const page of PAGES) {
+for (const page of [...PAGES, ...NOT_FOUND_PROBES]) {
+  const probe = NOT_FOUND_PROBES.includes(page);
   const url = `${ORIGIN}/${page}`;
   let api = null;
   let tab = null;
@@ -254,6 +259,22 @@ for (const page of PAGES) {
     await api.send('Page.navigate', { url });
     await withTimeout(loaded, PAGE_TIMEOUT_MS, `loading ${page}`);
     await sleep(SETTLE_MS); // modules run after load; async renders finish here
+    if (probe) {
+      // The 404 status on the document itself is expected; anything else is not.
+      for (let i = errors.length - 1; i >= 0; i--) {
+        if (errors[i].url === url && /404/.test(errors[i].text)) errors.splice(i, 1);
+      }
+      const { result } = await api.send('Runtime.evaluate', { returnByValue: true, expression:
+        `({ bg: getComputedStyle(document.documentElement).backgroundColor,
+            btn: getComputedStyle(document.querySelector('.btn--primary')).backgroundImage,
+            nav: !!document.querySelector('.site-nav'),
+            h1: document.querySelector('h1') && document.querySelector('h1').textContent })` });
+      const v = result.value;
+      if (v.bg !== 'rgb(7, 20, 38)') errors.push({ text: `404 page is unstyled (page background ${v.bg})`, url: '' });
+      if (!v.btn || v.btn === 'none') errors.push({ text: '404 page: .btn--primary has no gradient (CSS missing)', url: '' });
+      if (!v.nav) errors.push({ text: '404 page: nav was not injected (js/nav.js missing)', url: '' });
+      if (v.h1 !== 'Page not found') errors.push({ text: `404 page: unexpected h1 ${v.h1}`, url: '' });
+    }
     if (errors.length) {
       failed++;
       console.log(`✗ /${page}`);
@@ -282,5 +303,5 @@ for (const delay of [0, 500]) {
 }
 
 console.log('─'.repeat(40));
-console.log(`${PAGES.length - failed} passed, ${failed} failed`);
+console.log(`${PAGES.length + NOT_FOUND_PROBES.length - failed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
