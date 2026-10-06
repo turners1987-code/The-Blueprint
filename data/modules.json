@@ -138,7 +138,7 @@
     "slug": "journaling",
     "part": "process",
     "summary": "Grading entries, marking execution, and the weekly and monthly review.",
-    "status": "planned",
+    "status": "published",
     "tier": "free",
     "prereq": ["11-post-session-routine"]
   },
