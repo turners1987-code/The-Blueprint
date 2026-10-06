@@ -16,7 +16,7 @@
     "title": "How We Know What We Know",
     "slug": "evidence-standard",
     "part": "start",
-    "summary": "The two gates, the status badges, and why nothing here is presented as proven.",
+    "summary": "How to check a trading claim, including the ones made here, and why nothing is presented as proven.",
     "status": "published",
     "tier": "free",
     "prereq": ["00-welcome"]
@@ -71,7 +71,7 @@
     "title": "The Gap Setups",
     "slug": "gap-setups",
     "part": "blueprint",
-    "summary": "Gap Fill and Gap N Go. What a gap is, where it targets, and what the data killed.",
+    "summary": "Gap Fill and Gap N Go. What a gap is, where it targets, and what testing did not support.",
     "status": "planned",
     "tier": "paid",
     "prereq": ["05-range-rejection"]
@@ -181,7 +181,7 @@
     "title": "What I Got Wrong",
     "slug": "what-i-got-wrong",
     "part": "capstone",
-    "summary": "The killed list, with reasons and reopen conditions.",
+    "summary": "Things that were tried and dropped, and why.",
     "status": "planned",
     "tier": "paid",
     "prereq": ["15-building-your-own-playbook"]
