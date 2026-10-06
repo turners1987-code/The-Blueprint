@@ -8,6 +8,7 @@
     "check:journal": "node scripts/validate-journal.mjs",
     "test:storage": "node scripts/test-storage.mjs",
     "test:analysis": "node scripts/test-analysis.mjs",
+    "test:progress": "node scripts/test-progress.mjs",
     "test:smoke": "node scripts/smoke.mjs",
     "import:tm": "node scripts/import-turtlemetrics.mjs"
   }

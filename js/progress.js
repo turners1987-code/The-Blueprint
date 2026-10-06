@@ -7,6 +7,9 @@
 const STORAGE_KEY = 'blueprint_progress';
 
 // Shape of stored progress: { version, completed: [moduleId], lastVisited }.
+// Completion and position are separate: `completed` is what the reader has
+// marked done (and drives the percentage); `lastVisited` is where they have
+// got to (and drives "Continue"). Marking or unmarking never moves position.
 const SCHEMA_VERSION = 2;
 
 // MIGRATIONS[n] maps old module ids to new ones, applied when stored
@@ -130,9 +133,34 @@ export const Progress = {
     if (!data.completed.includes(moduleId)) {
       data.completed.push(moduleId);
     }
-    data.lastVisited = moduleId;
     this.save(data);
     this.updateUI();
+  },
+
+  // Remove a module's checkmark. Nothing else changes: lastVisited stays.
+  unmarkComplete(moduleId) {
+    const data = this.load();
+    data.completed = data.completed.filter(id => id !== moduleId);
+    this.save(data);
+    this.updateUI();
+  },
+
+  // Record where the reader is. Called on every module page load.
+  setLastVisited(moduleId) {
+    const data = this.load();
+    if (data.lastVisited === moduleId) return;
+    data.lastVisited = moduleId;
+    this.save(data);
+  },
+
+  // Set lastVisited from the page's file name (modules/<number>-<slug>.html),
+  // so every module page counts without per-page markup. Needs the module
+  // list; a page that is not a module in modules.json is ignored.
+  recordVisit(pathname) {
+    if (!pathname.includes('/modules/')) return;
+    const file = pathname.split('/').pop();
+    const mod = MODULES.find(m => `${m.number}-${m.slug}.html` === file);
+    if (mod) this.setLastVisited(mod.id);
   },
 
   // Check if a module is complete
@@ -150,10 +178,17 @@ export const Progress = {
     return Math.round((done.length / published.length) * 100);
   },
 
-  // Get the next incomplete published module
+  // Where "Continue" goes: the first published module after lastVisited,
+  // or lastVisited itself when nothing published follows it. Without a
+  // usable lastVisited (first visit, older stored data, a retired id) it
+  // falls back to the first incomplete published module.
   getNextModule() {
     const data = this.load();
     const published = MODULES.filter(m => m.status === 'published');
+    const at = data.lastVisited ? MODULES.findIndex(m => m.id === data.lastVisited) : -1;
+    if (at >= 0) {
+      return MODULES.slice(at + 1).find(m => m.status === 'published') || MODULES[at];
+    }
     return published.find(m => !data.completed.includes(m.id))
       || published[published.length - 1]
       || MODULES[0];
@@ -163,7 +198,7 @@ export const Progress = {
   getContinueInfo() {
     const data = this.load();
     const first = MODULES.find(m => m.status === 'published') || MODULES[0];
-    if (data.completed.length === 0 || !first) {
+    if ((data.completed.length === 0 && !data.lastVisited) || !first) {
       return { text: 'Start The Course', path: first ? modulePath(first) : 'modules/00-welcome.html' };
     }
     const next = this.getNextModule();
@@ -217,7 +252,11 @@ export const Progress = {
 
 // Re-sync the UI once the module list has loaded
 Progress.ready
-  .then(() => { Progress.updateUI(); Progress.updateContinueBtn(); })
+  .then(() => {
+    Progress.recordVisit(window.location.pathname);
+    Progress.updateUI();
+    Progress.updateContinueBtn();
+  })
   .catch(() => console.warn('Blueprint: data/modules.json could not be loaded.'));
 
 // Auto-update UI on page load. Module scripts are deferred, so the DOM
