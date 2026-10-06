@@ -13,7 +13,7 @@
 
 import * as storage from './storage.js';
 import * as A from './analysis.js';
-import { SETUPS, TRIGGERS, GRADES } from './schema.js';
+import { SETUPS, LOCATIONS, TRIGGERS, GRADES } from './schema.js';
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
@@ -22,7 +22,7 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
 
 // slug -> label, so the page speaks the taxonomy's display names.
 const LABELS = {};
-for (const list of [SETUPS, TRIGGERS, GRADES]) {
+for (const list of [SETUPS, LOCATIONS, TRIGGERS, GRADES]) {
   for (const entry of list) LABELS[entry.slug] = entry.label;
 }
 const label = (slug) => (slug === null || slug === undefined || slug === '' ? '—' : LABELS[slug] || slug);
@@ -150,6 +150,72 @@ function summarySection(s) {
     ${openLine}
     <p class="field-hint"><span class="badge badge--cyan">${esc(OCC_NOTE)}</span> ${esc(simLine)}</p>
     ${notes.length ? `<p class="field-hint">${notes.map(esc).join(' · ')}</p>` : ''}`;
+}
+
+// Sim trades: behaviour and occurrence only. Deliberately has no R, win rate
+// or expectancy figure, and is not styled as a result.
+function simSection(sim) {
+  const head = `
+    <h2>Simulated trades — behaviour, not performance</h2>
+    <div class="callout callout--cyan">
+      <div class="callout-title">${esc(OCC_NOTE)}</div>
+      These are simulated trades. This section counts how often things happened and describes how you traded. It is never pooled into an expectancy, and it says nothing about edge: simulated fills are more generous than live ones.
+    </div>`;
+  if (sim.n === 0) {
+    return `${head}<p class="field-hint">No closed sim trades yet.</p>`;
+  }
+  const tick = (x) => (x === null || x === undefined ? '—' : `${Number.isInteger(x) ? x : x.toFixed(2)} t`);
+  const countRow = (field, name, fmt) => {
+    const entries = Object.entries(sim.counts[field]).sort((a, b) => b[1] - a[1]);
+    const cells = entries.map(([k, c]) => `${esc(k === 'null' ? 'unclassified' : fmt(k))} <span class="n-note">${c}</span>`);
+    return `<tr><td>${esc(name)}</td><td>${cells.join(' · ')}</td></tr>`;
+  };
+  const plain = (k) => k;
+  return `
+    ${head}
+    <div class="stat-row mt-md">
+      <div class="card stat-card${sim.dimmed ? ' dimmed' : ''}">
+        <div class="stat-value">${sim.n}</div>
+        <div class="stat-label">Sim trades closed</div>
+        <div class="stat-sub">${sim.sessions} sessions${sim.dimmed ? ' · small sample' : ''}</div>
+      </div>
+      <div class="card stat-card${sim.dimmed ? ' dimmed' : ''}">
+        <div class="stat-value">${sim.unclassified}</div>
+        <div class="stat-label">Unclassified</div>
+        <div class="stat-sub">missing a setup, location or grade</div>
+      </div>
+      <div class="card stat-card${sim.slippage.n === 0 || sim.dimmed ? ' dimmed' : ''}">
+        <div class="stat-value">${tick(sim.slippage.medianTicks)}</div>
+        <div class="stat-label">Median slippage vs intended</div>
+        <div class="stat-sub">n ${sim.slippage.n} · worst ${tick(sim.slippage.worstTicks)} · positive = worse fill</div>
+      </div>
+    </div>
+    <div class="table-wrap mt-md">
+      <table class="data-table${sim.dimmed ? ' dimmed' : ''}">
+        <caption>What you took — counts</caption>
+        <thead><tr><th>Dimension</th><th>Trades</th></tr></thead>
+        <tbody>
+          ${countRow('setup', 'Setup', label)}
+          ${countRow('location', 'Location', label)}
+          ${countRow('grade', 'Grade', label)}
+          ${countRow('instrument', 'Instrument', plain)}
+          ${countRow('direction', 'Direction', plain)}
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap mt-md">
+      <table class="data-table${sim.dimmed ? ' dimmed' : ''}">
+        <caption>How you traded — medians</caption>
+        <thead><tr><th>Behaviour</th><th class="num">Median</th></tr></thead>
+        <tbody>
+          <tr><td>Heat taken (MAE)</td><td class="num">${tick(sim.maeTicksMedian)}</td></tr>
+          <tr><td>Favourable excursion (MFE)</td><td class="num">${tick(sim.mfeTicksMedian)}</td></tr>
+          <tr><td>Time in trade</td><td class="num">${fmtDur(sim.timeInTradeSecondsMedian)}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    ${sim.mixedVersions ? '<p class="field-hint">These sim trades span taxonomy versions.</p>' : ''}
+    <p class="rule-note">Sim is ${esc(OCC_NOTE)}. No win rate, R total or expectancy is shown for it, by design.</p>`;
 }
 
 function mixedSection(mv) {
@@ -421,6 +487,7 @@ async function run() {
   root.innerHTML = renderSections([
     { title: 'Summary — live trades', render: () => summarySection(sum) },
     { title: 'Taxonomy versions', render: () => mixedSection(sum.mixedVersions) },
+    { title: 'Simulated trades — behaviour, not performance', render: () => simSection(A.simStats(records.filter((r) => r.environment === 'sim'))) },
     { title: 'Enough of your own history?', render: () => gateSection(A.gateTwoStatus(records)) },
     { title: 'Expectancy by setup', render: () => cohortSection('Expectancy by setup', A.byDimension(records, 'setup'), 'setup', label, 'Setup') },
     { title: 'Expectancy by trigger', render: () => cohortSection('Expectancy by trigger', A.byDimension(records, 'trigger'), 'trigger', label, 'Trigger') },

@@ -233,6 +233,64 @@ export function occurrenceStats(records, series) {
   };
 }
 
+// Behaviour and occurrence for SIM closed trades: the mirror image of
+// cohortStats(). It refuses live records, so the two are mutually exclusive
+// by construction. It carries no win rate, win/loss count, R total or
+// expectancy: NinjaTrader fills sim limits on touch, so sim outcomes
+// overstate edge and only occurrence and behaviour are meaningful.
+// Count objects are keyed by value; unclassified records land under the
+// key "null" (what a null property key becomes in an object).
+export function simStats(records, { instruments } = {}) {
+  for (const rec of records) {
+    if (!rec || rec.environment === 'live') {
+      throw new Error('simStats() takes sim and replay trades only (got a live record). Live trades go through cohortStats(); the two are never mixed.');
+    }
+  }
+  const closed = records.filter(isClosed);
+  const countBy = (field) => {
+    const out = {};
+    for (const r of closed) {
+      const k = r[field] ?? null;
+      out[k] = (out[k] || 0) + 1;
+    }
+    return out;
+  };
+  const medianOf = (field) => percentile(closed.map(r => r[field]).filter(isNum), 0.5);
+
+  // Positive = a worse fill than intended (long paid up, short sold down).
+  const slips = [];
+  for (const r of closed) {
+    const s = spec(r, instruments);
+    if (!s || !isNum(r.intended_price) || !isNum(r.actual_fill)) continue;
+    if (r.direction !== 'long' && r.direction !== 'short') continue;
+    const points = r.direction === 'long' ? r.actual_fill - r.intended_price : r.intended_price - r.actual_fill;
+    slips.push(points / s.tickSize);
+  }
+
+  return {
+    ...withFloor(closed.length, distinct(closed.map(r => r.session_date))),
+    counts: {
+      setup: countBy('setup'),
+      location: countBy('location'),
+      grade: countBy('grade'),
+      instrument: countBy('instrument'),
+      direction: countBy('direction'),
+    },
+    unclassified: closed.filter(r => r.setup == null || r.location == null || r.grade == null).length,
+    maeTicksMedian: medianOf('mae_ticks'),
+    mfeTicksMedian: medianOf('mfe_ticks'),
+    timeInTradeSecondsMedian: medianOf('time_in_trade_seconds'),
+    slippage: {
+      n: slips.length,
+      medianTicks: percentile(slips, 0.5),
+      worstTicks: slips.length ? Math.max(...slips) : null,
+    },
+    expectancy: null,
+    note: 'Occurrence and behaviour only. Sim never measures edge and is never pooled into an expectancy.',
+    mixedVersions: spansVersions(closed),
+  };
+}
+
 const statsFor = (env, records, options) =>
   (env === 'live' ? cohortStats(records, options) : occurrenceStats(records, env));
 

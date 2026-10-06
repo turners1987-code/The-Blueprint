@@ -195,6 +195,101 @@ test('SIM RULE: for every function, live results are identical with or without s
   assert.equal(g1.bySetup.find(r => r.key === 'trend-continuation').simTrades, 6);
 });
 
+// simStats --------------------------------------------------------
+
+const simRec = (o = {}) => rec({ environment: 'sim', ...o });
+
+test('simStats: refuses live records, and cohortStats still refuses sim (mutually exclusive)', () => {
+  assert.throws(() => A.simStats([simRec(), live(1)]), /sim and replay trades only/);
+  assert.throws(() => A.simStats([live(1)]), /sim and replay trades only/);
+  assert.doesNotThrow(() => A.simStats([simRec()]));
+  assert.doesNotThrow(() => A.simStats([]));
+  assert.throws(() => A.cohortStats([simRec()]), /live trades only/);
+});
+
+test('simStats: expectancy is null and no edge key appears anywhere in the result', () => {
+  const r = A.simStats([simRec({ r_multiple: 9 }), simRec({ r_multiple: -3 })]);
+  assert.equal(r.expectancy, null);
+  for (const k of ['grossExpectancy', 'winRate', 'wins', 'losses', 'profitFactor', 'totalR', 'avgWinR', 'avgLossR']) {
+    assert.ok(!(k in r), `simStats must not return ${k}`);
+  }
+  assert.deepEqual(findEdgeNumbers(r), []);
+  assert.match(r.note, /never pooled into an expectancy/);
+});
+
+test('simStats: counts per dimension, unclassified under the null key, open trades excluded', () => {
+  // 4 closed: two trend-continuation/pd-high/A, one range-rejection/or-high/B (short MES),
+  // one fully unclassified. Plus one open trade (no r_multiple) that must not be counted.
+  const r = A.simStats([
+    simRec(),
+    simRec(),
+    simRec({ setup: 'range-rejection', location: 'or-high', grade: 'B', direction: 'short', instrument: 'MES' }),
+    simRec({ setup: null, location: null, grade: null }),
+    simRec({ r_multiple: null }),
+  ]);
+  assert.equal(r.n, 4);
+  assert.deepEqual(r.counts.setup, { 'trend-continuation': 2, 'range-rejection': 1, null: 1 });
+  assert.deepEqual(r.counts.location, { 'pd-high': 2, 'or-high': 1, null: 1 });
+  assert.deepEqual(r.counts.grade, { A: 2, B: 1, null: 1 });
+  assert.deepEqual(r.counts.instrument, { MNQ: 3, MES: 1 });
+  assert.deepEqual(r.counts.direction, { long: 3, short: 1 });
+  assert.equal(r.unclassified, 1);
+  // a record with only a null grade is unclassified too
+  assert.equal(A.simStats([simRec({ grade: null }), simRec()]).unclassified, 1);
+});
+
+test('simStats: medians of MAE, MFE and time in trade ignore nulls', () => {
+  const r = A.simStats([
+    simRec({ mae_ticks: 2, mfe_ticks: 10, time_in_trade_seconds: 60 }),
+    simRec({ mae_ticks: 8, mfe_ticks: 30, time_in_trade_seconds: 300 }),
+    simRec({ mae_ticks: 4, mfe_ticks: null, time_in_trade_seconds: null }),
+  ]);
+  assert.equal(r.maeTicksMedian, 4);              // 2, 4, 8
+  assert.equal(r.mfeTicksMedian, 20);             // 10, 30 -> midpoint
+  assert.equal(r.timeInTradeSecondsMedian, 180);  // 60, 300 -> midpoint
+  assert.equal(A.simStats([simRec()]).maeTicksMedian, null);
+});
+
+test('simStats: slippage is signed so a worse-than-intended fill is positive, in ticks', () => {
+  // MNQ tick 0.25. Long intended 24000, filled 24000.50: paid up 2 ticks = +2.
+  // Long filled 23999.75: better by 1 tick = -1.
+  // Short intended 24000, filled 23999.00: sold 4 ticks worse = +4.
+  // Short filled 24000.25: better by 1 tick = -1. Sorted [-1,-1,2,4]: median 0.5, worst 4.
+  // A record with no intended_price is left out of the slippage n.
+  const r = A.simStats([
+    simRec({ direction: 'long', intended_price: 24000, actual_fill: 24000.5 }),
+    simRec({ direction: 'long', intended_price: 24000, actual_fill: 23999.75 }),
+    simRec({ direction: 'short', intended_price: 24000, actual_fill: 23999 }),
+    simRec({ direction: 'short', intended_price: 24000, actual_fill: 24000.25 }),
+    simRec({ direction: 'long', intended_price: null, actual_fill: 24000 }),
+  ]);
+  assert.equal(r.slippage.n, 4);
+  assert.equal(r.slippage.medianTicks, 0.5);
+  assert.equal(r.slippage.worstTicks, 4);
+  assert.deepEqual(A.simStats([simRec()]).slippage.n, 0);
+  assert.equal(A.simStats([simRec()]).slippage.medianTicks, null);
+});
+
+test('simStats: slippage uses the instruments map and skips an unknown instrument', () => {
+  const s = (o = {}) => simRec({ direction: 'long', intended_price: 100, actual_fill: 100.5, ...o });
+  assert.equal(A.simStats([s({ instrument: 'MGC' })]).slippage.medianTicks, 5); // 0.5 pt / 0.1 tick
+  assert.equal(A.simStats([s({ instrument: 'XYZ' })]).slippage.n, 0);
+  assert.equal(A.simStats([s({ instrument: 'XYZ' })], { instruments: { XYZ: { tickSize: 0.5, pointValue: 1 } } }).slippage.medianTicks, 1);
+});
+
+test('simStats: carries the display floor and the mixed-version flag', () => {
+  const small = A.simStats(many(29, (i) => simRec({ session_date: day(i % 25) })));
+  assert.equal(small.n, 29);
+  assert.equal(small.dimmed, true, 'under 30 trades');
+  const fewSessions = A.simStats(many(40, (i) => simRec({ session_date: day(i % 19) })));
+  assert.equal(fewSessions.sessions, 19);
+  assert.equal(fewSessions.dimmed, true, 'under 20 sessions');
+  const enough = A.simStats(many(40, (i) => simRec({ session_date: day(i % 20) })));
+  assert.equal(enough.dimmed, false);
+  assert.equal(enough.mixedVersions, false);
+  assert.equal(A.simStats([simRec(), simRec({ taxonomy_version: '1.3' })]).mixedVersions, true);
+});
+
 // the display floor -----------------------------------------------
 
 test('display floor: dimmed when n < 30 OR sessions < 20, otherwise not', () => {
