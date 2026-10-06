@@ -44,13 +44,13 @@
         (available | in-development | planned), and status
         "available" requires a non-null file.
 
-    13. (gated pages) A page carrying data-gate must load js/gate.js,
-        and a module page whose id is tier "paid" in data/modules.json
-        must carry data-gate="tier" — otherwise it would be public.
-
     12. (modules/*.html) A module page must not contain an <h3>
         unless it also contains an <h2>. A skipped heading level is
         an error.
+
+    13. (gated pages) A page carrying data-gate must load js/gate.js,
+        and a module page whose id is tier "paid" in data/modules.json
+        must carry data-gate="tier" — otherwise it would be public.
 
    Exit code 1 on any error, 0 otherwise.
    ============================================================ */
