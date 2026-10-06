@@ -91,6 +91,9 @@ function resolveRef(htmlFile, url) {
   let clean = url.split('#')[0].split('?')[0];
   try { clean = decodeURIComponent(clean); } catch { /* keep raw */ }
   if (!clean) return null;
+  // Root-absolute ("/css/main.css") resolves from the repo root: the site
+  // is served at a domain root. Only 404.html may use it (see depthError).
+  if (clean.startsWith('/')) return path.join(ROOT, clean);
   return path.resolve(path.dirname(htmlFile), clean);
 }
 
@@ -100,6 +103,13 @@ const toRel = (abs) => path.relative(ROOT, abs).split(path.sep).join('/');
 // file's depth — css/ and js/ at root, ../css/ and ../js/ inside
 // modules/. Returns an error message or null.
 function depthError(htmlFile, rawRef, resolved) {
+  // 404.html is served for missing URLs at any depth, so it must use
+  // root-absolute paths; every other page must stay relative.
+  const is404 = toRel(htmlFile) === '404.html';
+  if (rawRef.startsWith('/')) {
+    return is404 ? null : `root-absolute reference "${rawRef}" is only allowed in 404.html`;
+  }
+  if (is404) return `404.html reference "${rawRef}" must be root-absolute (it is served at any depth)`;
   const rel = toRel(resolved);
   if (!rel.startsWith('css/') && !rel.startsWith('js/')) return null;
   const relDir = path.dirname(toRel(htmlFile));
