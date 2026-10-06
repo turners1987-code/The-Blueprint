@@ -7,7 +7,7 @@
    cache is deleted when the new worker activates.
    ============================================================ */
 
-const CACHE_VERSION = 'v8';
+const CACHE_VERSION = 'v9';
 const CACHE_NAME = `blueprint-${CACHE_VERSION}`;
 
 // App shell: paths are relative to this file (the site root).
@@ -34,6 +34,7 @@ const SHELL = [
   'js/nav.js',
   'js/progress.js',
   'js/modules.js',
+  'js/module-toc.js',
   'js/journal/schema.js',
   'js/journal/analysis.js',
   'js/journal/storage.js',
