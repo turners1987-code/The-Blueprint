@@ -1,0 +1,29 @@
+# The Blueprint
+
+> A free course in one trader's own intraday futures framework: setups, routines and risk management for index futures, with the evidence status stated on every claim.
+
+The Blueprint is a free eLearning course built around a disciplined, setup-based approach to trading MNQ futures. It is written for independent traders who want a complete framework — real setups, daily routines, and risk management — rather than tips or signals. It teaches one trader's own intraday futures framework, not a survey of other people's methods, and every claim on the site states its evidence status, so you can see what is backed by a verified trade record and what is not.
+
+## Course
+
+- [Module index](https://bptrade.co/): the course home page, with the full module index and where to start.
+- [Glossary](https://bptrade.co/glossary.html): definitions of every trading term used in the course, with search.
+- [Card deck](https://bptrade.co/modules/flashcards.html): 32 flip cards covering the course concepts, with study and quiz modes and filtering by section.
+- [Dial In](https://bptrade.co/modules/dial-in.html): a five-question quiz that maps your market interests and habits to a trader profile and suggests where to start in the course.
+
+## Journal
+
+- [Trade journal](https://bptrade.co/journal.html): log trades against the course taxonomy — the pre-entry plan and its grade, the post-exit outcome — with export and import. Journal data stays on your machine.
+
+## Site
+
+- [Tools](https://bptrade.co/tools.html): NinjaTrader 8 indicators and add-ons, with install instructions and requirements.
+- [Pricing](https://bptrade.co/pricing.html): the free tier and the Full Access tier, what each includes, and the current opening rate.
+- [AI disclosure](https://bptrade.co/ai.html): how AI is used across the site, and what is verified by hand.
+
+## Optional
+
+- [Journal analysis](https://bptrade.co/journal-analysis.html): read-only review of the trade journal — expectancy by setup, trigger and grade, discipline cohorts, stop survival, exit efficiency, sequence effects and Gate 2 status.
+- [Unlock Full Access](https://bptrade.co/unlock.html): enter the access code from your receipt. No account, no password.
+- [Welcome module](https://bptrade.co/modules/00-welcome.html): what the course covers, how the modules are sequenced, and who it is for.
+- [Toothbrush Therapy](https://bptrade.co/modules/13-toothbrush-therapy.html): the course's core philosophy page — building consistency by repeating the basic routines until they become automatic.
