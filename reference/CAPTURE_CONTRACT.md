@@ -1,9 +1,13 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.6 · 2026-10-05
-Status: SPEC, corrected after the NT8 project review. This is the document the NinjaTrader 8
-capture addon builds against. This repo holds the contract, not the addon; no addon code lives
-here.
+Version 1.7 · 2026-10-06
+Status: SPEC. This is the single written document the NinjaTrader 8 capture addon builds against;
+every accepted change is rolled into it, not carried as an amendment. This repo holds the
+contract, not the addon; no addon code lives here.
+
+**Pending site-side change.** The journal schema will bump to add `account`, `account_type` and
+`target_2`. The new schema version is **TBC**. Until it ships, `additionalProperties: false`
+still applies: the addon writes none of those three fields and must not emit them early.
 
 **Division of sources — read this before building anything.**
 
@@ -27,10 +31,17 @@ check) on every emitted record in its own build.
   one directory; the file format is what makes them compatible.
 - File name: `<id>.json`, where `id` is the record's own `id` and the stem must equal it exactly.
 - **`id` format** (the storage layer assigns ids on `put`, but a file in the folder must carry its
-  own): the session date plus a 4–12 character suffix of `[0-9a-z]`, e.g.
-  `2026-10-06-k3f9a2qm`. Recommended: 8 characters of base36 from a CSPRNG, regenerated on a
-  collision with an existing file name. Ids sort by session date; the suffix only separates
-  same-day trades.
+  own): the session date plus a 4–12 character suffix of `[0-9a-z]`. Ids sort by session date;
+  the suffix only separates same-day trades.
+  - **Rich tier:** `<session_date>-<decision_id>`, e.g. `2026-10-06-k3f9a2qm7x4d`. The
+    `decision_id` (section 4) is 12 base36 characters, so it fits the suffix rule and makes the
+    record id traceable to its decision with no lookup.
+  - **Zero-touch:** `<session_date>-<random suffix>`, 8 characters of base36 from a CSPRNG,
+    regenerated on a collision with an existing file name. There is no `decision_id` to use.
+- **One trade = flat-to-flat on one account and one instrument.** A trade opens when the
+  position leaves flat and closes when it returns to flat; scale-ins and partial exits inside
+  that span belong to the one trade. A different account or a different instrument is a
+  different trade.
 - **Shape:** exactly the properties in `journal-schema.json`. `additionalProperties: false` is
   part of the contract — the addon never adds a field. Anything the addon must remember that the
   schema has no field for goes under `nt8/` (below), never into the record.
@@ -56,7 +67,9 @@ check) on every emitted record in its own build.
 - **`environment`** is derived from the **connection**, never defaulted blank: a Market Replay
   connection → `replay`, Sim101 → `sim`, live connections → `live`. Detection must come from
   the connection, not the account name — **Market Replay fills land in Sim101**, so
-  account-name detection would mislabel every replay trade as `sim`.
+  account-name detection would mislabel every replay trade as `sim`. Under the settled account
+  model (section 4) the record account is Sim101 on a live data feed, so every record the addon
+  writes is `sim` (or `replay` on a replay connection); none is `live`.
 - **`entry_time` / `exit_time`** are ISO 8601 **with an explicit UTC offset** (machine-local plus
   offset, or converted to `Z`). A naive local timestamp is invalid and will be rejected.
 - **`session_date`** is the session the trade belongs to, not the calendar date of the fill, and
@@ -72,6 +85,9 @@ check) on every emitted record in its own build.
   from the `commissions` field; the addon never nets fees into R.
   `R = (average exit price − actual_fill) × dir / |actual_fill − stop_price|`, where `dir` is
   +1 long / −1 short, across all partial exits.
+- **`stop_price` is the draft stop that sizing used, frozen at submission.** It is never updated
+  by a breakeven or drag move. The order-entry tool places two stops staggered 1 tick apart; the
+  draft stop is the reference and the one recorded, so R stays the risk the trade was sized on.
 - **`mae_ticks` / `mfe_ticks`** are positive magnitudes regardless of direction, measured from
   `actual_fill`, in instrument ticks. Their only source is reconciliation (section 5) — never
   NinjaTrader's per-trade MAE/MFE.
@@ -92,6 +108,7 @@ check) on every emitted record in its own build.
 | | Rich tier | Zero-touch tier |
 | --- | --- | --- |
 | Source | Trades placed through **Shane's own order-entry tool**, which knows the plan at submission | Any other fill: Chart Trader, hotkeys, any third-party tool |
+| Tier test | The **opening execution** carries a Cockpit `decision_id` | The opening execution carries none |
 | `setup`, `location`, `trigger`, `confirmation` | as submitted | **null** |
 | `grade` | as submitted (5.1) | **null** |
 | `intended_price`, `stop_price`, `target_price` | as submitted | **null** |
@@ -100,6 +117,10 @@ check) on every emitted record in its own build.
 | `r_multiple` | computed (stop known) | **null** — no stop, no R; the journal computes it once the trader supplies the stop (7.1) |
 | `tags` | as submitted | carries the reserved tag `zero-touch` |
 
+- **Tier is set once, by the opening execution** (trade boundary, section 1). A Cockpit
+  `decision_id` on that execution means rich tier, for the life of the trade. This covers a
+  Cockpit entry closed via Chart Trader: the closing fills carry no `decision_id`, and the trade
+  stays rich.
 - A zero-touch record is **written with the plan fields null and flagged for completion in the
   journal UI** (the `zero-touch` tag plus null plan fields is the flag; surfacing them in the UI
   is journal-side work, referenced here so the contract is complete).
@@ -107,13 +128,32 @@ check) on every emitted record in its own build.
   `journal-schema.json` v3 (Q2), so a zero-touch record validates and the journal's folder scan
   picks it up. The keys are still always present (7.2), and `validate()` still requires all
   three to be non-null once a **live** trade is **closed** (`if`/`then` in the schema, 7.5): an unclassified zero-touch capture is
-  not an error, an unclassified closed live trade is. The addon writes zero-touch records to the
+  not an error, an unclassified closed live trade is. The addon's own self-validation never
+  blocks its writes on that rule (7.5). The addon writes zero-touch records to the
   top level like any other; `nt8/pending/` is retired. A journal older than schema v3 skips
   such a file silently, so the journal must be upgraded before the addon's zero-touch tier is
   enabled. The analysis layer already buckets null `setup`/`location`/`grade` as `unknown`
   cohorts.
 
-## 4. Copier dedup
+## 4. Account model and copier dedup
+
+### 4.1 Account model (settled)
+
+- **The record account is Sim101, configured by name** (Q4), running on a **live data feed and
+  live market** as the copier leader.
+- **Every record is `environment: sim`.** No records come from live accounts.
+- **No follower records and no slippage sidecar for now.** The follower-audit mechanism below
+  (4.2) is deferred, not built.
+- **Gate 2 stays live-only and therefore reads zero.** Sim statistics are computed and displayed
+  **separately** on the analysis page, clearly labelled, and **never pooled with live**.
+- **Door left open, not built now:** execution records from a real account, linked to the Sim101
+  decision records by `decision_id`. Nothing in this contract may block it — which is why
+  `decision_id` stays on every rich record (the `decision:` tag), and why the trade boundary
+  (section 1) is per account.
+- The `account` and `account_type` fields this model calls for are the pending schema bump
+  (header). Until then the account is identified only by the addon's configuration.
+
+### 4.2 Copier dedup
 
 One decision produces fills across multiple accounts. The addon must record **one trade**, not
 one per account.
@@ -126,10 +166,11 @@ one per account.
 - **Do NOT match by time and price.** Two fills at the same price in the same second are two
   trades until a shared `decision_id` says otherwise; time-and-price matching is how copied
   trades get silently merged with genuinely distinct ones. This is a hard rule, not a default.
-- **Follower fills are a slippage audit, never separate trades.** Each appends to
-  `nt8/audit/<decision_id>.json`: account, fill price, size, slippage versus the leader fill in
-  ticks, timestamps. Analysis never reads these files; they exist to answer "what did copying
-  this decision cost across accounts."
+- **Follower fills are a slippage audit, never separate trades.** *Deferred (4.1): not built
+  now.* When built, each appends to `nt8/audit/<decision_id>.json`: account, fill price, size,
+  slippage versus the leader fill in ticks, timestamps. Analysis never reads these files; they
+  exist to answer "what did copying this decision cost across accounts." Until then follower
+  fills are ignored, never recorded as trades.
 - The leader record carries the link in-band as the tag `decision:<decision_id>` (tags are free-form
   strings the analysis layer never cohorts on), so the pairing survives the loss of a sidecar.
 
@@ -147,35 +188,50 @@ not as a value, not as a fallback, not as a tiebreaker.
 
 - While the trade is open, the addon tracks running MAE/MFE from live market data. These values
   are a **cross-check only**.
-- When the position goes flat, the addon issues a **tick `BarsRequest` for the full trading day**
-  of the trade (the session from the instrument's Trading Hours template), then **clamps to
-  `[entry_time, exit_time]` in code** — the request is never trusted to return only the window.
-  It re-derives MAE/MFE from `actual_fill` (direction-aware, positive magnitudes, instrument
-  ticks) and **overwrites** the record's values with the post-hoc result. Requesting the whole
-  day absorbs clock skew between the execution engine and the tick stream; the clamp in code is
-  what defines the window.
+- When the position goes flat, the addon runs reconciliation **immediately** — the tick request
+  returns data only about 2 seconds behind real time (Q1), so there is no need to wait. It uses a
+  **tick `BarsRequest` for the full trading day** of the trade (the session from the
+  instrument's Trading Hours template), then **clamps to `[entry_time, exit_time]` in code** —
+  the request is never trusted to return only the window. It re-derives MAE/MFE from
+  `actual_fill` (direction-aware, positive magnitudes, instrument ticks) and **overwrites** the
+  record's values with the post-hoc result. Requesting the whole day absorbs clock skew between
+  the execution engine and the tick stream; the clamp in code is what defines the window.
+- **One tick request per instrument per session — REQUIRED, not an optimisation.** The
+  full-day tick data is requested once per instrument (contract traded) per session, cached, and
+  **shared across all of that session's trades**; it is not re-requested per trade. A full MNQ
+  day returns **1.3–3.1 million ticks**, so a request per trade is not workable.
+- **MergePolicy (REQUIRED).** The reconciliation `BarsRequest` **must set
+  `MergePolicy = DoNotMerge` and request the exact contract traded.** Reason: the global setting
+  is *Merge back adjusted*, which shifts pre-roll prices. Run through that setting, a pre-roll
+  trade's ticks no longer sit at the prices the trade filled at, so MAE/MFE (measured from
+  `actual_fill`) would be silently corrupted — **no error is raised**. Never rely on the global
+  setting.
 - **Disposal.** The `BarsRequest` is disposed on every path — success, empty result, timeout,
   exception. A leaked request holds a data subscription open.
 - **Contract selection.** The request is made against the specific contract the trade filled on
   (the `instrument` root plus the expiry actually traded), **including across a roll** — a trade
   entered on the expiring contract is reconciled on that contract's ticks, not the front month's
   at reconciliation time. Pre-roll trades therefore pick the pre-roll contract; the root-only
-  `instrument` field is for the record, not for the request.
+  `instrument` field is for the record, not for the request. The cache above is keyed on that
+  contract, so a roll inside a session yields one cached request per contract.
 - The live-tracked pair and its delta versus the post-hoc pair are written to
   `nt8/audit/<id>.json`. A disagreement beyond 2 ticks is recorded there as a data-quality flag.
   **The post-hoc values win every time.**
 - Why: the live values freeze whatever definition the code had at trade time. Deriving from a
   bounded tick window means the definition can change later and history can be re-derived
   without losing data.
-- If tick data is not available for the window (connection depth — Q1), `mae_ticks`/`mfe_ticks`
-  stay **null**, the gap is noted in the audit sidecar, and NinjaTrader's per-trade values are
+- If tick data is not available for the window (connection depth — Q1: ticks resolve to roughly
+  10–12 months back), `mae_ticks`/`mfe_ticks` stay **null**, the gap is noted in the audit sidecar, and NinjaTrader's per-trade values are
   still not substituted (5.1).
 - The update replaces the same `<id>.json` atomically. One record, refined in place.
 
 ## 6. What NT8 must NOT do
 
-1. **No network calls.** None — no telemetry, no update checks of its own, no "phoning home."
-   The addon talks to the local filesystem and nothing else.
+1. **No calls to external servers or third parties.** No telemetry, no update checks of its own,
+   no "phoning home." The addon talks to the local filesystem and to NinjaTrader itself.
+   **Exempt:** NinjaTrader's own data requests over its existing connections — the section 5.2
+   `BarsRequest` reconciliation is such a request and is permitted. The addon opens no
+   connection of its own.
 2. **No database.** No embedded DB engine, no sqlite file, no external process. Files only.
 3. **No writing outside the configured folder.** The addon's only file output is the configured
    folder (including its `nt8/` subfolder). Its own settings go through NT8's native settings
@@ -288,6 +344,14 @@ unclassified closed live trade, which the journal rejects. `rich-tier.json` and
 `post-reconciliation.json` are classified; the regression set must also include a closed live
 record with a null classification field and expect it to fail.
 
+**Self-validation never blocks the addon's own writes.** Every zero-touch live trade is
+unclassified at close, so the generated `if`/`then` check fails on the addon's own close write.
+The addon therefore records an `if`/`then` failure as **"pending classification"** (in the
+audit sidecar) and **writes anyway**. The regression fixture is unchanged: the closed live
+record with a null classification field still expects `validate()` = **FAIL**. The failure is
+real; it just is not grounds to withhold the write. (Under the account model, 4.1, no record is
+`live` today, so the rule is dormant but stays in the generated checks.)
+
 ### 7.6 TAXONOMY_VERSION
 
 The current literal is **`"1.4"`** (`TAXONOMY_VERSION` in `js/journal/schema.js`). A bump
@@ -307,22 +371,23 @@ records take the new literal.
 
 ## 8. Open questions for the NT8 project
 
-Each one can change a section above. Questions answered by the NT8 review are recorded in 8.2.
+Each one can change a section above. Answered questions are recorded in 8.2.
 
 ### 8.1 Open
 
-1. **Tick history depth on Shane's data connection — gates section 5.2.** TAXONOMY 6.3 assumes
-   roughly a year of NT8 tick history as a general platform limit; the depth that actually
-   resolves on Shane's connection, per instrument, is unverified. It bounds how far back
-   reconciliation (5.2) can run and whether historical records can be re-derived at all. This
-   needs **measuring on Shane's data connection, not documenting**: request ticks at increasing
-   look-back per instrument and record where the request stops returning data. Until that is
-   done, 5.2 is a design, not a guarantee.
 5. **PWH/PWL session convention** — RTH-only today while every other level is ETH (TAXONOMY
    OPEN #6, already owned by the NT8 project). Location capture depends on the decision.
 
 ### 8.2 Answered
 
+1. **Tick history depth on Shane's data connection.** *Answered; measured 2026-10-06 with a
+   `TickDepthProbe` on the NinjaTrader provider.*
+   - **Latency:** a tick `BarsRequest` returns data about **2 seconds behind real time**, so
+     reconciliation can run immediately after the position goes flat (section 5.2).
+   - **Depth:** ticks were returned at **300 days back and none at 365**. Re-derivation therefore
+     reaches roughly **10–12 months**; older records cannot have MAE/MFE re-derived.
+   - **Consequence:** footprint-based items cannot meet Gate 1's per-year requirement without
+     **purchased tick data**. That is a **data block, not a failed test** (TAXONOMY 6.3).
 2. **Journal schema v3.** Shipped. `setup`, `location` and `grade` are nullable so zero-touch
    records validate (section 3); `validate()` still requires them non-null on a closed live
    trade. Existing records need no migration. The addon's zero-touch tier needs a journal at
@@ -338,7 +403,7 @@ Each one can change a section above. Questions answered by the NT8 review are re
      is unknown and cannot be settled from documentation. It needs one Sim trade with a tagged
      name, then reading `Execution.Name` on a follower fill. Until that test is run, copier
      dedup by `decision_id` (section 4) rests on an assumption.
-4. **Leader account identification.** **Configured explicitly by name. Never detected.** A
+4. **Leader account identification.** **Configured explicitly by name (Sim101, section 4.1). Never detected.** A
    decision whose leader fill never appears writes **no top-level record at all** — follower
    fills are audit material by definition — and the orphan is noted in the audit sidecar.
 6. **`session_date` convention.** Derived from the instrument's Trading Hours template — its
@@ -368,3 +433,4 @@ Each one can change a section above. Questions answered by the NT8 review are re
 | 1.4 | 2026-10-05 | New section 7: field-level ownership between addon and journal writers, null representation, numeric formatting, tag constraints, validation decision, TAXONOMY_VERSION rule, golden samples. Open questions renumbered to 8, change log to 9. `execution_mark` is no longer written by the addon. |
 | 1.5 | 2026-10-05 | `r_multiple` ownership follows who can compute it, with the source recorded in the audit sidecar (7.1). Journal schema v3 shipped: `setup`/`location`/`grade` nullable, required non-null on a closed live trade; `nt8/pending/` retired; Q2 answered; `zero-touch.json` now passes `validate()`. |
 | 1.6 | 2026-10-05 | Schema v4: `exit_price` (size-weighted average exit; nullable, required as a key). `r_multiple` is derived from `exit_price` in the record, not the sidecar; the journal-writes-under-`nt8/` exception is removed. The closed-live classification rule is an `if`/`then` in the schema and the addon's generated checks must carry it. Golden samples carry `exit_price`. |
+| 1.7 | 2026-10-06 | Rolled up into one document. Self-validation never blocks the addon's writes; failures recorded as "pending classification" (7.5). No-network rule reworded to external servers and third parties, exempting NinjaTrader's own data requests (6.1). Trade boundary: flat-to-flat per account and instrument; tier set by the opening execution (1, 3). `stop_price` is the frozen draft stop (2). One cached tick request per instrument per session, required (5.2). Rich-tier id = `<session_date>-<decision_id>` (1). New 5.2 rule: `MergePolicy = DoNotMerge` on the exact contract. Q1 answered (2 s latency; ticks at 300 days, none at 365). Account model settled: Sim101, all records `sim`, no follower records, Gate 2 live-only, sim shown separately (4.1). Pending schema bump (`account`, `account_type`, `target_2`), version TBC. |

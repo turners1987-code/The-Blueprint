@@ -46,7 +46,7 @@ The two gates in `METHODOLOGY_v2.md` remain an internal standard and a teaching 
 | This file | The site: stack, architecture, conventions, build state |
 | `reference/TAXONOMY.md` | Vocabulary and record structure — setups, triggers, locations, grades, gates |
 | `reference/METHODOLOGY_v2.md` | What the method is — the content source for lessons |
-| `reference/CAPTURE_CONTRACT.md` | The NT8 capture addon spec (v1.6); the addon itself is built elsewhere |
+| `reference/CAPTURE_CONTRACT.md` | The NT8 capture addon spec (v1.7); the addon itself is built elsewhere |
 | `reference/setup-definitions.txt` | Shane's own setup wording, verbatim from TurtleMetrics |
 | `reference/review-questions.txt` | The six-question discipline checklist |
 | `reference/TradingStats_Source_of_Truth.txt` | NQ base rates, 3,163 sessions |
