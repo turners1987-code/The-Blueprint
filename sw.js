@@ -83,7 +83,10 @@ self.addEventListener('activate', (event) => {
 });
 
 // Network first, so edits show up as soon as the user is online;
-// the cache answers when the network does not.
+// the cache answers when the network does not. cache: 'no-cache' makes
+// the browser revalidate with the server instead of answering from its
+// HTTP cache (max-age), so a changed file shows without a hard refresh.
+// A failed revalidation rejects, which lands in the catch below.
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
@@ -91,7 +94,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
     try {
-      const res = await fetch(req);
+      const res = await fetch(req, { cache: 'no-cache' });
       if (res.ok) cache.put(req, res.clone());
       return res;
     } catch {
