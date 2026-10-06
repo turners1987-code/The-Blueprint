@@ -6,7 +6,7 @@
    export envelope, used by both adapters so they behave the same.
    ============================================================ */
 
-import { JOURNAL_SCHEMA_VERSION, ID_RE, validate } from './schema.js';
+import { JOURNAL_SCHEMA_VERSION, ID_RE, RECORD_FIELDS, validate } from './schema.js';
 
 // ── Errors ────────────────────────────────────────────────────
 // StorageError.code is one of:
@@ -64,7 +64,7 @@ export const isId = (id) => typeof id === 'string' && ID_RE.test(id);
 // session_date), or throws ValidationError. Never mutates its argument.
 // `taken(id)` says whether an id is already in use, so a freshly generated
 // id never collides.
-export async function prepare(record, taken = async () => false) {
+export async function prepare(record, taken = async () => false, { fillAbsent = false } = {}) {
   if (record === null || typeof record !== 'object' || Array.isArray(record)) {
     throw new ValidationError([{ field: '(record)', message: 'must be an object' }]);
   }
@@ -87,6 +87,14 @@ export async function prepare(record, taken = async () => false) {
   // Schema v5 migration: likewise for account, account_type and target_2.
   for (const key of ['account', 'account_type', 'target_2']) {
     if (copy[key] === undefined) copy[key] = null;
+  }
+  // Import normalization (contract 7.2): a legacy export may lack any key, so
+  // import fills every absent one with null. put() does not, so a writer
+  // cannot emit an incomplete record.
+  if (fillAbsent) {
+    for (const key of RECORD_FIELDS) {
+      if (copy[key] === undefined) copy[key] = null;
+    }
   }
   const { valid, errors } = validate(copy);
   if (!valid) throw new ValidationError(errors);
@@ -147,7 +155,7 @@ export async function parseImport(json) {
   const taken = async (id) => seen.has(id);
   for (let i = 0; i < list.length; i++) {
     try {
-      const rec = await prepare(list[i], taken);
+      const rec = await prepare(list[i], taken, { fillAbsent: true });
       if (seen.has(rec.id)) {
         errors.push({ record: `record ${i + 1}`, field: 'id', message: `"${rec.id}" appears more than once` });
         continue;

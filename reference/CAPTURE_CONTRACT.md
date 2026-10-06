@@ -1,6 +1,6 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.10 · 2026-10-06
+Version 1.11 · 2026-10-06
 Status: SPEC. This is the single written document the NinjaTrader 8 capture addon builds against;
 every accepted change is rolled into it, not carried as an amendment. This repo holds the
 contract, not the addon; no addon code lives here.
@@ -311,6 +311,12 @@ Every nullable schema field is **present with the value `null`, never absent**, 
 either writer emits. This applies to both writers. Required fields are never null in a record
 that is meant to validate (the zero-touch exception is section 3).
 
+This rule is enforced by both the JSON Schema (`required` lists all 29 properties) and
+`validate()` (every field must be `!== undefined`). Presence is enforced, not non-nullness: null
+semantics are unchanged. The one carve-out is import: the storage layer fills absent keys with
+`null` before validating, so legacy v1-v4 exports still import. Emitting an incomplete record is
+not allowed. `JOURNAL_SCHEMA_VERSION` stays 5; the record shape did not change.
+
 ### 7.3 Numeric formatting
 
 Both writers round identically, **half away from zero**:
@@ -372,9 +378,10 @@ records take the new literal.
 | `zero-touch.json` | Zero-touch record at open: classification and plan null, tagged `zero-touch`. Unclassified but not a closed live trade (section 3, Q2) | **Passes** |
 | `post-reconciliation.json` | The live-environment case: a rich-tier trade after close and reconciliation, every field final, including `exit_price`, with `environment: "live"` and a fully classified record. Kept deliberately even though the current account model (4.1) produces only `sim` records, so the live rules stay exercised | **Passes** |
 | `closed-live-unclassified.json` | A closed live record (`environment: "live"`, `exit_time` set) with null `setup`, `location` and `grade`: the `if`/`then` regression case (7.5) | **Fails**, on `setup`, `location` and `grade` |
+| `missing-key.json` | A valid rich-tier record with exactly one key absent (`commissions`): the 7.2 presence-rule regression case | **Fails**, on `commissions` |
 
-`npm run check:journal` evaluates all four under both the JSON Schema and `validate()`. The addon's
-generated checks must give the same four results. A failure on `closed-live-unclassified.json`
+`npm run check:journal` evaluates all five under both the JSON Schema and `validate()`. The addon's
+generated checks must give the same five results. A failure on `closed-live-unclassified.json`
 is recorded as "pending classification" (7.5); it does not block the write.
 
 ## 8. Open questions for the NT8 project
@@ -445,3 +452,4 @@ Each one can change a section above. Answered questions are recorded in 8.2.
 | 1.8 | 2026-10-06 | Journal schema v5 shipped: `account` (free text), `account_type` (`cash`, `apex`, `lucid`, `sim`) and `target_2`, all nullable and required as keys. The addon still writes none of them. Golden samples carry the three keys. |
 | 1.9 | 2026-10-06 | Corrects 1.8, which said the addon writes none of the schema v5 fields. The addon writes `account` (the configured record account name) and `account_type` on every record: under the settled account model, `Sim101` and `sim`. The rich tier writes `target_2` when the plan uses two targets, else null; zero-touch writes null. `target_price` remains the first target and the one R:R is measured against. "Version TBC" wording removed; schema v5 stated plainly. Ownership table and golden samples updated. |
 | 1.10 | 2026-10-06 | Fourth golden sample, `closed-live-unclassified.json` (closed live, null classification; expected `validate()` FAIL), so the `if`/`then` rule has a regression fixture. `post-reconciliation.json` is the deliberate live-environment case, kept although the account model (4.1) produces only `sim`. 7.7 lists all four samples with their expected results. |
+| 1.11 | 2026-10-06 | Rule 7.2 (every nullable field present, null never absent) is now enforced by both the JSON Schema (`required` = all 29 properties) and `validate()`. Import normalizes absent keys to null before validating, so legacy exports still import; writers must emit every key. No schema version bump (stays 5). Fifth golden sample, `missing-key.json` (`commissions` absent; expected `validate()` FAIL). |

@@ -1,0 +1,34 @@
+{
+  "id": "2026-10-06-k3f9a2qm",
+  "taxonomy_version": "1.4",
+  "setup": "trend-continuation",
+  "location": "or-high",
+  "trigger": "level-reclaim",
+  "confirmation": [
+    "big-orders"
+  ],
+  "grade": "A+",
+  "execution_mark": null,
+  "environment": "sim",
+  "account": "Sim101",
+  "account_type": "sim",
+  "tags": [
+    "decision:7k2m9xq4ab1z"
+  ],
+  "instrument": "MNQ",
+  "direction": "long",
+  "session_date": "2026-10-06",
+  "entry_time": "2026-10-06T09:47:12-04:00",
+  "exit_time": null,
+  "intended_price": 25012.5,
+  "actual_fill": 25012.5,
+  "exit_price": null,
+  "stop_price": 25004.5,
+  "target_price": 25028.5,
+  "target_2": 25044.5,
+  "size": 2,
+  "r_multiple": null,
+  "mae_ticks": null,
+  "mfe_ticks": null,
+  "time_in_trade_seconds": null
+}

@@ -260,6 +260,7 @@ const GOLDEN = {
   'zero-touch.json': true,
   'post-reconciliation.json': true,
   'closed-live-unclassified.json': false,
+  'missing-key.json': false,
 };
 for (const [file, expectValid] of Object.entries(GOLDEN)) {
   const rec = readJson(`reference/golden-samples/${file}`);

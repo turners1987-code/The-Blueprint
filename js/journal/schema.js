@@ -182,13 +182,16 @@ const NUMBER_FIELDS = {
 // 2026-09-29-k3f9a. Sorts by date. Assigned by js/journal/storage.js on put.
 export const ID_RE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-z]{4,12}$/;
 
-const KNOWN_FIELDS = new Set([
+// All 29 record keys. Every one must be present in a record (null when it has
+// no value); see CAPTURE_CONTRACT 7.2.
+export const RECORD_FIELDS = [
   ...REQUIRED,
   'id',
   'trigger', 'confirmation', 'execution_mark', 'tags',
   'account', 'account_type',
   'exit_time', 'size', ...Object.keys(NUMBER_FIELDS),
-]);
+];
+const KNOWN_FIELDS = new Set(RECORD_FIELDS);
 
 const DATE_RE = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/;
 const DATETIME_RE = /^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})([.][0-9]+)?(Z|[+-]([0-9]{2}):([0-9]{2}))$/;
@@ -238,19 +241,14 @@ export function validate(record) {
     if (!KNOWN_FIELDS.has(key)) fail(key, 'unknown field');
   }
 
-  // v4: exit_price is nullable but the key must be present.
-  if (record.exit_price === undefined) fail('exit_price', 'is required');
-  // v5: account, account_type and target_2 are nullable but the keys must be present.
-  for (const key of ['account', 'account_type', 'target_2']) {
+  // Contract 7.2: every field is present, null when it has no value. This checks
+  // presence only; null is judged by the REQUIRED and closed-live rules below.
+  for (const key of RECORD_FIELDS) {
     if (record[key] === undefined) fail(key, 'is required');
   }
 
   for (const key of REQUIRED) {
-    if (CLASSIFICATION.includes(key)) {
-      if (record[key] === undefined) fail(key, 'is required');
-    } else if (isBlank(record[key])) {
-      fail(key, 'is required');
-    }
+    if (!CLASSIFICATION.includes(key) && record[key] === null) fail(key, 'is required');
   }
   // An unclassified zero-touch capture is fine; an unclassified closed live
   // trade is not. Closed means exit_time is set.

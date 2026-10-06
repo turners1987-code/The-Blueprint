@@ -88,7 +88,7 @@ test('put assigns a sortable id: session date plus a short random suffix', async
   const saved = await store.put(winner);
   assert.match(saved.id, ID_RE);
   assert.equal(saved.id.slice(0, 10), winner.session_date);
-  assert.equal(winner.id, undefined, 'put must not mutate its argument');
+  assert.equal(winner.id, null, 'put must not mutate its argument');
   const other = await store.put(winner);
   assert.notEqual(other.id, saved.id, 'two puts of a record without an id make two records');
 });
