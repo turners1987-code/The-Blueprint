@@ -11,6 +11,9 @@ const STATUS = {
   'planned':        { label: 'Planned',        badge: 'badge--cyan' },
 };
 
+// Section headings, keyed by category. Unlisted categories render as-is.
+const CATEGORY_LABELS = { addons: 'Add-ons' };
+
 const el = (tag, cls, text) => {
   const n = document.createElement(tag);
   if (cls) n.className = cls;
@@ -76,7 +79,7 @@ async function init() {
     root.replaceChildren();
     for (const [category, list] of groups) {
       const sec = el('section', 'tools-category');
-      sec.append(el('h2', null, category));
+      sec.append(el('h2', null, CATEGORY_LABELS[category] || category));
       const grid = el('div', 'tools-grid');
       list.forEach(t => grid.append(card(t)));
       sec.append(grid);
