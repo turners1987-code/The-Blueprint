@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Know What We Know — The Blueprint</title>
+  <meta name="description" content="Module 01 of The Blueprint: the two evidence gates, the five status badges, why sim trades never count toward edge, and why nothing on this site is validated yet.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="How We Know What We Know — The Blueprint">
+  <meta property="og:description" content="Module 01 of The Blueprint: the two evidence gates, the five status badges, why sim trades never count toward edge, and why nothing on this site is validated yet.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/modules/01-evidence-standard.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="module-page" id="main-content" tabindex="-1">
+
+    <!-- MODULE HEADER -->
+    <header class="module-header">
+      <div class="container">
+        <div class="module-meta">
+          <span class="module-number">MODULE 01</span>
+          <span class="badge badge--cyan">Foundation</span>
+        </div>
+        <h1>How We Know<br><span class="text-gold">What We Know</span></h1>
+        <p class="lead mt-md">Every setup and rule on this site carries a status badge. This module explains what the badges mean, so you can read everything else honestly.</p>
+      </div>
+    </header>
+
+    <!-- MODULE BODY -->
+    <div class="module-body">
+      <div class="container">
+        <div class="lesson-content">
+
+          <h3>Why This Module Exists</h3>
+          <p>Trading content is full of claims that sound settled and aren't. A setup "works." A level "holds." A pattern "has an edge." Usually nobody says how many times it was tested, against what, or by whom.</p>
+          <p>This site does the opposite. Every setup and trigger page shows a status badge and its sample size, <em>n</em>. The badge tells you how far the claim has been tested. This module defines the badges and the rules behind them. Read it before any setup module, because every one of them assumes you know what the badges mean.</p>
+
+          <h3>The Two Gates</h3>
+          <p>A claim has to pass two separate gates. They test different things, and passing one says nothing about the other.</p>
+
+          <div class="grid-2 mt-lg mb-lg">
+            <div class="card card--gold">
+              <h5 class="text-gold mb-md">Gate 1 — Market Data</h5>
+              <p style="max-width:100%; font-size:0.9rem;">Does the rule work on the market, whoever trades it? The rule is written and locked <strong>before the data is opened</strong>. It is tested against a null: the same rule run on 1-minute returns shuffled within 30-minute blocks, which keeps the volatility and destroys the pattern. It must be positive in both halves of the sample and in each calendar year, with a 2023–2026 recency check on top. Results are reported in R with n, win rate, expectancy and null expectancy. The sample threshold is <strong>n ≥ 100</strong>.</p>
+            </div>
+            <div class="card card--cyan">
+              <h5 class="text-cyan mb-md">Gate 2 — Own Execution</h5>
+              <p style="max-width:100%; font-size:0.9rem;">Can I actually take this trade? The threshold is <strong>at least 30 live trades, across at least 20 distinct sessions, with expectancy of at least +0.3R after commissions</strong>. A rule that works on a chart can still fail in the hands of the person trading it. This gate measures that.</p>
+            </div>
+          </div>
+
+          <p>Locking the rule first matters. If you look at the data and then write the rule, you have fitted the rule to the data, and a fitted rule always looks good on the data that produced it. The null, the two halves and the yearly split exist for the same reason: to give a result several chances to fail.</p>
+
+          <p><strong>VALIDATED requires both gates.</strong> Passing either one alone leaves the item at CANDIDATE.</p>
+
+          <h3>The Status Vocabulary</h3>
+          <p>There are five statuses. Each one is a plain statement about how much testing has happened.</p>
+
+          <ul>
+            <li><strong>UNTESTED</strong> — written down, not yet run against data. An idea at n=1 is UNTESTED, however good the one trade looked.</li>
+            <li><strong>WATCH</strong> — positive, but unstable or on a tiny sample. Worth tracking, not worth leaning on.</li>
+            <li><strong>CANDIDATE</strong> — beats the null and is stable, but is still below a gate threshold.</li>
+            <li><strong>VALIDATED</strong> — both gates passed.</li>
+            <li><strong>KILLED</strong> — tested and failed. The reason and a reopen condition are logged so it is never retested blind.</li>
+          </ul>
+
+          <div class="callout callout--cyan mt-lg mb-lg">
+            <div class="callout-title text-cyan">The Badge Rule</div>
+            <p style="max-width:100%; margin:0;">A badge can never exceed its Gate 1 status. My own trade count and my own results, however good, do not raise a badge until the market-data evidence is there.</p>
+          </div>
+
+          <p>One distinction is worth knowing. Some items, such as footprint-based confirmations, need more tick history than is available, so they cannot meet the per-year requirement of Gate 1. They stay UNTESTED. That is a <strong>data block, not a failed test</strong>, and the lesson pages say which of the two you are looking at.</p>
+
+          <h3>How To Read A Badge</h3>
+          <p>Every badge is published with its status and its n, side by side. Look at both. A badge with a small n is telling you the same thing as its status, from a different angle: not much has been tested yet.</p>
+          <p>Results here are given in R, the amount risked on a trade, never in dollars. That keeps a result comparable from one trade to the next, and it keeps this site from quoting income. The other thing to check is the item's status next to the thing it claims. A rule that passed Gate 1 on market data says the market behaved that way. It does not say I can trade it, which is what Gate 2 is for.</p>
+
+          <h3>Why Sim Never Counts Toward Edge</h3>
+          <p>Sim trades are counted and reported separately. They are never pooled into an expectancy figure. The reason is mechanical: the NinjaTrader sim fills a limit order the moment price touches it.</p>
+          <p>Fill placement inside the level is exactly the variable that decides whether a trade works, and it is also the known skill gap in my own execution. So sim is biased on the one variable that matters most. It can tell you how often something happened. It cannot tell you whether you would have made money from it.</p>
+          <p>Sim counts occurrences. It never measures edge. Every Gate 2 count on this site shows its live and sim split, and the analysis tools refuse to pool them rather than just discouraging it.</p>
+
+          <h3>Why Small Samples Are Dimmed, Not Hidden</h3>
+          <p>A cohort of trades is dimmed when it falls below 30 trades <em>and</em> below 20 distinct sessions. The session floor is deliberate. Thirty trades from four sessions is one week's mood, not a sample.</p>
+          <p>Dimmed means shown with a visual warning. It does not mean suppressed. Small cohorts stay visible because hiding them would be its own kind of dishonesty, but they must not look trustworthy. The same logic caps analysis at two dimensions at a time. At roughly three trades a day, slicing by setup, trigger and time of day produces cells of two trades, and those cells will tell you a confident story about nothing.</p>
+
+          <div class="key-concept">
+            <p><strong>A badge tells you how much to trust a claim, and most of them say "not much yet."</strong> That is the intended reading, not a flaw. A CANDIDATE badge is doing its job when it stops you from treating a claim as settled.</p>
+          </div>
+
+          <h3>The Killed List</h3>
+          <p>Ideas that were tested and failed are published here, with the reason each one failed and what would have to change before it is looked at again. This is the point of the framework, not an embarrassment. Nothing is retested blind, and nothing stays dead by accident.</p>
+          <p>The register currently holds four items:</p>
+
+          <ul>
+            <li><strong>R10 — Gap Fill fade entry.</strong> The stop sat inside the noise. Reopen: retest with the R4 stop, which is queued.</li>
+            <li><strong>R11 — Gap N Go, tested form.</strong> No edge, and the two halves had opposite signs. Reopen: a different Gap N Go definition, tested from scratch.</li>
+            <li><strong>R6 — Range Rejection fade at 15 minutes.</strong> Negative expectancy. Reopen: a different rejection entry. The setup's context read, R5, stands.</li>
+            <li><strong>R8 — Opening Range Breakout.</strong> Follow-through was close to the null. Reopen: not as a setup. It survives as a location only.</li>
+          </ul>
+
+          <p>A killed item is not a secret and not a wound. It is a result, and it saves you from having to learn the same thing the hard way. The full reasoning is in Module 16.</p>
+
+          <h3>Where Things Stand Today</h3>
+
+          <div class="callout callout--red mt-lg mb-lg">
+            <div class="callout-title text-red">Nothing On This Site Is VALIDATED</div>
+            <p style="max-width:100%; margin:0;">As of today, no setup, trigger or rule here has passed both gates. The whole framework is candidate-grade or below. That is the honest state of the work, and every page says so.</p>
+          </div>
+
+          <p>That does not make the framework worthless. It makes it unfinished, and it tells you how to use it: as a set of testable ideas written in the open, with the evidence status attached. As claims get tested, badges can move in either direction. Some may be promoted. Some may end up on the killed list. You will be able to see which.</p>
+          <p>When you reach a setup module and see a badge, come back here if you need to. Then read the claim as exactly as strong as the badge says it is.</p>
+
+        </div>
+
+        <!-- MARK COMPLETE -->
+        <div class="module-complete-zone mt-xl">
+          <button id="mark-complete-btn" class="btn btn--primary btn--lg" data-module-id="01-evidence-standard">
+            Mark Complete & Continue →
+          </button>
+        </div>
+
+        <!-- MODULE NAVIGATION -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <a href="00-welcome.html" class="module-nav-title">Welcome & Orientation</a>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next Module →</span>
+            <span class="module-nav-title">The Three Tiers — coming soon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="../ai.html" title="How AI is used here"><img src="../assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/nav.js"></script>
+  <script type="module" src="../js/progress.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

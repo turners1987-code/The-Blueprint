@@ -17,7 +17,7 @@
     "slug": "evidence-standard",
     "part": "start",
     "summary": "The two gates, the status badges, and why nothing here is presented as proven.",
-    "status": "planned",
+    "status": "published",
     "tier": "free",
     "prereq": ["00-welcome"]
   },
