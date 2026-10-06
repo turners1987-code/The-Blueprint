@@ -34,6 +34,7 @@ function initNav() {
     { key: 'journal',  label: 'Journal',   href: 'journal.html' },
     { key: 'deck',     label: 'Card Deck', href: 'modules/flashcards.html' },
     { key: 'dial',     label: 'Dial In',   href: 'modules/dial-in.html' },
+    { key: 'tools',    label: 'Tools',     href: 'tools.html' },
     { key: 'pricing',  label: 'Pricing',   href: 'pricing.html' },
     { key: 'home',     label: 'Home',      href: 'index.html' },
   ];
@@ -46,6 +47,7 @@ function initNav() {
     'journal-analysis.html': 'journal', // the journal's review page
     'flashcards.html': 'deck',
     'dial-in.html': 'dial',
+    'tools.html': 'tools',
     'pricing.html': 'pricing',
     'index.html': 'home',
   };

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools — The Blueprint</title>
+  <meta name="description" content="NinjaTrader 8 indicators and tools from The Blueprint, with install instructions and requirements.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Tools — The Blueprint">
+  <meta property="og:description" content="NinjaTrader 8 indicators and tools from The Blueprint, with install instructions and requirements.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bptrade.co/tools.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/tools.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="tools-page" id="main-content" tabindex="-1">
+    <header class="tools-header">
+      <div class="container">
+        <div class="eyebrow">Tools</div>
+        <h1>NinjaTrader 8 tools</h1>
+        <p class="lead mt-sm">Indicators and add-ons that put the setups to work on your charts. Downloads open as each tool is finished.</p>
+      </div>
+    </header>
+
+    <div class="tools-body">
+      <div class="container container--wide">
+
+        <div class="callout callout--red">
+          <div class="callout-title">Requirements</div>
+          <p>These tools require NinjaTrader 8 on Windows. Some also require the Order Flow+ add-on, marked on each card.</p>
+        </div>
+
+        <div class="callout callout--cyan">
+          <div class="callout-title">Templates are supplied separately</div>
+          <p>Chart templates and Trading Hours templates do not travel inside a NinjaScript export. They are supplied separately with each tool.</p>
+        </div>
+
+        <section class="callout callout--green tools-install" aria-labelledby="install-title">
+          <div class="callout-title" id="install-title">How to install</div>
+          <ol>
+            <li>Open the NinjaTrader 8 Control Center.</li>
+            <li>Choose Tools, then Import, then NinjaScript Add-On.</li>
+            <li>Select the downloaded zip file.</li>
+          </ol>
+        </section>
+
+        <div id="tools-root" aria-live="polite">
+          <p class="tools-error">Loading tools…</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+      <p style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:var(--space-md); max-width:100%;">
+        The Blueprint is an educational resource. Trading futures involves substantial risk. Past performance does not guarantee future results.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/tools.js"></script>
+</body>
+</html>

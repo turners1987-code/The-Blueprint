@@ -1,0 +1,122 @@
+[
+  {
+    "id": "keylevels",
+    "name": "KeyLevels",
+    "summary": "Auto-draws 19 reference levels across monthly, weekly, daily (including PD POC/VAH/VAL and settlement) and overnight, Asia and London sessions. Repopulates daily.",
+    "category": "Indicators",
+    "requires_orderflow": true,
+    "status": "in-development",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "deltaheatmap",
+    "name": "DeltaHeatMap",
+    "summary": "Heat map of delta across price and time.",
+    "category": "Indicators",
+    "requires_orderflow": true,
+    "status": "in-development",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "overnightohlc",
+    "name": "OvernightOHLC",
+    "summary": "Plots the overnight session open, high, low and close.",
+    "category": "Indicators",
+    "requires_orderflow": false,
+    "status": "in-development",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "sessionrangeboxes",
+    "name": "SessionRangeBoxes",
+    "summary": "Draws a box around each session range.",
+    "category": "Indicators",
+    "requires_orderflow": false,
+    "status": "in-development",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": "Asia and London session windows pending update."
+  },
+  {
+    "id": "sessioncumulativedelta",
+    "name": "SessionCumulativeDelta",
+    "summary": "Cumulative delta that resets at each session.",
+    "category": "Indicators",
+    "requires_orderflow": true,
+    "status": "in-development",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "multiplehvn",
+    "name": "MultipleHVN",
+    "summary": "Marks multiple high volume nodes on the chart.",
+    "category": "Indicators",
+    "requires_orderflow": true,
+    "status": "in-development",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "unfinishedbusiness",
+    "name": "UnfinishedBusiness",
+    "summary": "Flags unfinished auctions left at the extremes of the profile.",
+    "category": "Indicators",
+    "requires_orderflow": true,
+    "status": "in-development",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "bp-draft-cockpit",
+    "name": "BP Draft and BP Cockpit",
+    "summary": "Order entry tools for placing and managing trades from the chart.",
+    "category": "Tools",
+    "requires_orderflow": false,
+    "status": "planned",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "chartsnap",
+    "name": "ChartSnap",
+    "summary": "Captures the chart as an image.",
+    "category": "Tools",
+    "requires_orderflow": false,
+    "status": "planned",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  },
+  {
+    "id": "journal-capture",
+    "name": "Journal Capture AddOn",
+    "summary": "Writes your trades to the journal folder.",
+    "category": "Tools",
+    "requires_orderflow": false,
+    "status": "planned",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": ""
+  }
+]

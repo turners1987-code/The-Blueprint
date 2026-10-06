@@ -40,6 +40,10 @@
         store itself. This is what makes a future hosted backend a
         drop-in.
 
+    11. (data/tools.json) Every entry has a valid status
+        (available | in-development | planned), and status
+        "available" requires a non-null file.
+
    Exit code 1 on any error, 0 otherwise.
    ============================================================ */
 
@@ -407,6 +411,34 @@ if (ui.problems.length) {
   totalErrors += ui.problems.length;
 } else {
   console.log(`✓ journal UI: ${ui.scanned} file(s) reach storage only through js/journal/storage.js, awaited`);
+}
+
+// ── Check 11: data/tools.json ──────────────────────────────────
+function checkTools() {
+  const p = path.join(ROOT, 'data', 'tools.json');
+  if (!existsSync(p)) return null;
+  const VALID = ['available', 'in-development', 'planned'];
+  let tools;
+  try { tools = JSON.parse(readFileSync(p, 'utf8')); }
+  catch (e) { return { problems: [`E11: data/tools.json — invalid JSON: ${e.message}`], count: 0 }; }
+  if (!Array.isArray(tools)) return { problems: ['E11: data/tools.json — must be an array'], count: 0 };
+  const problems = [];
+  tools.forEach((t, i) => {
+    const id = t && t.id ? t.id : `#${i}`;
+    if (!t || !VALID.includes(t.status)) problems.push(`E11: data/tools.json — ${id}: invalid status ${JSON.stringify(t && t.status)} (expected ${VALID.join(' | ')})`);
+    else if (t.status === 'available' && !t.file) problems.push(`E11: data/tools.json — ${id}: status "available" requires a non-null file`);
+  });
+  return { problems, count: tools.length };
+}
+
+const toolsResult = checkTools();
+if (toolsResult) {
+  if (toolsResult.problems.length) {
+    toolsResult.problems.forEach(p => console.log(`✗ ${p}`));
+    totalErrors += toolsResult.problems.length;
+  } else {
+    console.log(`✓ tools.json: ${toolsResult.count} entries, all with a valid status`);
+  }
 }
 
 console.log('────────────────────────────────────────');
