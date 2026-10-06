@@ -15,6 +15,7 @@
   <!-- separator dots at 9 and 3 o'clock -->
   <circle cx="22" cy="100" r="4" fill="#38d9ff"/>
   <circle cx="178" cy="100" r="4" fill="#38d9ff"/>
-  <!-- centre mark: a check, verified -->
-  <path d="M 72,102 L 93,123 L 130,78" fill="none" stroke="#f5b94c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- centre mark: "AI" drawn as paths (no font dependency) -->
+  <path fill="#f5b94c" fill-rule="evenodd" d="M62,130 L80,70 L94,70 L112,130 L100,130 L96.1,117 L77.9,117 L74,130 Z M81.2,106 L92.8,106 L87,86.7 Z"/>
+  <rect x="121" y="70" width="17" height="60" fill="#f5b94c"/>
 </svg>
