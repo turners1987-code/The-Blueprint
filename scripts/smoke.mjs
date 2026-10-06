@@ -104,10 +104,6 @@ const server = createServer((req, res) => {
   let clean;
   try { clean = decodeURIComponent(raw); } catch { clean = raw; }
   if (clean === '/') clean = '/index.html';
-  // 404.html carries <base href="/The-Blueprint/"> for GitHub Pages
-  // project paths; serve the repo under that prefix too so the page
-  // loads here exactly as it does in production.
-  clean = clean.replace(/^\/The-Blueprint\b(?![-\w])/, '');
   const within = path.posix.normalize(clean.replace(/^\/+/, '')); // repo-relative, no leading slash
   const file = path.resolve(ROOT, within);
   if (file !== ROOT && !file.startsWith(ROOT + path.sep)) { res.writeHead(403); res.end('forbidden'); return; }

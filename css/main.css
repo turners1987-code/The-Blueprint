@@ -162,12 +162,12 @@ code {
 .nav-logo span { color: var(--cyan); }
 
 .nav-links { display: flex; align-items: center; gap: var(--space-lg); list-style: none; }
-.nav-links a {
+.nav-links a:not(.btn) {
   font-family: var(--font-display); font-weight: 600; font-size: 0.85rem;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--text-secondary); transition: color var(--transition);
 }
-.nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+.nav-links a:not(.btn):hover, .nav-links a.active { color: var(--cyan); }
 
 .nav-progress-bar {
   position: absolute; bottom: 0; left: 0; height: 2px;

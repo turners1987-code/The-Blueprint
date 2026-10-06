@@ -24,14 +24,8 @@ function initNav() {
 
   // ── Where are we? ──────────────────────────────────────────
   const path = window.location.pathname;
-  // A <base href> (404.html) already anchors every relative URL at the
-  // site root, so no ../ prefix is needed there.
-  const hasBase = !!document.querySelector('base');
-  const prefix = !hasBase && path.includes('/modules/') ? '../' : '';
-  const page = hasBase ? '404.html' : (path.substring(path.lastIndexOf('/') + 1) || 'index.html');
-
-  // With a <base href>, a bare "#main-content" would navigate to the base.
-  const skipHref = (hasBase ? window.location.pathname + window.location.search : '') + '#main-content';
+  const prefix = path.includes('/modules/') ? '../' : '';
+  const page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
 
   // ── The single link set (desktop + mobile) ─────────────────
   const LINKS = [
@@ -68,7 +62,7 @@ function initNav() {
 
   // ── Inject ─────────────────────────────────────────────────
   root.insertAdjacentHTML('beforebegin', `
-  <a class="skip-link" href="${skipHref}">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav">
     <div class="container container--wide">
       <a href="${prefix}index.html" class="nav-logo">The <span>Blueprint</span></a>

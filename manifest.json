@@ -1,9 +1,9 @@
 {
-  "id": "/The-Blueprint/",
+  "id": "/",
   "name": "The Blueprint",
   "short_name": "Blueprint",
   "description": "A personal framework for high-probability futures trading.",
-  "start_url": "./",
+  "start_url": "/",
   "scope": "./",
   "display": "standalone",
   "theme_color": "#071426",

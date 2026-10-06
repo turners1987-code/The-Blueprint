@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://turners1987-code.github.io/The-Blueprint/data/journal-schema.json",
+  "$id": "https://bptrade.co/data/journal-schema.json",
   "title": "The Blueprint - trade record",
   "description": "A single journal trade record. Field model: reference/TAXONOMY.md sections 1.1 and 1.2. Vocabularies: sections 2, 3, 4 and 5. Slugs are immutable (TAXONOMY section 0); labels live in js/journal/schema.js and may change freely.",
   "$comment": "Schema v3: setup, location and grade are nullable (present, never absent) so zero-touch captures validate. The top-level if/then rejects null for all three when environment is live and exit_time is set (a closed live trade); validate() in js/journal/schema.js enforces the same rule, and scripts/validate-journal.mjs evaluates if/then. Anything generating checks from this file must carry the if/then. Selectable values only. Reserved but INACTIVE location slugs (london-high, london-low, asia-high, asia-low; TAXONOMY 4.1) are deliberately absent until the NT8 fix ships. Confirmation values other than the four aggression-fails sub-forms (Trapped Traders; Trader Dale's four; TAXONOMY 3.4) have no slugs yet and are absent until TAXONOMY assigns them.",

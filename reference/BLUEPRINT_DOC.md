@@ -4,7 +4,7 @@ Version 3.0 · 2026-10-05
 Replaces every earlier BLUEPRINT_DOC. Where an older copy disagrees with this file,
 this file wins. Delete the old copies rather than keeping two sources.
 
-**Live:** https://turners1987-code.github.io/The-Blueprint
+**Live:** https://bptrade.co
 **Short link:** https://bit.ly/TheBlueprint_Trade
 **Repo:** https://github.com/turners1987-code/The-Blueprint
 **Local path:** `C:\Blueprint\The-Blueprint` (both laptops, cloned from git — never in Google Drive)
@@ -86,7 +86,7 @@ Enforced by the check script.
 ```
 index.html              landing page, module grid rendered from data
 glossary.html           20 terms, inline search
-404.html                uses <base href="/The-Blueprint/"> — BREAKS on a custom domain
+404.html                relative paths; no <base> tag
 sitemap.xml  robots.txt  manifest.json  sw.js  package.json
 css/   main.css, modules.css, index.css, glossary.css, dial-in.css,
        flashcards.css, toothbrush-therapy.css, 404.css
@@ -219,7 +219,6 @@ before anything ships with a price).
 - `modules/00-welcome.html` teaches seven setups — contradicts v2. Needs rewrite.
 - `js/glossary.js` is an empty orphan.
 - Glossary has 20 terms hardcoded in HTML; should move to `data/glossary.json`.
-- `404.html` hardcodes `<base href="/The-Blueprint/">` — breaks on a custom domain.
 - The `drafting` card rendering has never been exercised in a browser; no module currently
   carries that status.
 - Dial In's result copy still says "Your path starts with Module 01" while the CTA points at
