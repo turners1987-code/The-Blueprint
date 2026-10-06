@@ -163,7 +163,7 @@ with it.
 | 3 | `npm run test:storage` | Journal storage layer |
 | 4 | `npm run test:analysis` | Journal analysis maths |
 | 5 | `npm run test:progress` | Progress, position vs completion, continue logic |
-| 6 | `npm run test:smoke` | Serves the site and loads every page, plus 404 behaviour, in headless Chrome |
+| 6 | `npm run test:smoke` | Serves the site and loads every page, plus 404 behaviour, in headless Chrome. Seeds an access code so gated pages open, and adds no-code cases that assert the locked state renders (the journal pages, and any paid module page) |
 
 **Rules enforced by `check.mjs`:**
 
@@ -258,7 +258,7 @@ Decided 2026-10-05: content comes after the research and compiling are reviewed.
 now being written in the order below, from the methodology as it stands.
 
 1. ~~Site foundation~~ — done
-2. ~~Journal and analysis~~ — built; local only
+2. ~~Journal and analysis~~ — built; data stays local; gated client-side only (`js/gate.js`)
 3. ~~Commercial pages~~ — pricing, tools, unlock, ai built; payment not live
 4. ~~Modules 00, 01, 12, 13~~ — written
 5. **Payment live** — Lemon Squeezy verification, real checkout link, real code validation
@@ -301,8 +301,8 @@ target — must be read before anything ships with a price).
 - The checkout link on `pricing.html` is a placeholder.
 - `js/glossary.js` is an empty orphan; the one remaining check warning.
 - Glossary has 20 terms hardcoded in HTML; should move to `data/glossary.json`.
-- `sw.js` shell list (now including `js/gate.js`) does not include `pricing.html`, `tools.html`, `unlock.html`, their CSS,
-  `js/tools.js` or `js/unlock.js`. Verify what offline should cover.
+- The `sw.js` shell list includes `js/gate.js` but not `pricing.html`, `tools.html`,
+  `unlock.html`, their CSS, `js/tools.js` or `js/unlock.js`. Verify what offline should cover.
 - The `drafting` card rendering has never been exercised in a browser; no module carries that
   status.
 - Dial In's result copy says "Your path starts with Module 01" while its CTA points at
@@ -319,8 +319,9 @@ target — must be read before anything ships with a price).
 - Gating mechanism for Full Access. A static site with a code in `localStorage` cannot keep
   paid content private; the options are accepting that, or moving paid pages behind
   Cloudflare (Access, Workers) once the payment flow is live.
-- Whether the journal itself is paid. The pricing page lists it under Full Access; it is
-  currently open. Hosted journal for paying customers means accounts and a backend — a
+- Whether to enforce the journal's gate server-side. The pricing page lists the journal under
+  Full Access and `js/gate.js` gates it, but only client-side, so it is gated and not
+  protected. A hosted journal for paying customers would mean accounts and a backend — a
   different product.
 - When to retire GitHub Pages as the fallback.
 - Code validation design against the Lemon Squeezy License API, including how many browsers
