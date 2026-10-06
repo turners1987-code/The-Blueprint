@@ -34,7 +34,14 @@
 //     exit_price null (storage-common prepare() adds it before validating), so
 //     v1-v3 records and exports import unchanged. Stored records are not
 //     rewritten until they are next saved.
-export const JOURNAL_SCHEMA_VERSION = 4;
+// v5: added account (free text), account_type (cash, apex, lucid, sim) and
+//     target_2 (the second target, price points). All three are nullable but
+//     required as keys. target_price stays the first target, the one R:R is
+//     measured against; target_2 is the runner. Migration: a record without
+//     the keys is read as null for each (storage-common prepare() adds them
+//     before validating), so v1-v4 records and exports import unchanged.
+//     Stored records are not rewritten until they are next saved.
+export const JOURNAL_SCHEMA_VERSION = 5;
 
 // The TAXONOMY version in force: the single source for it in this repo.
 // New records are stamped with it. Bump it whenever reference/TAXONOMY.md
@@ -43,7 +50,7 @@ export const JOURNAL_SCHEMA_VERSION = 4;
 export const TAXONOMY_VERSION = '1.4';
 
 // ── Units of every numeric field ──────────────────────────────
-//   intended_price, actual_fill, stop_price, target_price, exit_price
+//   intended_price, actual_fill, stop_price, target_price, target_2, exit_price
 //                         price points of the instrument (for MNQ one
 //                         tick = 0.25 points)
 //   size                  whole contracts
@@ -141,6 +148,15 @@ export const EXECUTION_MARKS = ['Pass', 'Fail'];
 // TAXONOMY lists no direction values; long and short.
 export const DIRECTIONS = ['long', 'short'];
 
+// Schema v5. Which kind of account a trade was recorded on. Not a TAXONOMY
+// vocabulary. Null (unknown) is valid for records that predate the field.
+export const ACCOUNT_TYPES = [
+  { slug: 'cash',  label: 'Cash' },
+  { slug: 'apex',  label: 'Apex' },
+  { slug: 'lucid', label: 'Lucid' },
+  { slug: 'sim',   label: 'Sim' },
+];
+
 const slugs = (list) => list.map(e => e.slug);
 
 // ── Field rules ───────────────────────────────────────────────
@@ -157,7 +173,7 @@ const CLASSIFICATION = ['setup', 'location', 'grade'];
 const NUMBER_FIELDS = {
   // field: minimum (null = unbounded)
   intended_price: null, actual_fill: null, stop_price: null, target_price: null,
-  exit_price: null,
+  target_2: null, exit_price: null,
   r_multiple: null, mae_ticks: 0, mfe_ticks: 0,
   time_in_trade_seconds: 0, commissions: 0,
 };
@@ -170,6 +186,7 @@ const KNOWN_FIELDS = new Set([
   ...REQUIRED,
   'id',
   'trigger', 'confirmation', 'execution_mark', 'tags',
+  'account', 'account_type',
   'exit_time', 'size', ...Object.keys(NUMBER_FIELDS),
 ]);
 
@@ -223,6 +240,10 @@ export function validate(record) {
 
   // v4: exit_price is nullable but the key must be present.
   if (record.exit_price === undefined) fail('exit_price', 'is required');
+  // v5: account, account_type and target_2 are nullable but the keys must be present.
+  for (const key of ['account', 'account_type', 'target_2']) {
+    if (record[key] === undefined) fail(key, 'is required');
+  }
 
   for (const key of REQUIRED) {
     if (CLASSIFICATION.includes(key)) {
@@ -268,6 +289,11 @@ export function validate(record) {
   checkEnum('execution_mark', EXECUTION_MARKS);
   checkEnum('environment', slugs(ENVIRONMENTS));
   checkEnum('direction', DIRECTIONS);
+  checkEnum('account_type', slugs(ACCOUNT_TYPES));
+
+  if (!isBlank(record.account) && typeof record.account !== 'string') {
+    fail('account', 'must be a string');
+  }
 
   // confirmation: 0 or many, unique, each a known sub-form. Separate from trigger.
   if (!isBlank(record.confirmation)) {
@@ -350,6 +376,8 @@ export function emptyRecord() {
     grade: null,
     execution_mark: null,
     environment: null,
+    account: null,
+    account_type: null,
     tags: [],
     instrument: null,
     direction: null,
@@ -361,6 +389,7 @@ export function emptyRecord() {
     exit_price: null,
     stop_price: null,
     target_price: null,
+    target_2: null,
     size: null,
     r_multiple: null,
     mae_ticks: null,

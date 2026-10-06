@@ -81,6 +81,20 @@
                   <div class="field-error" id="err-environment"></div>
                 </div>
                 <div class="field">
+                  <label for="f-account">Account</label>
+                  <input type="text" id="f-account" name="account" placeholder="Sim101" autocomplete="off">
+                  <div class="field-hint">Optional. The account this trade was recorded on.</div>
+                  <div class="field-error" id="err-account"></div>
+                </div>
+                <div class="field">
+                  <label for="f-account-type">Account type</label>
+                  <select id="f-account-type" name="account_type">
+                    <option value="">— unknown —</option>
+                  </select>
+                  <div class="field-hint">Optional. Cash, Apex, Lucid or Sim.</div>
+                  <div class="field-error" id="err-account_type"></div>
+                </div>
+                <div class="field">
                   <label for="f-direction">Direction <span class="req" aria-hidden="true">*</span></label>
                   <select id="f-direction" name="direction">
                     <option value="">— choose —</option>
@@ -124,6 +138,12 @@
                   <label for="f-target-price">Target price <span class="req" aria-hidden="true">*</span></label>
                   <input type="number" id="f-target-price" name="target_price" step="any" inputmode="decimal" placeholder="24835.75">
                   <div class="field-error" id="err-target_price"></div>
+                </div>
+                <div class="field">
+                  <label for="f-target-2">Target 2</label>
+                  <input type="number" id="f-target-2" name="target_2" step="any" inputmode="decimal" placeholder="24854.25">
+                  <div class="field-hint">Optional. The runner, where the plan has two targets. R:R is measured against target 1.</div>
+                  <div class="field-error" id="err-target_2"></div>
                 </div>
                 <div class="field">
                   <label for="f-intended-price">Intended price</label>

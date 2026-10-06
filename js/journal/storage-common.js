@@ -84,6 +84,10 @@ export async function prepare(record, taken = async () => false) {
   }
   // Schema v4 migration: a record from an older journal has no exit_price key.
   if (copy.exit_price === undefined) copy.exit_price = null;
+  // Schema v5 migration: likewise for account, account_type and target_2.
+  for (const key of ['account', 'account_type', 'target_2']) {
+    if (copy[key] === undefined) copy[key] = null;
+  }
   const { valid, errors } = validate(copy);
   if (!valid) throw new ValidationError(errors);
   return copy;

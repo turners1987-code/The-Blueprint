@@ -193,6 +193,31 @@ test('importAll replaces everything', async () => {
   assert.equal((await store.list()).length, 2);
 });
 
+test('v5 migration: a v4 record or export without the new keys imports, with them read as null', async () => {
+  const { store } = await fresh();
+  const strip = ({ account, account_type, target_2, ...v4 }) => v4;
+  const saved = await store.put(strip(winner));
+  assert.equal(saved.account, null);
+  assert.equal(saved.account_type, null);
+  assert.equal(saved.target_2, null);
+  const r = await store.importAll(JSON.stringify({ format: 'blueprint-journal', journal_schema_version: 4, records: examples.map(strip) }));
+  assert.equal(r.count, 3);
+  for (const rec of await store.list()) assert.deepEqual([rec.account, rec.account_type, rec.target_2], [null, null, null]);
+});
+
+test('a bad account_type or non-numeric target_2 is rejected and nothing is stored', async () => {
+  const { store } = await fresh();
+  await rejects(() => store.put({ ...winner, account_type: 'funded' }), (e) => {
+    assert.ok(e instanceof ValidationError);
+    assert.ok(e.errors.some((x) => x.field === 'account_type'));
+  });
+  await rejects(() => store.put({ ...winner, target_2: 'abc' }), (e) => {
+    assert.ok(e instanceof ValidationError);
+    assert.ok(e.errors.some((x) => x.field === 'target_2'));
+  });
+  assert.equal((await store.list()).length, 0);
+});
+
 test('round trip: export from one store, import into another, records match', async () => {
   const a = await fresh();
   for (const rec of examples) await a.store.put(rec);

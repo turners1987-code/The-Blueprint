@@ -1,13 +1,15 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.7 · 2026-10-06
+Version 1.8 · 2026-10-06
 Status: SPEC. This is the single written document the NinjaTrader 8 capture addon builds against;
 every accepted change is rolled into it, not carried as an amendment. This repo holds the
 contract, not the addon; no addon code lives here.
 
-**Pending site-side change.** The journal schema will bump to add `account`, `account_type` and
-`target_2`. The new schema version is **TBC**. Until it ships, `additionalProperties: false`
-still applies: the addon writes none of those three fields and must not emit them early.
+**Journal schema v5 (shipped).** The schema added `account`, `account_type` and `target_2`, each
+nullable and required as a key. `additionalProperties: false` still applies, and the addon
+writes none of the three: it must not emit them. Zero-touch and rich-tier records carry them as
+`null` until the journal side sets them. This changes no addon obligation until the contract
+says so.
 
 **Division of sources — read this before building anything.**
 
@@ -124,7 +126,7 @@ check) on every emitted record in its own build.
 - A zero-touch record is **written with the plan fields null and flagged for completion in the
   journal UI** (the `zero-touch` tag plus null plan fields is the flag; surfacing them in the UI
   is journal-side work, referenced here so the contract is complete).
-- **Schema v3 (shipped; current schema is v4).** `setup`, `location` and `grade` are nullable in
+- **Schema v3 (shipped; current schema is v5).** `setup`, `location` and `grade` are nullable in
   `journal-schema.json` v3 (Q2), so a zero-touch record validates and the journal's folder scan
   picks it up. The keys are still always present (7.2), and `validate()` still requires all
   three to be non-null once a **live** trade is **closed** (`if`/`then` in the schema, 7.5): an unclassified zero-touch capture is
@@ -434,3 +436,4 @@ Each one can change a section above. Answered questions are recorded in 8.2.
 | 1.5 | 2026-10-05 | `r_multiple` ownership follows who can compute it, with the source recorded in the audit sidecar (7.1). Journal schema v3 shipped: `setup`/`location`/`grade` nullable, required non-null on a closed live trade; `nt8/pending/` retired; Q2 answered; `zero-touch.json` now passes `validate()`. |
 | 1.6 | 2026-10-05 | Schema v4: `exit_price` (size-weighted average exit; nullable, required as a key). `r_multiple` is derived from `exit_price` in the record, not the sidecar; the journal-writes-under-`nt8/` exception is removed. The closed-live classification rule is an `if`/`then` in the schema and the addon's generated checks must carry it. Golden samples carry `exit_price`. |
 | 1.7 | 2026-10-06 | Rolled up into one document. Self-validation never blocks the addon's writes; failures recorded as "pending classification" (7.5). No-network rule reworded to external servers and third parties, exempting NinjaTrader's own data requests (6.1). Trade boundary: flat-to-flat per account and instrument; tier set by the opening execution (1, 3). `stop_price` is the frozen draft stop (2). One cached tick request per instrument per session, required (5.2). Rich-tier id = `<session_date>-<decision_id>` (1). New 5.2 rule: `MergePolicy = DoNotMerge` on the exact contract. Q1 answered (2 s latency; ticks at 300 days, none at 365). Account model settled: Sim101, all records `sim`, no follower records, Gate 2 live-only, sim shown separately (4.1). Pending schema bump (`account`, `account_type`, `target_2`), version TBC. |
+| 1.8 | 2026-10-06 | Journal schema v5 shipped: `account` (free text), `account_type` (`cash`, `apex`, `lucid`, `sim`) and `target_2`, all nullable and required as keys. The addon still writes none of them. Golden samples carry the three keys. |

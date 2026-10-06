@@ -16,7 +16,10 @@
     "direction",
     "session_date",
     "entry_time",
-    "exit_price"
+    "exit_price",
+    "account",
+    "account_type",
+    "target_2"
   ],
   "if": {
     "properties": {
@@ -88,6 +91,14 @@
       "description": "Exactly 1, required on every record. Sim is counted separately and never pooled into expectancy (section 6.4).",
       "enum": ["live", "sim", "replay"]
     },
+    "account": {
+      "description": "The account the trade was recorded on. Free text, no enum. Null for records that predate the field (schema v5). Required as a key.",
+      "type": ["string", "null"]
+    },
+    "account_type": {
+      "description": "The kind of account the trade was recorded on. Null for records that predate the field (schema v5). Required as a key.",
+      "enum": ["cash", "apex", "lucid", "sim", null]
+    },
     "tags": {
       "description": "0 or many. Process and behavioral tags (section 5). TAXONOMY does not enumerate tag values, so any non-empty string is accepted. legacy_ tags are not selectable on new trades.",
       "type": ["array", "null"],
@@ -137,7 +148,11 @@
       "type": ["number", "null"]
     },
     "target_price": {
-      "description": "Plan geometry, for grade evaluation. Price points.",
+      "description": "Plan geometry, for grade evaluation. Price points. The first target, and the one planned R:R is measured against.",
+      "type": ["number", "null"]
+    },
+    "target_2": {
+      "description": "The second target where a plan uses two: the runner. Price points. Null when the plan has one target. Required as a key (schema v5).",
       "type": ["number", "null"]
     },
     "size": {

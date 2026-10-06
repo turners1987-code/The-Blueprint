@@ -15,7 +15,7 @@
 import * as storage from './storage.js';
 import {
   validate, emptyRecord, TAXONOMY_VERSION,
-  SETUPS, LOCATIONS, TRIGGERS, CONFIRMATIONS, GRADES, ENVIRONMENTS,
+  SETUPS, LOCATIONS, TRIGGERS, CONFIRMATIONS, GRADES, ENVIRONMENTS, ACCOUNT_TYPES,
   EXECUTION_MARKS, DIRECTIONS,
 } from './schema.js';
 import { INSTRUMENTS } from './analysis.js';
@@ -60,6 +60,7 @@ function populateForm() {
   fillSelect($('f-trigger'), TRIGGERS, '— none —');
   fillSelect($('f-grade'), GRADES, '— choose —');
   fillSelect($('f-environment'), ENVIRONMENTS, '— choose —');
+  fillSelect($('f-account-type'), ACCOUNT_TYPES, '— unknown —');
   fillSelect($('f-direction'), DIRECTIONS.map((d) => ({ slug: d, label: d[0].toUpperCase() + d.slice(1) })), '— choose —');
   fillSelect($('f-execution-mark'), EXECUTION_MARKS.map((m) => ({ slug: m, label: m })), '— unmarked —');
   $('instrument-list').append(...Object.keys(INSTRUMENTS).map((sym) => new Option(sym)));
@@ -151,6 +152,8 @@ function readForm() {
   rec.instrument = $('f-instrument').value.trim() || null;
   rec.direction = $('f-direction').value || null;
   rec.environment = $('f-environment').value || null;
+  rec.account = $('f-account').value.trim() || null;
+  rec.account_type = $('f-account-type').value || null;
   rec.entry_time = isoFromLocal($('f-entry-time').value);
   rec.exit_time = isoFromLocal($('f-exit-time').value);
   rec.setup = $('f-setup').value || null;
@@ -162,6 +165,7 @@ function readForm() {
   rec.actual_fill = num($('f-actual-fill').value);
   rec.stop_price = num($('f-stop-price').value);
   rec.target_price = num($('f-target-price').value);
+  rec.target_2 = num($('f-target-2').value);
   rec.size = num($('f-size').value);
   rec.exit_price = num($('f-exit-price').value);
   rec.r_multiple = num($('f-r-multiple').value);
@@ -186,6 +190,8 @@ function fillForm(rec) {
   $('f-instrument').value = rec.instrument || '';
   $('f-direction').value = rec.direction || '';
   $('f-environment').value = rec.environment || '';
+  $('f-account').value = rec.account || '';
+  $('f-account-type').value = rec.account_type || '';
   // Wall time as recorded; saving re-stamps it with today's offset.
   $('f-entry-time').value = rec.entry_time ? rec.entry_time.slice(0, 16) : '';
   $('f-exit-time').value = rec.exit_time ? rec.exit_time.slice(0, 16) : '';
@@ -200,6 +206,7 @@ function fillForm(rec) {
   $('f-actual-fill').value = rec.actual_fill ?? '';
   $('f-stop-price').value = rec.stop_price ?? '';
   $('f-target-price').value = rec.target_price ?? '';
+  $('f-target-2').value = rec.target_2 ?? '';
   $('f-size').value = rec.size ?? '';
   $('f-exit-price').value = rec.exit_price ?? '';
   $('f-r-multiple').value = rec.r_multiple ?? '';
