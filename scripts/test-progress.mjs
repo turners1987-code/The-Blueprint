@@ -54,11 +54,24 @@ test('mark 00 and 01, visit 03, unmark 00: continue stays based on 03', () => {
   Progress.markComplete('00-welcome');
   Progress.markComplete('01-evidence');
   Progress.recordVisit('/modules/03-levels.html');
+  assert.equal(target(), 'modules/03-levels.html');
+  Progress.unmarkComplete('00-welcome');
+  assert.equal(target(), 'modules/03-levels.html', 'must not jump back to 00');
+  Progress.markComplete('03-levels');
   assert.equal(target(), 'modules/04-trend.html');
   Progress.unmarkComplete('00-welcome');
-  assert.equal(target(), 'modules/04-trend.html', 'must not jump back to 00');
+  assert.equal(target(), 'modules/04-trend.html', 'unmarking an early module must not move it');
   assert.equal(Progress.load().lastVisited, '03-levels');
-  assert.deepEqual(Progress.load().completed, ['01-evidence']);
+  assert.deepEqual(Progress.load().completed, ['01-evidence', '03-levels']);
+});
+
+test('continue points at lastVisited until it is marked complete, then moves on', () => {
+  Progress.recordVisit('/modules/02-tiers.html');
+  assert.equal(target(), 'modules/02-tiers.html');
+  Progress.markComplete('02-tiers');
+  assert.equal(target(), 'modules/03-levels.html');
+  Progress.unmarkComplete('02-tiers');
+  assert.equal(target(), 'modules/02-tiers.html');
 });
 
 test('unmarking removes the checkmark and nothing else', () => {
@@ -115,11 +128,12 @@ test('lastVisited set: Continue Learning, even with nothing completed', () => {
   Progress.recordVisit('/modules/01-evidence.html');
   const info = Progress.getContinueInfo();
   assert.equal(info.text, 'Continue Learning');
-  assert.equal(info.path, 'modules/02-tiers.html');
+  assert.equal(info.path, 'modules/01-evidence.html');
 });
 
-test('at the last published module, continue stays on it', () => {
+test('at the last published module, continue stays on it once complete', () => {
   Progress.recordVisit('/modules/04-trend.html');
+  Progress.markComplete('04-trend');
   assert.equal(target(), 'modules/04-trend.html');
 });
 

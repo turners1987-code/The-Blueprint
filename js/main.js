@@ -43,54 +43,84 @@ const init = () => {
 
   document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
-  // ── Module completion button ────────────────────────────────
-  // After completion the zone shows where to go next, read from
-  // data/modules.json: a link to the next module when it has a page,
-  // otherwise a quiet "Marked complete" (the module-nav below still
-  // shows what is coming). A completed module opens in the same state.
+  // ── Module completion zone ──────────────────────────────────
+  // Three states, each rebuilt from scratch by render():
+  //   open  — the Mark Complete button
+  //   next  — "Marked complete", a link to the next module, and a quiet
+  //           "Mark as not complete" control
+  //   quiet — as above without a next-module link (the next module has
+  //           no page yet; the module-nav below shows what is coming)
+  // The next module and its status come from data/modules.json. A
+  // completed module opens in its completed state.
   const completeBtn = document.getElementById('mark-complete-btn');
   if (completeBtn) {
     const moduleId = completeBtn.dataset.moduleId;
     const zone = completeBtn.parentElement;
-
-    const showQuiet = () => {
-      completeBtn.textContent = '✓ Marked complete';
-      completeBtn.classList.add('btn--ghost');
-      completeBtn.classList.remove('btn--primary');
-      completeBtn.disabled = true;
-    };
+    const openLabel = completeBtn.textContent.trim();
 
     // Published and drafting modules both have a page (as in js/modules.js).
-    const showDone = (modules, moveFocus) => {
+    const nextWithPage = (modules) => {
       const i = modules ? modules.findIndex(m => m.id === moduleId) : -1;
       const next = i >= 0 ? modules[i + 1] : null;
-      if (!next || (next.status !== 'published' && next.status !== 'drafting')) {
-        showQuiet();
+      return next && (next.status === 'published' || next.status === 'drafting') ? next : null;
+    };
+
+    const render = (state, next, moveFocus) => {
+      if (state === 'open') {
+        const btn = document.createElement('button');
+        btn.id = 'mark-complete-btn';
+        btn.className = 'btn btn--primary btn--lg';
+        btn.dataset.moduleId = moduleId;
+        btn.textContent = openLabel;
+        btn.addEventListener('click', onComplete);
+        zone.replaceChildren(btn);
+        if (moveFocus) btn.focus({ preventScroll: true });
         return;
       }
       const note = document.createElement('p');
       note.className = 'module-complete-note';
       note.setAttribute('role', 'status');
       note.textContent = '✓ Marked complete';
-      const link = document.createElement('a');
-      link.className = 'btn btn--primary btn--lg';
-      link.href = `${next.number}-${next.slug}.html`;
-      link.textContent = `Next: ${next.title} →`;
-      zone.replaceChildren(note, link);
-      if (moveFocus) link.focus({ preventScroll: true });
+      const undo = document.createElement('button');
+      undo.type = 'button';
+      undo.className = 'module-complete-undo';
+      undo.textContent = 'Mark as not complete';
+      undo.addEventListener('click', onUndo);
+      if (state === 'next') {
+        const link = document.createElement('a');
+        link.className = 'btn btn--primary btn--lg';
+        link.href = `${next.number}-${next.slug}.html`;
+        link.textContent = `Next: ${next.title} →`;
+        zone.replaceChildren(note, link, undo);
+        if (moveFocus) link.focus({ preventScroll: true });
+      } else {
+        zone.replaceChildren(note, undo);
+      }
     };
 
-    // Completed on arrival: show the quiet state at once, then upgrade
-    // to the next-module link when the module list has loaded.
-    if (Progress.isComplete(moduleId)) {
-      showQuiet();
-      Progress.ready.then(modules => showDone(modules, false)).catch(() => {});
-    }
-    completeBtn.addEventListener('click', () => {
+    const showCompleted = (moveFocus) => {
+      // Quiet at once; upgrade to the next-module link when the list loads.
+      render('quiet', null, false);
+      Progress.ready
+        .then(modules => {
+          const next = nextWithPage(modules);
+          // Skip if the reader has already unmarked in the meantime.
+          if (next && Progress.isComplete(moduleId)) render('next', next, moveFocus);
+        })
+        .catch(() => {});
+    };
+
+    function onComplete() {
       Progress.markComplete(moduleId);
-      showQuiet();
-      Progress.ready.then(modules => showDone(modules, true)).catch(() => {});
-    });
+      showCompleted(true);
+    }
+    function onUndo() {
+      Progress.unmarkComplete(moduleId);
+      render('open', null, true);
+    }
+
+    completeBtn.addEventListener('click', onComplete);
+    if (Progress.isComplete(moduleId)) showCompleted(false);
   }
 
   // ── Smooth anchor scroll ────────────────────────────────────

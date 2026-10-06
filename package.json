@@ -10,6 +10,7 @@
     "test:analysis": "node scripts/test-analysis.mjs",
     "test:progress": "node scripts/test-progress.mjs",
     "test:smoke": "node scripts/smoke.mjs",
+    "test": "npm run check && npm run check:journal && npm run test:storage && npm run test:analysis && npm run test:progress && npm run test:smoke",
     "import:tm": "node scripts/import-turtlemetrics.mjs"
   }
 }

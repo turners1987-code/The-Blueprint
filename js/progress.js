@@ -178,15 +178,17 @@ export const Progress = {
     return Math.round((done.length / published.length) * 100);
   },
 
-  // Where "Continue" goes: the first published module after lastVisited,
-  // or lastVisited itself when nothing published follows it. Without a
-  // usable lastVisited (first visit, older stored data, a retired id) it
-  // falls back to the first incomplete published module.
+  // Where "Continue" goes: lastVisited while it is not marked complete,
+  // then the first published module after it (or lastVisited itself when
+  // nothing published follows). Without a usable lastVisited (first visit,
+  // older stored data, a retired id) it falls back to the first incomplete
+  // published module.
   getNextModule() {
     const data = this.load();
     const published = MODULES.filter(m => m.status === 'published');
     const at = data.lastVisited ? MODULES.findIndex(m => m.id === data.lastVisited) : -1;
     if (at >= 0) {
+      if (MODULES[at].status === 'published' && !data.completed.includes(MODULES[at].id)) return MODULES[at];
       return MODULES.slice(at + 1).find(m => m.status === 'published') || MODULES[at];
     }
     return published.find(m => !data.completed.includes(m.id))
@@ -221,9 +223,7 @@ export const Progress = {
     // Module completion badges
     MODULES.forEach(mod => {
       const el = document.querySelector(`[data-module-id="${mod.id}"]`);
-      if (el && this.isComplete(mod.id)) {
-        el.classList.add('completed');
-      }
+      if (el) el.classList.toggle('completed', this.isComplete(mod.id));
     });
   },
 
