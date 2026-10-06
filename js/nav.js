@@ -36,6 +36,7 @@ function initNav() {
     { key: 'dial',     label: 'Dial In',   href: 'modules/dial-in.html' },
     { key: 'tools',    label: 'Tools',     href: 'tools.html' },
     { key: 'pricing',  label: 'Pricing',   href: 'pricing.html' },
+    { key: 'ai',       label: 'AI',        href: 'ai.html' },
     { key: 'home',     label: 'Home',      href: 'index.html' },
   ];
 
@@ -49,6 +50,7 @@ function initNav() {
     'dial-in.html': 'dial',
     'tools.html': 'tools',
     'pricing.html': 'pricing',
+    'ai.html': 'ai',
     'index.html': 'home',
   };
   const activeKey = EXACT[page] || (prefix ? 'modules' : null);
