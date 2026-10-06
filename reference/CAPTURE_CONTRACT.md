@@ -1,6 +1,6 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.9 · 2026-10-06
+Version 1.10 · 2026-10-06
 Status: SPEC. This is the single written document the NinjaTrader 8 capture addon builds against;
 every accepted change is rolled into it, not carried as an amendment. This repo holds the
 contract, not the addon; no addon code lives here.
@@ -344,8 +344,8 @@ are its in-addon enforcement.
 `"live"` and `exit_time` is a string (a closed live trade), `setup`, `location` and `grade`
 must be non-null. A generator that reads only `properties` and `required` would accept an
 unclassified closed live trade, which the journal rejects. `rich-tier.json` and
-`post-reconciliation.json` are classified; the regression set must also include a closed live
-record with a null classification field and expect it to fail.
+`post-reconciliation.json` are classified; `closed-live-unclassified.json` is the closed live
+record with null classification fields, and its expected result is **fail** (7.7).
 
 **Self-validation never blocks the addon's own writes.** Every zero-touch live trade is
 unclassified at close, so the generated `if`/`then` check fails on the addon's own close write.
@@ -366,11 +366,16 @@ records take the new literal.
 
 `reference/golden-samples/` holds the addon's regression fixtures:
 
-| File | State |
-| --- | --- |
-| `rich-tier.json` | Rich-tier record as written at open: plan fields populated, outcome fields null |
-| `zero-touch.json` | Zero-touch record at open: classification and plan null, tagged `zero-touch`. **Passes `validate()`** under journal schema v3, because it is unclassified but not a closed live trade (section 3, Q2) |
-| `post-reconciliation.json` | The rich-tier trade after close and reconciliation: every field final, including `exit_price` |
+| File | State | Expected `validate()` |
+| --- | --- | --- |
+| `rich-tier.json` | Rich-tier record as written at open: plan fields populated, outcome fields null | **Passes** |
+| `zero-touch.json` | Zero-touch record at open: classification and plan null, tagged `zero-touch`. Unclassified but not a closed live trade (section 3, Q2) | **Passes** |
+| `post-reconciliation.json` | The live-environment case: a rich-tier trade after close and reconciliation, every field final, including `exit_price`, with `environment: "live"` and a fully classified record. Kept deliberately even though the current account model (4.1) produces only `sim` records, so the live rules stay exercised | **Passes** |
+| `closed-live-unclassified.json` | A closed live record (`environment: "live"`, `exit_time` set) with null `setup`, `location` and `grade`: the `if`/`then` regression case (7.5) | **Fails**, on `setup`, `location` and `grade` |
+
+`npm run check:journal` evaluates all four under both the JSON Schema and `validate()`. The addon's
+generated checks must give the same four results. A failure on `closed-live-unclassified.json`
+is recorded as "pending classification" (7.5); it does not block the write.
 
 ## 8. Open questions for the NT8 project
 
@@ -439,3 +444,4 @@ Each one can change a section above. Answered questions are recorded in 8.2.
 | 1.7 | 2026-10-06 | Rolled up into one document. Self-validation never blocks the addon's writes; failures recorded as "pending classification" (7.5). No-network rule reworded to external servers and third parties, exempting NinjaTrader's own data requests (6.1). Trade boundary: flat-to-flat per account and instrument; tier set by the opening execution (1, 3). `stop_price` is the frozen draft stop (2). One cached tick request per instrument per session, required (5.2). Rich-tier id = `<session_date>-<decision_id>` (1). New 5.2 rule: `MergePolicy = DoNotMerge` on the exact contract. Q1 answered (2 s latency; ticks at 300 days, none at 365). Account model settled: Sim101, all records `sim`, no follower records, Gate 2 live-only, sim shown separately (4.1). Pending schema bump (`account`, `account_type`, `target_2`), version TBC. |
 | 1.8 | 2026-10-06 | Journal schema v5 shipped: `account` (free text), `account_type` (`cash`, `apex`, `lucid`, `sim`) and `target_2`, all nullable and required as keys. The addon still writes none of them. Golden samples carry the three keys. |
 | 1.9 | 2026-10-06 | Corrects 1.8, which said the addon writes none of the schema v5 fields. The addon writes `account` (the configured record account name) and `account_type` on every record: under the settled account model, `Sim101` and `sim`. The rich tier writes `target_2` when the plan uses two targets, else null; zero-touch writes null. `target_price` remains the first target and the one R:R is measured against. "Version TBC" wording removed; schema v5 stated plainly. Ownership table and golden samples updated. |
+| 1.10 | 2026-10-06 | Fourth golden sample, `closed-live-unclassified.json` (closed live, null classification; expected `validate()` FAIL), so the `if`/`then` rule has a regression fixture. `post-reconciliation.json` is the deliberate live-environment case, kept although the account model (4.1) produces only `sim`. 7.7 lists all four samples with their expected results. |

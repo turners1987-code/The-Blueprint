@@ -253,6 +253,21 @@ for (const rec of examples) {
   if (!r.valid) fail(`valid id rejected by schema.js: ${r.errors.map(e => e.field + ' ' + e.message).join('; ')}`);
 }
 
+// Golden samples (reference/golden-samples/, contract 7.7): each must give its
+// recorded result under both checkers.
+const GOLDEN = {
+  'rich-tier.json': true,
+  'zero-touch.json': true,
+  'post-reconciliation.json': true,
+  'closed-live-unclassified.json': false,
+};
+for (const [file, expectValid] of Object.entries(GOLDEN)) {
+  const rec = readJson(`reference/golden-samples/${file}`);
+  const schemaErrors = validateAgainstJsonSchema(rec);
+  if ((schemaErrors.length === 0) !== expectValid) fail(`golden sample ${file}: JSON Schema ${expectValid ? 'rejected' : 'accepted'} it`);
+  if (validate(rec).valid !== expectValid) fail(`golden sample ${file}: schema.js validate() ${expectValid ? 'rejected' : 'accepted'} it`);
+}
+
 const blank = emptyRecord();
 if (validate(blank).valid) fail('emptyRecord() must not validate until the required fields are filled in');
 
@@ -265,4 +280,5 @@ console.log(`✓ journal schema v${JOURNAL_SCHEMA_VERSION} (taxonomy ${TAXONOMY_
 console.log(`✓ ${examples.length} example records validate under JSON Schema and schema.js`);
 console.log(`✓ enums agree between journal-schema.json and schema.js`);
 console.log(`✓ ${Object.keys(NEGATIVE).length} negative controls rejected by both checkers; impossible dates and newer taxonomy versions rejected by schema.js (a JSON Schema pattern cannot check those)`);
+console.log(`✓ ${Object.keys(GOLDEN).length} golden samples give their recorded validate() result under both checkers`);
 console.log(`✓ older taxonomy versions (${OLDER.join(', ')}) still validate, with a warning from schema.js`);
