@@ -1,15 +1,14 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.8 · 2026-10-06
+Version 1.9 · 2026-10-06
 Status: SPEC. This is the single written document the NinjaTrader 8 capture addon builds against;
 every accepted change is rolled into it, not carried as an amendment. This repo holds the
 contract, not the addon; no addon code lives here.
 
-**Journal schema v5 (shipped).** The schema added `account`, `account_type` and `target_2`, each
-nullable and required as a key. `additionalProperties: false` still applies, and the addon
-writes none of the three: it must not emit them. Zero-touch and rich-tier records carry them as
-`null` until the journal side sets them. This changes no addon obligation until the contract
-says so.
+**Journal schema v5.** The schema has `account`, `account_type` and `target_2`, each nullable and
+required as a key. `additionalProperties: false` still applies. The addon writes `account` and
+`account_type` on every record, and `target_2` on rich-tier records when the plan uses two
+targets (null otherwise). `target_price` stays the first target, the one R:R is measured against.
 
 **Division of sources — read this before building anything.**
 
@@ -114,6 +113,8 @@ check) on every emitted record in its own build.
 | `setup`, `location`, `trigger`, `confirmation` | as submitted | **null** |
 | `grade` | as submitted (5.1) | **null** |
 | `intended_price`, `stop_price`, `target_price` | as submitted | **null** |
+| `target_2` | as submitted when the plan uses two targets, else **null** | **null** |
+| `account`, `account_type` | the configured record account (4.1): `Sim101`, `sim` | the configured record account (4.1): `Sim101`, `sim` |
 | `instrument`, `direction`, `session_date`, `entry_time`, `environment`, `size`, `actual_fill` | captured | captured |
 | `exit_time`, `exit_price`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` | post-exit | post-exit |
 | `r_multiple` | computed (stop known) | **null** — no stop, no R; the journal computes it once the trader supplies the stop (7.1) |
@@ -152,8 +153,8 @@ check) on every emitted record in its own build.
   decision records by `decision_id`. Nothing in this contract may block it — which is why
   `decision_id` stays on every rich record (the `decision:` tag), and why the trade boundary
   (section 1) is per account.
-- The `account` and `account_type` fields this model calls for are the pending schema bump
-  (header). Until then the account is identified only by the addon's configuration.
+- **`account` is the configured record account name (`Sim101`) and `account_type` is `sim`, on
+  every record.** The addon writes both at creation, from its configuration, never detected.
 
 ### 4.2 Copier dedup
 
@@ -261,9 +262,9 @@ edit. The rule is **field-level ownership**.
 
 | Owner | Fields |
 | --- | --- |
-| **Addon** — anything the platform observes | `id`, `taxonomy_version`, `environment`, `instrument`, `direction`, `session_date`, `entry_time`, `exit_time`, `actual_fill`, `exit_price`, `r_multiple`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` |
+| **Addon** — anything the platform observes | `id`, `taxonomy_version`, `environment`, `account`, `account_type`, `instrument`, `direction`, `session_date`, `entry_time`, `exit_time`, `actual_fill`, `exit_price`, `r_multiple`, `mae_ticks`, `mfe_ticks`, `time_in_trade_seconds`, `commissions` |
 | **Journal** — anything the trader decides | `setup`, `location`, `trigger`, `confirmation`, `grade`, `execution_mark`, `tags` (and `notes`, if the schema ever gains it — see below) |
-| **Shared, addon-first** | `intended_price`, `stop_price`, `target_price`, `size` |
+| **Shared, addon-first** | `intended_price`, `stop_price`, `target_price`, `target_2`, `size` |
 
 **The rule.** Each writer **reads the current file, changes only the fields it owns, and writes
 the whole record back**. Neither clears, nulls, reformats or "refreshes" a field it does not own.
@@ -274,8 +275,8 @@ The write is still atomic (section 1).
   fields are the journal's: every later addon write carries them through untouched. A zero-touch
   record is created with them null. `execution_mark` is never written by the addon — the trader
   judges the exit in the journal.
-- **Shared fields.** The addon writes `intended_price`, `stop_price`, `target_price` and `size`
-  when the rich tier knows them at submission. For zero-touch records the journal fills them. The
+- **Shared fields.** The addon writes `intended_price`, `stop_price`, `target_price`, `target_2` and
+  `size` when the rich tier knows them at submission (`target_2` stays null when the plan has one target). For zero-touch records the journal fills them. The
   addon **never overwrites a non-null value it did not write**: it records in
   `nt8/audit/<id>.json` which shared fields it wrote and with what value, and later touches a
   shared field only if the file still holds exactly that value (or null).
@@ -437,3 +438,4 @@ Each one can change a section above. Answered questions are recorded in 8.2.
 | 1.6 | 2026-10-05 | Schema v4: `exit_price` (size-weighted average exit; nullable, required as a key). `r_multiple` is derived from `exit_price` in the record, not the sidecar; the journal-writes-under-`nt8/` exception is removed. The closed-live classification rule is an `if`/`then` in the schema and the addon's generated checks must carry it. Golden samples carry `exit_price`. |
 | 1.7 | 2026-10-06 | Rolled up into one document. Self-validation never blocks the addon's writes; failures recorded as "pending classification" (7.5). No-network rule reworded to external servers and third parties, exempting NinjaTrader's own data requests (6.1). Trade boundary: flat-to-flat per account and instrument; tier set by the opening execution (1, 3). `stop_price` is the frozen draft stop (2). One cached tick request per instrument per session, required (5.2). Rich-tier id = `<session_date>-<decision_id>` (1). New 5.2 rule: `MergePolicy = DoNotMerge` on the exact contract. Q1 answered (2 s latency; ticks at 300 days, none at 365). Account model settled: Sim101, all records `sim`, no follower records, Gate 2 live-only, sim shown separately (4.1). Pending schema bump (`account`, `account_type`, `target_2`), version TBC. |
 | 1.8 | 2026-10-06 | Journal schema v5 shipped: `account` (free text), `account_type` (`cash`, `apex`, `lucid`, `sim`) and `target_2`, all nullable and required as keys. The addon still writes none of them. Golden samples carry the three keys. |
+| 1.9 | 2026-10-06 | Corrects 1.8, which said the addon writes none of the schema v5 fields. The addon writes `account` (the configured record account name) and `account_type` on every record: under the settled account model, `Sim101` and `sim`. The rich tier writes `target_2` when the plan uses two targets, else null; zero-touch writes null. `target_price` remains the first target and the one R:R is measured against. "Version TBC" wording removed; schema v5 stated plainly. Ownership table and golden samples updated. |
