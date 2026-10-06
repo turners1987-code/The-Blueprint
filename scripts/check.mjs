@@ -44,6 +44,10 @@
         (available | in-development | planned), and status
         "available" requires a non-null file.
 
+    12. (modules/*.html) A module page must not contain an <h3>
+        unless it also contains an <h2>. A skipped heading level is
+        an error.
+
    Exit code 1 on any error, 0 otherwise.
    ============================================================ */
 
@@ -216,6 +220,12 @@ function checkHtml(htmlFile, moduleIds) {
   // ── Check 2: exactly one <h1> ──
   const h1Count = (content.match(/<h1[\s>]/gi) || []).length;
   if (h1Count !== 1) errors.push(`E2: expected exactly 1 <h1>, found ${h1Count}`);
+
+  // ── Check 12: no skipped heading level on module pages ──
+  if (relName(htmlFile).startsWith('modules/')
+      && /<h3[\s>]/i.test(content) && !/<h2[\s>]/i.test(content)) {
+    errors.push('E12: <h3> without any <h2> — the heading outline skips a level');
+  }
 
   // ── Check 3: non-empty <title> and meta description ──
   const title = content.match(/<title[^>]*>([^<]*)<\/title>/i);

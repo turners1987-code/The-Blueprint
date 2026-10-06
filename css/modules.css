@@ -43,8 +43,16 @@
 .lesson-content h2, .lesson-content h3 { scroll-margin-top: calc(60px + var(--space-lg)); }
 
 /* Lesson content */
-.lesson-content h3 { color: var(--cyan); margin-top: var(--space-xl); margin-bottom: var(--space-md); }
-.lesson-content h3:first-child { margin-top: 0; }
+.lesson-content h2 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--cyan); margin-top: var(--space-xl); margin-bottom: var(--space-md);
+}
+.lesson-content h2:first-child { margin-top: 0; }
+/* Sub-section inside a section: one step smaller than the h2. */
+.lesson-content h3 {
+  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  color: var(--text-primary); margin-top: var(--space-lg); margin-bottom: var(--space-sm);
+}
 .lesson-content p { margin-bottom: var(--space-md); }
 .lesson-content ul, .lesson-content ol {
   padding-left: var(--space-xl); color: var(--text-secondary);

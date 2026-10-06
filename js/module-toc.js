@@ -7,8 +7,8 @@
    aria-label="On this page"></nav> above .lesson-content. No
    container, or fewer than MIN_SECTIONS headings, renders nothing.
 
-   Section headings are the lesson's h2s; a lesson that has none
-   (the current modules go h1 straight to h3) uses its h3s.
+   Section headings are the lesson's h2s, and only h2s. A page with
+   a broken outline gets no index, and scripts/check.mjs (E12) fails it.
    ============================================================ */
 
 const MIN_SECTIONS = 3;
@@ -19,11 +19,6 @@ function slugify(text) {
     .replace(/[’']/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '') || 'section';
-}
-
-function sectionHeadings(lesson) {
-  const h2 = lesson.querySelectorAll('h2');
-  return h2.length ? [...h2] : [...lesson.querySelectorAll('h3')];
 }
 
 function ensureIds(headings) {
@@ -85,7 +80,7 @@ function init() {
   const lesson = document.querySelector('.lesson-content');
   if (!container || !lesson) return;
 
-  const headings = sectionHeadings(lesson);
+  const headings = [...lesson.querySelectorAll('h2')];
   if (headings.length < MIN_SECTIONS) return;
 
   ensureIds(headings);
