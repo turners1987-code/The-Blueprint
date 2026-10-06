@@ -1,7 +1,7 @@
 # The Blueprint — Canonical Taxonomy
 
-Version 1.4 · 2026-10-05
-Status: APPROVED structure. Four items remain OPEN; none block the build.
+Version 1.4.1 · 2026-10-06 (document revision; `TAXONOMY_VERSION` in `js/journal/schema.js` stays "1.4")
+Status: APPROVED structure. Four items remain OPEN (#2, #5, #7, #8); none block the build.
 
 This file freezes the **vocabulary and the record structure**. The journal schema, the
 TurtleMetrics tag set, and every lesson build against these exact names. Changing a name after
@@ -256,12 +256,11 @@ Levels are zones; the stop goes behind the far edge.
 
 ### 4.1 Pre-marked
 `pd-high` · `pd-low` · `pd-vah` · `pd-val` · `pd-vpoc` · `settlement` · `on-high` · `on-low` ·
-`on-poc` · `london-high`* · `london-low`* · `asia-high`* · `asia-low`* · `prior-week-high`† ·
-`prior-week-low`† · `htf-hvn` · `htf-lvn`
+`on-poc` · `london-high`* · `london-low`* · `asia-high`* · `asia-low`* · `prior-week-high` ·
+`prior-week-low` · `htf-hvn` · `htf-lvn`
 
 \* INACTIVE — shelved off the live chart (4.4). Slugs reserved; not selectable until the NT8 fix
 ships.
-† Convention flag — OPEN #6.
 
 ### 4.2 In-session
 `or-high` · `or-low` (once the window closes) · `defended-pullback-high` ·
@@ -285,7 +284,17 @@ invisible.
 ### 4.4 Level integrity notes
 - Asia/London session boxes are shelved off the live chart (untracked; DST drift against fixed-ET
   windows). Slugs stay reserved so history re-activates cleanly.
-- PWH/PWL is currently RTH-only while other levels are ETH — OPEN #6, owned by the NT8 project.
+- **Session scope of every pre-marked level** (convention settled, OPEN #6 closed):
+
+  | Level | Session scope |
+  | --- | --- |
+  | PD High/Low, POC/VA, Settlement (`pd-*`, `settlement`) | RTH, 09:30–16:00 ET |
+  | PW/PM (`prior-week-*`, prior month) | Full-session week, Sun 18:00 → Fri 16:00 ET |
+  | ON / Asia / London (`on-*`, `asia-*`, `london-*`) | ETH |
+
+  The day boundary everywhere is **16:00 ET** (NYSE close), deliberately not CME's 17:00. Levels
+  may differ slightly from TradingStats; accepted. The ON window itself is under question —
+  OPEN #8.
 
 ---
 
@@ -404,6 +413,13 @@ Every setup and trigger page must display its badge and its n.
   2.1.
 - **OPEN #4 — Range Rejection Gate 2 count.** RESOLVED 2026-10-04: verified as Shane's own trade
   count, not a copy of R5's. Live/sim split still required before display.
+- **OPEN #6 — PWH/PWL session convention.** RESOLVED 2026-10-06: **full-session week, Sun 18:00 →
+  Fri 16:00 ET**; the full convention is recorded in 4.4. The premise of the item was wrong —
+  PWH/PWL was never RTH-only. No level changed, only this document's description of it, so no
+  record's meaning changes: `TAXONOMY_VERSION` stays "1.4" and no re-derivation is owed. One
+  accepted divergence: TradingStats' ETH week ends Fri 17:00 ET while the chart's ends Fri 16:00,
+  so the two disagree only when a weekly extreme prints in Friday's final hour. Thinnest hour of
+  the week; accepted, not chased.
 
 ### OPEN #2 — Pause N Go needs a tested definition
 The primary trigger and the weakest-defined item in the stack. No register entry exists. Now
@@ -419,16 +435,27 @@ gaps.
 **Blocks:** the No Setup lesson and every setup-distribution chart. **Owner:** Shane (judgment
 calls), journal build (bulk re-tag).
 
-### OPEN #6 — PWH/PWL session convention
-PWH/PWL is RTH-only while every other level is ETH. Decide the convention, then re-derive history
-on whichever side changes.
-**Blocks:** prior-week location accuracy. **Owner:** NT8 build project.
-
 ### OPEN #7 — Stacked Imbalance ratio
 Ratio 5 / min delta 15 was chosen for screen clarity, never tested on MNQ. Until tested, the
 lesson states the setting as a working default rather than a result.
 **Blocks:** Stacked Imbalance lesson precision; Gate 1 for the location (also subject to 6.3).
 **Owner:** register queue.
+
+### OPEN #8 — Overnight level window vs TradingStats OVN
+**Status:** unresolved. **Owner:** NT8 build project.
+The 16:00 ET day boundary puts `on-high`, `on-low` and `on-poc` on a wider window than
+TradingStats' OVN module, which is 18:00 prev day → 09:30. The 16:00–17:00 ET hour falls inside
+the chart's overnight but outside the tested window. This matters because the OVN module is the
+most load-bearing in the dataset (95.1% OVN breakout rate; open vs OVN mid at +22pp is the
+strongest single directional factor), and citing those numbers for a differently-scoped level
+breaks the rule that a statistic must back the level actually traded.
+**Proposal under consideration (NOT decided):** keep 16:00 as the day-labelling convention and
+re-scope the ON level window to 18:00 → 09:30 to match the tested module, on the grounds that
+"which day a trade belongs to" and "what window computes the overnight high" are separable
+decisions.
+**Version note:** resolving it the proposed way WOULD be a semantic change to `on-*` locations and
+would warrant a `TAXONOMY_VERSION` bump plus re-derivation at that time.
+**Blocks:** citing OVN statistics for any `on-*` location.
 
 ---
 
@@ -477,6 +504,7 @@ Legacy entry tags keep their values with a `legacy_` prefix and are unselectable
 | 1.2 | 2026-10-04 | Evidence moved out to the register; items carry register ID + badge + `[cite register]`. Section 0 versioning added. Measurement fields named. `confirmation` frozen as nullable. Grade rubric written. Taxonomy dispositions separated from evidence states. Sections 8 and 9 added. Display floor gains a 20-session requirement. OPEN #4–#7 promoted. |
 | 1.3 | 2026-10-04 | **OPEN #1 RESOLVED — confirmation.** Governing rule reworded: triggers are price events, order flow confirms. `trigger_subform` removed; sub-forms moved to `confirmation`. Pause N Go's absorption clause moved to `big-orders`; its definition narrowed to pause-then-resume. Section 3 retitled "Triggers and confirmations." **OPEN #3 RESOLVED** — Trend Continuation wording approved and locked into 2.1. **OPEN #4 RESOLVED** — Range Rejection Gate 2 count verified as Shane's own. Section 0 back-fill contradiction fixed (one-time import stamp permitted and recorded). **Grade rubric split (5.1 / 5.2):** grade is entry-plan compliance, assigned before resolution; new `execution_mark` field carries exit compliance. A+ fill tolerance defined as within 2 ticks. Display floor clarified: dim means shown with a warning, never suppressed. Legacy mapping gains a row for aggression-based entry tags. |
 | 1.4 | 2026-10-05 | **Field names and units aligned with the journal schema.** Section 1.2: `mae` → `mae_ticks`, `mfe` → `mfe_ticks`, `time_in_trade` → `time_in_trade_seconds`. Units column added to the measurement table (price points, contracts, R, ticks, seconds, US dollars). `mae_ticks` and `mfe_ticks` stated as positive magnitudes regardless of direction; `commissions` stated as US dollars for the entire trade, both sides, all contracts. `execution_mark` was already in the 1.1 table (Pass / Fail, 5.2); no change. No enum, gate or OPEN item changed. |
+| 1.4.1 | 2026-10-06 | **Documentation correction; `TAXONOMY_VERSION` stays "1.4".** OPEN #6 closed: PWH/PWL was never RTH-only; the "RTH-only" line in 4.4 was wrong and is replaced by the session scope of every pre-marked level (RTH for PD/POC/VA/Settlement, full-session week Sun 18:00 → Fri 16:00 ET for PW/PM, ETH for ON/Asia/London; day boundary 16:00 ET). Convention dagger removed from `prior-week-high`/`prior-week-low`. OPEN #8 opened (overnight level window vs TradingStats OVN). |
 
 **Migration 1.2 → 1.3:**
 - `trigger_subform` → `confirmation`. Same values, new field. No value renames.
@@ -490,3 +518,7 @@ Legacy entry tags keep their values with a `legacy_` prefix and are unselectable
 **Migration 1.3 → 1.4:**
 - No values changed; only field names. `mae` → `mae_ticks`, `mfe` → `mfe_ticks`,
   `time_in_trade` → `time_in_trade_seconds`. Same values, new names.
+
+**Migration 1.4 → 1.4.1:**
+- No change. Document correction only; no level, slug or enum changed, no record's meaning
+  changes, no re-derivation owed.

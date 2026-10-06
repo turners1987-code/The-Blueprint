@@ -1,6 +1,6 @@
 # The Blueprint — NT8 Capture Contract
 
-Version 1.11 · 2026-10-06
+Version 1.12 · 2026-10-06
 Status: SPEC. This is the single written document the NinjaTrader 8 capture addon builds against;
 every accepted change is rolled into it, not carried as an amendment. This repo holds the
 contract, not the addon; no addon code lives here.
@@ -390,8 +390,15 @@ Each one can change a section above. Answered questions are recorded in 8.2.
 
 ### 8.1 Open
 
-5. **PWH/PWL session convention** — RTH-only today while every other level is ETH (TAXONOMY
-   OPEN #6, already owned by the NT8 project). Location capture depends on the decision.
+10. **`session_date` boundary vs the 16:00 ET chart day.** Section 2 derives `session_date`
+    from the instrument's Trading Hours template. The chart's day boundary is 16:00 ET (TAXONOMY
+    4.4). If the template is not cut at 16:00 ET, a fill between 16:00 and 17:00 carries a
+    `session_date` one day behind the chart's day label. Two ways to settle it:
+    - **(a)** cut the Trading Hours template at 16:00 ET, so the template and the chart agree;
+    - **(b)** document 16:00 as a chart-only convention, with `session_date` following the
+      template.
+
+    Neither is decided. **Owner:** NT8 build project.
 
 ### 8.2 Answered
 
@@ -453,3 +460,4 @@ Each one can change a section above. Answered questions are recorded in 8.2.
 | 1.9 | 2026-10-06 | Corrects 1.8, which said the addon writes none of the schema v5 fields. The addon writes `account` (the configured record account name) and `account_type` on every record: under the settled account model, `Sim101` and `sim`. The rich tier writes `target_2` when the plan uses two targets, else null; zero-touch writes null. `target_price` remains the first target and the one R:R is measured against. "Version TBC" wording removed; schema v5 stated plainly. Ownership table and golden samples updated. |
 | 1.10 | 2026-10-06 | Fourth golden sample, `closed-live-unclassified.json` (closed live, null classification; expected `validate()` FAIL), so the `if`/`then` rule has a regression fixture. `post-reconciliation.json` is the deliberate live-environment case, kept although the account model (4.1) produces only `sim`. 7.7 lists all four samples with their expected results. |
 | 1.11 | 2026-10-06 | Rule 7.2 (every nullable field present, null never absent) is now enforced by both the JSON Schema (`required` = all 29 properties) and `validate()`. Import normalizes absent keys to null before validating, so legacy exports still import; writers must emit every key. No schema version bump (stays 5). Fifth golden sample, `missing-key.json` (`commissions` absent; expected `validate()` FAIL). |
+| 1.12 | 2026-10-06 | Open question 5 (PWH/PWL session convention) removed from 8.1: TAXONOMY OPEN #6 is closed — full-session week, Sun 18:00 → Fri 16:00 ET, day boundary 16:00 ET (TAXONOMY 4.4). New open question 10 (8.1): the `session_date` boundary against the 16:00 ET chart day; both options recorded, none decided. No schema or taxonomy version change. |
