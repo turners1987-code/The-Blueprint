@@ -60,6 +60,15 @@ const BANNED_PATTERNS = [
   { label: 'we assume you know nothing', re: /we assume you know nothing/i },
   { label: 'beginner/advanced level label', re: /beginner\s*(?:\/|to|-|–)\s*advanced/i },
   { label: 'newbie',                     re: /\bnewbies?\b/i },
+  // "from zero" labels where the reader starts. "away from zero" is rounding.
+  { label: 'from zero',                  re: /(?<!away )\bfrom zero\b/i },
+  // "from scratch" only when it labels the reader or what the course does to
+  // them; "start from scratch" describing how a trade plan is built passes.
+  { label: 'reader starting from scratch', re: /\b(?:who|you(?:'re| are)?|anyone|anybody|those|people|traders|students|learners)\b[^.\n]{0,30}\b(?:starting|beginning)\s+(?:out\s+)?from scratch\b/i },
+  { label: 'who start from scratch',     re: /\bwho\s+(?:just\s+)?(?:start|begin)\s+(?:out\s+)?from scratch\b/i },
+  { label: 'teach/learn ... from scratch', re: /\b(?:teach(?:es)?\s+you|learn(?:ing)?)\b[^.\n]{0,60}\bfrom scratch\b/i },
+  { label: 'clearance level',            re: /\bclearance\s+level\b/i },
+  { label: 'level 1 / level one as a label', re: /\blevel\s+(?:01|one)\b|\b(?:you(?:'re| are)|your|at|student|reader|beginner)\s+level\s+1\b/i },
 ];
 
 const MODULES_JSON = path.join(ROOT, 'data', 'modules.json');
