@@ -44,19 +44,52 @@ const init = () => {
   document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
   // ── Module completion button ────────────────────────────────
+  // After completion the zone shows where to go next, read from
+  // data/modules.json: a link to the next module when it has a page,
+  // otherwise a quiet "Marked complete" (the module-nav below still
+  // shows what is coming). A completed module opens in the same state.
   const completeBtn = document.getElementById('mark-complete-btn');
   if (completeBtn) {
     const moduleId = completeBtn.dataset.moduleId;
-    if (Progress.isComplete(moduleId)) {
-      completeBtn.textContent = '✓ Completed';
+    const zone = completeBtn.parentElement;
+
+    const showQuiet = () => {
+      completeBtn.textContent = '✓ Marked complete';
       completeBtn.classList.add('btn--ghost');
       completeBtn.classList.remove('btn--primary');
+      completeBtn.disabled = true;
+    };
+
+    // Published and drafting modules both have a page (as in js/modules.js).
+    const showDone = (modules, moveFocus) => {
+      const i = modules ? modules.findIndex(m => m.id === moduleId) : -1;
+      const next = i >= 0 ? modules[i + 1] : null;
+      if (!next || (next.status !== 'published' && next.status !== 'drafting')) {
+        showQuiet();
+        return;
+      }
+      const note = document.createElement('p');
+      note.className = 'module-complete-note';
+      note.setAttribute('role', 'status');
+      note.textContent = '✓ Marked complete';
+      const link = document.createElement('a');
+      link.className = 'btn btn--primary btn--lg';
+      link.href = `${next.number}-${next.slug}.html`;
+      link.textContent = `Next: ${next.title} →`;
+      zone.replaceChildren(note, link);
+      if (moveFocus) link.focus({ preventScroll: true });
+    };
+
+    // Completed on arrival: show the quiet state at once, then upgrade
+    // to the next-module link when the module list has loaded.
+    if (Progress.isComplete(moduleId)) {
+      showQuiet();
+      Progress.ready.then(modules => showDone(modules, false)).catch(() => {});
     }
     completeBtn.addEventListener('click', () => {
       Progress.markComplete(moduleId);
-      completeBtn.textContent = '✓ Completed';
-      completeBtn.classList.add('btn--ghost');
-      completeBtn.classList.remove('btn--primary');
+      showQuiet();
+      Progress.ready.then(modules => showDone(modules, true)).catch(() => {});
     });
   }
 
