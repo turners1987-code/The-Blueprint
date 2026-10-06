@@ -12,6 +12,10 @@
    in the repo, and fails on any console error, uncaught exception
    or unhandled rejection.
 
+   It also asserts, on every page, that the shared nav renders the
+   same link set into the desktop bar and the mobile menu — they
+   are one set in js/nav.js and must never drift apart.
+
    Ignored, deliberately:
      - favicon.ico 404s (the site ships favicon.svg)
      - failed loads of cross-origin resources (the Google Fonts
@@ -125,6 +129,23 @@ const PAGES = walkHtml(ROOT)
 
 // Missing URLs at several depths must still serve a styled 404 page.
 const NOT_FOUND_PROBES = ['nope', 'modules/nope', 'modules/deep/nope'];
+
+// Reads the rendered nav out of a page as comparable strings
+// ("href label" per link). The CTA button lives inside the desktop
+// list but in its own .nav-mobile-cta block on mobile, so it is
+// compared separately and filtered out of the desktop list.
+const NAV_PARITY = `(() => {
+  const menu = (ul) => ul ? [...ul.querySelectorAll('a')]
+    .filter((a) => !a.classList.contains('btn'))
+    .map((a) => a.getAttribute('href') + ' ' + a.textContent.trim()) : null;
+  const cta = (a) => a ? a.getAttribute('href') + ' ' + a.textContent.trim() : null;
+  return {
+    desktop: menu(document.querySelector('.nav-links')),
+    mobile: menu(document.querySelector('.nav-mobile-links')),
+    desktopCta: cta(document.querySelector('.nav-links a.btn')),
+    mobileCta: cta(document.querySelector('.nav-mobile-cta a')),
+  };
+})()`;
 
 // ── Minimal CDP client over WebSocket ──────────────────────────
 function cdpConnect(url) {
@@ -259,6 +280,21 @@ for (const page of [...PAGES, ...NOT_FOUND_PROBES]) {
     await api.send('Page.navigate', { url });
     await withTimeout(loaded, PAGE_TIMEOUT_MS, `loading ${page}`);
     await sleep(SETTLE_MS); // modules run after load; async renders finish here
+
+    // The nav injects one link set into two places (desktop bar,
+    // mobile menu). If they ever render differently, the shared nav
+    // has drifted — fail the page.
+    if (!probe) {
+      const { result } = await api.send('Runtime.evaluate', { returnByValue: true, expression: NAV_PARITY });
+      const v = result.value;
+      if (!v || !v.desktop || !v.mobile) {
+        errors.push({ text: 'nav was not injected (js/nav.js missing)', url: '' });
+      } else if (JSON.stringify(v.desktop) !== JSON.stringify(v.mobile)) {
+        errors.push({ text: `nav link parity broken — desktop [${v.desktop.join(' | ')}] vs mobile [${v.mobile.join(' | ')}]`, url: '' });
+      } else if (JSON.stringify(v.desktopCta) !== JSON.stringify(v.mobileCta)) {
+        errors.push({ text: `nav CTA parity broken — desktop "${v.desktopCta}" vs mobile "${v.mobileCta}"`, url: '' });
+      }
+    }
     if (probe) {
       // The 404 status on the document itself is expected; anything else is not.
       for (let i = errors.length - 1; i >= 0; i--) {

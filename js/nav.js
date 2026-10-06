@@ -62,9 +62,11 @@ function initNav() {
 
   // ── Optional CTA, rendered after the link set ──────────────
   // index.html promotes the course; every other page points home.
+  // The course CTA carries data-continue-btn on BOTH renders, so
+  // progress.js keeps the desktop bar and the mobile menu in sync.
   const CTA = (page === 'index.html')
-    ? { label: 'Start Course', href: 'modules/00-welcome.html', btn: 'btn--primary', id: ' id="continue-btn"' }
-    : { label: '← Home',       href: 'index.html',              btn: 'btn--ghost',   id: '' };
+    ? { label: 'Start Course', href: 'modules/00-welcome.html', btn: 'btn--primary', hook: ' data-continue-btn' }
+    : { label: '← Home',       href: 'index.html',              btn: 'btn--ghost',   hook: '' };
 
   // ── Inject ─────────────────────────────────────────────────
   root.insertAdjacentHTML('beforebegin', `
@@ -74,7 +76,7 @@ function initNav() {
       <a href="${prefix}index.html" class="nav-logo">The <span>Blueprint</span></a>
       <ul class="nav-links">
         ${listItems()}
-        <li><a href="${prefix}${CTA.href}"${CTA.id} class="btn ${CTA.btn} btn--sm">${CTA.label}</a></li>
+        <li><a href="${prefix}${CTA.href}"${CTA.hook} class="btn ${CTA.btn} btn--sm">${CTA.label}</a></li>
       </ul>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile-menu">
         <span></span><span></span><span></span>
@@ -88,7 +90,7 @@ function initNav() {
       ${listItems()}
     </ul>
     <div class="nav-mobile-cta">
-      <a href="${prefix}${CTA.href}" class="btn btn--primary">${CTA.label}</a>
+      <a href="${prefix}${CTA.href}"${CTA.hook} class="btn btn--primary">${CTA.label}</a>
     </div>
   </div>
   `.trim());

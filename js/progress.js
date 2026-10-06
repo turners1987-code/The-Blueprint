@@ -192,16 +192,20 @@ export const Progress = {
     });
   },
 
-  // Point #continue-btn (if present) at the right module. Safe to call
-  // before the module list has loaded; it re-runs when it arrives.
+  // Point every course CTA (data-continue-btn — the nav renders one
+  // in the desktop bar and one in the mobile menu) at the right
+  // module. Safe to call before the module list has loaded; it
+  // re-runs when it arrives.
   updateContinueBtn() {
-    const continueBtn = document.getElementById('continue-btn');
-    if (!continueBtn) return;
+    const btns = document.querySelectorAll('[data-continue-btn]');
+    if (!btns.length) return;
     const info = this.getContinueInfo();
     // Determine correct path prefix based on current page location
     const prefix = window.location.pathname.includes('/modules/') ? '../' : '';
-    continueBtn.textContent = info.text;
-    continueBtn.href = prefix + info.path;
+    btns.forEach(btn => {
+      btn.textContent = info.text;
+      btn.href = prefix + info.path;
+    });
   },
 
   // Reset all progress (for testing)
