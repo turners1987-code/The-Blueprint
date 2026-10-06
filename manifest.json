@@ -2,7 +2,7 @@
   "id": "/",
   "name": "The Blueprint",
   "short_name": "Blueprint",
-  "description": "A personal framework for high-probability futures trading.",
+  "description": "A personal framework for futures trading.",
   "start_url": "/",
   "scope": "./",
   "display": "standalone",

@@ -83,7 +83,7 @@
         <button class="nav-btn" id="nextBtn" onclick="navigate(1)">Next →</button>
       </div>
 
-      <div class="fc-footer">Blueprint Card Deck · v1.0 · 32 Cards</div>
+      <div class="fc-footer">Blueprint Card Deck · v2 · 32 Cards</div>
     </div>
   </div>
 
@@ -319,9 +319,14 @@
     neutral:'badge-neutral', context:'badge-context', both:'badge-both'
   };
 
-  // Load JSON
+  // Load JSON. cards.json is precached by sw.js, so this only fails on a
+  // first visit that is offline or when the file cannot be read. There is
+  // no inline copy of the deck to fall back to; say so instead.
   fetch('../js/cards.json')
-    .then(r => r.json())
+    .then(r => {
+      if(!r.ok) throw new Error('cards.json: HTTP ' + r.status);
+      return r.json();
+    })
     .then(data => {
       data.sections.forEach(s => {
         s.cards.forEach(c => { c.sectionTitle = s.title; c.sectionId = s.id; });
@@ -331,18 +336,16 @@
       deck = [...allCards];
       renderCard();
     })
-    .catch(()=> {
-      // Fallback with inline sample data if JSON not loaded
-      allCards = FALLBACK_CARDS;
-      deck = [...allCards];
-      buildFilters([
-        {id:'01',title:'Candlestick Psychology'},
-        {id:'02',title:'Multi-Candle'},
-        {id:'03',title:'Reversal'},
-        {id:'04',title:'Continuation'},
-        {id:'05',title:'Blueprint'}
-      ]);
-      renderCard();
+    .catch(() => {
+      document.getElementById('card').style.display = 'none';
+      document.getElementById('counter').textContent = '';
+      const msg = document.createElement('p');
+      msg.className = 'fc-error';
+      msg.setAttribute('role', 'alert');
+      msg.style.color = 'var(--text-muted)';
+      msg.style.textAlign = 'center';
+      msg.textContent = 'The card deck could not be loaded. Check your connection and reload the page.';
+      document.getElementById('card').after(msg);
     });
 
   function buildFilters(sections){

@@ -137,7 +137,7 @@
           "sentimentLabel": "Bearish",
           "visual": "evening-star",
           "desc": "Three candles: a large bullish candle, a small indecision candle, then a large bearish candle closing below the midpoint of the first. The mirror of Morning Star.",
-          "note": "Most reliable at significant resistance after an extended uptrend. The third candle must close well into the body of the first."
+          "note": "Traders look for it at resistance after an extended uptrend. The third candle closes well into the body of the first."
         },
         {
           "id": "02-03",
@@ -155,7 +155,7 @@
           "sentimentLabel": "Bearish",
           "visual": "three-black-crows",
           "desc": "Three consecutive bearish candles, each opening within the prior body and closing progressively lower. The mirror of Three White Soldiers. Sustained, relentless selling.",
-          "note": "Most reliable after an extended uptrend. Each candle should have a small or no lower wick — showing sellers held control all session."
+          "note": "Traders look for it after an extended uptrend. Each candle has a small or no lower wick, which is read as sellers holding control through the session."
         },
         {
           "id": "02-05",
@@ -239,7 +239,7 @@
           "sentimentLabel": "Bearish",
           "visual": "bear-flag",
           "desc": "A sharp downward move followed by a controlled, upward-sloping consolidation. The consolidation is a dead-cat bounce — sellers regrouping before continuing lower.",
-          "note": "Mirror of Bull Flag. The upward drift in the flag is sellers allowing a relief bounce. When it breaks down, the move is often sharp."
+          "note": "Mirror of Bull Flag. The upward drift in the flag is read as sellers allowing a relief bounce before the next leg down."
         },
         {
           "id": "04-03",
@@ -248,7 +248,7 @@
           "sentimentLabel": "Continuation — Both Directions",
           "visual": "pennant",
           "desc": "A sharp move followed by a symmetrical triangle consolidation — converging trendlines forming a small symmetrical triangle. Price coils tighter before breaking in the direction of the original move.",
-          "note": "Similar to a flag but with converging lines rather than parallel. The breakout direction almost always matches the initial move."
+          "note": "Similar to a flag but with converging lines rather than parallel. Traders watch for a break in the direction of the original move."
         },
         {
           "id": "04-04",
@@ -257,7 +257,7 @@
           "sentimentLabel": "Reversal or Continuation",
           "visual": "wedge",
           "desc": "Two converging trendlines both moving in the same direction. Rising wedge (bearish): higher highs and higher lows compressing upward. Falling wedge (bullish): lower highs and lower lows compressing downward.",
-          "note": "Rising wedge breaks down. Falling wedge breaks up. The longer the wedge, the more powerful the eventual break."
+          "note": "A rising wedge slopes up and a falling wedge slopes down, with the lines converging in both. Traders read the rising wedge as bearish and the falling wedge as bullish."
         },
         {
           "id": "04-05",
@@ -299,7 +299,7 @@
           "sentimentLabel": "Foundational Concept",
           "visual": "support-resistance",
           "desc": "Support: a price level where buying has historically overwhelmed selling. Resistance: where selling has historically overwhelmed buying. These levels exist because traders remember them.",
-          "note": "Once broken, support becomes resistance and resistance becomes support. This is called a role reversal — one of the most reliable concepts in price action."
+          "note": "A broken support level is often treated as resistance afterwards, and a broken resistance level as support. This is called a role reversal."
         },
         {
           "id": "05-02",
@@ -308,7 +308,7 @@
           "sentimentLabel": "Price Behavior",
           "visual": "gap",
           "desc": "When price opens significantly higher or lower than the prior close, leaving an unfilled area on the chart. Gaps represent a sudden shift in sentiment — often from news or overnight events.",
-          "note": "Gaps have a statistical tendency to fill. Gap N Go: price continues in the gap direction. Gap Fill: price reverses to close the gap. Context determines which."
+          "note": "Gap N Go: price continues in the gap direction. Gap Fill: price reverses to close the gap. Which of the two a trader is looking for depends on context."
         },
         {
           "id": "05-03",
