@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter your access code — The Blueprint</title>
+  <meta name="description" content="Unlock Full Access on The Blueprint with the code from your receipt. No account, no password.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Enter your access code — The Blueprint">
+  <meta property="og:description" content="Unlock Full Access on The Blueprint with the code from your receipt. No account, no password.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bptrade.co/unlock.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/unlock.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="unlock-page" id="main-content" tabindex="-1">
+    <header class="unlock-header">
+      <div class="container">
+        <div class="eyebrow">Full Access</div>
+        <h1>Enter your access code</h1>
+        <p class="lead mt-sm">Full Access is unlocked with the code from your receipt. No account, no password &mdash; the code lives in this browser.</p>
+      </div>
+    </header>
+
+    <div class="unlock-body">
+      <div class="container">
+
+        <!-- Entry state: shown when no code is stored -->
+        <section class="card unlock-panel" id="unlock-entry" aria-labelledby="unlock-entry-heading">
+          <h2 id="unlock-entry-heading" class="sr-only">Access code</h2>
+          <form class="unlock-form" id="unlock-form" novalidate>
+            <label class="unlock-label" for="unlock-code">Access code</label>
+            <input class="unlock-input" id="unlock-code" name="code" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Paste your code">
+            <div class="unlock-error" id="unlock-error" role="alert" hidden></div>
+            <div class="unlock-actions">
+              <button type="submit" class="btn btn--primary">Unlock</button>
+              <a href="pricing.html">Back to pricing</a>
+            </div>
+          </form>
+          <p class="unlock-note">The code is stored in this browser only. Enter it again on another device, or after clearing your browser data.</p>
+        </section>
+
+        <!-- Success state: shown when a code is stored -->
+        <section class="card card--green unlock-panel" id="unlock-done" aria-labelledby="unlock-done-heading" aria-live="polite" hidden>
+          <h2 id="unlock-done-heading">Full Access is unlocked</h2>
+          <p class="unlock-note" id="unlock-stored"></p>
+          <ul class="unlock-list">
+            <li>The Blueprint modules</li>
+            <li>The capstone</li>
+            <li>The trade journal</li>
+            <li>The NT8 tools</li>
+            <li>The cockpit cards</li>
+          </ul>
+          <div class="unlock-actions">
+            <a href="index.html#course" class="btn btn--primary">Go to the module index</a>
+            <button type="button" class="unlock-remove" id="unlock-remove">Remove code</button>
+          </div>
+          <p class="unlock-note">The code is stored in this browser only. Enter it again on another device, or after clearing your browser data.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-tagline">
+        <span>The Setup is the edge.</span> Discipline is the execution. Everything else is noise.
+      </div>
+      <p style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:var(--space-md); max-width:100%;">
+        The Blueprint is an educational resource. Trading futures involves substantial risk. Past performance does not guarantee future results.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/unlock.js"></script>
+</body>
+</html>
