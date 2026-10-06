@@ -71,8 +71,8 @@ here would be a copy that is wrong within months.
   cache from `data/modules.json`.
 - Journal data stays on the user's machine: browser storage or a chosen folder. There is no
   backend and no account.
-- Access is a code stored in `localStorage` (`js/unlock.js`). It is not an account, and
-  nothing yet enforces the paid tier on pages. See known issues.
+- Access is a code stored in `localStorage` (`js/unlock.js`), checked by `js/gate.js`. It is
+  not an account and not real protection. See known issues.
 
 ---
 
@@ -131,6 +131,7 @@ js/    nav.js         shared nav on every page; registers the service worker
        modules.js     renders the module grid from data/modules.json
        module-toc.js  section index on module pages
        tools.js       renders tools.html from data/tools.json
+       gate.js        access gate: hasAccess(), locked state for gated pages
        unlock.js      access code entry (placeholder validation)
        main.js        scroll reveals, quizzes, misc page behaviour
        cards.json     32-card flashcard deck
@@ -180,6 +181,7 @@ with it.
 10. The journal UI reaches storage only through `js/journal/storage.js`, awaited
 11. Every `data/tools.json` entry has a valid status; `available` requires a file
 12. A module page may not contain an h3 without an h2
+13. A page with `data-gate` loads `js/gate.js`; a paid module page must carry `data-gate="tier"`
 
 0-byte HTML files are listed as STUB and skipped; `--strict` audits them.
 
@@ -290,13 +292,16 @@ target — must be read before anything ships with a price).
 
 ## 10. Known issues
 
-- **The paid tier is not enforced.** `js/unlock.js` accepts any non-empty code, and no page is
-  gated on it. `journal.html` and published modules are reachable by anyone. The lock marker on
-  paid cards is cosmetic.
+- **The gate is client-side and beta-grade.** `js/gate.js` hides `journal.html`,
+  `journal-analysis.html` and any module whose tier is `paid` in `data/modules.json` unless a
+  code is stored in `localStorage`, and shows a locked state with links to pricing and unlock.
+  It protects nothing: the files are public and the code can be set by hand. Validation is
+  still a placeholder, so any non-empty code passes. Check rule 13 fails a paid module page
+  that lacks `data-gate="tier"`.
 - The checkout link on `pricing.html` is a placeholder.
 - `js/glossary.js` is an empty orphan; the one remaining check warning.
 - Glossary has 20 terms hardcoded in HTML; should move to `data/glossary.json`.
-- `sw.js` shell list does not include `pricing.html`, `tools.html`, `unlock.html`, their CSS,
+- `sw.js` shell list (now including `js/gate.js`) does not include `pricing.html`, `tools.html`, `unlock.html`, their CSS,
   `js/tools.js` or `js/unlock.js`. Verify what offline should cover.
 - The `drafting` card rendering has never been exercised in a browser; no module carries that
   status.

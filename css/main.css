@@ -483,3 +483,12 @@ code {
 /* --- AI SEAL (footer, fixed in flow — never floating) --- */
 .footer-seal { display: block; width: 64px; height: 64px; margin: 0 auto var(--space-md); }
 .footer-seal img { display: block; width: 64px; height: 64px; }
+
+/* --- ACCESS GATE (js/gate.js) ---
+   Gated content is hidden until gate.js marks it open, so it never
+   flashes before the check. If the script fails, the page stays hidden. */
+[data-gate]:not([data-gate-state="open"]) { display: none; }
+.gate-locked { padding: calc(60px + var(--space-3xl)) 0 var(--space-3xl); }
+.gate-locked .container { max-width: 640px; }
+.gate-locked-note { margin-top: var(--space-lg); color: var(--text-muted); }
+.gate-locked-actions { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-lg); }

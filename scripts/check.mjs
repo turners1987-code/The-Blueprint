@@ -44,6 +44,10 @@
         (available | in-development | planned), and status
         "available" requires a non-null file.
 
+    13. (gated pages) A page carrying data-gate must load js/gate.js,
+        and a module page whose id is tier "paid" in data/modules.json
+        must carry data-gate="tier" — otherwise it would be public.
+
     12. (modules/*.html) A module page must not contain an <h3>
         unless it also contains an <h2>. A skipped heading level is
         an error.
@@ -252,6 +256,17 @@ function checkHtml(htmlFile, moduleIds) {
     if (m) errors.push(`E6: banned phrase "${label}" (line ${lineOf(content, m.index)})`);
   }
 
+  // ── Check 13: gated pages load the gate; paid modules are gated ──
+  const gated = /\sdata-gate\s*=/i.test(content);
+  if (gated && !/<script[^>]+src\s*=\s*["'][^"']*js\/gate\.js["']/i.test(content)) {
+    errors.push('E13: page has data-gate but does not load js/gate.js');
+  }
+  if (relName(htmlFile).startsWith('modules/')
+      && paidIds.has(path.basename(htmlFile, '.html'))
+      && !/data-gate\s*=\s*["']tier["']/i.test(content)) {
+    errors.push('E13: paid module page is missing data-gate="tier" — it would be public');
+  }
+
   // ── Check 7: data-module-id values exist in data/modules.json ──
   if (moduleIds) {
     for (const m of content.matchAll(/data-module-id\s*=\s*["']([^"']+)["']/gi)) {
@@ -287,10 +302,12 @@ if (htmlFiles.length === 0) {
 }
 
 let moduleIds = null; // null → check 7 skipped
+const paidIds = new Set(); // module ids with tier "paid" (check 13)
 if (existsSync(MODULES_JSON)) {
   try {
     const parsed = JSON.parse(readFileSync(MODULES_JSON, 'utf8'));
     moduleIds = moduleIdsFrom(parsed);
+    (Array.isArray(parsed) ? parsed : parsed.modules || []).filter(m => m && m.tier === 'paid').forEach(m => paidIds.add(m.id));
     const bad = (Array.isArray(parsed) ? parsed : parsed.modules || [])
       .filter(m => m && m.tier !== 'free' && m.tier !== 'paid').map(m => m.id);
     if (bad.length) {

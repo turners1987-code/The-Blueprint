@@ -4,7 +4,7 @@
    There is no account and no server: the code lives here only.
    ============================================================ */
 
-const STORAGE_KEY = 'blueprint_access_code';
+import { ACCESS_KEY as STORAGE_KEY } from './gate.js';
 
 // ── Validation ──────────────────────────────────────────────
 // PLACEHOLDER: accepts any non-empty code. Nothing is verified yet.

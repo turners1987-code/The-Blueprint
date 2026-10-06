@@ -23,7 +23,7 @@
   <!-- NAV (injected by js/nav.js) -->
   <div id="nav-root"></div>
 
-  <div class="journal-page" id="main-content" tabindex="-1">
+  <div class="journal-page" id="main-content" tabindex="-1" data-gate="access" data-gate-title="Journal Analysis" data-gate-blurb="A read-only view of your own journal: results by setup, trigger and grade, discipline and sequence effects, stop survival, and whether you have enough history for the figures to mean anything.">
     <header class="journal-header">
       <div class="container">
         <div class="eyebrow">Trade Journal</div>
@@ -57,6 +57,7 @@
   </footer>
 
   <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/gate.js"></script>
   <script type="module" src="js/progress.js"></script>
   <script type="module" src="js/journal/ui-analysis.js"></script>
 </body>

@@ -16,6 +16,12 @@
    same link set into the desktop bar and the mobile menu — they
    are one set in js/nav.js and must never drift apart.
 
+   Gated pages (js/gate.js) need an access code. The main run seeds
+   one into localStorage before each page loads and asserts every
+   data-gate page opens. A separate case loads a gated page with NO
+   code and asserts the locked state renders and the content stays
+   hidden.
+
    Ignored, deliberately:
      - favicon.ico 404s (the site ships favicon.svg)
      - failed loads of cross-origin resources (the Google Fonts
@@ -126,6 +132,10 @@ const ORIGIN = `http://127.0.0.1:${server.address().port}`;
 const PAGES = walkHtml(ROOT)
   .map((f) => path.relative(ROOT, f).split(path.sep).join('/'))
   .sort();
+
+// Any non-empty code passes while validation is a placeholder (js/gate.js).
+const SEED_CODE = 'smoke-test-code';
+const SEED_SCRIPT = `try { localStorage.setItem('blueprint_access_code', ${JSON.stringify(SEED_CODE)}); } catch {}`;
 
 // Missing URLs at several depths must still serve a styled 404 page.
 const NOT_FOUND_PROBES = ['nope', 'modules/nope', 'modules/deep/nope'];
@@ -276,6 +286,7 @@ for (const page of [...PAGES, ...NOT_FOUND_PROBES]) {
     await api.send('Runtime.enable');
     await api.send('Log.enable');
     await api.send('Page.enable');
+    await api.send('Page.addScriptToEvaluateOnNewDocument', { source: SEED_SCRIPT });
     const loaded = new Promise((res) => api.on((m) => { if (m.method === 'Page.loadEventFired') res(); }));
     await api.send('Page.navigate', { url });
     await withTimeout(loaded, PAGE_TIMEOUT_MS, `loading ${page}`);
@@ -293,6 +304,14 @@ for (const page of [...PAGES, ...NOT_FOUND_PROBES]) {
         errors.push({ text: `nav link parity broken — desktop [${v.desktop.join(' | ')}] vs mobile [${v.mobile.join(' | ')}]`, url: '' });
       } else if (JSON.stringify(v.desktopCta) !== JSON.stringify(v.mobileCta)) {
         errors.push({ text: `nav CTA parity broken — desktop "${v.desktopCta}" vs mobile "${v.mobileCta}"`, url: '' });
+      }
+    }
+    // A gated page with a code must have opened, not stayed hidden.
+    if (!probe) {
+      const { result } = await api.send('Runtime.evaluate', { returnByValue: true, expression:
+        `(() => { const g = document.querySelector('[data-gate]'); return g ? g.dataset.gateState : null; })()` });
+      if (result.value !== null && result.value !== 'open') {
+        errors.push({ text: `gated page did not open with a code stored (state: ${result.value})`, url: '' });
       }
     }
     if (probe) {
@@ -329,6 +348,74 @@ for (const page of [...PAGES, ...NOT_FOUND_PROBES]) {
   }
 }
 
+// ── Gated page without a code: the locked state must render ──
+// The journal pages, plus any module page that exists and is tier "paid"
+// (none yet: this follows data/modules.json, not a list).
+const GATED_NO_CODE = [
+  'journal.html',
+  'journal-analysis.html',
+  ...JSON.parse(readFileSync(path.join(ROOT, 'data', 'modules.json'), 'utf8'))
+    .filter((m) => m.tier === 'paid' && PAGES.includes(`modules/${m.id}.html`))
+    .map((m) => `modules/${m.id}.html`),
+];
+for (const page of GATED_NO_CODE) {
+  let api = null;
+  let tab = null;
+  const problems = [];
+  try {
+    tab = await newTab();
+    api = await withTimeout(cdpConnect(tab.webSocketDebuggerUrl), PAGE_TIMEOUT_MS, 'connecting to the tab');
+    const { errors, listen } = collector();
+    listen(api);
+    await api.send('Runtime.enable');
+    await api.send('Log.enable');
+    await api.send('Page.enable');
+    const loaded = new Promise((res) => api.on((m) => { if (m.method === 'Page.loadEventFired') res(); }));
+    // The profile is shared with the seeded run above: clear the stored code.
+    await api.send('Storage.clearDataForOrigin', { origin: ORIGIN, storageTypes: 'local_storage' });
+    await api.send('Page.navigate', { url: `${ORIGIN}/${page}` });
+    await withTimeout(loaded, PAGE_TIMEOUT_MS, `loading ${page} without a code`);
+    await sleep(SETTLE_MS);
+    const { result } = await api.send('Runtime.evaluate', { returnByValue: true, expression:
+      `(() => {
+        const g = document.querySelector('[data-gate]');
+        const p = document.querySelector('.gate-locked');
+        const hrefs = p ? [...p.querySelectorAll('a')].map((a) => new URL(a.href).pathname) : [];
+        return {
+          state: g && g.dataset.gateState,
+          hidden: g ? getComputedStyle(g).display === 'none' : null,
+          panel: !!p,
+          heading: p && p.querySelector('h1') && p.querySelector('h1').textContent,
+          hrefs,
+          nav: !!document.querySelector('.site-nav'),
+          footer: !!document.querySelector('.site-footer'),
+          form: !!document.querySelector('#trade-form') && getComputedStyle(document.querySelector('#trade-form')).display !== 'none' && !!document.querySelector('#trade-form').offsetParent,
+        };
+      })()` });
+    const v = result.value;
+    if (v.state !== 'locked') problems.push(`gate state is ${v.state}, expected locked`);
+    if (!v.hidden) problems.push('gated content is not hidden');
+    if (!v.panel || !v.heading) problems.push('locked state did not render');
+    if (!v.hrefs.some((h) => h.endsWith('/pricing.html'))) problems.push('locked state has no link to pricing.html');
+    if (!v.hrefs.some((h) => h.endsWith('/unlock.html'))) problems.push('locked state has no link to unlock.html');
+    if (!v.nav || !v.footer) problems.push('nav or footer missing from the locked state');
+    if (v.form) problems.push('journal form is visible while locked');
+    errors.forEach((e) => problems.push(e.text));
+  } catch (e) {
+    problems.push(e && e.message ? e.message : String(e));
+  } finally {
+    if (api) api.close();
+    if (tab) await closeTab(tab.id);
+  }
+  if (problems.length) {
+    failed++;
+    console.log(`✗ /${page} (no code: locked state)`);
+    problems.slice(0, 5).forEach((p) => console.log(`    ${p}`));
+  } else {
+    console.log(`✓ /${page} (no code: locked state)`);
+  }
+}
+
 // ── Shut down ──────────────────────────────────────────────────
 child.kill();
 await new Promise((res) => { child.on('exit', res); setTimeout(res, 3000); });
@@ -339,5 +426,6 @@ for (const delay of [0, 500]) {
 }
 
 console.log('─'.repeat(40));
-console.log(`${PAGES.length + NOT_FOUND_PROBES.length - failed} passed, ${failed} failed`);
+const total = PAGES.length + NOT_FOUND_PROBES.length + GATED_NO_CODE.length;
+console.log(`${total - failed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
