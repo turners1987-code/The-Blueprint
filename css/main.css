@@ -418,6 +418,13 @@ code {
   color: var(--text-muted); text-align: center;
 }
 .footer-tagline span { color: var(--cyan); }
+.footer-links {
+  margin-top: var(--space-md); text-align: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 0.85rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+}
+.footer-links a { color: var(--text-muted); }
+.footer-links a:hover { color: var(--cyan); }
 
 /* --- UTILITIES --- */
 .text-gold   { color: var(--gold); }
