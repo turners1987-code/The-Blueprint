@@ -87,8 +87,9 @@ export async function validateKey(key) {
   }
 
   const lk = data && data.license_key;
-  if (data && data.valid === true && lk && LS_PRODUCT_IDS.includes(lk.product_id) && VALID_STATUSES.includes(lk.status)) {
-    writeRecord({ key, productId: lk.product_id, status: lk.status, validatedAt: Date.now() });
+  const productId = data && data.meta && data.meta.product_id;
+  if (data && data.valid === true && lk && LS_PRODUCT_IDS.includes(productId) && VALID_STATUSES.includes(lk.status)) {
+    writeRecord({ key, productId, status: lk.status, validatedAt: Date.now() });
     return { ok: true };
   }
   clearRecord();
