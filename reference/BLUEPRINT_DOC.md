@@ -269,8 +269,8 @@ now being written in the order below, from the methodology as it stands.
 8. **Remaining modules** — 10 and 11 (free) before the paid Blueprint modules
 
 **Blocked elsewhere:** the NT8 tools themselves, ChartSnap and journal capture (planned),
-Lemon Squeezy verification, and NinjaTrader's commercial distribution rules (unread crawl
-target — must be read before anything ships with a price).
+and NinjaTrader's commercial distribution rules (unread crawl target — must be read before
+anything ships with a price).
 
 ---
 
