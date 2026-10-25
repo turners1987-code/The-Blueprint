@@ -133,9 +133,11 @@ const PAGES = walkHtml(ROOT)
   .map((f) => path.relative(ROOT, f).split(path.sep).join('/'))
   .sort();
 
-// Any non-empty code passes while validation is a placeholder (js/gate.js).
-const SEED_CODE = 'smoke-test-code';
-const SEED_SCRIPT = `try { localStorage.setItem('blueprint_access_code', ${JSON.stringify(SEED_CODE)}); } catch {}`;
+// A fresh, active license record (js/gate.js), so no network call is made.
+// The seed is evaluated in the page, so validatedAt = Date.now() is the load time.
+const SEED_SCRIPT = `try { localStorage.setItem('blueprint_access_code', JSON.stringify({ key: 'smoke-test-key', productId: 1472366, status: 'active', validatedAt: Date.now() })); } catch {}`;
+const GRACE_MS = 7 * 24 * 60 * 60 * 1000; // js/ls-config.js
+const EXPIRED_SEED = `try { localStorage.setItem('blueprint_access_code', JSON.stringify({ key: 'smoke-test-key', productId: 1472366, status: 'active', validatedAt: Date.now() - ${GRACE_MS} - 60000 })); } catch {}`;
 
 // Missing URLs at several depths must still serve a styled 404 page.
 const NOT_FOUND_PROBES = ['nope', 'modules/nope', 'modules/deep/nope'];
@@ -358,7 +360,12 @@ const GATED_NO_CODE = [
     .filter((m) => m.tier === 'paid' && PAGES.includes(`modules/${m.id}.html`))
     .map((m) => `modules/${m.id}.html`),
 ];
-for (const page of GATED_NO_CODE) {
+// Each page is also tried with a record older than GRACE_MS, which must lock.
+const LOCKED_CASES = [
+  ...GATED_NO_CODE.map((page) => ({ page, seed: null, label: 'no code: locked state' })),
+  { page: 'journal.html', seed: EXPIRED_SEED, label: 'expired record: locked state' },
+];
+for (const { page, seed, label } of LOCKED_CASES) {
   let api = null;
   let tab = null;
   const problems = [];
@@ -373,6 +380,7 @@ for (const page of GATED_NO_CODE) {
     const loaded = new Promise((res) => api.on((m) => { if (m.method === 'Page.loadEventFired') res(); }));
     // The profile is shared with the seeded run above: clear the stored code.
     await api.send('Storage.clearDataForOrigin', { origin: ORIGIN, storageTypes: 'local_storage' });
+    if (seed) await api.send('Page.addScriptToEvaluateOnNewDocument', { source: seed });
     await api.send('Page.navigate', { url: `${ORIGIN}/${page}` });
     await withTimeout(loaded, PAGE_TIMEOUT_MS, `loading ${page} without a code`);
     await sleep(SETTLE_MS);
@@ -409,10 +417,10 @@ for (const page of GATED_NO_CODE) {
   }
   if (problems.length) {
     failed++;
-    console.log(`✗ /${page} (no code: locked state)`);
+    console.log(`✗ /${page} (${label})`);
     problems.slice(0, 5).forEach((p) => console.log(`    ${p}`));
   } else {
-    console.log(`✓ /${page} (no code: locked state)`);
+    console.log(`✓ /${page} (${label})`);
   }
 }
 
@@ -426,6 +434,6 @@ for (const delay of [0, 500]) {
 }
 
 console.log('─'.repeat(40));
-const total = PAGES.length + NOT_FOUND_PROBES.length + GATED_NO_CODE.length;
+const total = PAGES.length + NOT_FOUND_PROBES.length + LOCKED_CASES.length;
 console.log(`${total - failed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

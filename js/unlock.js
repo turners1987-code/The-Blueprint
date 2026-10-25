@@ -1,41 +1,10 @@
 /* ============================================================
    THE BLUEPRINT — Access Code Entry (js/unlock.js)
-   Stores the Full Access code in this browser's localStorage.
-   There is no account and no server: the code lives here only.
+   Validates the Full Access code (js/gate.js) and keeps the result in
+   this browser's localStorage. There is no account.
    ============================================================ */
 
-import { ACCESS_KEY as STORAGE_KEY } from './gate.js';
-
-// ── Validation ──────────────────────────────────────────────
-// PLACEHOLDER: accepts any non-empty code. Nothing is verified yet.
-//
-// TODO: replace the body with a Lemon Squeezy License API call:
-//   POST https://api.lemonsqueezy.com/v1/licenses/validate
-//   Content-Type: application/x-www-form-urlencoded
-//   Accept: application/json
-//   body: license_key=<code>   (add instance_id once activate is used)
-// The response carries `valid` (boolean) and an `error` message.
-// Activating first (POST /v1/licenses/activate, same body plus
-// instance_name) is what limits how many browsers one code can use.
-// These endpoints need no API key, so they can be called from here.
-//
-// Contract: resolve to { valid: true } or { valid: false, message }.
-// Do not store the code unless valid is true.
-async function validateCode(code) {
-  return { valid: code.length > 0 };
-}
-
-// ── Storage ─────────────────────────────────────────────────
-// localStorage can throw (private browsing, storage disabled).
-function readCode() {
-  try { return localStorage.getItem(STORAGE_KEY) || ''; } catch { return ''; }
-}
-function writeCode(code) {
-  try { localStorage.setItem(STORAGE_KEY, code); return true; } catch { return false; }
-}
-function clearCode() {
-  try { localStorage.removeItem(STORAGE_KEY); } catch { /* nothing to clear */ }
-}
+import { readRecord, clearRecord, validateKey } from './gate.js';
 
 // ── UI ──────────────────────────────────────────────────────
 const entry = document.getElementById('unlock-entry');
@@ -47,10 +16,24 @@ if (entry && done) {
   const stored = document.getElementById('unlock-stored');
   const remove = document.getElementById('unlock-remove');
 
+  const back = document.getElementById('unlock-back');
+
+  // Where "continue" goes: the page they came from, if it is on this site, else the journal.
+  const returnTo = () => {
+    try {
+      const ref = new URL(document.referrer);
+      if (ref.origin === location.origin && ref.pathname !== location.pathname) return ref.href;
+    } catch { /* no usable referrer */ }
+    return new URL('journal.html', location.href).href;
+  };
+
   const show = (unlocked, code = '') => {
     entry.hidden = unlocked;
     done.hidden = !unlocked;
-    if (unlocked) stored.textContent = `Code ending ${code.slice(-4)}`;
+    if (unlocked) {
+      stored.textContent = `Code ending ${code.slice(-4)}`;
+      back.href = returnTo();
+    }
   };
 
   const fail = (message) => {
@@ -58,23 +41,29 @@ if (entry && done) {
     error.hidden = false;
   };
 
-  const existing = readCode();
-  show(!!existing, existing);
+  const prefill = new URLSearchParams(location.search).get('key');
+  if (prefill) input.value = prefill.trim();
+
+  const existing = readRecord();
+  show(!!existing, existing ? existing.key : '');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     error.hidden = true;
     const code = input.value.trim();
     if (!code) return fail('Enter the code from your receipt.');
-    const result = await validateCode(code);
-    if (!result.valid) return fail(result.message || 'That code was not accepted.');
-    if (!writeCode(code)) return fail('This browser would not store the code. Check that site data is allowed, then try again.');
+    const submit = form.querySelector('[type="submit"]');
+    submit.disabled = true;
+    const result = await validateKey(code);
+    submit.disabled = false;
+    if (result.reason === 'offline') return fail('Could not reach the license server. Check your connection and try again.');
+    if (!result.ok) return fail('That code was not accepted. Check it against your receipt and try again.');
     input.value = '';
     show(true, code);
   });
 
   remove.addEventListener('click', () => {
-    clearCode();
+    clearRecord();
     show(false);
     input.focus();
   });
