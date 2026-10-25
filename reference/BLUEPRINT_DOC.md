@@ -26,9 +26,10 @@ tools and the cockpit cards.
 the membership stays active; cancel and rejoin and the current rate applies. The pricing page
 states plainly that Full Access pays for work still being finished.
 
-**Payment.** Lemon Squeezy, store "The Blueprint." under Shane Turner LLC. Verification is
-pending. Until it clears, the checkout link on `pricing.html` is a placeholder and
-`js/unlock.js` accepts any non-empty code.
+**Payment.** Lemon Squeezy, store "The Blueprint." under Shane Turner LLC. The store is
+approved and in test mode. `js/unlock.js` validates codes against the Lemon Squeezy License
+API; it no longer accepts any non-empty code. The checkout link on `pricing.html` stays a
+placeholder until go-live.
 
 **Owner:** Shane. Not a developer — Claude Code does the building, this project does
 architecture, specs, and handoff prompts.
@@ -261,7 +262,8 @@ now being written in the order below, from the methodology as it stands.
 2. ~~Journal and analysis~~ — built; data stays local; gated client-side only (`js/gate.js`)
 3. ~~Commercial pages~~ — pricing, tools, unlock, ai built; payment not live
 4. ~~Modules 00, 01, 12, 13~~ — written
-5. **Payment live** — Lemon Squeezy verification, real checkout link, real code validation
+5. **Payment live** — payment plumbing is built and verified in test mode; go-live is the
+   remaining step (see the go-live checklist under Payments & licensing)
 6. **Tool downloads** — KeyLevels first; the rest as they ship (`data/tools.json`)
 7. **NT8 capture contract** — specced in `CAPTURE_CONTRACT.md`, built in the NT8 project
 8. **Remaining modules** — 10 and 11 (free) before the paid Blueprint modules
@@ -346,7 +348,5 @@ Deferred: downloads page; privacy policy payments section (+ sw.js/llms.txt list
   protected. A hosted journal for paying customers would mean accounts and a backend — a
   different product.
 - When to retire GitHub Pages as the fallback.
-- Code validation design against the Lemon Squeezy License API, including how many browsers
-  one code may activate.
 - Four open items in `TAXONOMY.md`: Pause N Go's tested definition, the No Setup re-tag audit,
   the PWH/PWL session convention, the Stacked Imbalance ratio.
