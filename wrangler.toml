@@ -4,4 +4,5 @@ compatibility_date = "2026-10-01"
 
 [[kv_namespaces]]
 binding = "ENTITLEMENTS"
-id = "REPLACE_ME"
+id = "031c6dd0072643ce87ada70fded353f8"
+preview_id = "031c6dd0072643ce87ada70fded353f8"
