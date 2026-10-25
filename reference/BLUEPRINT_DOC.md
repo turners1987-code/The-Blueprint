@@ -314,6 +314,28 @@ target — must be read before anything ships with a price).
 
 ---
 
+## Payments & licensing — Lemon Squeezy (updated 2026-10-25)
+
+Store: The Blueprint. (store_id 491360), under Shane Turner LLC. Account approved 10/12/26. Currently TEST MODE.
+Product: "The Blueprint. All Access" — product_id 1472366, variant_id 2295842, $7/mo, no trial, license keys on, activation_limit 2.
+Test checkout: https://bptrade.lemonsqueezy.com/checkout/buy/008fd078-cac4-4fa8-9b3d-3659a4617fbc
+Pricing decision: $7 is the opening rate; raise the variant price to $47 later. Existing subscribers keep $7 automatically. No discount codes, no fake reference price.
+
+Architecture:
+- Site gate (js/gate.js) validates keys client-side against the License API (validate only, no instance_id, so no activation slots consumed). Config in js/ls-config.js. 24h background revalidate, 7-day grace.
+- Webhook: Cloudflare Pages Function at /api/ls-webhook, HMAC-verified, idempotent by meta.webhook_id, writes one record per customer to KV namespace bptrade-entitlements (cust:<customer_id>). Admin lookup at /api/entitlement (X-Admin-Token). Secrets LS_WEBHOOK_SECRET and ADMIN_TOKEN live in Cloudflare, never in repo.
+- NT8 indicators: C# License API client built in the NT8 project (activate/validate/deactivate, instance per machine). Handoff sent 10/25.
+- NinjaTrader Vendor Program: deferred; only for an Ecosystem listing. Gianluca Vaccari reply (10/14) unanswered by decision.
+
+Verified 10/25: test purchase → key → unlock page → journal open; 5 webhook deliveries 200; KV row correct.
+Commits: 7b4e521, b6ca898, 53a0a80, 55ce34b, 3e5da94.
+
+Go-live checklist (also in js/ls-config.js header): recreate product in live mode; append live product_id to LS_PRODUCT_IDS; set LS_CHECKOUT_URL; set LS_ACCEPT_TEST_KEYS=false; register live-mode webhook with same URL/secret; resolve the "application received" banner with LS support if still showing.
+
+Deferred: downloads page; privacy policy payments section (+ sw.js/llms.txt listing); confirmation-modal copy ("key is on your order page and in your receipt"); housekeeping (unlock.js in SW shell, smoke GRACE_MS import, package-lock.json decision); reply to Gianluca.
+
+---
+
 ## 11. Open decisions
 
 - Gating mechanism for Full Access. A static site with a code in `localStorage` cannot keep
