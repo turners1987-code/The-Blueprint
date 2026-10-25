@@ -35,7 +35,7 @@
    deliberate: the failure mode is a blank page, never an open one.
    ============================================================ */
 
-import { LS_PRODUCT_IDS, LS_VALIDATE_URL, REVALIDATE_AFTER_MS, GRACE_MS } from './ls-config.js';
+import { LS_PRODUCT_IDS, LS_VALIDATE_URL, LS_ACCEPT_TEST_KEYS, REVALIDATE_AFTER_MS, GRACE_MS } from './ls-config.js';
 
 // The key unlock.js and this module share. One place so they cannot drift apart.
 export const ACCESS_KEY = 'blueprint_access_code';
@@ -87,6 +87,10 @@ export async function validateKey(key) {
   }
 
   const lk = data && data.license_key;
+  if (!LS_ACCEPT_TEST_KEYS && data && data.valid === true && lk && lk.test_mode === true) {
+    clearRecord();
+    return { ok: false, reason: 'test_key' };
+  }
   const productId = data && data.meta && data.meta.product_id;
   if (data && data.valid === true && lk && LS_PRODUCT_IDS.includes(productId) && VALID_STATUSES.includes(lk.status)) {
     writeRecord({ key, productId, status: lk.status, validatedAt: Date.now() });

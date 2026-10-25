@@ -75,7 +75,7 @@
             </div>
             <div class="pricing-actions">
               <!-- TODO: replace this placeholder with the Lemon Squeezy checkout URL. -->
-              <a href="https://bptrade.co/pricing#checkout" class="btn btn--primary" id="checkout">Get Full Access</a>
+              <a href="https://bptrade.co/pricing#checkout" class="btn btn--primary" id="checkout-btn">Get Full Access</a>
               <a href="unlock.html">Have a code? Enter it here</a>
             </div>
           </section>
@@ -102,5 +102,11 @@
   </footer>
 
   <script type="module" src="js/nav.js"></script>
+  <script type="module">
+    // The button keeps its placeholder link until a live checkout URL is configured.
+    import { LS_CHECKOUT_URL } from './js/ls-config.js';
+    const btn = document.getElementById('checkout-btn');
+    if (btn && LS_CHECKOUT_URL) btn.href = LS_CHECKOUT_URL;
+  </script>
 </body>
 </html>
