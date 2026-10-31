@@ -142,6 +142,24 @@ test('a retired lastVisited id falls back to the first incomplete module', () =>
   assert.equal(target(), 'modules/01-evidence.html');
 });
 
+test('v2 progress migrates to v3 ids: completion and lastVisited survive', () => {
+  store.set('blueprint_progress', JSON.stringify({
+    version: 2,
+    completed: ['00-welcome', '12-journaling', '13-toothbrush-therapy', '09-hard-rules'],
+    lastVisited: '13-toothbrush-therapy',
+  }));
+  const data = Progress.load();
+  assert.equal(data.version, 3);
+  assert.deepEqual(data.completed, ['00-welcome', '18-journaling', '19-toothbrush-therapy', '02-the-hard-rules']);
+  assert.equal(data.lastVisited, '19-toothbrush-therapy');
+  assert.equal(JSON.parse(store.get('blueprint_progress')).version, 3, 'migrated data is written back');
+});
+
+test('v1 ids chain through v2 then v3', () => {
+  store.set('blueprint_progress', JSON.stringify({ version: 1, completed: ['16-journaling', '08-range-rejection'] }));
+  assert.deepEqual(Progress.load().completed, ['18-journaling', '11-range-rejection']);
+});
+
 console.log('─'.repeat(40));
 console.log(`${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
