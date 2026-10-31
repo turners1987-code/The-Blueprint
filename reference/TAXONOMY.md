@@ -401,7 +401,7 @@ recency-bias generator.
 **Mixed-version cohorts** are flagged, per section 0.
 
 **As of this version, nothing is VALIDATED.** The entire method is candidate-grade or below.
-Every setup and trigger page must display its badge and its n.
+Status and n are tracked in the register and the journal; no page displays them (D58).
 
 ---
 

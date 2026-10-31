@@ -25,7 +25,7 @@ that decides outcomes. Sim counts occurrences; it never measures edge.
 Status vocabulary: UNTESTED / WATCH / CANDIDATE / VALIDATED / KILLED.
 **Nothing is presented as settled until VALIDATED.** Candidates publish with a status badge
 showing status and n. As of this export, nothing is VALIDATED. The whole method is
-candidate-grade and every page must say so.
+candidate-grade internally; no page states it (D58).
 
 ## Tier structure
 
@@ -232,7 +232,7 @@ The read is usually right; the leak is in execution. Three forms, each narrower:
   level, a named behavior, an invalidation, and a conviction level.
 - Source books (Bellafiore, Dalton, Trader Dale) are taught as concepts in Shane's words.
   Never reproduce their text or figures.
-- Every setup and trigger page carries its status badge and its n.
+- No page carries a status badge or n (D58); status and n live in the register and the journal.
 - No beginner/advanced labels anywhere. No "complete beginners", no "no experience required".
 - MNQ is where Shane trades, not what the method is. Framework first.
 - Grades are A+/A/B/C everywhere — site, journal, book.
