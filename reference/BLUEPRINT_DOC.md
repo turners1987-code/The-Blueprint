@@ -1,6 +1,6 @@
 # BLUEPRINT_DOC — The Blueprint eLearning Platform
 
-Version 4.1 · 2026-10-31
+Version 4.2 · 2026-10-31
 Replaces every earlier BLUEPRINT_DOC. Where an older copy disagrees with this file,
 this file wins. Delete the old copies rather than keeping two sources.
 
@@ -241,13 +241,13 @@ Each module is drafted from its content map (G:\My Drive\Blueprint Review\conten
 
 - **No beginner/advanced labels anywhere.** Enforced by check rule 6.
 - **R, never dollar income claims.** Public educational site.
-- **No claim of a track record, mastery, proven edge or results.** The framework is described
-  as being built and tested in the open.
-- **No status badges, n-counts or expectancy figures on public pages.** The gates stay
-  internal; lessons may teach them as principle.
+- **No claim of a track record, mastery, proven edge or results.** The site does not state the method's
+  validation status in either direction (§7).
+- **No status badges, n-counts or expectancy figures on public pages.** The gates are
+  internal; lessons teach them as a tool for the reader's own record.
 - Every directional statement follows Blueprint framing: conditional if/then with a named
   level, a named behaviour, an invalidation, and a conviction level.
-- Nothing is presented as settled. As of this version nothing is VALIDATED internally either.
+- **No validation status on the site.** The site teaches a framework and how to test one. It never states whether the framework, a setup, a trigger or a rule is validated, candidate, untested or killed, and it never says the method is unproven, being tested, or that nothing is validated. Evidence vocabulary and the two gates are taught as tools (Modules 01, 21, 22) for the reader to apply to their own journal and register. The site makes no results claim in either direction; the rules against track-record, income and 'this works' language stand, and 4.41 text stays beside any hypothetical case.
 - Any statistic that does appear is tied to a specific setup, rule or routine, never presented
   as a signal, and carries its sample size (check rule 9).
 - TradingStats cited by name. Their gap definition differs from the Blueprint's, so their

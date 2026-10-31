@@ -1,5 +1,7 @@
 # The Blueprint — Canonical Taxonomy
 
+> Internal standard. Status badges, gates and n-counts in this file govern the register and the journal, never a public page (BLUEPRINT_DOC §7, D58).
+
 Version 1.4.1 · 2026-10-06 (document revision; `TAXONOMY_VERSION` in `js/journal/schema.js` stays "1.4")
 Status: APPROVED structure. Four items remain OPEN (#2, #5, #7, #8); none block the build.
 

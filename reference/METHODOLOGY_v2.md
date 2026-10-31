@@ -1,5 +1,7 @@
 # The Blueprint — v2 Methodology (content source of truth)
 
+> Internal standard. Status badges, gates and n-counts in this file govern the register and the journal, never a public page (BLUEPRINT_DOC §7, D58).
+
 Exported 2026-10-04 from the v2 Review Doc (2026-09-22), plus decisions settled since.
 This file is the methodology Claude Code must write lessons from. Where this file and the
 old BLUEPRINT_DOC disagree, this file wins. Do not write any lesson content from the

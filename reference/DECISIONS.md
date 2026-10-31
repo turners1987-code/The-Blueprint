@@ -45,7 +45,12 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D57 — Welcome: self-diagnosis, no tracks, no results to audit, no edge claimed, no mentoring promised.
 
 ## Real choices — decided at drafting time of the module named (not yet decided; a lesson that needs one STOPS and asks)
-- D5 (10, 22) R1 result on a page · D6 (08, 14) grade-to-size table · D7 (05, 10, 12, 14, 22, 24) public register copy · D8 (11, 13) Pause N Go definition · D11 (10–14) breakeven/trail · D15 (13, 14) re-entry caps · D22 (07, 13) order flow trigger vs confirm · D23 (04, 06) dealer levels · D24 (12, 24) R11/R10 retests · D27 (11) Range Rejection entry · D33 (04, 09) calendar/OpEx · D39 (14) opening-minutes rule · D40 (03, 06) OPEN #8 ON window · D42 (16, 18) journal/routine fields · D46 (07) footprint settings · D49 (07, 13) sub-form definitions · D52 (OPTIONS) options module scheduling
+- D6 (08, 14) grade-to-size table · D8 (11, 13) Pause N Go definition · D11 (10–14) breakeven/trail · D15 (13, 14) re-entry caps · D22 (07, 13) order flow trigger vs confirm · D23 (04, 06) dealer levels · D24 (12, 24) R11/R10 retests · D27 (11) Range Rejection entry · D33 (04, 09) calendar/OpEx · D39 (14) opening-minutes rule · D40 (03, 06) OPEN #8 ON window · D42 (16, 18) journal/routine fields · D46 (07) footprint settings · D49 (07, 13) sub-form definitions · D52 (OPTIONS) options module scheduling
+
+### Closed by the no-validation-status rule (2026-10-31)
+- D58 — No validation status on the site (rule text in BLUEPRINT_DOC §7). Evidence vocabulary and gates are taught as tools for the reader's own record.
+- D5 — R1's tested result never appears on a page. CLOSED: no.
+- D7 — No public copy of the Hypothesis Register. CLOSED: no.
 
 ### Module 02 (decided 2026-10-31)
 - D29 — Kill switch: fixed 2R daily, no override; set at broker or prop-firm level; never raised intraday; no size-down ladders; breaks are hygiene, not rules.

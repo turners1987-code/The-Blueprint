@@ -97,8 +97,8 @@ hold.
 
 Never on a page: an income figure, a P&L screenshot, "this always works", "anyone can", a
 secret, a prediction, excitement. Uncertainty is written as a distribution or a stated
-unknown, including about this method: nothing here is validated, and the page that teaches a
-thing says which badge it carries.
+unknown. A page never states the validation status of the thing it teaches, or of the method;
+that is measured in the reader's own record (BLUEPRINT_DOC §7).
 
 ## 6. What this site does not borrow
 
@@ -122,5 +122,5 @@ thing says which badge it carries.
       result is shown
 - [ ] One `.apply-now` with one tiny assignment
 - [ ] Every statistic is after its rule, named to its source, with n
-- [ ] Badge/status of the thing taught is stated (where the thing has one)
+- [ ] No validation status stated — not validated, candidate, untested, killed, unproven, 'being tested' or 'nothing is validated'
 - [ ] No level labels, no dollar income, no testimonials, no predictions
