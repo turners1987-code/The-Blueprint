@@ -30,7 +30,7 @@
     "slug": "the-hard-rules",
     "part": "rules",
     "summary": "The window, the kill switch, the reset protocol, and the news blackout.",
-    "status": "planned",
+    "status": "published",
     "tier": "free",
     "prereq": [
       "01-evidence-standard"

@@ -45,8 +45,14 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D57 — Welcome: self-diagnosis, no tracks, no results to audit, no edge claimed, no mentoring promised.
 
 ## Real choices — decided at drafting time of the module named (not yet decided; a lesson that needs one STOPS and asks)
-- D5 (10, 22) R1 result on a page · D6 (08, 14) grade-to-size table · D7 (05, 10, 12, 14, 22, 24) public register copy · D8 (11, 13) Pause N Go definition · D11 (10–14) breakeven/trail · D15 (13, 14) re-entry caps · D18 (02, 14) extra flatten reasons · D22 (07, 13) order flow trigger vs confirm · D23 (04, 06) dealer levels · D24 (12, 24) R11/R10 retests · D27 (11) Range Rejection entry · D29 (02) kill-switch scope + enforcement · D31 (02) trade-count caps · D33 (04, 09) calendar/OpEx · D39 (14) opening-minutes rule · D40 (03, 06) OPEN #8 ON window · D42 (16, 18) journal/routine fields · D46 (07) footprint settings · D47 (02, 17) give-back rule · D49 (07, 13) sub-form definitions · D52 (OPTIONS) options module scheduling
+- D5 (10, 22) R1 result on a page · D6 (08, 14) grade-to-size table · D7 (05, 10, 12, 14, 22, 24) public register copy · D8 (11, 13) Pause N Go definition · D11 (10–14) breakeven/trail · D15 (13, 14) re-entry caps · D22 (07, 13) order flow trigger vs confirm · D23 (04, 06) dealer levels · D24 (12, 24) R11/R10 retests · D27 (11) Range Rejection entry · D33 (04, 09) calendar/OpEx · D39 (14) opening-minutes rule · D40 (03, 06) OPEN #8 ON window · D42 (16, 18) journal/routine fields · D46 (07) footprint settings · D49 (07, 13) sub-form definitions · D52 (OPTIONS) options module scheduling
+
+### Module 02 (decided 2026-10-31)
+- D29 — Kill switch: fixed 2R daily, no override; set at broker or prop-firm level; never raised intraday; no size-down ladders; breaks are hygiene, not rules.
+- D18 — Keep the four manual-flatten reasons (stop hit, tier-one news within 5 min, thesis broken on a candle close, session over). Anything else is logged Too Early; a time stop may be tested later as a register item.
+- D31 — No trade-count or consecutive-loss cap rule. The 2R kill switch is the cap; the page names the re-entry loop; the journal shows trade count as data.
+- D47 — No give-back or stop-after-win rule. Loss cap only.
 
 ## Open findings
-- NT8's built-in risk/loss limits apply to sim accounts only. The $400 kill switch must be enforced at broker or prop-firm level; the nt8-onboarding crawl must confirm how. Blocks Module 02's enforcement paragraph (D29).
+- Resolved 2026-10-31 (crawl daily-loss-lock): NT8 has no daily dollar loss limit; its Risk window is simulation-only. The 2R kill switch is set at the broker account level (NinjaTrader Brokerage Risk Settings or Tradovate Daily Loss, each with its lock). On Rithmic accounts the provider configures risk, so 2R is a written rule. Taught in Module 02.
 - Syllabus v3 = the v2 25-module order; no merges or renumbers; a later, unscheduled options module.
