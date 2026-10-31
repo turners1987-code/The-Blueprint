@@ -32,7 +32,7 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D36 — Resting limit only after displacement (an impulse away first); blind limits tagged none; record intended_price.
 - D37 — Process pages written as mechanisms; no desk, no named results; reset taught as a rehearsed skill.
 - D38 — Sim never pooled; occurrences only, live/sim split shown; replay is fill practice.
-- D41 — Footprint items badged UNTESTED by data block, with the reopen condition (purchased tick data).
+- D41 — Footprint items: lessons explain the tick-data limit on testing them, as a fact about testing; no status badge (D58).
 - D43 — No execution outside the window; prep ends 09:25; overnight only builds ON levels.
 - D44 — Record test number on every trade; first-test-only applies to R1.
 - D45 — An idea without a named invalidation is No Setup; final read is one paragraph.

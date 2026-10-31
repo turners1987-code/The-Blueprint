@@ -23,8 +23,7 @@ that decides outcomes. Sim counts occurrences; it never measures edge.
 **VALIDATED requires both gates.** Either alone keeps the item CANDIDATE.
 
 Status vocabulary: UNTESTED / WATCH / CANDIDATE / VALIDATED / KILLED.
-**Nothing is presented as settled until VALIDATED.** Candidates publish with a status badge
-showing status and n. As of this export, nothing is VALIDATED. The whole method is
+**Nothing is treated as settled until VALIDATED.** Status and n are internal (D58). As of this export, nothing is VALIDATED. The whole method is
 candidate-grade internally; no page states it (D58).
 
 ## Tier structure
@@ -83,11 +82,11 @@ touched 64.1% and the prior close 46.7%. After a gap down, PD Low 67.0% and prio
 **CAUTION for the lesson:** a touch rate measured from the open is not trade expectancy. A
 64% magnet still loses money if the entry sits in the wrong place.
 R10 (the gap-fill fade) KILLED at -0.15R; cause was a stop inside the noise. Retest with the
-R4 stop is queued. Badge the entry method unvalidated.
+R4 stop is queued. The lesson teaches the target and the context, not an entry method (D58).
 
 ### GAP N GO — kept, entry method dead
 R11 scored 0.00R overall across 57 sessions; positive July–August, negative September.
-Badge the entry method unvalidated. Goes on the "what I got wrong" page alongside the old
+The lesson teaches the target and the context, not an entry method (D58). Goes on the "what I got wrong" page alongside the old
 Gap Fill target.
 
 ### NO SETUP — a legitimate tag

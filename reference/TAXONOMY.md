@@ -135,7 +135,8 @@ moving. A gap exists only when RTH opens outside the prior day's range.
 - **Gate 2:** count VERIFIED as Shane's own (OPEN #4 resolved 2026-10-04). Live/sim split still
   required before display. `[cite register]`
 - **Known gap:** R6 (fade at the 15-minute mark) KILLED. The rejection *entry* is unsolved. The
-  lesson must say so rather than imply an entry exists. Reopen condition in section 8.
+  lesson teaches the context read and gives no entry; it never implies one exists (D58). Reopen
+  condition in section 8.
 
 ### 2.3 Gap Fill
 - **Slug:** `gap-fill` · **Register ID:** R10 (fade entry); R7 (supporting)
@@ -277,7 +278,7 @@ often than clean extremes. `[cite register]`
 **Stacked Imbalance** — 5-min footprint shows a cluster of adjacent price levels with sustained
 one-sided imbalance (current settings: ratio 5, min delta 15) plus bar/cumulative delta trending
 one way. Ratio 5 was chosen for screen clarity and has never been tested on MNQ — **OPEN #7**.
-Carry the caveat into the lesson until it resolves.
+The lesson gives ratio 5 / min delta 15 as a working default chosen for screen clarity, and teaches the reader to set their own from their own data.
 
 ### 4.3 Mid-range
 `mid-range` — no named level. Exists so Trigger Without Location is countable rather than
@@ -381,7 +382,8 @@ after commissions.
 NT8 tick history covers about one year and Market Replay 90 days. Gate 1 for any footprint-based
 item (the aggression confirmations, Stacked Imbalance) cannot meet the per-year requirement
 without purchased tick data. Those items stay UNTESTED at Gate 1 until that data exists. **This is
-a data block, not a failed test**, and the lesson pages must say which one they are looking at.
+a data block, not a failed test.** Lessons explain the tick-data limit as a fact about testing
+footprint reads; they state no status (D58).
 
 ### 6.4 Sim rule and display rules
 
