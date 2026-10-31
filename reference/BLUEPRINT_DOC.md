@@ -118,7 +118,7 @@ page's h2s only. No h3 without an h2.
 
 ```
 index.html            landing page, module grid rendered from data
-glossary.html         31 terms, inline search
+glossary.html         41 terms, inline search
 journal.html          trade journal: pre-entry plan, post-exit record, export/import
 journal-analysis.html read-only analysis of the journal
 pricing.html          Free vs Full Access, the opening rate, the checkout link
@@ -314,7 +314,7 @@ anything ships with a price).
   that lacks `data-gate="tier"`.
 - The checkout link on `pricing.html` is a placeholder.
 - `js/glossary.js` is an empty orphan; the one remaining check warning.
-- Glossary has 31 terms hardcoded in HTML; should move to `data/glossary.json`.
+- Glossary has 41 terms hardcoded in HTML; should move to `data/glossary.json`.
 - The `sw.js` shell list includes `js/gate.js` but not `pricing.html`, `tools.html`,
   `unlock.html`, their CSS, `js/tools.js` or `js/unlock.js`. Verify what offline should cover.
 - The `drafting` card rendering has never been exercised in a browser; no module carries that
