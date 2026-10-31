@@ -10,7 +10,7 @@ const STORAGE_KEY = 'blueprint_progress';
 // Completion and position are separate: `completed` is what the reader has
 // marked done (and drives the percentage); `lastVisited` is where they have
 // got to (and drives "Continue"). Marking or unmarking never moves position.
-const SCHEMA_VERSION = 2;
+const SCHEMA_VERSION = 3;
 
 // MIGRATIONS[n] maps old module ids to new ones, applied when stored
 // progress is upgraded to schema version n. A string value is the new id;
@@ -42,6 +42,25 @@ const MIGRATIONS = {
     '17-putting-it-together': null,
     '18-beyond-mnq': null,
   },
+  // v3: the 17-module structure became the 25-module order (new part
+  // order: start, rules, why, blueprint, process, evidence, capstone).
+  3: {
+    '09-hard-rules': '02-the-hard-rules',
+    '03-what-counts-as-a-level': '06-what-counts-as-a-level',
+    '02-three-tiers': '08-the-three-tiers',
+    '04-trend-continuation': '10-trend-continuation',
+    '05-range-rejection': '11-range-rejection',
+    '06-gap-setups': '12-the-gap-setups',
+    '07-triggers': '13-triggers',
+    '08-trade-construction': '14-trade-construction',
+    '10-premarket-routine': '16-the-pre-market-routine',
+    '11-post-session-routine': '17-the-session-and-the-close',
+    '12-journaling': '18-journaling',
+    '13-toothbrush-therapy': '19-toothbrush-therapy',
+    '14-reading-a-probability': '21-reading-a-probability',
+    '15-building-your-own-playbook': '23-building-your-own-playbook',
+    '16-what-i-got-wrong': '24-what-i-got-wrong',
+  },
 };
 
 let MODULES = [];
@@ -50,7 +69,10 @@ let MODULES = [];
 // from both the repo root and pages inside modules/.
 const DATA_URL = new URL('../data/modules.json', import.meta.url).href;
 
-const modulePath = (m) => `modules/${m.number}-${m.slug}.html`;
+// A module's page. `file` overrides the number-slug name for pages whose
+// URL predates a renumbering.
+const pageFile = (m) => m.file || `${m.number}-${m.slug}.html`;
+const modulePath = (m) => `modules/${pageFile(m)}`;
 
 const defaultProgress = () => ({ version: SCHEMA_VERSION, completed: [], lastVisited: null });
 
@@ -74,6 +96,9 @@ export const Progress = {
   ready: fetch(DATA_URL)
     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
     .then(list => { MODULES = list; return list; }),
+
+  // Path of a module's page, relative to the site root.
+  modulePath,
 
   // Load saved progress from localStorage, migrating older schemas
   // to the current version and writing the result back.
@@ -153,13 +178,13 @@ export const Progress = {
     this.save(data);
   },
 
-  // Set lastVisited from the page's file name (modules/<number>-<slug>.html),
+  // Set lastVisited from the page's file name (see pageFile),
   // so every module page counts without per-page markup. Needs the module
   // list; a page that is not a module in modules.json is ignored.
   recordVisit(pathname) {
     if (!pathname.includes('/modules/')) return;
     const file = pathname.split('/').pop();
-    const mod = MODULES.find(m => `${m.number}-${m.slug}.html` === file);
+    const mod = MODULES.find(m => pageFile(m) === file);
     if (mod) this.setLastVisited(mod.id);
   },
 

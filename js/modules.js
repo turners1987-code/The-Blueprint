@@ -39,7 +39,7 @@ if (table) {
 
     if (published) {
       const done = Progress.isComplete(m.id);
-      return `<a href="modules/${m.number}-${m.slug}.html" class="module-row${done ? ' completed' : ''}${drafting ? ' module-row--drafting' : ''}" data-module-id="${escapeHtml(m.id)}">${head}
+      return `<a href="${Progress.modulePath(m)}" class="module-row${done ? ' completed' : ''}${drafting ? ' module-row--drafting' : ''}" data-module-id="${escapeHtml(m.id)}">${head}
           <div class="module-cell module-status">
             <div class="module-status-label">Status</div>
             <div class="module-status-value">${drafting ? 'Being revised' : 'Published'}${m.tier === 'paid' ? LOCK : ''}</div>
@@ -62,8 +62,11 @@ if (table) {
   // Group the grid by part, in this order, each with a heading.
   const PARTS = [
     { id: 'start',     label: 'Start' },
+    { id: 'rules',     label: 'Rules Before Reps' },
+    { id: 'why',       label: 'Why Price Moves' },
     { id: 'blueprint', label: 'The Blueprint' },
     { id: 'process',   label: 'Process' },
+    { id: 'evidence',  label: 'Evidence' },
     { id: 'capstone',  label: 'Capstone' },
   ];
 

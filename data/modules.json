@@ -19,171 +19,309 @@
     "summary": "How to check a trading claim, including the ones made here, and why nothing is presented as proven.",
     "status": "published",
     "tier": "free",
-    "prereq": ["00-welcome"]
+    "prereq": [
+      "00-welcome"
+    ]
   },
   {
-    "id": "02-three-tiers",
+    "id": "02-the-hard-rules",
     "number": "02",
+    "title": "The Hard Rules",
+    "slug": "the-hard-rules",
+    "part": "rules",
+    "summary": "The window, the kill switch, the reset protocol, and the news blackout.",
+    "status": "planned",
+    "tier": "free",
+    "prereq": [
+      "01-evidence-standard"
+    ]
+  },
+  {
+    "id": "03-the-instrument-mnq-mechanics",
+    "number": "03",
+    "title": "The Instrument: MNQ Mechanics",
+    "slug": "the-instrument-mnq-mechanics",
+    "part": "rules",
+    "summary": "How MNQ contracts, ticks and sessions work, and what each tick is worth.",
+    "status": "planned",
+    "tier": "free",
+    "prereq": [
+      "02-the-hard-rules"
+    ]
+  },
+  {
+    "id": "04-who-is-forced-to-trade",
+    "number": "04",
+    "title": "Who Is Forced To Trade",
+    "slug": "who-is-forced-to-trade",
+    "part": "why",
+    "summary": "The participants who must trade whether or not the price suits them.",
+    "status": "planned",
+    "tier": "paid",
+    "prereq": [
+      "03-the-instrument-mnq-mechanics"
+    ]
+  },
+  {
+    "id": "05-the-auction",
+    "number": "05",
+    "title": "The Auction",
+    "slug": "the-auction",
+    "part": "why",
+    "summary": "How price moves between buyers and sellers, and what acceptance and rejection look like.",
+    "status": "planned",
+    "tier": "paid",
+    "prereq": [
+      "04-who-is-forced-to-trade"
+    ]
+  },
+  {
+    "id": "06-what-counts-as-a-level",
+    "number": "06",
+    "title": "What Counts As A Level",
+    "slug": "what-counts-as-a-level",
+    "part": "why",
+    "summary": "Pre-marked and in-session levels, zones not lines, and the stop-structure test.",
+    "status": "planned",
+    "tier": "paid",
+    "prereq": [
+      "05-the-auction"
+    ]
+  },
+  {
+    "id": "07-reading-order-flow",
+    "number": "07",
+    "title": "Reading Order Flow",
+    "slug": "reading-order-flow",
+    "part": "why",
+    "summary": "What order flow shows, and the limits of what it can confirm.",
+    "status": "planned",
+    "tier": "paid",
+    "prereq": [
+      "06-what-counts-as-a-level"
+    ]
+  },
+  {
+    "id": "08-the-three-tiers",
+    "number": "08",
     "title": "The Three Tiers",
-    "slug": "three-tiers",
+    "slug": "the-three-tiers",
     "part": "blueprint",
     "summary": "Idea, setup, trigger. Every trade traces up through all three, in order.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["01-evidence-standard"]
+    "prereq": [
+      "07-reading-order-flow"
+    ]
   },
   {
-    "id": "03-what-counts-as-a-level",
-    "number": "03",
-    "title": "What Counts As A Level",
-    "slug": "what-counts-as-a-level",
+    "id": "09-idea-generation",
+    "number": "09",
+    "title": "Idea Generation",
+    "slug": "idea-generation",
     "part": "blueprint",
-    "summary": "Pre-marked and in-session levels, zones not lines, and the stop-structure test.",
+    "summary": "Where trade ideas come from, and how to tell an idea from a setup.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["02-three-tiers"]
+    "prereq": [
+      "08-the-three-tiers"
+    ]
   },
   {
-    "id": "04-trend-continuation",
-    "number": "04",
+    "id": "10-trend-continuation",
+    "number": "10",
     "title": "Trend Continuation",
     "slug": "trend-continuation",
     "part": "blueprint",
     "summary": "The level holds. Acceptance beyond a level, and the one form with history behind it.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["03-what-counts-as-a-level"]
+    "prereq": [
+      "09-idea-generation"
+    ]
   },
   {
-    "id": "05-range-rejection",
-    "number": "05",
+    "id": "11-range-rejection",
+    "number": "11",
     "title": "Range Rejection",
     "slug": "range-rejection",
     "part": "blueprint",
     "summary": "The level fails. Includes the failed breakdown and breakout variant.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["04-trend-continuation"]
+    "prereq": [
+      "10-trend-continuation"
+    ]
   },
   {
-    "id": "06-gap-setups",
-    "number": "06",
+    "id": "12-the-gap-setups",
+    "number": "12",
     "title": "The Gap Setups",
-    "slug": "gap-setups",
+    "slug": "the-gap-setups",
     "part": "blueprint",
     "summary": "Gap Fill and Gap N Go. What a gap is, where it targets, and what testing did not support.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["05-range-rejection"]
+    "prereq": [
+      "11-range-rejection"
+    ]
   },
   {
-    "id": "07-triggers",
-    "number": "07",
+    "id": "13-triggers",
+    "number": "13",
     "title": "Triggers",
     "slug": "triggers",
     "part": "blueprint",
     "summary": "The price event that starts a trade, and why order flow confirms rather than triggers.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["06-gap-setups"]
+    "prereq": [
+      "12-the-gap-setups"
+    ]
   },
   {
-    "id": "08-trade-construction",
-    "number": "08",
+    "id": "14-trade-construction",
+    "number": "14",
     "title": "Trade Construction",
     "slug": "trade-construction",
     "part": "blueprint",
     "summary": "Level, stop, risk, size, entry. In that order, every time.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["07-triggers"]
+    "prereq": [
+      "13-triggers"
+    ]
   },
   {
-    "id": "09-hard-rules",
-    "number": "09",
-    "title": "The Hard Rules",
-    "slug": "hard-rules",
+    "id": "15-writing-the-plan",
+    "number": "15",
+    "title": "Writing The Plan",
+    "slug": "writing-the-plan",
     "part": "blueprint",
-    "summary": "The window, the kill switch, the reset protocol, and the news blackout.",
+    "summary": "Turning an idea into a written plan before the session opens.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["08-trade-construction"]
+    "prereq": [
+      "14-trade-construction"
+    ]
   },
   {
-    "id": "10-premarket-routine",
-    "number": "10",
+    "id": "16-the-pre-market-routine",
+    "number": "16",
     "title": "The Pre-Market Routine",
-    "slug": "premarket-routine",
+    "slug": "the-pre-market-routine",
     "part": "process",
     "summary": "What happens before the open, finished by 09:25.",
     "status": "planned",
     "tier": "free",
-    "prereq": ["09-hard-rules"]
+    "prereq": [
+      "15-writing-the-plan"
+    ]
   },
   {
-    "id": "11-post-session-routine",
-    "number": "11",
-    "title": "The Post-Session Routine",
-    "slug": "post-session-routine",
+    "id": "17-the-session-and-the-close",
+    "number": "17",
+    "title": "The Session And The Close",
+    "slug": "the-session-and-the-close",
     "part": "process",
     "summary": "Closing the day: review, grade, record, and stop.",
     "status": "planned",
     "tier": "free",
-    "prereq": ["10-premarket-routine"]
+    "prereq": [
+      "16-the-pre-market-routine"
+    ]
   },
   {
-    "id": "12-journaling",
-    "number": "12",
+    "id": "18-journaling",
+    "number": "18",
     "title": "Journaling & Review",
     "slug": "journaling",
     "part": "process",
     "summary": "Grading entries, marking execution, and the weekly and monthly review.",
     "status": "published",
     "tier": "free",
-    "prereq": ["11-post-session-routine"]
+    "prereq": [
+      "17-the-session-and-the-close"
+    ],
+    "file": "12-journaling.html"
   },
   {
-    "id": "13-toothbrush-therapy",
-    "number": "13",
+    "id": "19-toothbrush-therapy",
+    "number": "19",
     "title": "Toothbrush Therapy",
     "slug": "toothbrush-therapy",
     "part": "process",
     "summary": "Do the common uncommonly well. The eight daily habits.",
     "status": "published",
     "tier": "free",
-    "prereq": ["12-journaling"]
+    "prereq": [
+      "18-journaling"
+    ],
+    "file": "13-toothbrush-therapy.html"
   },
   {
-    "id": "14-reading-a-probability",
-    "number": "14",
+    "id": "20-the-traders-mind",
+    "number": "20",
+    "title": "The Trader's Mind",
+    "slug": "the-traders-mind",
+    "part": "process",
+    "summary": "Emotion, discipline and the habits that decide how you execute.",
+    "status": "planned",
+    "tier": "free",
+    "prereq": [
+      "19-toothbrush-therapy"
+    ]
+  },
+  {
+    "id": "21-reading-a-probability",
+    "number": "21",
     "title": "Reading A Probability",
     "slug": "reading-a-probability",
-    "part": "capstone",
+    "part": "evidence",
     "summary": "Base rate versus conditional, sample size, and why an edge is not a forecast.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["13-toothbrush-therapy"]
+    "prereq": [
+      "20-the-traders-mind"
+    ]
   },
   {
-    "id": "15-building-your-own-playbook",
-    "number": "15",
+    "id": "22-how-to-test-an-edge",
+    "number": "22",
+    "title": "How To Test An Edge",
+    "slug": "how-to-test-an-edge",
+    "part": "evidence",
+    "summary": "How to test an edge against a null, split the sample and check recency.",
+    "status": "planned",
+    "tier": "paid",
+    "prereq": [
+      "21-reading-a-probability"
+    ]
+  },
+  {
+    "id": "23-building-your-own-playbook",
+    "number": "23",
     "title": "Building Your Own PlayBook",
     "slug": "building-your-own-playbook",
     "part": "capstone",
     "summary": "Lock the rule, test against a null, split halves, check recency, then execute it yourself.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["14-reading-a-probability"]
+    "prereq": [
+      "22-how-to-test-an-edge"
+    ]
   },
   {
-    "id": "16-what-i-got-wrong",
-    "number": "16",
+    "id": "24-what-i-got-wrong",
+    "number": "24",
     "title": "What I Got Wrong",
     "slug": "what-i-got-wrong",
     "part": "capstone",
     "summary": "Things that were tried and dropped, and why.",
     "status": "planned",
     "tier": "paid",
-    "prereq": ["15-building-your-own-playbook"]
+    "prereq": [
+      "23-building-your-own-playbook"
+    ]
   }
 ]
