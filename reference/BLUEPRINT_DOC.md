@@ -1,6 +1,6 @@
 # BLUEPRINT_DOC — The Blueprint eLearning Platform
 
-Version 4.0 · 2026-10-06
+Version 4.1 · 2026-10-31
 Replaces every earlier BLUEPRINT_DOC. Where an older copy disagrees with this file,
 this file wins. Delete the old copies rather than keeping two sources.
 
@@ -139,7 +139,7 @@ js/    nav.js         shared nav on every page; registers the service worker
        cards.json     32-card flashcard deck
        glossary.js    EMPTY — orphan
        journal/       schema, analysis, storage (+ -common, -local, -fs), ui, ui-analysis
-data/  modules.json   17 modules, the curriculum source of truth (status, tier)
+data/  modules.json   25 modules, the curriculum source of truth (status, tier)
        tools.json     10 tools, status and file per tool
        journal-schema.json, journal-example.json
        import/        README only; personal trade exports are git-ignored
@@ -148,7 +148,7 @@ modules/  00-welcome, 01-evidence-standard, 12-journaling, 13-toothbrush-therapy
 assets/   favicon.svg, ai-seal.svg, icon-192/512 (+maskable), og-image, screenshots
 scripts/  check, validate-journal, test-storage, test-analysis, test-progress, smoke,
           import-turtlemetrics
-reference/  the source material listed in section 1
+reference/  the source material listed in section 1, plus DECISIONS.md and MODULE_STANDARD.md
 ```
 
 ---
@@ -192,7 +192,7 @@ unreferenced).
 
 ---
 
-## 6. Curriculum — 17 modules, four parts
+## 6. Curriculum — 25 modules, seven parts
 
 Source of truth is `data/modules.json`. Status is `published`, `drafting`, or `planned`.
 Tier is `free` or `paid` and is independent of status. Planned modules render as
@@ -200,32 +200,39 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 
 | # | Module | Part | Tier | Status |
 | --- | --- | --- | --- | --- |
-| 00 | Welcome & Orientation | start | free | published |
-| 01 | How We Know What We Know | start | free | published |
-| 02 | The Three Tiers | blueprint | paid | planned |
-| 03 | What Counts As A Level | blueprint | paid | planned |
-| 04 | Trend Continuation | blueprint | paid | planned |
-| 05 | Range Rejection | blueprint | paid | planned |
-| 06 | The Gap Setups | blueprint | paid | planned |
-| 07 | Triggers | blueprint | paid | planned |
-| 08 | Trade Construction | blueprint | paid | planned |
-| 09 | The Hard Rules | blueprint | paid | planned |
-| 10 | The Pre-Market Routine | process | free | planned |
-| 11 | The Post-Session Routine | process | free | planned |
-| 12 | Journaling & Review | process | free | published |
-| 13 | Toothbrush Therapy | process | free | published |
-| 14 | Reading A Probability | capstone | paid | planned |
-| 15 | Building Your Own PlayBook | capstone | paid | planned |
-| 16 | What I Got Wrong | capstone | paid | planned |
+| 00 | Welcome & Orientation | Start | free | published |
+| 01 | How We Know What We Know | Start | free | published |
+| 02 | The Hard Rules | Rules Before Reps | free | planned |
+| 03 | The Instrument: MNQ Mechanics | Rules Before Reps | free | planned |
+| 04 | Who Is Forced To Trade | Why Price Moves | paid | planned |
+| 05 | The Auction | Why Price Moves | paid | planned |
+| 06 | What Counts As A Level | Why Price Moves | paid | planned |
+| 07 | Reading Order Flow | Why Price Moves | paid | planned |
+| 08 | The Three Tiers | The Blueprint | paid | planned |
+| 09 | Idea Generation | The Blueprint | paid | planned |
+| 10 | Trend Continuation | The Blueprint | paid | planned |
+| 11 | Range Rejection | The Blueprint | paid | planned |
+| 12 | The Gap Setups | The Blueprint | paid | planned |
+| 13 | Triggers | The Blueprint | paid | planned |
+| 14 | Trade Construction | The Blueprint | paid | planned |
+| 15 | Writing The Plan | The Blueprint | paid | planned |
+| 16 | The Pre-Market Routine | Process | free | planned |
+| 17 | The Session And The Close | Process | free | planned |
+| 18 | Journaling & Review | Process | free | published |
+| 19 | Toothbrush Therapy | Process | free | published |
+| 20 | The Trader's Mind | Process | free | planned |
+| 21 | Reading A Probability | Evidence | paid | planned |
+| 22 | How To Test An Edge | Evidence | paid | planned |
+| 23 | Building Your Own PlayBook | Capstone | paid | planned |
+| 24 | What I Got Wrong | Capstone | paid | planned |
 
-Four are written: 00, 01, 12 and 13. Module 12 is written against `TAXONOMY.md` 5.1 and 5.2
-(grade at entry, execution mark after exit) and matches the journal as built.
+Four are written: 00, 01, 18 (Journaling & Review, file modules/12-journaling.html) and 19 (Toothbrush Therapy, file modules/13-toothbrush-therapy.html). Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
 
 Also published outside the numbered course: Dial In, the card deck, the glossary.
 
-Cut deliberately: market basics, chart reading, order types, tools, psychology. Commodity
-content available free elsewhere; becomes a curated reading-list page if wanted. ORB and
-Second Chance are retired and appear only in What I Got Wrong (and as a glossary term).
+Decided 2026-10-31 (reference/DECISIONS.md D1–D4): rules first and free; mechanics (03), order flow (07) and the trader's mind (20) return in narrow, framework-only form; commodity basics go to a reading-list page. Forced flow (04) is taught as concepts only, with no forced-flow statistic until one passes Gate 1. ORB and Second Chance are retired and appear only in What I Got Wrong (and as a glossary term).
+
+Each module is drafted from its content map (G:\My Drive\Blueprint Review\content-maps\NN-*.md), METHODOLOGY_v2, TAXONOMY, MODULE_STANDARD and DECISIONS. A module that needs an undecided 'real choice' in DECISIONS.md stops and asks.
 
 ---
 
@@ -251,6 +258,7 @@ Second Chance are retired and appear only in What I Got Wrong (and as a glossary
 - Any backtest or hypothetical result shown carries CFTC Rule 4.41 language.
 - Lessons are written from `METHODOLOGY_v2.md` and `TAXONOMY.md`, never from the old
   seven-setup book.
+- Lessons follow `reference/DECISIONS.md`. The site tagline is 'The Setup is the plan. Discipline is the execution. Everything else is noise.' — no page claims an edge.
 
 ---
 
@@ -267,7 +275,7 @@ now being written in the order below, from the methodology as it stands.
    remaining step (see the go-live checklist under Payments & licensing)
 6. **Tool downloads** — KeyLevels first; the rest as they ship (`data/tools.json`)
 7. **NT8 capture contract** — specced in `CAPTURE_CONTRACT.md`, built in the NT8 project
-8. **Remaining modules** — 10 and 11 (free) before the paid Blueprint modules
+8. **Remaining modules** — step 10 (content maps for all 25 modules, OPTIONS and NT8-Setup) and step 12 (decisions) done 2026-10-31. Writing order: the free path first — 02, 03, 16, 17, 20 — then 05–07, then the paid Blueprint modules 08–15 (10–14 need worked cases from MNQ chart history; 13 waits on D8, Pause N Go's definition), then 04 and 21–24.
 
 **Blocked elsewhere:** the NT8 tools themselves, ChartSnap and journal capture (planned),
 and NinjaTrader's commercial distribution rules (unread crawl target — must be read before
@@ -308,10 +316,7 @@ anything ships with a price).
   `unlock.html`, their CSS, `js/tools.js` or `js/unlock.js`. Verify what offline should cover.
 - The `drafting` card rendering has never been exercised in a browser; no module carries that
   status.
-- Dial In's result copy says "Your path starts with Module 01" while its CTA points at
-  00-welcome.
-- Module 00's text still refers to Modules 01–03 as covering "how claims are labelled";
-  recheck against the modules as written.
+- NT8's built-in risk and loss limits apply to sim accounts only (step-10 NT8-Setup map). The $400 kill switch in METHODOLOGY_v2 must be enforced at broker or prop-firm level; how is a pending crawl (nt8-onboarding). Module 02 cannot state the enforcement step until it returns (D29).
 - Seven of ten tools are `in-development` and three `planned`; none has a download, so
   `tools.html` has nothing available.
 
@@ -351,6 +356,7 @@ Deferred: downloads page; privacy policy payments section (+ sw.js/llms.txt list
 - When to retire GitHub Pages as the fallback.
 - Four open items in `TAXONOMY.md`: Pause N Go's tested definition, the No Setup re-tag audit,
   the PWH/PWL session convention, the Stacked Imbalance ratio.
+- The 21 'real choices' listed in reference/DECISIONS.md, each decided when its module is drafted.
 
 ---
 
