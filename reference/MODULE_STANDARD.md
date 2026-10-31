@@ -82,8 +82,8 @@ Every lesson page follows this order. Sections are h2s; the section index is bui
   never opens a section and is never a signal (content rules; check rule 9).
 - **Losing is normalised and specific.** Losses are written as expected members of a
   distribution ("if the read is right six times in ten, the four are not mistakes"). The
-  failure on this site is a rule broken, never a trade lost. Author's own losses appear in R
-  and points, never dollars, and only where they illustrate the rule.
+  failure on this site is a rule broken, never a trade lost. Losses in worked cases appear in R
+  and points, never dollars.
 - **Archetypes, not testimonials.** A short named pattern of trader ("the one who has a
   trigger and no level") is allowed. No named students, no before/after earnings, no
   testimonials of any kind (compliance: 4.41(a)(3), 16 CFR 255).
@@ -91,9 +91,9 @@ Every lesson page follows this order. Sections are h2s; the section index is bui
 ## 5. Voice
 
 Plain, declarative, second person, present tense. Short sentences; a one-line beat is allowed
-where it carries weight. Repetition of the rule is deliberate. The author's own record appears
-as "in my own record" and states what it showed, never a count that the register does not
-hold.
+where it carries weight. Repetition of the rule is deliberate. There is no author voice: the
+reader is the trader, and a worked case is a composite that belongs to no one (BLUEPRINT_DOC §7).
+The page asks for records, counts and rehearsed routines, never for belief.
 
 Never on a page: an income figure, a P&L screenshot, "this always works", "anyone can", a
 secret, a prediction, excitement. Uncertainty is written as a distribution or a stated
@@ -108,7 +108,7 @@ that is measured in the reader's own record (BLUEPRINT_DOC §7).
 - Audience-participation hooks ("comment which level you are").
 - Video devices (tape replay, live pointing). Replaced by annotated static charts and
   bar-by-bar tables when charts ship; until then, the worked case in prose.
-- Equity vocabulary. Keep the structure; the instruments are MNQ, the levels are the
+- Equity vocabulary. Keep the structure; the illustration instrument is MNQ and the framework is written to carry across futures, the levels are the
   TAXONOMY section 4 slugs, the sessions are RTH/ETH.
 
 ## 7. Page checklist (Claude Code runs this before `npm test`)

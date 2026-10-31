@@ -1,6 +1,6 @@
 # BLUEPRINT_DOC — The Blueprint eLearning Platform
 
-Version 4.2 · 2026-10-31
+Version 4.3 · 2026-10-31
 Replaces every earlier BLUEPRINT_DOC. Where an older copy disagrees with this file,
 this file wins. Delete the old copies rather than keeping two sources.
 
@@ -14,8 +14,9 @@ this file wins. Delete the old copies rather than keeping two sources.
 
 ## 1. What this is
 
-A progressive eLearning platform teaching Shane's intraday futures framework, with a free tier
-and a paid tier called Full Access. It is built as a progressive framework rather than levelled
+A progressive eLearning platform teaching an intraday trading framework, built and illustrated on
+futures, with a free tier and a paid tier called Full Access. The reader builds their own framework
+from it. It is built as a progressive framework rather than levelled
 content. The audience is NinjaTrader 8 users on Windows: the journal and the tools assume NT8.
 
 **Offer.** Free to read the Start and Process modules, glossary, card deck, Dial In and
@@ -254,7 +255,8 @@ Each module is drafted from its content map (G:\My Drive\Blueprint Review\conten
   gap-fill rate is **never** quoted as Blueprint evidence.
 - Source books (Bellafiore, Dalton, Trader Dale) taught as concepts in Shane's words. Never
   reproduce their text or figures.
-- MNQ is where Shane trades, not what the method is. Framework first.
+- **A framework for intraday traders, built and illustrated on futures.** The framework (levels, reads, triggers, construction, rules, routines, evidence) is written to carry across futures instruments; MNQ is the illustration instrument for worked cases, tick arithmetic and base rates (TradingStats figures are NQ data and are cited as such). No page says another instrument is outside the framework, and no page claims the framework works on any instrument; the reader's record decides. Stocks and options are later tracks, not part of the current course.
+- **The reader is the trader.** Every page is written in second person to the reader building their own framework. There is no author voice: no 'one trader's', 'the author', 'I', 'my record', 'personal framework'. Worked cases are composites and belong to no one. The page asks for records, counts and rehearsed routines, never for belief.
 - Grades are A+ / A / B / C everywhere.
 - Any backtest or hypothetical result shown carries CFTC Rule 4.41 language.
 - Lessons are written from `METHODOLOGY_v2.md` and `TAXONOMY.md`, never from the old

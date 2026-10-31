@@ -1,8 +1,8 @@
 # The Blueprint
 
-> A course, with a free tier, in one trader's own intraday futures framework: setups, routines and risk management for index futures, with every claim held to a stated standard of evidence.
+> A course, with a free tier, in an intraday trading framework, built and illustrated on futures: setups, routines and risk management for index futures, with every claim held to a stated standard of evidence.
 
-The Blueprint is a trading education site built around one trader's own intraday futures framework for MNQ. It is written for independent traders who want a complete framework — real setups, daily routines, risk management — rather than tips or signals. It teaches the framework and how to test it; whether any of it holds for a reader is decided by that reader's own record. The site shows no trading results. The aim is to make the whole thing cheap and accessible, so another trader can learn it, test it, and build their own.
+The Blueprint is a trading education site built around an intraday trading framework, built and illustrated on futures. It is written for independent traders who want a complete framework — real setups, daily routines, risk management — rather than tips or signals. It teaches the framework and how to test it; whether any of it holds for a reader is decided by that reader's own record. The site shows no trading results. The aim is to make the whole thing cheap and accessible, so another trader can learn it, test it, and build their own.
 
 ## Course
 

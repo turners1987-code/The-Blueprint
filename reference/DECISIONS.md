@@ -51,6 +51,7 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D58 — No validation status on the site (rule text in BLUEPRINT_DOC §7). Evidence vocabulary and gates are taught as tools for the reader's own record.
 - D5 — R1's tested result never appears on a page. CLOSED: no.
 - D7 — No public copy of the Hypothesis Register. CLOSED: no.
+- D59 — Voice: the reader is the trader; no author voice (rule in BLUEPRINT_DOC §7). Scope: a framework for intraday traders, built and illustrated on futures; MNQ is the illustration instrument; stocks and options are later tracks (rule in BLUEPRINT_DOC §7).
 
 ### Module 02 (decided 2026-10-31)
 - D29 — Kill switch: fixed 2R daily, no override; set at broker or prop-firm level; never raised intraday; no size-down ladders; breaks are hygiene, not rules.
