@@ -118,7 +118,7 @@ page's h2s only. No h3 without an h2.
 
 ```
 index.html            landing page, module grid rendered from data
-glossary.html         41 terms, inline search
+glossary.html         rendered from data/glossary.json, inline search
 journal.html          trade journal: pre-entry plan, post-exit record, export/import
 journal-analysis.html read-only analysis of the journal
 pricing.html          Free vs Full Access, the opening rate, the checkout link
@@ -139,10 +139,12 @@ js/    nav.js         shared nav on every page; registers the service worker
        unlock.js      access code entry (placeholder validation)
        main.js        scroll reveals, quizzes, misc page behaviour
        cards.json     32-card flashcard deck
-       glossary.js    EMPTY — orphan
+       glossary.js    renders glossary.html from data/glossary.json; search over
+                      term, aliases and definition
        journal/       schema, analysis, storage (+ -common, -local, -fs), ui, ui-analysis
 data/  modules.json   25 modules, the curriculum source of truth (status, tier)
        tools.json     10 tools, status and file per tool
+       glossary.json  74 terms: term, aliases, definition, module(s), optional tags
        journal-schema.json, journal-example.json
        import/        README only; personal trade exports are git-ignored
 modules/  00-welcome, 01-evidence-standard, 12-journaling, 13-toothbrush-therapy,
@@ -186,10 +188,12 @@ with it.
 11. Every `data/tools.json` entry has a valid status; `available` requires a file
 12. A module page may not contain an h3 without an h2
 13. A page with `data-gate` loads `js/gate.js`; a paid module page must carry `data-gate="tier"`
+14. Every `data/glossary.json` entry has a non-empty term and definition, and terms are unique;
+    every `.definition-box` term on a published module page has an entry (missing ones warn)
 
 0-byte HTML files are listed as STUB and skipped; `--strict` audits them.
 
-**Current state: all six green. `check` reports 0 errors and 1 warning** (`js/glossary.js`
+**Current state: all six green. `check` reports 0 errors and 1 warning** (`js/ls-config.js`
 unreferenced).
 
 ---
@@ -313,8 +317,6 @@ anything ships with a price).
   still a placeholder, so any non-empty code passes. Check rule 13 fails a paid module page
   that lacks `data-gate="tier"`.
 - The checkout link on `pricing.html` is a placeholder.
-- `js/glossary.js` is an empty orphan; the one remaining check warning.
-- Glossary has 41 terms hardcoded in HTML; should move to `data/glossary.json`.
 - The `sw.js` shell list includes `js/gate.js` but not `pricing.html`, `tools.html`,
   `unlock.html`, their CSS, `js/tools.js` or `js/unlock.js`. Verify what offline should cover.
 - The `drafting` card rendering has never been exercised in a browser; no module carries that

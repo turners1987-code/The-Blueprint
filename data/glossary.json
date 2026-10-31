@@ -1,0 +1,755 @@
+[
+  {
+    "term": "Acceptance",
+    "aliases": [],
+    "definition": "Price building time and volume at a new price instead of passing through it. Acceptance moves value; a quick visit does not. The mechanical acceptance test this course uses at a level is taught in Module 10.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Balance",
+    "aliases": [],
+    "definition": "An auction rotating around an agreed price, inside edges both sides defend. Value areas overlap from one session to the next. The profile is wide in the middle and thin at the edges.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Box Breathing",
+    "aliases": [],
+    "definition": "Breathing in four equal counts: in for four, hold for four, out for four, hold for four. One round is all four sides of the box.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules",
+      "Psychology"
+    ]
+  },
+  {
+    "term": "Branch",
+    "aliases": [],
+    "definition": "One conditional line of the plan: a level, the behaviour and trigger that switch it on, the target, the invalidation that ends it, and a conviction. On the Module 16 sheet each branch is written as one Idea line.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "Broke Rule",
+    "aliases": [],
+    "definition": "The journal tag for breaking a hard rule: an entry outside the trading window, a position held through a Tier One release, a stop widened after entry, or trading past the kill switch.",
+    "module": [],
+    "tags": [
+      "Journal",
+      "Hard Rules"
+    ]
+  },
+  {
+    "term": "Chart Mark-Up",
+    "aliases": [],
+    "definition": "A written pass over the day's chart, level by level: what price did at each marked level, what you did there, and, for every trade you exited, whether price reached the planned target after your exit.",
+    "module": [
+      "17"
+    ]
+  },
+  {
+    "term": "Contract Multiplier",
+    "aliases": [],
+    "definition": "The fixed dollar amount the exchange multiplies the index by to value one contract. For MNQ it is $2 per index point; for MES it is $5. It is also the contract's point value.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Instrument"
+    ]
+  },
+  {
+    "term": "Conviction",
+    "aliases": [],
+    "definition": "A label of strong, moderate or thin attached to one branch: how much structure and context stand behind its thesis. It is recorded for the journal. It doesn't change your size and it isn't a direction.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "Daily Max Loss",
+    "aliases": [
+      "DLL",
+      "MLL"
+    ],
+    "definition": "Your loss limit for the day: 2R. Reaching it fires the kill switch. Not the same as a prop firm's Max Loss Limit (MLL), which is an account-level drawdown set by the firm.",
+    "module": [],
+    "tags": [
+      "Risk Management"
+    ]
+  },
+  {
+    "term": "Delta",
+    "aliases": [],
+    "definition": "In footprint charts, delta is the difference between buying volume (contracts traded at the ask) and selling volume (contracts traded at the bid). Positive delta means more buying; negative delta means more selling. It reveals the aggression behind a move.",
+    "module": [],
+    "tags": [
+      "Footprint",
+      "Order Flow"
+    ]
+  },
+  {
+    "term": "EMA (Exponential Moving Average)",
+    "aliases": [],
+    "definition": "A moving average that gives more weight to recent price data, making it more responsive to current conditions than a simple moving average. The 9 EMA is the primary trend indicator in The Blueprint — it shows the immediate trend direction and acts as dynamic support/resistance.",
+    "module": [],
+    "tags": [
+      "Technical Analysis",
+      "Indicator"
+    ]
+  },
+  {
+    "term": "End-Of-Day Routine",
+    "aliases": [],
+    "definition": "The fixed routine run within an hour of the 16:00 ET close, on every trading day whatever the result: the chart mark-up, the post-exit fields and execution mark for every trade, and one line on the day.",
+    "module": [
+      "17"
+    ]
+  },
+  {
+    "term": "ETH (Extended Trading Hours)",
+    "aliases": [],
+    "definition": "The hours the futures trade outside RTH: from 16:00 ET until the daily halt, and from the reopen until 09:30 ET the next morning.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Session"
+    ]
+  },
+  {
+    "term": "Excess",
+    "aliases": [],
+    "definition": "A tail of thin, quickly-traded prices at a session's high or low: price reached the extreme, found the other side waiting, and left fast. Excess marks an auction that finished at that end.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Execution Mark",
+    "aliases": [
+      "Pass",
+      "Fail"
+    ],
+    "definition": "Pass or Fail, assigned after the exit: did the exit follow the plan? Pass is a target, the planned scale, a pre-set invalidation, the stop, or session end. Anything else is Fail. Kept separate from the grade so the grade never reads the outcome.",
+    "module": [],
+    "tags": [
+      "Journal",
+      "Grading"
+    ]
+  },
+  {
+    "term": "Far Edge",
+    "aliases": [],
+    "definition": "The edge of a zone on the far side from where price arrives. For a level above current price it is the top of the zone; for a level below, the bottom. The stop goes behind it.",
+    "module": [
+      "15",
+      "16"
+    ]
+  },
+  {
+    "term": "Final Read",
+    "aliases": [],
+    "definition": "The plan as it stands at 09:25: one paragraph made of one sentence of context in location words, one sentence per branch, and one sentence for the nothing case. No day-type label, no directional call.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "FOMO (Fear of Missing Out)",
+    "aliases": [],
+    "definition": "The emotional urge to enter a trade because price is moving without you. One of the most destructive forces in trading — it leads to chasing moves, ignoring confirmation, and abandoning your rules. The Blueprint explicitly addresses FOMO in every setup's common mistakes.",
+    "module": [],
+    "tags": [
+      "Psychology"
+    ]
+  },
+  {
+    "term": "Footprint Chart",
+    "aliases": [],
+    "definition": "An advanced chart type that shows the volume traded at each price level within each candle, split into buying (bid) and selling (ask) volume. Reveals the actual order flow behind price movement — who is in control at any given level.",
+    "module": [],
+    "tags": [
+      "Order Flow",
+      "Advanced"
+    ]
+  },
+  {
+    "term": "Futures",
+    "aliases": [],
+    "definition": "A financial contract to buy or sell an asset at a predetermined price at a specified time in the future. Futures trade on exchanges, are leveraged, and have no PDT rule restriction. MNQ is a micro futures contract tracking the Nasdaq-100 index.",
+    "module": [],
+    "tags": [
+      "Instrument"
+    ]
+  },
+  {
+    "term": "Gap",
+    "aliases": [],
+    "definition": "When today's opening price is different from yesterday's closing price, leaving an unfilled area on the chart. A gap is said to fill when price returns to the prior close. The Gap Fill setup is built around that return.",
+    "module": [],
+    "tags": [
+      "Price Action"
+    ]
+  },
+  {
+    "term": "Globex (Overnight Session)",
+    "aliases": [],
+    "definition": "The electronic trading session for futures that runs outside regular market hours. For MNQ, Globex runs nearly 23 hours a day. The overnight high (ON High) and low (ON Low) from Globex are key levels marked before each regular session. In this course the hours outside RTH are called ETH.",
+    "module": [],
+    "tags": [
+      "Futures",
+      "Session"
+    ]
+  },
+  {
+    "term": "Grade (A+ / A / B / C)",
+    "aliases": [],
+    "definition": "The entry-plan score given to every trade at entry, before it resolves, from four checks: the location is a named level, the trigger fired before entry, the stop is behind structure, and the size matches the plan for that stop. A+ is all four with a fill within 2 ticks of the intended price; A is all four; B is three of four with no breach of the stop or size check; C is two or fewer, or any breach of those two. C is no trade.",
+    "module": [
+      "20"
+    ]
+  },
+  {
+    "term": "High Volume Node (HVN)",
+    "aliases": [],
+    "definition": "A wide section of a profile, where a lot of volume traded over a range of prices. It is a balance inside the profile: both sides did business there, and price tends to slow down and rotate when it returns.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Idea",
+    "aliases": [],
+    "definition": "A conditional statement written before the session: a thesis in if/then form at a named level, the invalidation that ends it, and a conviction grade of strong, moderate or thin. It describes what you will do if price reaches a place, not where price will go.",
+    "module": [
+      "15",
+      "16"
+    ]
+  },
+  {
+    "term": "Imbalance",
+    "aliases": [],
+    "definition": "An auction in which one side is in charge and price moves to find new business. Value migrates: each session's value area sits beyond the last one, with little or no overlap.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Initial Margin",
+    "aliases": [],
+    "definition": "The deposit required to open a futures position, per contract. It is good-faith money held against what the position might lose, not a cost and not a cap on the loss.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Margin"
+    ]
+  },
+  {
+    "term": "Invalidation",
+    "aliases": [],
+    "definition": "The named price, judged on a candle close of a stated timeframe, at which a branch's thesis is wrong. It sits at or behind the zone's far edge. Written before the session, never moved during it.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "Kill Switch",
+    "aliases": [
+      "kill condition"
+    ],
+    "definition": "Your daily max loss: 2R, twice your fixed base risk per trade. When the day's loss reaches it, trading stops until the next session. It is set at the account level so that it fires whether or not you agree with it.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Risk Management",
+      "Hard Rules"
+    ]
+  },
+  {
+    "term": "Level Alert",
+    "aliases": [],
+    "definition": "A sound-on alert set on a marked zone before the session. Each zone carries two: one at the edge price will reach first, which calls you to the screen, and one at the far edge, which tells you price has traded through the whole zone.",
+    "module": [
+      "17"
+    ]
+  },
+  {
+    "term": "Limit Order",
+    "aliases": [],
+    "definition": "An order to buy or sell at a specific price or better. A buy limit order fills at or below your price; a sell limit fills at or above. You control the price but not whether the order fills.",
+    "module": [],
+    "tags": [
+      "Order Types"
+    ]
+  },
+  {
+    "term": "Liquidation-Only",
+    "aliases": [
+      "liquidation only"
+    ],
+    "definition": "The account state after a loss limit fires: open positions are closed, working orders are cancelled, and only orders that reduce a position are accepted until the reset.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules",
+      "Risk Management"
+    ]
+  },
+  {
+    "term": "Long / Going Long",
+    "aliases": [],
+    "definition": "Buying a contract or asset with the expectation that price will rise. You profit when price goes up. The opposite of short.",
+    "module": [],
+    "tags": [
+      "Basics"
+    ]
+  },
+  {
+    "term": "Low Volume Node (LVN)",
+    "aliases": [],
+    "definition": "A thin section of a profile, where little volume traded. Price moved through it quickly the first time; with no business to hold it, it tends to move through quickly again, toward the next HVN.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Maintenance Margin",
+    "aliases": [],
+    "definition": "The lower level your account must stay above to keep the position open. Fall below it and you must add funds or the position is reduced or closed for you.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Margin"
+    ]
+  },
+  {
+    "term": "Manual Flatten",
+    "aliases": [],
+    "definition": "Closing a working position yourself, before its target or its resting stop has done it for you.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules"
+    ]
+  },
+  {
+    "term": "Mental Close",
+    "aliases": [],
+    "definition": "The single written sentence that ends the trading day: trades taken, how many marked Pass, and that tomorrow starts from its own plan. It is the last step of the end-of-day routine.",
+    "module": [
+      "17"
+    ]
+  },
+  {
+    "term": "MNQ (Micro E-Mini Nasdaq-100)",
+    "aliases": [],
+    "definition": "A micro futures contract that tracks the Nasdaq-100 index at 1/10th the size of the standard NQ contract. Each point is worth $2. It is the illustration instrument for this course's worked examples. It is the primary instrument in The Blueprint.",
+    "module": [],
+    "tags": [
+      "Instrument"
+    ]
+  },
+  {
+    "term": "Negative Tag",
+    "aliases": [],
+    "definition": "A journal tag that records an emotion-driven or rule-breaking action on a trade, split into entry and exit: for example Impulsive, Too Early or Broke Rule. A trade built and exited to plan that lost carries none.",
+    "module": [
+      "20"
+    ]
+  },
+  {
+    "term": "No Setup",
+    "aliases": [],
+    "definition": "The journal tag for a trade with no named location and read behind it: a trade taken on feel. An idea without a written invalidation is No Setup, however good it sounds.",
+    "module": [
+      "15",
+      "16"
+    ]
+  },
+  {
+    "term": "Nothing Case",
+    "aliases": [],
+    "definition": "The line of the plan that names where no branch applies, written as a price range with two numbers, plus anything the plan has no branch for. In the nothing case the action is no trade.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "Open Type",
+    "aliases": [],
+    "definition": "A name for how price behaved in the first minutes after the 09:30 open. It describes those minutes only. It is vocabulary, never a call for the rest of the day.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "ORB (Opening Range Breakout)",
+    "aliases": [],
+    "definition": "A setup based on the price range established in the first 5 or 15 minutes of the regular session. A breakout of that range, followed by a successful retest with footprint confirmation, provides a directional entry in the breakout direction.",
+    "module": [],
+    "tags": [
+      "Setup"
+    ]
+  },
+  {
+    "term": "PD High / PD Low (Prior Day High/Low)",
+    "aliases": [
+      "prior day high",
+      "prior day low",
+      "PDH",
+      "PDL"
+    ],
+    "definition": "The highest and lowest prices reached in yesterday's regular trading session. These are primary named levels — key reference points that frequently act as resistance (PDH) and support (PDL) the following day.",
+    "module": [],
+    "tags": [
+      "Key Levels"
+    ]
+  },
+  {
+    "term": "Plan",
+    "aliases": [],
+    "definition": "What you write before a session: one or more branches and a nothing case. It says what you will do at each place price can go. It never says where price will go.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "Point Of Control (POC)",
+    "aliases": [
+      "POC",
+      "point of control"
+    ],
+    "definition": "The single price with the most volume traded in the period: the price the session agreed on most. Built from volume it is the VPOC. The prior session's VPOC is the level PD VPOC. On your plan it is a location and a target, never a trigger.",
+    "module": [
+      "05"
+    ],
+    "tags": [
+      "Volume Profile"
+    ]
+  },
+  {
+    "term": "Point Value",
+    "aliases": [],
+    "definition": "What one full index point is worth on one contract, in dollars. It equals the multiplier: $2 for MNQ, $5 for MES. Point value is tick value divided by tick size.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Instrument"
+    ]
+  },
+  {
+    "term": "Poor High / Poor Low",
+    "aliases": [],
+    "definition": "A session extreme with no excess: price stopped flat, often at the same price in two or more 30-minute periods, and nothing traded beyond it. The auction stopped there without being refused.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Post-Loss Reset",
+    "aliases": [
+      "post loss reset"
+    ],
+    "definition": "The fixed routine run after every losing trade and before any new entry: a physical step to slow down, then three questions answered aloud. If you can't answer them clearly, you are not ready to trade.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules",
+      "Psychology"
+    ]
+  },
+  {
+    "term": "Pre-Market Sheet",
+    "aliases": [],
+    "definition": "The one page you fill before every session: readiness score, context, news, levels as zones, the idea, the systems check, the rehearsal and the time you finished. Finished by 09:25 ET. A completed sheet clears you to trade; an incomplete one doesn't.",
+    "module": [
+      "16"
+    ]
+  },
+  {
+    "term": "R (Risk Unit)",
+    "aliases": [
+      "risk",
+      "reward"
+    ],
+    "definition": "The dollar amount risked on a single trade, based on your stop loss. If your stop is 10 ticks away and each tick is $0.50, your R = $5. All targets in The Blueprint are expressed as multiples of R (e.g., 2R = two times your risk). This standardizes performance regardless of position size.",
+    "module": [],
+    "tags": [
+      "Risk Management"
+    ]
+  },
+  {
+    "term": "Re-entry Loop",
+    "aliases": [
+      "reentry loop"
+    ],
+    "definition": "A run of entries taken one after another without a fresh setup, usually starting after the session's first win: each trade comes faster and from further away from a level than the one before.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules",
+      "Psychology"
+    ]
+  },
+  {
+    "term": "Readiness Score",
+    "aliases": [],
+    "definition": "A 0 to 2 score written at the top of the pre-market sheet. 2: curious about what the market will do at your levels. 1: neutral. 0: needing something from the market today. It is recorded as data for the journal, not used as a gate.",
+    "module": [
+      "16",
+      "20"
+    ]
+  },
+  {
+    "term": "Rehearsal",
+    "aliases": [],
+    "definition": "Running the written plan once, aloud, before the open: the idea at its level, the trigger, the stop, the stop filling, the post-loss reset and the kill switch. A practised step, the same every day, not a hope about the session.",
+    "module": [
+      "16"
+    ]
+  },
+  {
+    "term": "Roll",
+    "aliases": [
+      "rollover",
+      "roll date"
+    ],
+    "definition": "Moving from the expiring contract month to the next one: your charts, your levels and any position you intend to keep. For US equity index futures the customary roll date is the Monday before the third-Friday expiry.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Expiry"
+    ]
+  },
+  {
+    "term": "RTH (Regular Trading Hours)",
+    "aliases": [],
+    "definition": "For equity index futures, 09:30 to 16:00 ET, the hours of the US cash equity session. Other contracts have their own regular session, listed on their CME spec page. In this course, prior-day levels and settlement are scoped to RTH.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Session"
+    ]
+  },
+  {
+    "term": "Scheduled Break",
+    "aliases": [],
+    "definition": "A break from the screen, written on the plan before the session at a fixed time, and taken whether the session is going well or badly. It is never triggered by a result.",
+    "module": [
+      "20"
+    ]
+  },
+  {
+    "term": "Settlement",
+    "aliases": [
+      "daily settlement",
+      "final settlement"
+    ],
+    "definition": "The official price the exchange sets for a contract. The daily settlement is set at the end of each day's settlement window; the final settlement is set once, at expiry, and is the price the contract is cashed out at.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Expiry"
+    ]
+  },
+  {
+    "term": "Short / Going Short",
+    "aliases": [],
+    "definition": "Selling a contract you don't own, with the expectation that price will fall, allowing you to buy it back cheaper. You profit when price goes down. In futures, shorting is as easy as going long — no borrowing required.",
+    "module": [],
+    "tags": [
+      "Basics"
+    ]
+  },
+  {
+    "term": "Specificity Test",
+    "aliases": [],
+    "definition": "The check a plan line has to pass: after the session, with only the line and the chart, you can mark the bar where it triggered and the price where it ended without guessing. A line that fails is not a plan line.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "Stop Order / Stop Loss",
+    "aliases": [],
+    "definition": "An order that triggers when price reaches a specified level, converting to a market order at that point. Used as a stop loss to limit losses when a trade goes against you. Every trade in The Blueprint has a defined stop loss before entry.",
+    "module": [],
+    "tags": [
+      "Order Types",
+      "Risk Management"
+    ]
+  },
+  {
+    "term": "Tick",
+    "aliases": [
+      "tick size"
+    ],
+    "definition": "The smallest price step a contract can trade in. For MNQ and MES it is 0.25 index points, so one point is four ticks.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Instrument"
+    ]
+  },
+  {
+    "term": "Tick Value",
+    "aliases": [],
+    "definition": "What one tick is worth on one contract, in dollars: tick size times the multiplier. MNQ: 0.25 × $2 = $0.50. MES: 0.25 × $5 = $1.25.",
+    "module": [
+      "03"
+    ],
+    "tags": [
+      "Futures",
+      "Instrument"
+    ]
+  },
+  {
+    "term": "Tier One Release",
+    "aliases": [
+      "news"
+    ],
+    "definition": "CPI, PPI, PCE, NFP, FOMC (the statement and the press conference), and Retail Sales. Be flat 5 minutes before the release; no new entries until 2 minutes after it.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules",
+      "News"
+    ]
+  },
+  {
+    "term": "Tier Two Release",
+    "aliases": [
+      "news"
+    ],
+    "definition": "Home sales, EIA, consumer sentiment, JOLTS, and Fed speakers. Stay aware of the time, manage your position through it, and never exit a working position because of it.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules",
+      "News"
+    ]
+  },
+  {
+    "term": "Too Early",
+    "aliases": [],
+    "definition": "The journal tag for a manual exit taken for any reason other than the four. Its execution mark is Fail, whatever the trade went on to do.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules",
+      "Journal"
+    ]
+  },
+  {
+    "term": "Trading Window",
+    "aliases": [
+      "focus block"
+    ],
+    "definition": "The hours in which you may place a trade: 06:00 to 16:00 ET, with a focus block of 09:30 to 11:00 ET. Outside the window there is no execution of any kind.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Hard Rules"
+    ]
+  },
+  {
+    "term": "Trigger",
+    "aliases": [],
+    "definition": "The price event at the level that tells you to enter now, such as Pause N Go, a resting limit after displacement, or a level reclaim on a 5-minute close (Module 13). Order flow can confirm a trigger; it is never the trigger.",
+    "module": [
+      "15"
+    ]
+  },
+  {
+    "term": "Unfinished Business",
+    "aliases": [],
+    "definition": "The location name for a poor high or poor low carried onto the next session's plan. It is a target and a reason to hold toward a level; it is never an entry on its own.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "VAH / VAL (Value Area High / Low)",
+    "aliases": [
+      "VAH",
+      "VAL",
+      "value area high",
+      "value area low"
+    ],
+    "definition": "The upper and lower edges of the value area. The prior session's edges are the levels PD VAH and PD VAL.",
+    "module": [
+      "05"
+    ],
+    "tags": [
+      "Volume Profile",
+      "Key Levels"
+    ]
+  },
+  {
+    "term": "Value Area",
+    "aliases": [],
+    "definition": "The band of prices around the POC that holds a set share of the session's volume, by convention about 70%. It is where the session did most of its business.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "Volume Profile",
+    "aliases": [],
+    "definition": "A horizontal histogram of the volume traded at each price over a set period, usually one session. Wide rows mark prices the market accepted; thin rows mark prices it moved through or rejected.",
+    "module": [
+      "05"
+    ]
+  },
+  {
+    "term": "VWAP (Volume Weighted Average Price)",
+    "aliases": [],
+    "definition": "The average price weighted by volume for the current session. Acts as a dynamic support/resistance and a measure of fair value intraday. Institutional traders use VWAP as a benchmark — price above VWAP is generally bullish; below is bearish.",
+    "module": [],
+    "tags": [
+      "Indicator",
+      "Key Level"
+    ]
+  },
+  {
+    "term": "Zone",
+    "aliases": [],
+    "definition": "A level written as a price band with two edges rather than a single line. Price can trade into a zone without breaking it; acceptance through the whole zone is what changes the read.",
+    "module": [
+      "15",
+      "16"
+    ]
+  }
+]

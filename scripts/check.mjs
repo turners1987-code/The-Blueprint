@@ -52,6 +52,12 @@
         and a module page whose id is tier "paid" in data/modules.json
         must carry data-gate="tier" — otherwise it would be public.
 
+    14. (data/glossary.json) Every entry has a non-empty term and
+        definition, and no two entries share a term (case-insensitive).
+        Every .definition-box term on a published module page has a
+        glossary entry — a missing one is a warning, not an error, so
+        a new module can land before the glossary catches up.
+
    Exit code 1 on any error, 0 otherwise.
    ============================================================ */
 
@@ -465,6 +471,62 @@ if (toolsResult) {
     totalErrors += toolsResult.problems.length;
   } else {
     console.log(`✓ tools.json: ${toolsResult.count} entries, all with a valid status`);
+  }
+}
+
+// ── Check 14: data/glossary.json ───────────────────────────────
+function checkGlossary() {
+  const p = path.join(ROOT, 'data', 'glossary.json');
+  if (!existsSync(p)) return null;
+  let entries;
+  try { entries = JSON.parse(readFileSync(p, 'utf8')); }
+  catch (e) { return { problems: [`E14: data/glossary.json — invalid JSON: ${e.message}`], missing: [], count: 0 }; }
+  if (!Array.isArray(entries)) return { problems: ['E14: data/glossary.json — must be an array'], missing: [], count: 0 };
+
+  const key = (s) => s.toLowerCase().replace(/\s+/g, ' ').trim();
+  const problems = [];
+  const terms = new Set();
+  entries.forEach((e, i) => {
+    const term = e && typeof e.term === 'string' ? e.term.trim() : '';
+    if (!term) problems.push(`E14: data/glossary.json — entry #${i}: empty term`);
+    if (!(e && typeof e.definition === 'string' && e.definition.trim())) {
+      problems.push(`E14: data/glossary.json — ${term || `entry #${i}`}: empty definition`);
+    }
+    if (!term) return;
+    if (terms.has(key(term))) problems.push(`E14: data/glossary.json — duplicate term "${term}"`);
+    terms.add(key(term));
+  });
+
+  // Published module pages, from data/modules.json
+  const missing = [];
+  let published = [];
+  try {
+    const list = JSON.parse(readFileSync(MODULES_JSON, 'utf8'));
+    published = (Array.isArray(list) ? list : list.modules || [])
+      .filter(m => m && m.status === 'published')
+      .map(m => `modules/${m.file || `${m.number}-${m.slug}.html`}`);
+  } catch { /* modules.json problems are reported above */ }
+  for (const page of published) {
+    const abs = path.join(ROOT, page);
+    if (!existsSync(abs)) continue;
+    const html = readFileSync(abs, 'utf8');
+    const boxTerms = /<div\b[^>]*\bclass\s*=\s*["'][^"']*\bdefinition-term\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/gi;
+    for (const m of html.matchAll(boxTerms)) {
+      const term = m[1].replace(/<[^>]+>/g, '').trim();
+      if (term && !terms.has(key(term))) missing.push(`W14: ${page} — definition "${term}" has no entry in data/glossary.json`);
+    }
+  }
+  return { problems, missing, count: entries.length };
+}
+
+const glossaryResult = checkGlossary();
+if (glossaryResult) {
+  glossaryResult.problems.forEach(p => console.log(`✗ ${p}`));
+  glossaryResult.missing.forEach(w => console.log(`⚠  ${w}`));
+  totalErrors += glossaryResult.problems.length;
+  totalWarnings += glossaryResult.missing.length;
+  if (!glossaryResult.problems.length && !glossaryResult.missing.length) {
+    console.log(`✓ glossary.json: ${glossaryResult.count} entries; every published definition box has one`);
   }
 }
 
