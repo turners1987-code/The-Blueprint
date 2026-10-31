@@ -70,7 +70,7 @@ Every lesson page follows this order. Sections are h2s; the section index is bui
 ## 4. Devices
 
 - **Grade before size.** A+/A/B/C is the rubric in TAXONOMY 5.1 and appears everywhere grading
-  does. Sizing by grade is one table, decided once in Module 08, and never varies between
+  does. Sizing by grade is one table, decided once in Module 14, and never varies between
   pages.
 - **Mistake → what it reveals → mechanical fix.** Every mistake named on a page gets all three.
   The fix is a mechanism (a platform setting, a written line, a count), not a mindset.
