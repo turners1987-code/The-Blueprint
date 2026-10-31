@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Instrument: Futures Mechanics — The Blueprint</title>
+  <meta name="description" content="Module 03 of The Blueprint: how a futures contract works, with MNQ as the worked example and MES as the comparison. The contract, ticks and points, sessions and the 16:00 ET boundary, settlement and the roll, margin, funded accounts and tax, and how one R becomes a number of contracts.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="The Instrument: Futures Mechanics — The Blueprint">
+  <meta property="og:description" content="Module 03 of The Blueprint: how a futures contract works, with MNQ as the worked example and MES as the comparison. The contract, ticks and points, sessions and the 16:00 ET boundary, settlement and the roll, margin, funded accounts and tax, and how one R becomes a number of contracts.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/modules/03-the-instrument-futures-mechanics.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="module-page" id="main-content" tabindex="-1" data-gate="tier">
+
+    <!-- MODULE HEADER -->
+    <header class="module-header">
+      <div class="container">
+        <div class="module-meta">
+          <span class="module-number">MODULE 03</span>
+          <span class="badge badge--cyan">The Rules</span>
+        </div>
+        <h1>The Instrument: <span class="text-gold">Futures Mechanics</span></h1>
+        <p class="lead mt-md">The chart shows you an index, but your account only ever feels the contract, and it is the contract's tick value, not the price on the screen, that decides what your stop costs.</p>
+      </div>
+    </header>
+
+    <!-- MODULE BODY -->
+    <div class="module-body">
+      <div class="container">
+        <nav class="module-toc" data-module-toc aria-label="On this page"></nav>
+
+        <div class="lesson-content">
+
+
+          <h2>The Stop That Cost More Than You Planned</h2>
+          <p>You know the moment. The level was right, the stop was where the structure said it should be, and the loss was bigger than the number in your head. Not because price gapped. Because you sized the trade on a feeling about "a few points", on a contract whose points you had never priced.</p>
+          <p>Every risk decision on this site is in R. The platform doesn't take R. It takes contracts, and it fills in ticks. The space between those two units is where a planned 1R loss quietly becomes 2.5R. This page closes that space. It teaches how a futures contract works in a way that carries to any futures contract, using MNQ as the worked example and MES as the comparison.</p>
+          <p>There are seven parts, mechanical first: the contract, ticks and points, the sessions, settlement and the roll, margin, funded accounts, and one paragraph on tax. Every contract figure below is a specification, quoted with its source and the date it was read. None of it is a result.</p>
+
+          <h2>The Contract</h2>
+          <p>When you buy one MNQ you don't buy a share of anything. You enter an agreement whose value is set by a formula: the Nasdaq-100 Index multiplied by a fixed dollar amount. CME's rulebook values each contract at "$2.00 times the Nasdaq-100 Index". MES is the same idea on a different index: $5.00 times the S&amp;P 500.</p>
+          <div class="definition-box">
+            <div class="definition-term">Contract Multiplier</div>
+            <div class="definition-text">The fixed dollar amount the exchange multiplies the index by to value one contract. For MNQ it is $2 per index point; for MES it is $5. It is also the contract's point value.</div>
+          </div>
+          <p>That multiplier is the whole contract. Price on your chart is quoted in index points. Every point the index moves, one MNQ changes in value by $2 and one MES by $5, in your favour or against you.</p>
+          <p>Nothing is ever delivered. The rulebook says it in six words: "Delivery shall be by cash settlement." At expiry the contract is closed out against a final price for the index and the difference is paid in cash. CME's spec pages list both contracts as "Financially Settled".</p>
+          <p class="text-muted">Source: CME Rulebook Chapter 361 (MNQ), Rules 36101, 36102.B and 36103; Chapter 353 (MES), Rules 35301, 35302.B and 35303; CME contract spec pages for MNQ and MES (Contract Unit, Settlement Method). All read 2026-10-05.</p>
+          <p><strong>The rule:</strong> before you trade any futures contract, know what it is a multiple of and by how much.</p>
+          <p><strong>Getting it wrong</strong> looks like carrying one contract's arithmetic onto another: two products on the same index, or two indexes that look alike on a chart. What it reveals: you are reading the chart and not the instrument. <strong>The fix:</strong> the contract unit is the first of five lines on a card beside your screen (the assignment at the end of this page). No card, no order.</p>
+
+          <h2>Ticks, Points And What They Are Worth</h2>
+          <p>Price doesn't move smoothly. It moves in fixed steps, and the step is set by the exchange.</p>
+          <div class="definition-box">
+            <div class="definition-term">Tick</div>
+            <div class="definition-text">The smallest price step a contract can trade in. For MNQ and MES it is 0.25 index points, so one point is four ticks.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Tick Value</div>
+            <div class="definition-text">What one tick is worth on one contract, in dollars: tick size times the multiplier. MNQ: 0.25 × $2 = $0.50. MES: 0.25 × $5 = $1.25.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Point Value</div>
+            <div class="definition-text">What one full index point is worth on one contract, in dollars. It equals the multiplier: $2 for MNQ, $5 for MES. Point value is tick value divided by tick size.</div>
+          </div>
+          <p>The two contracts tick in the same step. What a tick is worth is different, and that difference is the whole of this section.</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col"></th><th scope="col">MNQ</th><th scope="col">MES</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Contract unit</td><td>$2 × Nasdaq-100 Index</td><td>$5 × S&amp;P 500 Index</td></tr>
+                <tr><td>Tick size</td><td class="num">0.25 index points</td><td class="num">0.25 index points</td></tr>
+                <tr><td>Tick value</td><td class="num">$0.50</td><td class="num">$1.25</td></tr>
+                <tr><td>Ticks per point</td><td class="num">4</td><td class="num">4</td></tr>
+                <tr><td>Point value</td><td class="num">$2.00</td><td class="num">$5.00</td></tr>
+                <tr><td>One contract, 40-tick stop</td><td class="num">$20</td><td class="num">$50</td></tr>
+                <tr><td>Contracts for a $100 R at 40 ticks</td><td class="num">5</td><td class="num">2</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted">Source: CME Rulebook Chapter 361, Rule 36102.C, and Chapter 353, Rule 35302.C (minimum price increment); CME contract spec pages for MNQ and MES (Minimum Price Fluctuation). Read 2026-10-05. The last two rows are arithmetic on those figures; the 40 ticks and the $100 are example numbers, not a recommended stop or risk.</p>
+          <p><strong>Think in ticks.</strong> The distance from your entry to your stop is a count of ticks. So is how far a trade went against you and for you; the journal records both in ticks. Ticks are the unit that survives a change of contract: 40 ticks is 10 points on MNQ and 10 points on MES. Only the dollars change.</p>
+          <p><strong>The conversion.</strong> Three steps, in this order, every time:</p>
+          <ol>
+            <li><strong>Points to ticks.</strong> Stop distance in points ÷ tick size. On MNQ and MES, points × 4.</li>
+            <li><strong>Ticks to dollars per contract.</strong> Stop ticks × tick value.</li>
+            <li><strong>Dollars to contracts.</strong> Base R ÷ dollars per contract, rounded <em>down</em>.</li>
+          </ol>
+          <p>Written as one line: contracts = R ÷ (stop ticks × tick value). The same R on the same stop distance is five MNQ or two MES in the table above. That's not a choice between them. It is what the arithmetic says each contract can carry. And rounding is always down: 2.5 contracts is 2, never 3. Rounding up is a small, silent rise in risk on every trade.</p>
+          <p><strong>The rule:</strong> size comes from R and stop ticks through the tick value. The order is level, stop, risk, size, entry.</p>
+          <p><strong>Getting it wrong</strong> looks like picking the size first (three contracts, every trade) and letting it set the risk, or setting a dollar loss and squeezing the stop until it fits. What it reveals: the size was decided before the structure was read. <strong>The fix:</strong> on every plan, write the stop in ticks before you write the size, and write the size as the result of the formula, with the arithmetic beside it. A size with no arithmetic next to it is not a plan yet.</p>
+
+          <h3>Common Micro Contracts</h3>
+          <p>The same three steps work on any futures contract. Only the tick size and tick value change, and they change more than you might expect: not every contract ticks in quarter points, and not every one settles in cash. Read the spec page of the one you trade; never carry another contract's numbers onto it.</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Contract</th><th scope="col">Tick size</th><th scope="col">Tick value</th><th scope="col">Settlement</th><th scope="col">Source</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>MNQ, Micro E-mini Nasdaq-100</td><td class="num">0.25 index points</td><td class="num">$0.50</td><td>Financially settled</td><td><a href="https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html" rel="noopener">CME spec page</a>, read 2026-10-31</td></tr>
+                <tr><td>MES, Micro E-mini S&amp;P 500</td><td class="num">0.25 index points</td><td class="num">$1.25</td><td>Financially settled</td><td><a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" rel="noopener">CME spec page</a>, read 2026-10-31</td></tr>
+                <tr><td>MYM, Micro E-mini Dow</td><td class="num">1.0 index point</td><td class="num">$0.50</td><td>Financially settled</td><td><a href="https://www.cmegroup.com/markets/equities/dow-jones/micro-e-mini-dow.contractSpecs.html" rel="noopener">CME spec page</a>, read 2026-10-31</td></tr>
+                <tr><td>M2K, Micro E-mini Russell 2000</td><td class="num">0.10 index points</td><td class="num">$0.50</td><td>Financially settled</td><td><a href="https://www.cmegroup.com/markets/equities/russell/micro-e-mini-russell-2000.contractSpecs.html" rel="noopener">CME spec page</a>, read 2026-10-31</td></tr>
+                <tr><td>MGC, Micro Gold</td><td class="num">0.10 per troy ounce</td><td class="num">$1.00</td><td>Deliverable</td><td><a href="https://www.cmegroup.com/markets/metals/precious/e-micro-gold.contractSpecs.html" rel="noopener">CME spec page</a>, read 2026-10-31</td></tr>
+                <tr><td>MCL, Micro WTI Crude Oil</td><td class="num">0.01 per barrel</td><td class="num">$1.00</td><td>Financially settled</td><td><a href="https://www.cmegroup.com/markets/energy/crude-oil/micro-wti-crude-oil.contractSpecs.html" rel="noopener">CME spec page</a>, read 2026-10-31</td></tr>
+                <tr><td>M6E, Micro EUR/USD</td><td class="num">0.0001 per euro</td><td class="num">$1.25</td><td>Deliverable</td><td><a href="https://www.cmegroup.com/markets/fx/g10/e-micro-euro.contractSpecs.html" rel="noopener">CME spec page</a>, read 2026-10-31</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted">Specifications are set by the exchange and can be amended; the CME page wins. A deliverable contract ends in delivery rather than a cash payment if it is held into expiry, so its expiry rules matter more, not less.</p>
+
+          <h2>Sessions And The 16:00 Boundary</h2>
+          <p>Index futures trade nearly around the clock. CME's spec pages give the Globex hours for both contracts as Sunday 6:00 p.m. to Friday 5:00 p.m. ET, with a daily maintenance period from 5:00 to 6:00 p.m. ET. That hour is the daily halt: nothing trades in it, Monday to Thursday.</p>
+          <p>CME publishes in Central time: the same hours are 5:00 p.m. to 4:00 p.m. CT, with the halt from 4:00 to 5:00 p.m. CT. This course writes every time in ET. When you read a CME page, convert before you write anything down.</p>
+          <p class="text-muted">Source: CME contract spec pages for MNQ and MES (Trading Hours, CME Globex), read 2026-10-05. Hours are subject to change; CME's current page wins.</p>
+          <div class="definition-box">
+            <div class="definition-term">RTH (Regular Trading Hours)</div>
+            <div class="definition-text">09:30 to 16:00 ET, the hours of the US cash equity session. In this course, prior-day levels and settlement are scoped to RTH.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">ETH (Extended Trading Hours)</div>
+            <div class="definition-text">The hours the futures trade outside RTH: from 16:00 ET until the daily halt, and from the reopen until 09:30 ET the next morning.</div>
+          </div>
+          <p><strong>Where a day ends.</strong> CME's rulebook starts each trading day at the Globex open, 5:00 p.m. Chicago time on the evening before. So in CME's terms Tuesday begins on Monday at 18:00 ET and runs to the 17:00 ET halt on Tuesday.</p>
+          <p class="text-muted">Source: CME Rulebook Chapter 361, Rule 36102.I.2, and Chapter 353, Rule 35302.I.2 (Trading Day); times in Chicago time per each chapter's scope rule. Read 2026-10-05.</p>
+          <p>This framework ends its day somewhere else: at <strong>16:00 ET</strong>, the cash equity close. That's a convention the framework chooses, not a market fact, and it differs from CME's day by design. Two reasons. First, the levels you mark for tomorrow (prior-day high and low, value area, settlement) are taken from the cash session, 09:30 to 16:00 ET, so the day has to end where that session ends. Second, it lines up with how the contract is settled: the daily settlement for MNQ and MES comes from lead-month trades between 14:59:30 and 15:00:00 CT, which is the last thirty seconds before 16:00 ET.</p>
+          <p class="text-muted">Source: CME Group Client Systems Wiki, Nasdaq-100 and E-Mini Standard and Poors 500 Futures settlement procedures (lead month), read 2026-10-31.</p>
+          <p>It also matches Module 02: the trading window closes at 16:00 ET, and nothing stays open past it. The futures keep trading after 16:00. You don't.</p>
+          <p>The practical consequence: your platform and this course may disagree about "yesterday". A platform that uses CME's day, or a session template that runs to 17:00 ET, builds the prior day from different bars than the 09:30 to 16:00 ET session, and its prior-day high or low can be a different price. Neither is wrong. They are different definitions, and you need to know which one you are looking at. Module 06 puts the 16:00 boundary to work on the levels themselves.</p>
+          <p><strong>The rule:</strong> every time on your plan is in ET, and your day ends at 16:00 ET.</p>
+          <p><strong>Getting it wrong</strong> looks like an hour-off mistake: a CME time read as ET, or a "prior-day high" that was printed at 16:40. What it reveals: the clock on your screen was trusted without being checked against the definition. <strong>The fix:</strong> set your chart's session template to end at 16:00 ET and keep a full-session template beside it, also ending at 16:00 ET. Write the session hours in ET on your contract card, once, and never copy a CT time onto a plan without converting it.</p>
+
+          <h2>Settlement, Expiry And The Roll</h2>
+          <div class="definition-box">
+            <div class="definition-term">Settlement</div>
+            <div class="definition-text">The official price the exchange sets for a contract. The daily settlement is set at the end of each day's settlement window; the final settlement is set once, at expiry, and is the price the contract is cashed out at.</div>
+          </div>
+          <p><strong>Daily settlement.</strong> Each micro takes its daily settlement from its larger sibling: MNQ's equals the settlement of the E-mini Nasdaq-100 (NQ), and MES's equals the settlement of the E-mini S&amp;P 500 (ES), rounded to MES's tick. For the lead month, the contract expected to be the most active, it is the volume-weighted average price of trades between 14:59:30 and 15:00:00 CT. If there are no trades in that window, it is the midpoint of the bid and offer over the same thirty seconds, and if there is no two-sided market, a calculation off the cash index is used.</p>
+          <p class="text-muted">Source: CME Group Client Systems Wiki, Nasdaq-100 and E-Mini Standard and Poors 500 Futures settlement procedures, read 2026-10-31. Procedures are subject to change.</p>
+          <p><strong>Contract months.</strong> MNQ and MES are listed quarterly, in March, June, September and December, with five consecutive quarters listed at a time. Each month is its own contract, trading at its own price; CME even sets a separate, smaller tick for trading the spread between two months.</p>
+          <p class="text-muted">Source: CME contract spec pages for MNQ and MES (Listed Contracts; Minimum Price Fluctuation, calendar spread), read 2026-10-05.</p>
+          <p><strong>Final settlement and expiry.</strong> The final settlement price is a special opening quotation of the index, determined on the third Friday of the contract month from the opening prices of the stocks in it. Trading in the expiring contract stops at the open of the primary listing exchange that morning, which CME's spec pages give as 9:30 a.m. ET on the third Friday. If the index isn't published that Friday, or an unscheduled holiday is declared, the rulebook sets the fallback dates.</p>
+          <p class="text-muted">Source: CME Rulebook Chapter 361, Rules 36102.G and 36103.A, and Chapter 353, Rules 35302.G and 35303.A; CME contract spec pages for MNQ and MES (Termination of Trading). Read 2026-10-05.</p>
+          <div class="definition-box">
+            <div class="definition-term">Roll</div>
+            <div class="definition-text">Moving from the expiring contract month to the next one: your charts, your levels and any position you intend to keep. For US equity index futures the customary roll date is the Monday before the third-Friday expiry.</div>
+          </div>
+          <p><strong>Why volume moves before expiry.</strong> The expiring month stops trading at 9:30 ET on its third Friday and is cashed out at a price set from that morning's open. Anyone who wants exposure beyond that date has to be in the next month, and most traders move before the last morning rather than on it. So in the days before expiry, trading leaves the expiring month for the next one. The contract you were watching gets thinner, and the one you will trade next becomes the one that matters.</p>
+          <p><strong>The customary roll date.</strong> You can roll from one quarterly contract to the next at any time. The custom CME publishes for US equity index futures is the <strong>Monday before the third Friday</strong> of the expiration month. After that date the next quarterly contract is treated as the lead month and the expiring one becomes less liquid; the roll date also decides which contract month is listed for trading in the Globex session. For the December 2026 contract, expiration is Friday 18 December and the roll date is Monday 14 December. The current table is on CME's <a href="https://www.cmegroup.com/trading/equity-index/rolldates.html" rel="noopener">Equity Index Roll Dates</a> page.</p>
+          <p class="text-muted">Source: CME Group, Equity Index Roll Dates, read 2026-10-31. Dates are subject to change; CME's current table wins. In NT8, the Instruments window lists the contract months for MNQ and MES with their rollover dates (checked against CME 2026-10-05).</p>
+          <p><strong>The rule:</strong> know the expiry date and your roll date for the contract you trade, before the week they fall in.</p>
+          <p><strong>Getting it wrong</strong> looks like an order sent to the expiring month on roll week, or levels drawn on one month and traded on the other. What it reveals: the contract was taken for granted, as if it were the same instrument all year. <strong>The fix:</strong> the next roll date is the fifth line on your contract card. In the week it falls in, read the contract month in the order ticket's symbol before your first order each day, and redraw your levels on the new month on the day you roll.</p>
+
+          <h2>Margin Is Not Your Risk</h2>
+          <p>Margin is the deposit your broker requires before it lets you hold a contract. It is not a price you pay for the contract, and it is not the most you can lose.</p>
+          <div class="definition-box">
+            <div class="definition-term">Initial Margin</div>
+            <div class="definition-text">The deposit required to open a futures position, per contract. It is good-faith money held against what the position might lose, not a cost and not a cap on the loss.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Maintenance Margin</div>
+            <div class="definition-text">The lower level your account must stay above to keep the position open. Fall below it and you must add funds or the position is reduced or closed for you.</div>
+          </div>
+          <p><strong>Leverage, in one line.</strong> Take an index level of 20,000 as a round number for the arithmetic. One MNQ is then 20,000 × $2 = $40,000 of exposure to the Nasdaq-100. The margin to hold it is a fraction of that, and a loss is measured against the $40,000, not against the margin. That gap is leverage. It means the account can lose more than the margin on one contract, and on a fast day it can.</p>
+          <p>Brokers usually offer a lower day-trade margin for positions closed before the session ends, and they change it when they choose. NinjaTrader's margins page, for example, says its risk team "reserves the right to adjust intraday margins" without prior notice. Margin figures are subject to change and move week to week. This page quotes none. The live figures are on CME's margin pages for <a href="https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.margins.html" rel="noopener">MNQ</a> and <a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.margins.html" rel="noopener">MES</a>, and your broker's own page shows what it actually charges you.</p>
+          <p class="text-muted">Source: NinjaTrader, <a href="https://ninjatrader.com/pricing/margins/" rel="noopener">Margins</a>, read 2026-10-26 (policy statement only; no figure copied). CME margin pages are linked as the live source and change without notice.</p>
+          <p><strong>R decides size; margin only caps it.</strong> Margin answers one question: how many contracts may this account hold? R answers the one that matters: how many should it hold, given where the stop is? Work out the contracts from R first. Then check margin as a ceiling. If the margin allows ten and the formula says two, you trade two. If the formula says five and the margin allows three, the trade is three or it is smaller; it is never bigger because the broker would allow it.</p>
+          <p><strong>The rule:</strong> size from R and stop ticks; margin is a ceiling, never a target.</p>
+          <p><strong>Getting it wrong</strong> looks like "the margin covers six, so six". What it reveals: the broker's permission is being read as advice, and the account's risk is being set by someone who doesn't know where your stop is. <strong>The fix:</strong> the size line on your plan carries the R formula, not the margin figure. Margin appears on the plan only if it is the smaller number, and then it is written as the reason the size was cut.</p>
+
+          <h2>Funded And Evaluation Accounts</h2>
+          <p>A funded or evaluation account is the same contract with a set of constraints placed on top of it by the firm that runs the account. Read it as a model with four parts:</p>
+          <ul>
+            <li><strong>A daily loss limit.</strong> A loss that stops trading for the day.</li>
+            <li><strong>A drawdown limit.</strong> A loss from a reference balance that ends the account. Some trail the account's peak; some are fixed; the terms say which.</li>
+            <li><strong>Allowed hours.</strong> Times by which positions must be flat, and days or events on which trading is restricted.</li>
+            <li><strong>Allowed contracts.</strong> Which products may be traded and how many contracts at once, often counted across products.</li>
+          </ul>
+          <p>None of these change what a tick on MNQ is worth. They change how much room the account gives you, and they are written by the firm, not the exchange. Firms change their terms, so the current ones are on your firm's own pages, not here.</p>
+          <p>One more thing, and it is the one that matters for your record. Results in an evaluation account are not live-market fills. Evaluation accounts are simulated, and some funded accounts are too; the firm's terms say which. A simulated fill is not a fill at the exchange, so a trade in one of these accounts goes into your journal tagged as sim, and it is never pooled with live trades when you measure yourself.</p>
+          <p><strong>The rule:</strong> the firm's limits are a backstop around your own rules, not a replacement for them; results from a simulated account are sim.</p>
+          <p><strong>Getting it wrong</strong> looks like trading up to the firm's daily limit instead of your 2R, or counting a passed evaluation as evidence. What it reveals: the firm's numbers became your plan, and a simulation became your record. <strong>The fix:</strong> set your 2R kill switch inside the firm's daily limit (<a href="02-the-hard-rules.html">Module 02</a>), and set the account type on every trade in the journal so the sim trades sort themselves.</p>
+
+          <h2>Tax, In One Paragraph</h2>
+          <p>Under US federal tax law, regulated futures contracts such as MNQ and MES are generally Section 1256 contracts. Gains and losses on them are treated as 60% long-term and 40% short-term capital gain or loss, and any position still open on the last business day of the tax year is treated as sold at its fair market value that day (marked to market). That's a fact about the tax code, not tax advice. How it applies to you depends on your country, your account and the rest of your return; check with a tax professional.</p>
+          <p class="text-muted">Source: 26 U.S.C. §1256(a)(1), (a)(3) and (b)(1), via Cornell Legal Information Institute, read 2026-10-31.</p>
+
+          <div class="key-concept">
+            <p><strong>Your risk is set by R and the stop, in ticks, and only then turned into contracts through the tick value.</strong> Margin, the firm's limits and the contract's size are ceilings around that number; none of them is the number.</p>
+          </div>
+
+          <h2>Worked Case: One R On Two Contracts</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A composite plan, built to show the arithmetic. It belongs to no one, and it stops before any outcome. Base risk is 1R per trade. Suppose 1R is $100: a number chosen because it divides easily, not a recommendation. Module 14 covers choosing yours.</p>
+            <p><strong>The level and the stop.</strong> A long from the PD Low, with the stop behind the far edge of the structure, 20 points below the entry. Twenty points is 80 ticks. The same 80 ticks is used on both contracts below so that only the arithmetic changes. In practice each index has its own structure, and the stop comes from its own chart.</p>
+            <p><strong>On MNQ.</strong> 80 ticks × $0.50 = $40 per contract. $100 ÷ $40 = 2.5, rounded down: <strong>2 contracts</strong>, risking $80, which is 0.8R. The half contract is left on the table; rounding up to 3 would risk $120, which is 1.2R.</p>
+            <p><strong>On MES.</strong> 80 ticks × $1.25 = $100 per contract. $100 ÷ $100 = <strong>1 contract</strong>, risking exactly 1R.</p>
+            <p><strong>Same R, different contracts.</strong> One R is two MNQ or one MES on this stop. Neither is more aggressive. Each is 1R or under, and that is the only thing the size line is for.</p>
+            <p><strong>Now the structure is wider.</strong> The far edge is 40 points away, so the stop is 160 ticks. On MNQ: 160 × $0.50 = $80 per contract, so <strong>1 contract</strong>, risking $80. On MES: 160 × $1.25 = $200 per contract, which is more than 1R for a single contract, so <strong>0 contracts</strong>: at this base R there is no MES trade here. You don't raise R to make it fit, and you don't tighten the stop back inside the structure to make it fit.</p>
+            <p>A wider stop cut the size on both contracts. It never raised the risk. On the account's kill switch from Module 02, 2R is 2 × $100 = $200: two full losses of this plan, on either contract.</p>
+          </div>
+          <p>Notice what the case didn't need. No margin figure, no index level, and no view on where price goes next. Size came from three numbers you know before the session: your base R, the stop in ticks, and the tick value.</p>
+
+          <h2>Can You Read Your Contract Without Looking?</h2>
+          <p>Answer these five for the contract you trade, from memory, then check each against the spec page. Score one point for each answer that matches.</p>
+          <ol>
+            <li><strong>Tick value.</strong> What one tick is worth on one contract.</li>
+            <li><strong>Point value.</strong> What one index point is worth on one contract.</li>
+            <li><strong>Session hours.</strong> RTH and the Globex hours, including the daily halt, in ET.</li>
+            <li><strong>Settlement method.</strong> How the contract settles at expiry, and when trading in the expiring month stops.</li>
+            <li><strong>Next roll date.</strong> The date you will switch to the next contract month.</li>
+          </ol>
+          <p><strong>5 of 5:</strong> you know your instrument. Keep the card by the screen anyway. <strong>3 or 4:</strong> the missing lines go on the card before your next session. <strong>Under 3:</strong> no live order until all five are written down. One line overrides the score: if you missed the tick value, you have been sizing without it, so treat that as under 3 whatever the total.</p>
+
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>Open your contract's spec page on CME's site and write five lines on a card: tick size, tick value, RTH hours (09:30 to 16:00 ET in this course; the spec page lists the Globex hours in CT), settlement method, and your next roll date (CME's Equity Index Roll Dates page lists it: the Monday before the third-Friday expiry). Keep the card beside the screen. That's the whole assignment.</p>
+          </div>
+
+          <h2>Where It Goes Next</h2>
+          <p>The 2R kill switch in <a href="02-the-hard-rules.html">Module 02, The Hard Rules</a>, is a dollar figure in the account setting: 2 × your base R. The tick arithmetic on this page is how you check it against the trades you actually plan.</p>
+          <p>Module 06, What Counts As A Level, puts the 16:00 ET boundary to work: which bars build each prior-day level and why the session scope is written on every level definition. Module 14, Trade Construction, covers choosing your base R and the full sizing step, where the formula from this page becomes the size line on every plan.</p>
+
+          <h2>Sources</h2>
+          <ul>
+            <li>CME Group, Micro E-mini Nasdaq-100 Index Futures, contract specifications. <a href="https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html" rel="noopener">https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html</a>, read 2026-10-05 (hours, listed contracts); contract unit, tick, settlement method and termination re-read 2026-10-31.</li>
+            <li>CME Group, Micro E-mini S&amp;P 500 Index Futures, contract specifications. <a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" rel="noopener">https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html</a>, read 2026-10-05 (hours, listed contracts); contract unit, tick, settlement method and termination re-read 2026-10-31.</li>
+            <li>CME Group, contract specifications for MYM, M2K, MGC, MCL and M6E (URLs in the Common Micro Contracts table), read 2026-10-31.</li>
+            <li>CME Rulebook, Chapter 361, Micro E-mini Nasdaq-100 Index Futures: Rules 36101, 36102.B, 36102.C, 36102.G, 36102.I.2, 36103, 36103.A. <a href="https://www.cmegroup.com/content/dam/cmegroup/rulebook/CME/IV/350/361.pdf" rel="noopener">https://www.cmegroup.com/content/dam/cmegroup/rulebook/CME/IV/350/361.pdf</a>, read 2026-10-05.</li>
+            <li>CME Rulebook, Chapter 353, Micro E-mini S&amp;P 500 Stock Price Index Futures: Rules 35301, 35302.B, 35302.C, 35302.G, 35302.I.2, 35303, 35303.A. <a href="https://www.cmegroup.com/content/dam/cmegroup/rulebook/CME/IV/350/353/353.pdf" rel="noopener">https://www.cmegroup.com/content/dam/cmegroup/rulebook/CME/IV/350/353/353.pdf</a>, read 2026-10-05.</li>
+            <li>CME Group Client Systems Wiki, Nasdaq-100 settlement procedures. <a href="https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457222172/Nasdaq-100" rel="noopener">https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457222172/Nasdaq-100</a>, read 2026-10-31.</li>
+            <li>CME Group Client Systems Wiki, E-Mini Standard and Poors 500 Futures settlement procedures. <a href="https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457418067/E-Mini+Standard+and+Poors+500+Futures" rel="noopener">https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457418067/E-Mini+Standard+and+Poors+500+Futures</a>, read 2026-10-31.</li>
+            <li>CME Group, Equity Index Roll Dates. <a href="https://www.cmegroup.com/trading/equity-index/rolldates.html" rel="noopener">https://www.cmegroup.com/trading/equity-index/rolldates.html</a>, read 2026-10-31.</li>
+            <li>CME Group, Micro E-mini Nasdaq-100 and Micro E-mini S&amp;P 500 margins (linked as the live source; no figure quoted). <a href="https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.margins.html" rel="noopener">https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.margins.html</a> and <a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.margins.html" rel="noopener">https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.margins.html</a>, both pages confirmed live 2026-10-31. Margins are subject to change.</li>
+            <li>NinjaTrader, Margins. <a href="https://ninjatrader.com/pricing/margins/" rel="noopener">https://ninjatrader.com/pricing/margins/</a>, read 2026-10-26.</li>
+            <li>NinjaTrader 8, Instruments window, MNQ and MES contract months; cross-checked against the CME specifications, 2026-10-05.</li>
+            <li>26 U.S. Code §1256, Section 1256 contracts marked to market. Cornell Legal Information Institute, <a href="https://www.law.cornell.edu/uscode/text/26/1256" rel="noopener">https://www.law.cornell.edu/uscode/text/26/1256</a>, read 2026-10-31.</li>
+          </ul>
+          <p class="text-muted">Contract specifications, trading hours and settlement procedures are set by the exchange and can be amended. If anything above disagrees with CME's current page, CME's page wins.</p>
+
+
+        </div>
+
+        <!-- MARK COMPLETE -->
+        <div class="module-complete-zone mt-xl">
+          <button id="mark-complete-btn" class="btn btn--primary btn--lg" data-module-id="03-the-instrument-futures-mechanics">
+            Mark Complete & Continue →
+          </button>
+        </div>
+
+        <!-- MODULE NAVIGATION -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <a href="02-the-hard-rules.html" class="module-nav-title">The Hard Rules</a>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next Module →</span>
+            <span class="module-nav-title">Who Is Forced To Trade — coming soon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="../ai.html" title="How AI is used here"><img src="../assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the plan.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    <nav class="footer-links" aria-label="Site policies"><a href="../privacy.html">Privacy</a> <a href="../support.html">Support</a></nav>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/nav.js"></script>
+  <script type="module" src="../js/gate.js"></script>
+  <script type="module" src="../js/progress.js"></script>
+  <script type="module" src="../js/module-toc.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

@@ -130,7 +130,7 @@ llms.txt  sitemap.xml  robots.txt  manifest.json  sw.js  package.json
 css/   main, modules, index, glossary, journal, pricing, tools, unlock, ai,
        dial-in, flashcards, toothbrush-therapy, 404
 js/    nav.js         shared nav on every page; registers the service worker
-       progress.js    localStorage progress, schema v2, migration map; position
+       progress.js    localStorage progress, schema v4, migration map; position
                       (lastVisited) is separate from completion; unmark control
        modules.js     renders the module grid from data/modules.json
        module-toc.js  section index on module pages
