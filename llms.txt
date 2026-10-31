@@ -20,6 +20,7 @@ The Blueprint is a trading education site built around one trader's own intraday
 - [Tools](https://bptrade.co/tools.html): NinjaTrader 8 indicators and add-ons, with install instructions and requirements.
 - [Pricing](https://bptrade.co/pricing.html): the free tier and the Full Access tier, what each includes, and the current opening rate.
 - [AI disclosure](https://bptrade.co/ai.html): how AI is used across the site, and what is verified by hand.
+- [Support](https://bptrade.co/support.html): the support form, the only way to contact us; replies within 2 business days.
 
 ## Optional
 
