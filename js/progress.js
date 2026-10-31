@@ -10,7 +10,7 @@ const STORAGE_KEY = 'blueprint_progress';
 // Completion and position are separate: `completed` is what the reader has
 // marked done (and drives the percentage); `lastVisited` is where they have
 // got to (and drives "Continue"). Marking or unmarking never moves position.
-const SCHEMA_VERSION = 3;
+const SCHEMA_VERSION = 4;
 
 // MIGRATIONS[n] maps old module ids to new ones, applied when stored
 // progress is upgraded to schema version n. A string value is the new id;
@@ -60,6 +60,12 @@ const MIGRATIONS = {
     '14-reading-a-probability': '21-reading-a-probability',
     '15-building-your-own-playbook': '23-building-your-own-playbook',
     '16-what-i-got-wrong': '24-what-i-got-wrong',
+  },
+  // v4: two modules renamed (D59, D60). Ids chain, so a v2 store's
+  // 16-what-i-got-wrong lands on 24-how-ideas-fail-a-test.
+  4: {
+    '03-the-instrument-mnq-mechanics': '03-the-instrument-futures-mechanics',
+    '24-what-i-got-wrong': '24-how-ideas-fail-a-test',
   },
 };
 

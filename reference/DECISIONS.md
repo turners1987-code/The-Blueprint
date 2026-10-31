@@ -52,6 +52,7 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D5 — R1's tested result never appears on a page. CLOSED: no.
 - D7 — No public copy of the Hypothesis Register. CLOSED: no.
 - D59 — Voice: the reader is the trader; no author voice (rule in BLUEPRINT_DOC §7). Scope: a framework for intraday traders, built and illustrated on futures; MNQ is the illustration instrument; stocks and options are later tracks (rule in BLUEPRINT_DOC §7).
+- D60 — Module 24 is 'How Ideas Fail A Test': popular ideas and the failure modes a test exposes (no null, stop inside noise, unstable halves, touch rate mistaken for expectancy); no register results quoted; the reader runs the test on their own record. Module 03 id renamed to 03-the-instrument-futures-mechanics.
 
 ### Module 02 (decided 2026-10-31)
 - D29 — Kill switch: fixed 2R daily, no override; set at broker or prop-firm level; never raised intraday; no size-down ladders; breaks are hygiene, not rules.

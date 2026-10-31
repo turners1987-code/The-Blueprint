@@ -37,10 +37,10 @@
     ]
   },
   {
-    "id": "03-the-instrument-mnq-mechanics",
+    "id": "03-the-instrument-futures-mechanics",
     "number": "03",
     "title": "The Instrument: Futures Mechanics",
-    "slug": "the-instrument-mnq-mechanics",
+    "slug": "the-instrument-futures-mechanics",
     "part": "rules",
     "summary": "How futures contracts, ticks and sessions work and what each tick is worth, with MNQ as the worked example.",
     "status": "planned",
@@ -59,7 +59,7 @@
     "status": "planned",
     "tier": "paid",
     "prereq": [
-      "03-the-instrument-mnq-mechanics"
+      "03-the-instrument-futures-mechanics"
     ]
   },
   {
@@ -312,12 +312,12 @@
     ]
   },
   {
-    "id": "24-what-i-got-wrong",
+    "id": "24-how-ideas-fail-a-test",
     "number": "24",
-    "title": "What I Got Wrong",
-    "slug": "what-i-got-wrong",
+    "title": "How Ideas Fail A Test",
+    "slug": "how-ideas-fail-a-test",
     "part": "capstone",
-    "summary": "Things that were tried and dropped, and why.",
+    "summary": "Popular trading ideas, the failure modes a proper test exposes, and how to run that test on your own record.",
     "status": "planned",
     "tier": "paid",
     "prereq": [

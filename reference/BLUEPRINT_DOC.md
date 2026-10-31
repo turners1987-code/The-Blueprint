@@ -1,6 +1,6 @@
 # BLUEPRINT_DOC — The Blueprint eLearning Platform
 
-Version 4.3 · 2026-10-31
+Version 4.4 · 2026-10-31
 Replaces every earlier BLUEPRINT_DOC. Where an older copy disagrees with this file,
 this file wins. Delete the old copies rather than keeping two sources.
 
@@ -205,7 +205,7 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | 00 | Welcome & Orientation | Start | free | published |
 | 01 | How We Know What We Know | Start | free | published |
 | 02 | The Hard Rules | Rules Before Reps | free | planned |
-| 03 | The Instrument: MNQ Mechanics | Rules Before Reps | free | planned |
+| 03 | The Instrument: Futures Mechanics | Rules Before Reps | free | planned |
 | 04 | Who Is Forced To Trade | Why Price Moves | paid | planned |
 | 05 | The Auction | Why Price Moves | paid | planned |
 | 06 | What Counts As A Level | Why Price Moves | paid | planned |
@@ -226,13 +226,13 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | 21 | Reading A Probability | Evidence | paid | planned |
 | 22 | How To Test An Edge | Evidence | paid | planned |
 | 23 | Building Your Own PlayBook | Capstone | paid | planned |
-| 24 | What I Got Wrong | Capstone | paid | planned |
+| 24 | How Ideas Fail A Test | Capstone | paid | planned |
 
 Four are written: 00, 01, 18 (Journaling & Review, file modules/12-journaling.html) and 19 (Toothbrush Therapy, file modules/13-toothbrush-therapy.html). Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
 
 Also published outside the numbered course: Dial In, the card deck, the glossary.
 
-Decided 2026-10-31 (reference/DECISIONS.md D1–D4): rules first and free; mechanics (03), order flow (07) and the trader's mind (20) return in narrow, framework-only form; commodity basics go to a reading-list page. Forced flow (04) is taught as concepts only, with no forced-flow statistic until one passes Gate 1. ORB and Second Chance are retired and appear only in What I Got Wrong (and as a glossary term).
+Decided 2026-10-31 (reference/DECISIONS.md D1–D4): rules first and free; mechanics (03), order flow (07) and the trader's mind (20) return in narrow, framework-only form; commodity basics go to a reading-list page. Forced flow (04) is taught as concepts only, with no forced-flow statistic until one passes Gate 1. ORB and Second Chance appear only as examples in Module 24, How Ideas Fail A Test, and as glossary terms.
 
 Each module is drafted from its content map (G:\My Drive\Blueprint Review\content-maps\NN-*.md), METHODOLOGY_v2, TAXONOMY, MODULE_STANDARD and DECISIONS. A module that needs an undecided 'real choice' in DECISIONS.md stops and asks.
 

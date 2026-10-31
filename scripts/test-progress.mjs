@@ -149,15 +149,32 @@ test('v2 progress migrates to v3 ids: completion and lastVisited survive', () =>
     lastVisited: '13-toothbrush-therapy',
   }));
   const data = Progress.load();
-  assert.equal(data.version, 3);
+  assert.equal(data.version, 4);
   assert.deepEqual(data.completed, ['00-welcome', '18-journaling', '19-toothbrush-therapy', '02-the-hard-rules']);
   assert.equal(data.lastVisited, '19-toothbrush-therapy');
-  assert.equal(JSON.parse(store.get('blueprint_progress')).version, 3, 'migrated data is written back');
+  assert.equal(JSON.parse(store.get('blueprint_progress')).version, 4, 'migrated data is written back');
 });
 
 test('v1 ids chain through v2 then v3', () => {
   store.set('blueprint_progress', JSON.stringify({ version: 1, completed: ['16-journaling', '08-range-rejection'] }));
   assert.deepEqual(Progress.load().completed, ['18-journaling', '11-range-rejection']);
+});
+
+test('v3 progress migrates to v4 ids: renamed modules 03 and 24 survive', () => {
+  store.set('blueprint_progress', JSON.stringify({
+    version: 3,
+    completed: ['00-welcome', '24-what-i-got-wrong'],
+    lastVisited: '03-the-instrument-mnq-mechanics',
+  }));
+  const data = Progress.load();
+  assert.equal(data.version, 4);
+  assert.deepEqual(data.completed, ['00-welcome', '24-how-ideas-fail-a-test']);
+  assert.equal(data.lastVisited, '03-the-instrument-futures-mechanics');
+});
+
+test('a v2 16-what-i-got-wrong chains through v3 to 24-how-ideas-fail-a-test', () => {
+  store.set('blueprint_progress', JSON.stringify({ version: 2, completed: ['16-what-i-got-wrong'] }));
+  assert.deepEqual(Progress.load().completed, ['24-how-ideas-fail-a-test']);
 });
 
 console.log('─'.repeat(40));
