@@ -350,3 +350,13 @@ Deferred: downloads page; privacy policy payments section (+ sw.js/llms.txt list
 - When to retire GitHub Pages as the fallback.
 - Four open items in `TAXONOMY.md`: Pause N Go's tested definition, the No Setup re-tag audit,
   the PWH/PWL session convention, the Stacked Imbalance ratio.
+
+---
+
+## 12. Content pipeline and model use (updated 2026-10-31)
+
+- **Corpus read complete (10/29–10/31).** Every trading and market file Shane collected (the Crawl library, the Market Research digests, his own project docs and the SMB blog) was read by GLM and turned into 33,590 concept cards. An independent sample check found the numbers 93.6% accurate and none invented outright; value scores, model commentary and false conflicts were then fixed by script, with every change logged.
+- **Consolidated for writing.** Value-3 cards are kept whole per module (`consolidation\core\`). Value-2 cards are digested per module with every claim traced to its cards (`consolidation\digest\`, plain reading copies in `digest-read\`). Cross-cuts: `conflicts.md`, `statistics.md`, `options-layer.md`. Everything lives in `G:\My Drive\Blueprint Review\`; the handoff is the project doc `claude/HANDOFF_step10_consolidation.md`.
+- **Next.** Step 10 content maps per module (Fable), then gap-fill crawls, then syllabus v3 with Shane's decisions, then module writing. Syllabus v2 (25 modules, 00–24) is the working order; section 6 and `data/modules.json` change only once v3 is decided. The drafted Module 02/03 patches get renumbered to the new order before they are applied.
+- **Model use.** Fable for judgment only: consolidation, syllabus, module writing. Sonnet for supervision, checking and all scheduled tasks (moved 2026-10-30). GLM (`claude-glm`, `extract.py`, `digest.py`) for bulk reading. GLM shares one quota with the crawl box, so box GLM jobs pause during large Blueprint runs.
+- **Instruction format.** Every Claude Code instruction to Shane: cmd → folder → `claude` or `claude-glm` → inputs → action items → one time estimate → the prompt last.
