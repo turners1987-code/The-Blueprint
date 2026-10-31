@@ -89,7 +89,7 @@ const init = () => {
       if (state === 'next') {
         const link = document.createElement('a');
         link.className = 'btn btn--primary btn--lg';
-        link.href = `${next.number}-${next.slug}.html`;
+        link.href = next.file || `${next.number}-${next.slug}.html`;
         link.textContent = `Next: ${next.title} →`;
         zone.replaceChildren(note, link, undo);
         if (moveFocus) link.focus({ preventScroll: true });
