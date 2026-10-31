@@ -54,5 +54,5 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D47 — No give-back or stop-after-win rule. Loss cap only.
 
 ## Open findings
-- NT8's built-in risk/loss limits apply to sim accounts only. The $400 kill switch must be enforced at broker or prop-firm level; the nt8-onboarding crawl must confirm how. Blocks Module 02's enforcement paragraph (D29).
+- Resolved 2026-10-31 (crawl daily-loss-lock): NT8 has no daily dollar loss limit; its Risk window is simulation-only. The 2R kill switch is set at the broker account level (NinjaTrader Brokerage Risk Settings or Tradovate Daily Loss, each with its lock). On Rithmic accounts the provider configures risk, so 2R is a written rule. Taught in Module 02.
 - Syllabus v3 = the v2 25-module order; no merges or renumbers; a later, unscheduled options module.
