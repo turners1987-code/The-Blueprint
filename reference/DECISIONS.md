@@ -62,6 +62,8 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D46 — Footprint settings: ratio 5 / min delta 15 taught as a working default chosen for screen clarity; the reader derives their own from their own data.
 - D49 — Aggression sub-forms, recorded on every trade that uses the confirmation: big-orders = passive size that holds and prints at the level; failing-delta = delta declining on approach; delta-divergence = price makes a new extreme on approach and delta does not; two-bar-exhaustion = a large opposing-delta bar closing near its extreme, then the signal bar's break.
 - D52 — Options are a later, unscheduled module; strategy pages borrow nothing from it.
+- D61 — Session mechanics (Module 17): every marked zone carries two alerts (near edge and far edge); nothing new from 15:55 ET and an entry after 15:55 is tagged Broke Rule; flat and platform shut at 16:00; after the mental close, no charts until the next pre-market routine.
+- D62 — Readiness and the sheet (Module 16): a completed pre-market sheet clears the reader to trade; an incomplete sheet at 09:25 means that session is watched, not traded; the readiness score is data only.
 
 ### Still open
 - none.
