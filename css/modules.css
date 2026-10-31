@@ -99,6 +99,16 @@
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: var(--space-sm);
 }
 
+/* Spec table: contract figures side by side */
+.spec-table-wrap { overflow-x: auto; margin: var(--space-lg) 0; }
+.spec-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.spec-table th, .spec-table td {
+  padding: var(--space-sm) var(--space-md); border-bottom: 1px solid var(--border);
+  text-align: left; color: var(--text-secondary);
+}
+.spec-table th { color: var(--text-primary); font-family: var(--font-display); letter-spacing: 0.04em; }
+.spec-table td.num { font-family: var(--font-mono); white-space: nowrap; }
+
 /* Apply This Now */
 .apply-now {
   background: linear-gradient(135deg, var(--bg-card), rgba(56,217,255,0.04));

@@ -43,7 +43,7 @@
     "slug": "the-instrument-futures-mechanics",
     "part": "rules",
     "summary": "How futures contracts, ticks and sessions work and what each tick is worth, with MNQ as the worked example.",
-    "status": "planned",
+    "status": "published",
     "tier": "free",
     "prereq": [
       "02-the-hard-rules"
