@@ -50,6 +50,7 @@ The two gates in `METHODOLOGY_v2.md` remain an internal standard and a teaching 
 | `reference/CAPTURE_CONTRACT.md` | The NT8 capture addon spec (v1.7); the addon itself is built elsewhere |
 | `reference/setup-definitions.txt` | Shane's own setup wording, verbatim from TurtleMetrics |
 | `reference/review-questions.txt` | The six-question discipline checklist |
+| `reference/MODULE_STANDARD.md` | How every lesson page is built — spine, devices, voice, page checklist |
 | `reference/TradingStats_Source_of_Truth.txt` | NQ base rates, 3,163 sessions |
 | `reference/golden-samples/` | Sample capture records for the NT8 contract |
 | `reference/DECISIONS.md` | Step-12 decisions (D1–D57) that lessons must follow |
@@ -364,6 +365,7 @@ Deferred: downloads page; privacy policy payments section (+ sw.js/llms.txt list
 
 - **Corpus read complete (10/29–10/31).** Every trading and market file Shane collected (the Crawl library, the Market Research digests, his own project docs and the SMB blog) was read by GLM and turned into 33,590 concept cards. An independent sample check found the numbers 93.6% accurate and none invented outright; value scores, model commentary and false conflicts were then fixed by script, with every change logged.
 - **Consolidated for writing.** Value-3 cards are kept whole per module (`consolidation\core\`). Value-2 cards are digested per module with every claim traced to its cards (`consolidation\digest\`, plain reading copies in `digest-read\`). Cross-cuts: `conflicts.md`, `statistics.md`, `options-layer.md`. Everything lives in `G:\My Drive\Blueprint Review\`; the handoff is the project doc `claude/HANDOFF_step10_consolidation.md`.
-- **Next.** Step 10 content maps per module (Fable), then gap-fill crawls, then syllabus v3 with Shane's decisions, then module writing. Syllabus v2 (25 modules, 00–24) is the working order; section 6 and `data/modules.json` change only once v3 is decided. The drafted Module 02/03 patches get renumbered to the new order before they are applied.
-- **Model use.** Fable for judgment only: consolidation, syllabus, module writing. Sonnet for supervision, checking and all scheduled tasks (moved 2026-10-30). GLM (`claude-glm`, `extract.py`, `digest.py`) for bulk reading. GLM shares one quota with the crawl box, so box GLM jobs pause during large Blueprint runs.
-- **Instruction format.** Every Claude Code instruction to Shane: cmd → folder → `claude` or `claude-glm` → inputs → action items → one time estimate → the prompt last.
+- **Step 10 and 12 done (2026-10-31).** Content maps for all 25 modules plus OPTIONS and NT8-Setup, and SUMMARY.md (decision list, gap list, syllabus v3, statistics inventory, coverage), are in `G:\My Drive\Blueprint Review\content-maps\`. Syllabus v3 is the v2 order, now live in `data/modules.json` and section 6. Decisions are in `reference/DECISIONS.md`.
+- **Next.** Step 11 gap-fill crawls on the GLM crawl box (nt8-onboarding first: it blocks Module 02's kill-switch enforcement), and module writing in the section 8 order.
+- **Model use.** Opus for judgment and module drafting. Sonnet for repo edits, supervision, checking and scheduled tasks. GLM (`claude-glm`, `extract.py`, `digest.py`) for bulk reading; it shares one quota with the crawl box. Fable is not used for this project from 2026-10-31.
+- **Instruction format.** Every Claude Code instruction to Shane: /clear first or same session → model → inputs → action items → one time estimate → the prompt last.
