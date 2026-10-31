@@ -44,8 +44,29 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D55 — Source facts date-stamped and crawled from primary sources.
 - D57 — Welcome: self-diagnosis, no tracks, no results to audit, no edge claimed, no mentoring promised.
 
-## Real choices — decided at drafting time of the module named (not yet decided; a lesson that needs one STOPS and asks)
-- D6 (08, 14) grade-to-size table · D8 (11, 13) Pause N Go definition · D11 (10–14) breakeven/trail · D15 (13, 14) re-entry caps · D22 (07, 13) order flow trigger vs confirm · D23 (04, 06) dealer levels · D24 (12, 24) R11/R10 retests · D27 (11) Range Rejection entry · D33 (04, 09) calendar/OpEx · D39 (14) opening-minutes rule · D40 (03, 06) OPEN #8 ON window · D42 (16, 18) journal/routine fields · D46 (07) footprint settings · D49 (07, 13) sub-form definitions · D52 (OPTIONS) options module scheduling
+## Real choices
+
+### Decided 2026-10-31 by recommendation
+- D6 — Grade-to-size, one table, set in Module 14 and never varied: A+ and A trade base R; B trades half; C is no trade.
+- D8 — Pause N Go (OPEN #2): PAUSE = after the first touch of a level, at least two consecutive 1-minute bars hold inside the zone with no 1-minute close through its far edge. RESUMPTION = a 1-minute close beyond the pause's extreme in the direction of the read; entry on that close; stop behind the far edge. The session block (early / mid / late) is recorded on every trade; no separate definitions until counted.
+- D11 — Automation off; the breakeven key unbound. The one planned scale (half at 2R, runner to the structural level) is allowed; any other breakeven or trail is Too Early.
+- D15 — A re-entry is the same setup plus a fresh trigger; no count cap; the kill switch is the cap.
+- D22 — Order-flow events confirm, never trigger: a recorded sub-form plus a price event (a close or a structure break). METHODOLOGY_v2's Tier 3 "does not have to be a bar close" sentence is superseded by TAXONOMY §3.
+- D23 — Dealer and gamma levels are not locations, targets or if-clauses; the regime may weight conviction only (Module 04, concepts).
+- D24 — R10/R11 retests are register items; nothing about them appears on a page.
+- D27 — No Range Rejection entry is published; the setup is taught as a context read. Entry candidates are register items.
+- D33 — Calendar and OpEx effects are range and activity context for idea generation, never direction; no figure on a page.
+- D39 — No clock ban on the opening minutes; wider early structure means smaller size; no figure quoted.
+- D40 — Keep the 16:00 ET day boundary and the current ON window; cite no overnight statistics for on-* levels (OPEN #8 stays internal).
+- D42 — Required routine fields: a pre-market readiness score 0–2 (2 curious, 1 neutral, 0 needing something from the market), recorded on the sheet as data the journal can correlate — not a gate; a completed sheet clears the reader to trade. Reviews are held on a fixed schedule, never triggered by a result. Not adopted: a pre-entry state line; hiding running P&L.
+- D46 — Footprint settings: ratio 5 / min delta 15 taught as a working default chosen for screen clarity; the reader derives their own from their own data.
+- D49 — Aggression sub-forms, recorded on every trade that uses the confirmation: big-orders = passive size that holds and prints at the level; failing-delta = delta declining on approach; delta-divergence = price makes a new extreme on approach and delta does not; two-bar-exhaustion = a large opposing-delta bar closing near its extreme, then the signal bar's break.
+- D52 — Options are a later, unscheduled module; strategy pages borrow nothing from it.
+- D61 — Session mechanics (Module 17): every marked zone carries two alerts (near edge and far edge); nothing new from 15:55 ET and an entry after 15:55 is tagged Broke Rule; flat and platform shut at 16:00; after the mental close, no charts until the next pre-market routine.
+- D62 — Readiness and the sheet (Module 16): a completed pre-market sheet clears the reader to trade; an incomplete sheet at 09:25 means that session is watched, not traded; the readiness score is data only.
+
+### Still open
+- none.
 
 ### Closed by the no-validation-status rule (2026-10-31)
 - D58 — No validation status on the site (rule text in BLUEPRINT_DOC §7). Evidence vocabulary and gates are taught as tools for the reader's own record.

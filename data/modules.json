@@ -69,7 +69,7 @@
     "slug": "the-auction",
     "part": "why",
     "summary": "How price moves between buyers and sellers, and what acceptance and rejection look like.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "04-who-is-forced-to-trade"
@@ -199,7 +199,7 @@
     "slug": "writing-the-plan",
     "part": "blueprint",
     "summary": "Turning an idea into a written plan before the session opens.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "14-trade-construction"
@@ -212,7 +212,7 @@
     "slug": "the-pre-market-routine",
     "part": "process",
     "summary": "What happens before the open, finished by 09:25.",
-    "status": "planned",
+    "status": "published",
     "tier": "free",
     "prereq": [
       "15-writing-the-plan"
@@ -225,7 +225,7 @@
     "slug": "the-session-and-the-close",
     "part": "process",
     "summary": "Alerts at levels during the session, and the end-of-day review within an hour of the close.",
-    "status": "planned",
+    "status": "published",
     "tier": "free",
     "prereq": [
       "16-the-pre-market-routine"
@@ -266,7 +266,7 @@
     "slug": "the-traders-mind",
     "part": "process",
     "summary": "Where each hard rule came from, the reset as a rehearsed skill, and the re-entry loop after a first win.",
-    "status": "planned",
+    "status": "published",
     "tier": "free",
     "prereq": [
       "19-toothbrush-therapy"

@@ -7,7 +7,7 @@
    cache is deleted when the new worker activates.
    ============================================================ */
 
-const CACHE_VERSION = 'v29';
+const CACHE_VERSION = 'v31';
 const CACHE_NAME = `blueprint-${CACHE_VERSION}`;
 
 // App shell: paths are relative to this file (the site root).
@@ -63,7 +63,7 @@ const modulePages = async (cache) => {
   const list = await res.json();
   return list
     .filter(m => m.status === 'published' || m.status === 'drafting')
-    .map(m => `modules/${m.number}-${m.slug}.html`);
+    .map(m => `modules/${m.file || `${m.number}-${m.slug}.html`}`);
 };
 
 self.addEventListener('install', (event) => {

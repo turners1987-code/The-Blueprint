@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Auction — The Blueprint</title>
+  <meta name="description" content="Module 05 of The Blueprint: reading the auction. The volume profile, value, the POC and VAH/VAL; balance and imbalance; high and low volume nodes; the open relative to prior value; poor highs and lows as targets; and open types as vocabulary, never a call for the day.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="The Auction — The Blueprint">
+  <meta property="og:description" content="Module 05 of The Blueprint: reading the auction. The volume profile, value, the POC and VAH/VAL; balance and imbalance; high and low volume nodes; the open relative to prior value; poor highs and lows as targets; and open types as vocabulary, never a call for the day.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/modules/05-the-auction.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="module-page" id="main-content" tabindex="-1" data-gate="tier">
+
+    <!-- MODULE HEADER -->
+    <header class="module-header">
+      <div class="container">
+        <div class="module-meta">
+          <span class="module-number">MODULE 05</span>
+          <span class="badge badge--cyan">Why Price Moves</span>
+        </div>
+        <h1>The <span class="text-gold">Auction</span></h1>
+        <p class="lead mt-md">The volume profile never tells you which way price will go; it tells you where the market has already agreed on a price, and that is where price travels to and slows down, whichever way it is heading.</p>
+      </div>
+    </header>
+
+    <!-- MODULE BODY -->
+    <div class="module-body">
+      <div class="container">
+        <nav class="module-toc" data-module-toc aria-label="On this page"></nav>
+
+        <div class="lesson-content">
+
+
+          <h2>Twelve Lines And No Plan</h2>
+          <p>You know the chart. Yesterday's high and low, a value area, a POC, two or three nodes from last week, a line where price "reacted" on Tuesday. Price comes into one of them and you don't know whether to expect a stop, a turn or a slice straight through. So you wait for the bar to tell you, and by the time it does, the trade has gone without you. Or you decide the open "looks strong", take it, and spend the morning watching price rotate around the middle of yesterday's range.</p>
+          <p>The problem isn't too many lines. It is lines with no job. This page reads the volume profile as an auction: where business was done, where it wasn't, and what that means for where price goes next and how fast. Every item below ends in the same place: a line on your plan that names a target or a regime, and never a direction.</p>
+          <p>The hierarchy this course uses everywhere is <strong>idea → setup (location + read) → trigger → construction (level → stop → risk → size → entry)</strong>. The auction belongs to the setup: it supplies locations and targets, and it informs the read. It is never the trigger. There are six parts, mechanical first: the profile and value, balance and imbalance, nodes, the open against value, unfinished business, and last, open types and the wish to know the day.</p>
+
+          <h2>The Profile, Value And The POC</h2>
+          <p>A price chart shows you price over time. A volume profile turns the chart on its side and shows you how much traded at each price. Wide sections are prices where the market did a lot of business. Thin sections are prices it passed through quickly.</p>
+          <div class="definition-box">
+            <div class="definition-term">Volume Profile</div>
+            <div class="definition-text">A horizontal histogram of the volume traded at each price over a set period, usually one session. Wide rows mark prices the market accepted; thin rows mark prices it moved through or rejected.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Point Of Control (POC)</div>
+            <div class="definition-text">The single price with the most volume traded in the period: the price the session agreed on most. Built from volume it is the VPOC. The prior session's VPOC is the level PD VPOC. On your plan it is a location and a target, never a trigger.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Value Area</div>
+            <div class="definition-text">The band of prices around the POC that holds a set share of the session's volume, by convention about 70%. It is where the session did most of its business.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">VAH / VAL (Value Area High / Low)</div>
+            <div class="definition-text">The upper and lower edges of the value area. The prior session's edges are the levels PD VAH and PD VAL.</div>
+          </div>
+          <p>The market is a two-way auction. Its job is to find a price at which both sides will keep trading. Price advertises; value is where the advertisement was taken up, with time and volume. A price that trades once and is left is a price the market tried and refused. A price where volume builds is a price the market agreed to.</p>
+          <div class="definition-box">
+            <div class="definition-term">Acceptance</div>
+            <div class="definition-text">Price building time and volume at a new price instead of passing through it. Acceptance moves value; a quick visit does not. The mechanical acceptance test this course uses at a level is taught in Module 10.</div>
+          </div>
+          <p><strong>Two things decide what your value area is.</strong> The session it is built from, and how it is built. In this course the prior-day profile is built from the cash session, 09:30 to 16:00 ET (Module 03 explains the 16:00 boundary). And platforms build value two ways: from volume at each price, or from time at each price (TPO, the letters of a Market Profile chart). The two can give different edges on the same day. Neither is wrong. Mixing them is.</p>
+          <p><strong>The rule:</strong> mark PD VAH, PD VAL and PD VPOC from the 09:30 to 16:00 ET profile, built one way, and write the session and the construction on the level line.</p>
+          <p><strong>Getting it wrong</strong> looks like a value area from a full-session profile on Monday and an RTH one on Tuesday, or a VAH from a TPO chart and a POC from a volume chart on the same plan. What it reveals: the levels came from whatever the screen showed, not from a definition, so you can't tell a level that failed from a level that was drawn somewhere else. <strong>The fix:</strong> save one profile template (RTH, 09:30 to 16:00 ET, your chosen construction) and draw prior-day levels only from it. Every level line on the plan carries its source in brackets: "PD VAH 21,432 (RTH, volume)".</p>
+
+          <h2>Balance And Imbalance</h2>
+          <p>An auction does one of two things. Either both sides keep trading around a price they agree on, or one side is in charge and price moves to find the other.</p>
+          <div class="definition-box">
+            <div class="definition-term">Balance</div>
+            <div class="definition-text">An auction rotating around an agreed price, inside edges both sides defend. Value areas overlap from one session to the next. The profile is wide in the middle and thin at the edges.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Imbalance</div>
+            <div class="definition-text">An auction in which one side is in charge and price moves to find new business. Value migrates: each session's value area sits beyond the last one, with little or no overlap.</div>
+          </div>
+          <p>The two need different reads. In balance the middle is where both sides agree, so there is nothing to be had there: a position taken at the POC of a balanced auction has agreement on both sides of it. The edges are where something can happen. In imbalance the edges of the old balance are behind price, and what matters is whether value follows it. Price that leaves a balance and builds no volume at the new prices has not been accepted there. Price that leaves and builds value beyond the old edge has.</p>
+          <p>Value migration is the plainest read the profile gives you. Value areas stepping higher session after session is acceptance at higher prices. Value areas that overlap are balance, whatever the candles looked like. "Choppy" is usually balance you didn't name.</p>
+          <p><strong>The rule:</strong> name the regime before you name a trade, in one line, with the price that would end it. "Balance, 21,340 to 21,432; ends on acceptance outside either edge." Or: "Imbalance up, value higher three sessions; ends on acceptance back inside yesterday's value."</p>
+          <p><strong>Getting it wrong</strong> looks like trading the middle of a balance, or fading every new high in an auction whose value has moved up three sessions running. What it reveals: the trade was read off the last few bars, and the regime they sat in was never named. <strong>The fix:</strong> the regime line is the first line under your levels on the plan. Before any entry, read it back. If you can't say which regime the trade sits in, or the line doesn't exist, the trade is not taken.</p>
+
+          <h2>HVN And LVN: Where Price Slows, Where It Runs</h2>
+          <p>Zoom out from one session to a profile of several, and the same shapes repeat at a larger scale: wide sections where many sessions did business, and thin gaps between them.</p>
+          <div class="definition-box">
+            <div class="definition-term">High Volume Node (HVN)</div>
+            <div class="definition-text">A wide section of a profile, where a lot of volume traded over a range of prices. It is a balance inside the profile: both sides did business there, and price tends to slow down and rotate when it returns.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Low Volume Node (LVN)</div>
+            <div class="definition-text">A thin section of a profile, where little volume traded. Price moved through it quickly the first time; with no business to hold it, it tends to move through quickly again, toward the next HVN.</div>
+          </div>
+          <p>Read an HVN as a crowd and an LVN as an empty corridor. Price that enters a corridor tends to cross it. Price that reaches a crowd tends to slow down and push through it, if at all, only with time. That gives you the path between any entry and any target: if there is an HVN in the way, price has to work through agreement to get there. If the way is an LVN, there is nothing to stop it except the next node.</p>
+          <p><strong>The rule:</strong> for every target you write, list the nodes between the entry and the target. An HVN in the path is where price is expected to slow; the far side of an LVN is where it is expected to arrive. If price is accepted beyond the edge of an HVN, the next HVN across the LVN becomes the next target.</p>
+          <p><strong>Getting it wrong</strong> looks like a target set three nodes away, with two HVNs in between that the plan never mentioned, or a trade held in the middle of an LVN waiting for price to "settle" there. What it reveals: the profile was read for its lines and not for its shape, so the path was never part of the plan. <strong>The fix:</strong> next to each target on the plan, write the path in one short phrase: "via LVN 21,300 to 21,322" or "through HVN 21,380 to 21,396". A target with no path written beside it is not a target yet. Which nodes are pre-marked locations in their own right, and on which timeframe, is Module 06.</p>
+
+          <h2>The Open Relative To Prior Value</h2>
+          <p>At 09:30 the cash session opens somewhere against yesterday's auction. Where it opens decides which reference levels are near, which are in play, and which are far away. It does not decide which way price goes.</p>
+          <p>There are four places the open can sit. The first split is the prior day's range: an RTH open outside the PD High or PD Low is a gap, and in this course nothing else is called a gap. Inside the range, the second split is prior value.</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">The open</th><th scope="col">Where it sits</th><th scope="col">Targets in play</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>In value</td><td>Between PD VAL and PD VAH</td><td>PD VPOC; then the value edge on each side</td></tr>
+                <tr><td>Above value</td><td>Inside the PD range, above PD VAH</td><td>PD VAH below; PD High above</td></tr>
+                <tr><td>Below value</td><td>Inside the PD range, below PD VAL</td><td>PD VAL above; PD Low below</td></tr>
+                <tr><td>Gap</td><td>Outside the PD range</td><td>The PD range edge (Module 12)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>An open in value starts the day inside yesterday's agreement: both sides already did business here, and the POC and the edges are all within reach. An open above or below value but inside the range starts outside agreement, with the nearest value edge on one side and the range extreme on the other. A gap starts outside the whole of yesterday's auction; its target is the PD range edge, and Module 12 covers it.</p>
+          <p>A target is a place, not a reason. How often price reaches a level after the open says nothing about whether a trade toward it makes money. That depends on where the entry and the stop sit, and a well-visited target still loses if the entry is in the wrong place.</p>
+          <p><strong>The rule:</strong> at 09:30, write one word for where the open sits (in value, above value, below value, gap) and the targets it puts in play. These are targets only. They are never a direction and never a reason to enter.</p>
+          <p><strong>Getting it wrong</strong> looks like "opened in value, so it's going to the POC," followed by an entry from the middle of nowhere toward it. What it reveals: a target was used as a trigger, and the trade skipped the location, the read and the trigger it needed. <strong>The fix:</strong> the open line on your plan has exactly two fields, the location word and the targets. There is no direction field. A trade toward one of those targets still needs its own level, read and trigger, written on its own line.</p>
+
+          <h2>Unfinished Business: Targets, Not Triggers</h2>
+          <p>Every auction ends at an extreme. How it ends there tells you whether it finished.</p>
+          <div class="definition-box">
+            <div class="definition-term">Excess</div>
+            <div class="definition-text">A tail of thin, quickly-traded prices at a session's high or low: price reached the extreme, found the other side waiting, and left fast. Excess marks an auction that finished at that end.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Poor High / Poor Low</div>
+            <div class="definition-text">A session extreme with no excess: price stopped flat, often at the same price in two or more 30-minute periods, and nothing traded beyond it. The auction stopped there without being refused.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Unfinished Business</div>
+            <div class="definition-text">The location name for a poor high or poor low carried onto the next session's plan. It is a target and a reason to hold toward a level; it is never an entry on its own.</div>
+          </div>
+          <p>A high with excess is a high the market probed and refused. A poor high is a high the market simply stopped at, with buyers still present and no seller ever shown. That is why it goes on your plan: it is a price the auction left open, and a natural place for a move that is already underway to reach.</p>
+          <p><strong>The rule:</strong> poor highs and lows go on the target line of the plan, marked "UB". They are where a trade you already have can aim, or where a runner can be held to. They are never the reason to open one.</p>
+          <p><strong>Getting it wrong</strong> looks like buying the open because "that poor high has to get repaired", or fading the move after price takes it out because "the business is done". What it reveals: the target became the thesis, and a story about the level replaced a trade at one. <strong>The fix:</strong> UB lines are written in the target column only. If the only line on your plan that supports an entry is a UB line, the entry has no location, and it is not taken.</p>
+
+          <h2>Open Types, And The Wish To Know The Day</h2>
+          <p>Traders have names for what the first minutes of the session do. They are useful words. Each describes something that has already happened.</p>
+          <div class="definition-box">
+            <div class="definition-term">Open Type</div>
+            <div class="definition-text">A name for how price behaved in the first minutes after the 09:30 open. It describes those minutes only. It is vocabulary, never a call for the rest of the day.</div>
+          </div>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Open type</th><th scope="col">What the first minutes did</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Open drive</td><td>Price left the opening price at once, in one direction, and did not trade back to it.</td></tr>
+                <tr><td>Open test drive</td><td>Price first probed a nearby reference in one direction, turned, and then drove the other way, past the open.</td></tr>
+                <tr><td>Open rejection reverse</td><td>Price moved away in one direction without drive, met the other side, and rotated back through the open.</td></tr>
+                <tr><td>Open auction</td><td>Price rotated around the opening price, trading both sides of it.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The pull here isn't technical. At 09:35 you want to know what kind of day it is, because knowing would make every decision after it easy. An open drive feels like a trend day. An open auction feels like a range. The label arrives early, it is satisfying, and it carries nothing about the next six hours. Day-type calls ("trend day", "range day", "it's a balance day") sit in the same place: names for what a session turned out to be, used as if they were forecasts.</p>
+          <p><strong>The rule:</strong> open types and day types are words for what happened. Neither goes on your plan as a call for the day. Your plan carries an idea instead: a thesis, its invalidation and your conviction, at a named level.</p>
+          <p><strong>Getting it wrong</strong> looks like "open drive, so trend day, so hold everything", or "open auction, so fade both edges all day". What it reveals: the need for certainty was met with a label, and the label then did the trading. <strong>The fix:</strong> your plan has no day-type field. If a day-type word appears anywhere on it, strike it out and write in its place the level and behaviour that would prove the idea wrong. If you can't name one, the line was a wish, not an idea.</p>
+
+          <div class="key-concept">
+            <p><strong>The auction tells you where price is likely to travel and where it is likely to slow, never which way it will go.</strong> Value, nodes, the open and unfinished business fill your target line and your regime line; the trade still needs its own location, read and trigger.</p>
+          </div>
+
+          <h2>Worked Case: Reading One Profile Three Ways</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A composite prior-day MNQ profile, built to show the read. It belongs to no one, and it stops before any trade: there is no entry, no stop and no outcome. Prices are index points.</p>
+            <p><strong>The profile.</strong> The prior RTH session, 09:30 to 16:00 ET, built from volume:</p>
+            <div class="spec-table-wrap">
+              <table class="spec-table">
+                <thead>
+                  <tr><th scope="col">Price</th><th scope="col">What the profile shows</th><th scope="col">Name</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="num">21,470 to 21,480</td><td>Thin. The high, 21,480.00, was touched in two separate 30-minute periods; nothing traded above it.</td><td>PD High; poor high (UB)</td></tr>
+                  <tr><td class="num">21,432 to 21,470</td><td>Moderate volume</td><td>Above value</td></tr>
+                  <tr><td class="num">21,432.00</td><td>Upper edge of value</td><td>PD VAH</td></tr>
+                  <tr><td class="num">21,380 to 21,396</td><td>The widest part of the profile; the most volume at 21,388.00</td><td>HVN; PD VPOC 21,388.00</td></tr>
+                  <tr><td class="num">21,340.00</td><td>Lower edge of value</td><td>PD VAL</td></tr>
+                  <tr><td class="num">21,300 to 21,322</td><td>Thin; price crossed it twice, quickly</td><td>LVN</td></tr>
+                  <tr><td class="num">21,276 to 21,296</td><td>A second, smaller wide section</td><td>HVN</td></tr>
+                  <tr><td class="num">21,262 to 21,272</td><td>A tail of thin prints under the low, 21,262.00</td><td>PD Low; excess</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>The regime.</strong> This value area overlaps the one from the session before it. Regime line: "Balance, 21,340 to 21,432; ends on acceptance outside either edge." The low finished with excess. The high did not: it goes on the plan as UB at 21,480.</p>
+            <p><strong>Open one: 21,404.00, in value.</strong> Between PD VAL and PD VAH, 16 points above PD VPOC. Targets in play: PD VPOC 21,388 (16 points, inside the HVN, so price is expected to slow there, not cross it fast); PD VAH 21,432 (28 points); PD VAL 21,340 (64 points, through the HVN). Beyond value, PD High and UB 21,480 (76 points). Path note: if price is accepted below PD VAL, the LVN 21,300 to 21,322 is the fast lane and the HVN 21,276 to 21,296 is the next target.</p>
+            <p><strong>Open two: 21,450.00, above value.</strong> Inside the PD range, 18 points above PD VAH. Targets in play: PD VAH 21,432 below (18 points) and PD High / UB 21,480 above (30 points). The thin, moderate stretch between them has no HVN in it.</p>
+            <p><strong>Open three: 21,495.00, a gap.</strong> Above the PD High, so outside the whole of yesterday's auction. Target: the PD range edge, 21,480 (15 points). The UB sits on the same price. Gaps are Module 12.</p>
+            <p>That is where the case stops. In all three, the profile filled the regime line and the target line. None of the three opens says which way price goes, and none of the targets is an entry. A trade on any of these mornings needs its own level, read and trigger; Modules 10 to 13 build that part.</p>
+          </div>
+          <p>Notice what the case didn't contain: no direction, no day type, no number of how often a target is reached. Same profile, three opens, three target lists, and the same method each time.</p>
+
+          <h2>Can You Read The Auction Before 09:30?</h2>
+          <p>Take yesterday's chart and the plan you wrote for today, or write one now. Score one point for each line that is on the plan, in writing.</p>
+          <ol>
+            <li><strong>Value.</strong> PD VAH, PD VAL and PD VPOC, with the session and the construction written beside them.</li>
+            <li><strong>Regime.</strong> Balance or imbalance in one line, with the price that would end it.</li>
+            <li><strong>Path.</strong> For each target, the HVNs and LVNs between the open and the target.</li>
+            <li><strong>The open.</strong> One word for where it sat against prior value and range, and the targets it put in play.</li>
+            <li><strong>Unfinished business.</strong> Any poor high or poor low from the prior session, on the target line and nowhere else.</li>
+            <li><strong>No call.</strong> No direction taken from the open, and no day-type word, anywhere on the plan.</li>
+          </ol>
+          <p><strong>6 of 6:</strong> the auction is on your plan as it should be. <strong>4 or 5:</strong> write the missing lines before your next session. <strong>Under 4:</strong> no trade at a profile level until all six are written for that day. One line overrides the score: if line 6 fails, treat the plan as under 4 whatever the total, because a call for the day will override every other line on it.</p>
+
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>Before tomorrow's open, write one line: the prior session's VAH, VAL and VPOC from the 09:30 to 16:00 ET profile. At 09:30, add one word to it (in value, above value, below value or gap) and the two nearest targets. No direction. That's the whole assignment.</p>
+          </div>
+
+          <h2>Where It Goes Next</h2>
+          <p>Module 06, What Counts As A Level, takes the profile levels from this page and decides which go on your level list as pre-marked locations, which are in-session, and how each one's session scope is written. Module 12, The Gap Setups, picks up the fourth open, outside the prior range, with the PD range edge as its target.</p>
+          <p>The regime line and the target line feed the setup read in Module 10, Trend Continuation, and Module 11, Range Rejection: a level either holds or fails, and the profile tells you where the next target sits when it does. The open line is part of the morning sheet in Module 16, The Pre-Market Routine. And the idea that replaces a day call, a thesis with its invalidation and conviction at a named level, is the "Know Your Idea" step in <a href="13-toothbrush-therapy.html">Module 19, Toothbrush Therapy</a>.</p>
+
+
+        </div>
+
+        <!-- MARK COMPLETE -->
+        <div class="module-complete-zone mt-xl">
+          <button id="mark-complete-btn" class="btn btn--primary btn--lg" data-module-id="05-the-auction">
+            Mark Complete & Continue →
+          </button>
+        </div>
+
+        <!-- MODULE NAVIGATION -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <span class="module-nav-title">Who Is Forced To Trade — coming soon</span>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next Module →</span>
+            <span class="module-nav-title">What Counts As A Level — coming soon</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="../ai.html" title="How AI is used here"><img src="../assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the plan.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    <nav class="footer-links" aria-label="Site policies"><a href="../privacy.html">Privacy</a> <a href="../support.html">Support</a></nav>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/nav.js"></script>
+  <script type="module" src="../js/gate.js"></script>
+  <script type="module" src="../js/progress.js"></script>
+  <script type="module" src="../js/module-toc.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>
