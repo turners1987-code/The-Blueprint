@@ -224,7 +224,7 @@
     "title": "The Session And The Close",
     "slug": "the-session-and-the-close",
     "part": "process",
-    "summary": "Closing the day: review, grade, record, and stop.",
+    "summary": "Alerts at levels during the session, and the end-of-day review within an hour of the close.",
     "status": "planned",
     "tier": "free",
     "prereq": [
@@ -265,7 +265,7 @@
     "title": "The Trader's Mind",
     "slug": "the-traders-mind",
     "part": "process",
-    "summary": "Emotion, discipline and the habits that decide how you execute.",
+    "summary": "Where each hard rule came from, the reset as a rehearsed skill, and the re-entry loop after a first win.",
     "status": "planned",
     "tier": "free",
     "prereq": [
@@ -304,7 +304,7 @@
     "title": "Building Your Own PlayBook",
     "slug": "building-your-own-playbook",
     "part": "capstone",
-    "summary": "Lock the rule, test against a null, split halves, check recency, then execute it yourself.",
+    "summary": "Write your own working set, derive your own R and stop floor from your own data, and run your own register.",
     "status": "planned",
     "tier": "paid",
     "prereq": [

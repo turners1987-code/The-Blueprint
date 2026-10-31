@@ -52,6 +52,7 @@ The two gates in `METHODOLOGY_v2.md` remain an internal standard and a teaching 
 | `reference/review-questions.txt` | The six-question discipline checklist |
 | `reference/TradingStats_Source_of_Truth.txt` | NQ base rates, 3,163 sessions |
 | `reference/golden-samples/` | Sample capture records for the NT8 contract |
+| `reference/DECISIONS.md` | Step-12 decisions (D1–D57) that lessons must follow |
 | Hypothesis Register (Future project) | All evidence: n, expectancy, hit rates |
 
 Nothing in this file states a statistic. Evidence lives in the register and goes stale; a copy
