@@ -308,7 +308,7 @@
           "sentimentLabel": "Price Behavior",
           "visual": "gap",
           "desc": "When price opens significantly higher or lower than the prior close, leaving an unfilled area on the chart. Gaps are read as a sudden shift in sentiment, often around news or overnight events.",
-          "note": "Gap N Go: price continues in the gap direction. Gap Fill: price reverses to close the gap. Which of the two a trader is looking for depends on context."
+          "note": "Gap N Go: price continues in the gap direction; its tested form was killed. Gap Fill: price trades back toward the prior day's range, targeting the PD range edge rather than the prior close."
         },
         {
           "id": "05-03",
