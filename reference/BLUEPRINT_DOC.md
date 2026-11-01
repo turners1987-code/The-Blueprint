@@ -211,7 +211,7 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | # | Module | Part | Tier | Status |
 | --- | --- | --- | --- | --- |
 | 00 | Welcome & Orientation | Start | free | published |
-| 01 | How We Know What We Know | Start | free | published |
+| 01 | How To Know What You Know | Start | free | published |
 | 02 | The Hard Rules | Rules Before Reps | free | published |
 | 03 | The Instrument: Futures Mechanics | Rules Before Reps | free | published |
 | 04 | Who Is Forced To Trade | Why Price Moves | paid | published |

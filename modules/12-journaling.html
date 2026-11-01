@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Journaling &amp; Review — The Blueprint</title>
-  <meta name="description" content="Module 18 of The Blueprint: how to keep a journal that teaches you something. Grade the plan before the outcome, mark the exit afterward, and review weekly.">
+  <meta name="description" content="Module 18 of The Blueprint: how to keep a journal that teaches you something. The pre-entry fields and the grade written before the outcome, the post-exit fields and the execution mark written after it, sim kept apart, and a weekly review held on a schedule with the display floor. With a composite MNQ trade logged in two halves and one week read.">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#071426">
   <meta property="og:title" content="Journaling &amp; Review — The Blueprint">
-  <meta property="og:description" content="Module 18 of The Blueprint: how to keep a journal that teaches you something. Grade the plan before the outcome, mark the exit afterward, and review weekly.">
+  <meta property="og:description" content="Module 18 of The Blueprint: how to keep a journal that teaches you something. The pre-entry fields and the grade written before the outcome, the post-exit fields and the execution mark written after it, sim kept apart, and a weekly review held on a schedule with the display floor. With a composite MNQ trade logged in two halves and one week read.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://bptrade.co/modules/12-journaling.html">
   <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
@@ -33,7 +33,7 @@
           <span class="badge badge--cyan">Process</span>
         </div>
         <h1>Journaling<br><span class="text-gold">&amp; Review</span></h1>
-        <p class="lead mt-md">A journal is only useful if it records why you acted and whether you followed the plan. This module covers the grade, the execution mark, and the weekly review.</p>
+        <p class="lead mt-md">Your journal is not a record of what you made; it is a record of what you decided before the result, and whether you did it, and the result is the one column it can do without.</p>
         <div class="copy-page" data-copy-page>
           <button type="button" class="btn btn--ghost btn--sm copy-page-btn" data-copy-page-btn aria-describedby="copy-page-hint">Copy for your AI</button>
           <button type="button" class="copy-page-download" data-copy-page-download>Download .md</button>
@@ -51,60 +51,171 @@
 
 
           <h2>A Journal Is Not A P&amp;L Record</h2>
-          <p>Your platform already keeps a P&amp;L record. It tells you what happened: what you entered, what you exited, and what it came to. It is accurate, and it is nearly useless for getting better, because it cannot tell you why.</p>
-          <p>A journal answers two other questions. Why did you take the trade, and did you do what you said you would? Those are the only questions you can act on. You cannot change what the market did. You can change whether your entries had a level behind them, whether your stops sat behind structure, and whether you let a plan finish.</p>
+          <p>You know the Sunday. You open a month of trades and all you can read is the money: a good week, a bad Tuesday, a run of small losses you can't explain. You try to remember why you took the trade on the 14th, and the memory you find agrees with how it ended. Nothing in the record says what to change.</p>
+          <p>Your platform already keeps a P&amp;L record. It tells you what happened: what you entered, what you exited, and what it came to. It is accurate, and it is nearly useless for getting better, because it can't tell you why. A journal answers two other questions. Why did you take the trade, and did you do what you said you would? Those are the only questions you can act on. You can't change what the market did. You can change whether your entries had a level behind them, whether your stops sat behind structure, and whether you let a plan finish.</p>
+          <p>Every trade in this course traces one chain: <strong>idea → setup (location + read) → trigger → construction (level → stop → risk → size → entry)</strong>. The journal gives each tier its field. This page has six parts, mechanical first: the fields you write before the entry, the grade, the fields and the mark you write after the exit, the cell where they disagree, the count kept apart from any backtest, and last, the weekly review, which is about you as much as the trades.</p>
+
+          <h2>The Pre-Entry Fields: What You Decided</h2>
+          <p>The <a href="../journal.html">journal</a> form has two halves with a seam between them. Everything above the seam exists before the trade resolves, which is why you can write it down honestly. Fill it in before the order goes, or in the seconds after the fill, never after the exit:</p>
+          <ul>
+            <li><strong>Identity:</strong> session date, instrument, environment (live, sim or replay), account and account type, direction.</li>
+            <li><strong>The tiers:</strong> setup (the read, or no-setup), location (the slug, or mid-range), trigger (the price event, or none), and confirmation (none, or each order-flow sub-form by name).</li>
+            <li><strong>Construction:</strong> stop price, target price, target 2 where the plan has a runner target, size in contracts.</li>
+            <li><strong>The fill:</strong> intended price, actual fill, entry time.</li>
+            <li><strong>The grade</strong>, from the four checks in the next section.</li>
+            <li><strong>Tags written at entry</strong>, the same words every time: the test number ("test-2"), the session block ("block-early"), the variant where a setup has one ("failed-breakdown"), and context nouns such as "gap" or "turn-of-month".</li>
+          </ul>
+          <div class="definition-box">
+            <div class="definition-term">Intended Price</div>
+            <div class="definition-text">The price the plan said you would be filled at, written before the order is sent and recorded in the journal's intended_price field. The actual fill is measured against it on every trade.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Test Number</div>
+            <div class="definition-text">How many times price has come to a zone in the session: the first touch of the zone that session is test 1, the next is test 2, and so on. It is recorded on every trade at a level.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Session Block</div>
+            <div class="definition-text">The part of the session a trade's entry falls in: early, mid or late. You write the block times once on your PlayBook page and keep them; the journal records the block on every trade.</div>
+          </div>
+          <p>Skip anything you would have to invent later. How confident you felt, what the market was "obviously" doing: if you didn't write it at the time, you are reconstructing it, and reconstruction bends toward the outcome. A field you fill in from memory is a field that agrees with the result.</p>
+          <p><strong>The rule:</strong> every field above the seam, and the entry tags, are written before the exit.</p>
+          <p><strong>Getting it wrong</strong> looks like a trade logged at 16:30 with the location chosen to fit where price went, or an intended price left blank because the fill "was close enough". What it reveals: the record is being written by the result, so the fields that should catch a drifting fill or a mid-range entry are filled in by the trade's ending. <strong>The fix:</strong> the intended price is written on the plan line before the order is armed, and the form is saved with every field above the seam filled before you touch the exit. A blank field is left blank, never filled in later; an empty field is a smaller problem than a made-up one.</p>
 
           <h2>The Grade Is Assigned Before The Outcome</h2>
-          <p>Every trade gets one grade: A+, A, B or C. It is assigned at entry, while the result is still unknown, and it is built from four checks that you can answer at that moment.</p>
+          <div class="definition-box">
+            <div class="definition-term">Grade (A+ / A / B / C)</div>
+            <div class="definition-text">The entry-plan score given to every trade at entry, before it resolves, from four checks: the location is a named level, the trigger fired before entry, the stop is behind structure, and the size matches the plan for that stop. A+ is all four with a fill within 2 ticks of the intended price; A is all four; B is three of four with no breach of the stop or size check; C is two or fewer, or any breach of those two. C is no trade.</div>
+          </div>
+          <p>Every trade gets one grade: A+, A, B or C. It is assigned at entry, while the result is still unknown, from four checks you can answer at that moment:</p>
           <ul>
             <li>Was there a named level, and not mid-range?</li>
             <li>Did a trigger fire before you entered?</li>
             <li>Is the stop behind structure, rather than inside the noise?</li>
             <li>Does the size match the plan for that stop distance?</li>
           </ul>
-          <p>All four, with a fill close to the price you intended, is an A+. All four is an A. Three of four, with no breach of the stop or the size, is a B. Two or fewer, or any breach of the stop or the size, is a C.</p>
-          <p>Nothing in that list mentions how the trade ended, and that is deliberate. A losing trade can be an A+: the plan was sound and the market did not cooperate. That is normal and expected. A winning trade can be a C, and that is the more useful signal. It means you were paid for something you would not want to repeat, and a win like that teaches the wrong lesson more convincingly than a loss ever could.</p>
+          <p>All four, with the fill within 2 ticks of your intended price, is an A+. All four is an A. Three of four, with no breach of the stop or the size, is a B. Two or fewer, or any breach of the stop or the size, is a C, and C is no trade: a C in the journal is a trade you took that the table in <a href="14-trade-construction.html">Module 14</a> gave no size.</p>
+          <p>Nothing in that list mentions how the trade ended, and that is deliberate. A losing trade can be an A+: the plan was sound and the market went the other way. That is normal and expected. A winning trade can be a C, and that is the more useful signal. It means you were paid for something you wouldn't want to repeat, and a win like that teaches the wrong lesson more convincingly than a loss ever could.</p>
+          <p><strong>The rule:</strong> the grade is written at entry from the four checks and the fill gap, and it is never changed after the exit.</p>
+          <p><strong>Getting it wrong</strong> looks like a B that becomes an A once the target fills, or a grade left blank "until the trade plays out". What it reveals: the grade has started measuring the outcome, so the one field meant to tell your process from your luck now reads your luck. <strong>The fix:</strong> the grade sits above the seam on the form, labelled as the plan, and is saved with the entry. If you catch yourself wanting to change one after the exit, leave it, and write the wish as a tag ("wanted-regrade"); the weekly review counts them.</p>
+
+          <h2>The Execution Mark Comes After The Exit</h2>
+          <div class="definition-box">
+            <div class="definition-term">Execution Mark</div>
+            <div class="definition-text">Pass or Fail, assigned after the exit: did the exit follow the plan? Pass is a target, the planned scale, a pre-set invalidation, the stop, session end, or a Tier One flatten at T−5. Anything else is Fail. Kept separate from the grade so the grade never reads the outcome.</div>
+          </div>
+          <p>The second half of the form, below the seam, is left blank while the trade is open. You fill it in within the hour after the close, in the end-of-day routine (<a href="17-the-session-and-the-close.html">Module 17</a>), because every field in it is a fact by then:</p>
+          <ul>
+            <li><strong>The exit:</strong> exit time and exit price (size-weighted if you scaled).</li>
+            <li><strong>The outcome:</strong> R multiple, MAE (ticks against you), MFE (ticks for you), time in trade, commissions.</li>
+            <li><strong>The mark:</strong> Pass or Fail.</li>
+            <li><strong>Tags written at exit:</strong> the exit reason in plain words ("stop", "scale-then-stop", "T−5 flatten"), and Too Early or Broke Rule where they apply.</li>
+          </ul>
+          <div class="definition-box">
+            <div class="definition-term">Too Early</div>
+            <div class="definition-text">The journal tag for a manual exit taken for any reason other than the four. Its execution mark is Fail, whatever the trade went on to do.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Broke Rule</div>
+            <div class="definition-text">The journal tag for breaking a hard rule: an entry outside the trading window or from 15:55 ET, a position held through a Tier One release or still open at T−5, a stop widened after entry, a new entry with no post-loss reset, or trading past the kill switch.</div>
+          </div>
+          <p>In the same routine, two lines go on the day, each graded apart and neither by the result: the market read (did the levels and reads on your sheet describe what price did?) and the execution read (did you act on them as the plan said?), as <a href="09-idea-generation.html">Module 09</a> sets them out.</p>
+          <p>Fail means the exit was anything outside the Pass list: you moved a working target, you tightened the stop for a reason you hadn't written down, you got out on feel. Keep the mark apart from the grade. If you mark the exit while you are still grading the entry, the result leaks backward: a trade that ran well makes the entry feel better than it was, and a trade that stopped out makes it feel worse.</p>
+          <p><strong>The rule:</strong> the post-exit fields and the mark are filled in the same day, and every Fail carries the tag that names it.</p>
+          <p><strong>Getting it wrong</strong> looks like marks filled in on Sunday from memory, or a manual exit marked Pass because it "saved" a loss. What it reveals: the mark is being set by how the trade ended rather than by which exit you took, so a leak in your exits can never show up. <strong>The fix:</strong> the mark has one test, read off the exit tag: is the reason on the Pass list? If it isn't, the mark is Fail and the tag is Too Early, whatever price did next. A trade with an empty mark the next morning is filled in before the pre-market routine starts.</p>
+
+          <h2>The Cell That Teaches Most: Good Plan, Bad Finish</h2>
+          <p>Put grade and mark side by side and you get a board of combinations. The most instructive one is a high grade with a failed mark. Right setup, right level, right size, wrong exit.</p>
+          <p>That is a different problem from a bad plan, and it needs a different fix. A bad plan is a selection problem: you are taking trades that are not there, so the work is upstream, at the level and the trigger. A good plan with a bad finish is a discipline problem: the read was fine and you broke it afterward, so the work is downstream, in what you do while the trade is open. If you treat both the same way you will fix the wrong thing, and probably change a setup when the leak was in the exit.</p>
+          <p>The reverse cell is worth a look too. A low grade with a passed mark means you executed a poor plan faithfully. That is still a plan problem, and the clean exit doesn't redeem it. The <a href="../journal-analysis.html">analysis page</a> draws this board as a grade × execution mark table and calls out the A+ trades with a Fail exit.</p>
+          <p><strong>The rule:</strong> before changing anything about a setup, find which cell its trades fall in.</p>
+          <p><strong>Getting it wrong</strong> looks like dropping a setup after three losses, when two of the three were A+ entries closed by hand. What it reveals: you read the column of results instead of the two columns you wrote, so the fix lands upstream when the leak is downstream. <strong>The fix:</strong> no setup is changed, dropped or added to until you have written its count in each of the four cells (high grade or low, Pass or Fail). The cell with the most trades is the one you work on.</p>
+
+          <h2>Your Trades Are Counted Apart From Any Backtest</h2>
+          <p>As in <a href="01-evidence-standard.html">Module 01</a>, your own executions are a separate count. A backtest assumes a trader who takes every signal at the stated price. Your journal records the real one, who skips some and hesitates on others. Blending the two hides the gap between them, and that gap is the thing you are trying to measure.</p>
+          <p>The same applies to simulated trades. A simulator can hand you fills a live queue would not, and where in the level you get filled moves the stop distance, the size and the R. So sim trades count occurrences. They show you how often you saw a setup and followed your process. They never contribute to an expectancy figure, and the environment field on every trade means they can't slip in by accident: the analysis page reports live trades only and counts sim and replay beside them without pooling.</p>
+          <p><strong>The rule:</strong> the environment field is set on every trade, and no figure you read mixes live with sim or replay.</p>
+          <p><strong>Getting it wrong</strong> looks like a month of sim trades and three live ones read as one sample, or a replay week used to decide a size. What it reveals: you want a bigger number more than an honest one, and the number you get describes a fill you will not get live. <strong>The fix:</strong> environment is a required field and is chosen first on the form. In the weekly review, live counts are written first and sim counts on a separate line, never added together.</p>
+
+          <h2>The Weekly Review</h2>
+          <div class="definition-box">
+            <div class="definition-term">Cohort</div>
+            <div class="definition-text">A group of your own trades that share one or more journal fields, such as a setup, a location or a grade. Its figures are read beside its count: below 30 trades, or below 20 distinct sessions, it is shown dimmed, never hidden.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Display Floor</div>
+            <div class="definition-text">The journal analysis rule that any cohort (a group of trades sharing a field such as setup or trigger) below 30 trades, or below 20 distinct sessions, is shown dimmed with a warning. Dimmed means visible but marked as not yet a sample. It is never hidden, and clearing the floor is a minimum for reading a cohort, not a verdict on it.</div>
+          </div>
+          <p>Once a week, at a fixed time, away from the screen. The time is set in advance and kept, never moved by a result: a bad week doesn't bring it forward and a good one doesn't skip it. Keep it short enough that you will keep doing it. Read it in this order, writing the count before any rate:</p>
+          <ol>
+            <li><strong>Grades.</strong> The count of A+, A, B and C, and for every grade below A, which of the four checks failed. Any C is a trade the table said not to take.</li>
+            <li><strong>Marks.</strong> Pass and Fail counts, the Too Early count, and the grade × mark board.</li>
+            <li><strong>The rule-break ledger.</strong> Every Broke Rule tag of the week on its own line: date, time, which rule. Zero is a line too.</li>
+            <li><strong>The session.</strong> Trades per session, from the analysis page's sequence table; the session block and test number tags, counted.</li>
+            <li><strong>The fill.</strong> Intended price against actual fill on every trade: how many filled within 2 ticks, and the list of those that didn't.</li>
+            <li><strong>The excursions.</strong> MAE against your stop distance (the analysis page's stop survival) and realised R against MFE (exit efficiency).</li>
+            <li><strong>The sheets.</strong> The week's five pre-market sheets beside the trades: each day's readiness score and finish time from <a href="16-the-pre-market-routine.html">Module 16</a>, and each evening's market read and execution read lines.</li>
+          </ol>
+          <p>Ignore the weekly P&amp;L. One week is a small sample, and it is dominated by which sessions happened to be on offer. Treat any cohort under 30 trades, or drawn from fewer than 20 sessions, as a story, not a pattern. The analysis page shows those cohorts dimmed rather than hiding them; read them as prompts, not verdicts. It also caps every cohort at two fields at once, such as setup × grade, because a three-way cut leaves cells too small to read. Tags are not sorted by the analysis page; you count them in the review, which is why they are written the same way every time.</p>
+          <p>Questions worth asking:</p>
+          <ul>
+            <li>Which checks failed most often on your lower grades?</li>
+            <li>Where did you fail the mark, and was it the same place each time?</li>
+            <li>Did you take trades with no trigger, or with the stop inside noise?</li>
+            <li>What is the one thing you will do differently next week?</li>
+          </ul>
+          <p>Pick one. A review that produces five changes produces none.</p>
+          <p>This is the hard part, because the week's money is the first number you want to see, and once you have seen it every other line gets read in its light. A green week makes the Too Early count look harmless; a red one makes a clean A+ loss look like a mistake.</p>
+          <p><strong>The rule:</strong> the review runs at its fixed time, reads the seven lines in order with each count before its rate, and ends with one change written down.</p>
+          <p><strong>Getting it wrong</strong> looks like a review held only after a losing week, or one that opens on the account balance and ends with five resolutions. What it reveals: the review has become a reaction to the result, so it measures how the week felt rather than what you did. <strong>The fix:</strong> a repeating calendar entry at the same time each week, and a review sheet printed with the seven lines and one blank labelled "the one change". The P&amp;L is not a line on it. The one change becomes next week's process goal (<a href="13-toothbrush-therapy.html">Module 19</a>).</p>
 
           <div class="key-concept">
             <p><strong>You are grading the decision, not the outcome.</strong> If the grade moves when the result changes, it has stopped measuring your process and started measuring your luck.</p>
           </div>
 
-          <h2>The Execution Mark Comes After The Exit</h2>
-          <p>The second record is the execution mark, and it is made after the trade is over. It asks one question: did the exit follow the plan?</p>
-          <p>Pass means the exit was one the plan allowed: the target, a planned scale, a thesis invalidation you set at entry, the stop, or the end of the session. Fail means it was anything else. You moved a working target, you tightened the stop for reasons you had not written down, or you got out on feel.</p>
-          <p>Keep the mark apart from the grade. If you mark the exit while you are still grading the entry, the result leaks backward. A trade that ran well makes the entry feel better than it was, and a trade that stopped out makes it feel worse. Grading before and marking after is what keeps each one honest.</p>
+          <h2>Worked Case: One Trade In Two Halves, One Week Read</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A composite MNQ week, built to show the fields filled in. It belongs to no one, and the prices are invented for the arithmetic. The Wednesday is the session from the worked case in <a href="17-the-session-and-the-close.html">Module 17</a>.</p>
+            <p><strong>Trade 1, above the seam, saved at 09:56.</strong> Session date: Wednesday. Instrument: MNQ. Environment: live. Direction: long. Setup: trend-continuation. Location: pd-vah. Trigger: pause-n-go. Confirmation: none. Stop price: 21,424. Target price: 21,470 (the ON High). Target 2: blank; one target, with the planned scale at 2R, 21,454. Size: the contracts Module 14's table gives your base R at a 10-point stop. Intended price: 21,434. Actual fill: 21,434. Entry time: 09:55. Grade: named level, yes; trigger fired before entry, yes; stop behind structure, two points behind the far edge, yes; size matches, yes; fill gap 0 ticks: A+. Tags: test-2 (price left the zone when it was accepted above at 09:50, so the 09:52 pullback was the next test), block-early.</p>
+            <p><strong>Trade 1, below the seam, filled at 16:24.</strong> Exit time 10:03, exit price 21,424, R multiple −1.0, MAE 40 ticks, MFE 2 ticks, time in trade 480 seconds. Mark: Pass, the stop. Tags: stop.</p>
+            <p><strong>Trade 2, the same day.</strong> Grade A+ at entry. Exit by hand at +0.8R with no reason from the four. Mark: Fail. Tags: block-early, failed-breakdown, Too Early.</p>
+            <p><strong>Sunday, 17:00, the weekly review.</strong> Eight live trades across five sessions; no sim this week.</p>
+            <ol>
+              <li><strong>Grades:</strong> A+ 3, A 3, B 2, C 0. Both B grades failed the same check: the trigger had not fired before entry.</li>
+              <li><strong>Marks:</strong> Pass 6, Fail 2, both Too Early. One of the two is Wednesday's A+: right plan, wrong finish.</li>
+              <li><strong>Rule-break ledger:</strong> zero.</li>
+              <li><strong>The session:</strong> trades per session 2, 1, 2, 1, 2. Block: early 6, mid 2. Test: test 1 two, test 2 five, test 3 one.</li>
+              <li><strong>The fill:</strong> 7 of 8 within 2 ticks; one filled 3 ticks away, graded A, not A+.</li>
+              <li><strong>The excursions:</strong> written as counts; every cohort is dimmed, at 8 trades and 5 sessions.</li>
+              <li><strong>The sheets:</strong> readiness 1, 2, 2, 1, 0; latest finish 09:23. The 0 was Friday, the day of the second Too Early.</li>
+            </ol>
+            <p><strong>The one change:</strong> "Exits only at the target, the planned scale, the stop, or for one of the four reasons." It goes on next week's sheets as the process goal. The Friday line is noted, not acted on: one 0 day beside one Too Early is a story, not a pattern.</p>
+            <p class="text-muted">Hypothetical illustration. Hypothetical results have inherent limits: they are not actual trading and do not reflect real fills, slippage or the pressure of risk, and no representation is made that any account will achieve similar results.</p>
+          </div>
+          <p>Notice what the week didn't need. No total in R, no best and worst day, no verdict on any setup. Every line was a count of something you decided or did, and the change it produced is a mechanism you can check next Sunday.</p>
 
-          <h2>The Cell That Teaches Most: Good Plan, Bad Finish</h2>
-          <p>Put grade and mark side by side and you get a board of combinations. The most instructive one is a high grade with a failed mark. Right setup, right level, right size, wrong exit.</p>
-          <p>That is a different problem from a bad plan, and it needs a different fix. A bad plan is a selection problem: you are taking trades that are not there, so the work is upstream, at the level and the trigger. A good plan with a bad finish is a discipline problem: the read was fine and you broke it afterward, so the work is downstream, in what you do while the trade is open. If you treat both the same way you will fix the wrong thing, and probably change a setup that was working.</p>
-          <p>The reverse cell is worth a look too. A low grade with a passed mark means you executed a poor plan faithfully. That is still a plan problem, and the clean exit does not redeem it.</p>
+          <h2>Is Your Journal Teaching You?</h2>
+          <p>Take your last ten trades and your last four weeks. Score one point for each line that is true of all of them:</p>
+          <ol>
+            <li><strong>Above the seam:</strong> every pre-entry field filled before the exit, intended price included.</li>
+            <li><strong>Grade:</strong> written at entry and never changed afterward.</li>
+            <li><strong>Entry tags:</strong> test number and session block on every trade at a level.</li>
+            <li><strong>Below the seam:</strong> exit, R, MAE, MFE, time in trade and commissions filled in the same day.</li>
+            <li><strong>Mark:</strong> every trade marked, and every Fail carrying the tag that names it.</li>
+            <li><strong>Environment:</strong> set on every trade, and no figure you used mixed live with sim.</li>
+            <li><strong>Review:</strong> held at its fixed time in each of the four weeks, ending with one written change.</li>
+          </ol>
+          <p><strong>7 of 7</strong> is a journal that can teach you. <strong>The threshold:</strong> if line 2 failed even once, your grades are reading outcomes and the board in this page means nothing yet; fix that first. Otherwise, if two or more lines failed, fix the one with the most misses before adding anything else to the record.</p>
 
-          <h2>What To Record And What To Skip</h2>
-          <p>Record what you decided, and where. The setup, the level, the trigger, the stop, the target, the size, the intended price and the time. Every one of these exists before the trade resolves, which is why you can write it down honestly.</p>
-          <p>Skip anything you would have to invent later. How confident you felt, what the market was "obviously" doing, why you really got out: if you did not write it at the time, you are reconstructing it, and reconstruction bends toward the outcome. A field you fill in from memory is a field that agrees with the result.</p>
-          <p>The exit fields are the exception, but only because they are facts: the exit price, the time, what the trade did against you and for you. Fill them in when the trade closes. If you cannot say what happened, leave the field empty. An empty field is a smaller problem than a made-up one.</p>
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>On your next trade, write the intended price and the grade before you send the order. Two fields. That's the whole assignment.</p>
+          </div>
 
-          <h2>Your Trades Are Counted Apart From Any Backtest</h2>
-          <p>As in Module 01, your own executions are a separate count. A backtest assumes a perfect trader who takes every signal at the stated price. Your journal records the real one, who skips some and hesitates on others. Blending the two hides the gap between them, and that gap is the thing you are trying to measure.</p>
-          <p>The same applies to simulated trades. A simulator fills a limit order the moment price touches it, and where in the level you get filled is the variable that decides whether a trade works. So sim trades count occurrences. They show you how often you saw a setup and followed your process. They never contribute to a figure for edge, and the journal tags the environment on every trade so they cannot slip in by accident.</p>
-
-          <h2>The Weekly Review</h2>
-          <p>Once a week, at a fixed time, away from the screen. Keep it short enough that you will keep doing it.</p>
-          <p>Look at the grades first, and ask whether the plans were any good. Then look at the execution marks and ask whether you finished them. Then look at where the two disagree, because that is where the specific problems are: the high grade with a failed mark, and the low grade you were rewarded for.</p>
-          <p>Ignore the weekly P&amp;L. One week is a small sample, and it is dominated by which sessions happened to be on offer. Treat any cohort under 30 trades, or drawn from fewer than 20 sessions, as a story, not a pattern. The analysis page shows those cohorts dimmed rather than hiding them; read them as prompts, not verdicts.</p>
-          <p>Questions worth asking:</p>
-          <ul>
-            <li>Which checks failed most often on my lower grades?</li>
-            <li>Where did I fail the mark, and was it the same place each time?</li>
-            <li>Did I take trades with no trigger, or with the stop inside noise?</li>
-            <li>What is the one thing I will do differently next week?</li>
-          </ul>
-          <p>Pick one. A review that produces five changes produces none.</p>
-
-          <h2>Using The Journal On This Site</h2>
-          <p>The <a href="../journal.html">journal</a> is built around the split described above. The form has two halves. The first half is the pre-entry plan: setup, location, trigger, stop, target, size and the grade. It is all filled in before the trade, and the grade field is labelled as the plan, not the outcome. The second half is the post-exit record, left blank while the trade is open: exit, R multiple, time in trade, and the execution mark.</p>
-          <p>To log a trade, fill in the plan, choose the grade from the four checks and save. When the trade closes, reopen it, complete the exit fields and set the mark. Everything is stored on your own device, and you can export it as one file for backup.</p>
-          <p>The <a href="../journal-analysis.html">analysis page</a> is read-only. It reports live trades only, and counts sim and replay without pooling them. It shows results cut by setup, trigger and grade, discipline and sequence effects, stop survival, and how much of the available move you kept. Small samples are dimmed rather than hidden, and the page tells you whether you have enough of your own history for the figures to mean anything. Until you do, treat what it shows as a prompt for the weekly review, not as a verdict.</p>
+          <h2>Where It Goes Next</h2>
+          <p>The grade's four checks and the size each grade trades come from one table in <a href="14-trade-construction.html">Module 14, Trade Construction</a>; the post-exit fields and the mark are filled in during the end-of-day routine in <a href="17-the-session-and-the-close.html">Module 17, The Session And The Close</a>. <a href="13-toothbrush-therapy.html">Module 19, Toothbrush Therapy</a>, turns "review and grade every trade" and the review's one change into daily habits.</p>
+          <p><a href="20-the-traders-mind.html">Module 20, The Trader's Mind</a>, reads the Broke Rule ledger and the trades-per-session table for the loops a bad day runs. <a href="21-reading-a-probability.html">Module 21, Reading A Probability</a>, shows how to read a cohort's rate beside its count. Your live trades are the count Gate 2 reads in <a href="22-how-to-test-an-edge.html">Module 22, How To Test An Edge</a>, and the slugs on every trade match it to a page of your own in <a href="23-building-your-own-playbook.html">Module 23, Building Your Own PlayBook</a>.</p>
 
 
         </div>

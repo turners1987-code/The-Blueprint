@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How We Know What We Know — The Blueprint</title>
+  <title>How To Know What You Know — The Blueprint</title>
   <meta name="description" content="Module 01 of The Blueprint: how to check a trading claim, including the ones made here. Lock the rule first, test it against a null, split the sample, and count your own executions separately.">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="manifest" href="../manifest.json">
   <meta name="theme-color" content="#071426">
-  <meta property="og:title" content="How We Know What We Know — The Blueprint">
+  <meta property="og:title" content="How To Know What You Know — The Blueprint">
   <meta property="og:description" content="Module 01 of The Blueprint: how to check a trading claim, including the ones made here. Lock the rule first, test it against a null, split the sample, and count your own executions separately.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://bptrade.co/modules/01-evidence-standard.html">
@@ -32,7 +32,7 @@
           <span class="module-number">MODULE 01</span>
           <span class="badge badge--cyan">Foundation</span>
         </div>
-        <h1>How We Know<br><span class="text-gold">What We Know</span></h1>
+        <h1>How To Know<br><span class="text-gold">What You Know</span></h1>
         <p class="lead mt-md">Most trading claims cannot be checked. This module is a method for checking them, and it is the standard the rest of the course is held to.</p>
         <div class="copy-page" data-copy-page>
           <button type="button" class="btn btn--ghost btn--sm copy-page-btn" data-copy-page-btn aria-describedby="copy-page-hint">Copy for your AI</button>
@@ -51,20 +51,33 @@
 
 
           <h2>Why Most Trading Advice Cannot Be Checked</h2>
-          <p>Trading content is full of claims that sound settled and aren't. A setup "works." A level "holds." A pattern "has an edge." Usually nobody says what the rule was, when it was written down, what it was compared against, or how many times it was tried.</p>
+          <p>Trading content is full of claims that sound settled and aren't. A setup "never fails." A level "holds." A pattern "prints money." Usually nobody says what the rule was, when it was written down, what it was compared against, or how many times it was tried.</p>
           <p>Without those things there is nothing to check. A claim you can check has a rule stated exactly enough that someone else could run it, a record of when the rule was fixed, a comparison that could have made it look bad, and results from conditions that were not used to build it. Most advice offers none of these, so the only thing left to judge it by is how confident the person sounds.</p>
 
           <h2>Lock The Rule Before You Look</h2>
           <p>Write the rule down, in full, before you open the data. Entry, stop, target, the conditions under which it applies and the conditions under which it does not.</p>
-          <p>The order matters because of what happens when you reverse it. If you look at the data and then write the rule, you have fitted the rule to the data, and a fitted rule always looks good on the data that produced it. You will find a version that would have worked, and it will tell you nothing about the next session. Writing the rule first means the data gets a fair chance to say no.</p>
+          <p>The order matters because of what happens when you reverse it. If you look at the data and then write the rule, you have fitted the rule to the data, and a fitted rule always looks good on the data that produced it. You will find a version that would have looked good, and it will tell you nothing about the next session. Writing the rule first means the data gets a fair chance to say no.</p>
 
           <h2>Test Against A Null</h2>
-          <p>A result needs something to be compared with. The comparison here is a null: take the same number of entries at the same places, but with the timing scrambled so that any real pattern is destroyed while the volatility and the context stay the same. Run the rule on that.</p>
-          <p>If the rule does no better than random entries at the same places, it is not a rule. Markets drift, ranges expand and contract, and plenty of things look like skill when they are just the market doing what it was going to do. The null is how you find out how much of the result was the rule and how much was the weather.</p>
+          <p>A result needs something to be compared with. The comparison here is a null: the same rule run on returns shuffled within short blocks, so volatility is kept and any real sequence is destroyed. Run the rule on that, many times over.</p>
+          <div class="definition-box">
+            <div class="definition-term">Null (Block-Shuffled Null)</div>
+            <div class="definition-text">The same locked rule run on price paths rebuilt from each session's own 1-minute returns, shuffled within 30-minute blocks. Shuffling destroys any real sequence while keeping the session's volatility. Its average expectancy across many shuffles is the baseline the rule must beat.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Edge</div>
+            <div class="definition-text">A rule's expectancy after costs, above what the same rule earns on a null built from the same data. It belongs to a rule on a record, and you measure it on your own; no page here states one.</div>
+          </div>
+          <p>If the rule does no better on the real data than on its null, it has no edge. Markets drift, ranges expand and contract, and plenty of things look like skill when they are just the market doing what it was going to do. The null is how you find out how much of the result was the rule and how much was the weather.</p>
 
           <h2>Split The Sample, And Look At Recent Data Separately</h2>
           <p>Divide the sample in half and check both halves. A rule that is positive in one half and negative in the other has not shown you an edge. It has shown you one good stretch and one bad one, and you cannot tell which is the exception.</p>
           <p>Then look at recent data on its own. Markets change, and a rule that worked in conditions that no longer exist is a historical fact rather than something you can use. Each of these splits is one more chance for the result to fail, and a result that survives all of them is worth more than one that has only been shown in aggregate.</p>
+          <p>Put together, the null, the two halves, the calendar years and the recent data make one test you can run on any rule you write down. Its thresholds are the tool; the rule and the data are yours.</p>
+          <div class="definition-box">
+            <div class="definition-term">Gate 1 (Market Data)</div>
+            <div class="definition-text">The test of a locked rule on historical market data. It passes at n of at least 100 trades, beating a volatility-preserving null, positive in both halves and in each calendar year, plus a 2023–2026 recency check, reported in R with n, win %, expectancy and the null's expectancy.</div>
+          </div>
 
           <div class="callout callout--cyan mt-lg mb-lg">
             <div class="callout-title text-cyan">Your Execution Is A Separate Question</div>
@@ -73,23 +86,49 @@
 
           <h2>Count Your Own Executions Separately</h2>
           <p>A backtest assumes a perfect trader. It takes every signal, at the stated price, without hesitation. You do not. You skip some signals, hesitate on others, and place orders a little differently each time.</p>
-          <p>So keep your own executions in their own count, apart from any backtest, and never blend the two. A rule that tests well and that you cannot execute is not yours yet. The market data says the idea has merit. Your own record says whether you can collect on it, and the two answers are independent.</p>
+          <p>So keep your own executions in their own count, apart from any backtest, and never blend the two. A rule that tests well and that you cannot execute is not yours yet. The market data answers one question. Your own record answers whether you can collect on it, and the two answers are independent.</p>
+          <p>Your own record has its own threshold, and it is the second tool:</p>
+          <div class="definition-box">
+            <div class="definition-term">Gate 2 (Own Execution)</div>
+            <div class="definition-text">The test of your own live trades of a rule. It passes at n of at least 30 live trades, across at least 20 distinct sessions, with expectancy of at least +0.3R after commissions. Sim trades never count toward it.</div>
+          </div>
 
           <h2>Why Simulated Fills Cannot Measure Edge</h2>
-          <p>The platform's simulator fills a limit order the moment price touches it. Real markets do not. Price can touch your level and turn around without ever filling you, and the trades that get away from you are often the best ones.</p>
-          <p>Where in the level you get filled is exactly the variable that decides whether a trade works, so a simulator that ignores it is biased on the one thing that matters most. Sim can tell you how often something happened. It cannot tell you whether you would have made money from it. Treat simulated trades as practice, and as a count of occurrences, but never as evidence of edge.</p>
+          <p>The platform's simulator fills a limit order the moment price touches it. Real markets do not always. Price can touch your level and turn around without ever filling you, and the trades that get away from you are often the best ones.</p>
+          <p>Where in the level you get filled is exactly the variable that decides whether a trade pays, so a simulator that ignores it is biased on the one thing that matters most. Sim can tell you how often something happened. It cannot tell you whether you would have made money from it. Treat simulated trades as practice, and as a count of occurrences, but never as evidence of edge.</p>
 
           <h2>Why Small Samples Mislead</h2>
-          <p>A small run of trades feels like information, and mostly it is noise. A few wins in a row proves little, and so does a few losses.</p>
-          <p>The count of trades is also not the whole story. Thirty trades across four sessions is one week's conditions, not a sample. If those days were trending, everything looked like a trend setup. If they were quiet, nothing worked. What you need is trades spread across many different days and conditions, so that no single kind of market is doing all the work.</p>
+          <p>A small run of trades feels like information, and mostly it is noise. A few wins in a row prove little; so do a few losses.</p>
+          <p>The count of trades is also not the whole story. Thirty trades across four sessions is one week's conditions, not a sample. If those days were trending, everything looked like a trend setup. If they were quiet, nothing followed through. What you need is trades spread across many different days and conditions, so that no single kind of market is doing all the work.</p>
 
           <div class="key-concept">
-            <p><strong>Of any claim, including mine, ask: what would have to be true for this to be wrong, and has that been checked?</strong> If nobody can say what would count as wrong, the claim cannot be tested. If they can, and it has not been checked, then it is an idea and not a result.</p>
+            <p><strong>Of any claim, including the ones on this site, ask: what would have to be true for this to be wrong, and has that been checked?</strong> If nobody can say what would count as wrong, the claim cannot be tested. If they can, and it has not been checked, then it is an idea and not a result.</p>
           </div>
 
           <h2>Apply It To This Course Too</h2>
           <p>Read every trading claim through this lens: a rule stated before it was tested, compared with a null, checked in separate halves and in recent data, and kept apart from the trader's own execution record. That includes what you read here.</p>
           <p>This course gives you setups, rules and routines, not results. Whether any of them holds for you is decided by your own record. Treat each one as a testable idea: write the rule down, log every instance, and be suspicious of anyone, this site included, who tells you a trading idea is settled.</p>
+
+          <h2>Can This Claim Be Checked?</h2>
+          <p>Take one claim: a setup you trade, one you have been told about, or a rule on this site. Score it, a point per line that is true:</p>
+          <ol>
+            <li><strong>Rule:</strong> entry, stop, target and conditions written exactly enough that someone else could run it.</li>
+            <li><strong>Date:</strong> the rule was fixed before anyone looked at the data it was tested on.</li>
+            <li><strong>Null:</strong> it was compared with the same rule run on a null, and beat it.</li>
+            <li><strong>Splits:</strong> it was positive in both halves of the sample and in recent data on its own.</li>
+            <li><strong>Execution:</strong> live trades of it are counted apart from the backtest, with sim left out.</li>
+          </ol>
+          <p><strong>The threshold:</strong> if line 1 or line 2 is missing, the claim can't be checked at all; it is an opinion, and you set it aside. With both, anything under 5 of 5 is an idea that has not had its test yet, and you treat it as one: you log it, you don't size it as a result.</p>
+
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>Write one rule you trade, or want to trade, as one sentence: entry, stop, target and when it applies. Put today's date beside it. That's the whole assignment.</p>
+          </div>
+
+          <h2>Where It Goes Next</h2>
+          <p>The dated rule becomes a line you log every instance of, with its outcome in R, in the journal (<a href="12-journaling.html">Module 18, Journaling &amp; Review</a>). Every trade you log is a point in the count Gate 2 reads.</p>
+          <p><a href="21-reading-a-probability.html">Module 21, Reading A Probability</a>, teaches you to read a rate with its sample size beside it, and <a href="22-how-to-test-an-edge.html">Module 22, How To Test An Edge</a>, walks a locked rule through Gate 1 and Gate 2 on your own data.</p>
 
 
         </div>

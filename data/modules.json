@@ -13,10 +13,10 @@
   {
     "id": "01-evidence-standard",
     "number": "01",
-    "title": "How We Know What We Know",
+    "title": "How To Know What You Know",
     "slug": "evidence-standard",
     "part": "start",
-    "summary": "How to check a trading claim, including the ones made here, and why nothing is presented as proven.",
+    "summary": "How to check a trading claim, including the ones made here.",
     "status": "published",
     "tier": "free",
     "prereq": [
@@ -237,7 +237,7 @@
     "title": "Journaling & Review",
     "slug": "journaling",
     "part": "process",
-    "summary": "Grading entries, marking execution, and the weekly and monthly review.",
+    "summary": "Grading entries, marking execution, the journal's fields and the weekly review.",
     "status": "published",
     "tier": "free",
     "prereq": [
@@ -251,7 +251,7 @@
     "title": "Toothbrush Therapy",
     "slug": "toothbrush-therapy",
     "part": "process",
-    "summary": "Do the common uncommonly well. The eight daily habits.",
+    "summary": "The eight habits you run every session, each one a line your record can check.",
     "status": "published",
     "tier": "free",
     "prereq": [

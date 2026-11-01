@@ -33,7 +33,7 @@
           <span class="badge badge--cyan">The Rules</span>
         </div>
         <h1>The Hard <span class="text-gold">Rules</span></h1>
-        <p class="lead mt-md">The hard rules are not there to make you money. They are there so that you are still trading on the day the method has been measured.</p>
+        <p class="lead mt-md">The hard rules are not there to make you money. They are there so that you are still trading on the day your own record is large enough to judge.</p>
         <div class="copy-page" data-copy-page>
           <button type="button" class="btn btn--ghost btn--sm copy-page-btn" data-copy-page-btn aria-describedby="copy-page-hint">Copy for your AI</button>
           <button type="button" class="copy-page-download" data-copy-page-download>Download .md</button>
@@ -51,7 +51,7 @@
 
 
           <h2>The Day That Ends The Account</h2>
-          <p>You know the day. The first trade works. The next one comes a little faster, from a little further away from your level. Then one loses, and the one after that is taken to get it back. By late morning the read you had at 09:30 was right and the day is gone anyway.</p>
+          <p>You know the day. The first trade wins. The next one comes a little faster, from a little further away from your level. Then one loses, and the one after that is taken to get it back. By late morning the read you had at 09:30 was right and the day is gone anyway.</p>
           <p>An edge, if you have one, shows up in your record over months of trades. A single bad day can take the account before that record exists. These five rules decide how long a bad day can last and how much it can cost. They predict nothing about price; they are simply on, every session.</p>
           <p>The order below runs from the mechanical to the psychological. The first four are things a clock, a calendar or a platform setting can enforce. The fifth is the one only you can.</p>
 
@@ -60,10 +60,20 @@
             <div class="definition-term">Trading Window</div>
             <div class="definition-text">The hours in which you may place a trade: 06:00 to 16:00 ET, with a focus block of 09:30 to 11:00 ET. Outside the window there is no execution of any kind.</div>
           </div>
-          <p>The window has two parts. The full window, 06:00 to 16:00 ET, is when execution is allowed at all. The focus block, 09:30 to 11:00 ET, is the first stretch of the cash session, when your prepared levels meet the most traffic and your attention is freshest. The plan expects most of its trades there. A trade outside the focus block but inside the window is allowed; it is held to the same plan.</p>
-          <p>Overnight hours build levels. They do not take trades. Your pre-market routine is finished by 09:25 (Module 16 covers it). The 16:00 end is a convention this method chooses, the cash equity close, not a market fact: futures keep trading after it, and you don't.</p>
-          <p><strong>The rule:</strong> no execution outside 06:00 to 16:00 ET.</p>
-          <p><strong>Breaking it</strong> usually looks like one trade at 16:20 "because the level was right there." What it reveals: the trade came from the screen, not from the plan, and you were still looking for one after the plan had finished. <strong>The fix:</strong> write the window as the first line of your daily plan, set an alarm for 15:55, and close the platform at 16:00. Any entry time outside the window is tagged Broke Rule in the journal, with no exceptions for winners.</p>
+          <p>The window has two parts. The full window, 06:00 to 16:00 ET, is when execution is allowed at all. The focus block, 09:30 to 11:00 ET, is the first stretch of the cash session, when your prepared levels meet the most traffic and your attention is freshest. The plan expects most of its trades there. A trade outside the focus block but inside the window is allowed; it is held to the same plan. Nothing new is entered from 15:55 ET (<a href="17-the-session-and-the-close.html">Module 17</a>); the last five minutes are for closing, not opening.</p>
+          <p>The focus block is not the only way the journal divides the day. Every trade also records the part of the session its entry fell in, so your record can later compare early trades with late ones.</p>
+          <div class="definition-box">
+            <div class="definition-term">Session Block</div>
+            <div class="definition-text">The part of the session a trade's entry falls in: early, mid or late. You write the block times once on your PlayBook page and keep them; the journal records the block on every trade.</div>
+          </div>
+          <p>The PlayBook page is built in <a href="23-building-your-own-playbook.html">Module 23</a>; until you have one, write your three block times once at the top of your journal and leave them alone.</p>
+          <p>Before 06:00 the overnight hours build levels and take no trades. From 06:00 to 09:30 a trade is allowed only once that day's pre-market sheet is complete (<a href="16-the-pre-market-routine.html">Module 16</a>): no completed sheet, no trade, at any hour. The routine finishes by 09:25 at the latest, and a sheet still incomplete at 09:25 means that session is watched, not traded. The 16:00 end is a convention this method chooses, the cash equity close, not a market fact: futures keep trading after it, and you don't.</p>
+          <p><strong>The rule:</strong> no execution outside 06:00 to 16:00 ET, and no new entries from 15:55 ET (<a href="17-the-session-and-the-close.html">Module 17</a>).</p>
+          <div class="definition-box">
+            <div class="definition-term">Broke Rule</div>
+            <div class="definition-text">The journal tag for breaking a hard rule: an entry outside the trading window or from 15:55 ET, a position held through a Tier One release or still open at T−5, a stop widened after entry, a new entry with no post-loss reset, or trading past the kill switch.</div>
+          </div>
+          <p><strong>Breaking it</strong> usually looks like one trade at 16:20 "because the level was right there." What it reveals: the trade came from the screen, not from the plan, and you were still looking for one after the plan had finished. <strong>The fix:</strong> write the window as the first line of your daily plan, set an alarm for 15:55, when new entries stop, and close the platform at 16:00. Any entry time outside the window, or from 15:55, is tagged Broke Rule in the journal, with no exceptions for winners.</p>
 
           <h2>Rule 2: The News Windows</h2>
           <p>Some scheduled releases move the index futures in a way no level survives. Others are noise you can trade through. The rule sorts them into two tiers and treats each tier one way only.</p>
@@ -89,9 +99,14 @@
           <ol>
             <li><strong>Stop hit.</strong> Your resting stop normally does this for you. If price has traded through it and the order has not filled, you close the rest by hand. You were wrong; you leave.</li>
             <li><strong>Tier One release within 5 minutes.</strong> Rule 2, applied to a trade that is still open at T−5.</li>
-            <li><strong>Thesis broken on a candle close.</strong> The invalidation you wrote at entry has happened, judged on the close of the candle you named, not on a tick through it. An idea with no written invalidation was No Setup to begin with.</li>
+            <li><strong>Thesis broken on a candle close.</strong> The invalidation you wrote at entry has happened, judged on the close of the candle you named, not on a tick through it. An idea with no written invalidation was No Setup (<a href="08-the-three-tiers.html">Module 08</a>) to begin with.</li>
             <li><strong>Session over.</strong> It is 16:00 ET. Nothing stays open past the window.</li>
           </ol>
+          <p>Every exit, by hand or not, gets a mark in the journal for whether it followed the plan.</p>
+          <div class="definition-box">
+            <div class="definition-term">Execution Mark</div>
+            <div class="definition-text">Pass or Fail, assigned after the exit: did the exit follow the plan? Pass is a target, the planned scale, a pre-set invalidation, the stop, session end, or a Tier One flatten at T−5. Anything else is Fail. Kept separate from the grade so the grade never reads the outcome.</div>
+          </div>
           <div class="definition-box">
             <div class="definition-term">Too Early</div>
             <div class="definition-text">The journal tag for a manual exit taken for any reason other than the four. Its execution mark is Fail, whatever the trade went on to do.</div>
@@ -101,11 +116,16 @@
           <p><strong>Breaking it</strong> reveals a trader who doesn't trust the stop and target they set when they were calm. The trade had a plan; the exit replaced it with a mood. <strong>The fix:</strong> every manual exit gets one of the four reasons written in the journal next to it, chosen from a list. If none fits, the tag is Too Early and the mark is Fail. Count your Too Early exits each week; the number is the measure of this rule.</p>
 
           <h2>Rule 4: The Kill Switch</h2>
+          <p>This rule is counted in R, so the unit comes first.</p>
+          <div class="definition-box">
+            <div class="definition-term">R (Risk Unit)</div>
+            <div class="definition-text">The fixed dollar amount you risk on one trade, chosen before the trade as your base R (Module 14). The stop's distance then sets how many contracts carry that amount. The journal records every outcome in R (2R is twice the risk), so trades of different sizes compare on one scale.</div>
+          </div>
           <div class="definition-box">
             <div class="definition-term">Kill Switch</div>
             <div class="definition-text">Your daily max loss: 2R, twice your fixed base risk per trade. When the day's loss reaches it, trading stops until the next session. It is set at the account level so that it fires whether or not you agree with it.</div>
           </div>
-          <p>The kill switch is stated in R because R is the only unit this course uses. In the setting itself you will type a dollar figure: two times your base risk. Module 03 shows how ticks and points convert to dollars; <a href="14-trade-construction.html">Module 14</a> covers setting the base risk itself. With a fixed base R, the switch fires after two full losing trades, or sooner if fees and slippage push the second one past the line.</p>
+          <p>The kill switch is stated in R because R is the only unit this course uses. In the setting itself you will type a dollar figure: two times your base risk. Module 03 shows how ticks and points convert to dollars; <a href="14-trade-construction.html">Module 14</a> covers setting the base risk itself. With a fixed base R, two full losing trades bring the day to 2R, and the second loss, with fees, lands just past it; that is where the switch fires.</p>
           <p>It is fixed. It is never raised intraday, never "just this once" on a good-looking day, and never adjusted after it fires. There is no ladder of smaller size after a red day, and no mandatory days off after one; the switch ends the session and nothing more. A day away after a hard week is hygiene, not a rule.</p>
 
           <h3>Where The Limit Lives</h3>
@@ -137,9 +157,10 @@
           <h2>Rule 5: The Post-Loss Reset</h2>
           <div class="definition-box">
             <div class="definition-term">Post-Loss Reset</div>
-            <div class="definition-text">The fixed routine run after every losing trade and before any new entry: a physical step to slow down, then three questions answered aloud. If you can't answer them clearly, you are not ready to trade.</div>
+            <div class="definition-text">The fixed routine run after every losing trade and before any new entry: cancel every working entry order, take a physical step to slow down, then answer three questions aloud. If you can't answer them clearly, you are not ready to trade.</div>
           </div>
           <p>The first four rules are enforced by a clock, a calendar and a setting. This one is enforced by you, which is why it comes last. The reset is a short, rehearsed routine, the same every time, so that it runs on a bad day without having to be remembered.</p>
+          <p><strong>The cancel.</strong> Cancel every working entry order before anything else. A resting limit placed before the loss belongs to the trader you were before it; if the setup is still there after the reset, you place it again.</p>
           <p><strong>The physical step.</strong> Feet flat on the floor. One long exhale. Then three or four rounds of box breathing.</p>
           <div class="definition-box">
             <div class="definition-term">Box Breathing</div>
@@ -151,15 +172,15 @@
             <li>Are any setups forming?</li>
             <li>What would need to happen for a setup to present itself?</li>
           </ol>
-          <p>Answer them out loud, in sentences. "Price is back inside yesterday's range, nothing is at a level, I need a test of the PD Low with a trigger" is an answer. "It's going to come back" is not. If you can't answer clearly, you are not ready, and the next trade waits until you can.</p>
+          <p>Answer them out loud, in sentences. "Price is back inside yesterday's range and nothing is at a level; a setup needs acceptance beyond the PD High and a Pause N Go on the pullback" is an answer. "It's going to come back" is not. If you can't answer clearly, you are not ready, and the next trade waits until you can.</p>
           <p>The pattern this rule exists to stop has a name.</p>
           <div class="definition-box">
             <div class="definition-term">Re-entry Loop</div>
             <div class="definition-text">A run of entries taken one after another without a fresh setup, usually starting after the session's first win: each trade comes faster and from further away from a level than the one before.</div>
           </div>
-          <p>The loop usually starts with a win, not a loss. The first trade works, the next feels easy, and the entries start coming from the middle of the range with no trigger. When one of them loses, the next is taken to get it back. There is no cap on the number of trades in this course. The 2R switch is the cap, the reset is the brake before it, and the journal shows you your trade count per session as data, so you can see the loop for yourself.</p>
+          <p>The loop usually starts with a win, not a loss. The first trade wins, the next feels easy, and the entries start coming from the middle of the range with no trigger. When one of them loses, the next is taken to get it back. There is no cap on the number of trades in this course. The 2R switch is the cap, the reset is the brake before it, and the journal shows you your trade count per session as data, so you can see the loop for yourself.</p>
           <p><strong>The rule:</strong> after every loss, the full reset before any new entry.</p>
-          <p><strong>Breaking it</strong> looks like an entry within a minute of a stop-out. What it reveals: the trade came from the last trade, not from the chart. <strong>The fix:</strong> before the next entry after a loss, write the answer to the third question in one line in the journal. A blank line means no trade. Rehearse the reset once on a quiet day this week, with no position on, so that the first time you run it is not the day you need it.</p>
+          <p><strong>Breaking it</strong> looks like an entry within a minute of a stop-out, or a resting order from before the loss left working and filled during the reset. What it reveals: the trade came from the last trade, not from the chart. <strong>The fix:</strong> after a loss, cancel every working entry order first; before the next entry, write the answer to the third question in one line in the journal. A blank line means no trade. Rehearse the reset once on a quiet day this week, with no position on, so that the first time you run it is not the day you need it.</p>
 
           <div class="key-concept">
             <p><strong>Every one of these rules removes a decision from the worst moment to make it.</strong> The window, the news times, the four reasons and the 2R limit are decided before the session; the reset is how you get back to the person who decided them.</p>
@@ -168,16 +189,19 @@
           <h2>Worked Case: One Session, Three Rules Firing</h2>
           <div class="example-box">
             <div class="example-label">Illustration · not a trade record</div>
-            <p>A composite MNQ session, built to show how the rules interact. It belongs to no one. Base risk is 1R per trade; the kill switch is set at 2R at the account level, with the lock on.</p>
-            <p><strong>08:20 ET.</strong> CPI is on today's plan at 08:30, so T−5 is 08:25 and T+2 is 08:32. The trader is long from a pre-marked level with a resting stop, and price is close to the entry. At 08:25 they flatten by hand, at roughly 0R. Reason: Tier One release within 5 minutes. Execution mark: Pass. They take no resting orders into the number.</p>
-            <p><strong>08:32 ET.</strong> Entries are allowed again. Nothing is at a level, so nothing is taken.</p>
-            <p><strong>09:48 ET.</strong> A short at the PD High with a trigger, stop behind the structure. The resting stop fills: −1R. The trade was built to plan, so it gets no negative tag. The trader runs the reset: feet, exhale, four rounds. Aloud: price has reclaimed the high; nothing is forming; a setup would need a pullback to the reclaimed level with a trigger. They write that line in the journal.</p>
-            <p><strong>10:35 ET.</strong> The pullback comes, the trigger fires, and the trader goes long with the stop behind the level. The stop fills: −1R. With fees the day is now just past 2R realized. The account-level limit fires: the account goes liquidation-only, and the risk settings lock until the reset.</p>
-            <p><strong>10:36 ET.</strong> The pull to re-enter is strong; the chart looks as if it is about to go. The trader notes "kill switch, 10:35" in the journal, closes the platform and leaves the desk.</p>
+            <p>A composite MNQ session, built to show how the rules interact. It belongs to no one, and the prices are invented for the arithmetic. Risk per trade is 1R. This plan's base R is $100, so the kill switch is typed into the account as $200, with the lock on. Every stop sits 2 points behind the zone's far edge (<a href="06-what-counts-as-a-level.html">Module 06</a>), and each trade is sized so its stop is exactly 1R: a 10.00-point stop is 40 ticks, $20 a contract, so 5 contracts. Every trade comes from a branch on the day's sheet, which was complete at 07:20.</p>
+            <p><strong>07:58 ET.</strong> The sheet is complete, so the window is open. Level: the pd-high zone, 21,684.00 to 21,690.00. Read: acceptance (<a href="10-trend-continuation.html">Module 10</a>): first touch at 07:32, then the 5-minute bar ending 07:40 closes at 21,694.00, above the zone, within 15 minutes. Trigger: on the pullback, two 1-minute bars hold inside the zone (pause high 21,689.50) with no close below 21,684.00, and the 07:58 bar closes at 21,692.00, above the pause's high. Long 5 at 21,692.00; stop 21,682.00, 10.00 points (1R). Invalidation: a 5-minute close back below 21,684.00. Target: the prior-week-high zone at 21,790.00, 98.00 points away, well past 2:1.</p>
+            <p><strong>08:20 ET.</strong> CPI is on today's plan at 08:30, so T−5 is 08:25 and T+2 is 08:32. Price is close to the entry. At 08:25 the trader flattens by hand at 21,692.50: +0.50 points, +0.05R before fees. Reason: Tier One release within 5 minutes. Execution mark: Pass. No resting orders go into the number.</p>
+            <p><strong>08:32 ET.</strong> Entries are allowed again. The release has pushed price to 21,740.00 and back; nothing is at a level, so nothing is taken. At 09:20 the trader adds the overnight high the release printed to the sheet, as the on-high zone 21,736.00 to 21,740.00, with a failed-breakout branch, before the 09:25 rehearsal.</p>
+            <p><strong>09:48 ET.</strong> Level: the on-high zone, 21,736.00 to 21,740.00. Read: failed breakout (<a href="11-range-rejection.html">Module 11</a>): two 1-minute closes above the far edge, 21,741.25 at 09:43 and 21,742.00 at 09:44, then the 09:45 bar closes back below the near edge at 21,735.50. Trigger: two 1-minute bars hold inside the reclaimed zone (pause low 21,736.25) with no close above 21,740.00, and the 09:48 bar closes at 21,732.00, below the pause's low. Short 5 at 21,732.00; stop 21,742.00, 10.00 points (1R). Invalidation: a 5-minute close above 21,740.00. Target: the top of the pd-high zone, 21,690.00, 42.00 points away, 4.2:1.</p>
+            <p><strong>09:56 ET.</strong> The resting stop fills at 21,742.00: −10.00 points, −1R. The trade was built to plan, so it gets no negative tag; execution mark: Pass. The trader runs the reset: cancels every working entry order (none was working), then feet, exhale, four rounds. Aloud: price has traded above the on-high; nothing is forming; a setup would need acceptance above the on-high zone and a Pause N Go on the pullback. They write that line in the journal.</p>
+            <p><strong>10:35 ET.</strong> Read: acceptance. Price came back into the zone at 10:03, and the 5-minute bar ending 10:15 closes at 21,746.00, above 21,740.00, within 15 minutes of that touch. Trigger: the pullback touches the zone at 10:32; the 10:33 and 10:34 bars hold inside it (low 21,737.50, pause high 21,739.75) with no close below 21,736.00, and the 10:35 bar closes at 21,744.00, above the pause's high. Long 5 at 21,744.00; stop 21,734.00, 10.00 points (1R). Invalidation: a 5-minute close back below 21,736.00. Target: the prior-week-high zone at 21,790.00, 46.00 points away, 4.6:1.</p>
+            <p><strong>10:41 ET.</strong> The stop fills at 21,734.00: −10.00 points, −1R; execution mark: Pass. Before fees the day is −1.95R (+0.05R, −1R, −1R); the fees on fifteen contracts' round turns take it just past 2R realized. The account-level limit fires: the account goes liquidation-only, and the risk settings lock until the reset.</p>
+            <p><strong>10:42 ET.</strong> The pull to re-enter is strong; the chart looks as if it is about to go. The trader notes "kill switch, 10:41" in the journal, closes the platform and leaves the desk.</p>
             <p>That is where the case stops. What price did afterwards is not part of the lesson, and it is not your money.</p>
             <p class="text-muted">Hypothetical illustration. Hypothetical results have inherent limits: they are not actual trading and do not reflect real fills, slippage or the pressure of risk, and no representation is made that any account will achieve similar results.</p>
           </div>
-          <p>Notice what the rules did and didn't do. Neither loss was a mistake: both were planned trades that lost, and the four rules never asked for them to win. The rules fired at 08:25 and at 10:35. The one decision that was the trader's alone was at 10:36, and the lock had already made it for them.</p>
+          <p>Notice what the rules did and didn't do. Neither loss was a mistake: both were planned trades, each with its read and its invalidation written before the entry, and the rules never asked for them to win. The rules fired at 08:25, at 09:56 and at 10:41. The one decision that was the trader's alone was at 10:42, and the lock had already made it for them.</p>
 
           <h2>Which Rule Is Yours To Fix</h2>
           <p>Score each line 2, 1 or 0. A 2 means a mechanism enforces it. A 1 means it is written down and you enforce it by hand. A 0 means neither.</p>
@@ -186,18 +210,18 @@
             <li><strong>Window.</strong> 2: the window is on the plan, with a 15:55 alarm and the platform closed at 16:00. 1: you know the hours. 0: you have traded outside them in the last two weeks.</li>
             <li><strong>News.</strong> 2: today's Tier One times are written with T−5 and T+2, with an alarm. 1: you check the calendar but write nothing down. 0: you have held through a Tier One number in the last month.</li>
             <li><strong>Manual flatten.</strong> 2: every manual exit in your last ten trades carries one of the four reasons or a Too Early tag. 1: some do. 0: none do.</li>
-            <li><strong>Reset.</strong> 2: rehearsed, and the third answer written before every post-loss entry. 1: you do it sometimes. 0: you have never run it.</li>
+            <li><strong>Reset.</strong> 2: rehearsed, working entry orders cancelled and the third answer written before every post-loss entry. 1: you do it sometimes. 0: you have never run it.</li>
           </ol>
           <p><strong>The threshold:</strong> any 0 is fixed before your next session. The kill switch line must score 2 wherever your venue allows it. If yours can't reach 2, it scores 1 and your plan says so in writing. A total under 7 means the rules are a wish, not a system; start with the lowest line.</p>
 
           <h2>Before Your Next Session</h2>
           <div class="apply-now">
             <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
-            <p>Before you trade again, set your daily loss limit at the account level at 2R, with the lock turned on, or confirm that it is already set and locked. If your venue doesn't let you set one, write this line at the top of tomorrow's plan instead: "Kill switch: 2R. At 2R I close the platform." That's the whole assignment.</p>
+            <p>Before you trade again, set your daily loss limit at the account level at 2R, with the lock turned on, or confirm that it is already set and locked. If your venue doesn't let you set one, write this line at the top of tomorrow's plan instead: "Kill switch: 2R. At 2R: close the platform." That's the whole assignment.</p>
           </div>
 
           <h2>Where It Goes Next</h2>
-          <p>Every manual exit you make from now on gets an execution mark in the journal, Pass or Fail, and the four reasons in Rule 3 are the Pass list for exits taken by hand. <a href="12-journaling.html">Module 18, Journaling &amp; Review</a>, teaches the mark and the weekly count of Too Early exits, and shows trade count per session as data, where a re-entry loop shows up as a cluster.</p>
+          <p>Every manual exit you make from now on gets an execution mark in the journal, Pass or Fail, and the four reasons in Rule 3 are the Pass list for exits taken by hand; the full Pass list, a Tier One flatten at T−5 included, is in the execution mark above. <a href="12-journaling.html">Module 18, Journaling &amp; Review</a>, teaches the mark and the weekly count of Too Early exits, and shows trade count per session as data, where a re-entry loop shows up as a cluster.</p>
           <p><a href="03-the-instrument-futures-mechanics.html">Module 03, The Instrument: Futures Mechanics</a>, covers ticks, points and what each one is worth: the arithmetic that turns 2R into the dollar figure you type into the setting above.</p>
 
           <h2>Sources</h2>
@@ -226,7 +250,7 @@
         <div class="module-nav">
           <div class="module-nav-prev">
             <span class="module-nav-label">← Back</span>
-            <a href="01-evidence-standard.html" class="module-nav-title">How We Know What We Know</a>
+            <a href="01-evidence-standard.html" class="module-nav-title">How To Know What You Know</a>
           </div>
           <div class="module-nav-next">
             <span class="module-nav-label">Next Module →</span>

@@ -18,7 +18,7 @@
       "13"
     ],
     "tags": [
-      "Setup"
+      "Trigger"
     ]
   },
   {
@@ -148,7 +148,7 @@
   {
     "term": "Broke Rule",
     "aliases": [],
-    "definition": "The journal tag for breaking a hard rule: an entry outside the trading window, a position held through a Tier One release, a stop widened after entry, or trading past the kill switch.",
+    "definition": "The journal tag for breaking a hard rule: an entry outside the trading window or from 15:55 ET, a position held through a Tier One release or still open at T−5, a stop widened after entry, a new entry with no post-loss reset, or trading past the kill switch.",
     "module": [
       "14"
     ],
@@ -200,7 +200,7 @@
   {
     "term": "Confirmation",
     "aliases": [],
-    "definition": "Order-flow evidence recorded beside a trigger, in the journal's confirmation field: one of the four aggression sub-forms by name, or none. It supports an entry; it never replaces the price event and never changes size.",
+    "definition": "Order-flow evidence recorded beside a trigger, in the journal's confirmation field: none, one or more of the four aggression sub-forms by name, or Trapped Traders on a failed breakdown or breakout. It supports an entry; it never replaces the price event and never changes size.",
     "module": [
       "13"
     ],
@@ -250,8 +250,7 @@
   {
     "term": "Daily Max Loss",
     "aliases": [
-      "DLL",
-      "MLL"
+      "DLL"
     ],
     "definition": "Your loss limit for the day: 2R. Reaching it fires the kill switch. Not the same as a prop firm's Max Loss Limit (MLL), which is an account-level drawdown set by the firm.",
     "module": [],
@@ -327,7 +326,7 @@
   {
     "term": "Displacement",
     "aliases": [],
-    "definition": "An impulse away from a level in the direction of the read, before price comes back to the zone. A resting limit is a trigger only after one. This course does not set its size; you write your own minimum on the plan line and record the size of each one.",
+    "definition": "An impulse away from a level in the direction of the read, before price comes back to the zone. A resting limit is a trigger only after one. This course does not set its size; you write your own minimum once on your PlayBook page and record the size of each one.",
     "module": [
       "13"
     ],
@@ -359,7 +358,7 @@
   {
     "term": "End-Of-Day Routine",
     "aliases": [],
-    "definition": "The fixed routine run within an hour of the 16:00 ET close, on every trading day whatever the result: the chart mark-up, the post-exit fields and execution mark for every trade, and one line on the day.",
+    "definition": "The fixed routine run within an hour of the 16:00 ET close, on every trading day whatever the result: the chart mark-up, the post-exit fields and execution mark for every trade, one line on the day, the screenshot or clip, and the mental close.",
     "module": [
       "17"
     ]
@@ -390,7 +389,7 @@
       "Pass",
       "Fail"
     ],
-    "definition": "Pass or Fail, assigned after the exit: did the exit follow the plan? Pass is a target, the planned scale, a pre-set invalidation, the stop, or session end. Anything else is Fail. Kept separate from the grade so the grade never reads the outcome.",
+    "definition": "Pass or Fail, assigned after the exit: did the exit follow the plan? Pass is a target, the planned scale, a pre-set invalidation, the stop, session end, or a Tier One flatten at T−5. Anything else is Fail. Kept separate from the grade so the grade never reads the outcome.",
     "module": [],
     "tags": [
       "Journal",
@@ -499,7 +498,7 @@
       "24"
     ],
     "tags": [
-      "Setup"
+      "Popular idea"
     ]
   },
   {
@@ -548,7 +547,7 @@
       "short gamma",
       "gamma"
     ],
-    "definition": "Whether dealers, in aggregate, are estimated to be net long options (their hedging leans against moves) or net short (their hedging goes with moves). It describes how price may move, never where or which way. In this course it may weight conviction only; it is never a location, a target or an if-clause.",
+    "definition": "Whether dealers, in aggregate, are estimated to be net long options (their hedging leans against moves) or net short (their hedging goes with moves). It describes how price may move, never where or which way. In this course it is a note beside the counted conviction label and never changes the count; it is never a location, a target or an if-clause.",
     "module": [
       "04"
     ]
@@ -568,7 +567,7 @@
   {
     "term": "Gap Fill",
     "aliases": [],
-    "definition": "The gap setup that aims back at the prior day's range: after a gap up the target is the PD High, after a gap down the PD Low, never the prior close. The entry still needs a named level between the open and the target, a read and a trigger from Module 13.",
+    "definition": "The gap setup that aims back at the prior day's range: after a gap up the target is the PD High, after a gap down the PD Low, never the prior close. It sets the target and the context; a trade on a gap morning is an ordinary setup (Module 10 or 11) at a named level, with a trigger from Module 13.",
     "module": [
       "12"
     ],
@@ -606,7 +605,7 @@
   {
     "term": "Globex (Overnight Session)",
     "aliases": [],
-    "definition": "The electronic trading session for futures that runs outside regular market hours. For MNQ, Globex runs nearly 23 hours a day. The overnight high (ON High) and low (ON Low) from Globex are key levels marked before each regular session. In this course the hours outside RTH are called ETH.",
+    "definition": "CME's electronic trading platform. For MNQ it trades nearly 23 hours a day, RTH included. The overnight high (ON High) and low (ON Low), printed on Globex outside RTH, are key levels marked before each regular session. In this course the hours outside RTH are called ETH.",
     "module": [],
     "tags": [
       "Futures",
@@ -653,7 +652,7 @@
   {
     "term": "In-Session Level",
     "aliases": [],
-    "definition": "A level that forms during the current session, from one of the types on the in-session list. It counts only once it has finished forming, and only if your plan named its type before the session.",
+    "definition": "A level that forms during the current session, from one of the types on the in-session list. It counts only once it has finished forming, and only if your plan named its type before 09:25.",
     "module": [
       "06"
     ]
@@ -725,12 +724,12 @@
   {
     "term": "Level Reclaim",
     "aliases": [],
-    "definition": "A trigger: after price has traded through the zone of a TAXONOMY section 4 level, a 5-minute close back through the whole zone to the side it came from; entry on that close. A close back through anything that is not a section 4 level, such as VWAP or an average, is trigger none.",
+    "definition": "A trigger: after price has traded through the zone of a level from Module 06's list, a 5-minute close back through the whole zone to the side it came from; entry on that close. A close back through anything that is not on that list, such as VWAP or an average, is trigger none.",
     "module": [
       "13"
     ],
     "tags": [
-      "Setup"
+      "Trigger"
     ]
   },
   {
@@ -793,7 +792,7 @@
   {
     "term": "Lookahead",
     "aliases": [],
-    "definition": "Using, in a rule or a test, information that was not available at the moment the order would have gone in, such as a bar's close for an entry at that bar's own price, or a day's type for a trade in its first hour. A rule with lookahead cannot be traded as written.",
+    "definition": "Using, in a rule or a test, information that was not available at the moment the order would have gone in, such as a bar's high for an entry inside that bar, or a day's type for a trade in its first hour. A rule with lookahead cannot be traded as written.",
     "module": [
       "24"
     ],
@@ -908,6 +907,7 @@
     "aliases": [],
     "definition": "The same locked rule run on price paths rebuilt from each session's own 1-minute returns, shuffled within 30-minute blocks. Shuffling destroys any real sequence while keeping the session's volatility. Its average expectancy across many shuffles is the baseline the rule must beat.",
     "module": [
+      "01",
       "22",
       "24"
     ]
@@ -948,7 +948,7 @@
       "24"
     ],
     "tags": [
-      "Setup"
+      "Retired"
     ]
   },
   {
@@ -969,7 +969,7 @@
       "13"
     ],
     "tags": [
-      "Setup"
+      "Trigger"
     ]
   },
   {
@@ -980,7 +980,7 @@
       "PDH",
       "PDL"
     ],
-    "definition": "The highest and lowest prices reached in yesterday's regular trading session. They are pre-marked levels, scoped to RTH: a location on the plan, not a call on which way price will go from it.",
+    "definition": "The highest and lowest prices reached in the prior session's RTH (on a Monday, Friday's). They are pre-marked levels, scoped to RTH: a location on the plan, not a call on which way price will go from it.",
     "module": [],
     "tags": [
       "Key Levels"
@@ -1061,7 +1061,7 @@
     "aliases": [
       "post loss reset"
     ],
-    "definition": "The fixed routine run after every losing trade and before any new entry: a physical step to slow down, then three questions answered aloud. If you can't answer them clearly, you are not ready to trade.",
+    "definition": "The fixed routine run after every losing trade and before any new entry: cancel every working entry order, take a physical step to slow down, then answer three questions aloud. If you can't answer them clearly, you are not ready to trade.",
     "module": [
       "02"
     ],
@@ -1099,10 +1099,9 @@
   {
     "term": "R (Risk Unit)",
     "aliases": [
-      "risk",
-      "reward"
+      "risk"
     ],
-    "definition": "The dollar amount risked on a single trade, based on your stop loss. If your stop is 10 ticks away and each tick is $0.50, your R = $5. The journal records every outcome in R (2R is twice the risk), so trades of different sizes compare on one scale.",
+    "definition": "The fixed dollar amount you risk on one trade, chosen before the trade as your base R (Module 14). The stop's distance then sets how many contracts carry that amount. The journal records every outcome in R (2R is twice the risk), so trades of different sizes compare on one scale.",
     "module": [],
     "tags": [
       "Risk Management"
@@ -1246,7 +1245,7 @@
   {
     "term": "RTH (Regular Trading Hours)",
     "aliases": [],
-    "definition": "For equity index futures, 09:30 to 16:00 ET, the hours of the US cash equity session. Other contracts have their own regular session, listed on their CME spec page. In this course, prior-day levels and settlement are scoped to RTH.",
+    "definition": "For equity index futures, 09:30 to 16:00 ET, the hours of the US cash equity session; this course ends RTH at 16:00 ET by convention, though some platform templates run to 16:15. Other contracts have their own regular session, listed on their CME spec page. In this course, prior-day levels and settlement are scoped to RTH.",
     "module": [
       "03"
     ],
@@ -1291,7 +1290,7 @@
       "24"
     ],
     "tags": [
-      "Setup"
+      "Popular idea"
     ]
   },
   {
@@ -1329,7 +1328,7 @@
   {
     "term": "Short / Going Short",
     "aliases": [],
-    "definition": "Selling a contract you don't own, with the expectation that price will fall, allowing you to buy it back cheaper. You profit when price goes down. In futures, shorting is as easy as going long — no borrowing required.",
+    "definition": "Opening a position by selling, to buy it back lower. You profit when price goes down. In futures, going short is as simple as going long — no borrowing required.",
     "module": [],
     "tags": [
       "Basics"
@@ -1429,7 +1428,7 @@
   {
     "term": "Three Tiers",
     "aliases": [],
-    "definition": "The order every trade traces up through: the idea (what should happen, where it is wrong, and how much stands behind it), the setup (the named location and the read of what price is doing there), and the trigger (the price event at that location). Construction follows the three: level, stop, risk, size, entry. A missing tier lowers the grade at entry and carries its honest tag; Module 14 sets what each grade trades.",
+    "definition": "The order every trade traces up through: the idea (what should happen, where it is wrong, and how much stands behind it), the setup (the named location and the read of what price is doing there), and the trigger (the price event at that location). Construction follows the three: level, stop, risk, size, entry. A missing idea is No Setup; a missing setup or trigger lowers the grade at entry and carries its honest tag; Module 14 sets what each grade trades.",
     "module": [
       "08"
     ]
@@ -1696,7 +1695,7 @@
   {
     "term": "Working Set",
     "aliases": [],
-    "definition": "The short list of setup, location and trigger combinations you actually take, written in the course vocabulary (TAXONOMY slugs). Only a combination on this list may become a trade. Everything else goes to the parking lot.",
+    "definition": "The short list of setup, location and trigger combinations you actually take, written in the course's slugs (the level list in Module 06, the trigger list in Module 13). Only a combination on this list may become a trade. Everything else goes to the parking lot.",
     "module": [
       "23"
     ]
@@ -1709,6 +1708,39 @@
       "06",
       "15",
       "16"
+    ]
+  },
+  {
+    "term": "Session Block",
+    "aliases": [],
+    "definition": "The part of the session a trade's entry falls in: early, mid or late. You write the block times once on your PlayBook page and keep them; the journal records the block on every trade.",
+    "module": [
+      "02"
+    ],
+    "tags": [
+      "Journal"
+    ]
+  },
+  {
+    "term": "Cohort",
+    "aliases": [],
+    "definition": "A group of your own trades that share one or more journal fields, such as a setup, a location or a grade. Its figures are read beside its count: below 30 trades, or below 20 distinct sessions, it is shown dimmed, never hidden.",
+    "module": [
+      "18"
+    ],
+    "tags": [
+      "Journal"
+    ]
+  },
+  {
+    "term": "Edge",
+    "aliases": [],
+    "definition": "A rule's expectancy after costs, above what the same rule earns on a null built from the same data. It belongs to a rule on a record, and you measure it on your own; no page here states one.",
+    "module": [
+      "01"
+    ],
+    "tags": [
+      "Evidence"
     ]
   }
 ]

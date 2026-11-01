@@ -65,7 +65,7 @@
           <p>Nothing is ever delivered. The rulebook says it in six words: "Delivery shall be by cash settlement." At expiry the contract is closed out against a final price for the index and the difference is paid in cash. CME's spec pages list both contracts as "Financially Settled".</p>
           <p class="text-muted">Source: CME Rulebook Chapter 361 (MNQ), Rules 36101, 36102.B and 36103; Chapter 353 (MES), Rules 35301, 35302.B and 35303; CME contract spec pages for MNQ and MES (Contract Unit, Settlement Method). All read 2026-10-05.</p>
           <p><strong>The rule:</strong> before you trade any futures contract, know what it is a multiple of and by how much.</p>
-          <p><strong>Getting it wrong</strong> looks like carrying one contract's arithmetic onto another: two products on the same index, or two indexes that look alike on a chart. What it reveals: you are reading the chart and not the instrument. <strong>The fix:</strong> the contract unit is the first of five lines on a card beside your screen (the assignment at the end of this page). No card, no order.</p>
+          <p><strong>Getting it wrong</strong> looks like carrying one contract's arithmetic onto another: two products on the same index, or two indexes that look alike on a chart. What it reveals: you are reading the chart and not the instrument. <strong>The fix:</strong> a card beside your screen with five lines: the contract unit and its point value; the tick size and tick value; the session hours in ET; the settlement method and when trading in the expiring month stops; and your next roll date. The contract unit is the first line (the assignment at the end of this page). No card, no order.</p>
 
           <h2>Ticks, Points And What They Are Worth</h2>
           <p>Price doesn't move smoothly. It moves in fixed steps, and the step is set by the exchange.</p>
@@ -99,7 +99,7 @@
             </table>
           </div>
           <p class="text-muted">Source: CME Rulebook Chapter 361, Rule 36102.C, and Chapter 353, Rule 35302.C (minimum price increment); CME contract spec pages for MNQ and MES (Minimum Price Fluctuation). Read 2026-10-05. The last two rows are arithmetic on those figures; the 40 ticks and the $100 are example numbers, not a recommended stop or risk.</p>
-          <p><strong>Think in ticks.</strong> The distance from your entry to your stop is a count of ticks. So is how far a trade went against you and for you; the journal records both in ticks. Ticks are the unit that survives a change of contract: 40 ticks is 10 points on MNQ and 10 points on MES. Only the dollars change.</p>
+          <p><strong>Think in ticks.</strong> The distance from your entry to your stop is a count of ticks. So is how far a trade went against you and for you; the journal records both in ticks. Between MNQ and MES, ticks survive the change: 40 ticks is 10 points on both, and only the dollars change. On a contract with a different tick size, such as MYM or M2K in the table below, the same count of ticks is a different distance, so recount from that contract's spec page.</p>
           <p><strong>The conversion.</strong> Three steps, in this order, every time:</p>
           <ol>
             <li><strong>Points to ticks.</strong> Stop distance in points ÷ tick size. On MNQ and MES, points × 4.</li>
@@ -107,6 +107,7 @@
             <li><strong>Dollars to contracts.</strong> Base R ÷ dollars per contract, rounded <em>down</em>.</li>
           </ol>
           <p>Written as one line: contracts = R ÷ (stop ticks × tick value). The same R on the same stop distance is five MNQ or two MES in the table above. That's not a choice between them. It is what the arithmetic says each contract can carry. And rounding is always down: 2.5 contracts is 2, never 3. Rounding up is a small, silent rise in risk on every trade.</p>
+          <p>Size has a fixed place in the chain every trade in this course traces: <strong>idea → setup (location + read) → trigger → construction (level → stop → risk → size → entry)</strong>. Size comes after the stop and the risk, never before them.</p>
           <p><strong>The rule:</strong> size comes from R and stop ticks through the tick value. The order is level, stop, risk, size, entry.</p>
           <p><strong>Getting it wrong</strong> looks like picking the size first (three contracts, every trade) and letting it set the risk, or setting a dollar loss and squeezing the stop until it fits. What it reveals: the size was decided before the structure was read. <strong>The fix:</strong> on every plan, write the stop in ticks before you write the size, and write the size as the result of the formula, with the arithmetic beside it. A size with no arithmetic next to it is not a plan yet.</p>
 
@@ -136,7 +137,7 @@
           <p class="text-muted">Source: CME contract spec pages for MNQ and MES (Trading Hours, CME Globex), read 2026-10-05. Hours are subject to change; CME's current page wins.</p>
           <div class="definition-box">
             <div class="definition-term">RTH (Regular Trading Hours)</div>
-            <div class="definition-text">For equity index futures, 09:30 to 16:00 ET, the hours of the US cash equity session. Other contracts have their own regular session, listed on their CME spec page. In this course, prior-day levels and settlement are scoped to RTH.</div>
+            <div class="definition-text">For equity index futures, 09:30 to 16:00 ET, the hours of the US cash equity session; this course ends RTH at 16:00 ET by convention, though some platform templates run to 16:15. Other contracts have their own regular session, listed on their CME spec page. In this course, prior-day levels and settlement are scoped to RTH.</div>
           </div>
           <div class="definition-box">
             <div class="definition-term">ETH (Extended Trading Hours)</div>
@@ -149,7 +150,7 @@
           <p>It also matches Module 02: the trading window closes at 16:00 ET, and nothing stays open past it. The futures keep trading after 16:00. You don't.</p>
           <p>The practical consequence: your platform and this course may disagree about "yesterday". A platform that uses CME's day, or a session template that runs to 17:00 ET, builds the prior day from different bars than the 09:30 to 16:00 ET session, and its prior-day high or low can be a different price. Neither is wrong. They are different definitions, and you need to know which one you are looking at. Module 06 puts the 16:00 boundary to work on the levels themselves.</p>
           <p><strong>The rule:</strong> every time on your plan is in ET, and your day ends at 16:00 ET.</p>
-          <p><strong>Getting it wrong</strong> looks like an hour-off mistake: a CME time read as ET, or a "prior-day high" that was printed at 16:40. What it reveals: the clock on your screen was trusted without being checked against the definition. <strong>The fix:</strong> set your chart's session template to end at 16:00 ET and keep a full-session template beside it, also ending at 16:00 ET. Write the session hours in ET on your contract card, once, and never copy a CT time onto a plan without converting it.</p>
+          <p><strong>Getting it wrong</strong> looks like an hour-off mistake: a CME time read as ET, or a "prior-day high" that was printed at 16:40. What it reveals: the clock on your screen was trusted without being checked against the definition. <strong>The fix:</strong> set your chart's session template to end at 16:00 ET and keep a full-session template beside it, also ending at 16:00 ET. Write the session hours in ET on your contract card, once, as its third line, and never copy a CT time onto a plan without converting it.</p>
 
           <h2>Settlement, Expiry And The Roll</h2>
           <div class="definition-box">
@@ -213,21 +214,21 @@
           <h2>Worked Case: One R On Two Contracts</h2>
           <div class="example-box">
             <div class="example-label">Illustration · not a trade record</div>
-            <p>A composite plan, built to show the arithmetic. It belongs to no one, and it stops before any outcome. Base risk is 1R per trade. Suppose 1R is $100: a number chosen because it divides easily, not a recommendation. <a href="14-trade-construction.html">Module 14</a> covers choosing yours.</p>
-            <p><strong>The level and the stop.</strong> A long from the PD Low, with the stop behind the far edge of the structure, 20 points below the entry. Twenty points is 80 ticks. The same 80 ticks is used on both contracts below so that only the arithmetic changes. In practice each index has its own structure, and the stop comes from its own chart.</p>
+            <p>A composite plan, built to show the arithmetic. It belongs to no one, and it stops before any outcome. Risk per trade is 1R. Suppose 1R is $100: a number chosen because it divides easily, not a recommendation. <a href="14-trade-construction.html">Module 14</a> covers choosing yours.</p>
+            <p><strong>The level and the stop.</strong> A long from the PD Low zone after a failed breakdown (<a href="11-range-rejection.html">Module 11</a>): two 1-minute closes below the zone, then a 1-minute close back above it, and a Pause N Go from the reclaimed zone. Invalidation: a 5-minute close below the zone's far edge. The stop sits behind that far edge (<a href="06-what-counts-as-a-level.html">Module 06</a>), 20 points below the entry. Twenty points is 80 ticks. The same 80 ticks is used on both contracts below so that only the arithmetic changes. In practice each index has its own structure, and the stop comes from its own chart.</p>
             <p><strong>On MNQ.</strong> 80 ticks × $0.50 = $40 per contract. $100 ÷ $40 = 2.5, rounded down: <strong>2 contracts</strong>, risking $80, which is 0.8R. The half contract is left on the table; rounding up to 3 would risk $120, which is 1.2R.</p>
             <p><strong>On MES.</strong> 80 ticks × $1.25 = $100 per contract. $100 ÷ $100 = <strong>1 contract</strong>, risking exactly 1R.</p>
             <p><strong>Same R, different contracts.</strong> One R is two MNQ or one MES on this stop. Neither is more aggressive. Each is 1R or under, and that is the only thing the size line is for.</p>
             <p><strong>Now the structure is wider.</strong> The far edge is 40 points away, so the stop is 160 ticks. On MNQ: 160 × $0.50 = $80 per contract, so <strong>1 contract</strong>, risking $80. On MES: 160 × $1.25 = $200 per contract, which is more than 1R for a single contract, so <strong>0 contracts</strong>: at this base R there is no MES trade here. You don't raise R to make it fit, and you don't tighten the stop back inside the structure to make it fit.</p>
-            <p>A wider stop cut the size on both contracts. It never raised the risk. On the account's kill switch from Module 02, 2R is 2 × $100 = $200: two full losses of this plan, on either contract.</p>
+            <p>A wider stop cut the size on both contracts. It never raised the risk. On the account's kill switch from Module 02, 2R is 2 × $100 = $200: two full 1R losses reach it. At this plan's MNQ size, 2 contracts risking $80 (0.8R), two losses come to $160 (1.6R), inside it. On MES, 1 contract risking exactly 1R, two losses come to $200 and reach it.</p>
           </div>
           <p>Notice what the case didn't need. No margin figure, no index level, and no view on where price goes next. Size came from three numbers you know before the session: your base R, the stop in ticks, and the tick value.</p>
 
           <h2>Can You Read Your Contract Without Looking?</h2>
           <p>Answer these five for the contract you trade, from memory, then check each against the spec page. Score one point for each answer that matches.</p>
           <ol>
-            <li><strong>Tick value.</strong> What one tick is worth on one contract.</li>
-            <li><strong>Point value.</strong> What one index point is worth on one contract.</li>
+            <li><strong>Contract unit and point value.</strong> What the contract is a multiple of, and what one index point is worth on one contract.</li>
+            <li><strong>Tick size and tick value.</strong> The smallest price step, and what one tick is worth on one contract.</li>
             <li><strong>Session hours.</strong> RTH and the Globex hours, including the daily halt, in ET.</li>
             <li><strong>Settlement method.</strong> How the contract settles at expiry, and when trading in the expiring month stops.</li>
             <li><strong>Next roll date.</strong> The date you will switch to the next contract month.</li>
@@ -237,7 +238,7 @@
           <h2>Before Your Next Session</h2>
           <div class="apply-now">
             <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
-            <p>Open your contract's spec page on CME's site and write five lines on a card: tick size, tick value, RTH hours (09:30 to 16:00 ET in this course; the spec page lists the Globex hours in CT), settlement method, and your next roll date (for equity index futures, CME's Equity Index Roll Dates page lists it: the Monday before the third-Friday expiry; for other contracts, the spec page's Termination of Trading rule sets the date you must be out by). Keep the card beside the screen. That's the whole assignment.</p>
+            <p>Open your contract's spec page on CME's site and write five lines on a card: the contract unit and its point value; the tick size and tick value; the session hours in ET (RTH is 09:30 to 16:00 ET in this course; the spec page lists the Globex hours in CT); the settlement method and when trading in the expiring month stops; and your next roll date (for equity index futures, CME's Equity Index Roll Dates page lists it: the Monday before the third-Friday expiry; for other contracts, check the spec page's termination of trading and, for deliverable contracts such as MGC and M6E, the first notice and first position dates, which come earlier). Keep the card beside the screen. That's the whole assignment.</p>
           </div>
 
           <h2>Where It Goes Next</h2>

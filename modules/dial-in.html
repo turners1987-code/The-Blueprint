@@ -106,7 +106,7 @@
         <div class="options-grid">
           <button class="option-btn" data-q="3" data-profile="newyorker" data-weight="3">
             <span class="option-letter">A</span>
-            <span class="option-text">Trading the Nasdaq — the most talked-about market in the world</span>
+            <span class="option-text">Trading the Nasdaq-100 index futures</span>
           </button>
           <button class="option-btn" data-q="3" data-profile="londoner" data-weight="3">
             <span class="option-letter">B</span>
@@ -172,7 +172,7 @@
           </button>
           <button class="option-btn" data-q="5" data-profile="wanderer" data-weight="3">
             <span class="option-letter">D</span>
-            <span class="option-text">Be profitable across multiple instruments and sessions</span>
+            <span class="option-text">Run one routine across more than one instrument</span>
           </button>
         </div>
         <div class="quiz-nav">
@@ -212,8 +212,8 @@
         </div>
 
         <div class="result-cta">
-          <p>Your path starts with Module 02, The Hard Rules. The framework is the same for every profile — the instruments and sessions are what change.</p>
-          <a href="00-welcome.html" class="btn btn--primary btn--lg">Start The Course →</a>
+          <p>Your path starts with Module 02, The Hard Rules. The framework is the same for every profile — the instruments and sessions are what change. The trading window, 06:00 to 16:00 ET, is the same for every profile too.</p>
+          <a href="02-the-hard-rules.html" class="btn btn--primary btn--lg">Start Module 02 →</a>
           <br>
           <button class="retake-btn" onclick="resetQuiz()">↺ Retake</button>
         </div>
@@ -247,7 +247,7 @@
     const profiles = {
       newyorker: {
         name: 'New Yorker',
-        tagline: 'The world\'s most liquid session. The full Blueprint. Your time.',
+        tagline: 'The regular session. The full Blueprint. Your time.',
         session: '9:30am–4pm ET. The NY open and the regular session.',
         path: 'Start with Module 02, The Hard Rules. The framework is illustrated on MNQ and written to carry across futures.',
         instruments: ['MNQ', 'MES', 'MGC', 'MCL'],
@@ -256,27 +256,27 @@
       },
       londoner: {
         name: 'Londoner',
-        tagline: 'Early hours. European momentum. Gold and forex when the world wakes up.',
-        session: '3am–12pm ET. London open into the London/NY overlap — the highest forex liquidity window on earth.',
+        tagline: 'Early hours. European momentum. Gold and currency futures when the world wakes up.',
+        session: '3am–12pm ET. London open into the London/NY overlap. Whatever the profile, the course allows execution only from 06:00 to 16:00 ET (Module 02, The Hard Rules). Before 06:00 is for building levels, not trading.',
         path: 'Start with Module 02, The Hard Rules. The framework is illustrated on MNQ and written to carry across futures.',
         instruments: ['MGC', '6E', '6B', 'MCL'],
-        warning: 'Spreads are wider early. Do not trade the first 5 minutes of London open until you understand what you\'re watching.',
+        warning: 'Spreads are wider early. The London open at 03:00 ET falls outside the course window, which opens at 06:00 ET.',
         className: 'profile-londoner'
       },
       ghost: {
         name: 'Ghost',
         tagline: 'You trade while the world sleeps. Crypto. Oil. Gold. No closing bell.',
-        session: 'Nights and weekends. Globex reopens Sunday 5pm ET. CME crypto goes 24/7 from May 29, 2026.',
+        session: 'Nights and weekends. Globex reopens Sunday 6pm ET. CME crypto futures trade 24/7 (with maintenance breaks) since May 29, 2026; of the contracts below, only MBT and MET trade on weekends. Whatever the profile, the course allows execution only from 06:00 to 16:00 ET (Module 02, The Hard Rules).',
         path: 'Start with Module 02, The Hard Rules. The framework is illustrated on MNQ and written to carry across futures.',
         instruments: ['MBT', 'MET', 'MCL', 'MGC'],
-        warning: 'Crypto has no circuit breakers, no halts, no Fed. News hits any time. Size down and use wider stops than you think you need.',
+        warning: 'News hits any time. Stops, size and the trading window follow Module 02, The Hard Rules, whatever the market.',
         className: 'profile-ghost'
       },
       wanderer: {
         name: 'Wanderer',
         tagline: 'Every session. Every instrument. You go where the opportunity is.',
-        session: 'All sessions — you rotate based on what\'s open and active.',
-        path: 'Work through the framework on MNQ first. Add one session at a time rather than trading everything at once.',
+        session: 'All sessions — you rotate based on what\'s open and active. Whatever the profile, the course allows execution only from 06:00 to 16:00 ET (Module 02, The Hard Rules).',
+        path: 'Start with Module 02, The Hard Rules. The framework is illustrated on MNQ and written to carry across futures.',
         instruments: ['MNQ', 'MGC', '6E', 'MBT'],
         warning: 'Learn one instrument before adding another. Trading everything inconsistently makes results hard to read.',
         className: 'profile-wanderer'

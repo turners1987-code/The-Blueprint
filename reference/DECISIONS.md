@@ -68,6 +68,9 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D64 — Opening range: the reader sets the window once and keeps it; the course's examples use 09:30–09:45 ET. OR high/low are locations only after the window closes.
 - D65 — Stop distance behind the far edge: written once per PlayBook page, in ticks, and used on every trade from that page; the course's examples use 2 points. The stop floor is per page and per session block, derived from the reader's own adverse-excursion record (Module 23); the course publishes no floor figure.
 - D66 — In-page mechanics accepted (Modules 11, 13): the failed-breakdown/breakout reclaim is a 1-minute close back through the level, and its stop sits behind the reclaimed zone's far edge; displacement size, and the 9 EMA's timeframe, are written once on the reader's PlayBook page (the course's examples use 20 points and the 1-minute chart); a Level Reclaim's stop sits behind the extreme of the move through the zone.
+- D67 — Gap Fill teaches the target (the PD range edge) and the context. A trade on a gap morning is an ordinary setup — acceptance (Module 10) or failed breakdown/breakout with reclaim (Module 11) — at a named level with a Module 13 trigger, aimed at the PD range edge. No page calls it "the Gap Fill entry".
+- D68 — Every worked-case trade names its read (acceptance per Module 10, or two 1-minute closes beyond plus a reclaim per Module 11) and its invalidation price. A trigger at a range extreme with no read named is a fade and is not shown as a trade (D27).
+- D69 — Modules 18 and 19 are rebuilt on the MODULE_STANDARD spine, keeping their file paths, their existing teaching (18: grade at entry, execution mark, weekly review with the display floor; 19: the eight habits as body items) and the journal's fields.
 
 ### Still open
 - none.
