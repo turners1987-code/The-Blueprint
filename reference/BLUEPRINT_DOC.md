@@ -212,10 +212,10 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | --- | --- | --- | --- | --- |
 | 00 | Welcome & Orientation | Start | free | published |
 | 01 | How We Know What We Know | Start | free | published |
-| 02 | The Hard Rules | Rules Before Reps | free | planned |
-| 03 | The Instrument: Futures Mechanics | Rules Before Reps | free | planned |
+| 02 | The Hard Rules | Rules Before Reps | free | published |
+| 03 | The Instrument: Futures Mechanics | Rules Before Reps | free | published |
 | 04 | Who Is Forced To Trade | Why Price Moves | paid | planned |
-| 05 | The Auction | Why Price Moves | paid | planned |
+| 05 | The Auction | Why Price Moves | paid | published |
 | 06 | What Counts As A Level | Why Price Moves | paid | planned |
 | 07 | Reading Order Flow | Why Price Moves | paid | planned |
 | 08 | The Three Tiers | The Blueprint | paid | planned |
@@ -225,18 +225,18 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | 12 | The Gap Setups | The Blueprint | paid | planned |
 | 13 | Triggers | The Blueprint | paid | planned |
 | 14 | Trade Construction | The Blueprint | paid | planned |
-| 15 | Writing The Plan | The Blueprint | paid | planned |
-| 16 | The Pre-Market Routine | Process | free | planned |
-| 17 | The Session And The Close | Process | free | planned |
+| 15 | Writing The Plan | The Blueprint | paid | published |
+| 16 | The Pre-Market Routine | Process | free | published |
+| 17 | The Session And The Close | Process | free | published |
 | 18 | Journaling & Review | Process | free | published |
 | 19 | Toothbrush Therapy | Process | free | published |
-| 20 | The Trader's Mind | Process | free | planned |
-| 21 | Reading A Probability | Evidence | paid | planned |
-| 22 | How To Test An Edge | Evidence | paid | planned |
-| 23 | Building Your Own PlayBook | Capstone | paid | planned |
+| 20 | The Trader's Mind | Process | free | published |
+| 21 | Reading A Probability | Evidence | paid | published |
+| 22 | How To Test An Edge | Evidence | paid | published |
+| 23 | Building Your Own PlayBook | Capstone | paid | published |
 | 24 | How Ideas Fail A Test | Capstone | paid | planned |
 
-Four are written: 00, 01, 18 (Journaling & Review, file modules/12-journaling.html) and 19 (Toothbrush Therapy, file modules/13-toothbrush-therapy.html). Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
+Fourteen are written: 00, 01, 02, 03, 05, 15, 16, 17, 18 (Journaling & Review, file modules/12-journaling.html), 19 (Toothbrush Therapy, file modules/13-toothbrush-therapy.html), 20, 21, 22 and 23. Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
 
 Also published outside the numbered course: Dial In, the card deck, the glossary.
 

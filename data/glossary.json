@@ -8,11 +8,35 @@
     ]
   },
   {
+    "term": "Adverse Excursion (MAE)",
+    "aliases": [],
+    "definition": "How far price went against a trade or an occurrence before it ended, measured from the entry price, as a positive number of ticks. The journal records it as mae_ticks on every trade.",
+    "module": [
+      "23"
+    ]
+  },
+  {
     "term": "Balance",
     "aliases": [],
     "definition": "An auction rotating around an agreed price, inside edges both sides defend. Value areas overlap from one session to the next. The profile is wide in the middle and thin at the edges.",
     "module": [
       "05"
+    ]
+  },
+  {
+    "term": "Base R",
+    "aliases": [],
+    "definition": "The fixed amount you risk on a full-size trade, chosen once from your account and the losing run you can sit through. Every result is measured in it. It does not rise after a good week or fall after a bad one; it changes only at a scheduled review, written as a new line on the page.",
+    "module": [
+      "23"
+    ]
+  },
+  {
+    "term": "Base Rate",
+    "aliases": [],
+    "definition": "How often an outcome happened across every case in a closed, dated data set, with no condition applied: the count of cases where it happened divided by the count of cases. It describes that set. It is not a forecast for the next session.",
+    "module": [
+      "21"
     ]
   },
   {
@@ -46,11 +70,35 @@
     ]
   },
   {
+    "term": "CANDIDATE",
+    "aliases": [],
+    "definition": "A label for an entry in your own register: the rule beats its null and is stable across both halves, every year and the recent stretch, but has not yet met the thresholds of both gates.",
+    "module": [
+      "22"
+    ]
+  },
+  {
     "term": "Chart Mark-Up",
     "aliases": [],
     "definition": "A written pass over the day's chart, level by level: what price did at each marked level, what you did there, and, for every trade you exited, whether price reached the planned target after your exit.",
     "module": [
       "17"
+    ]
+  },
+  {
+    "term": "Conditional Probability",
+    "aliases": [],
+    "definition": "The same count taken only over the cases that meet a stated condition, such as where the session opened. It always carries its condition and its own, smaller sample size, and it is only usable if the condition can be checked at the moment you would use the number.",
+    "module": [
+      "21"
+    ]
+  },
+  {
+    "term": "Confidence Interval",
+    "aliases": [],
+    "definition": "The range of true rates that could plausibly have produced the count you observed, at a stated confidence (usually 95%). It is how wide the error around a rate is. It narrows as n grows, roughly with the square root of n: four times the sample, half the width.",
+    "module": [
+      "21"
     ]
   },
   {
@@ -93,6 +141,14 @@
     "tags": [
       "Footprint",
       "Order Flow"
+    ]
+  },
+  {
+    "term": "Display Floor",
+    "aliases": [],
+    "definition": "The journal analysis rule that any cohort (a group of trades sharing a field such as setup or trigger) below 30 trades, or below 20 distinct sessions, is shown dimmed with a warning. Dimmed means visible but marked as not yet a sample. It is never hidden, and clearing the floor is a minimum for reading a cohort, not a verdict on it.",
+    "module": [
+      "21"
     ]
   },
   {
@@ -147,6 +203,15 @@
     ]
   },
   {
+    "term": "Expectancy",
+    "aliases": [],
+    "definition": "The average result per trade in R: win % × average win − loss % × average loss. It is the one number that combines how often a rule wins with how much it wins and loses.",
+    "module": [
+      "21",
+      "22"
+    ]
+  },
+  {
     "term": "Far Edge",
     "aliases": [],
     "definition": "The edge of a zone on the far side from where price arrives. For a level above current price it is the top of the zone; for a level below, the bottom. The stop goes behind it.",
@@ -198,6 +263,22 @@
     "module": [],
     "tags": [
       "Price Action"
+    ]
+  },
+  {
+    "term": "Gate 1 (Market Data)",
+    "aliases": [],
+    "definition": "The test of a locked rule on historical market data. It passes at n of at least 100 trades, beating a volatility-preserving null, positive in both halves and in each calendar year, plus a 2023–2026 recency check, reported in R with n, win %, expectancy and the null's expectancy.",
+    "module": [
+      "22"
+    ]
+  },
+  {
+    "term": "Gate 2 (Own Execution)",
+    "aliases": [],
+    "definition": "The test of your own live trades of a rule. It passes at n of at least 30 live trades, across at least 20 distinct sessions, with expectancy of at least +0.3R after commissions. Sim trades never count toward it.",
+    "module": [
+      "22"
     ]
   },
   {
@@ -278,6 +359,14 @@
     ]
   },
   {
+    "term": "KILLED",
+    "aliases": [],
+    "definition": "A label for an entry in your own register: the rule failed its test. The entry keeps the reason it failed and a reopen condition, so it is never re-run blind and never stays dead by accident.",
+    "module": [
+      "22"
+    ]
+  },
+  {
     "term": "Level Alert",
     "aliases": [],
     "definition": "A sound-on alert set on a marked zone before the session. Each zone carries two: one at the edge price will reach first, which calls you to the screen, and one at the far edge, which tells you price has traded through the whole zone.",
@@ -306,6 +395,14 @@
     "tags": [
       "Hard Rules",
       "Risk Management"
+    ]
+  },
+  {
+    "term": "Locked Rule",
+    "aliases": [],
+    "definition": "A rule written in full, and dated, before the data that tests it is opened: rule, entry, stop, target and window in one paragraph, plus costs and the null. Any change after the data is seen is a new rule with a new register entry.",
+    "module": [
+      "22"
     ]
   },
   {
@@ -391,6 +488,14 @@
     ]
   },
   {
+    "term": "Null (Block-Shuffled Null)",
+    "aliases": [],
+    "definition": "The same locked rule run on price paths rebuilt from each session's own 1-minute returns, shuffled within 30-minute blocks. Shuffling destroys any real sequence while keeping the session's volatility. Its average expectancy across many shuffles is the baseline the rule must beat.",
+    "module": [
+      "22"
+    ]
+  },
+  {
     "term": "Open Type",
     "aliases": [],
     "definition": "A name for how price behaved in the first minutes after the 09:30 open. It describes those minutes only. It is vocabulary, never a call for the rest of the day.",
@@ -405,6 +510,14 @@
     "module": [],
     "tags": [
       "Setup"
+    ]
+  },
+  {
+    "term": "Parking Lot",
+    "aliases": [],
+    "definition": "The dated list in your PlayBook of ideas you are not trading: setups you saw elsewhere, variations, filters, new levels. An idea leaves the parking lot only at a scheduled review, and only into your register, never straight onto a page.",
+    "module": [
+      "23"
     ]
   },
   {
@@ -427,6 +540,22 @@
     "definition": "What you write before a session: one or more branches and a nothing case. It says what you will do at each place price can go. It never says where price will go.",
     "module": [
       "15"
+    ]
+  },
+  {
+    "term": "PlayBook",
+    "aliases": [],
+    "definition": "Your own written book of trades: one page per setup you actually take, each with the same fixed fields, plus a parking lot for everything else. It describes what you do at a level, never where price will go.",
+    "module": [
+      "23"
+    ]
+  },
+  {
+    "term": "PlayBook Page",
+    "aliases": [],
+    "definition": "One page of your PlayBook for one working-set line, filled in with the same nine fields every time: name, location, read, trigger, construction, invalidation, worked composite, status in your register, and last review date. A page with an empty field is a draft, not a page.",
+    "module": [
+      "23"
     ]
   },
   {
@@ -521,11 +650,44 @@
     ]
   },
   {
+    "term": "Register (Hypothesis Register)",
+    "aliases": [],
+    "definition": "Your own written list of trading ideas under test. Each entry carries a number, the locked rule paragraph, the date it was locked, its test results in R, its gate results, its label and, if it failed, the reason and a reopen condition.",
+    "module": [
+      "22"
+    ]
+  },
+  {
+    "term": "Register Entry",
+    "aliases": [],
+    "definition": "One numbered, dated page in your own register for one idea: the rule as locked before any data was opened, the null it is tested against, its status, its n (live and sim shown apart), and its reopen condition if it failed. A change to the rule is a new entry, never an edit.",
+    "module": [
+      "23"
+    ]
+  },
+  {
+    "term": "Register Status",
+    "aliases": [],
+    "definition": "The label your own register gives one of your ideas, from your own tests. Untested: written, not yet run against data. Watch: positive but unstable, or too few occurrences. Candidate: the rule beats its null and is stable across both halves, every year and the recent stretch, but has not yet met the thresholds of both gates. Validated: passed both of your gates. Killed: failed, with its reason and reopen condition written. It describes your record of your idea, nothing else.",
+    "module": [
+      "23"
+    ]
+  },
+  {
     "term": "Rehearsal",
     "aliases": [],
     "definition": "Running the written plan once, aloud, before the open: the idea at its level, the trigger, the stop, the stop filling, the post-loss reset and the kill switch. A practised step, the same every day, not a hope about the session.",
     "module": [
       "16"
+    ]
+  },
+  {
+    "term": "Reopen Condition",
+    "aliases": [],
+    "definition": "The specific new evidence or new rule that would justify testing a failed idea again, written into its register entry at the moment it fails. A reopened idea is a new entry, tested from scratch.",
+    "module": [
+      "22",
+      "23"
     ]
   },
   {
@@ -553,6 +715,14 @@
     "tags": [
       "Futures",
       "Session"
+    ]
+  },
+  {
+    "term": "Sample Size (n)",
+    "aliases": [],
+    "definition": "The number of independent cases a rate was counted on. A rate means little without it, and every rate on a page, in a plan or in a review is written with its n beside it.",
+    "module": [
+      "21"
     ]
   },
   {
@@ -593,6 +763,14 @@
     "definition": "The check a plan line has to pass: after the session, with only the line and the chart, you can mark the bar where it triggered and the price where it ended without guessing. A line that fails is not a plan line.",
     "module": [
       "15"
+    ]
+  },
+  {
+    "term": "Stop Floor",
+    "aliases": [],
+    "definition": "The smallest stop distance, in ticks, that one of your pages will accept, derived from your own adverse-excursion record for that page and session block. The stop goes behind the far edge first; if the far edge is closer than the floor, the stop goes out to the floor and size falls.",
+    "module": [
+      "23"
     ]
   },
   {
@@ -672,6 +850,14 @@
     ]
   },
   {
+    "term": "Touch Rate",
+    "aliases": [],
+    "definition": "The share of sessions in which price reached a line at any point in a stated window, counted from a stated start such as the open. It says nothing about the order of events, where an entry sat, or whether a stop was hit first.",
+    "module": [
+      "21"
+    ]
+  },
+  {
     "term": "Trading Window",
     "aliases": [
       "focus block"
@@ -701,6 +887,14 @@
     ]
   },
   {
+    "term": "UNTESTED",
+    "aliases": [],
+    "definition": "A label for an entry in your own register: the rule is written and locked, and has not yet been run against data.",
+    "module": [
+      "22"
+    ]
+  },
+  {
     "term": "VAH / VAL (Value Area High / Low)",
     "aliases": [
       "VAH",
@@ -715,6 +909,14 @@
     "tags": [
       "Volume Profile",
       "Key Levels"
+    ]
+  },
+  {
+    "term": "VALIDATED",
+    "aliases": [],
+    "definition": "A label for an entry in your own register: the rule has passed both gates, Gate 1 on market data and Gate 2 on your own live trades.",
+    "module": [
+      "22"
     ]
   },
   {
@@ -741,6 +943,30 @@
     "tags": [
       "Indicator",
       "Key Level"
+    ]
+  },
+  {
+    "term": "WATCH",
+    "aliases": [],
+    "definition": "A label for an entry in your own register: the rule has been run and is positive, but unstable across halves or years, or rests on too few trades to read.",
+    "module": [
+      "22"
+    ]
+  },
+  {
+    "term": "Working Default",
+    "aliases": [],
+    "definition": "A setting you start from because you need one, not because a test chose it. For the footprint stacked-imbalance read, the course's working default is ratio 5 and minimum delta 15, chosen for screen clarity. You replace it with your own setting, derived from your own record.",
+    "module": [
+      "23"
+    ]
+  },
+  {
+    "term": "Working Set",
+    "aliases": [],
+    "definition": "The short list of setup, location and trigger combinations you actually take, written in the course vocabulary (TAXONOMY slugs). Only a combination on this list may become a trade. Everything else goes to the parking lot.",
+    "module": [
+      "23"
     ]
   },
   {

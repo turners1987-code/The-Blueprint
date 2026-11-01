@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading A Probability — The Blueprint</title>
+  <meta name="description" content="Module 21 of The Blueprint: how to read a trading statistic before you lean on it. Base rate versus conditional probability, why fifteen observations are noise, a confidence interval in plain words, why a touch rate is not an edge, why a figure belongs only to the level and window it was measured on, and why the journal dims small cohorts.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Reading A Probability — The Blueprint">
+  <meta property="og:description" content="Module 21 of The Blueprint: how to read a trading statistic before you lean on it. Base rate versus conditional probability, why fifteen observations are noise, a confidence interval in plain words, why a touch rate is not an edge, why a figure belongs only to the level and window it was measured on, and why the journal dims small cohorts.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/modules/21-reading-a-probability.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="module-page" id="main-content" tabindex="-1" data-gate="tier">
+
+    <!-- MODULE HEADER -->
+    <header class="module-header">
+      <div class="container">
+        <div class="module-meta">
+          <span class="module-number">MODULE 21</span>
+          <span class="badge badge--cyan">Evidence</span>
+        </div>
+        <h1>Reading A <span class="text-gold">Probability</span></h1>
+        <p class="lead mt-md">A probability is not a statement about the next session: it is a count taken from a dated set of past sessions, and until you can name that set, the count tells you nothing you can trade.</p>
+        <div class="copy-page" data-copy-page>
+          <button type="button" class="btn btn--ghost btn--sm copy-page-btn" data-copy-page-btn aria-describedby="copy-page-hint">Copy for your AI</button>
+          <button type="button" class="copy-page-download" data-copy-page-download>Download .md</button>
+          <span class="copy-page-hint" id="copy-page-hint" role="tooltip">Copies this lesson as Markdown to paste into any AI assistant</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MODULE BODY -->
+    <div class="module-body">
+      <div class="container">
+        <nav class="module-toc" data-module-toc aria-label="On this page"></nav>
+
+        <div class="lesson-content">
+
+
+          <h2>A Number Without Its Labels</h2>
+          <p>You have read a line like "price comes back to this level most days" with a percentage beside it, and felt the trade get easier. The number did the work your plan was supposed to do. It made a location feel safer, a stop feel optional, a target feel certain. Then the trade lost, and the number was still true, because it was never about your trade.</p>
+          <p>This page is about reading a statistic before it reaches your plan: yours from the journal, or one published by someone else. Every figure has a set it was counted on, a condition, a sample size, a range of error, a thing it counts and a window it was measured in. Strip any of those off and what is left is a feeling with a percent sign.</p>
+          <p>There are seven parts. The first six are mechanical: base rate against conditional, sample size, the interval, touch rate against expectancy, level and window, and the journal's display floor. The last is the hard one: a rate describes a set, and the trade in front of you is one draw from it. Nothing on this page reports a result for any rule in this course. Every number shown is either a made-up set you can rebuild yourself or a published base rate cited by name, with its n.</p>
+
+          <h2>Base Rate Or Conditional Probability</h2>
+          <div class="definition-box">
+            <div class="definition-term">Base Rate</div>
+            <div class="definition-text">How often an outcome happened across every case in a closed, dated data set, with no condition applied: the count of cases where it happened divided by the count of cases. It describes that set. It is not a forecast for the next session.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Conditional Probability</div>
+            <div class="definition-text">The same count taken only over the cases that meet a stated condition, such as where the session opened. It always carries its condition and its own, smaller sample size, and it is only usable if the condition can be checked at the moment you would use the number.</div>
+          </div>
+          <p>Take a made-up set of 200 sessions and one line on the chart. Price touched the line in 120 of them. That is the base rate: 60%. Now split the set by something you know at 09:30, where the session opened.</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Which sessions</th><th scope="col">Touched the line</th><th scope="col">Rate</th><th scope="col">Kind of number</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>All 200</td><td>120</td><td>60%</td><td>Base rate</td></tr>
+                <tr><td>Opened above the line (80)</td><td>64</td><td>80%</td><td>Conditional</td></tr>
+                <tr><td>Opened below the line (120)</td><td>56</td><td>47%</td><td>Conditional</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted">Made-up data for illustration. Not a market statistic.</p>
+          <p>Three things happened when the condition went on. The number changed. The sample shrank, from 200 to 80 and 120. And a question appeared that the base rate never had to answer: can you know the condition in time? Where the session opened is known at 09:30. "Sessions where the high was set before 10:00" is known only after 10:00, so a rate conditioned on it is hindsight if you use it at the open. Conditions also age: a rate that was true at the open has a different denominator by 11:00, because the sessions that already resolved are no longer in it.</p>
+          <p><strong>The rule:</strong> every number carries its condition and its own n, and you use a conditional rate only when its condition is known at the moment you would use it.</p>
+          <p><strong>Getting it wrong</strong> looks like quoting the 80% without the 80 sessions, or using a rate conditioned on something that has not happened yet. What it reveals: you are reading the headline and not the denominator, so the number feels more certain the more you cut it, which is the opposite of what cutting does. <strong>The fix:</strong> write every rate as a fraction with its condition and the time the condition is known: "64 of 80, opened above, known 09:30". If you cannot fill in the time, the number does not go on the plan.</p>
+
+          <h2>Why Fifteen Is Noise</h2>
+          <div class="definition-box">
+            <div class="definition-term">Sample Size (n)</div>
+            <div class="definition-text">The number of independent cases a rate was counted on. A rate means little without it, and every rate on a page, in a plan or in a review is written with its n beside it.</div>
+          </div>
+          <p>Here are ten runs of fifteen flips of a fair coin, generated for this page. The coin has no edge. Every run has the same true rate: 50%.</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Run</th><th scope="col">Flips</th><th scope="col">Heads of 15</th><th scope="col">Heads rate</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>HHHHHTTHHTHHTHH</td><td>11</td><td>73%</td></tr>
+                <tr><td>2</td><td>THTTHHHTHHTTTTT</td><td>6</td><td>40%</td></tr>
+                <tr><td>3</td><td>HHHHTHHTTTHTTTT</td><td>7</td><td>47%</td></tr>
+                <tr><td>4</td><td>HHHHTHTHHTTHHHH</td><td>11</td><td>73%</td></tr>
+                <tr><td>5</td><td>TTHTHTTHHHHTTTH</td><td>7</td><td>47%</td></tr>
+                <tr><td>6</td><td>HHHTHHHTHHTTHHT</td><td>10</td><td>67%</td></tr>
+                <tr><td>7</td><td>HHTTTTHHTHTHTTH</td><td>7</td><td>47%</td></tr>
+                <tr><td>8</td><td>TTHTHHTTHTHTTTT</td><td>5</td><td>33%</td></tr>
+                <tr><td>9</td><td>TTHTHHHHTHTHTHT</td><td>8</td><td>53%</td></tr>
+                <tr><td>10</td><td>HHHTHHHHTTTTHTH</td><td>9</td><td>60%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted">Simulated fair-coin flips, made for illustration. Flip a coin fifteen times yourself and you will get different rows with the same spread.</p>
+          <p>The same coin produced 33% and 73%. If each run were fifteen trades of a new idea, run 1 would look like a find and run 8 would look like something to throw away, and both would be the same coin. This is not bad luck in the table. It is what fifteen does. Worked exactly from the binomial distribution, a fair coin lands on 10 or more heads in 15 flips 15.1% of the time, and on 5 or fewer another 15.1%: about three runs in every ten look like a 67%-or-better pattern or a 33%-or-worse one, from a coin that has neither.</p>
+          <p>Trades are noisier than coins, not cleaner. Trades from the same session share that session's conditions, so fifteen trades from three mornings are closer to three observations than to fifteen.</p>
+          <p><strong>The rule:</strong> a rate counted on fewer cases than the journal's display floor is read as a count, never as a rate, and never changes a rule.</p>
+          <p><strong>Getting it wrong</strong> looks like dropping an idea after its first fifteen trades, or raising your belief in one because it started 11 for 15. What it reveals: you are reading noise as a verdict, so your rules change with the weather and you never collect a sample large enough to tell you anything. <strong>The fix:</strong> write n before the percentage, every time, in that order: "n=15, 73%". In your review, any line with n under the floor gets no decision column.</p>
+
+          <h2>The Interval Around The Rate</h2>
+          <div class="definition-box">
+            <div class="definition-term">Confidence Interval</div>
+            <div class="definition-text">The range of true rates that could plausibly have produced the count you observed, at a stated confidence (usually 95%). It is how wide the error around a rate is. It narrows as n grows, roughly with the square root of n: four times the sample, half the width.</div>
+          </div>
+          <p>A rate is a point. The interval says how far that point could be from the truth. In plain words: if you saw 9 of 15, the honest reading is "somewhere from about 36% to 80%", and any true rate inside that range would produce 9 of 15 often enough that you cannot rule it out.</p>
+          <p>The simplest version is the normal approximation: rate ± 1.96 × √(rate × (1 − rate) ÷ n). It is easy to do in your head and misbehaves at small n and near 0% or 100%. The Wilson score interval behaves better at small n, and it is the one in the table below. With p the observed rate, n the sample size and z = 1.96 for 95%:</p>
+          <p><strong>Wilson interval</strong> = ( p + z²/2n ± z × √( p(1 − p)/n + z²/4n² ) ) ÷ ( 1 + z²/n )</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Count</th><th scope="col">Observed rate</th><th scope="col">Normal approximation</th><th scope="col">Wilson 95% interval</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>9 of 15</td><td>60%</td><td>± 24.8 points</td><td>35.7% to 80.2%</td></tr>
+                <tr><td>18 of 30</td><td>60%</td><td>± 17.5 points</td><td>42.3% to 75.4%</td></tr>
+                <tr><td>60 of 100</td><td>60%</td><td>± 9.6 points</td><td>50.2% to 69.1%</td></tr>
+                <tr><td>300 of 500</td><td>60%</td><td>± 4.3 points</td><td>55.6% to 64.2%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted">Computed from the formulas above. Same observed rate in every row; only n changes.</p>
+          <p>Read the rows down. The rate never moves. What moves is how much it means. At n=15, the interval runs from worse than a coin to four in five. At n=500 it is a few points either side. Now compare two slices from a small sample: 9 of 15 against 6 of 15 looks like 60% against 40%, a twenty-point gap. Their intervals are 35.7% to 80.2% and 19.8% to 64.3%. Most of each range sits inside the other. Those counts do not show that the two slices differ.</p>
+          <p>If you keep your review in a spreadsheet, the lower bound for a rate in cell A1 and its n in B1 is one cell:</p>
+          <p><code>=(A1+1.96^2/(2*B1)-1.96*SQRT(A1*(1-A1)/B1+1.96^2/(4*B1^2)))/(1+1.96^2/B1)</code></p>
+          <p>Change the minus before the 1.96*SQRT to a plus for the upper bound.</p>
+          <p><strong>The rule:</strong> read a rate as its interval, and treat two rates whose intervals overlap heavily as not shown to differ.</p>
+          <p><strong>Getting it wrong</strong> looks like ranking setups or time blocks by their point rates and picking the top one. What it reveals: you are choosing the slice that looks best, and at small n the best-looking slice is mostly the luckiest one. <strong>The fix:</strong> put the interval in the column beside every rate in your review, and write the lower bound first, so the first number your eye lands on is the pessimistic one.</p>
+
+          <h2>A Touch Rate Is Not An Edge</h2>
+          <div class="definition-box">
+            <div class="definition-term">Touch Rate</div>
+            <div class="definition-text">The share of sessions in which price reached a line at any point in a stated window, counted from a stated start such as the open. It says nothing about the order of events, where an entry sat, or whether a stop was hit first.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Expectancy</div>
+            <div class="definition-text">The average result per trade in R: win % × average win − loss % × average loss. It is the one number that combines how often a rule wins with how much it wins and loses.</div>
+          </div>
+          <p>A line that price reaches in most sessions is easy to read as a line that pulls price toward it, and from there as a reason to be in a trade toward it. The touch rate supports neither. It counts whether price got there at all, at any time in the window, including on the sessions where your stop was taken first and price reached the line afterwards without you.</p>
+          <p>A made-up set of 100 trades shows the gap. The target line is touched in 65 of the 100 sessions. The entry sits in the middle of the range, so the nearest structure for the stop is 40 points away, while the target is 20 points away: the target is worth 0.5R.</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">What happened</th><th scope="col">Sessions</th><th scope="col">Result each</th><th scope="col">Total</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Target reached before the stop</td><td>55</td><td>+0.5R</td><td>+27.5R</td></tr>
+                <tr><td>Stop hit first, line touched later anyway</td><td>10</td><td>−1R</td><td>−10R</td></tr>
+                <tr><td>Stop hit, line never touched</td><td>35</td><td>−1R</td><td>−35R</td></tr>
+                <tr><td><strong>All 100</strong></td><td>100</td><td></td><td><strong>−17.5R, or −0.175R per trade</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted">Made-up data for illustration. Hypothetical results have inherent limits: they are not actual trading and do not reflect real fills, slippage or the pressure of risk, and no representation is made that any account will achieve similar results.</p>
+          <p>The touch rate is 65%. The trade still loses, because a 0.5R target needs the target to come first in two trades of every three just to break even (stop ÷ (stop + target) = 40 ÷ 60), and it came first in 55 of 100. Move the entry and the stop, and the expectancy changes completely while the touch rate stays exactly where it was. The touch rate was never about the trade. It was about the line.</p>
+          <p><strong>The rule:</strong> a touch rate is a target input at most, never a reason to enter and never a direction. Expectancy comes only from entry, stop and target counted in the order price reached them.</p>
+          <p><strong>Getting it wrong</strong> looks like an entry taken from anywhere because "it gets there most days", and a stop widened because the target is "likely". What it reveals: you are borrowing the line's frequency to excuse the entry's location, which is the one thing the frequency never measured. <strong>The fix:</strong> beside any touch rate on your plan, write the breakeven rate for the trade as built: stop distance ÷ (stop distance + target distance). Then write, in words, "this is a touch rate, not a target-before-stop rate". If the two lines make the number useless for the trade, it was useless before you wrote them.</p>
+
+          <h2>A Statistic Belongs To Its Level And Window</h2>
+          <p>Every figure was measured on one thing: an instrument, a session, a window with a start and an end, a day boundary and a period of years. Change any of them and you have a different level, even if it has the same name.</p>
+          <p>Take the overnight high. Suppose a published study measures it from 18:00 the prior evening to 09:30. The overnight levels in this course are built on the 16:00 ET day boundary, so your ON High also includes the 16:00 to 17:00 hour, which the study's window leaves out. On most days the two lines are the same price. On the days the overnight extreme prints in that hour, they are different lines, and the study's rate was never counted on yours. Its number tells you nothing about your level, however large its n, until someone measures your level on your window.</p>
+          <p>The same applies everywhere. A prior-day high taken from the full session is a different line from one taken from regular trading hours. A rate measured on one index future is a fact about that contract until it is measured on another. A rate from 2014 to 2026 is not a rate for the last ninety sessions.</p>
+          <p><strong>The rule:</strong> a statistic backs only the level it was measured on, with the same instrument, session, window, day boundary and period. Where any one differs, the figure stays off your plan until it is re-measured on your definition.</p>
+          <p><strong>Getting it wrong</strong> looks like quoting a published overnight figure next to your own ON levels, or a cash-index study next to a futures level. What it reveals: you are choosing a number for how confident it sounds rather than for whether it describes the thing you trade. <strong>The fix:</strong> every figure in your notes carries a "measured on" line: instrument, session, window, boundary, period, n. Hold it against your level's definition, field by field. One mismatch, and the number is a reading note, not a plan input.</p>
+
+          <h2>Dimmed, Not Hidden</h2>
+          <div class="definition-box">
+            <div class="definition-term">Display Floor</div>
+            <div class="definition-text">The journal analysis rule that any cohort (a group of trades sharing a field such as setup or trigger) below 30 trades, or below 20 distinct sessions, is shown dimmed with a warning. Dimmed means visible but marked as not yet a sample. It is never hidden, and clearing the floor is a minimum for reading a cohort, not a verdict on it.</div>
+          </div>
+          <p>The floor has two parts because each catches a different illusion. Thirty trades is roughly where the interval stops being absurd: at 18 of 30 it still runs from 42.3% to 75.4%, so even a cohort that clears the floor is wide. Twenty sessions is there because trades on the same day are not independent. Thirty trades from four sessions is one week's mood, not a sample.</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Cohort</th><th scope="col">Trades</th><th scope="col">Distinct sessions</th><th scope="col">How the journal shows it</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>A</td><td>12</td><td>5</td><td>Dimmed: under both floors</td></tr>
+                <tr><td>B</td><td>34</td><td>9</td><td>Dimmed: enough trades, too few sessions</td></tr>
+                <tr><td>C</td><td>41</td><td>26</td><td>Shown plain: clears both floors</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted">Made-up cohorts for illustration.</p>
+          <p>Why dim instead of hide? A hidden cohort is still in your record, and you would go looking for it in the raw trades, without the warning. A cohort shown plain at n=12 looks exactly as trustworthy as one at n=400. Dimming keeps the count in front of you, so you can watch it accumulate, while making it look like what it is. Below the floor, the only review you run on it is the rule-break audit from Module 20: were these trades built to plan, or not?</p>
+          <p>The analysis also caps a cut at two dimensions. At a few trades a day, setup by trigger by time block produces cells of two or three trades, and a page full of those is a generator of recency bias.</p>
+          <p><strong>The rule:</strong> below the floor, read the count, not the rate; never cut a cohort by more than two fields; and a cohort that clears the floor gets read with its interval, not trusted.</p>
+          <p><strong>Getting it wrong</strong> looks like hunting through dimmed cells for the bright one, or reading cohort C's rate as settled because it is no longer grey. What it reveals: you are treating the display as a scoreboard rather than a measuring instrument, and looking for permission instead of evidence. <strong>The fix:</strong> in the weekly review, write each cohort's trade count and session count before its rate, and add its Wilson interval for any cohort that clears the floor. A dimmed cohort gets one line: the count, and the rule-break audit result.</p>
+
+          <h2>The Rate Describes The Set, Not The Trade</h2>
+          <p>A rate of six in ten is a fact about a series. The trade in front of you is one draw. It does not carry 60%. It carries the whole distribution: it wins or it loses, and nothing about the history tells you which. Both sentences are true at once. The series view is what you size and plan a sample around; the single-trade view is why you never feel sure of one trade.</p>
+          <p>The hard part is not knowing this. It is that a number which agrees with your idea feels truer than one that does not. You check the sample size of a rate you dislike, and accept a rate you like on sight. A statistic read this way stops being evidence and becomes reassurance, and reassurance is what lets an entry drift away from its level or a stop get wider than its structure.</p>
+          <p><strong>The rule:</strong> a statistic is written on the plan with its labels, before the session, or not used; and no statistic ever changes size.</p>
+          <p><strong>Getting it wrong</strong> looks like reaching for a figure mid-session to justify a trade already in your hand, or sizing up because "the odds are good today". What it reveals: you are using numbers for comfort, so the more you want a trade, the more numbers you find for it. <strong>The fix:</strong> any figure you rely on is written on the pre-market sheet with its five labels, from the questions below, before 09:25. A figure that is not on the sheet does not exist for that session. Size comes from your fixed base R, the stop and the grade table in Module 14, and nothing else.</p>
+
+          <div class="key-concept">
+            <p><strong>A probability is a count from a named set: its condition, its n, its interval, what it counts and where it was measured are part of the number.</strong> Remove any one and you are not reading a probability, you are reading a mood, and a touch rate is never a trade's expectancy.</p>
+          </div>
+
+          <h2>Worked Case: One Base Rate, Read In Full</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A worked reading of one published base rate, in the order this page teaches. It describes no trade and no rule of this course.</p>
+            <p><strong>The rule first.</strong> A base rate describes a dated set. Before it touches a plan you name what it counts, what it conditions on, its n and interval, what it does not say, and how you would measure your own version.</p>
+            <p><strong>The figure.</strong> TradingStats' Session Open Analysis classifies every regular-session open of NQ against the prior regular session's range. Across 3,116 NQ sessions from February 2014 to March 2026, the open was in range 59.6% of the time, above the prior high 25.5% and below the prior low 14.9% (TradingStats, Session Open Analysis, n=3,116 NQ sessions, read 2026-11-01). In range means the 09:30 open sits between the prior session's low and high, inclusive.</p>
+            <p><strong>1. What it counts.</strong> One thing per session: where the open sat. Nothing that happens after 09:30 is in this number.</p>
+            <p><strong>2. What it conditions on.</strong> Nothing beyond membership of the set: NQ, regular trading hours on minute data, February 2014 to March 2026. That is what makes it a base rate. The same page goes on to split in-range opens by where they sit against the prior value area; each split is a conditional rate on a smaller set, and its n is the first thing to find before reading it.</p>
+            <p><strong>3. Its n and interval.</strong> At n=3,116, the Wilson interval around 59.6% runs from about 57.9% to 61.3%. That is narrow. It says the count is precise about those twelve years. It does not say those years describe the next one.</p>
+            <p><strong>4. What it does not say.</strong> It says nothing about direction; the page itself finds that IB break direction "shows no strong edge based on open type alone." It says nothing about today: by 09:30 you know the open type, so the base rate has nothing left to tell you about this session. It is not a fill rate, it is not a reason to enter, and it is not a target. It is NQ data; MNQ tracks the same index, and the figure is still cited as NQ. On one field that matters it lines up with the course: the study is built on regular-session minute data, 09:30 to 16:00 ET, which puts its prior range on the same scope as your PD High and PD Low. That is still a reading of their method, so it goes on your "measured on" line as something to confirm.</p>
+            <p><strong>5. How you would test your own version.</strong> Take the last 60 sessions on your own chart. For each, write the open type against your own PD High and PD Low: in range, above or below. Count. Suppose you find 36 in range: 60%, with a Wilson interval of 47.4% to 71.4%. The published 59.6% sits inside your range, which is all 60 sessions can tell you. If it fell outside, check your definitions first (inclusive edges, regular session against full session, which data feed) before you conclude that anything differs.</p>
+            <p class="text-muted">Published historical base rate, cited for reading practice. It is a description of past sessions, not a trade result and not a forecast.</p>
+          </div>
+          <p>Notice how little the figure does once it is read properly. It is honest, large and well defined, and it still says nothing about where to enter, which way to lean or how big to be. That is not a weakness of the number. It is what a base rate is.</p>
+
+          <h2>Five Questions For A Number You Believed</h2>
+          <p>Pick the statistic you leaned on most this month: one you read, one someone told you, or one from your own journal. Score one point for each question you can answer in writing, now, without looking anything up you did not already have.</p>
+          <ol>
+            <li><strong>Source and n.</strong> Who counted it, and on how many cases?</li>
+            <li><strong>Condition.</strong> What does it condition on, and is that condition known at the moment you used the number?</li>
+            <li><strong>Interval.</strong> What is the range around it at its n, or could you compute it from the two numbers you have?</li>
+            <li><strong>What it counts.</strong> Does it count the thing you trade (your entry, your stop, your target, in the order price reached them) or something else, such as a touch?</li>
+            <li><strong>Measured on.</strong> Was it measured on your level: the same instrument, session, window, day boundary and period?</li>
+          </ol>
+          <p><strong>5 of 5:</strong> the number may sit on your pre-market sheet as target context, with its labels. <strong>3 or 4:</strong> find the missing answers before you use it again. <strong>0 to 2:</strong> take it off your plan today. One answer overrides the score: if question 4 is "something else" and you used the number as a reason to enter, it comes off the plan whatever the total, because a touch rate was carrying the job of an expectancy.</p>
+
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>Write the statistic you scored above on one line in your journal, in this order: n, figure, source, condition, measured on. Leave any field you cannot fill visibly blank. That's the whole assignment.</p>
+          </div>
+
+          <h2>Where It Goes Next</h2>
+          <p>The display floor, the cohort counts and the two-dimension cap live in the journal's analysis page, taught in <a href="12-journaling.html">Module 18, Journaling &amp; Review</a>; the weekly review is where you write the count before the rate and the interval beside it. The pre-market sheet that carries any figure you rely on is in Module 16, The Pre-Market Routine.</p>
+          <p>Module 22, How To Test An Edge, takes the tools on this page and puts them in order: a rule locked before the data, a null to compare against, split halves, and a register for your own ideas. Module 24, How Ideas Fail A Test, shows the failure modes a test exposes, including a touch rate mistaken for expectancy.</p>
+
+          <h2>Sources</h2>
+          <ul>
+            <li>TradingStats, "Session Open Analysis: Gap Up, Gap Down &amp; In-Range Stats", NQ open-type distribution, n=3,116 sessions, February 2014 to March 2026. https://tradingstats.net/session-open-analysis-futures/ (read 2026-11-01).</li>
+            <li>NIST/SEMATECH e-Handbook of Statistical Methods, 7.2.4.1 "Confidence intervals" (normal approximation and Wilson score interval for a proportion). https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm (read 2026-11-01).</li>
+          </ul>
+
+
+        </div>
+
+        <!-- MARK COMPLETE -->
+        <div class="module-complete-zone mt-xl">
+          <button id="mark-complete-btn" class="btn btn--primary btn--lg" data-module-id="21-reading-a-probability">
+            Mark Complete & Continue →
+          </button>
+        </div>
+
+        <!-- MODULE NAVIGATION -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <a href="20-the-traders-mind.html" class="module-nav-title">The Trader's Mind</a>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next Module →</span>
+            <a href="22-how-to-test-an-edge.html" class="module-nav-title">How To Test An Edge</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="../ai.html" title="How AI is used here"><img src="../assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the plan.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    <nav class="footer-links" aria-label="Site policies"><a href="../privacy.html">Privacy</a> <a href="../support.html">Support</a></nav>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/nav.js"></script>
+  <script type="module" src="../js/gate.js"></script>
+  <script type="module" src="../js/progress.js"></script>
+  <script type="module" src="../js/module-toc.js"></script>
+  <script type="module" src="../js/copy-page.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>
