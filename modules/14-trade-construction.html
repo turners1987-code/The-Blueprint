@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Construction — The Blueprint</title>
+  <meta name="description" content="Module 14 of The Blueprint: how a triggered branch becomes an order, in one fixed order: level, stop, risk, size, entry. The target first, the stop behind the far edge, the 2:1 filter, a fixed base R, size from the stop and the one grade-to-size table, and exits written before the entry. With a composite MNQ long built line by line and the same idea with no room.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Trade Construction — The Blueprint">
+  <meta property="og:description" content="Module 14 of The Blueprint: how a triggered branch becomes an order, in one fixed order: level, stop, risk, size, entry. The target first, the stop behind the far edge, the 2:1 filter, a fixed base R, size from the stop and the one grade-to-size table, and exits written before the entry. With a composite MNQ long built line by line and the same idea with no room.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/modules/14-trade-construction.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="module-page" id="main-content" tabindex="-1" data-gate="tier">
+
+    <!-- MODULE HEADER -->
+    <header class="module-header">
+      <div class="container">
+        <div class="module-meta">
+          <span class="module-number">MODULE 14</span>
+          <span class="badge badge--cyan">The Blueprint</span>
+        </div>
+        <h1>Trade <span class="text-gold">Construction</span></h1>
+        <p class="lead mt-md">The number of contracts is not something you choose; it is the last answer in a calculation that starts at the target, and if you pick it first, every number before it becomes a guess made to fit.</p>
+        <div class="copy-page" data-copy-page>
+          <button type="button" class="btn btn--ghost btn--sm copy-page-btn" data-copy-page-btn aria-describedby="copy-page-hint">Copy for your AI</button>
+          <button type="button" class="copy-page-download" data-copy-page-download>Download .md</button>
+          <span class="copy-page-hint" id="copy-page-hint" role="tooltip">Copies this lesson as Markdown to paste into any AI assistant</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MODULE BODY -->
+    <div class="module-body">
+      <div class="container">
+        <nav class="module-toc" data-module-toc aria-label="On this page"></nav>
+
+        <div class="lesson-content">
+
+
+          <h2>The Stop That Was Chosen Last</h2>
+          <p>You know the trade. The level was on the sheet, the trigger fired, and you clicked in with the size you always use. Then you looked for somewhere to put the stop. Behind the zone was too far for that size, so the stop went a few points under the entry, inside the zone, where the loss felt bearable. Two bars later it was gone, and price went on to the target without you. Or the stop held, and the target turned out to be a level eleven points away, so the trade that went right paid less than the one that went wrong costs.</p>
+          <p>Neither of those was bad luck. Both were the same mistake: the numbers were worked out in the wrong order. This page is the order. Every trade in this course traces one chain: <strong>idea → setup (location + read) → trigger → construction (level → stop → risk → size → entry)</strong>. Construction is the last link, and it is pure arithmetic once the first three have answers.</p>
+          <div class="definition-box">
+            <div class="definition-term">Construction</div>
+            <div class="definition-text">The arithmetic that turns three answered questions into an order, always in this order: the level (the zone traded against and the target level), the stop (behind the far edge), the risk (the stop distance, and the 2:1 check to the target), the size (from the stop distance and the grade), and the entry. It comes after the three tiers, never before them.</div>
+          </div>
+          <p>There are seven parts, mechanical first: the target, the stop, the 2:1 filter, base R, the size and its one table, and the exits written before the entry. The last part is about you, not the chart: the stop you will want to move once the trade is on.</p>
+
+          <h2>The Target Comes First</h2>
+          <p>The first line of construction is the level, and it has two halves: the zone you are trading against and the level you are trading toward. Both are on the sheet before the session. The target is picked first because it is the one number that decides whether the rest of the calculation is worth doing.</p>
+          <div class="definition-box">
+            <div class="definition-term">Target</div>
+            <div class="definition-text">A level a trade aims at, written before entry. It says where price may travel to; it is never a reason to enter and never a direction.</div>
+          </div>
+          <p>Show it. A long branch at the pd-high zone names prior-week-high as its target. The prior-week-high zone runs from 24,223.00 to 24,230.00, and price coming up reaches its bottom first, so the target price is that near edge, 24,223.00. On a gap branch the target is the PD range edge, never the prior close (<a href="12-the-gap-setups.html">Module 12</a>). A base rate can tell you how often a level was reached; it is a reason a level is worth targeting, never a reason to enter.</p>
+          <p>Things that are not targets: a number of R ("take 2R"), a number of points ("twenty handles"), a round number, an indicator, "new highs". None of them is a place where anything has happened before, so none of them is a place where anything is likely to happen again.</p>
+          <p><strong>The rule:</strong> the target is a level from your list, written on the branch before the session, and its price is the near edge of that level's zone.</p>
+          <p><strong>Getting it wrong</strong> looks like an entry with no target, managed by watching the open profit, or a target written as "2R". What it reveals: you are deciding the exit by how the trade feels while it is on, which means the exit belongs to your nerves, not to the chart. <strong>The fix:</strong> the target line on the branch must contain a slug and a price. A line with "R" or "points" in the target slot is struck through before 09:25, and a trade taken from it has no target to check 2:1 against, so it is not taken.</p>
+
+          <h2>The Stop Goes Behind The Far Edge</h2>
+          <div class="definition-box">
+            <div class="definition-term">Far Edge</div>
+            <div class="definition-text">The edge of a zone on the far side from where price arrives. For a level above current price it is the top of the zone; for a level below, the bottom. The stop goes behind it.</div>
+          </div>
+          <p>The stop is where the trade is wrong, and the trade is wrong when price has gone through the whole zone it was built on. So the stop sits behind the far edge of the zone you are trading against, and behind the extreme of the trigger: for a Pause N Go long, below the zone's bottom and below the pause's low (<a href="13-triggers.html">Module 13</a>). It is a resting order, sent with the entry, on every trade.</p>
+          <p>How far behind is part of construction too. Write the distance once on your PlayBook page, in ticks, and use it on every trade from that page; the examples in this course use 2 points. A distance that changes from trade to trade makes your record impossible to read, because you can no longer tell a bad read from a stop placed differently.</p>
+          <p>There is no fixed tick number in this rule. A stop of "always 20 ticks" or "always 10 points" is a stop that ignores the zone, so on a narrow zone it gives away room for nothing and on a wide one it sits inside the structure. The far edge decides.</p>
+          <p>One check comes after the far edge: your stop floor.</p>
+          <div class="definition-box">
+            <div class="definition-term">Stop Floor</div>
+            <div class="definition-text">The smallest stop distance, in ticks, that one of your pages will accept, derived from your own adverse-excursion record for that page and session block. The stop goes behind the far edge first; if the far edge is closer than the floor, the stop goes out to the floor and size falls.</div>
+          </div>
+          <p>A stop can sit behind structure and still sit inside the ordinary back-and-forth of that time of day. The floor is how your own record answers that, per session block, and <a href="23-building-your-own-playbook.html">Module 23</a> shows how to derive it. The course gives you no tick number for it, early or late, because nobody else's count describes your page.</p>
+          <p>There is no clock ban on the opening minutes either. Early structure is often wider: the zones are broader, the pauses deeper, the far edge further away. Wider structure means a wider stop, and a wider stop means a smaller size. It never means a bigger risk. The same is true on a day when the ATR is large (<a href="09-idea-generation.html">Module 09</a>): the day's range shows up as wider zones and deeper pauses, so the stop behind the far edge is further away and the size falls by itself, while base R stays where it is. ATR never places the stop. A stop set at a multiple of ATR is an exit set by an indicator, and no indicator sets an exit in this course.</p>
+          <p><strong>The rule:</strong> the stop goes behind the far edge and the trigger's extreme by your written distance, or out to your stop floor for that session block if the floor is wider. It rests at the broker from the moment of entry.</p>
+          <p><strong>Getting it wrong</strong> looks like a stop placed a few ticks under the entry bar, inside the zone, because that allowed more contracts. What it reveals: the size was decided first and the stop was moved to fit it, so ordinary movement inside the zone can end a trade whose level never broke. It also fails the third check of the grade rubric: the stop is behind structure, not inside noise. <strong>The fix:</strong> write the far-edge price and the stop price as a pair on the branch before the session ("far edge 24,177.00, stop 24,175.00"). The stop on the order ticket must match that line. If it doesn't, the order isn't sent.</p>
+
+          <h2>Risk, And The 2:1 Filter</h2>
+          <p>Risk is the distance from the entry to the stop, written in points and in ticks. Measure it from the intended price, the price the trigger says you enter at, before the order goes. With the risk known, one division decides whether there is a trade at all.</p>
+          <div class="definition-box">
+            <div class="definition-term">2:1 Filter</div>
+            <div class="definition-text">The check made at the trigger, before the order: the distance from the intended price to the target level, divided by the distance from the intended price to the stop, must be 2 or more. Under 2 is no trade. It decides whether a trade is allowed; it never sets where the trade ends.</div>
+          </div>
+          <p>Show it: entry 24,187.00, stop 24,175.00, target 24,223.00. Risk is 12.00 points, 48 ticks. Room is 36.00 points. 36 ÷ 12 = 3.0, which clears 2:1. If the target had been 24,205.00, the room would be 18.00 points, 1.5 to 1, and the answer is no trade, however clean the trigger.</p>
+          <p>2R is a filter, not a default target. A trade that clears 3 to 1 aims at the level, not at 2R. And a level that sits too close is not a reason to tighten the stop until the division clears; it is a level that is too close for this trade.</p>
+          <p>Much of the check can be done before the open. The zone's width plus your written distance behind it is the smallest risk the trade can have. If twice that is more than the distance from the zone to the target level, no stop the structure allows can clear 2:1, and the branch goes into the nothing case at 09:25 (<a href="15-writing-the-plan.html">Module 15</a>).</p>
+          <p><strong>The rule:</strong> if the target level is less than twice the risk away from the intended price, there is no trade.</p>
+          <p><strong>Getting it wrong</strong> looks like taking a 1.3-to-1 trade because the setup looked perfect, or a trade where the ratio was never worked out. What it reveals: you are pricing the trade by how sure you feel, so your sure trades carry the worst geometry, and a read that is right more often than not can still lose over a month. <strong>The fix:</strong> the ratio is a written line, "room ÷ risk = ", on every order. If the number after the equals sign is under 2, the next word written is "no", and the order isn't sent.</p>
+
+          <h2>Base R Is Fixed Before Any Trade</h2>
+          <div class="definition-box">
+            <div class="definition-term">Base R</div>
+            <div class="definition-text">The fixed amount you risk on a full-size trade, chosen once from your account and the losing run you can sit through. Every result is measured in it. It does not rise after a good week or fall after a bad one; it changes only at a scheduled review, written as a new line on the page.</div>
+          </div>
+          <p>Base R is the one number in construction that comes from you, not from the chart. Choose it once, in three written lines. First, the run of full losses in a row you intend to be able to take without changing anything; losing runs arrive even when every trade is independent (<a href="20-the-traders-mind.html">Module 20</a>). Second, the number of kill-switch days in a row you intend to be able to take, at 2R each (<a href="02-the-hard-rules.html">Module 02</a>). Third, the amount: the R at which the larger of those two totals is a loss your account survives and you would still trade the next morning exactly as written. Write it, with the date, on the first page of your PlayBook (<a href="23-building-your-own-playbook.html">Module 23</a>).</p>
+          <p>The kill switch is twice base R, set at the account level. That is why no size on this page ever risks more than base R: with a 2R daily limit, a single trade sized above 1R makes the day's limit a little more than one loss away.</p>
+          <p>If at your base R the stops your levels need usually round down to zero contracts, the account is telling you which contract fits it (<a href="03-the-instrument-futures-mechanics.html">Module 03</a>). It is not asking you to raise R.</p>
+          <p><strong>The rule:</strong> base R is one number, written and dated, used unchanged on every trade, and changed only at a scheduled review, never in a session.</p>
+          <p><strong>Getting it wrong</strong> looks like a bigger R after three green days, a smaller one after a kill-switch day, or an R that is really "whatever the stop costs at three contracts". What it reveals: your risk is being set by your last result, so your R column records your mood as much as your trades, and one month of results can't be compared with the next. <strong>The fix:</strong> the size line on every trade starts by writing base R from the first page of the book. A size line that starts with any other number isn't a size line, and the order isn't sent.</p>
+
+          <h2>Size Comes From The Stop And The Grade</h2>
+          <p>Size is the fourth line, and it is a division, the same one as in Module 03: base R divided by the stop's value per contract, rounded down.</p>
+          <p class="text-center"><strong>contracts = R ÷ (stop ticks × tick value), rounded down</strong></p>
+          <p>On MNQ one tick is 0.25 points and is worth $0.50, so a point is four ticks and $2.00 per contract. Suppose base R is $100: a number chosen because it divides easily, not a recommendation. A 48-tick stop is 48 × $0.50 = $24 per contract. $100 ÷ $24 = 4.17, so 4 contracts. Rounding is always down, because rounding up is a small, silent rise in risk on every trade. If the division rounds down to zero, there is no trade; it is never "one contract, just to be in it".</p>
+          <p>The R in that formula comes from the grade, and the grade comes from four checks you can answer at the moment of the order.</p>
+          <div class="definition-box">
+            <div class="definition-term">Grade (A+ / A / B / C)</div>
+            <div class="definition-text">The entry-plan score given to every trade at entry, before it resolves, from four checks: the location is a named level, the trigger fired before entry, the stop is behind structure, and the size matches the plan for that stop. A+ is all four with a fill within 2 ticks of the intended price; A is all four; B is three of four with no breach of the stop or size check; C is two or fewer, or any breach of those two. C is no trade.</div>
+          </div>
+          <p>This is the one table that turns a grade into a size. It is stated here and nowhere else, and it doesn't change from page to page or from day to day:</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Grade at entry</th><th scope="col">Size</th><th scope="col">Formula</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>A+</td><td>Base R</td><td>base R ÷ (stop ticks × tick value), rounded down</td></tr>
+                <tr><td>A</td><td>Base R</td><td>base R ÷ (stop ticks × tick value), rounded down</td></tr>
+                <tr><td>B</td><td>Half of base R</td><td>(base R ÷ 2) ÷ (stop ticks × tick value), rounded down</td></tr>
+                <tr><td>C</td><td>No trade</td><td>none</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>A+ and A trade base R; B trades half; C is no trade. A+ and A share a row for a practical reason: the fill check, which separates them, can only be answered after the order fills, and the size has to be set before it is sent. With base R at $100 and a 48-tick stop, A+ or A is 4 contracts and B is $50 ÷ $24 = 2.08, so 2.</p>
+          <p>Two things never enter the size line. Conviction is counted from three checks in Module 09, and it is recorded so your journal can compare strong branches with thin ones; it never changes size. Nor does anything else on the sheet: the readiness score, the day's result so far, the feeling that this one is different. Size comes from base R, the stop and this table.</p>
+          <p><strong>The rule:</strong> size is the grade's share of base R divided by the stop's value per contract, rounded down, with the arithmetic written beside it. Zero contracts is no trade.</p>
+          <p><strong>Getting it wrong</strong> looks like the same three contracts on every trade whatever the stop, or one extra contract "because it's an A+". What it reveals: the size was decided before the structure was read, so on a wide stop you carried more than base R and on a narrow one less, and your results in R don't mean what they say. It also breaches the fourth check of the rubric: the size doesn't match the plan for that stop, which makes the trade a C. <strong>The fix:</strong> the size line is written as the formula with numbers in it, "$100 ÷ (48 × $0.50) = 4.17 → 4", before the order goes. A size with no arithmetic next to it is not a size yet.</p>
+
+          <h2>The Exits Are Written Before The Entry</h2>
+          <p>The fifth line is the entry: the order, with its intended price written down so the fill can be measured against it. On a Pause N Go the intended price is the close of the bar that resumed; on a resting limit, which counts as a trigger only after price has displaced away from the level, it is the limit price. Every exit is decided before that order goes, and none of them is decided again afterwards.</p>
+          <div class="definition-box">
+            <div class="definition-term">Intended Price</div>
+            <div class="definition-text">The price the plan said you would be filled at, written before the order is sent and recorded in the journal's intended_price field. The actual fill is measured against it on every trade.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Planned Scale</div>
+            <div class="definition-text">The one exit, besides the target and the stop, planned before entry: half the position off at 2R, the rest held as the runner to the target level. Any other breakeven move or trail is Too Early.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Runner</div>
+            <div class="definition-text">The half of the position left on after the planned scale. It is held to the target level with the original resting stop, and its only other exits are the four reasons to flatten by hand in Module 02.</div>
+          </div>
+          <p>Show it on the long above: entry 24,187.00, 4 contracts, risk 12.00 points. 2R is 24.00 points, so the planned scale is 2 contracts at 24,211.00 and the runner is 2 contracts to 24,223.00, with the stop at 24,175.00 for all of it. That is the whole exit plan, and all three orders go to the broker with the entry.</p>
+          <p>Targets are set before entry and are untouchable. Moving a working target is Fail on the execution mark, whether you pull it in or push it out. Automatic breakeven is off and the breakeven key is unbound on your platform. A stop moved to entry after the scale sits inside the ordinary swing of the trade, and it is an exit the plan didn't contain, so it is Too Early. An add on the way is not part of this trade at all: it is a new trade, with its own level, trigger, stop and grade.</p>
+          <div class="definition-box">
+            <div class="definition-term">Too Early</div>
+            <div class="definition-text">The journal tag for a manual exit taken for any reason other than the four. Its execution mark is Fail, whatever the trade went on to do.</div>
+          </div>
+          <p><strong>The rule:</strong> the target, the one planned scale and the stop are written and sent with the entry. After entry the exits are those three and the four reasons in Module 02. Nothing else.</p>
+          <p><strong>Getting it wrong</strong> looks like an entry sent on its own, with the stop and target "to be placed in a second", or everything taken off at 1.4R because it stalled. What it reveals: the exit plan exists only in your head, so it gets rewritten by whatever the last three bars did. <strong>The fix:</strong> use a bracket template on your platform that sends the stop, the scale and the target as resting orders with the entry, with every automatic breakeven and trail switched off. The only thing your hand can do afterwards is cancel one, and any cancel is tagged Too Early.</p>
+
+          <h2>The Stop You Want To Move</h2>
+          <p>Once the trade is on, the arithmetic is finished and the hard part starts. Price comes back toward your stop and you want to give it room. Or price goes your way and you want to protect what you have. Both are the same urge: to replace a decision made with a clear head before the order with one made with a position on.</p>
+          <div class="definition-box">
+            <div class="definition-term">Broke Rule</div>
+            <div class="definition-text">The journal tag for breaking a hard rule: an entry outside the trading window, a position held through a Tier One release, a stop widened after entry, or trading past the kill switch.</div>
+          </div>
+          <p>Widening the stop is Broke Rule, every time. It raises the risk above what the size was built for, so the trade you are now in is not the trade you graded. Tightening the stop mid-trade is Too Early, with one exception: a move to a thesis invalidation you wrote on the entry line before the order, naming the price the stop moves to and the close that moves it. A price you found after entry, such as a new swing low or the trade's own breakeven, is not that exception, however sensible it looks.</p>
+          <p>The second urge is quieter: the runner that sits near its target for twenty minutes, giving back a few points, while you want to take it and be done. The target was set before entry because it is a level. Whether price reaches it after your exit is something the chart mark-up records (<a href="17-the-session-and-the-close.html">Module 17</a>); either way, after the exit it is not your money.</p>
+          <p><strong>The rule:</strong> once the order is sent, the stop is never widened, and it is tightened only to a thesis invalidation written at entry.</p>
+          <p><strong>Getting it wrong</strong> looks like dragging the stop up behind each new bar, or pulling it a few points lower "just this once" as price approaches. What it reveals: the trade's risk is being reset by how the trade feels, not by the structure that justified it, and once that starts every grade you give at entry is describing a trade that no longer exists. <strong>The fix:</strong> after the bracket is sent, take your hand off the mouse and write one line: "stop [price], scale [price], target [price], invalidation [close]". Read it each time you want to touch an order. The only stop edit allowed is the one already written on the entry line; anything else is tagged before you make it, Too Early for a tighten, Broke Rule for a widen.</p>
+
+          <div class="key-concept">
+            <p><strong>Construction is one order of questions: the target level, the stop behind the far edge, the risk and the 2:1 check, the size from base R and the grade, then the entry with its exits already written.</strong> A wider stop changes the size, never the risk, and a target too close for 2:1 is no trade.</p>
+          </div>
+
+          <h2>Worked Case: One Long, From Level To Entry</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A composite MNQ long, built to show the five lines in order. It belongs to no one, the prices are invented for the arithmetic, and the case stops when the orders are working, before any outcome. Points are index points on the MNQ chart; one tick is 0.25 points and is worth $0.50. Base R is $100, a number chosen because it divides easily, not a recommendation.</p>
+            <p><strong>The branch, written at 09:10.</strong> "If price accepts above the pd-high zone (24,177.00 to 24,186.00), meaning a 5-minute close above 24,186.00 within 15 minutes of the first touch, and a Pause N Go fires on the pullback into the zone, then prior-week-high, near edge 24,223.00. Invalidation: a 5-minute close back below 24,177.00. Conviction: moderate." Far edge for the pullback, which arrives from above: the zone's bottom, 24,177.00. Pre-open check: the zone is 9.00 points wide, plus 2.00 points behind it, so the smallest possible risk is about 11 points; twice that is 22, and the target is 37 points above the zone's top. The branch can clear 2:1, so it stays.</p>
+            <p><strong>Setup and trigger, 09:58 to 10:18.</strong> First touch of the zone at 09:58. The 10:00 to 10:05 bar closes at 24,191.50, above 24,186.00, seven minutes after the first touch: accepted above. Price pulls back into the zone. The 10:16 and 10:17 1-minute bars hold inside it, lows 24,181.50 and 24,180.25, highs 24,185.50 and 24,185.75, with no 1-minute close below 24,177.00. That is the pause; its high is 24,185.75 and its low 24,180.25. The 10:18 bar closes at 24,187.00, above the pause's high. That is the go. Trigger field: <code>pause-n-go</code>.</p>
+            <p><strong>Construction, at 10:18.</strong></p>
+            <ul>
+              <li><strong>Level:</strong> pd-high zone, far edge 24,177.00; target prior-week-high, 24,223.00. Both from the 09:10 line.</li>
+              <li><strong>Stop:</strong> 24,175.00, 2.00 points behind the far edge and below the pause's low. Floor check: the floor table on this page reads 32 ticks for this session block. The stop is 48 ticks from the intended price, wider than the floor, so it stays at the far edge.</li>
+              <li><strong>Risk:</strong> 24,187.00 − 24,175.00 = 12.00 points, 48 ticks. Room: 24,223.00 − 24,187.00 = 36.00 points. 36.00 ÷ 12.00 = 3.0, which clears 2:1.</li>
+              <li><strong>Size:</strong> grade at the order: named level, yes; trigger fired before entry, yes; stop behind structure, yes; size from the plan for a 48-tick stop, yes. That is the A row, base R. $100 ÷ (48 × $0.50) = $100 ÷ $24 = 4.17, rounded down: 4 contracts. Risk carried: 4 × $24 = $96, just under 1R. Had a check failed with the stop and size intact, the B row would give $50 ÷ $24 = 2.08: 2 contracts.</li>
+              <li><strong>Entry:</strong> buy 4 on the 10:18 close, intended price 24,187.00. Sent with it as one bracket: stop 24,175.00 for all 4; planned scale, 2 contracts at 24,211.00 (2R, 24.00 points); runner, 2 contracts at 24,223.00. Breakeven off. Fill: 24,187.25, one tick from the intended price, so the grade written at 10:19 is A+.</li>
+            </ul>
+            <p><strong>The same trade with a wider floor.</strong> Suppose this page's floor table read 68 ticks for this block. The far edge is closer than the floor, so the stop goes out to the floor: 24,187.00 − 17.00 = 24,170.00. Risk 17.00 points. Room 36.00 ÷ 17.00 = 2.1, which still clears 2:1. Size: $100 ÷ (68 × $0.50) = $100 ÷ $34 = 2.94, rounded down: 2 contracts. Planned scale 1 contract at 24,221.00 (2R, 34.00 points), runner 1 contract to 24,223.00. The wider stop cut the size from 4 to 2. The risk stayed at about 1R.</p>
+            <p>The case stops here, with the orders working. Whatever price does next, none of the lines above changes, and neither does the grade.</p>
+          </div>
+
+          <h2>Worked Case: The Same Idea With No Room</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>The same idea on a different composite morning, with every price the same except one. It belongs to no one.</p>
+            <p>The pd-high zone is again 24,177.00 to 24,186.00, price is accepted above it, and the same Pause N Go fires at 24,187.00 on the 10:18 close. The stop belongs at 24,175.00, 48 ticks away. Risk is 12.00 points. The difference: on this morning the prior-week-high zone runs from 24,203.00 to 24,210.00, so the target is 24,203.00.</p>
+            <p><strong>The 2:1 filter.</strong> Room: 24,203.00 − 24,187.00 = 16.00 points. 16.00 ÷ 12.00 = 1.33. Under 2. No trade.</p>
+            <p>Every way of making it a trade breaks a line above it:</p>
+            <ul>
+              <li><strong>Tighten the stop</strong> to 24,181.00, 6 points away, and the ratio becomes 2.67. But that stop is inside the zone and above the pause's low: it fails the third check, which makes the trade a C, and C is no trade.</li>
+              <li><strong>Move the target</strong> to 24,215.00, past the prior-week-high zone. That price is not a level. The level is where it was.</li>
+              <li><strong>Take it at half size.</strong> Size never repairs a ratio. Half the contracts still risk 12 points to make 16.</li>
+              <li><strong>Use the floor.</strong> A wider stop only makes the division worse.</li>
+            </ul>
+            <p>Run the pre-open check from the 09:10 line and the answer was there before the session: the smallest possible risk was about 11 points, twice that is 22, and the target sat only 17 points above the zone's top. The branch belonged in the nothing case at 09:25. The read was the same as in the first case and the trigger was identical. What changed was the room, and the room decided.</p>
+          </div>
+          <p>Notice what the two cases did not need. Neither asked how sure you were. Neither asked how the last trade went. Every number came from a price on the chart or a number written before the session, in the same order, and the case with no trade is as finished as the case with four contracts.</p>
+
+          <h2>Is Your Trade Constructed?</h2>
+          <p>Take your last ten trades. Score each one, a point per line that is true:</p>
+          <ol>
+            <li><strong>Target:</strong> a level with its price, written before entry.</li>
+            <li><strong>Stop:</strong> behind the far edge by your written distance, or at your floor if that was wider.</li>
+            <li><strong>Ratio:</strong> room ÷ risk worked out at the intended price, and 2 or more.</li>
+            <li><strong>Size:</strong> the table's share of base R ÷ (stop ticks × tick value), rounded down, with the arithmetic written.</li>
+            <li><strong>Entry:</strong> the intended price written, and the stop, scale and target sent with the order.</li>
+            <li><strong>Hands off:</strong> after entry, no stop or target moved except the planned scale and a thesis invalidation written at entry.</li>
+          </ol>
+          <p><strong>6 of 6</strong> is a constructed trade. <strong>The threshold:</strong> a trade missing line 2 or line 4 breached the third or fourth check of the grade rubric, so it was a C, which is no trade, whatever it made. A trade missing line 3 should not have been sent. A trade missing line 6 carries Too Early or Broke Rule. If three or more of your ten scored under 6, find the line you missed most often and fix that one before your next order.</p>
+
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>On your next trade, write the five construction lines in order before the order goes: target, stop, risk with its ratio, size with its arithmetic, entry. If the ratio line is under 2, the fifth line reads "no trade". That's the whole assignment.</p>
+          </div>
+
+          <h2>Where It Goes Next</h2>
+          <p><a href="15-writing-the-plan.html">Module 15, Writing The Plan</a>, puts the first line of construction on paper before the session: every branch names its zone and its target level, and a branch whose geometry can't clear 2:1 is written with that condition or goes into the nothing case. <a href="16-the-pre-market-routine.html">Module 16, The Pre-Market Routine</a>, carries those lines onto the sheet by 09:25, and <a href="17-the-session-and-the-close.html">Module 17, The Session And The Close</a>, is where the bracket is sent and then left alone.</p>
+          <p>In the journal (<a href="12-journaling.html">Module 18, Journaling &amp; Review</a>), the grade is written at entry from the four checks on this page and sets the size from its one table; the execution mark is written after the exit, Pass for the target, the planned scale, a written invalidation, the stop or session end; and the intended price sits beside the actual fill on every trade. Base R and your stop floor, with the record they come from, live in your PlayBook (<a href="23-building-your-own-playbook.html">Module 23, Building Your Own PlayBook</a>).</p>
+
+
+        </div>
+
+        <!-- MARK COMPLETE -->
+        <div class="module-complete-zone mt-xl">
+          <button id="mark-complete-btn" class="btn btn--primary btn--lg" data-module-id="14-trade-construction">
+            Mark Complete & Continue →
+          </button>
+        </div>
+
+        <!-- MODULE NAVIGATION -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <a href="13-triggers.html" class="module-nav-title">Triggers</a>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next Module →</span>
+            <a href="15-writing-the-plan.html" class="module-nav-title">Writing The Plan</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="../ai.html" title="How AI is used here"><img src="../assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the plan.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    <nav class="footer-links" aria-label="Site policies"><a href="../privacy.html">Privacy</a> <a href="../support.html">Support</a></nav>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/nav.js"></script>
+  <script type="module" src="../js/gate.js"></script>
+  <script type="module" src="../js/progress.js"></script>
+  <script type="module" src="../js/module-toc.js"></script>
+  <script type="module" src="../js/copy-page.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

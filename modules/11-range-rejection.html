@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Range Rejection — The Blueprint</title>
+  <meta name="description" content="Module 11 of The Blueprint: the level that fails. Range Rejection is the acceptance test with the other answer, taught as a context read that cancels or ends a branch and sets targets, with no entry for fading the extreme. The failed breakdown and failed breakout are taught as a trade: two 1-minute closes beyond the zone, a reclaim, then Pause N Go, with Trapped Traders as confirmation. Two composite MNQ cases.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Range Rejection — The Blueprint">
+  <meta property="og:description" content="Module 11 of The Blueprint: the level that fails. Range Rejection is the acceptance test with the other answer, taught as a context read that cancels or ends a branch and sets targets, with no entry for fading the extreme. The failed breakdown and failed breakout are taught as a trade: two 1-minute closes beyond the zone, a reclaim, then Pause N Go, with Trapped Traders as confirmation. Two composite MNQ cases.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/modules/11-range-rejection.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="module-page" id="main-content" tabindex="-1" data-gate="tier">
+
+    <!-- MODULE HEADER -->
+    <header class="module-header">
+      <div class="container">
+        <div class="module-meta">
+          <span class="module-number">MODULE 11</span>
+          <span class="badge badge--cyan">The Blueprint</span>
+        </div>
+        <h1>Range <span class="text-gold">Rejection</span></h1>
+        <p class="lead mt-md">A rejection at the top of the range is not a reason to sell it: it is the acceptance test coming back with the other answer, and most of what it hands you is a branch to cross out.</p>
+        <div class="copy-page" data-copy-page>
+          <button type="button" class="btn btn--ghost btn--sm copy-page-btn" data-copy-page-btn aria-describedby="copy-page-hint">Copy for your AI</button>
+          <button type="button" class="copy-page-download" data-copy-page-download>Download .md</button>
+          <span class="copy-page-hint" id="copy-page-hint" role="tooltip">Copies this lesson as Markdown to paste into any AI assistant</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MODULE BODY -->
+    <div class="module-body">
+      <div class="container">
+        <nav class="module-toc" data-module-toc aria-label="On this page"></nav>
+
+        <div class="lesson-content">
+
+
+          <h2>The Short At The Top Of The Range</h2>
+          <p>You know the move. Price runs up into the PD High, pokes four points through it and stalls. It looks like the top, so you sell it. The next 5-minute bar closes above the zone, then the one after, and your stop fills while price walks toward the prior-week high. The next morning brings the same poke. This time you wait, and price drops forty points back to the middle of the range without you. So the morning after that, you sell the first poke again.</p>
+          <p>Both mornings asked the same question. Price at a level either holds or fails, and the read for a failure is the same analysis as <a href="10-trend-continuation.html">Module 10</a>, with the opposite outcome. This page teaches the failure as a context read: what it looks like on a closed bar, what it does to your plan, and why it carries no entry of its own. Then it teaches the one form of failure this course does trade, the failed breakdown and failed breakout: two 1-minute closes beyond the zone, a reclaim back through it, then a Pause N Go from the reclaimed zone.</p>
+          <p>There are six parts, mechanical first: the read, what it does to the plan, the two closes and the reclaim, the trigger, the footprint confirmation, and last, the pull to sell the top, which is about you rather than the chart.</p>
+
+          <h2>Same Analysis, Opposite Outcome</h2>
+          <p>Every trade in this course traces one chain: <strong>idea → setup (location + read) → trigger → construction (level → stop → risk → size → entry)</strong>. Range Rejection is a setup: a location, and a read of what price does there. The location is a range extreme on your level list. The read is the acceptance test from <a href="10-trend-continuation.html">Module 10</a>, answered no.</p>
+          <div class="definition-box">
+            <div class="definition-term">Acceptance</div>
+            <div class="definition-text">Price building time and volume at a new price instead of passing through it. Acceptance moves value; a quick visit does not. The mechanical acceptance test this course uses at a level is taught in <a href="10-trend-continuation.html">Module 10</a>.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Range Rejection</div>
+            <div class="definition-text">The setup read for a level that fails: price tests a range extreme on your level list and is not accepted beyond it. No 5-minute close prints beyond the zone within 15 minutes of the first touch, and price is back on the range side of the zone. It is a context read: it can cancel or end a branch and it sets targets. It carries no entry of its own.</div>
+          </div>
+          <p>The range extremes are the levels on your list that bound a range: <code>pd-high</code> and <code>pd-low</code>, <code>pd-vah</code> and <code>pd-val</code>, <code>on-high</code> and <code>on-low</code>, <code>prior-week-high</code> and <code>prior-week-low</code>, and <code>or-high</code> and <code>or-low</code> once the opening-range window has closed. Each one is a zone with two edges, and the test is judged against the far edge.</p>
+          <div class="definition-box">
+            <div class="definition-term">Far Edge</div>
+            <div class="definition-text">The edge of a zone on the far side from where price arrives. For a level above current price it is the top of the zone; for a level below, the bottom. The stop goes behind it.</div>
+          </div>
+          <p>Show it. The pd-vah zone is 24,500 to 24,505, price is below it, so the far edge is 24,505. Price first touches the zone at 09:52, which puts the end of the acceptance window at 10:07. The 5-minute bars close at 24,503 (09:55), 24,499 (10:00) and 24,488 (10:05). None closed above 24,505. At 10:07 the window has passed and price is below the zone: that is a rejection. A 5-minute close at 24,509 at 10:00 would have been acceptance, and the read would belong to <a href="10-trend-continuation.html">Module 10</a>. One 1-minute close above 24,505 that fell straight back is neither. If the window ends with price still inside the zone, no read is written, and the branch that needed acceptance doesn't switch on, because acceptance didn't happen inside its window.</p>
+          <p><strong>The rule:</strong> a rejection is called only at a range extreme on your list, only once the 15-minute window from the first touch has passed with no 5-minute close beyond the far edge, and only with price back on the range side of the zone. Until then the read is open.</p>
+          <p><strong>Getting it wrong</strong> looks like "rejected" written at 09:54, two minutes after the first touch, because the bar left a wick. What it reveals: you want the answer before the bars have given it, and a wick feels like an answer. <strong>The fix:</strong> at the first touch, write the window's end time on the chart beside the zone: "pd-vah, first touch 09:52, window ends 10:07". No read goes in your notes before that time.</p>
+
+          <h2>What A Rejection Does To Your Plan</h2>
+          <p>A rejection changes your plan in one of three ways. None of them is an order.</p>
+          <ul>
+            <li><strong>It cancels a branch.</strong> A branch that needed acceptance at this zone ("if price accepts above the pd-vah zone and a Pause N Go fires on the pullback") doesn't switch on for this test. In <a href="15-writing-the-plan.html">Module 15</a>'s terms, a first touch that isn't accepted within 15 minutes is in the nothing case.</li>
+            <li><strong>It ends a branch.</strong> A branch that was live because price had been accepted beyond a level ends when price closes back through its invalidation. That close is the level failing after all. "Thesis broken on a candle close" is one of the four reasons to flatten by hand in <a href="02-the-hard-rules.html">Module 02</a>, and the invalidation line is where that close was written down in advance.</li>
+            <li><strong>It sets targets.</strong> A range extreme that has just held is the target for a branch trading back toward it from inside the range, and the levels inside the range, such as the pd-vpoc, are the targets for a branch traded away from it. A level beyond the rejected extreme, such as the prior-week-high above a rejected pd-high, is not a target on that test.</li>
+          </ul>
+          <p>Every test of a level carries its number in your notes: test 1, test 2. If price comes back to the zone later, that is a new test, recorded with its new number. Whether your plan has a branch for a second test is a line you write before the session, not a decision you make when price gets there.</p>
+          <p>This course publishes no entry for fading the extreme. A rejection at a high is not a sell signal, and a rejection at a low is not a buy signal. If you want to write an entry for it, that entry is a new idea for your own register (<a href="22-how-to-test-an-edge.html">Module 22</a>), and new ideas go to the parking lot in your PlayBook first (<a href="23-building-your-own-playbook.html">Module 23</a>).</p>
+          <p><strong>The rule:</strong> a rejection cancels a branch, ends a branch, or sets a target. It never places an order.</p>
+          <p><strong>Getting it wrong</strong> looks like a short at 10:07, the minute the window closed, because "the PD VAH rejected". What it reveals: you turned a context read into a trigger. The trade has no trigger and no written branch behind it, so its trigger field is none and the trade is No Setup. <strong>The fix:</strong> the rejection gets one written line in your session notes, in a fixed form: "[slug], test [n], rejected [time]: branch [n] cancelled." Writing that line is the whole action. There is no order ticket attached to it.</p>
+
+          <h2>The Failed Breakdown: Two Closes, Then A Reclaim</h2>
+          <p>One kind of failure is traded in this course. It starts with price going through the level, not stopping at it.</p>
+          <div class="definition-box">
+            <div class="definition-term">Sweep</div>
+            <div class="definition-text">A quick move beyond a level that trades through the stops resting there. On its own it is a print, not a read, and never a trade. It becomes part of a failed breakdown or failed breakout read only if the two closes and the reclaim follow.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Failed Breakdown / Failed Breakout</div>
+            <div class="definition-text">The variant of Range Rejection that this course trades. Price prints two 1-minute closes beyond the zone's far edge, then reclaims the zone, and the trade is a Pause N Go in the reclaim direction from the reclaimed zone. Below a level it is a failed breakdown and the trade is long; above a level it is a failed breakout and the trade is short. It has no setup slug of its own: the journal records it as range-rejection, with the variant noted in the tags.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Reclaim</div>
+            <div class="definition-text">In the failed breakdown and failed breakout read, a 1-minute close back through the whole zone, beyond its near edge, after the closes beyond its far edge. It is part of the read, not the trigger. The Level Reclaim trigger, a 5-minute close (<a href="13-triggers.html">Module 13</a>), is a different item.</div>
+          </div>
+          <p>Show it. The on-low zone is 24,290 to 24,296 and price comes down into it from above, so the near edge is 24,296 and the far edge is 24,290. At 10:31 a 1-minute bar closes at 24,286, below the far edge: close one. At 10:32 the next closes at 24,281: close two. At 10:33 a bar closes at 24,299, above 24,296: the reclaim. That is a failed breakdown read. Had 10:32 closed back at 24,293, inside the zone, there would have been one close beyond and no read: a poke, which is neither a failed breakdown nor acceptance.</p>
+          <p>The failed breakout is the mirror. At a zone above price, two 1-minute closes above its far edge (the top), then a 1-minute close back below its near edge (the bottom), and the trade, if the trigger fires, is short.</p>
+          <p>Two things this course does not set: how many minutes may pass between the second close and the reclaim, and what happens if a 5-minute close prints beyond the zone before the reclaim. Record both on every occurrence, the minutes and whether a 5-minute close printed, so your own record can later show whether either matters.</p>
+          <p><strong>The rule:</strong> the read needs both parts, in order: at least two 1-minute closes beyond the far edge, then a 1-minute close back beyond the near edge. The sweep alone is not a trade.</p>
+          <p><strong>Getting it wrong</strong> looks like a buy inside the sweep bar at 10:31, "because the stops below are being run". What it reveals: you are trying to catch the low, which means trading a story about other people's stops before price has said anything about the level. <strong>The fix:</strong> three boxes written on the plan line, "close 1 below 24,290 / close 2 below 24,290 / 1-minute close above 24,296". No order ticket is opened until all three are ticked.</p>
+
+          <h2>Pause N Go From The Reclaimed Zone</h2>
+          <p>The reclaim tells you the breakdown failed. It doesn't tell you to enter. The trigger is the same one <a href="13-triggers.html">Module 13</a> teaches, fired from the zone price has just reclaimed.</p>
+          <div class="definition-box">
+            <div class="definition-term">Pause N Go</div>
+            <div class="definition-text">Pause: after the first touch of a level, at least two consecutive 1-minute bars hold inside the zone with no 1-minute close through its far edge. Resumption: a 1-minute close beyond the pause's extreme in the direction of the read; entry on that close; stop behind the far edge. The session block (early / mid / late) is recorded on every trade.</div>
+          </div>
+          <p>After a failed breakdown, price is above the zone again, so when it comes back into it the far edge is the bottom, the same edge it closed below twice. The first touch of the zone after the reclaim starts the count. Show it, continuing the on-low example: at 10:35 price pulls back and trades 24,295, the first touch after the reclaim. The 10:36 and 10:37 bars hold inside the zone, with no 1-minute close below 24,290, and the higher of their two highs is 24,300. At 10:38 a bar closes at 24,302, above the pause's high. That close is the entry. The stop rests behind the far edge, below 24,290.</p>
+          <p>The trade comes from a branch written before 09:25, like every trade in the course: "If price prints two 1-minute closes below the on-low zone (24,290 to 24,296), then a 1-minute close back above 24,296, and a Pause N Go fires from the reclaimed zone, then [target level]. Invalidation: a 5-minute close back below 24,290. Conviction: [counted from the three checks in Module 09]." The construction comes from <a href="14-trade-construction.html">Module 14</a> at the trigger: the target is a level, the stop is behind the far edge, the trade must clear 2:1 to that target, and the size comes from the stop distance and the grade, in the one table <a href="14-trade-construction.html">Module 14</a> sets. How far behind the far edge the stop sits is also construction.</p>
+          <p>If the pause fails, with a 1-minute close below 24,290, there is no trigger and no trade. If the trigger fires and the stop fills, that is a planned trade that lost: one member of a distribution, carrying no negative tag. Neither outcome is a mistake. Entering without the trigger is.</p>
+          <p><strong>The rule:</strong> the only entry this page teaches is Pause N Go from the reclaimed zone, off a branch written before 09:25, with the stop resting behind the far edge. No Pause N Go, no trade: the read stays context.</p>
+          <p><strong>Getting it wrong</strong> looks like a buy on the close of the reclaim bar at 10:33. What it reveals: impatience dressed as speed. An entry on the reclaim close skips the one thing the pause exists to show: whether price can hold the reclaimed zone at all. <strong>The fix:</strong> the order ticket stays unarmed until both pause bars have closed. Then write the trigger's price condition on the plan line, "1-minute close above 24,300", and arm the order only when that line is true.</p>
+
+          <h2>Trapped Traders Confirms; It Doesn't Trigger</h2>
+          <div class="definition-box">
+            <div class="definition-term">Trapped Traders</div>
+            <div class="definition-text">Traders holding positions that price has just moved against, past the place they entered, such as buyers of a breakout that has fallen back inside the range. Their stops sit beyond the move, and their exit pushes price further against them. On a footprint chart this is the confirmation for the failed breakout and failed breakdown read (Modules 07 and 11).</div>
+          </div>
+          <p><a href="07-reading-order-flow.html">Module 07</a> gives the footprint signature three parts: stacked imbalances at the extreme, the next bar closing back through the level, and delta flipping to the other side. Show it, on the on-low example: the 10:32 bar, the second close below, carries three stacked selling imbalances near its low and a delta of −240. The 10:33 bar closes back above 24,296 with a delta of +205. All three boxes are ticked. Sellers who sold the low at size got nothing for it, and they are now short below price.</p>
+          <p>The confirmation is recorded, not acted on. Following Module 07, "trapped" is written in the trade note only when all three parts are on the chart at a named level. The confirmation field takes one of the four aggression sub-forms by name (big-orders, failing-delta, delta-divergence, two-bar-exhaustion) or none, exactly as Module 07 defines them; if one of them also printed, it is recorded there. A failed breakdown without the footprint signature is still the read, with the trade note saying so. The order still waits for the trigger.</p>
+          <p><strong>The rule:</strong> Trapped Traders confirms a failed breakdown or failed breakout read that is already on the chart. It never replaces the two closes, the reclaim or the Pause N Go, and it never changes size.</p>
+          <p><strong>Getting it wrong</strong> looks like a second contract added because "trapped printed, this one is cleaner". What it reveals: the footprint has become reassurance, and reassurance leaks into size. Conviction never changes size, and neither does a confirmation. <strong>The fix:</strong> the size line on the order ticket is filled from the stop distance and the grade, and written before the footprint panel is opened. The footprint can add a word to the trade note. It can't change a number on the ticket.</p>
+
+          <h2>The Pull To Sell The Top</h2>
+          <p>A range invites certainty. You can see both ends of it. Price has turned at the top of this range twice this week, and by the third test it feels like a pattern you can lean on. Selling there feels like reading the market. Mostly it is wanting to be the one who called the turn.</p>
+          <p>This is the hard part, because the rejection read is right often enough to feel like a signal. When it is right, the trade you didn't take runs to the middle of the range without you. When it is wrong, price accepts beyond the extreme, and the sale at the top is the trade with nothing behind it. A context read that fails costs you nothing. A fade with no trigger that fails costs you R and a tag.</p>
+          <p><strong>The rule:</strong> at a range extreme, the only orders are the ones a written branch names: acceptance and a trigger (<a href="10-trend-continuation.html">Module 10</a>), or the failed breakdown or failed breakout read and its Pause N Go. Everything else at a range extreme is the nothing case.</p>
+          <p><strong>Getting it wrong</strong> looks like a resting sell limit parked at the pd-high before the open "because it rejected yesterday". What it reveals: you want the market to confirm a call you have already made, and a blind limit with no displacement in front of it carries trigger none in the journal. <strong>The fix:</strong> before 09:25, every range-extreme zone on your sheet carries one word beside it: a branch number, or "nothing". A zone marked "nothing" gets its two alerts and never an order. When it rejects in the session, you say aloud "rejected, branch cancelled" and write the session-notes line.</p>
+
+          <div class="key-concept">
+            <p><strong>A level that fails is the same test as a level that holds, with the other answer.</strong> It cancels or ends a branch and sets your targets; it never hands you an order. The one failure this course trades is the failed breakdown or failed breakout: two 1-minute closes beyond the far edge, a reclaim, then a Pause N Go from the reclaimed zone.</p>
+          </div>
+
+          <h2>Worked Cases: One Trade, One Cancelled Branch</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A composite MNQ session, built to show a failed breakdown traded from a written branch. It belongs to no one, and the prices are invented for the arithmetic. Points are index points on the MNQ chart.</p>
+            <p><strong>Context at 09:05:</strong> price 24,452. Against the PD range (24,310 to 24,560): inside. Against PD value (24,376 to 24,505): inside. No Tier One release today.</p>
+            <div class="spec-table-wrap">
+              <table class="spec-table">
+                <thead>
+                  <tr><th scope="col">Slug</th><th scope="col">Zone</th><th scope="col">Side</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>pd-high</td><td class="num">24,554 – 24,560</td><td>above</td></tr>
+                  <tr><td>pd-vah</td><td class="num">24,500 – 24,505</td><td>above</td></tr>
+                  <tr><td>pd-vpoc</td><td class="num">24,440 – 24,448</td><td>below</td></tr>
+                  <tr><td>pd-val</td><td class="num">24,376 – 24,382</td><td>below</td></tr>
+                  <tr><td>pd-low</td><td class="num">24,310 – 24,316</td><td>below</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>The branch, written before 09:25.</strong> Invalidation: a 5-minute close back below 24,376. Level and trigger: if price prints two 1-minute closes below the pd-val zone (24,376 to 24,382), then a 1-minute close back above 24,382, and a Pause N Go fires from the reclaimed zone. Target: pd-vpoc, 24,440. Checks: zone, one level only, no; path, no level between 24,382 and 24,440, yes; room and clock, yes. Conviction: moderate: the zone holds one level.</p>
+            <p><strong>The sequence</strong> (1-minute bars, 10:12 to 10:21):</p>
+            <div class="spec-table-wrap">
+              <table class="spec-table">
+                <thead>
+                  <tr><th scope="col">Bar</th><th scope="col">High</th><th scope="col">Low</th><th scope="col">Close</th><th scope="col">Read</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>10:12</td><td class="num">24,388</td><td class="num">24,380</td><td class="num">24,383</td><td>First touch of the zone.</td></tr>
+                  <tr><td>10:13</td><td class="num">24,384</td><td class="num">24,377</td><td class="num">24,379</td><td>Inside the zone.</td></tr>
+                  <tr><td>10:14</td><td class="num">24,380</td><td class="num">24,370</td><td class="num">24,372</td><td>Close 1 below 24,376.</td></tr>
+                  <tr><td>10:15</td><td class="num">24,374</td><td class="num">24,363</td><td class="num">24,367</td><td>Close 2 below. Stacked selling imbalances near the low, delta −210.</td></tr>
+                  <tr><td>10:16</td><td class="num">24,388</td><td class="num">24,366</td><td class="num">24,385</td><td>Reclaim: a close above 24,382. Delta +190.</td></tr>
+                  <tr><td>10:17</td><td class="num">24,391</td><td class="num">24,384</td><td class="num">24,388</td><td>Above the zone.</td></tr>
+                  <tr><td>10:18</td><td class="num">24,389</td><td class="num">24,381</td><td class="num">24,383</td><td>Pullback; first touch of the zone after the reclaim.</td></tr>
+                  <tr><td>10:19</td><td class="num">24,386</td><td class="num">24,378</td><td class="num">24,380</td><td>Pause, bar 1. No close below 24,376.</td></tr>
+                  <tr><td>10:20</td><td class="num">24,385</td><td class="num">24,377</td><td class="num">24,381</td><td>Pause, bar 2. No close below 24,376. Pause high 24,386.</td></tr>
+                  <tr><td>10:21</td><td class="num">24,392</td><td class="num">24,381</td><td class="num">24,390</td><td>Resumption: a close above 24,386. Entry.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>The read and the confirmation.</strong> Two closes below the far edge, 10:14 and 10:15, then the reclaim at 10:16, two minutes after the first close; no 5-minute close printed below the zone. Trapped Traders, three boxes: the stack at the extreme on 10:15, the next bar closing back through the level, delta from −210 to +190. "Trapped" goes in the trade note. No aggression sub-form was seen on the approach, so the confirmation field is none.</p>
+            <p><strong>Construction.</strong> Entry 24,390 on the 10:21 close. Stop resting at 24,372, behind the far edge: 18 points. Target pd-vpoc at 24,440: 50 points, about 2.8 to 1, which clears 2:1. Size from the stop distance and the grade, in <a href="14-trade-construction.html">Module 14</a>'s table. The grade's four checks, at entry: named level, yes; trigger fired before entry, yes; stop behind structure, yes; size matched the plan, yes.</p>
+            <p><strong>Exit.</strong> Price reached 24,440 at 10:58 and the resting target filled: +50 points, +2.8R. Execution mark: Pass. After the exit, price traded to 24,452 by 11:15 and then rotated back to 24,410. After the exit is not your money, in either direction.</p>
+            <p>The same branch could as easily have ended at −1R: price falling back through the zone after entry and the stop at 24,372 filling. That would have been the same trade, built the same way, with a different result, and it would carry no negative tag.</p>
+            <p class="text-muted">Hypothetical illustration. Hypothetical results have inherent limits: they are not actual trading and do not reflect real fills, slippage or the pressure of risk, and no representation is made that any account will achieve similar results.</p>
+          </div>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A different composite MNQ session, built to show a rejection read as context: one branch cancelled, and no trade. It belongs to no one, and the prices are invented.</p>
+            <p><strong>Context at 09:05:</strong> price 25,071, inside the PD range (24,960 to 25,124) and inside PD value. The pd-high zone is 25,118 to 25,124; price is below it, so the far edge is 25,124. The pd-vpoc zone is 25,052 to 25,060.</p>
+            <p><strong>Branch 1, written before 09:25.</strong> Invalidation: a 5-minute close back below 25,118. If price accepts above the pd-high zone, meaning a 5-minute close above 25,124 within 15 minutes of the first touch, and a Pause N Go fires on the first pullback into the zone, then prior-week-high, 25,230. Conviction: moderate. The plan has no failed-breakout branch at the pd-high, so that read sits in the nothing case.</p>
+            <p><strong>10:06.</strong> First touch of the pd-high zone. On the chart beside the zone: "first touch 10:06, window ends 10:21".</p>
+            <p><strong>10:07.</strong> A 1-minute bar closes at 25,127, above the far edge. The 10:08 bar closes at 25,121, back inside. One close beyond, not two: there is no failed breakout read, and even if a second close had printed, no branch was written for it.</p>
+            <p><strong>10:10, 10:15, 10:20.</strong> The 5-minute bars close at 25,122, 25,109 and 25,101. None closed above 25,124.</p>
+            <p><strong>10:21.</strong> The window has passed, with no acceptance and price below the zone. The read is a rejection. Branch 1 is cancelled for test 1. The session-notes line: "pd-high, test 1, rejected 10:21: branch 1 cancelled." Said aloud: "rejected, branch cancelled." The prior-week-high is no longer a target on this test; the pd-high that just held is now the upper target for any branch trading back up toward it from inside the range.</p>
+            <p><strong>After.</strong> Price rotated down and reached the pd-vpoc zone at 11:04. The plan had no order for that move, and nothing about it changes the record: no trade, no grade, no result. The evening chart mark-up records the first touch, the window, the single 1-minute close above, the rejection and the cancelled branch.</p>
+          </div>
+          <p>Notice what the two cases share. Both rejections were decided by closed bars at times written on the chart, not by how a bar looked. In the first, the failure was followed by a reclaim, a trigger and a written branch, so it was a trade. In the second, there was a failure and nothing else, so the plan changed and no order was placed. The structure on the chart did not decide which case was a trade. The branch you wrote before 09:25 did.</p>
+
+          <h2>Which Of These Is Yours?</h2>
+          <p>Take your last ten trades taken against a range extreme: a long at or just below a low on your list, or a short at or just above a high. Score each trade one point for each line that is true:</p>
+          <ol>
+            <li><strong>Branch.</strong> The trade came from a branch written before 09:25 that named this zone and this read.</li>
+            <li><strong>Two closes.</strong> At least two 1-minute closes printed beyond the far edge before the reclaim.</li>
+            <li><strong>Reclaim.</strong> A 1-minute close printed back beyond the near edge before any order was placed.</li>
+            <li><strong>Trigger.</strong> A Pause N Go fired from the reclaimed zone, and the entry was on the resumption close.</li>
+            <li><strong>Stop.</strong> The stop was resting behind the far edge from the moment of entry.</li>
+            <li><strong>Confirmation.</strong> "Trapped" was written only with all three boxes ticked, the confirmation field named one sub-form or none, and size did not change because of either.</li>
+          </ol>
+          <p><strong>6 of 6</strong> is the trade this page teaches. <strong>Lines 1 and 4 override the score.</strong> A trade at a range extreme that misses either one was a fade with no entry behind it, however well it scored on the rest. <strong>The threshold:</strong> if two or more of your ten miss line 1 or line 4, the fix from the last part goes on your sheet tomorrow: every range-extreme zone carries a branch number or the word "nothing", and a "nothing" zone gets no order. If none miss them, find the line from 2, 3, 5 and 6 that the most trades missed; if three or more missed it, it becomes a written check on your pre-market sheet.</p>
+
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>Next session, the first time price touches a range extreme on your sheet, write the window's end time beside the zone on the chart. At that time, write one word next to it: accepted, rejected or neither. That's the whole assignment.</p>
+          </div>
+
+          <h2>Where It Goes Next</h2>
+          <p><a href="12-the-gap-setups.html">Module 12, The Gap Setups</a>, covers the session where the open itself is outside the prior day's range, so the reads at the PD extremes start from the other side. <a href="13-triggers.html">Module 13, Triggers</a>, teaches Pause N Go in full, along with the other price events a branch can name, including the Level Reclaim trigger that this page keeps separate from the reclaim in the read. <a href="14-trade-construction.html">Module 14, Trade Construction</a>, turns the trigger into an order: the stop behind the far edge, the 2:1 check, and the size from the grade, in its one table.</p>
+          <p>The rejection line and the cancelled branch belong to the plan and the session: the nothing case in <a href="15-writing-the-plan.html">Module 15</a>, the two alerts on every zone and the evening mark-up in <a href="17-the-session-and-the-close.html">Module 17</a>. In the journal (<a href="12-journaling.html">Module 18, Journaling &amp; Review</a>), a failed breakdown or failed breakout trade is recorded with setup range-rejection, the variant in the tags, the location slug, trigger pause-n-go, the test number, the confirmation field, and "trapped" in the trade note when all three boxes were ticked. Those fields are what your record sorts by later. If you want to write a rejection entry of your own, it starts in the parking lot of your PlayBook (<a href="23-building-your-own-playbook.html">Module 23</a>).</p>
+
+
+        </div>
+
+        <!-- MARK COMPLETE -->
+        <div class="module-complete-zone mt-xl">
+          <button id="mark-complete-btn" class="btn btn--primary btn--lg" data-module-id="11-range-rejection">
+            Mark Complete & Continue →
+          </button>
+        </div>
+
+        <!-- MODULE NAVIGATION -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <a href="10-trend-continuation.html" class="module-nav-title">Trend Continuation</a>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next Module →</span>
+            <a href="12-the-gap-setups.html" class="module-nav-title">The Gap Setups</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="../ai.html" title="How AI is used here"><img src="../assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the plan.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    <nav class="footer-links" aria-label="Site policies"><a href="../privacy.html">Privacy</a> <a href="../support.html">Support</a></nav>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/nav.js"></script>
+  <script type="module" src="../js/gate.js"></script>
+  <script type="module" src="../js/progress.js"></script>
+  <script type="module" src="../js/module-toc.js"></script>
+  <script type="module" src="../js/copy-page.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

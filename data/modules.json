@@ -133,8 +133,8 @@
     "title": "Trend Continuation",
     "slug": "trend-continuation",
     "part": "blueprint",
-    "summary": "The level holds. Acceptance beyond a level, and the one form with history behind it.",
-    "status": "planned",
+    "summary": "The level holds. Acceptance beyond a level, the trigger in the pullback, and the next level as the target.",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "09-idea-generation"
@@ -147,7 +147,7 @@
     "slug": "range-rejection",
     "part": "blueprint",
     "summary": "The level fails. Includes the failed breakdown and breakout variant.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "10-trend-continuation"
@@ -159,8 +159,8 @@
     "title": "The Gap Setups",
     "slug": "the-gap-setups",
     "part": "blueprint",
-    "summary": "Gap Fill and Gap N Go. What a gap is, where it targets, and what testing did not support.",
-    "status": "planned",
+    "summary": "Gap Fill and Gap N Go. What a gap is, where it targets, and how to write Gap N Go as a register entry.",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "11-range-rejection"
@@ -173,7 +173,7 @@
     "slug": "triggers",
     "part": "blueprint",
     "summary": "The price event that starts a trade, and why order flow confirms rather than triggers.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "12-the-gap-setups"
@@ -186,7 +186,7 @@
     "slug": "trade-construction",
     "part": "blueprint",
     "summary": "Level, stop, risk, size, entry. In that order, every time.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "13-triggers"
@@ -318,7 +318,7 @@
     "slug": "how-ideas-fail-a-test",
     "part": "capstone",
     "summary": "Popular trading ideas, the failure modes a proper test exposes, and how to run that test on your own record.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "23-building-your-own-playbook"
