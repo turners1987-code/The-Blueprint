@@ -11,3 +11,5 @@
 .glossary-entry-def { font-size: 0.95rem; color: var(--text-secondary); max-width: 70ch; }
 .glossary-entry-tag { font-size: 0.75rem; color: var(--text-muted); margin-top: var(--space-xs); font-family: var(--font-mono); }
 .glossary-entry.hidden { display: none; }
+.glossary-count { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-sm); font-family: var(--font-mono); }
+.glossary-error { color: var(--text-muted); }

@@ -7,7 +7,7 @@ The Blueprint is a trading education site teaching an intraday trading framework
 ## Course
 
 - [Module index](https://bptrade.co/): the course home page, with the full module index and where to start.
-- [Glossary](https://bptrade.co/glossary.html): definitions of every trading term used in the course, with search.
+- [Glossary](https://bptrade.co/glossary.html): definitions of the 74 trading terms used in the course, with search.
 - [Card deck](https://bptrade.co/modules/flashcards.html): 32 flip cards covering the course concepts, with study and quiz modes and filtering by section.
 - [Dial In](https://bptrade.co/modules/dial-in.html): a five-question quiz that maps your market interests and habits to a trader profile and suggests where to start in the course.
 
