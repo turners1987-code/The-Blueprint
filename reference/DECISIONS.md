@@ -11,7 +11,7 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 ## Live pages
 - D13 — Toothbrush Therapy "Know Your Bias" → rename **"Know Your Idea"**: thesis, invalidation and conviction at a named level; no day-type call. (2026-10-31)
 - D28 — Toothbrush grades → **A+/A/B/C** per TAXONOMY 5.1. (2026-10-31)
-- D16 — Journaling & Review weekly review → **add the display floor**: cohorts under 30 trades and 20 distinct sessions shown dimmed with a warning, never hidden (TAXONOMY 6.4). (2026-10-31)
+- D16 — Journaling & Review weekly review → **add the display floor**: cohorts under 30 trades or fewer than 20 distinct sessions shown dimmed with a warning, never hidden (TAXONOMY 6.4). (2026-10-31)
 - D56 — Dial In → **strip setup advice**; keep the quiz; results give session and instrument fit only and point to Module 02. (2026-10-31)
 
 ## Confirmations — approved as a batch (2026-10-31)
@@ -33,7 +33,7 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D37 — Process pages written as mechanisms; no desk, no named results; reset taught as a rehearsed skill.
 - D38 — Sim never pooled; occurrences only, live/sim split shown; replay is fill practice.
 - D41 — Footprint items: lessons explain the tick-data limit on testing them, as a fact about testing; no status badge (D58).
-- D43 — No execution outside the window; prep ends 09:25; overnight only builds ON levels.
+- D43 — Execution only inside the 06:00–16:00 ET window, and only after that day's pre-market sheet is complete; the sheet is finished by 09:25 at the latest. Overnight hours build ON levels.
 - D44 — Record test number on every trade; first-test-only applies to R1.
 - D45 — An idea without a named invalidation is No Setup; final read is one paragraph.
 - D48 — No affiliate links in lessons; funded accounts taught as a constraint set whose results are sim-grade.
@@ -52,7 +52,7 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D11 — Automation off; the breakeven key unbound. The one planned scale (half at 2R, runner to the structural level) is allowed; any other breakeven or trail is Too Early.
 - D15 — A re-entry is the same setup plus a fresh trigger; no count cap; the kill switch is the cap.
 - D22 — Order-flow events confirm, never trigger: a recorded sub-form plus a price event (a close or a structure break). METHODOLOGY_v2's Tier 3 "does not have to be a bar close" sentence is superseded by TAXONOMY §3.
-- D23 — Dealer and gamma levels are not locations, targets or if-clauses; the regime may weight conviction only (Module 04, concepts).
+- D23 — Dealer and gamma levels are not locations, targets or if-clauses. The regime is a note written beside the counted conviction label (D63); it never changes the count, the size or the direction (Module 04, concepts).
 - D24 — R10/R11 retests are register items; nothing about them appears on a page.
 - D27 — No Range Rejection entry is published; the setup is taught as a context read. Entry candidates are register items.
 - D33 — Calendar and OpEx effects are range and activity context for idea generation, never direction; no figure on a page.
