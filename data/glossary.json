@@ -377,7 +377,7 @@
   {
     "term": "Footprint Chart",
     "aliases": [],
-    "definition": "An advanced chart type that shows the volume traded at each price level within each candle, split into buying volume (traded at the ask) and selling volume (traded at the bid). In this course it can confirm a trigger at a level; it is never the trigger.",
+    "definition": "A chart type that shows the volume traded at each price level within each candle, split into buying volume (traded at the ask) and selling volume (traded at the bid). In this course it can confirm a trigger at a level; it is never the trigger.",
     "module": [
       "07"
     ],
