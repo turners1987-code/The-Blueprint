@@ -46,7 +46,9 @@
 
     12. (modules/*.html) A module page must not contain an <h3>
         unless it also contains an <h2>. A skipped heading level is
-        an error.
+        an error. A published module page (status "published" in
+        data/modules.json) must carry the Copy for your AI button
+        (data-copy-page-btn) and load js/copy-page.js.
 
     13. (gated pages) A page carrying data-gate must load js/gate.js,
         and a module page whose id is tier "paid" in data/modules.json
@@ -236,6 +238,14 @@ function checkHtml(htmlFile, moduleIds) {
       && /<h3[\s>]/i.test(content) && !/<h2[\s>]/i.test(content)) {
     errors.push('E12: <h3> without any <h2> — the heading outline skips a level');
   }
+  if (publishedPages.has(relName(htmlFile))) {
+    if (!/<button\b[^>]*\bdata-copy-page-btn\b/i.test(content)) {
+      errors.push('E12: published module page is missing the Copy for your AI button (data-copy-page-btn)');
+    }
+    if (!referenced.some(ref => ref === path.join(ROOT, 'js', 'copy-page.js'))) {
+      errors.push('E12: published module page does not load js/copy-page.js');
+    }
+  }
 
   // ── Check 3: non-empty <title> and meta description ──
   const title = content.match(/<title[^>]*>([^<]*)<\/title>/i);
@@ -309,11 +319,14 @@ if (htmlFiles.length === 0) {
 
 let moduleIds = null; // null → check 7 skipped
 const paidIds = new Set(); // module ids with tier "paid" (check 13)
+const publishedPages = new Set(); // "modules/<file>" with status "published" (check 12)
 if (existsSync(MODULES_JSON)) {
   try {
     const parsed = JSON.parse(readFileSync(MODULES_JSON, 'utf8'));
     moduleIds = moduleIdsFrom(parsed);
     (Array.isArray(parsed) ? parsed : parsed.modules || []).filter(m => m && m.tier === 'paid').forEach(m => paidIds.add(m.id));
+    (Array.isArray(parsed) ? parsed : parsed.modules || []).filter(m => m && m.status === 'published')
+      .forEach(m => publishedPages.add(`modules/${m.file || `${m.number}-${m.slug}.html`}`));
     const bad = (Array.isArray(parsed) ? parsed : parsed.modules || [])
       .filter(m => m && m.tier !== 'free' && m.tier !== 'paid').map(m => m.id);
     if (bad.length) {

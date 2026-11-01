@@ -104,7 +104,9 @@ is wrong and predates the v2 theme.
 **Path rules:** root pages use `css/` and `js/`; module pages use `../css/` and `../js/`.
 Enforced by the check script.
 
-**Module page pattern** (copy `modules/01-evidence-standard.html`): nav root, `.module-header`,
+**Module page pattern** (copy `modules/01-evidence-standard.html`): nav root, `.module-header`
+ending in the Copy for your AI block (`.copy-page[data-copy-page]`: the `data-copy-page-btn`
+button, the Download .md button and the hint; `js/copy-page.js`),
 `<nav class="module-toc" data-module-toc>`, `.lesson-content` with **h2** section headings,
 one `.key-concept`, `.module-complete-zone` with `#mark-complete-btn[data-module-id]`,
 `.module-nav`, footer with the AI seal. `js/module-toc.js` builds the section index from the
@@ -134,6 +136,7 @@ js/    nav.js         shared nav on every page; registers the service worker
                       (lastVisited) is separate from completion; unmark control
        modules.js     renders the module grid from data/modules.json
        module-toc.js  section index on module pages
+       copy-page.js   Copy for your AI: the lesson as Markdown, to the clipboard or a .md file
        tools.js       renders tools.html from data/tools.json
        gate.js        access gate: hasAccess(), locked state for gated pages
        unlock.js      access code entry (placeholder validation)
@@ -186,7 +189,8 @@ with it.
 9. Any percentage inside a `.stat-block` element must carry its sample size
 10. The journal UI reaches storage only through `js/journal/storage.js`, awaited
 11. Every `data/tools.json` entry has a valid status; `available` requires a file
-12. A module page may not contain an h3 without an h2
+12. A module page may not contain an h3 without an h2; a published module page carries the
+    Copy for your AI button and loads `js/copy-page.js`
 13. A page with `data-gate` loads `js/gate.js`; a paid module page must carry `data-gate="tier"`
 14. Every `data/glossary.json` entry has a non-empty term and definition, and terms are unique;
     every `.definition-box` term on a published module page has an entry (missing ones warn)
