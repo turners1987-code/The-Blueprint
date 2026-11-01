@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Order Flow — The Blueprint</title>
+  <meta name="description" content="Module 07 of The Blueprint: how to read the footprint at a level. Delta and cumulative delta, diagonal and stacked imbalances at your own settings, absorption against acceptance, trapped traders, the four ways aggression fails, and why order flow confirms a trigger and never replaces it.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Reading Order Flow — The Blueprint">
+  <meta property="og:description" content="Module 07 of The Blueprint: how to read the footprint at a level. Delta and cumulative delta, diagonal and stacked imbalances at your own settings, absorption against acceptance, trapped traders, the four ways aggression fails, and why order flow confirms a trigger and never replaces it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/modules/07-reading-order-flow.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/modules.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="module-page" id="main-content" tabindex="-1" data-gate="tier">
+
+    <!-- MODULE HEADER -->
+    <header class="module-header">
+      <div class="container">
+        <div class="module-meta">
+          <span class="module-number">MODULE 07</span>
+          <span class="badge badge--cyan">Why Price Moves</span>
+        </div>
+        <h1>Reading Order <span class="text-gold">Flow</span></h1>
+        <p class="lead mt-md">The footprint never tells you to enter: at its best it tells you that the side pushing into your level is running out, and price still has to prove it before you act.</p>
+        <div class="copy-page" data-copy-page>
+          <button type="button" class="btn btn--ghost btn--sm copy-page-btn" data-copy-page-btn aria-describedby="copy-page-hint">Copy for your AI</button>
+          <button type="button" class="copy-page-download" data-copy-page-download>Download .md</button>
+          <span class="copy-page-hint" id="copy-page-hint" role="tooltip">Copies this lesson as Markdown to paste into any AI assistant</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MODULE BODY -->
+    <div class="module-body">
+      <div class="container">
+        <nav class="module-toc" data-module-toc aria-label="On this page"></nav>
+
+        <div class="lesson-content">
+
+
+          <h2>The Footprint That Said Buy</h2>
+          <p>You know the bar. Price drops into the PD Low, the footprint lights up with selling, a fat negative number prints under the candle, and something in it looks finished. You buy. The next bar prints the same fat number and keeps going. Twenty minutes later, in the middle of the range, the footprint shows a stack of buying imbalances, and you buy that too, because it looked exactly like the thing that worked last week.</p>
+          <p>Neither trade was a read. Both were a number taken as an order. The footprint shows you more than any other chart, and that is the trouble with it: there is a signal on every bar if you want one. This page teaches you to read it at a level, as confirmation, with every term defined and every setting written down. Seven parts, mechanical first: what delta and the footprint measure, imbalances and your own settings, absorption against acceptance, trapped traders, the four ways aggression fails, why order flow confirms and price triggers, and last the part about you: early reads, and reading what you want to see.</p>
+
+          <h2>Delta, Cumulative Delta And The Footprint</h2>
+          <p>Every contract that trades has two sides: someone resting a limit order and someone crossing the spread to hit it. The one who crosses is the aggressor. Price moves when aggressors use up the resting orders at one price and have to reach for the next. "More buyers than sellers" can never be true: every trade has exactly one of each. What can differ is who was in a hurry.</p>
+          <div class="definition-box">
+            <div class="definition-term">Footprint Chart</div>
+            <div class="definition-text">An advanced chart type that shows the volume traded at each price level within each candle, split into buying volume (traded at the ask) and selling volume (traded at the bid). In this course it can confirm a trigger at a level; it is never the trigger.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Delta</div>
+            <div class="definition-text">In footprint charts, delta is the difference between buying volume (contracts traded at the ask) and selling volume (contracts traded at the bid). Positive delta means more buying; negative delta means more selling. It reveals the aggression behind a move.</div>
+          </div>
+          <p>Show it: a 1-minute MNQ bar in which 820 contracts traded at the ask and 690 at the bid has a bar delta of +130. "Buying" here means aggressive buying: market orders lifting the offer. Passive limit orders never appear in delta, which is why price can rise on a bar with negative delta: sellers hit resting bids all bar long, the bids held, and price lifted when the offers above were pulled. Delta tells you who pushed. Price tells you whether the push worked.</p>
+          <div class="definition-box">
+            <div class="definition-term">Cumulative Delta</div>
+            <div class="definition-text">The running total of bar delta from the start of the session. It shows which side has been more aggressive over the day. It is slow, can stay positive through a fall, and is context for the session, never a signal on its own.</div>
+          </div>
+          <p>The working read is the bar: per-bar delta, and how it changes as price moves toward your level. Cumulative delta sits underneath as context. One more setting decides every number you see. NinjaTrader 8's volumetric bars classify each trade as buying or selling from historical bid and ask data when your data provider supplies it; when it supplies only last-traded prices, the platform falls back to an up-tick/down-tick mode, which classifies trades differently. If the history your provider supplies is not the same kind of data as the live feed, a reloaded chart can show different deltas from the ones you watched live. The two modes do not give the same numbers, so a screenshot without its mode cannot be compared with one that has it.</p>
+          <p><strong>The rule:</strong> read per-bar delta at the level; treat cumulative delta as session context only; and write the delta mode on every footprint screenshot you save.</p>
+          <p><strong>Getting it wrong</strong> looks like a rising cumulative delta line read as "buyers in control" and a long taken from it, nowhere near a level. What it reveals: you want one number to hand you the direction, and a running total is the most comforting number on the screen because it changes slowly. <strong>The fix:</strong> cumulative delta lives in a panel below the chart, never on the price pane, and it never appears in a branch of your plan (<a href="15-writing-the-plan.html">Module 15</a>). Every saved screenshot carries a text label with three items: timeframe, delta mode, and whether the chart was live or reloaded.</p>
+
+          <h2>Imbalances, Stacks And Your Own Settings</h2>
+          <p>A footprint is read diagonally. Aggressive buyers lift the offer, which sits one tick above the bid, so the buying at a price is compared with the selling one tick below it. When one side outweighs the other past a ratio you set, the cell is flagged.</p>
+          <div class="definition-box">
+            <div class="definition-term">Diagonal Imbalance</div>
+            <div class="definition-text">A footprint cell flagged because aggressive volume on one side outweighs the other side diagonally: buying at a price against selling one tick below it, or selling at a price against buying one tick above it, by at least a set ratio and a set minimum difference in contracts. Not the auction imbalance of Module 05.</div>
+          </div>
+          <p>Show it, on four rows of one bar (ratio 5, minimum difference 15):</p>
+          <div class="spec-table-wrap">
+            <table class="spec-table">
+              <thead>
+                <tr><th scope="col">Price</th><th scope="col">Sold at bid</th><th scope="col">Bought at ask</th><th scope="col">Diagonal check (ask here against bid one tick below)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="num">21,702.00</td><td class="num">18</td><td class="num">96</td><td>96 against 14: 6.9 to 1, difference 82. Flagged.</td></tr>
+                <tr><td class="num">21,701.75</td><td class="num">14</td><td class="num">88</td><td>88 against 16: 5.5 to 1, difference 72. Flagged.</td></tr>
+                <tr><td class="num">21,701.50</td><td class="num">16</td><td class="num">71</td><td>71 against 9: 7.9 to 1, difference 62. Flagged.</td></tr>
+                <tr><td class="num">21,701.25</td><td class="num">9</td><td class="num">20</td><td>20 against 6: 3.3 to 1. Not flagged.</td></tr>
+                <tr><td class="num">21,701.00</td><td class="num">6</td><td class="num">4</td><td>(bottom row)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Three flagged cells on adjacent prices, all on the buying side, is a stack.</p>
+          <div class="definition-box">
+            <div class="definition-term">Stacked Imbalance</div>
+            <div class="definition-text">A cluster of adjacent prices inside one footprint bar, each carrying a diagonal imbalance on the same side, with bar delta running the same way. On the 5-minute footprint it is an in-session location in this course (Module 06), never a trigger.</div>
+          </div>
+          <p>The settings decide what you see. NinjaTrader 8 ships its volumetric bars with an imbalance ratio of 1.5 and a minimum delta of 10, loose enough to flag cells on almost every bar. This course starts you somewhere tighter, and says plainly why.</p>
+          <div class="definition-box">
+            <div class="definition-term">Working Default</div>
+            <div class="definition-text">A setting you start from because you need one, not because a test chose it. For the footprint stacked-imbalance read, the course's working default is ratio 5 and minimum delta 15, chosen for screen clarity. You replace it with your own setting, derived from your own record.</div>
+          </div>
+          <p>Ratio 5 and minimum delta 15 were chosen so the screen stays readable on MNQ, not because anything measured them better than 3 or 4. Deriving your own takes one fact about testing into account. A footprint read needs historical tick data with the buyer or seller side stamped on every trade, for every year a test covers, and a platform's own tick history is far shorter than that. So you cannot backtest ratio 3 against ratio 5 across years on the data your platform gives you. That is a limit of the data, not a verdict on the read. What you can do is count: on your levels, over a stretch of replay sessions, how many stacks each setting flags per session at a level and how many in the middle of the range. Replay counts occurrences; it does not measure an edge (<a href="22-how-to-test-an-edge.html">Module 22</a>).</p>
+          <p><strong>The rule:</strong> your footprint settings (ratio, minimum delta, bar timeframe, ticks per row, delta mode) are written down, saved as one chart template, and changed only at a scheduled review, as a dated line.</p>
+          <p><strong>Getting it wrong</strong> looks like the ratio dropped to 3 at 10:20 because nothing was flagging, or raised to 8 because everything was. What it reveals: you are tuning the chart until it shows the trade you already want, and a setting that moves with your mood flags your mood. <strong>The fix:</strong> one saved template, named with its settings (for example "FP 5-15 BidAsk"), and the same line written on your pre-market sheet. A setting change goes in a change log with the date and the reason, and takes effect the next session, never the current one.</p>
+
+          <h2>Absorption Or Acceptance</h2>
+          <p>Picture price falling into the PD Low zone. Bar after bar prints heavy selling at the bid, deltas of −200 and worse, and price does not go lower. Someone is resting buy orders there and filling every seller who arrives. That is absorption.</p>
+          <div class="definition-box">
+            <div class="definition-term">Absorption</div>
+            <div class="definition-text">Heavy aggressive volume meeting resting orders at a price and failing to move price through it: sellers hitting bids that hold, or buyers lifting offers that hold. It lasts only while price holds. If price moves through and stays beyond, the read becomes acceptance.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Acceptance</div>
+            <div class="definition-text">Price building time and volume at a new price instead of passing through it. Acceptance moves value; a quick visit does not. The mechanical acceptance test this course uses at a level is taught in Module 10.</div>
+          </div>
+          <p>The same footprint can end either way, which is why absorption is only half a read. Each price is a small auction. If the resting side wins, the aggressor is absorbed and price stays on its side of the level. If the aggressor wins, the resting orders are used up, price trades through, and the next bars build time beyond it: the level has been accepted, and whatever looked like absorption was just the last stand before it gave way. In a strong trend, absorption prints over and over as buyers soak up passive offers on the way up. Absorbing is what a trend does. On its own it tells you nothing about a turn.</p>
+          <p>When the absorption happens at your named level and the size holds and keeps printing there, it is the <code>big-orders</code> confirmation, one of the four you will meet below.</p>
+          <p><strong>The rule:</strong> absorption counts only at a named level, only while price holds the zone, and only with a price event after it. If price closes beyond the far edge, the read is acceptance and the absorption read is over.</p>
+          <p><strong>Getting it wrong</strong> looks like a long on the third −200 bar at a low, in the middle of the range, in a session that has trended down since the open. What it reveals: you are treating the footprint's most dramatic picture as an answer, when it is a question that the next bars settle. <strong>The fix:</strong> a written condition on the plan line: "absorption read ends on a 1-minute close beyond [far edge price]." If the far edge is not a number you can type, there is no absorption read, only a big number.</p>
+
+          <h2>Trapped Traders</h2>
+          <p>A failed breakdown has a recognisable footprint. Price breaks below a level, and the bar that breaks it shows a stack of selling imbalances near its low: traders selling the break, aggressively. Then the next bar closes back above the level, and delta turns from near zero to strongly positive. The sellers who sold the low are now short below price, with stops above.</p>
+          <div class="definition-box">
+            <div class="definition-term">Trapped Traders</div>
+            <div class="definition-text">Traders holding positions that price has just moved against, past the place they entered, such as buyers of a breakout that has fallen back inside the range. Their stops sit beyond the move, and their exit pushes price further against them. On a footprint chart this is the confirmation for the failed breakout and failed breakdown read (Modules 07 and 11).</div>
+          </div>
+          <p>On the footprint the signature has three parts: stacked imbalances at the extreme, the next bar closing back through the level, and delta flipping to the other side. Their exits can add fuel to the move back, but how much, and when, is not something the chart lets you count. What you can see is the failed signal itself: aggressive selling, done at size, that produced nothing. Read the failure, not the story about who has to cover. Trapped Traders is a confirmation of the failed breakdown or failed breakout read, the variant of Range Rejection that Module 11 teaches: two 1-minute closes beyond the level, then a reclaim. The sweep alone is never the read, and the trigger after the reclaim is a price event such as Pause N Go (Module 13).</p>
+          <p><strong>The rule:</strong> write "trapped" only when all three parts are on the chart at a named level, and act only after the reclaim and a trigger.</p>
+          <p><strong>Getting it wrong</strong> looks like a long into the sweep bar itself because "everyone below is trapped", before any close back through the level. What it reveals: you are trading the story of other people's pain, and the story feels certain before price has said anything. <strong>The fix:</strong> a three-box check written on the plan line (stack at the extreme / close back through / delta flip). No order is placed with a box empty, and none before the trigger after the reclaim.</p>
+
+          <h2>Four Ways Aggression Fails</h2>
+          <p>At a level, the useful question is not "who is winning?" It is narrower: is the side pushing into this level running out? The course records that event in one confirmation field with four sub-forms. They are four different events, and you keep them apart, because a combined "order flow looked good" can never tell you later which of them meant anything in your own record.</p>
+          <div class="definition-box">
+            <div class="definition-term">Aggression Fails At The Level</div>
+            <div class="definition-text">The order-flow confirmation in this course: the side pushing into a named level is running out. It is recorded with one of four sub-forms (big-orders, failing-delta, delta-divergence, two-bar-exhaustion) on every trade that uses it. It is never a trigger; a price event must also fire.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Big Orders</div>
+            <div class="definition-text">The big-orders sub-form: passive size that holds and prints at the level. Aggressors keep hitting it and price does not get through.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Failing Delta</div>
+            <div class="definition-text">The failing-delta sub-form: delta declining on approach. Each bar coming into the level carries less aggression in the direction of the push than the one before.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Delta Divergence</div>
+            <div class="definition-text">The delta-divergence sub-form: price makes a new extreme on approach to the level and delta does not. Read on the approach, not on arrival.</div>
+          </div>
+          <div class="definition-box">
+            <div class="definition-term">Two-Bar Exhaustion</div>
+            <div class="definition-text">The two-bar-exhaustion sub-form: a bar with large opposing delta inside it that closes near its extreme in the direction of your read, then a break of that signal bar. For a long: deep selling inside the bar, a close near its high, then a break above it.</div>
+          </div>
+          <p>Show each one, for a long at a level below price:</p>
+          <ul>
+            <li><strong>big-orders.</strong> Inside the zone, the bid column at one price prints 180, then 210, then 150 contracts across three bars, and no bar trades below it.</li>
+            <li><strong>failing-delta.</strong> Three bars step down toward the zone with deltas of −158, −92 and −37. Price is still falling; the selling behind it is drying up.</li>
+            <li><strong>delta-divergence.</strong> An earlier push down on the approach printed −240 at its low. Price bounces, then pushes again and makes a lower low, on a bar with delta of −60. The new extreme was made with far less selling.</li>
+            <li><strong>two-bar-exhaustion.</strong> A bar inside the zone reaches a minimum delta of −300 during the bar yet closes in its top quarter. The next bar breaks above its high.</li>
+          </ul>
+          <p>Approach, not arrival, is the line that matters for the delta reads. The approach is the run of bars moving toward the zone, up to the first touch. Once price is in the zone, the resting orders there start answering, and delta from that point describes the reaction you are about to see in price anyway. A divergence that shows up only after price has arrived is the reaction, not a warning ahead of it. Record delta-divergence and failing-delta only from approach bars.</p>
+          <p><strong>The rule:</strong> every trade that uses this confirmation records exactly which sub-form you saw, in the confirmation field, before entry. Delta-divergence and failing-delta are read from approach bars only.</p>
+          <p><strong>Getting it wrong</strong> looks like a confirmation field that says "order flow" or "delta" on forty trades. What it reveals: you used whatever looked supportive at the time, so the record cannot separate four events that may behave nothing alike, and you will never learn which one is yours. <strong>The fix:</strong> the confirmation field is a drop-down with five values (the four sub-forms and none) and no free text. If you cannot pick one in the moment, the value is none, and that is recorded as data too.</p>
+
+          <h2>Order Flow Confirms; Price Triggers</h2>
+          <p>Every trade in this course traces one chain: <strong>idea → setup (location + read) → trigger → construction (level → stop → risk → size → entry)</strong>. Order flow sits beside the trigger. It never takes its place.</p>
+          <div class="definition-box">
+            <div class="definition-term">Trigger</div>
+            <div class="definition-text">The price event at the level that tells you to enter now, such as Pause N Go, a resting limit after displacement, or a level reclaim on a 5-minute close (Module 13). Order flow can confirm a trigger; it is never the trigger.</div>
+          </div>
+          <p>A confirmed entry has two parts: a recorded sub-form, and a price event, a bar close or a break of structure. The failing delta tells you the selling is drying up. Only a close tells you that buyers have done something about it. The footprint's events are frequent, quick and often reversed within a bar; a close is fixed once it prints and anyone can check it on the chart tomorrow. That is why the order waits for the close.</p>
+          <p><strong>The rule:</strong> no order is placed on a footprint number. A trade that uses order flow needs a recorded sub-form and a trigger from Module 13 that fired at the level. A trade with the sub-form and no trigger is logged with trigger none.</p>
+          <p><strong>Getting it wrong</strong> looks like a buy stop one tick above an exhaustion print, filled before the bar closed, at a level or not. What it reveals: you trust the footprint more than price, which means you trust the faster, noisier, more easily reversed of the two. <strong>The fix:</strong> your order ticket is not armed until the trigger bar has closed. Write the trigger's price condition on the plan line ("1-minute close above [price]"), and arm the order only when that line is true.</p>
+
+          <h2>Early Reads, And Reading What You Want</h2>
+          <p>The first fifteen to twenty minutes after the 09:30 open are price discovery. Orders that built up overnight hit the market from both sides, liquidity above and below gets swept, and bar delta flips sign from one bar to the next. Big deltas print everywhere. In that noise, a footprint read means less than the same read later in the session, and the structure around it is wider.</p>
+          <p>The course has no clock ban on the opening minutes. What it has instead is arithmetic: wider early structure means a wider stop behind the far edge, and a wider stop means smaller size (Module 14). The session block, early, mid or late, is recorded on every trade, so your own record can later show whether your early reads behave like your later ones.</p>
+          <p>The harder part is not the open. It is you. The footprint offers a signal on every bar, and a mind that wants a trade will find one there. That is how trades happen in the middle of the range, where nothing sits under the stop: the flow looked right, so the location stopped mattering. Order flow away from a level is noise, however clear it looks.</p>
+          <p><strong>The rule:</strong> the footprint is read only for a named zone: the approach bars into it and the bars inside it, up to the trigger. In the opening block it is read the same way, the session block is recorded, and size comes from the wider stop.</p>
+          <p><strong>Getting it wrong</strong> looks like a string of trades in the first twenty minutes, all mid-range, each on a footprint number that "looked like the setup". What it reveals: you want the footprint to find the trade for you, so you go looking for it instead of waiting at a place. <strong>The fix:</strong> keep the footprint panel closed. Every marked zone carries two alerts, near edge and far edge (<a href="17-the-session-and-the-close.html">Module 17</a>). The footprint opens when a near-edge alert fires, you read the approach bars back from there, and it closes again when price leaves the zone without a trigger.</p>
+
+          <div class="key-concept">
+            <p><strong>Order flow tells you whether the side pushing into your level is running out; only a price event tells you it has.</strong> Record which of the four failures you saw, at a named level, and let the close decide.</p>
+          </div>
+
+          <h2>Worked Case: Failing Delta Into The PD High</h2>
+          <div class="example-box">
+            <div class="example-label">Illustration · not a trade record</div>
+            <p>A composite MNQ footprint sequence, built to show one read bar by bar. It belongs to no one, the prices are invented, and the case stops at the trigger, before any entry or outcome. Points are index points on the MNQ chart; footprint settings are the working default, ratio 5 and minimum delta 15, BidAsk mode, live chart.</p>
+            <p><strong>The plan line, written at 09:25:</strong> "If price accepts above the pd-high zone (21,684 to 21,690) and a Pause N Go fires on the first pullback into the zone, then prior-week-high, 21,790. Invalidation: a 5-minute close back below 21,684. Conviction: moderate." Confirmation is not in the plan line. It is something you record if it shows up.</p>
+            <p><strong>10:05.</strong> The 5-minute bar closes at 21,712, above the zone, within 15 minutes of the first touch at 09:52. Acceptance by the Module 10 test. The branch is live. The footprint is still closed: price is 22 points above the zone, outside both alerts.</p>
+            <p><strong>10:17.</strong> After a pullback, price touches 21,690 and the near-edge alert fires. The 1-minute footprint opens, and the approach bars are read back from there:</p>
+            <div class="spec-table-wrap">
+              <table class="spec-table">
+                <thead>
+                  <tr><th scope="col">1-min bar</th><th scope="col">High</th><th scope="col">Low</th><th scope="col">Close</th><th scope="col">Bar delta</th><th scope="col">Read</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>10:14</td><td class="num">21,709</td><td class="num">21,703</td><td class="num">21,705</td><td class="num">−158</td><td>Approach. Sellers pushing.</td></tr>
+                  <tr><td>10:15</td><td class="num">21,705</td><td class="num">21,697</td><td class="num">21,699</td><td class="num">−92</td><td>Approach. Lower low, less selling.</td></tr>
+                  <tr><td>10:16</td><td class="num">21,700</td><td class="num">21,691</td><td class="num">21,693</td><td class="num">−37</td><td>Approach. Third weaker bar: failing-delta.</td></tr>
+                  <tr><td>10:17</td><td class="num">21,694</td><td class="num">21,688</td><td class="num">21,689</td><td class="num">−12</td><td>Arrival. First touch of the zone.</td></tr>
+                  <tr><td>10:18</td><td class="num">21,693</td><td class="num">21,687</td><td class="num">21,689</td><td class="num">+6</td><td>Pause, bar 1. Holds inside; no close below 21,684.</td></tr>
+                  <tr><td>10:19</td><td class="num">21,692</td><td class="num">21,686</td><td class="num">21,690</td><td class="num">+11</td><td>Pause, bar 2. Holds inside; no close below 21,684.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>The confirmation.</strong> Three approach bars, each lower, each with less selling: −158, −92, −37. That is <code>failing-delta</code>, and it was complete at the close of 10:16, before price reached the zone. It goes in the confirmation field at 10:17.</p>
+            <p><strong>What was not there, and why it matters.</strong> Not <code>delta-divergence</code>: there was no earlier push on this approach to compare a new low against, only one continuous slide. Not <code>big-orders</code>: no single bid price inside the zone printed outsized size across bars. Not <code>two-bar-exhaustion</code>: no bar carried deep selling inside it and closed near its high. And the deltas at 10:17 to 10:19, small and turning positive, are arrival; they are not added to the read. One sub-form, recorded by name.</p>
+            <p><strong>The price event that still has to happen.</strong> The pause is in place: after the first touch at 10:17, two consecutive 1-minute bars, 10:18 and 10:19, held inside the zone with no 1-minute close below 21,684. The pause's high is 21,693. The trigger is a 1-minute close above 21,693. Until that close prints, the failing delta is a recorded observation and nothing more, and the order ticket is not armed. If instead a 1-minute close prints below 21,684, the pause has failed and there is no trigger; a 5-minute close below 21,684 ends the branch.</p>
+            <p><strong>If the trigger fires,</strong> the entry is on that close, the stop goes behind the far edge, below 21,684, and the 2:1 check, risk and size come from Module 14. The case stops here, at the trigger.</p>
+          </div>
+          <p>Notice the order of things. The level and the branch were written before the open. The footprint opened only when price came to the zone. The confirmation was named from bars that formed before arrival, and nothing that printed after the touch was added to it. And after all of that, the decision still belonged to one 1-minute close that had not happened yet.</p>
+
+          <h2>Which Of These Is Yours?</h2>
+          <p>Take your last ten trades where you looked at the footprint before entry. Score each trade one point for each line that is true:</p>
+          <ol>
+            <li><strong>Location.</strong> Price was inside a named zone from your level list, not mid-range.</li>
+            <li><strong>Trigger.</strong> The entry was on a price event from Module 13 (a close or a break of structure), not on a footprint number.</li>
+            <li><strong>Sub-form.</strong> The confirmation field names exactly one of big-orders, failing-delta, delta-divergence, two-bar-exhaustion, or none.</li>
+            <li><strong>Approach.</strong> If the sub-form was failing-delta or delta-divergence, it was complete before the first touch of the zone.</li>
+            <li><strong>Settings.</strong> The footprint ran on your written template, unchanged that session, with the delta mode on the screenshot.</li>
+          </ol>
+          <p><strong>Lines 1 and 2 override the score.</strong> A trade that misses either one used order flow as the location or as the trigger, however well it scored on the rest. <strong>The threshold:</strong> if two or more of your ten miss line 1 or line 2, fix those lines before you take another footprint trade: the footprint stays closed outside a zone, and no order is armed before a trigger bar closes. If none do, find the line from 3 to 5 that the most trades missed; if three or more missed it, it goes on your pre-market sheet as a written check.</p>
+
+          <h2>Before Your Next Session</h2>
+          <div class="apply-now">
+            <div class="apply-now-header"><span class="apply-now-label">Apply This Now</span></div>
+            <p>Next session, before any entry on a trade where you looked at the footprint, write one line in the trade note: the sub-form name, then the price event you are waiting for. "failing-delta; 1-minute close above 21,693." That's the whole assignment.</p>
+          </div>
+
+          <h2>Where It Goes Next</h2>
+          <p>Module 08, The Three Tiers, places this confirmation in the chain: the idea, the setup and the trigger, with order flow beside the trigger and never in its tier. Module 06, What Counts As A Level, carries the stacked imbalance as an in-session location, built with the settings you wrote down here. Module 13, Triggers, defines the price events that every confirmed trade still needs, Pause N Go first, and Module 11, Range Rejection, is where trapped traders confirm a failed breakdown read.</p>
+          <p>In the journal, the confirmation field with its four sub-forms and the session block are recorded on every trade (<a href="12-journaling.html">Module 18, Journaling &amp; Review</a>), so your review can later sort by them once there are enough of each. For why footprint reads are hard to test across years, and what you can count instead, go to <a href="22-how-to-test-an-edge.html">Module 22, How To Test An Edge</a>.</p>
+
+          <h2>Sources</h2>
+          <ul>
+            <li>NinjaTrader, NinjaTrader 8 Help Guide: Order Flow Volumetric Bars (imbalance ratio default 1.5, minimum delta default 10, diagonal comparison, BidAsk and UpDownTick delta modes). <a href="https://ninjatrader.com/support/helpGuides/nt8/order_flow_volumetric_bars.htm" rel="noopener">https://ninjatrader.com/support/helpGuides/nt8/order_flow_volumetric_bars.htm</a>, read 2026-11-01.</li>
+          </ul>
+
+
+        </div>
+
+        <!-- MARK COMPLETE -->
+        <div class="module-complete-zone mt-xl">
+          <button id="mark-complete-btn" class="btn btn--primary btn--lg" data-module-id="07-reading-order-flow">
+            Mark Complete & Continue →
+          </button>
+        </div>
+
+        <!-- MODULE NAVIGATION -->
+        <div class="module-nav">
+          <div class="module-nav-prev">
+            <span class="module-nav-label">← Back</span>
+            <a href="06-what-counts-as-a-level.html" class="module-nav-title">What Counts As A Level</a>
+          </div>
+          <div class="module-nav-next">
+            <span class="module-nav-label">Next Module →</span>
+            <a href="08-the-three-tiers.html" class="module-nav-title">The Three Tiers</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="../ai.html" title="How AI is used here"><img src="../assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the plan.</span> Discipline is the execution. Everything else is noise.
+      </div>
+    <nav class="footer-links" aria-label="Site policies"><a href="../privacy.html">Privacy</a> <a href="../support.html">Support</a></nav>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/nav.js"></script>
+  <script type="module" src="../js/gate.js"></script>
+  <script type="module" src="../js/progress.js"></script>
+  <script type="module" src="../js/module-toc.js"></script>
+  <script type="module" src="../js/copy-page.js"></script>
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

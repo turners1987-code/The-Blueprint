@@ -56,7 +56,7 @@
     "slug": "who-is-forced-to-trade",
     "part": "why",
     "summary": "The participants who must trade whether or not the price suits them.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "03-the-instrument-futures-mechanics"
@@ -82,7 +82,7 @@
     "slug": "what-counts-as-a-level",
     "part": "why",
     "summary": "Pre-marked and in-session levels, zones not lines, and the stop-structure test.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "05-the-auction"
@@ -95,7 +95,7 @@
     "slug": "reading-order-flow",
     "part": "why",
     "summary": "What order flow shows, and the limits of what it can confirm.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "06-what-counts-as-a-level"
@@ -108,7 +108,7 @@
     "slug": "the-three-tiers",
     "part": "blueprint",
     "summary": "Idea, setup, trigger. Every trade traces up through all three, in order.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "07-reading-order-flow"
@@ -121,7 +121,7 @@
     "slug": "idea-generation",
     "part": "blueprint",
     "summary": "Where trade ideas come from, and how to tell an idea from a setup.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "08-the-three-tiers"
