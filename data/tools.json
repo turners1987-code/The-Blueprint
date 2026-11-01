@@ -128,5 +128,18 @@
     "file": null,
     "guide": null,
     "notes": ""
+  },
+  {
+    "id": "bp-trade-review",
+    "name": "BP Trade Review",
+    "display_name": "BP Trade Review",
+    "summary": "Free indicator that replays your own trades on the chart — entry, stop, target and your review questions appear at the moment of entry; the result stays hidden until exit.",
+    "category": "Indicators",
+    "requires_orderflow": false,
+    "status": "planned",
+    "version": null,
+    "file": null,
+    "guide": null,
+    "notes": "Free — no license required."
   }
 ]

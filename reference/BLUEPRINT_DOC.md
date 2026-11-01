@@ -326,8 +326,26 @@ anything ships with a price).
 - The `drafting` card rendering has never been exercised in a browser; no module carries that
   status.
 - NT8's built-in risk and loss limits apply to sim accounts only (step-10 NT8-Setup map). The $400 kill switch in METHODOLOGY_v2 must be enforced at broker or prop-firm level; how is a pending crawl (nt8-onboarding). Module 02 cannot state the enforcement step until it returns (D29).
-- Seven of ten tools are `in-development` and three `planned`; none has a download, so
+- Seven of eleven tools are `in-development` and four `planned`; none has a download, so
   `tools.html` has nothing available.
+
+---
+
+## NT8 tools — BP Trade Review (added 2026-11-01)
+
+BP Trade Review — status: planned, built in the NT8 project. Free, unlicensed NT8 indicator (no Lemon Squeezy product, no license client, no network calls). Reads a trades CSV and draws each trade on the chart: entry line, red entry→stop box, green entry→target box, corner note panel with the trader's own review questions. In Market Replay the panel appears at entry_time (Calculate.OnEachTick) and the result stays hidden until exit_time (Reveal default: On Exit). On a historical chart the whole set plots at once. Sound alert at entry; replay cannot be paused from NinjaScript. Instrument-agnostic.
+
+**Spec of record:** `G:\My Drive\NinjaScript\BP_TRADE_REVIEW_HANDOFF.md` (v2, NT8 project). The v1 handoff is superseded.
+
+**Canonical CSV** (both projects build to this): RFC 4180 quoting; instrument is the root symbol (MNQ), never the contract; times ISO 8601 with offset (2026-10-14T10:00:33-04:00); stop_price, target_price, q2, q3, note may be empty; screenshot_url reserved, ignored if absent. Header, exact order:
+
+```
+id,instrument,entry_time,exit_time,side,entry_price,stop_price,target_price,qty,setup,result_pts,result_usd,q1,q2,q3,note
+```
+
+**Rules:** NT8's Trade Performance export has no stop or target, so the indicator's converter leaves those blank — the Journal export is the only source of planned stop and target. Guide tells readers to edit the CSV in a text editor, not Excel (Excel rewrites offset timestamps). Product page and guide screenshots use sim or replay trades only, never Shane's own trades. The prototype that inspired it is a friend's tool: reference for the idea only, nothing copied, never shown as marketing.
+
+**Blueprint owes:** journal export button producing the canonical CSV (stop and target captured at entry); AI question generation for q1–q3 in the Journal tier; tools.html entry and zip delivery path (first downloadable tool); host /guides/bp-trade-review.html (guide written by NT8 project).
 
 ---
 
