@@ -6,6 +6,7 @@
     {
       "id": "01",
       "title": "Candlestick Psychology",
+      "note": "In this course a pattern is never a level, a trigger or a target.",
       "cards": [
         {
           "id": "01-01",
@@ -28,7 +29,7 @@
         {
           "id": "01-03",
           "name": "Marubozu",
-          "sentiment": "bullish",
+          "sentiment": "both",
           "sentimentLabel": "Bullish or Bearish",
           "visual": "marubozu",
           "desc": "No wicks. Price opened at one extreme and closed at the other. No wicks means price did not trade back from either extreme during the candle.",
@@ -120,6 +121,7 @@
     {
       "id": "02",
       "title": "Multi-Candle Patterns",
+      "note": "In this course a pattern is never a level, a trigger or a target.",
       "cards": [
         {
           "id": "02-01",
@@ -145,7 +147,7 @@
           "sentiment": "bullish",
           "sentimentLabel": "Bullish",
           "visual": "three-white-soldiers",
-          "desc": "Three consecutive bullish candles, each opening within the prior body and closing progressively higher. Read as sustained buying pressure across three sessions.",
+          "desc": "Three consecutive bullish candles, each opening within the prior body and closing progressively higher. Read as sustained buying pressure across three bars.",
           "note": "Traders read it by location: after a downtrend as a possible shift, after a long uptrend with caution about exhaustion."
         },
         {
@@ -155,7 +157,7 @@
           "sentimentLabel": "Bearish",
           "visual": "three-black-crows",
           "desc": "Three consecutive bearish candles, each opening within the prior body and closing progressively lower. The mirror of Three White Soldiers. Read as sustained selling.",
-          "note": "Traders look for it after an extended uptrend. Each candle has a small or no lower wick, which is read as sellers holding control through the session."
+          "note": "Traders look for it after an extended uptrend. Each candle has a small or no lower wick, which is read as sellers holding control through each bar."
         },
         {
           "id": "02-05",
@@ -171,6 +173,7 @@
     {
       "id": "03",
       "title": "Reversal Patterns",
+      "note": "In this course a pattern is never a level, a trigger or a target.",
       "cards": [
         {
           "id": "03-01",
@@ -222,6 +225,7 @@
     {
       "id": "04",
       "title": "Continuation & Chart Patterns",
+      "note": "In this course a pattern is never a level, a trigger or a target.",
       "cards": [
         {
           "id": "04-01",
@@ -298,7 +302,7 @@
           "sentiment": "neutral",
           "sentimentLabel": "Foundational Concept",
           "visual": "support-resistance",
-          "desc": "Support: a price level where buying has historically overwhelmed selling. Resistance: where selling has historically overwhelmed buying. These levels exist because traders remember them.",
+          "desc": "Support: a price level where buying has historically overwhelmed selling. Resistance: where selling has historically overwhelmed buying. In this course a price counts as a level only if it passes the stop-structure test: something already happened there, and a price beyond it ends the reason for the trade (Module 06).",
           "note": "A broken support level is often treated as resistance afterwards, and a broken resistance level as support. This is called a role reversal."
         },
         {
@@ -307,7 +311,7 @@
           "sentiment": "neutral",
           "sentimentLabel": "Price Behavior",
           "visual": "gap",
-          "desc": "When price opens significantly higher or lower than the prior close, leaving an unfilled area on the chart. Gaps are read as a sudden shift in sentiment, often around news or overnight events.",
+          "desc": "An RTH open outside the prior day's range: above PD High or below PD Low.",
           "note": "Gap N Go: price continues in the gap direction. Gap Fill: price trades back toward the prior day's range, targeting the PD range edge rather than the prior close."
         },
         {
@@ -317,7 +321,7 @@
           "sentimentLabel": "Foundational Concept",
           "visual": "trend-range",
           "desc": "Trend: price making consistent higher highs and higher lows (uptrend) or lower highs and lower lows (downtrend). Range: price oscillating between defined support and resistance without direction.",
-          "note": "Traders ask before each trade whether the market is trending or ranging, since the answer decides which setup they look for."
+          "note": "In this course the read is decided at the level: it holds or it fails."
         }
       ]
     }

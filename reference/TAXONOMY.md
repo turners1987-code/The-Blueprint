@@ -393,7 +393,7 @@ skill gap — sim is biased on exactly the variable that decides outcomes. Sim c
 it never measures edge. **The analysis module must refuse the pooling, not merely discourage it.**
 Every Gate 2 count displays its live/sim split.
 
-**Minimum n for display.** Dim any cohort below n=30 **and** below 20 distinct sessions — the
+**Minimum n for display.** Dim any cohort below n=30 **or** below 20 distinct sessions — the
 session floor matters because 30 trades from four sessions is one week's mood, not a sample.
 **Dim means shown with a visual warning, never suppressed.** Small cohorts must stay visible;
 they just must not look trustworthy. Cap cohorts at two dimensions. At roughly three trades a

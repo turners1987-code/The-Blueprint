@@ -1,6 +1,6 @@
 # BLUEPRINT_DOC — The Blueprint eLearning Platform
 
-Version 4.4 · 2026-10-31
+Version 4.5 · 2026-11-01
 Replaces every earlier BLUEPRINT_DOC. Where an older copy disagrees with this file,
 this file wins. Delete the old copies rather than keeping two sources.
 
@@ -211,7 +211,7 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | # | Module | Part | Tier | Status |
 | --- | --- | --- | --- | --- |
 | 00 | Welcome & Orientation | Start | free | published |
-| 01 | How We Know What We Know | Start | free | published |
+| 01 | How To Know What You Know | Start | free | published |
 | 02 | The Hard Rules | Rules Before Reps | free | published |
 | 03 | The Instrument: Futures Mechanics | Rules Before Reps | free | published |
 | 04 | Who Is Forced To Trade | Why Price Moves | paid | published |
@@ -239,6 +239,8 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 All 25 are written and published: 00 to 24, with 18 (Journaling & Review) at file modules/12-journaling.html and 19 (Toothbrush Therapy) at file modules/13-toothbrush-therapy.html. Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
 
 Also published outside the numbered course: Dial In, the card deck, the glossary.
+
+QA pass 2026-11-01 (independent review, 27 blockers, 117 fix and 66 polish rows) applied; report at G:\My Drive\Blueprint Review\qa\QA-2026-11-01.md.
 
 Decided 2026-10-31 (reference/DECISIONS.md D1–D4): rules first and free; mechanics (03), order flow (07) and the trader's mind (20) return in narrow, framework-only form; commodity basics go to a reading-list page. Forced flow (04) is taught as concepts only, with no forced-flow statistic until one passes Gate 1. ORB and Second Chance appear only as examples in Module 24, How Ideas Fail A Test, and as glossary terms.
 
@@ -328,6 +330,8 @@ anything ships with a price).
 - NT8's built-in risk and loss limits apply to sim accounts only (step-10 NT8-Setup map). The $400 kill switch in METHODOLOGY_v2 must be enforced at broker or prop-firm level; how is a pending crawl (nt8-onboarding). Module 02 cannot state the enforcement step until it returns (D29).
 - Seven of eleven tools are `in-development` and four `planned`; none has a download, so
   `tools.html` has nothing available.
+- The journal has no fields yet for test number, session block, readiness score or sheet finish time; lessons teach them as tags and sheet data.
+- reference/TradingStats_Source_of_Truth.txt Session Open block predates the live page (3,116 days, ranges); refresh it.
 
 ---
 

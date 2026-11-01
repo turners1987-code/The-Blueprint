@@ -1,15 +1,45 @@
 # The Blueprint
 
-> A course, with a free tier, in an intraday trading framework, built and illustrated on futures: setups, routines and risk management for index futures, with every claim held to a stated standard of evidence.
+> A course, with a free tier, in an intraday trading framework, built and illustrated on futures (MNQ): setups, routines and risk management, with every claim held to a stated standard of evidence.
 
-The Blueprint is a trading education site teaching an intraday trading framework, built and illustrated on futures. It is written for independent traders who want a complete framework — real setups, daily routines, risk management — rather than tips or signals. It teaches the framework and how to test it; whether any of it holds for a reader is decided by that reader's own record. The site shows no trading results. The aim is to make the whole thing cheap and accessible, so another trader can learn it, test it, and build their own.
+The Blueprint is a trading education site teaching an intraday trading framework, built and illustrated on futures. It is written for independent traders who want a complete framework — setups, daily routines, risk management — rather than tips or signals. It teaches the framework and how to test it; whether any of it holds for a reader is decided by that reader's own record. The site shows no trading results. The aim is to make the whole thing cheap and accessible, so another trader can learn it, test it, and build their own.
 
 ## Course
 
 - [Module index](https://bptrade.co/): the course home page, with the full module index and where to start.
-- [Glossary](https://bptrade.co/glossary.html): definitions of the 171 trading terms used in the course, with search.
-- [Card deck](https://bptrade.co/modules/flashcards.html): 32 flip cards covering the course concepts, with study and quiz modes and filtering by section.
+- [Glossary](https://bptrade.co/glossary.html): definitions of the 174 trading terms used in the course, with search.
+- [Card deck](https://bptrade.co/modules/flashcards.html): 32 cards on candlestick and chart-pattern vocabulary plus three course concepts, with study and quiz modes and filtering by section.
 - [Dial In](https://bptrade.co/modules/dial-in.html): a five-question quiz that maps your market interests and habits to a trader profile and suggests where to start in the course.
+
+## Modules
+
+All 25 modules are published. Free modules need no signup; Full Access modules need an access code.
+
+- [Module 00: Welcome & Orientation](https://bptrade.co/modules/00-welcome.html): what this is, how it is sequenced, and how to move through it (free)
+- [Module 01: How To Know What You Know](https://bptrade.co/modules/01-evidence-standard.html): how to check a trading claim, including the ones made here (free)
+- [Module 02: The Hard Rules](https://bptrade.co/modules/02-the-hard-rules.html): the window, the kill switch, the reset protocol, and the news blackout (free)
+- [Module 03: The Instrument: Futures Mechanics](https://bptrade.co/modules/03-the-instrument-futures-mechanics.html): how futures contracts, ticks and sessions work and what each tick is worth, with MNQ as the worked example (free)
+- [Module 04: Who Is Forced To Trade](https://bptrade.co/modules/04-who-is-forced-to-trade.html): the participants who must trade whether or not the price suits them (Full Access)
+- [Module 05: The Auction](https://bptrade.co/modules/05-the-auction.html): how price moves between buyers and sellers, and what acceptance and rejection look like (Full Access)
+- [Module 06: What Counts As A Level](https://bptrade.co/modules/06-what-counts-as-a-level.html): pre-marked and in-session levels, zones not lines, and the stop-structure test (Full Access)
+- [Module 07: Reading Order Flow](https://bptrade.co/modules/07-reading-order-flow.html): what order flow shows, and the limits of what it can confirm (Full Access)
+- [Module 08: The Three Tiers](https://bptrade.co/modules/08-the-three-tiers.html): idea, setup, trigger. Every trade traces up through all three, in order (Full Access)
+- [Module 09: Idea Generation](https://bptrade.co/modules/09-idea-generation.html): where trade ideas come from, and how to tell an idea from a setup (Full Access)
+- [Module 10: Trend Continuation](https://bptrade.co/modules/10-trend-continuation.html): the level holds. Acceptance beyond a level, the trigger in the pullback, and the next level as the target (Full Access)
+- [Module 11: Range Rejection](https://bptrade.co/modules/11-range-rejection.html): the level fails. Includes the failed breakdown and breakout variant (Full Access)
+- [Module 12: The Gap Setups](https://bptrade.co/modules/12-the-gap-setups.html): Gap Fill and Gap N Go. What a gap is, where it targets, and how to write Gap N Go as a register entry (Full Access)
+- [Module 13: Triggers](https://bptrade.co/modules/13-triggers.html): the price event that starts a trade, and why order flow confirms rather than triggers (Full Access)
+- [Module 14: Trade Construction](https://bptrade.co/modules/14-trade-construction.html): level, stop, risk, size, entry. In that order, every time (Full Access)
+- [Module 15: Writing The Plan](https://bptrade.co/modules/15-writing-the-plan.html): turning an idea into a written plan before the session opens (Full Access)
+- [Module 16: The Pre-Market Routine](https://bptrade.co/modules/16-the-pre-market-routine.html): what happens before the open, finished by 09:25 (free)
+- [Module 17: The Session And The Close](https://bptrade.co/modules/17-the-session-and-the-close.html): alerts at levels during the session, and the end-of-day review within an hour of the close (free)
+- [Module 18: Journaling & Review](https://bptrade.co/modules/12-journaling.html): grading entries, marking execution, and the weekly and monthly review (free)
+- [Module 19: Toothbrush Therapy](https://bptrade.co/modules/13-toothbrush-therapy.html): do the common uncommonly well. The eight daily habits (free)
+- [Module 20: The Trader's Mind](https://bptrade.co/modules/20-the-traders-mind.html): where each hard rule came from, the reset as a rehearsed skill, and the re-entry loop after a first win (free)
+- [Module 21: Reading A Probability](https://bptrade.co/modules/21-reading-a-probability.html): base rate versus conditional, sample size, and why an edge is not a forecast (Full Access)
+- [Module 22: How To Test An Edge](https://bptrade.co/modules/22-how-to-test-an-edge.html): how to test an edge against a null, split the sample and check recency (Full Access)
+- [Module 23: Building Your Own PlayBook](https://bptrade.co/modules/23-building-your-own-playbook.html): write your own working set, derive your own R and stop floor from your own data, and run your own register (Full Access)
+- [Module 24: How Ideas Fail A Test](https://bptrade.co/modules/24-how-ideas-fail-a-test.html): popular trading ideas, the failure modes a proper test exposes, and how to run that test on your own record (Full Access)
 
 ## Journal
 
@@ -17,7 +47,7 @@ The Blueprint is a trading education site teaching an intraday trading framework
 
 ## Site
 
-- [Tools](https://bptrade.co/tools.html): NinjaTrader 8 indicators and add-ons, with install instructions and requirements.
+- [Tools](https://bptrade.co/tools.html): NinjaTrader 8 tools in development, with requirements.
 - [Pricing](https://bptrade.co/pricing.html): the free tier and the Full Access tier, what each includes, and the current opening rate.
 - [AI disclosure](https://bptrade.co/ai.html): how AI is used across the site, and what is verified by hand.
 - [Support](https://bptrade.co/support.html): the support form, the only way to contact us; replies within 2 business days.
@@ -26,5 +56,3 @@ The Blueprint is a trading education site teaching an intraday trading framework
 
 - [Journal analysis](https://bptrade.co/journal-analysis.html): read-only review of the trade journal — expectancy by setup, trigger and grade, discipline cohorts, stop survival, exit efficiency, sequence effects, and whether your own trades have accumulated enough history, across enough sessions, for the numbers to mean anything.
 - [Unlock Full Access](https://bptrade.co/unlock.html): enter the access code from your receipt. No account, no password.
-- [Welcome module](https://bptrade.co/modules/00-welcome.html): what the course covers, how the modules are sequenced, and who it is for.
-- [Toothbrush Therapy](https://bptrade.co/modules/13-toothbrush-therapy.html): the course's core philosophy page — building consistency by repeating the basic routines until they become automatic.
