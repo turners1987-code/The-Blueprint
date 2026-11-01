@@ -279,7 +279,7 @@
     "slug": "reading-a-probability",
     "part": "evidence",
     "summary": "Base rate versus conditional, sample size, and why an edge is not a forecast.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "20-the-traders-mind"
@@ -292,7 +292,7 @@
     "slug": "how-to-test-an-edge",
     "part": "evidence",
     "summary": "How to test an edge against a null, split the sample and check recency.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "21-reading-a-probability"
@@ -305,7 +305,7 @@
     "slug": "building-your-own-playbook",
     "part": "capstone",
     "summary": "Write your own working set, derive your own R and stop floor from your own data, and run your own register.",
-    "status": "planned",
+    "status": "published",
     "tier": "paid",
     "prereq": [
       "22-how-to-test-an-edge"
