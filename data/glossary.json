@@ -519,8 +519,7 @@
       "07"
     ],
     "tags": [
-      "Order Flow",
-      "Advanced"
+      "Order Flow"
     ]
   },
   {
@@ -1430,7 +1429,7 @@
   {
     "term": "Three Tiers",
     "aliases": [],
-    "definition": "The order every trade traces up through: the idea (what should happen, where it is wrong, and how much stands behind it), the setup (the named location and the read of what price is doing there), and the trigger (the price event at that location). Construction follows the three: level, stop, risk, size, entry. A trade missing a tier carries an honest tag, not a smaller size.",
+    "definition": "The order every trade traces up through: the idea (what should happen, where it is wrong, and how much stands behind it), the setup (the named location and the read of what price is doing there), and the trigger (the price event at that location). Construction follows the three: level, stop, risk, size, entry. A missing tier lowers the grade at entry and carries its honest tag; Module 14 sets what each grade trades.",
     "module": [
       "08"
     ]
