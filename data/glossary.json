@@ -1,10 +1,19 @@
 [
   {
+    "term": "Absorption",
+    "aliases": [],
+    "definition": "Heavy aggressive volume meeting resting orders at a price and failing to move price through it: sellers hitting bids that hold, or buyers lifting offers that hold. It lasts only while price holds. If price moves through and stays beyond, the read becomes acceptance.",
+    "module": [
+      "07"
+    ]
+  },
+  {
     "term": "Acceptance",
     "aliases": [],
     "definition": "Price building time and volume at a new price instead of passing through it. Acceptance moves value; a quick visit does not. The mechanical acceptance test this course uses at a level is taught in Module 10.",
     "module": [
-      "05"
+      "05",
+      "07"
     ]
   },
   {
@@ -13,6 +22,24 @@
     "definition": "How far price went against a trade or an occurrence before it ended, measured from the entry price, as a positive number of ticks. The journal records it as mae_ticks on every trade.",
     "module": [
       "23"
+    ]
+  },
+  {
+    "term": "Aggression Fails At The Level",
+    "aliases": [],
+    "definition": "The order-flow confirmation in this course: the side pushing into a named level is running out. It is recorded with one of four sub-forms (big-orders, failing-delta, delta-divergence, two-bar-exhaustion) on every trade that uses it. It is never a trigger; a price event must also fire.",
+    "module": [
+      "07"
+    ]
+  },
+  {
+    "term": "ATR (Average True Range)",
+    "aliases": [
+      "ATR"
+    ],
+    "definition": "The average of the true range over a set number of bars, commonly 14. True range is the largest of: the bar's high minus its low, the high minus the prior close, and the prior close minus the low. It describes how far price usually travels in a bar; it says nothing about direction.",
+    "module": [
+      "09"
     ]
   },
   {
@@ -37,6 +64,16 @@
     "definition": "How often an outcome happened across every case in a closed, dated data set, with no condition applied: the count of cases where it happened divided by the count of cases. It describes that set. It is not a forecast for the next session.",
     "module": [
       "21"
+    ]
+  },
+  {
+    "term": "Big Orders",
+    "aliases": [
+      "big-orders"
+    ],
+    "definition": "The big-orders sub-form: passive size that holds and prints at the level. Aggressors keep hitting it and price does not get through.",
+    "module": [
+      "07"
     ]
   },
   {
@@ -78,6 +115,14 @@
     ]
   },
   {
+    "term": "Catalyst",
+    "aliases": [],
+    "definition": "An event that brings participants to the market at a known or sudden time, such as a Tier One release, a Fed decision or an unscheduled headline. In idea generation it sets the clock and can print new levels; it never sets a direction.",
+    "module": [
+      "09"
+    ]
+  },
+  {
     "term": "Chart Mark-Up",
     "aliases": [],
     "definition": "A written pass over the day's chart, level by level: what price did at each marked level, what you did there, and, for every trade you exited, whether price reached the planned target after your exit.",
@@ -102,6 +147,14 @@
     ]
   },
   {
+    "term": "Construction",
+    "aliases": [],
+    "definition": "The arithmetic that turns three answered questions into an order, always in this order: the level (the zone traded against and the target level), the stop (behind the far edge), the risk (the stop distance, and the 2:1 check to the target), the size (from the stop distance and the grade), and the entry. It comes after the three tiers, never before them.",
+    "module": [
+      "08"
+    ]
+  },
+  {
     "term": "Contract Multiplier",
     "aliases": [],
     "definition": "The fixed dollar amount the exchange multiplies the index by to value one contract. For MNQ it is $2 per index point; for MES it is $5. It is also the contract's point value.",
@@ -118,7 +171,17 @@
     "aliases": [],
     "definition": "A label of strong, moderate or thin attached to one branch: how much structure and context stand behind its thesis. It is recorded for the journal. It doesn't change your size and it isn't a direction.",
     "module": [
+      "04",
+      "09",
       "15"
+    ]
+  },
+  {
+    "term": "Cumulative Delta",
+    "aliases": [],
+    "definition": "The running total of bar delta from the start of the session. It shows which side has been more aggressive over the day. It is slow, can stay positive through a fall, and is context for the session, never a signal on its own.",
+    "module": [
+      "07"
     ]
   },
   {
@@ -134,13 +197,57 @@
     ]
   },
   {
+    "term": "Dealer Hedging",
+    "aliases": [],
+    "definition": "The futures or stock a market maker holds against an options book so that small price moves leave it roughly flat. As price moves, the hedge the book needs changes, and the dealer must trade to keep up: forced flow that is set by the options book, not by any view on direction.",
+    "module": [
+      "04"
+    ]
+  },
+  {
+    "term": "Defended Pullback High / Low",
+    "aliases": [],
+    "definition": "In the current session, the low of a pullback in a move up (or the high of a pullback in a move down) after which price went on beyond the swing extreme that came before the pullback. It stays a level until price trades back through it.",
+    "module": [
+      "06"
+    ]
+  },
+  {
     "term": "Delta",
     "aliases": [],
     "definition": "In footprint charts, delta is the difference between buying volume (contracts traded at the ask) and selling volume (contracts traded at the bid). Positive delta means more buying; negative delta means more selling. It reveals the aggression behind a move.",
-    "module": [],
+    "module": [
+      "07"
+    ],
     "tags": [
       "Footprint",
       "Order Flow"
+    ]
+  },
+  {
+    "term": "Delta Divergence",
+    "aliases": [
+      "delta-divergence"
+    ],
+    "definition": "The delta-divergence sub-form: price makes a new extreme on approach to the level and delta does not. Read on the approach, not on arrival.",
+    "module": [
+      "07"
+    ]
+  },
+  {
+    "term": "Developing VPOC / VAH / VAL",
+    "aliases": [],
+    "definition": "The current session's VPOC and value edges as its profile builds. They move as volume builds, so each is used at the price it shows when your trigger fires, and that price is the one you record.",
+    "module": [
+      "06"
+    ]
+  },
+  {
+    "term": "Diagonal Imbalance",
+    "aliases": [],
+    "definition": "A footprint cell flagged because aggressive volume on one side outweighs the other side diagonally: buying at a price against selling one tick below it, or selling at a price against buying one tick above it, by at least a set ratio and a set minimum difference in contracts. Not the auction imbalance of Module 05.",
+    "module": [
+      "07"
     ]
   },
   {
@@ -203,6 +310,14 @@
     ]
   },
   {
+    "term": "Execution Read",
+    "aliases": [],
+    "definition": "How you acted on the plan: whether the trigger fired before entry, the stop sat behind structure, the size matched the plan, and the exit followed it. It is graded by the grade rubric and the execution mark, never by the result.",
+    "module": [
+      "09"
+    ]
+  },
+  {
     "term": "Expectancy",
     "aliases": [],
     "definition": "The average result per trade in R: win % × average win − loss % × average loss. It is the one number that combines how often a rule wins with how much it wins and loses.",
@@ -212,10 +327,21 @@
     ]
   },
   {
+    "term": "Failing Delta",
+    "aliases": [
+      "failing-delta"
+    ],
+    "definition": "The failing-delta sub-form: delta declining on approach. Each bar coming into the level carries less aggression in the direction of the push than the one before.",
+    "module": [
+      "07"
+    ]
+  },
+  {
     "term": "Far Edge",
     "aliases": [],
     "definition": "The edge of a zone on the far side from where price arrives. For a level above current price it is the top of the zone; for a level below, the bottom. The stop goes behind it.",
     "module": [
+      "06",
       "15",
       "16"
     ]
@@ -226,6 +352,17 @@
     "definition": "The plan as it stands at 09:25: one paragraph made of one sentence of context in location words, one sentence per branch, and one sentence for the nothing case. No day-type label, no directional call.",
     "module": [
       "15"
+    ]
+  },
+  {
+    "term": "First, Second And Third-Order Thinking",
+    "aliases": [
+      "second-order thinking",
+      "third-order thinking"
+    ],
+    "definition": "Three questions asked in order about any event or break. First order: what happened. Second order: who was already positioned for it. Third order: who is now forced to transact, and which way their exit pushes.",
+    "module": [
+      "04"
     ]
   },
   {
@@ -240,11 +377,23 @@
   {
     "term": "Footprint Chart",
     "aliases": [],
-    "definition": "An advanced chart type that shows the volume traded at each price level within each candle, split into buying volume (traded at the ask) and selling volume (traded at the bid). In this course it can confirm a trigger at a level; it is never the trigger.",
-    "module": [],
+    "definition": "A chart type that shows the volume traded at each price level within each candle, split into buying volume (traded at the ask) and selling volume (traded at the bid). In this course it can confirm a trigger at a level; it is never the trigger.",
+    "module": [
+      "07"
+    ],
     "tags": [
       "Order Flow",
       "Advanced"
+    ]
+  },
+  {
+    "term": "Forced Flow",
+    "aliases": [
+      "forced liquidity"
+    ],
+    "definition": "Orders from a participant who must buy or sell regardless of price: a dealer re-hedging, a fund rebalancing to a rule, a margin call, a triggered stop. It changes how fast and how far price moves once it starts. It carries no information about where price should be.",
+    "module": [
+      "04"
     ]
   },
   {
@@ -254,6 +403,18 @@
     "module": [],
     "tags": [
       "Instrument"
+    ]
+  },
+  {
+    "term": "Gamma Regime (Long / Short Gamma)",
+    "aliases": [
+      "long gamma",
+      "short gamma",
+      "gamma"
+    ],
+    "definition": "Whether dealers, in aggregate, are estimated to be net long options (their hedging leans against moves) or net short (their hedging goes with moves). It describes how price may move, never where or which way. In this course it may weight conviction only; it is never a location, a target or an if-clause.",
+    "module": [
+      "04"
     ]
   },
   {
@@ -296,6 +457,7 @@
     "aliases": [],
     "definition": "The entry-plan score given to every trade at entry, before it resolves, from four checks: the location is a named level, the trigger fired before entry, the stop is behind structure, and the size matches the plan for that stop. A+ is all four with a fill within 2 ticks of the intended price; A is all four; B is three of four with no breach of the stop or size check; C is two or fewer, or any breach of those two. C is no trade.",
     "module": [
+      "08",
       "20"
     ]
   },
@@ -312,6 +474,8 @@
     "aliases": [],
     "definition": "A conditional statement written before the session: a thesis in if/then form at a named level, the invalidation that ends it, and a conviction grade of strong, moderate or thin. It describes what you will do if price reaches a place, not where price will go.",
     "module": [
+      "08",
+      "09",
       "15",
       "16"
     ]
@@ -322,6 +486,14 @@
     "definition": "An auction in which one side is in charge and price moves to find new business. Value migrates: each session's value area sits beyond the last one, with little or no overlap.",
     "module": [
       "05"
+    ]
+  },
+  {
+    "term": "In-Session Level",
+    "aliases": [],
+    "definition": "A level that forms during the current session, from one of the types on the in-session list. It counts only once it has finished forming, and only if your plan named its type before the session.",
+    "module": [
+      "06"
     ]
   },
   {
@@ -341,6 +513,7 @@
     "aliases": [],
     "definition": "The named price, judged on a candle close of a stated timeframe, at which a branch's thesis is wrong. It sits at or behind the zone's far edge. Written before the session, never moved during it.",
     "module": [
+      "09",
       "15"
     ]
   },
@@ -375,6 +548,14 @@
     ]
   },
   {
+    "term": "Leveraged ETF Rebalance",
+    "aliases": [],
+    "definition": "The daily trade a leveraged or inverse fund makes to restore its target multiple of an index's daily return. It buys after up days and sells after down days, in the direction the day already moved, and is concentrated toward the close.",
+    "module": [
+      "04"
+    ]
+  },
+  {
     "term": "Limit Order",
     "aliases": [],
     "definition": "An order to buy or sell at a specific price or better. A buy limit order fills at or below your price; a sell limit fills at or above. You control the price but not whether the order fills.",
@@ -395,6 +576,15 @@
     "tags": [
       "Hard Rules",
       "Risk Management"
+    ]
+  },
+  {
+    "term": "Location",
+    "aliases": [],
+    "definition": "Where a trade happens: one named level from the pre-marked or in-session list, written as a zone, with the stop behind its far edge. It is recorded by its slug in the journal's location field.",
+    "module": [
+      "06",
+      "08"
     ]
   },
   {
@@ -446,11 +636,28 @@
     ]
   },
   {
+    "term": "Market Read",
+    "aliases": [],
+    "definition": "Your pre-session judgment of where the day's business can happen: the context, the levels that get branches, the room and the clock. After the session it is graded on one question: did price do at the level what a branch said it might, or did the nothing case hold?",
+    "module": [
+      "09"
+    ]
+  },
+  {
     "term": "Mental Close",
     "aliases": [],
     "definition": "The single written sentence that ends the trading day: trades taken, how many marked Pass, and that tomorrow starts from its own plan. It is the last step of the end-of-day routine.",
     "module": [
       "17"
+    ]
+  },
+  {
+    "term": "Mid-Range",
+    "aliases": [],
+    "definition": "The location tag for any price outside every zone on your list: no named level, so nothing for a stop to sit behind. It exists so that a trade taken there is counted rather than hidden.",
+    "module": [
+      "06",
+      "08"
     ]
   },
   {
@@ -475,6 +682,7 @@
     "aliases": [],
     "definition": "The journal tag for a trade with no named location and read behind it: a trade taken on feel. An idea without a written invalidation is No Setup, however good it sounds.",
     "module": [
+      "08",
       "15",
       "16"
     ]
@@ -501,6 +709,24 @@
     "definition": "A name for how price behaved in the first minutes after the 09:30 open. It describes those minutes only. It is vocabulary, never a call for the rest of the day.",
     "module": [
       "05"
+    ]
+  },
+  {
+    "term": "Opening Range (OR)",
+    "aliases": [],
+    "definition": "The high and low of the session from 09:30 ET to the end of a window you choose and write on your plan. They become levels, or-high and or-low, only once the window has closed.",
+    "module": [
+      "06"
+    ]
+  },
+  {
+    "term": "OpEx (Options Expiration)",
+    "aliases": [
+      "OpEx"
+    ],
+    "definition": "The day each month when listed equity and index options expire. On the pre-market sheet it is written as a noun on the calendar line: context about activity for the session, never a direction.",
+    "module": [
+      "09"
     ]
   },
   {
@@ -607,11 +833,29 @@
     ]
   },
   {
+    "term": "Pre-Marked Level",
+    "aliases": [],
+    "definition": "A level built before the session from completed data and taken from one fixed list: the prior day, settlement, the overnight session, the prior week and the higher-timeframe profile. Each carries a session scope, and only these go on the pre-market sheet.",
+    "module": [
+      "06"
+    ]
+  },
+  {
     "term": "Pre-Market Sheet",
     "aliases": [],
     "definition": "The one page you fill before every session: readiness score, context, news, levels as zones, the idea, the systems check, the rehearsal and the time you finished. Finished by 09:25 ET. A completed sheet clears you to trade; an incomplete one doesn't.",
     "module": [
       "16"
+    ]
+  },
+  {
+    "term": "Quad Witching",
+    "aliases": [
+      "triple witching"
+    ],
+    "definition": "The name traders give to the quarterly expiry Friday in March, June, September and December, when the quarterly equity index futures expire (Module 03) on the same day as that month's options. Written on the calendar line as activity context, never as a direction.",
+    "module": [
+      "09"
     ]
   },
   {
@@ -706,6 +950,16 @@
     ]
   },
   {
+    "term": "RSI (Relative Strength Index)",
+    "aliases": [
+      "RSI"
+    ],
+    "definition": "An oscillator from 0 to 100 that compares the size of recent up closes with recent down closes over a set number of bars, commonly 14. It describes how one-sided the recent run has been. In this course it is never a thesis, a trigger, an exit or a direction.",
+    "module": [
+      "09"
+    ]
+  },
+  {
     "term": "RTH (Regular Trading Hours)",
     "aliases": [],
     "definition": "For equity index futures, 09:30 to 16:00 ET, the hours of the US cash equity session. Other contracts have their own regular session, listed on their CME spec page. In this course, prior-day levels and settlement are scoped to RTH.",
@@ -734,6 +988,14 @@
     ]
   },
   {
+    "term": "Session Scope",
+    "aliases": [],
+    "definition": "The stretch of bars that builds a level. Prior-day levels and settlement: RTH, 09:30 to 16:00 ET. Prior-week levels: the full-session week, Sunday 18:00 to Friday 16:00 ET. Overnight levels: ETH, from 16:00 ET to the 09:30 ET open.",
+    "module": [
+      "06"
+    ]
+  },
+  {
     "term": "Settlement",
     "aliases": [
       "daily settlement",
@@ -746,6 +1008,14 @@
     "tags": [
       "Futures",
       "Expiry"
+    ]
+  },
+  {
+    "term": "Setup",
+    "aliases": [],
+    "definition": "The second tier: a named location plus the read of what price is doing there, judged on a closed bar. Price at a level either holds or fails; the read says which. It is recorded in two journal fields, the setup (the read) and the location (the slug).",
+    "module": [
+      "08"
     ]
   },
   {
@@ -766,6 +1036,22 @@
     ]
   },
   {
+    "term": "Stacked Imbalance",
+    "aliases": [],
+    "definition": "A cluster of adjacent prices inside one footprint bar, each carrying a diagonal imbalance on the same side, with bar delta running the same way. On the 5-minute footprint it is an in-session location in this course (Module 06), never a trigger.",
+    "module": [
+      "07"
+    ]
+  },
+  {
+    "term": "Stop Cascade",
+    "aliases": [],
+    "definition": "A fast move made of triggered stop orders: price reaches a cluster of stops, they execute as market orders, and their push carries price into the next cluster. It often ends abruptly, once the stops are used up, and the move can snap back.",
+    "module": [
+      "04"
+    ]
+  },
+  {
     "term": "Stop Floor",
     "aliases": [],
     "definition": "The smallest stop distance, in ticks, that one of your pages will accept, derived from your own adverse-excursion record for that page and session block. The stop goes behind the far edge first; if the far edge is closer than the floor, the stop goes out to the floor and size falls.",
@@ -781,6 +1067,38 @@
     "tags": [
       "Order Types",
       "Risk Management"
+    ]
+  },
+  {
+    "term": "Stop-Structure Test",
+    "aliases": [],
+    "definition": "The test of whether a price counts as a level: you can name something that already happened there (a session extreme, a volume cluster, a value edge) and a price beyond it at which the reason for the trade is gone. A stop sits behind that price. A line that fails the test is not a level.",
+    "module": [
+      "06"
+    ]
+  },
+  {
+    "term": "Target",
+    "aliases": [],
+    "definition": "A level a trade aims at, written before entry. It says where price may travel to; it is never a reason to enter and never a direction.",
+    "module": [
+      "06"
+    ]
+  },
+  {
+    "term": "Thesis",
+    "aliases": [],
+    "definition": "The if/then part of an idea: a named behaviour at a named level zone, the trigger that must fire there, and the level it targets. It states what you will do if price does something at a place, never where price will go.",
+    "module": [
+      "09"
+    ]
+  },
+  {
+    "term": "Three Tiers",
+    "aliases": [],
+    "definition": "The order every trade traces up through: the idea (what should happen, where it is wrong, and how much stands behind it), the setup (the named location and the read of what price is doing there), and the trigger (the price event at that location). Construction follows the three: level, stop, risk, size, entry. A trade missing a tier carries an honest tag, not a smaller size.",
+    "module": [
+      "08"
     ]
   },
   {
@@ -871,11 +1189,50 @@
     ]
   },
   {
+    "term": "Trapped Traders",
+    "aliases": [],
+    "definition": "Traders holding positions that price has just moved against, past the place they entered, such as buyers of a breakout that has fallen back inside the range. Their stops sit beyond the move, and their exit pushes price further against them. On a footprint chart this is the confirmation for the failed breakout and failed breakdown read (Modules 07 and 11).",
+    "module": [
+      "04",
+      "07"
+    ]
+  },
+  {
     "term": "Trigger",
     "aliases": [],
     "definition": "The price event at the level that tells you to enter now, such as Pause N Go, a resting limit after displacement, or a level reclaim on a 5-minute close (Module 13). Order flow can confirm a trigger; it is never the trigger.",
     "module": [
+      "07",
+      "08",
       "15"
+    ]
+  },
+  {
+    "term": "Trigger Without Location",
+    "aliases": [],
+    "definition": "The named leak of trading an entry event with no level under it: a trigger fired mid-range, with nothing behind the stop. It shows in the journal as location mid-range, and the trade is No Setup.",
+    "module": [
+      "08"
+    ]
+  },
+  {
+    "term": "Turn Of Month",
+    "aliases": [
+      "month-end"
+    ],
+    "definition": "The last few sessions of one month and the first few of the next, when month-end rebalancing and new-month flows are scheduled. Written on the calendar line as activity context, never as a direction.",
+    "module": [
+      "09"
+    ]
+  },
+  {
+    "term": "Two-Bar Exhaustion",
+    "aliases": [
+      "two-bar-exhaustion"
+    ],
+    "definition": "The two-bar-exhaustion sub-form: a bar with large opposing delta inside it that closes near its extreme in the direction of your read, then a break of that signal bar. For a long: deep selling inside the bar, a close near its high, then a break above it.",
+    "module": [
+      "07"
     ]
   },
   {
@@ -928,6 +1285,28 @@
     ]
   },
   {
+    "term": "Vanna / Charm",
+    "aliases": [
+      "vanna",
+      "charm"
+    ],
+    "definition": "Vanna is how an option's hedge changes when implied volatility changes; charm is how it changes as time passes. Both make dealers trade with no move in price, and both build toward expiration.",
+    "module": [
+      "04"
+    ]
+  },
+  {
+    "term": "Vol-Control And CTA Flows",
+    "aliases": [
+      "CTA",
+      "vol-control"
+    ],
+    "definition": "Rule-based fund trading forced by volatility or trend: vol-control funds cut exposure as realized volatility rises and add as it falls; CTAs buy and sell when price crosses thresholds in their trend models. Both trade after the conditions change, and outside estimates of their size and thresholds are guesses.",
+    "module": [
+      "04"
+    ]
+  },
+  {
     "term": "Volume Profile",
     "aliases": [],
     "definition": "A horizontal histogram of the volume traded at each price over a set period, usually one session. Wide rows mark prices the market accepted; thin rows mark prices it moved through or rejected.",
@@ -958,6 +1337,7 @@
     "aliases": [],
     "definition": "A setting you start from because you need one, not because a test chose it. For the footprint stacked-imbalance read, the course's working default is ratio 5 and minimum delta 15, chosen for screen clarity. You replace it with your own setting, derived from your own record.",
     "module": [
+      "07",
       "23"
     ]
   },
@@ -974,6 +1354,7 @@
     "aliases": [],
     "definition": "A level written as a price band with two edges rather than a single line. Price can trade into a zone without breaking it; acceptance through the whole zone is what changes the read.",
     "module": [
+      "06",
       "15",
       "16"
     ]

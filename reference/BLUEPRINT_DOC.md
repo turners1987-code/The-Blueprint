@@ -214,12 +214,12 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | 01 | How We Know What We Know | Start | free | published |
 | 02 | The Hard Rules | Rules Before Reps | free | published |
 | 03 | The Instrument: Futures Mechanics | Rules Before Reps | free | published |
-| 04 | Who Is Forced To Trade | Why Price Moves | paid | planned |
+| 04 | Who Is Forced To Trade | Why Price Moves | paid | published |
 | 05 | The Auction | Why Price Moves | paid | published |
-| 06 | What Counts As A Level | Why Price Moves | paid | planned |
-| 07 | Reading Order Flow | Why Price Moves | paid | planned |
-| 08 | The Three Tiers | The Blueprint | paid | planned |
-| 09 | Idea Generation | The Blueprint | paid | planned |
+| 06 | What Counts As A Level | Why Price Moves | paid | published |
+| 07 | Reading Order Flow | Why Price Moves | paid | published |
+| 08 | The Three Tiers | The Blueprint | paid | published |
+| 09 | Idea Generation | The Blueprint | paid | published |
 | 10 | Trend Continuation | The Blueprint | paid | planned |
 | 11 | Range Rejection | The Blueprint | paid | planned |
 | 12 | The Gap Setups | The Blueprint | paid | planned |
@@ -236,7 +236,7 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | 23 | Building Your Own PlayBook | Capstone | paid | published |
 | 24 | How Ideas Fail A Test | Capstone | paid | planned |
 
-Fourteen are written: 00, 01, 02, 03, 05, 15, 16, 17, 18 (Journaling & Review, file modules/12-journaling.html), 19 (Toothbrush Therapy, file modules/13-toothbrush-therapy.html), 20, 21, 22 and 23. Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
+Nineteen are written: 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 15, 16, 17, 18 (Journaling & Review, file modules/12-journaling.html), 19 (Toothbrush Therapy, file modules/13-toothbrush-therapy.html), 20, 21, 22 and 23. Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
 
 Also published outside the numbered course: Dial In, the card deck, the glossary.
 
