@@ -66,6 +66,8 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D62 — Readiness and the sheet (Module 16): a completed pre-market sheet clears the reader to trade; an incomplete sheet at 09:25 means that session is watched, not traded; the readiness score is data only.
 - D63 — Conviction is counted (Module 09): three checks, one point each, as Module 09 states them; 3 = strong, 2 = moderate, 0–1 = thin; the reason clause names the check that failed. Conviction never changes size.
 - D64 — Opening range: the reader sets the window once and keeps it; the course's examples use 09:30–09:45 ET. OR high/low are locations only after the window closes.
+- D65 — Stop distance behind the far edge: written once per PlayBook page, in ticks, and used on every trade from that page; the course's examples use 2 points. The stop floor is per page and per session block, derived from the reader's own adverse-excursion record (Module 23); the course publishes no floor figure.
+- D66 — In-page mechanics accepted (Modules 11, 13): the failed-breakdown/breakout reclaim is a 1-minute close back through the level, and its stop sits behind the reclaimed zone's far edge; displacement size, and the 9 EMA's timeframe, are written once on the reader's PlayBook page (the course's examples use 20 points and the 1-minute chart); a Level Reclaim's stop sits behind the extreme of the move through the zone.
 
 ### Still open
 - none.

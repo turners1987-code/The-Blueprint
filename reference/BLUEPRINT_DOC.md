@@ -220,11 +220,11 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | 07 | Reading Order Flow | Why Price Moves | paid | published |
 | 08 | The Three Tiers | The Blueprint | paid | published |
 | 09 | Idea Generation | The Blueprint | paid | published |
-| 10 | Trend Continuation | The Blueprint | paid | planned |
-| 11 | Range Rejection | The Blueprint | paid | planned |
-| 12 | The Gap Setups | The Blueprint | paid | planned |
-| 13 | Triggers | The Blueprint | paid | planned |
-| 14 | Trade Construction | The Blueprint | paid | planned |
+| 10 | Trend Continuation | The Blueprint | paid | published |
+| 11 | Range Rejection | The Blueprint | paid | published |
+| 12 | The Gap Setups | The Blueprint | paid | published |
+| 13 | Triggers | The Blueprint | paid | published |
+| 14 | Trade Construction | The Blueprint | paid | published |
 | 15 | Writing The Plan | The Blueprint | paid | published |
 | 16 | The Pre-Market Routine | Process | free | published |
 | 17 | The Session And The Close | Process | free | published |
@@ -234,9 +234,9 @@ non-clickable "Coming soon" cards; paid modules carry a lock marker.
 | 21 | Reading A Probability | Evidence | paid | published |
 | 22 | How To Test An Edge | Evidence | paid | published |
 | 23 | Building Your Own PlayBook | Capstone | paid | published |
-| 24 | How Ideas Fail A Test | Capstone | paid | planned |
+| 24 | How Ideas Fail A Test | Capstone | paid | published |
 
-Nineteen are written: 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 15, 16, 17, 18 (Journaling & Review, file modules/12-journaling.html), 19 (Toothbrush Therapy, file modules/13-toothbrush-therapy.html), 20, 21, 22 and 23. Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
+All 25 are written and published: 00 to 24, with 18 (Journaling & Review) at file modules/12-journaling.html and 19 (Toothbrush Therapy) at file modules/13-toothbrush-therapy.html. Published pages keep their original file paths through the `file` field in data/modules.json; js/progress.js migrates stored progress from the 17-module ids (schema v3).
 
 Also published outside the numbered course: Dial In, the card deck, the glossary.
 

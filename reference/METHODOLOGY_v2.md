@@ -72,6 +72,7 @@ R6 (fade at the 15-min mark) KILLED. The rejection entry is the unsolved piece.
 "Failed Breakdown is Bearish. Failed Breakout is Bullish. Price puts in some sort of
 manipulation below a level, exact criteria is 2 closes on the 1 min chart... then buys back
 above. Enter on a pause n go."
+> Note (2026-11-01): as written above. The course teaches the direction as: a failed breakdown resolves upward, a failed breakout resolves downward (DECISIONS D53, Module 11).
 Trapped Traders is its footprint confirmation.
 
 ### GAP FILL — kept, target changed
