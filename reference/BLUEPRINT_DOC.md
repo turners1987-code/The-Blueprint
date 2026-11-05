@@ -23,9 +23,11 @@ content. The audience is NinjaTrader 8 users on Windows: the journal and the too
 reference pages. Full Access adds the Blueprint modules, the capstone, the journal, the NT8
 tools and the cockpit cards.
 
-**Pricing.** $47/month list, $7/month opening rate. The opening rate is locked for as long as
-the membership stays active; cancel and rejoin and the current rate applies. The pricing page
-states plainly that Full Access pays for work still being finished.
+**Pricing (recorded 2026-11-05, approved by Shane; DECISIONS D77).** Free. Journal $12/month.
+All Access $29/month or $290/year. BP Key Levels alone $14/month. Founding rate: $19/month or
+$190/year for the first 100 All Access subscribers, locked while the membership stays active;
+subscriber 101 onward pays $29/$290. No struck-through price. The pricing page states plainly
+that All Access pays for work still being finished.
 
 **Payment.** Lemon Squeezy, store "The Blueprint." under Shane Turner LLC. The store is
 approved and in test mode. `js/unlock.js` validates codes against the Lemon Squeezy License
@@ -130,7 +132,7 @@ index.html            landing page, module grid rendered from data
 glossary.html         rendered from data/glossary.json, inline search
 journal.html          trade journal: pre-entry plan, post-exit record, export/import
 journal-analysis.html read-only analysis of the journal
-pricing.html          Free vs Full Access, the opening rate, the checkout link
+pricing.html          Free, Journal, All Access (founding rate), Key Levels alone; checkout links
 tools.html            NT8 tools, rendered from data/tools.json
 unlock.html           access code entry
 ai.html               how AI is used on the site
@@ -365,9 +367,9 @@ id,instrument,entry_time,exit_time,side,entry_price,stop_price,target_price,qty,
 ## Payments & licensing — Lemon Squeezy (updated 2026-10-25)
 
 Store: The Blueprint. (store_id 491360), under Shane Turner LLC. Account approved 10/12/26. Currently TEST MODE.
-Product: "The Blueprint. All Access" — product_id 1472366, variant_id 2295842, $7/mo, no trial, license keys on, activation_limit 2.
+Product: "The Blueprint. All Access" — product_id 1472366, variant_id 2295842, no trial, license keys on, activation_limit 2. Prices: see the Pricing paragraph in section 1 (D77); Shane changes the Lemon Squeezy products himself (price at 2026-10-25 was the old $7 opening rate, now superseded).
 Test checkout: https://bptrade.lemonsqueezy.com/checkout/buy/008fd078-cac4-4fa8-9b3d-3659a4617fbc
-Pricing decision: $7 is the opening rate; raise the variant price to $47 later. Existing subscribers keep $7 automatically. No discount codes, no fake reference price.
+Pricing decision (2026-11-05, D77): Journal $12/mo; All Access $29/mo or $290/yr; Key Levels alone $14/mo; founding rate $19/$190 for the first 100 All Access subscribers, locked while active. Replaces the old $47 list / $7 opening rate. No discount codes, no fake reference price.
 
 Architecture:
 - Site gate (js/gate.js) validates keys client-side against the License API (validate only, no instance_id, so no activation slots consumed). Config in js/ls-config.js. 24h background revalidate, 7-day grace.

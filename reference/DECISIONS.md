@@ -96,7 +96,8 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D74 — Up to 2 build threads at a time, dialed back on Shane's word.
 - D75 — December tracks planned: whole-life finance; options and stocks (both behind the Florida compliance answer J-20261103-04); Plan Board. Plan Board is a templated block chain (Context, Level, Behavior, Trigger, Invalidation, Target, Risk, Conviction); v1 is a stacked list, a Drawflow canvas comes later.
 - D76 — Primary buyer: NinjaTrader 8 traders with the Order Flow+ license on Apex or Lucid evaluation and funded accounts. No promises of passing or payouts.
-- Pricing is not part of these decisions (BACKLOG item 2).
+- Pricing is not part of these decisions (BACKLOG item 2); see D77.
+- D77 — Pricing (approved by Shane 2026-11-05, Oct 31 pricing): Journal $12/month. All Access $29/month or $290/year. BP Key Levels alone $14/month. Founding rate $19/month or $190/year for the first 100 All Access subscribers, locked while the membership stays active; subscriber 101 onward pays $29/$290. Replaces the old $47 list / $7 opening rate in reference docs. Shane changes the Lemon Squeezy products himself; the runner does not touch Lemon Squeezy.
 
 ## Open findings
 - Resolved 2026-10-31 (crawl daily-loss-lock): NT8 has no daily dollar loss limit; its Risk window is simulation-only. The 2R kill switch is set at the broker account level (NinjaTrader Brokerage Risk Settings or Tradovate Daily Loss, each with its lock). On Rithmic accounts the provider configures risk, so 2R is a written rule. Taught in Module 02.
