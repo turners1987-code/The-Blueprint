@@ -2,7 +2,7 @@
 
 In order. Items marked (local) need files on the G: drive and run locally, not in the cloud.
 
-1. Publish BP Trade Review v1.0.1
+1. [x] Publish BP Trade Review v1.0.1
 2. Record Oct 31 pricing, with founding rate $19/$190 for the first 100 subscribers
 3. New pricing.html
 4. Tier-aware gate
