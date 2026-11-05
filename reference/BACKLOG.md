@@ -6,12 +6,17 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 
 1. [x] Publish BP Trade Review v1.0.1
 2. [x] Record Oct 31 pricing, with founding rate $19/$190 for the first 100 subscribers
+3. New pricing.html
 4. [x] Tier-aware gate
 5. Account page and /api/reset-activations
 6. [x] BP Key Levels guide page and card
 7. Cloudflare Pages Function gate for paid pages, then repo private
 8. Privacy policy payments section
-9. Learning-layer pilot on Module 06
+9a. Learning-layer pilot, Module 06: shared lesson player (slides, timestamp-driven, captions, clickable transcript) and segment layout (sidebar, per-segment resume)
+9b. Learning-layer pilot, Module 06: split the module into 3 to 6 segments; write the narration script and slide timings per segment
+9c. Learning-layer pilot, Module 06: segment checks (3 to 4 questions, pass at 3 of 4), module quiz, three progress states in js/progress.js
+9d. Learning-layer pilot, Module 06: level-marking drill on Lightweight Charts v5.2.1 with synthetic bars (keep the NOTICE)
+9e. Learning-layer pilot, Module 06: per-segment notes with .md export; narration audio with Kokoro-82M if it installs in this environment, otherwise leave the placeholder and note it under Needs Shane as a local run
 10. [x] Plan Board v1
 11. Setting Up NT8 page
 12. Rule Card
@@ -22,7 +27,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 
 ## Answers, approved by Shane Nov 5, 2026
 
-Every item below is now buildable. Build only from these answers and files already in the repo. Anything still missing goes back under a new "## Needs Shane" section.
+Every item below is now buildable. Shane's approval here is the tier D sign-off for these items: do not park them again for tier D reasons. Build only from these answers and files already in the repo. Anything still missing goes back under a new "## Needs Shane" section.
 
 ### Item 2 - Pricing to record (BLUEPRINT_DOC section 10 and DECISIONS)
 - Journal $12/month. All Access $29/month or $290/year. BP Key Levels alone $14/month.
@@ -51,7 +56,7 @@ Every item below is now buildable. Build only from these answers and files alrea
 - Draft only, into reference/drafts/privacy-payments.md, from Lemon Squeezy's public documentation (Lemon Squeezy as merchant of record, what is shared, what The Blueprint does not store). Cite sources in the draft.
 - Do NOT edit privacy.html. Mark the item done when the draft is committed; Shane approves the wording before it ships.
 
-### Item 9 - Learning-layer pilot on Module 06
+### Items 9a to 9e - Learning-layer pilot on Module 06 (one sub-item per run, in order)
 - Segments: split Module 06 into 3 to 6 segments with a lesson sidebar and per-segment resume.
 - Lesson player: HTML/SVG slides in the Blueprint design system, timestamps that drive the slides, captions and a clickable transcript. Write the narration script and slide timings now; the audio file is a placeholder until the voice is picked (Kokoro-82M for the pilot, Google Neural2 if it falls short).
 - Practice: a 3 to 4 question check per segment, passed at 3 of 4, plus a module quiz, built on the existing quiz code and js/progress.js.
@@ -81,4 +86,4 @@ Every item below is now buildable. Build only from these answers and files alrea
 
 ## Needs Shane
 
-- Item 3, New pricing.html (tier D: pricing page numbers). Question: confirm the pricing page may carry the item 2 numbers (Journal $12/mo; All Access $29/mo or $290/yr, founding rate $19/$190 for the first 100 subscribers; Key Levels alone $14/mo), with placeholder checkout links and no struck-through price. Recommended answer: yes, build it exactly from the item 2 numbers, as the answers section already states. Reply "approved" and it moves back into the queue.
+- Learning-layer rollout to the other 24 modules (free path 00-03 and 16-20 first, then the paid modules; 2 runs per module). Waiting on Shane to review the Module 06 pilot (items 9a to 9e). Do not start it.
