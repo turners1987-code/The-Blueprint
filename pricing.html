@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing — The Blueprint</title>
-  <meta name="description" content="The Blueprint has a free tier and a Full Access tier. See what each includes and the current opening rate.">
+  <meta name="description" content="The Blueprint has a free tier and paid plans. See what each includes and the current founding rate.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#071426">
   <meta property="og:title" content="Pricing — The Blueprint">
-  <meta property="og:description" content="The Blueprint has a free tier and a Full Access tier. See what each includes and the current opening rate.">
+  <meta property="og:description" content="The Blueprint has a free tier and paid plans. See what each includes and the current founding rate.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bptrade.co/pricing.html">
   <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
@@ -27,8 +27,8 @@
     <header class="pricing-header">
       <div class="container">
         <div class="eyebrow">Pricing</div>
-        <h1>Free to start. Full Access for the rest.</h1>
-        <p class="lead mt-sm">The foundations, the hard rules and the daily process are free. Full Access adds all paid modules (04&ndash;15, 21&ndash;24), the journal, the tools and the cockpit cards.</p>
+        <h1>Free to start. Pick the plan that fits.</h1>
+        <p class="lead mt-sm">The foundations, the hard rules and the daily process are free. Journal opens the journal and the Plan Board. All Access opens everything, including the tools and the cockpit cards. BP Key Levels is also sold on its own.</p>
       </div>
     </header>
 
@@ -53,29 +53,71 @@
             </div>
           </section>
 
+          <section class="card pricing-plan" aria-labelledby="plan-journal">
+            <div>
+              <h2 id="plan-journal">Journal</h2>
+              <div class="pricing-plan-sub">Monthly, cancel any time</div>
+            </div>
+            <ul class="pricing-list">
+              <li>The trade journal</li>
+              <li>The Plan Board</li>
+            </ul>
+            <div>
+              <div class="pricing-amount">
+                <div class="pricing-price"><span class="sr-only">Journal </span>$12<span class="pricing-per">/month</span></div>
+              </div>
+            </div>
+            <div class="pricing-actions">
+              <!-- TODO: replace this placeholder with the Lemon Squeezy Journal checkout URL. -->
+              <a href="https://bptrade.co/pricing#checkout-journal" class="btn btn--primary" id="checkout-journal">Get the Journal</a>
+              <a href="unlock.html">Have a license key? Enter it here</a>
+            </div>
+          </section>
+
           <section class="card card--gold pricing-plan" aria-labelledby="plan-full">
             <div>
-              <h2 id="plan-full">Full Access</h2>
-              <div class="eyebrow pricing-plus">Everything in Free, plus:</div>
+              <h2 id="plan-full">All Access</h2>
+              <div class="eyebrow pricing-plus">Everything in Free and Journal, plus:</div>
             </div>
             <ul class="pricing-list">
               <li>All paid modules (04&ndash;15, 21&ndash;24)</li>
-              <li>The trade journal</li>
-              <li>The NT8 tools</li>
+              <li>The NT8 tools, including the BP Key Levels download and guide</li>
               <li>The cockpit cards</li>
             </ul>
             <div>
               <div class="pricing-amount">
-                <s class="pricing-price pricing-price--regular"><span class="sr-only">Regular price </span>$47/month<svg class="pricing-slash" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 28.5 Q 38 26 52 21 T 97 13.5" fill="none" stroke="currentColor" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></s>
-                <div class="pricing-price pricing-price--opening"><span class="pricing-price-label">Opening rate</span>$7/month</div>
+                <div class="pricing-price pricing-price--opening"><span class="pricing-price-label">Founding rate &middot; monthly</span>$19<span class="pricing-per">/month</span></div>
+                <div class="pricing-price pricing-price--opening"><span class="pricing-price-label">Founding rate &middot; annual</span>$190<span class="pricing-per">/year</span></div>
               </div>
-              <p class="pricing-lock mt-md">Your rate is locked for as long as your membership stays active. The opening rate will not be available forever &mdash; the regular price is $47/month.</p>
+              <p class="pricing-lock mt-md">The founding rate is open to the first 100 All Access subscribers. Your rate is locked for as long as your membership stays active. From subscriber 101 the price is $29/month or $290/year.</p>
               <p class="pricing-note mt-sm">If you cancel and rejoin later, the current rate will apply.</p>
             </div>
             <div class="pricing-actions">
-              <!-- TODO: replace this placeholder with the Lemon Squeezy checkout URL. -->
-              <a href="https://bptrade.co/pricing#checkout" class="btn btn--primary" id="checkout-btn">Get Full Access</a>
-              <a href="unlock.html">Have a code? Enter it here</a>
+              <!-- TODO: replace these placeholders with the Lemon Squeezy checkout URLs. -->
+              <a href="https://bptrade.co/pricing#checkout" class="btn btn--primary" id="checkout-btn">Get All Access, monthly</a>
+              <a href="https://bptrade.co/pricing#checkout-annual" class="btn btn--ghost" id="checkout-annual">Get All Access, annual</a>
+              <a href="unlock.html">Have a license key? Enter it here</a>
+            </div>
+          </section>
+
+          <section class="card pricing-plan" aria-labelledby="plan-keylevels">
+            <div>
+              <h2 id="plan-keylevels">BP Key Levels</h2>
+              <div class="pricing-plan-sub">The download on its own</div>
+            </div>
+            <ul class="pricing-list">
+              <li>The BP Key Levels download</li>
+              <li>Opens nothing else on the site</li>
+            </ul>
+            <div>
+              <div class="pricing-amount">
+                <div class="pricing-price"><span class="sr-only">BP Key Levels </span>$14<span class="pricing-per">/month</span></div>
+              </div>
+            </div>
+            <div class="pricing-actions">
+              <!-- TODO: replace this placeholder with the Lemon Squeezy Key Levels checkout URL. -->
+              <a href="https://bptrade.co/pricing#checkout-keylevels" class="btn btn--primary" id="checkout-keylevels">Get BP Key Levels</a>
+              <a href="unlock.html">Have a license key? Enter it here</a>
             </div>
           </section>
 

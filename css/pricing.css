@@ -2,7 +2,7 @@
 .pricing-header { padding: var(--space-2xl) 0; border-bottom: 1px solid var(--border); }
 .pricing-body { padding: var(--space-2xl) 0; }
 
-.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); align-items: stretch; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-lg); align-items: stretch; }
 .pricing-plan { display: flex; flex-direction: column; gap: var(--space-md); }
 .pricing-plan h2 { font-size: 1.4rem; }
 .pricing-plan-sub { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
@@ -13,9 +13,7 @@
 .pricing-plus { margin-bottom: 0; }
 .pricing-amount { font-family: var(--font-display); font-weight: 900; display: flex; flex-direction: column; gap: var(--space-xs); }
 .pricing-price { font-size: 2.4rem; line-height: 1.1; }
-.pricing-price--regular { position: relative; align-self: flex-start; color: var(--gold); text-decoration: none; }
-/* Hand-drawn slash: sits above the text, scales with it (stroke is in em). */
-.pricing-slash { position: absolute; inset: -0.3em -0.1em -0.1em; width: calc(100% + 0.2em); height: calc(100% + 0.4em); color: var(--cyan); stroke-width: 0.075em; overflow: visible; pointer-events: none; }
+.pricing-per { font-size: 1rem; font-weight: 700; color: var(--text-secondary); }
 .pricing-price--opening { color: var(--gold); }
 .pricing-price-label { display: block; font-family: var(--font-mono); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); }
 .pricing-lock { font-size: 0.95rem; color: var(--text-secondary); }

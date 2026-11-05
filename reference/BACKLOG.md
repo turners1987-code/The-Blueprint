@@ -6,7 +6,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 
 1. [x] Publish BP Trade Review v1.0.1
 2. [x] Record Oct 31 pricing, with founding rate $19/$190 for the first 100 subscribers
-3. New pricing.html
+3. [x] New pricing.html
 4. [x] Tier-aware gate
 5. Account page and /api/reset-activations
 6. [x] BP Key Levels guide page and card
