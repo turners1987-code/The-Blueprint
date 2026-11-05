@@ -88,6 +88,16 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - D31 — No trade-count or consecutive-loss cap rule. The 2R kill switch is the cap; the page names the re-entry loop; the journal shows trade count as data.
 - D47 — No give-back or stop-after-win rule. Loss cap only.
 
+## Decided 2026-11-05 (approved by Shane)
+- D70 — Paid-content protection (2A): a private repo plus a Cloudflare Pages Function gate that checks KV entitlements (bptrade-entitlements). GitHub Pro is needed for that setup. Supersedes the "accept client-side gating" option in BLUEPRINT_DOC section 11.
+- D71 — Build system: an hourly cloud scheduled task on Sonnet 5.5 builds one BACKLOG item per run. Tiers A, B and C ship straight to main after `npm test` passes. Tier D parks under "Needs Shane" in reference/BACKLOG.md and pushes an ACTION NEEDED alert.
+- D72 — Branch protection is shelved until the repo goes private.
+- D73 — Research order: Claude researches first (web search, fetch, Chrome). Only blocked, very large or recurring needs go to the Crawl chat, as line-item requests, never "add job".
+- D74 — Up to 2 build threads at a time, dialed back on Shane's word.
+- D75 — December tracks planned: whole-life finance; options and stocks (both behind the Florida compliance answer J-20261103-04); Plan Board. Plan Board is a templated block chain (Context, Level, Behavior, Trigger, Invalidation, Target, Risk, Conviction); v1 is a stacked list, a Drawflow canvas comes later.
+- D76 — Primary buyer: NinjaTrader 8 traders with the Order Flow+ license on Apex or Lucid evaluation and funded accounts. No promises of passing or payouts.
+- Pricing is not part of these decisions (BACKLOG item 2).
+
 ## Open findings
 - Resolved 2026-10-31 (crawl daily-loss-lock): NT8 has no daily dollar loss limit; its Risk window is simulation-only. The 2R kill switch is set at the broker account level (NinjaTrader Brokerage Risk Settings or Tradovate Daily Loss, each with its lock). On Rithmic accounts the provider configures risk, so 2R is a written rule. Taught in Module 02.
 - Syllabus v3 = the v2 25-module order; no merges or renumbers; a later, unscheduled options module.

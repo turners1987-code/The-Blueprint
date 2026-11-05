@@ -32,6 +32,13 @@ approved and in test mode. `js/unlock.js` validates codes against the Lemon Sque
 API; it no longer accepts any non-empty code. The checkout link on `pricing.html` stays a
 placeholder until go-live.
 
+**Primary buyer (D76).** NinjaTrader 8 traders with the Order Flow+ license on Apex or Lucid
+evaluation and funded accounts. The site makes no promises of passing or payouts.
+
+**December tracks planned (D75).** Whole-life finance; options and stocks (both behind the
+Florida compliance answer J-20261103-04); Plan Board, a templated block chain (Context, Level,
+Behavior, Trigger, Invalidation, Target, Risk, Conviction), v1 a stacked list, Drawflow canvas later.
+
 **Owner:** Shane. Not a developer — Claude Code does the building, this project does
 architecture, specs, and handoff prompts.
 
@@ -304,6 +311,8 @@ anything ships with a price).
   so double-clicking an HTML file shows an empty module grid.
 - Live check only when a push changed how scripts load or fetch. Hard-refresh, then F12
   console. `favicon.ico 404` is noise; anything else is real.
+- **Build runner (D71).** An hourly cloud scheduled task on Sonnet 5.5 builds one BACKLOG item per run. Tiers A, B and C ship to main after `npm test` passes; tier D parks under "Needs Shane" in `reference/BACKLOG.md` with an ACTION NEEDED alert. Up to two build threads at a time (D74). Branch protection is shelved until the repo goes private (D72).
+- **Research order (D73).** Claude researches first (web search, fetch, Chrome). Only blocked, very large or recurring needs go to the Crawl chat, as line-item requests, never "add job".
 - Structural changes go to a branch first; content and small fixes go straight to main.
 - Bump `CACHE_VERSION` in `sw.js` when cached files change, and add new pages and assets to its
   shell list.
@@ -377,9 +386,9 @@ Deferred: downloads page; privacy policy payments section (+ sw.js/llms.txt list
 
 ## 11. Open decisions
 
-- Gating mechanism for Full Access. A static site with a code in `localStorage` cannot keep
-  paid content private; the options are accepting that, or moving paid pages behind
-  Cloudflare (Access, Workers) once the payment flow is live.
+- Gating mechanism for Full Access. **Decided 2026-11-05 (D70):** a private repo plus a
+  Cloudflare Pages Function gate that checks KV entitlements; GitHub Pro is needed for that.
+  Not yet built (BACKLOG item 7); until then the client-side gate in section 10 stands.
 - Whether to enforce the journal's gate server-side. The pricing page lists the journal under
   Full Access and `js/gate.js` gates it, but only client-side, so it is gated and not
   protected. A hosted journal for paying customers would mean accounts and a backend — a
