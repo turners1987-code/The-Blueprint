@@ -1,0 +1,15 @@
+.pb-page { padding-top: 60px; }
+.pb-header { padding: var(--space-2xl) 0; border-bottom: 1px solid var(--border); }
+.pb-body { padding: var(--space-xl) 0 var(--space-2xl); }
+.pb-toolbar { margin: var(--space-lg) 0; }
+.pb-plan { border: 1px solid var(--border); border-radius: 8px; padding: var(--space-lg); margin-bottom: var(--space-lg); }
+.pb-plan-head { display: flex; gap: var(--space-md); align-items: center; flex-wrap: wrap; margin-bottom: var(--space-md); }
+.pb-plan-head input { flex: 1; min-width: 200px; }
+.pb-blocks { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md); counter-reset: pb; }
+.pb-block { display: flex; flex-direction: column; gap: var(--space-xs); }
+.pb-block label { font-weight: 600; }
+.pb-block label::before { counter-increment: pb; content: counter(pb) ". "; color: var(--text-muted); }
+.pb-block textarea, .pb-plan-head input { width: 100%; font: inherit; color: inherit; background: transparent; border: 1px solid var(--border); border-radius: 6px; padding: var(--space-sm); }
+.pb-hint { font-size: 0.85rem; color: var(--text-muted); }
+.pb-actions { display: flex; gap: var(--space-md); align-items: center; margin-top: var(--space-md); flex-wrap: wrap; }
+.pb-status { font-size: 0.85rem; color: var(--text-muted); }

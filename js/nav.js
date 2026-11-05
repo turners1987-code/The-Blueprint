@@ -49,6 +49,7 @@ function initNav() {
     'flashcards.html': 'deck',
     'dial-in.html': 'dial',
     'tools.html': 'tools',
+    'plan-board.html': 'tools',
     'pricing.html': 'pricing',
     'ai.html': 'ai',
     'index.html': 'home',

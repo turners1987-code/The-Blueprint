@@ -13,7 +13,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 7. Cloudflare Pages Function gate for paid pages, then repo private
 8. Privacy policy payments section
 9. Learning-layer pilot on Module 06
-10. Plan Board v1
+10. [x] Plan Board v1
 11. Setting Up NT8 page
 12. Rule Card
 13. Reading List
@@ -38,3 +38,15 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 ### Item 5 — Account page and /api/reset-activations (Tier D: Lemon Squeezy API, secrets, functions/)
 - Question: may a new Pages Function call the Lemon Squeezy API to reset activations, which needs a Lemon Squeezy API key as a Cloudflare secret, and how should a customer be identified (license key, or email plus key)?
 - Recommended: yes; identify by license key; you add the API key as a Cloudflare secret named LS_API_KEY; rate-limit to one reset per key per 24 hours.
+
+### Item 7 — Cloudflare Pages Function gate for paid pages, then repo private (Tier D: Cloudflare, functions/, KV, repo visibility)
+- Question: may a new Pages Function and a KV binding (bptrade-entitlements) be added, wrangler.toml changed, and the repo made private (needs GitHub Pro)? Which KV namespace id should be bound, and who writes the entitlements?
+- Recommended: yes to all; send the KV namespace id; entitlements are written by the existing Lemon Squeezy webhook flow; make the repo private only after the gate is live and tested.
+
+### Item 8 — Privacy policy payments section (Tier D: legal wording)
+- Question: approve the payments section text (Lemon Squeezy as merchant of record, what is shared, what is not stored by The Blueprint)?
+- Recommended: I draft it from the Lemon Squeezy documentation and you or counsel approve it before it ships.
+
+### Item 9 — Learning-layer pilot on Module 06 (missing input)
+- Question: "Learning layer" is not defined in BLUEPRINT_DOC, DECISIONS or the repo. What does it contain (questions, recall prompts, spaced review) and how is it shown on the module?
+- Recommended: end-of-module recall prompts (3 to 5 per section) stored locally, with progress in js/progress.js; send a one-paragraph spec to confirm.
