@@ -62,13 +62,16 @@ Every item below is now buildable. Build only from these answers and files alrea
 
 ### Item 11 - Setting Up NT8 page
 - Source: reference/content-maps/NT8-Setup.md (added Nov 5). Build the page from it plus D29 and D50.
-- Where the map lists a gap (the nt8-onboarding crawl, the live-account loss limit step), write the page around it with no invented steps and list the gap in the build report.
+- Live-account daily loss limit: use reference/research/daily-loss-lock.md (added Nov 5). The NT8 platform has no daily loss limit; the kill switch is set in the NinjaTrader Dashboard Risk Settings with "Prevent Changes When Trading is Locked" on. Teach the mechanics and link vendor pages; print no vendor dollar amounts.
+- Where the map still lists a gap, write the page around it with no invented steps and list the gap in the build report.
 
 ### Item 12 - Rule Card
 - As recommended: a one-page printable card at tools/rule-card.html with the pre-trade yes/no checks, the grade-to-size table from Module 14 and the broker-level 2R kill switch (D29). Every line copied from existing module text.
 
 ### Item 13 - Reading List
-- reading-list.html built only from books, papers and sources already named in the modules, BLUEPRINT_DOC and DECISIONS (D2 commodity basics included). Group under headings by topic, one line each on why. No new titles; no quoted text from the books.
+- reading-list.html built from reference/research/reading-list-books.csv (107 books, added Nov 5) plus any titles already named in the modules, BLUEPRINT_DOC and DECISIONS (D2 commodity basics included).
+- Lead with the books named on 2 or more lists. Group under psychology, decision-making, trading process and investing; the investing group is a short pointer for the later finance track, not the focus.
+- One line each on why, in our own words. No quoted text from the books or the source lists. Credit the seven source lists at the bottom (see reference/research/README.md).
 
 ### Item 14 - Sources page
 - As recommended: public sources.html listing each source named in the modules, with the n and period beside every statistic from TradingStats_Source_of_Truth.txt. No source needs to stay unnamed. Include the library licenses (Lightweight Charts NOTICE and others in use).
