@@ -15,7 +15,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 9. Learning-layer pilot on Module 06
 10. [x] Plan Board v1
 11. Setting Up NT8 page
-12. Rule Card
+12. Rule Card (parked, see Needs Shane)
 13. Reading List
 14. Sources page
 15. Journal fields
@@ -54,3 +54,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 ### Item 11 — Setting Up NT8 page (missing input)
 - Question: the source for this page is the NT8-Setup content map (`G:\My Drive\Blueprint Review\content-maps\`), which is not in the repo, and BLUEPRINT_DOC notes the nt8-onboarding crawl is still pending. May you copy the NT8-Setup map into `reference/` (or paste the nt8-onboarding crawl result) so the page can be built from it?
 - Recommended: copy the NT8-Setup content map into `reference/content-maps/NT8-Setup.md` and send the nt8-onboarding crawl result; the page then covers RTH and full-session templates ending 16:00 ET (D50) and the broker-level 2R kill switch (D29).
+
+### Item 12 — Rule Card (missing input)
+- Question: "Rule Card" is not defined in BLUEPRINT_DOC, DECISIONS, MODULE_STANDARD or anywhere in the repo. What is it (a printable one-page card, a downloadable PDF, an in-page tool), and which rules does it carry (the trade-plan checks, the 2R kill switch D29, the grade-before-size table)?
+- Recommended: a one-page printable card at tools/rule-card.html with the pre-trade yes/no checks, the grade-to-size table from Module 14 and the broker-level 2R kill switch, every line copied from existing module text; send confirmation or a spec.
