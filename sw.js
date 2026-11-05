@@ -34,6 +34,7 @@ const SHELL = [
   'js/nav.js',
   'js/gate.js',
   'js/ls-config.js',
+  'js/tiers.js',
   'js/progress.js',
   'js/modules.js',
   'js/module-toc.js',

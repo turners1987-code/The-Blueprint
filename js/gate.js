@@ -23,7 +23,10 @@
      element until this module marks it open, so gated content never
      flashes before the check runs.
    - data-gate="access": always needs a code. Used by the journal
-     pages. data-gate-title / data-gate-blurb say what the page is.
+     pages and Plan Board. data-gate-need names the tier requirement
+     ("journal" by default; "keylevels" for the Key Levels download).
+     Journal opens journal + Plan Board; All Access opens everything;
+     a Key Levels key opens only the Key Levels download. data-gate-title / data-gate-blurb say what the page is.
    - data-gate="tier": a module page. The module is found from the
      file name, and it is locked only if its tier in data/modules.json
      is "paid". Free modules open straight away. Title and summary
@@ -35,6 +38,7 @@
    deliberate: the failure mode is a blank page, never an open one.
    ============================================================ */
 
+import { tierForProduct, tierGrants } from './tiers.js';
 import { LS_PRODUCT_IDS, LS_VALIDATE_URL, LS_ACCEPT_TEST_KEYS, REVALIDATE_AFTER_MS, GRACE_MS } from './ls-config.js';
 
 // The key unlock.js and this module share. One place so they cannot drift apart.
@@ -61,11 +65,13 @@ export function clearRecord() {
   try { localStorage.removeItem(ACCESS_KEY); } catch { /* nothing to clear */ }
 }
 
-export function hasAccess() {
+// need: "journal" | "modules" | "keylevels". Default "modules" (All Access only).
+export function hasAccess(need = 'modules') {
   const rec = readRecord();
   return !!rec
     && VALID_STATUSES.includes(rec.status)
-    && Date.now() - rec.validatedAt < GRACE_MS;
+    && Date.now() - rec.validatedAt < GRACE_MS
+    && tierGrants(tierForProduct(rec.productId), need);
 }
 
 export async function validateKey(key) {
@@ -168,11 +174,11 @@ async function decide() {
     const mod = await findModule();
     // A module we cannot find, or one that is free, is open. Only a
     // known paid module without a code is locked.
-    if (mod && mod.tier === 'paid' && !hasAccess()) {
+    if (mod && mod.tier === 'paid' && !hasAccess('modules')) {
       lock(gated, mod.title, mod.summary || '');
       return;
     }
-  } else if (!hasAccess()) {
+  } else if (!hasAccess(gated.dataset.gateNeed || 'journal')) {
     lock(gated, gated.dataset.gateTitle || document.title, gated.dataset.gateBlurb || '');
     return;
   }

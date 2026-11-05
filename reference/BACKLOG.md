@@ -6,8 +6,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 
 1. [x] Publish BP Trade Review v1.0.1
 2. [x] Record Oct 31 pricing, with founding rate $19/$190 for the first 100 subscribers
-3. New pricing.html
-4. Tier-aware gate
+4. [x] Tier-aware gate
 5. Account page and /api/reset-activations
 6. [x] BP Key Levels guide page and card
 7. Cloudflare Pages Function gate for paid pages, then repo private
@@ -76,3 +75,7 @@ Every item below is now buildable. Build only from these answers and files alrea
 
 ### Item 15 - Journal fields
 - As recommended: schema v6 adds readiness_score (0, 1 or 2 per D42), test_number (integer), session_block (text slug) and sheet_finished_time (ISO time), all nullable and present as keys; v1 to v5 records read as null. Carry the new fields into the CSV export.
+
+## Needs Shane
+
+- Item 3, New pricing.html (tier D: pricing page numbers). Question: confirm the pricing page may carry the item 2 numbers (Journal $12/mo; All Access $29/mo or $290/yr, founding rate $19/$190 for the first 100 subscribers; Key Levels alone $14/mo), with placeholder checkout links and no struck-through price. Recommended answer: yes, build it exactly from the item 2 numbers, as the answers section already states. Reply "approved" and it moves back into the queue.
