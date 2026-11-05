@@ -15,58 +15,64 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 9. Learning-layer pilot on Module 06
 10. [x] Plan Board v1
 11. Setting Up NT8 page
-12. Rule Card (parked, see Needs Shane)
+12. Rule Card
 13. Reading List
 14. Sources page
 15. Journal fields
 16. [x] Journal CSV export
 
-## Needs Shane
+## Answers, approved by Shane Nov 5, 2026
 
-### Item 2 — Record Oct 31 pricing, with founding rate $19/$190 for the first 100 subscribers (Tier D: prices, Lemon Squeezy)
-- Question: Confirm the full pricing as it is to be recorded (list price, founding rate $19/month and $190/year, the 100-subscriber cap, and what happens at subscriber 101), and whether the Lemon Squeezy variants are to be changed by you or left as they are. BLUEPRINT_DOC still says $47 list / $7 opening rate.
-- Recommended: record $19/month and $190/year as the founding rate, capped at the first 100 subscribers and locked while the membership stays active, in BLUEPRINT_DOC section 10 and DECISIONS; you change the Lemon Squeezy variants yourself.
+Every item below is now buildable. Build only from these answers and files already in the repo. Anything still missing goes back under a new "## Needs Shane" section.
 
-### Item 3 — New pricing.html (Tier D: pricing page numbers)
-- Blocked by item 2. Question: after item 2 is answered, may the pricing page carry the founding-rate numbers, and what are the list prices after the first 100?
-- Recommended: yes, build it from the item 2 numbers only, with the checkout link left as the placeholder until go-live.
+### Item 2 - Pricing to record (BLUEPRINT_DOC section 10 and DECISIONS)
+- Journal $12/month. All Access $29/month or $290/year. BP Key Levels alone $14/month.
+- Founding rate: $19/month or $190/year for the first 100 All Access subscribers, locked while the membership stays active. Subscriber 101 onward pays $29/$290.
+- Replaces the old $47 list / $7 opening rate everywhere it appears in reference docs.
+- Shane changes the Lemon Squeezy products himself. Do not touch Lemon Squeezy.
 
-### Item 4 — Tier-aware gate (missing input)
-- Question: which tiers exist beyond free and paid, which pages and tools each tier opens, and which Lemon Squeezy product or variant ids map to each? None of this is in BLUEPRINT_DOC or the repo (js/gate.js knows only free/paid).
-- Recommended: two tiers, Full Access (all modules, journal, tools) and a per-tool key for each paid NT8 indicator, as the Key Levels guide already implies ("All Access or BP Key Levels key"); send the variant ids.
+### Item 3 - pricing.html
+- Build from the item 2 numbers only: Free, Journal, All Access (monthly and annual, founding rate shown as the current price with the 100-subscriber cap stated), Key Levels alone.
+- No struck-through price. Checkout links stay as placeholders until go-live.
 
-### Item 5 — Account page and /api/reset-activations (Tier D: Lemon Squeezy API, secrets, functions/)
-- Question: may a new Pages Function call the Lemon Squeezy API to reset activations, which needs a Lemon Squeezy API key as a Cloudflare secret, and how should a customer be identified (license key, or email plus key)?
-- Recommended: yes; identify by license key; you add the API key as a Cloudflare secret named LS_API_KEY; rate-limit to one reset per key per 24 hours.
+### Item 4 - Tier-aware gate
+- Four tiers: Free (the free path), Journal (opens the journal and plan-board.html), All Access (opens everything, including the BP Key Levels download and guide), Key Levels key (opens only the BP Key Levels download).
+- Build the product-to-tier map with placeholder product ids (e.g. LS_PRODUCT_JOURNAL) in one config spot. Shane supplies the real ids after he creates the products on Nov 9; do not block on them.
 
-### Item 7 — Cloudflare Pages Function gate for paid pages, then repo private (Tier D: Cloudflare, functions/, KV, repo visibility)
-- Question: may a new Pages Function and a KV binding (bptrade-entitlements) be added, wrangler.toml changed, and the repo made private (needs GitHub Pro)? Which KV namespace id should be bound, and who writes the entitlements?
-- Recommended: yes to all; send the KV namespace id; entitlements are written by the existing Lemon Squeezy webhook flow; make the repo private only after the gate is live and tested.
+### Item 5 - Account page and /api/reset-activations
+- Approved. Identify the customer by license key. Rate-limit to one reset per key per 24 hours.
+- The function reads a Cloudflare secret named LS_API_KEY. Shane adds the secret; never write a key into the repo.
 
-### Item 8 — Privacy policy payments section (Tier D: legal wording)
-- Question: approve the payments section text (Lemon Squeezy as merchant of record, what is shared, what is not stored by The Blueprint)?
-- Recommended: I draft it from the Lemon Squeezy documentation and you or counsel approve it before it ships.
+### Item 7 - Paid-content gate
+- Approved. The KV namespace is already bound in wrangler.toml as ENTITLEMENTS (id 031c6dd0072643ce87ada70fded353f8); use that binding, add no new namespace.
+- Entitlements are written by the existing Lemon Squeezy webhook flow.
+- Build and test the function. Do NOT change repo visibility; Shane makes the repo private after the gate is tested and GitHub Pro is bought.
 
-### Item 9 — Learning-layer pilot on Module 06 (missing input)
-- Question: "Learning layer" is not defined in BLUEPRINT_DOC, DECISIONS or the repo. What does it contain (questions, recall prompts, spaced review) and how is it shown on the module?
-- Recommended: end-of-module recall prompts (3 to 5 per section) stored locally, with progress in js/progress.js; send a one-paragraph spec to confirm.
+### Item 8 - Privacy policy payments section
+- Draft only, into reference/drafts/privacy-payments.md, from Lemon Squeezy's public documentation (Lemon Squeezy as merchant of record, what is shared, what The Blueprint does not store). Cite sources in the draft.
+- Do NOT edit privacy.html. Mark the item done when the draft is committed; Shane approves the wording before it ships.
 
-### Item 11 — Setting Up NT8 page (missing input)
-- Question: the source for this page is the NT8-Setup content map (`G:\My Drive\Blueprint Review\content-maps\`), which is not in the repo, and BLUEPRINT_DOC notes the nt8-onboarding crawl is still pending. May you copy the NT8-Setup map into `reference/` (or paste the nt8-onboarding crawl result) so the page can be built from it?
-- Recommended: copy the NT8-Setup content map into `reference/content-maps/NT8-Setup.md` and send the nt8-onboarding crawl result; the page then covers RTH and full-session templates ending 16:00 ET (D50) and the broker-level 2R kill switch (D29).
+### Item 9 - Learning-layer pilot on Module 06
+- Segments: split Module 06 into 3 to 6 segments with a lesson sidebar and per-segment resume.
+- Lesson player: HTML/SVG slides in the Blueprint design system, timestamps that drive the slides, captions and a clickable transcript. Write the narration script and slide timings now; the audio file is a placeholder until the voice is picked (Kokoro-82M for the pilot, Google Neural2 if it falls short).
+- Practice: a 3 to 4 question check per segment, passed at 3 of 4, plus a module quiz, built on the existing quiz code and js/progress.js.
+- Progress: three states per segment (not started, attempted, passed) in js/progress.js.
+- Chart: a level-marking drill on Lightweight Charts v5.2.1 (Apache-2.0, keep the NOTICE) using synthetic bars only, never real exported bars.
+- Notes: per-segment notes, exportable as .md.
+- Lesson prose may use a --max-reading: 680px token; do not change the rest of the design system.
 
-### Item 12 — Rule Card (missing input)
-- Question: "Rule Card" is not defined in BLUEPRINT_DOC, DECISIONS, MODULE_STANDARD or anywhere in the repo. What is it (a printable one-page card, a downloadable PDF, an in-page tool), and which rules does it carry (the trade-plan checks, the 2R kill switch D29, the grade-before-size table)?
-- Recommended: a one-page printable card at tools/rule-card.html with the pre-trade yes/no checks, the grade-to-size table from Module 14 and the broker-level 2R kill switch, every line copied from existing module text; send confirmation or a spec.
+### Item 11 - Setting Up NT8 page
+- Source: reference/content-maps/NT8-Setup.md (added Nov 5). Build the page from it plus D29 and D50.
+- Where the map lists a gap (the nt8-onboarding crawl, the live-account loss limit step), write the page around it with no invented steps and list the gap in the build report.
 
-### Item 13 — Reading List (missing input)
-- Question: DECISIONS D2 says commodity basics go to a reading-list page, but no list of titles, sources or links exists in the repo. Which items go on it, and under which headings?
-- Recommended: send the list (title, author or publisher, link, one line on why) and I build reading-list.html from it only.
+### Item 12 - Rule Card
+- As recommended: a one-page printable card at tools/rule-card.html with the pre-trade yes/no checks, the grade-to-size table from Module 14 and the broker-level 2R kill switch (D29). Every line copied from existing module text.
 
-### Item 14 — Sources page (missing input)
-- Question: "Sources" is not defined in BLUEPRINT_DOC, DECISIONS or the repo. Is it a public page listing where the site's statistics and concepts come from, and which sources may be named publicly?
-- Recommended: a public sources.html listing each source named in the modules, with the n and period beside every statistic from TradingStats_Source_of_Truth.txt; confirm and name any source that must stay unnamed.
+### Item 13 - Reading List
+- reading-list.html built only from books, papers and sources already named in the modules, BLUEPRINT_DOC and DECISIONS (D2 commodity basics included). Group under headings by topic, one line each on why. No new titles; no quoted text from the books.
 
-### Item 15 — Journal fields (missing input)
-- Question: BLUEPRINT_DOC says the journal has no fields for test number, session block, readiness score or sheet finish time (D42). Should all four be added as schema v6 fields, and what are their types and allowed values?
-- Recommended: add readiness_score (0, 1, 2 per D42), test_number (integer), session_block (text slug) and sheet_finished_time (ISO time), all nullable, required as keys, with v1-v5 records read as null.
+### Item 14 - Sources page
+- As recommended: public sources.html listing each source named in the modules, with the n and period beside every statistic from TradingStats_Source_of_Truth.txt. No source needs to stay unnamed. Include the library licenses (Lightweight Charts NOTICE and others in use).
+
+### Item 15 - Journal fields
+- As recommended: schema v6 adds readiness_score (0, 1 or 2 per D42), test_number (integer), session_block (text slug) and sheet_finished_time (ISO time), all nullable and present as keys; v1 to v5 records read as null. Carry the new fields into the CSV export.
