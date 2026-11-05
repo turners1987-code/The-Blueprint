@@ -397,7 +397,7 @@ console.log('──────────────────────�
 // code cannot hide behind a comment.
 const JOURNAL_JS = path.join(ROOT, 'js', 'journal');
 const STORAGE_LAYER = new Set(['storage.js', 'storage-local.js', 'storage-fs.js', 'storage-common.js']);
-const UI_ALLOWED_IMPORTS = new Set(['schema.js', 'analysis.js', 'storage.js']);
+const UI_ALLOWED_IMPORTS = new Set(['schema.js', 'analysis.js', 'storage.js', 'csv.js']);
 const BROWSER_STORE_API = /\b(localStorage|indexedDB|showDirectoryPicker)\b/;
 const FACADE_CALL = /\bstorage\.[A-Za-z_$][\w$]*\s*\(/;
 const DIRECT_BACKEND_REF = /['"][^'"]*storage-(?:local|fs)\.js['"]/;

@@ -13,6 +13,7 @@
    ============================================================ */
 
 import * as storage from './storage.js';
+import { toCanonicalCsv } from './csv.js';
 import {
   validate, emptyRecord, TAXONOMY_VERSION,
   SETUPS, LOCATIONS, TRIGGERS, CONFIRMATIONS, GRADES, ENVIRONMENTS, ACCOUNT_TYPES,
@@ -471,6 +472,23 @@ function wireBackup() {
       await storage.setMeta({ lastExport: new Date().toISOString() });
       await renderExportStatus();
       await renderStatus();
+    } catch (err) {
+      message(err && err.message ? err.message : String(err), 'red');
+    }
+  });
+
+  $('btn-export-csv').addEventListener('click', async () => {
+    try {
+      const records = await storage.list();
+      const blob = new Blob([toCanonicalCsv(records)], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `blueprint-trades-${new Date().toISOString().slice(0, 10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
     } catch (err) {
       message(err && err.message ? err.message : String(err), 'red');
     }

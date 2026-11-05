@@ -22,6 +22,7 @@ import { fileURLToPath } from 'node:url';
 import { createLocalStorageAdapter } from '../js/journal/storage-local.js';
 import { StorageError, ValidationError } from '../js/journal/storage-common.js';
 import { ID_RE } from '../js/journal/schema.js';
+import { toCanonicalCsv, rootSymbol, csvField, CSV_COLUMNS } from '../js/journal/csv.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const examples = JSON.parse(readFileSync(path.join(ROOT, 'data', 'journal-example.json'), 'utf8'));
@@ -342,6 +343,24 @@ test('storage.js picks localStorage without a stored folder, and exposes switchi
   assert.deepEqual(await api.getMeta(), {});
   await api.setMeta({ lastExport: '2026-10-05T12:00:00.000Z' });
   assert.equal((await api.getMeta()).lastExport, '2026-10-05T12:00:00.000Z');
+});
+
+test('CSV export: canonical header, root symbol, signed points, quoting', () => {
+  assert.equal(rootSymbol('MNQ 12-26'), 'MNQ');
+  assert.equal(rootSymbol('MNQZ6'), 'MNQ');
+  assert.equal(rootSymbol('MNQ'), 'MNQ');
+  assert.equal(csvField('a,"b"'), '"a,""b"""');
+  const lines = toCanonicalCsv([winner, open]).split('\r\n');
+  assert.equal(lines[0], CSV_COLUMNS.join(','));
+  const w = lines[1].split(',');
+  assert.equal(w[1], 'MNQ');
+  assert.equal(w[2], winner.entry_time);
+  assert.equal(w[4], 'long');
+  assert.equal(w[6], String(winner.stop_price));
+  assert.equal(w[10], String(winner.exit_price - winner.actual_fill));
+  assert.equal(w[11], '', 'result_usd stays empty');
+  assert.equal(lines[2].split(',')[10], '', 'open trade has no result');
+  assert.equal(lines.at(-1), '', 'ends with CRLF');
 });
 
 // ── Run ───────────────────────────────────────────────────────

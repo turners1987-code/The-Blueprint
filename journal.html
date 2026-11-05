@@ -260,11 +260,12 @@
           <div class="card">
             <div class="flex gap-md">
               <button class="btn btn--outline btn--sm" id="btn-export" type="button">Export journal</button>
+              <button class="btn btn--outline btn--sm" id="btn-export-csv" type="button">Export CSV</button>
               <button class="btn btn--outline btn--sm" id="btn-import" type="button">Import…</button>
               <input type="file" id="import-file" accept=".json,application/json" hidden>
             </div>
             <div id="export-status" class="mt-md" aria-live="polite"></div>
-            <p class="field-hint mt-sm">Export downloads every trade as one JSON file. Import replaces the whole journal in this store with the file’s contents.</p>
+            <p class="field-hint mt-sm">Export downloads every trade as one JSON file. Export CSV writes the trades file BP Trade Review reads, with stop and target as planned; open it in a text editor, not Excel, which rewrites the timestamps. Import replaces the whole journal in this store with the file’s contents.</p>
           </div>
         </section>
 
