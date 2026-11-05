@@ -49,6 +49,7 @@ All 25 modules are published. Free modules need no signup; Full Access modules n
 
 - [Tools](https://bptrade.co/tools.html): NinjaTrader 8 tools in development, with requirements.
 - [BP Trade Review guide](https://bptrade.co/guides/bp-trade-review.html): user guide for the free BP Trade Review NinjaTrader 8 indicator.
+- [BP Key Levels guide](https://bptrade.co/guides/bp-key-levels.html): user guide for the BP Key Levels NinjaTrader 8 indicator.
 - [Pricing](https://bptrade.co/pricing.html): the free tier and the Full Access tier, what each includes, and the current opening rate.
 - [AI disclosure](https://bptrade.co/ai.html): how AI is used across the site, and what is verified by hand.
 - [Support](https://bptrade.co/support.html): the support form, the only way to contact us; replies within 2 business days.

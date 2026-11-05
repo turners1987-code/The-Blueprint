@@ -94,3 +94,4 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 
 ## Taken by default (build runner)
 - BP Trade Review v1.0.1 published (2026-11-05, taken by default): zip served from `downloads/`, guide hosted at `guides/bp-trade-review.html` (rendered from `reference/guides/BP_TRADE_REVIEW_GUIDE.md`, screenshots from `assets/guides/`), `data/tools.json` status `available`. `scripts/check.mjs` depth rule extended so `guides/` uses `../css/` and `../js/` like `modules/`.
+- BP Key Levels guide published (2026-11-05, taken by default): guide hosted at `guides/bp-key-levels.html` (rendered from `reference/guides/BP_KEY_LEVELS_GUIDE.md`). The `data/tools.json` card links the guide but stays `in-development` with no download, because no Key Levels zip is in the repo; the card summary was corrected to match the guide (up to 19 levels, Prior RTH Close is not the settlement price).

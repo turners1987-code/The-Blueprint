@@ -3,13 +3,13 @@
     "id": "keylevels",
     "name": "KeyLevels",
     "display_name": "Key Levels",
-    "summary": "Auto-draws 19 reference levels across monthly, weekly, daily (including PD POC/VAH/VAL and settlement) and overnight, Asia and London sessions. Repopulates daily.",
+    "summary": "Auto-draws up to 19 reference levels across monthly, weekly, daily (including PD POC, VA High and VA Low) and overnight, Asia and London sessions. Refreshes each session.",
     "category": "Indicators",
     "requires_orderflow": true,
     "status": "in-development",
     "version": null,
     "file": null,
-    "guide": null,
+    "guide": "guides/bp-key-levels.html",
     "notes": ""
   },
   {
