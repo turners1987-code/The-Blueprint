@@ -136,10 +136,10 @@
     "summary": "Free indicator that replays your own trades on the chart — entry, stop, target and your review questions appear at the moment of entry; the result stays hidden until exit.",
     "category": "Indicators",
     "requires_orderflow": false,
-    "status": "planned",
-    "version": null,
-    "file": null,
-    "guide": null,
-    "notes": "Free — no license required."
+    "status": "available",
+    "version": "1.0.1",
+    "file": "downloads/BPTradeReview_v1.0.1.zip",
+    "guide": "guides/bp-trade-review.html",
+    "notes": "Free. No license key needed."
   }
 ]

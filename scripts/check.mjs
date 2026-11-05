@@ -142,9 +142,9 @@ function depthError(htmlFile, rawRef, resolved) {
   const rel = toRel(resolved);
   if (!rel.startsWith('css/') && !rel.startsWith('js/')) return null;
   const relDir = path.dirname(toRel(htmlFile));
-  const inFileModules = relDir === 'modules' || relDir.startsWith('modules/');
+  const inFileModules = ['modules', 'guides'].some(d => relDir === d || relDir.startsWith(d + '/'));
   if (inFileModules && !rawRef.startsWith('../css/') && !rawRef.startsWith('../js/')) {
-    return `css/js reference "${rawRef}" must use ../css/ or ../js/ inside modules/`;
+    return `css/js reference "${rawRef}" must use ../css/ or ../js/ inside modules/ and guides/`;
   }
   if (!inFileModules && rawRef.startsWith('../')) {
     return `css/js reference "${rawRef}" must not use ../ at the repo root`;
