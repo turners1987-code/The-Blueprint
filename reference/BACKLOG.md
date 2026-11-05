@@ -19,7 +19,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 13. Reading List
 14. Sources page
 15. Journal fields
-16. Journal CSV export
+16. [x] Journal CSV export
 
 ## Needs Shane
 
@@ -58,3 +58,15 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 ### Item 12 — Rule Card (missing input)
 - Question: "Rule Card" is not defined in BLUEPRINT_DOC, DECISIONS, MODULE_STANDARD or anywhere in the repo. What is it (a printable one-page card, a downloadable PDF, an in-page tool), and which rules does it carry (the trade-plan checks, the 2R kill switch D29, the grade-before-size table)?
 - Recommended: a one-page printable card at tools/rule-card.html with the pre-trade yes/no checks, the grade-to-size table from Module 14 and the broker-level 2R kill switch, every line copied from existing module text; send confirmation or a spec.
+
+### Item 13 — Reading List (missing input)
+- Question: DECISIONS D2 says commodity basics go to a reading-list page, but no list of titles, sources or links exists in the repo. Which items go on it, and under which headings?
+- Recommended: send the list (title, author or publisher, link, one line on why) and I build reading-list.html from it only.
+
+### Item 14 — Sources page (missing input)
+- Question: "Sources" is not defined in BLUEPRINT_DOC, DECISIONS or the repo. Is it a public page listing where the site's statistics and concepts come from, and which sources may be named publicly?
+- Recommended: a public sources.html listing each source named in the modules, with the n and period beside every statistic from TradingStats_Source_of_Truth.txt; confirm and name any source that must stay unnamed.
+
+### Item 15 — Journal fields (missing input)
+- Question: BLUEPRINT_DOC says the journal has no fields for test number, session block, readiness score or sheet finish time (D42). Should all four be added as schema v6 fields, and what are their types and allowed values?
+- Recommended: add readiness_score (0, 1, 2 per D42), test_number (integer), session_block (text slug) and sheet_finished_time (ISO time), all nullable, required as keys, with v1-v5 records read as null.
