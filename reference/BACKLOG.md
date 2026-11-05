@@ -50,3 +50,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 ### Item 9 — Learning-layer pilot on Module 06 (missing input)
 - Question: "Learning layer" is not defined in BLUEPRINT_DOC, DECISIONS or the repo. What does it contain (questions, recall prompts, spaced review) and how is it shown on the module?
 - Recommended: end-of-module recall prompts (3 to 5 per section) stored locally, with progress in js/progress.js; send a one-paragraph spec to confirm.
+
+### Item 11 — Setting Up NT8 page (missing input)
+- Question: the source for this page is the NT8-Setup content map (`G:\My Drive\Blueprint Review\content-maps\`), which is not in the repo, and BLUEPRINT_DOC notes the nt8-onboarding crawl is still pending. May you copy the NT8-Setup map into `reference/` (or paste the nt8-onboarding crawl result) so the page can be built from it?
+- Recommended: copy the NT8-Setup content map into `reference/content-maps/NT8-Setup.md` and send the nt8-onboarding crawl result; the page then covers RTH and full-session templates ending 16:00 ET (D50) and the broker-level 2R kill switch (D29).
