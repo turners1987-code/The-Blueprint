@@ -3,7 +3,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, validateQuestions, scoreEdge, scoreJudge, validateDrill } from '../js/lesson-core.js';
+import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, validateQuestions, scoreEdge, scoreJudge, validateDrill, loadNotes, saveNotes, notesToMarkdown } from '../js/lesson-core.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 let failed = 0;
@@ -99,6 +99,18 @@ eq('drill: bad bar rejected', validateDrill({ rounds: [{ id: 'x', kind: 'edge', 
 eq('drill: no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(JSON.stringify(drill.rounds.map((r) => [r.prompt, r.why]))), false);
 eq('vendor notice kept', /TradingView/.test(readFileSync(path.join(ROOT, 'js/vendor/NOTICE-lightweight-charts.txt'), 'utf8')), true);
 eq('vendor license kept', /Apache License/.test(readFileSync(path.join(ROOT, 'js/vendor/LICENSE-lightweight-charts.txt'), 'utf8')), true);
+
+// 9e: notes
+const ns = mem();
+eq('fresh notes', loadNotes(ns, 'm'), {});
+saveNotes(ns, 'm', { a: 'one', b: '  ' });
+eq('notes round trip', loadNotes(ns, 'm'), { a: 'one', b: '  ' });
+ns.setItem('blueprint_notes_bad', '[1,2]');
+eq('bad notes shape', loadNotes(ns, 'bad'), {});
+eq('throwing notes store', saveNotes({ setItem() { throw new Error('x'); } }, 'm', {}), false);
+const segsN = [{ id: 'a', title: 'First' }, { id: 'b', title: 'Second' }, { id: 'c', title: 'Third' }];
+eq('markdown export', notesToMarkdown('Mod', segsN, { a: 'one', b: ' ', c: 'three' }), '# Mod: my notes\n\n## 1. First\n\none\n\n## 3. Third\n\nthree\n');
+eq('markdown empty', notesToMarkdown('Mod', segsN, {}), '# Mod: my notes\n\nNo notes yet.\n');
 
 if (failed) { console.error(`${failed} lesson check(s) failed`); process.exit(1); }
 console.log('lesson: all checks passed');

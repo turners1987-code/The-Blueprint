@@ -12,7 +12,7 @@
    Without JS, or if the config fails to load, the whole lesson shows.
    ============================================================ */
 
-import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck } from './lesson-core.js';
+import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, loadNotes, saveNotes, notesToMarkdown } from './lesson-core.js';
 import { Progress } from './progress.js';
 import { createDrill } from './level-drill.js';
 
@@ -82,6 +82,24 @@ async function init(body, lesson) {
   segs.forEach((seg, i) => {
     const d = seg.drill && createDrill(seg.drill);
     if (d) panels[i].insertBefore(d, panels[i].querySelector('.lesson-check'));
+  });
+
+  // Notes: one textarea per lesson segment, saved in this browser, exportable as .md.
+  const notes = loadNotes(store(), config.module);
+  const moduleTitle = (document.querySelector('h1')?.textContent || config.module).trim();
+  segs.forEach((seg, i) => {
+    const id = `notes-${seg.id}`;
+    const area = el('textarea', { id, class: 'lesson-notes-input', rows: '4', placeholder: 'Your notes for this segment. Saved in this browser only.' });
+    area.value = notes[seg.id] || '';
+    area.addEventListener('input', () => { notes[seg.id] = area.value; saveNotes(store(), config.module, notes); });
+    const dl = el('button', { type: 'button', class: 'btn btn--ghost btn--sm lesson-notes-export' }, 'Export all notes (.md)');
+    dl.addEventListener('click', () => {
+      const blob = new Blob([notesToMarkdown(moduleTitle, segs, notes)], { type: 'text/markdown' });
+      const a = el('a', { href: URL.createObjectURL(blob), download: `${config.module}-notes.md` });
+      document.body.append(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    });
+    panels[i].append(el('div', { class: 'lesson-notes' }, el('label', { for: id, class: 'lesson-notes-label' }, 'Your notes'), area, dl));
   });
 
   const saved = loadResume(store(), config.module, nav_segs.length);

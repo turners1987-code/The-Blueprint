@@ -60,3 +60,9 @@
 .lesson-drill-chart { height: 320px; margin: var(--space-md) 0; }
 .lesson-drill-controls { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 .lesson-drill-credit { margin: var(--space-md) 0 0; font-size: 0.8rem; color: var(--text-muted); }
+
+/* Notes */
+.lesson-notes { margin-top: var(--space-xl); }
+.lesson-notes-label { display: block; margin-bottom: var(--space-xs); color: var(--text-secondary); font-size: 0.9rem; }
+.lesson-notes-input { width: 100%; box-sizing: border-box; padding: var(--space-sm); background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); border-radius: var(--radius-md); font: inherit; resize: vertical; }
+.lesson-notes-export { margin-top: var(--space-sm); }

@@ -174,3 +174,32 @@ export function validateDrill(drill) {
   }
   return errs;
 }
+
+// ---- Per-segment notes (item 9e) -------------------------------------
+export function notesKey(moduleId) { return `blueprint_notes_${moduleId}`; }
+
+export function loadNotes(store, moduleId) {
+  try {
+    const raw = JSON.parse(store.getItem(notesKey(moduleId)) || '{}');
+    const out = {};
+    if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
+      for (const [k, v] of Object.entries(raw)) if (typeof v === 'string') out[k] = v;
+    }
+    return out;
+  } catch { return {}; }
+}
+
+export function saveNotes(store, moduleId, notes) {
+  try { store.setItem(notesKey(moduleId), JSON.stringify(notes)); return true; } catch { return false; }
+}
+
+// Markdown export: one heading per segment that has a note, in lesson order.
+export function notesToMarkdown(moduleTitle, segments, notes) {
+  const parts = [`# ${moduleTitle}: my notes`];
+  segments.forEach((s, i) => {
+    const text = (notes[s.id] || '').trim();
+    if (text) parts.push(`## ${i + 1}. ${s.title}\n\n${text}`);
+  });
+  if (parts.length === 1) parts.push('No notes yet.');
+  return parts.join('\n\n') + '\n';
+}
