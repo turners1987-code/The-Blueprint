@@ -17,6 +17,8 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 9c. [x] Learning-layer pilot, Module 06: segment checks (3 to 4 questions, pass at 3 of 4), module quiz, three progress states in js/progress.js
 9d. [x] Learning-layer pilot, Module 06: level-marking drill on Lightweight Charts v5.2.1 with synthetic bars (keep the NOTICE)
 9e. [x] Learning-layer pilot, Module 06: per-segment notes with .md export; narration audio with Kokoro-82M if it installs in this environment, otherwise leave the placeholder and note it under Needs Shane as a local run
+9f. Module 06 slide visuals (Shane's pilot review, Nov 6): replace the text-only slide cards with designed visuals in the Blueprint design system: inline SVG diagrams (zone with near and far edge, stop placed behind structure, the pre-marked list as a visual list, in-session levels forming, mid-range as empty space), small chart snippets drawn from the synthetic-bar generator with the level marked, and simple reveal animations timed to the cues. Keep slide count and cue order unchanged so audio timings still line up. No stock photos, no real market data.
+9g. Session-relative wording, all modules and the Module 06 narration (Shane's pilot review, Nov 6): find calendar-relative phrases ("yesterday", "today", "this morning", "last Thursday", "this week") that describe price or structure, and rewrite them so they read correctly whenever a student opens the page: "the prior session", "the session before", "in this composite session". Keep worked examples clearly framed as composite sessions. Edit the narration cue text in data/lessons/06-what-counts-as-a-level.json the same way. List every change in the build report.
 10. [x] Plan Board v1
 11. [x] Setting Up NT8 page
 12. [x] Rule Card
@@ -24,6 +26,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 14. Sources page
 15. Journal fields
 16. [x] Journal CSV export
+17. Unlock page help line (taken by recommendation Nov 6): under the code box on unlock.html add one line: the code is in your purchase email from Lemon Squeezy, or under My Orders at app.lemonsqueezy.com.
 
 ## Answers, approved by Shane Nov 5, 2026
 
@@ -85,5 +88,7 @@ Every item below is now buildable. Shane's approval here is the tier D sign-off 
 - As recommended: schema v6 adds readiness_score (0, 1 or 2 per D42), test_number (integer), session_block (text slug) and sheet_finished_time (ISO time), all nullable and present as keys; v1 to v5 records read as null. Carry the new fields into the CSV export.
 
 ## Needs Shane
+
+- Module 06 audio re-render (after 9f and 9g ship): British female voice (Kokoro bf_emma), narration says "pre marked" for every "pre-marked" so the voice pronounces it cleanly, and a low lo-fi beat mixed under the narration. Waiting on Shane to pick the music track. Runs locally.
 
 - Learning-layer rollout to the other 24 modules (free path 00-03 and 16-20 first, then the paid modules; 2 runs per module). Waiting on Shane to review the Module 06 pilot (items 9a to 9e). Do not start it.
