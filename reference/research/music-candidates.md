@@ -29,3 +29,20 @@ Plan: a pool of about 8 tracks, one per module in rotation (each module keeps on
 - https://pixabay.com/music/old-school-hip-hop-boom-bap-boom-bap-hip-hop-579376/ (AudioDollar)
 - https://pixabay.com/music/beats-hiphop-beat-old-school-boom-bap-421074/ (DELOSound)
 - https://pixabay.com/music/old-school-hip-hop-spray-171167/ (agerabeatz)
+
+## Background rap beats (Shane's pick of style, Nov 6) — preferred
+Search: https://pixabay.com/music/search/background%20rap%20beats/
+- https://pixabay.com/music/rap-rap-rap-beat-620112/ (vaitsez)
+- https://pixabay.com/music/rap-rap-rap-beat-611918/ (lNPLUSMUSIC)
+- https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/ (vaitsez)
+- https://pixabay.com/music/rap-rap-rap-beats-beat-music-497359/ (vaitsez)
+- https://pixabay.com/music/rap-rap-rap-beats-beat-483319/ (vaitsez)
+- https://pixabay.com/music/beats-rap-beat-577788/ (SoundSurfer)
+- https://pixabay.com/music/trap-rap-rap-beat-610255/ (GR0ZA)
+- https://pixabay.com/music/modern-classical-rap-604484/ (prettyjohn1)
+- https://pixabay.com/music/trap-rap-rap-beat-beats-507208/ (vaitsez)
+- https://pixabay.com/music/rap-rap-rap-beat-beats-music-482052/ (vaitsez)
+- https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/ (GR0ZA)
+- https://pixabay.com/music/beats-rap-rap-beat-beats-566670/ (APALONBeats)
+- https://pixabay.com/music/instrumental-rap-beat-548629/ (alex-morgan)
+- Short loops (66 s, 46 s, prettyjohn1): https://pixabay.com/music/beats-rap-rap-beat-beats-music-66sec-495236/ and https://pixabay.com/music/beats-rap-rap-beat-beats-music-46sec-495237/ — avoid; they repeat too often under a 1 to 3 minute segment.
