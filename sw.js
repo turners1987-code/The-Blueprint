@@ -7,7 +7,7 @@
    cache is deleted when the new worker activates.
    ============================================================ */
 
-const CACHE_VERSION = 'v61';
+const CACHE_VERSION = 'v62';
 const CACHE_NAME = `blueprint-${CACHE_VERSION}`;
 
 // App shell: paths are relative to this file (the site root).
