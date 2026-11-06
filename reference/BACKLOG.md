@@ -11,7 +11,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 5. [x] Account page and /api/reset-activations
 6. [x] BP Key Levels guide page and card
 7. [x] Cloudflare Pages Function gate for paid pages, then repo private
-8. Privacy policy payments section
+8. [x] Privacy policy payments section (draft in reference/drafts/privacy-payments.md, awaiting Shane approval)
 9a. [x] Learning-layer pilot, Module 06: shared lesson player (slides, timestamp-driven, captions, clickable transcript) and segment layout (sidebar, per-segment resume)
 9b. [x] Learning-layer pilot, Module 06: split the module into 3 to 6 segments; write the narration script and slide timings per segment
 9c. [x] Learning-layer pilot, Module 06: segment checks (3 to 4 questions, pass at 3 of 4), module quiz, three progress states in js/progress.js
