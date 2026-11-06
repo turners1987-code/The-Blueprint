@@ -88,6 +88,7 @@ const blocks = (list = [], ctx) => list.map((b) => {
 }).join('');
 
 const head = (d) => titleEl(d.title, d.subtitle);
+const axisLabel = (l) => text(l.x, 230, l.text, { size: 15, anchor: 'middle', fill: 'var(--cyan)' });
 const tail = (d, ctx) => blocks(d.blocks, ctx) + (d.credit ? credit(d.credit === true ? CREDIT : d.credit) : '');
 
 // ---- kinds -----------------------------------------------------------------
@@ -147,13 +148,15 @@ export const KINDS = {
       text(552, 240, d.aside.sub, { size: 13, cls: 'sv-m', anchor: 'middle' })) : '') + tail(d, ctx),
 
   // A boundary on a time axis: bands either side, or a bare axis with a marker.
+  // An axis label may carry its own "cue" so it reveals when it is spoken.
   timeline: (d, ctx) => head(d) + (d.bands ? rv(0, d.bands.map((b) =>
     rect(b.x, b.y, b.w, b.h, { fill: col(b.tone), op: 0.22, rx: 0 }) + text(b.x + b.w / 2, b.y + b.h / 2 + 5, b.label, { size: 14, anchor: 'middle' })).join('')) : '') +
     (d.boundary ? rv(delay(ctx, d.boundary.cue ?? 0), line(d.boundary.x, d.boundary.y1, d.boundary.x, d.boundary.y2, 'var(--text-primary)', { sw: 2.5 }) +
       text(d.boundary.x, d.boundary.labelY, d.boundary.label, { size: d.boundary.labelSize ?? 16, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) : '') +
     (d.axis ? rv(0, line(40, 170, 600, 170, 'var(--text-muted)', { sw: 3 }) + line(d.axis.x, 140, d.axis.x, 200, 'var(--gold)', { sw: 4 }) +
       text(d.axis.x, 128, d.axis.time, { size: 22, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' }) +
-      d.axis.labels.map((l) => text(l.x, 230, l.text, { size: 15, anchor: 'middle', fill: 'var(--cyan)' })).join('')) : '') + tail(d, ctx),
+      d.axis.labels.filter((l) => l.cue === undefined).map(axisLabel).join('')) +
+      d.axis.labels.filter((l) => l.cue !== undefined).map((l) => rv(delay(ctx, l.cue), axisLabel(l))).join('') : '') + tail(d, ctx),
 
   // Two columns: what each is, then what it is for. A line may carry its own
   // "cue" so it reveals when it is spoken, after its column has appeared.
