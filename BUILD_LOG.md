@@ -62,3 +62,5 @@ START 2026-11-06T18:09:25Z
 END 2026-11-06T18:09:25Z | none | no eligible item (all unchecked work is under Needs Shane) | no commit
 START 2026-11-06T19:09:03Z
 END 2026-11-06T19:19:15Z | 19 Lesson slide kit | tier C | dec63ba
+
+- 2026-11-06 15:02: redeploy to load the rotated ADMIN_TOKEN secret (no code change)
