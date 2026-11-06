@@ -26,7 +26,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 14. [x] Sources page
 15. [x] Journal fields
 16. [x] Journal CSV export
-17. Unlock page help line (taken by recommendation Nov 6): under the code box on unlock.html add one line: the code is in your purchase email from Lemon Squeezy, or under My Orders at app.lemonsqueezy.com.
+17. [x] Unlock page help line (taken by recommendation Nov 6): under the code box on unlock.html add one line: the code is in your purchase email from Lemon Squeezy, or under My Orders at app.lemonsqueezy.com.
 
 18. Email login with a 6-digit code (approved by Shane Nov 6; tier D sign-off given; this task may edit functions/ but not wrangler.toml or any secret). Goal: a buyer types their email, gets a 6-digit code, enters it, and stays logged in on that device. The access code stays as a backup.
    a. Email index: in functions/api/ls-webhook.ts, on every event that writes a customer record, also write `email:<lowercased trimmed user_email>` -> customer_id. Add a one-off admin route POST /api/admin/backfill-emails (Authorization: Bearer ADMIN_TOKEN) that walks `cust:*` and writes the missing indexes.
