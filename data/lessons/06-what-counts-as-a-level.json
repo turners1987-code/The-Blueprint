@@ -31,7 +31,7 @@
         },
         {
           "start": 33,
-          "text": "Take yesterday's regular-session high, 24,186.50. Six five-minute bars traded up into it and turned, and nothing traded above it. This is an invented price on a composite chart."
+          "text": "Take the prior session's regular-session high, 24,186.50. Six five-minute bars traded up into it and turned, and nothing traded above it. This is an invented price on a composite chart."
         },
         {
           "start": 47.9,
@@ -226,7 +226,7 @@
       "cues": [
         {
           "start": 0,
-          "text": "The pre-marked list is fixed, and it is built before the session from finished data."
+          "text": "The list you mark before the session is fixed, and it is built from finished data."
         },
         {
           "start": 5.5,
@@ -246,7 +246,7 @@
         },
         {
           "start": 59.3,
-          "text": "The rule: only these slugs go on the pre-marked list, each with its zone, far edge and session scope."
+          "text": "The rule: only these slugs go on the list you mark before the session, each with its zone, far edge and session scope."
         },
         {
           "start": 66.2,
@@ -382,7 +382,7 @@
         },
         {
           "start": 107.2,
-          "text": "The rule: the pre-marked list is closed at 09:25, and the in-session list adds only the types named on your plan. Nothing else becomes a level during the session."
+          "text": "The rule: the list you mark before the session is closed at 09:25, and the in-session list adds only the types named on your plan. Nothing else becomes a level during the session."
         },
         {
           "start": 118.8,
