@@ -69,6 +69,12 @@ const MIGRATIONS = {
   },
 };
 
+// Per-segment states for lessons with checks: not-started, attempted, passed.
+// Kept under its own key, so the module progress schema above is unchanged.
+// Passed is never lost: a later failed try leaves a passed segment passed.
+const SEGMENT_KEY = 'blueprint_segments';
+const SEGMENT_STATES = ['not-started', 'attempted', 'passed'];
+
 let MODULES = [];
 
 // Resolve data/modules.json relative to this module so it works
@@ -274,8 +280,36 @@ export const Progress = {
     });
   },
 
+  // Segment states: { "<moduleId>": { "<segmentId>": "attempted" | "passed" } }.
+  // The module quiz uses the segment id "quiz".
+  loadSegments() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(SEGMENT_KEY));
+      if (raw && typeof raw === 'object' && !Array.isArray(raw)) return raw;
+    } catch { /* fall through */ }
+    return {};
+  },
+
+  segmentState(moduleId, segmentId) {
+    const state = (this.loadSegments()[moduleId] || {})[segmentId];
+    return SEGMENT_STATES.includes(state) ? state : 'not-started';
+  },
+
+  // Record one try. A pass is permanent; a fail only moves not-started to attempted.
+  recordSegmentTry(moduleId, segmentId, passed) {
+    const all = this.loadSegments();
+    const mine = all[moduleId] && typeof all[moduleId] === 'object' ? all[moduleId] : {};
+    const was = this.segmentState(moduleId, segmentId);
+    const next = passed || was === 'passed' ? 'passed' : 'attempted';
+    mine[segmentId] = next;
+    all[moduleId] = mine;
+    try { localStorage.setItem(SEGMENT_KEY, JSON.stringify(all)); } catch { /* storage unavailable */ }
+    return next;
+  },
+
   // Reset all progress (for testing)
   reset() {
+    localStorage.removeItem(SEGMENT_KEY);
     localStorage.removeItem(STORAGE_KEY);
     this.updateUI();
   }

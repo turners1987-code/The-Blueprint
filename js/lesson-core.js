@@ -12,8 +12,10 @@
        "duration": 120,                      // seconds, optional
        "audio": "path.mp3" | null,           // null = placeholder, timer clock
        "slides": [{ "id": "a", "start": 0, "title": "…", "svg": "<svg…>" }],
-       "cues":   [{ "start": 0, "text": "caption line" }]
-     }]
+       "cues":   [{ "start": 0, "text": "caption line" }],
+       "check":  [{ "q": "…", "options": ["…"], "answer": 1, "why": "…" }]  // 3 to 4, pass at 75%
+     }],
+     "quiz": { "title": "Module quiz", "questions": [ …same shape, 4 or more… ] }
    }
    Slides and cues are ordered by `start` (seconds). Both are
    optional: a segment without them renders as plain lesson text.
@@ -55,6 +57,7 @@ export function validateConfig(config) {
         claimed.add(h);
       }
     }
+    if (seg.check !== undefined) errs.push(...validateQuestions(`segment ${seg.id} check`, seg.check, 3, 4));
     for (const key of ['slides', 'cues']) {
       const list = seg[key] || [];
       for (let i = 0; i < list.length; i++) {
@@ -66,7 +69,36 @@ export function validateConfig(config) {
       }
     }
   }
+  if (config.quiz !== undefined) errs.push(...validateQuestions('quiz', config.quiz.questions, 4, 20));
   return errs;
+}
+
+// Checks: a set of multiple-choice questions passed at 75% (3 of 4).
+export const PASS_RATIO = 0.75;
+
+export function validateQuestions(label, list, min, max) {
+  const errs = [];
+  if (!Array.isArray(list) || list.length < min || list.length > max) {
+    return [`${label}: needs ${min} to ${max} questions`];
+  }
+  list.forEach((q, i) => {
+    const at = `${label} q${i + 1}`;
+    if (!q || typeof q.q !== 'string' || !q.q) errs.push(`${at}: q missing`);
+    else {
+      if (!Array.isArray(q.options) || q.options.length < 2 || q.options.some((o) => typeof o !== 'string' || !o)) errs.push(`${at}: needs 2+ text options`);
+      else if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) errs.push(`${at}: answer out of range`);
+      if (typeof q.why !== 'string' || !q.why) errs.push(`${at}: why missing`);
+    }
+  });
+  return errs;
+}
+
+// picks[i] is the chosen option index (or null/undefined if unanswered).
+export function scoreCheck(questions, picks) {
+  const total = questions.length;
+  const correct = questions.reduce((n, q, i) => n + (picks[i] === q.answer ? 1 : 0), 0);
+  const need = Math.ceil(total * PASS_RATIO);
+  return { correct, total, need, passed: total > 0 && correct >= need };
 }
 
 // Map each h2 text to a segment index. Headings that no segment claims

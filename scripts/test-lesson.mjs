@@ -3,7 +3,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume } from '../js/lesson-core.js';
+import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, validateQuestions } from '../js/lesson-core.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 let failed = 0;
@@ -63,6 +63,24 @@ for (const seg of cfg.segments) {
 const narration = cfg.segments.flatMap((x) => x.cues.map((c) => c.text)).join(' ');
 eq('no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(narration), false);
 eq('stat carries n', /82\.4%[\s\S]{0,160}n=994/.test(narration), true);
+
+// 9c: checks and quiz.
+const mkq = (a) => ({ q: 'x', options: ['a', 'b', 'c'], answer: a, why: 'y' });
+const four = [mkq(0), mkq(1), mkq(2), mkq(0)];
+eq('3 of 4 passes', scoreCheck(four, [0, 1, 2, 1]), { correct: 3, total: 4, need: 3, passed: true });
+eq('2 of 4 fails', scoreCheck(four, [0, 1, 0, 1]).passed, false);
+eq('unanswered fails', scoreCheck(four, [null, null, null, null]).correct, 0);
+eq('8-question quiz needs 6', scoreCheck(Array(8).fill(mkq(0)), Array(8).fill(0)).need, 6);
+eq('bad answer index', validateQuestions('t', [mkq(5), mkq(0), mkq(0)], 3, 4).length, 1);
+eq('too few questions', validateQuestions('t', [mkq(0)], 3, 4).length, 1);
+for (const seg of cfg.segments) {
+  eq(`${seg.id} has a 3-4 question check`, validateQuestions(seg.id, seg.check, 3, 4), []);
+}
+eq('module quiz valid', validateQuestions('quiz', cfg.quiz?.questions, 4, 20), []);
+const qtext = JSON.stringify([cfg.segments.map((x) => x.check), cfg.quiz]);
+eq('checks: no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(qtext), false);
+eq('checks: stat carries n', /82\.4%[\s\S]{0,60}n=994/.test(qtext), true);
+eq('checks: answers spread', new Set(cfg.segments.flatMap((x) => x.check.map((c) => c.answer))).size > 1, true);
 
 if (failed) { console.error(`${failed} lesson check(s) failed`); process.exit(1); }
 console.log('lesson: all checks passed');

@@ -12,7 +12,8 @@
    Without JS, or if the config fails to load, the whole lesson shows.
    ============================================================ */
 
-import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume } from './lesson-core.js';
+import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck } from './lesson-core.js';
+import { Progress } from './progress.js';
 
 const body = document.querySelector('.module-body[data-lesson]');
 const lesson = document.querySelector('.lesson-content');
@@ -49,21 +50,47 @@ async function init(body, lesson) {
     if (hi >= 0) owner = owners[hi];
     panels[owner].append(child);
   }
+  // The module quiz is one more panel and sidebar entry after the segments.
+  const quizSeg = config.quiz ? { id: 'quiz', title: config.quiz.title || 'Module quiz' } : null;
+  const nav_segs = quizSeg ? [...segs, quizSeg] : segs;
+  if (quizSeg) panels.push(el('section', { class: 'lesson-segment', 'data-segment': 'quiz', hidden: '' }));
   lesson.replaceChildren(...panels);
 
-  const saved = loadResume(store(), config.module, segs.length);
+  const stateLabel = { 'not-started': '', attempted: 'Attempted', passed: 'Passed' };
+  const checkSets = nav_segs.map((s, i) => (i < segs.length ? s.check : config.quiz?.questions));
+  const buttons = [];
+  function paintStates() {
+    nav_segs.forEach((s, i) => {
+      if (!checkSets[i]) return;
+      const st = Progress.segmentState(config.module, s.id);
+      const mark = buttons[i].querySelector('.lesson-state');
+      mark.textContent = stateLabel[st];
+      buttons[i].dataset.state = st;
+    });
+  }
+  checkSets.forEach((qs, i) => {
+    if (!qs) return;
+    const heading = i < segs.length ? 'Check: three of four to pass' : 'Module quiz: pass at 75%';
+    panels[i].append(createCheck(qs, heading, (passed) => {
+      Progress.recordSegmentTry(config.module, nav_segs[i].id, passed);
+      paintStates();
+    }));
+  });
+
+  const saved = loadResume(store(), config.module, nav_segs.length);
   const state = { segment: saved.segment, positions: saved.positions };
   const persist = () => saveResume(store(), config.module, state);
 
   // Sidebar
   const nav = el('nav', { class: 'lesson-sidebar', 'aria-label': 'Lesson segments' });
   const list = el('ol', { class: 'lesson-sidebar-list' });
-  const buttons = segs.map((s, i) => {
-    const b = el('button', { type: 'button', class: 'lesson-sidebar-btn' }, `${i + 1}. ${s.title}`);
+  nav_segs.forEach((s, i) => {
+    const b = el('button', { type: 'button', class: 'lesson-sidebar-btn' }, s === quizSeg ? s.title : `${i + 1}. ${s.title}`, el('span', { class: 'lesson-state' }));
     b.addEventListener('click', () => show(i));
     list.append(el('li', {}, b));
-    return b;
+    buttons.push(b);
   });
+  paintStates();
   nav.append(el('p', { class: 'module-toc-label' }, 'Segments'), list);
   const toc = document.querySelector('[data-module-toc]');
   if (toc) toc.hidden = true; // the sidebar replaces the section index
@@ -76,7 +103,7 @@ async function init(body, lesson) {
     player?.destroy();
     player = null;
     const seg = segs[i];
-    if (!(seg.slides?.length || seg.cues?.length)) return;
+    if (!seg || !(seg.slides?.length || seg.cues?.length)) return;
     player = createPlayer(seg, state.positions[seg.id] || 0, (t) => {
       state.positions[seg.id] = t;
       persist();
@@ -104,6 +131,55 @@ async function init(body, lesson) {
 
   show(saved.segment);
   openHash();
+}
+
+function createCheck(questions, heading, onResult) {
+  const root = el('div', { class: 'lesson-check' });
+  const uid = `chk${Math.random().toString(36).slice(2, 8)}`;
+
+  function renderForm() {
+    const form = el('form', { class: 'lesson-check-form' }, el('h3', { class: 'lesson-check-title' }, heading));
+    questions.forEach((q, qi) => {
+      const fs = el('fieldset', { class: 'lesson-q' }, el('legend', {}, `${qi + 1}. ${q.q}`));
+      q.options.forEach((o, oi) => {
+        const input = el('input', { type: 'radio', name: `${uid}-${qi}`, value: String(oi) });
+        fs.append(el('label', { class: 'lesson-opt' }, input, ` ${o}`));
+      });
+      form.append(fs);
+    });
+    const msg = el('p', { class: 'lesson-check-msg', role: 'status' });
+    form.append(el('button', { type: 'submit', class: 'btn btn--primary btn--sm' }, 'Check answers'), msg);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const picks = questions.map((_, qi) => {
+        const c = form.querySelector(`input[name="${uid}-${qi}"]:checked`);
+        return c ? Number(c.value) : null;
+      });
+      if (picks.some((p) => p === null)) { msg.textContent = 'Answer every question first.'; return; }
+      renderResult(picks);
+    });
+    root.replaceChildren(form);
+  }
+
+  function renderResult(picks) {
+    const r = scoreCheck(questions, picks);
+    onResult(r.passed);
+    const box = el('div', { class: 'lesson-check-result', role: 'status' },
+      el('h3', { class: 'lesson-check-title' }, `${r.correct} of ${r.total}: ${r.passed ? 'passed' : `not passed (${r.need} needed)`}`));
+    questions.forEach((q, qi) => {
+      const right = picks[qi] === q.answer;
+      box.append(el('p', { class: right ? 'lesson-right' : 'lesson-wrong' },
+        el('strong', {}, `${qi + 1}. ${right ? 'Correct' : 'Not quite'}. `),
+        right ? '' : `Answer: ${q.options[q.answer]}. `, q.why));
+    });
+    const again = el('button', { type: 'button', class: 'btn btn--ghost btn--sm' }, 'Try again');
+    again.addEventListener('click', renderForm);
+    box.append(again);
+    root.replaceChildren(box);
+  }
+
+  renderForm();
+  return root;
 }
 
 function createPlayer(seg, startAt, onPosition) {

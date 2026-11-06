@@ -62,7 +62,53 @@
           "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"One sentence\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">The one-sentence rule</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">The stop goes behind [price]</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">because [what happened there].</text></svg>"
         }
       ],
-      "duration": 109
+      "duration": 109,
+      "check": [
+        {
+          "q": "Under the stop-structure test, what makes a price a level?",
+          "options": [
+            "Price has reacted there more than once",
+            "You can name something that already happened there and a price beyond it at which the reason for the trade is gone",
+            "A widely watched indicator sits there",
+            "It is a round number"
+          ],
+          "answer": 1,
+          "why": "The test asks whether the structure gives your stop a job, not whether price has reacted. Price reacts everywhere in hindsight."
+        },
+        {
+          "q": "A moving average sits at 24,150. Why does it fail the test?",
+          "options": [
+            "It moves more slowly than price",
+            "Nothing happened at that price, so there is no price beyond it at which you are wrong and no place for a stop",
+            "Price has never touched it",
+            "Moving averages are only used on daily charts"
+          ],
+          "answer": 1,
+          "why": "The line is there because of an arithmetic choice, and in ten minutes it will be somewhere else."
+        },
+        {
+          "q": "What is the one sentence a price must fill in to count as a level?",
+          "options": [
+            "The entry goes at [price] because [indicator]",
+            "The target is [price] because [probability]",
+            "The stop goes behind [price] because [what happened there]",
+            "The size is [number] because [grade]"
+          ],
+          "answer": 2,
+          "why": "If you cannot fill both blanks from the chart, it isn't a level."
+        },
+        {
+          "q": "A row on your level list has a blank in its stop sentence. What happens to it?",
+          "options": [
+            "It stays and you fill it in during the session",
+            "It is deleted before 09:25",
+            "It moves to the target column",
+            "It is kept at half size"
+          ],
+          "answer": 1,
+          "why": "Every row carries the stop sentence, written before the session."
+        }
+      ]
     },
     {
       "id": "s2",
@@ -120,7 +166,53 @@
           "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Example zone\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Invented example: prior-day high</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Near edge 24,180.25</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Far edge 24,186.50</text></svg>"
         }
       ],
-      "duration": 103
+      "duration": 103,
+      "check": [
+        {
+          "q": "For a level above current price, which edge is the far edge?",
+          "options": [
+            "The bottom of the zone",
+            "The middle of the zone",
+            "The top of the zone",
+            "The prior bar's close"
+          ],
+          "answer": 2,
+          "why": "The far edge is on the far side from where price arrives, and the stop goes behind it."
+        },
+        {
+          "q": "Price trades inside the zone 24,180.25 to 24,186.50 and never goes beyond 24,186.50. What is that?",
+          "options": [
+            "The level failing",
+            "Price testing the level",
+            "A new level forming",
+            "A mid-range move"
+          ],
+          "answer": 1,
+          "why": "Trading inside a zone is a test. Acceptance through the whole zone is what changes the read."
+        },
+        {
+          "q": "A zone is redrawn wider after price traded through it, so the trade \"is still fine\". What does that reveal?",
+          "options": [
+            "The zone was built too tightly at first",
+            "The zone is being drawn to fit the trade you are in",
+            "The far edge was on the wrong side",
+            "Nothing; zones should follow price"
+          ],
+          "answer": 1,
+          "why": "The fix is one construction line per slug, with edges written by 09:25 and never moved during the session."
+        },
+        {
+          "q": "When are zone edges written, and can they move during the session?",
+          "options": [
+            "At the open, and they follow price",
+            "By 09:25, and they are never moved during the session",
+            "After the first trigger, and they can be widened",
+            "At the close, and they carry over unchanged"
+          ],
+          "answer": 1,
+          "why": "Edges are written before the session and left alone."
+        }
+      ]
     },
     {
       "id": "s3",
@@ -188,7 +280,53 @@
           "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"In-session list\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">In-session list: fixed</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Counts only once finished forming</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Type named on the plan before 09:25</text></svg>"
         }
       ],
-      "duration": 119
+      "duration": 119,
+      "check": [
+        {
+          "q": "A high prints at 16:40 ET. Which range does it belong to?",
+          "options": [
+            "The prior day's range",
+            "The overnight range",
+            "The prior week's range",
+            "It belongs to neither"
+          ],
+          "answer": 1,
+          "why": "It is an ETH bar, so it is the on-high, not the pd-high, however close to the close it was."
+        },
+        {
+          "q": "What is the session scope of the prior-week levels?",
+          "options": [
+            "RTH Monday to Friday",
+            "ETH only",
+            "The full-session week, Sunday 18:00 to Friday 16:00 ET",
+            "The last five calendar days"
+          ],
+          "answer": 2,
+          "why": "Each slug is built only from the bars its scope names."
+        },
+        {
+          "q": "Your plan's opening-range window runs to 09:45. At 09:38 can you use or-high as a level?",
+          "options": [
+            "Yes, it is the high so far",
+            "Yes, if volume is high",
+            "No, it counts only once the window has closed",
+            "Yes, but with a smaller size"
+          ],
+          "answer": 2,
+          "why": "Before it finishes forming it is a moving price, and the thing behind the stop hasn't finished happening."
+        },
+        {
+          "q": "A developing VPOC counts as a level at which price?",
+          "options": [
+            "The price it showed at 09:25",
+            "The price it shows when your trigger fires, which you record",
+            "The prior session's VPOC",
+            "The end-of-day price"
+          ],
+          "answer": 1,
+          "why": "It moves as volume builds, so you use and record the price at the moment the trigger fires."
+        }
+      ]
     },
     {
       "id": "s4",
@@ -265,7 +403,53 @@
           "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"List closes\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">The list closes at 09:25</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Nothing else becomes a level</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Count lines added afterwards</text></svg>"
         }
       ],
-      "duration": 144
+      "duration": 144,
+      "check": [
+        {
+          "q": "Why is VWAP not a location in this framework?",
+          "options": [
+            "It is too complex to calculate",
+            "It is an average that moves with price, so it never marks a place where something happened",
+            "It only works on futures",
+            "It is only valid after 10:00"
+          ],
+          "answer": 1,
+          "why": "The same reasoning covers moving averages, and different reasons cover pivots, Fibonacci lines, round numbers, fair value gaps and trendlines."
+        },
+        {
+          "q": "Price is at a spot outside every zone on your list. How is a trade there tagged?",
+          "options": [
+            "Mid-range",
+            "Pre-marked",
+            "In-session",
+            "Target"
+          ],
+          "answer": 0,
+          "why": "A trade there is tagged mid-range, and it fails the first check of the grade rubric: the location is a named level."
+        },
+        {
+          "q": "The pd-vpoc zone is a location in one trade and a target in another. What changed?",
+          "options": [
+            "The level moved",
+            "The level's job in the trade",
+            "The session scope",
+            "Nothing; the rules are inconsistent"
+          ],
+          "answer": 1,
+          "why": "The level didn't change. A location is where you enter with the stop behind the far edge; a target is where the trade is aimed."
+        },
+        {
+          "q": "In TradingStats' NQ data, the prior VPOC was touched in 82.4% of sessions that opened in value (n=994). What does that tell you?",
+          "options": [
+            "Where to aim, and never a reason to enter",
+            "That a long from mid-range toward it is a good entry",
+            "Which way price goes first",
+            "When the touch will come"
+          ],
+          "answer": 0,
+          "why": "It is a touch rate measured from the open. It says nothing about direction, timing or where an entry would sit."
+        }
+      ]
     },
     {
       "id": "s5",
@@ -341,7 +525,53 @@
           "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Chart score\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Does your chart pass?</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">7 of 7: ready to plan from</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Under 5: no trade at a level</text></svg>"
         }
       ],
-      "duration": 141
+      "duration": 141,
+      "check": [
+        {
+          "q": "In the worked case, a print at 24,190.00 came at 16:12 ET. What does the case do with it?",
+          "options": [
+            "It becomes the pd-high",
+            "It becomes the on-high, and the pd-high stays 24,186.50",
+            "It is ignored",
+            "It becomes a target"
+          ],
+          "answer": 1,
+          "why": "The print came after 16:00 ET, so it belongs to the overnight range. A template running to 17:00 ET would have misplaced it."
+        },
+        {
+          "q": "You score 5 or 6 on the \"Does Your Chart Pass?\" check. What do you do?",
+          "options": [
+            "Trade as normal",
+            "Write the missing lines before 09:25; until then the rows they affect carry no branch",
+            "Take no trades at a level that session",
+            "Remove the lowest-scoring line and re-score"
+          ],
+          "answer": 1,
+          "why": "7 of 7 means ready to plan from. Under 5 means no trade at a level that session."
+        },
+        {
+          "q": "You score under 5 on the chart check. What follows?",
+          "options": [
+            "No trade at a level that session, and you mark the chart again tomorrow from blank",
+            "Half size at the strongest level",
+            "Trade only the targets",
+            "Skip the check next time"
+          ],
+          "answer": 0,
+          "why": "The score sets whether the chart can be planned from at all."
+        },
+        {
+          "q": "A row fails the zone line or the stop sentence line, but the total score is 7 of 7 on the rest. What happens to that row?",
+          "options": [
+            "It stays, because the total is high",
+            "It is struck for the day, whatever the total",
+            "It moves to the target column",
+            "It is halved in size"
+          ],
+          "answer": 1,
+          "why": "A row that fails line 2 or line 3 has no stop placement, so it is struck."
+        }
+      ]
     },
     {
       "id": "s6",
@@ -393,7 +623,146 @@
           "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Summary\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">A level is a zone of finished structure</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">with a far edge a stop can sit behind</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Everything else is mid-range</text></svg>"
         }
       ],
-      "duration": 69
+      "duration": 69,
+      "check": [
+        {
+          "q": "What is the whole assignment in Before Your Next Session?",
+          "options": [
+            "Mark every level on the chart again",
+            "Write one level as one row: slug, near edge, far edge, side of price, session scope and the stop sentence",
+            "Read the next module",
+            "Backtest one level"
+          ],
+          "answer": 1,
+          "why": "One row. That's the whole assignment."
+        },
+        {
+          "q": "What goes in the journal's location field on every trade?",
+          "options": [
+            "The target price",
+            "The slug, or mid-range, together with the test number",
+            "The grade only",
+            "The stop distance"
+          ],
+          "answer": 1,
+          "why": "The test number records whether this was the first touch of the zone that session, the second, and so on."
+        },
+        {
+          "q": "Which module turns the far edge into a stop and the stop into a size?",
+          "options": [
+            "Module 07",
+            "Module 13",
+            "Module 14",
+            "Module 17"
+          ],
+          "answer": 2,
+          "why": "Module 14, Trade Construction."
+        },
+        {
+          "q": "Which module sets two alerts on each zone, one at each edge?",
+          "options": [
+            "Module 16",
+            "Module 17",
+            "Module 18",
+            "Module 10"
+          ],
+          "answer": 1,
+          "why": "Module 17, The Session And The Close."
+        }
+      ]
     }
-  ]
+  ],
+  "quiz": {
+    "title": "Module quiz",
+    "questions": [
+      {
+        "q": "A line appears at 10:20 that was not on your plan. A trade at it is tagged how?",
+        "options": [
+          "Pre-marked",
+          "In-session",
+          "Mid-range",
+          "Target"
+        ],
+        "answer": 2,
+        "why": "The pre-marked list closes at 09:25, and the in-session list adds only the types named on the plan."
+      },
+      {
+        "q": "The pd-high zone and the on-high zone overlap. How are they written?",
+        "options": [
+          "As two separate rows",
+          "As one row naming every slug in it, with the far edge at the outer edge",
+          "Only the pd-high is kept",
+          "Only the on-high is kept"
+        ],
+        "answer": 1,
+        "why": "If price is accepted above one but not the other, part of the structure is still standing."
+      },
+      {
+        "q": "Which type of level is mostly a target rather than a location?",
+        "options": [
+          "or-high",
+          "stacked-imbalance",
+          "unfinished-business",
+          "pd-low"
+        ],
+        "answer": 2,
+        "why": "A poor high is where a move already underway can reach, not a reason to start one."
+      },
+      {
+        "q": "On this page, what is a stacked imbalance?",
+        "options": [
+          "A trigger",
+          "A location only, never a trigger",
+          "A target only",
+          "A level that always holds"
+        ],
+        "answer": 1,
+        "why": "Module 07 defines it and its settings."
+      },
+      {
+        "q": "Which slugs have ETH, 16:00 ET to 09:30 ET, as their session scope?",
+        "options": [
+          "pd-high and pd-low",
+          "on-high, on-low and on-poc",
+          "prior-week-high and prior-week-low",
+          "or-high and or-low"
+        ],
+        "answer": 1,
+        "why": "Overnight levels are built from ETH bars."
+      },
+      {
+        "q": "A trade's stop was chosen after the entry as a number of points that \"felt right\". What does that reveal?",
+        "options": [
+          "The stop was too tight",
+          "You chose where you wanted to trade, then looked for a reason, and the stop covered the gap",
+          "The level was a target",
+          "The zone was too wide"
+        ],
+        "answer": 1,
+        "why": "The fix is a stop sentence on every row, written before the session."
+      },
+      {
+        "q": "In the chain idea → setup → trigger → construction, where does the level sit?",
+        "options": [
+          "After the trigger",
+          "Inside the setup's location, and it is where construction starts",
+          "Outside the chain",
+          "After the entry"
+        ],
+        "answer": 1,
+        "why": "Get the level wrong and nothing after it can be built."
+      },
+      {
+        "q": "The only level supporting an entry is in your target column. What do you do?",
+        "options": [
+          "Enter at half size",
+          "Enter with a wider stop",
+          "Don't take the entry, because it has no location",
+          "Move the level to the location column"
+        ],
+        "answer": 2,
+        "why": "A target-column level is never the reason for an entry."
+      }
+    ]
+  }
 }

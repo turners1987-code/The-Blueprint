@@ -177,6 +177,25 @@ test('a v2 16-what-i-got-wrong chains through v3 to 24-how-ideas-fail-a-test', (
   assert.deepEqual(Progress.load().completed, ['24-how-ideas-fail-a-test']);
 });
 
+test('segment states: not started, attempted, passed; a pass is never lost', () => {
+  assert.equal(Progress.segmentState('m', 's1'), 'not-started');
+  assert.equal(Progress.recordSegmentTry('m', 's1', false), 'attempted');
+  assert.equal(Progress.segmentState('m', 's1'), 'attempted');
+  assert.equal(Progress.recordSegmentTry('m', 's1', true), 'passed');
+  assert.equal(Progress.recordSegmentTry('m', 's1', false), 'passed');
+  assert.equal(Progress.segmentState('m', 's2'), 'not-started');
+  assert.equal(Progress.segmentState('other', 's1'), 'not-started');
+});
+
+test('segment states do not touch module progress, and a corrupt store reads as not started', () => {
+  Progress.markComplete('00-welcome');
+  Progress.recordSegmentTry('m', 's1', true);
+  assert.deepEqual(Progress.load().completed, ['00-welcome']);
+  store.set('blueprint_segments', '{not json');
+  assert.equal(Progress.segmentState('m', 's1'), 'not-started');
+  assert.equal(Progress.recordSegmentTry('m', 's1', false), 'attempted');
+});
+
 console.log('─'.repeat(40));
 console.log(`${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
