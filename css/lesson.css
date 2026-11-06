@@ -26,6 +26,9 @@
 .lesson-player { margin-bottom: var(--space-xl); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm, 6px); padding: var(--space-md); }
 .lesson-controls { display: flex; align-items: center; gap: var(--space-md); }
 .lesson-controls input[type="range"] { flex: 1; min-width: 0; accent-color: var(--cyan); }
+.lesson-restart { display: inline-flex; align-items: center; padding-inline: var(--space-sm); }
+.lesson-next { display: block; margin: var(--space-md) 0 0 auto; }
+.lesson-next[hidden] { display: none; }
 .lesson-music { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-top: var(--space-sm); }
 .lesson-music[hidden] { display: none; }
 .lesson-music-icon { display: inline-flex; color: var(--cyan); }

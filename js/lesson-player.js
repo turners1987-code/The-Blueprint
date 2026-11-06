@@ -129,10 +129,12 @@ async function init(body, lesson) {
     player = null;
     const seg = segs[i];
     if (!seg || !(seg.slides?.length || seg.cues?.length)) return;
+    const nextSeg = nav_segs[i + 1];
+    const onNext = nextSeg ? { title: nextSeg.title, go: () => { show(i + 1); panels[i + 1]?.scrollIntoView({ block: 'start', behavior: 'smooth' }); } } : null;
     player = createPlayer(seg, state.positions[seg.id] || 0, (t) => {
       state.positions[seg.id] = t;
       persist();
-    });
+    }, onNext);
     panels[i].prepend(player.root);
   }
 
@@ -207,7 +209,7 @@ function createCheck(questions, heading, onResult) {
   return root;
 }
 
-function createPlayer(seg, startAt, onPosition) {
+function createPlayer(seg, startAt, onPosition, onNext = null) {
   const slides = seg.slides || [];
   const cues = seg.cues || [];
   const duration = seg.duration || Math.max(0, ...slides.map((s) => s.start), ...cues.map((c) => c.start)) + 5;
@@ -215,6 +217,11 @@ function createPlayer(seg, startAt, onPosition) {
   const stage = el('div', { class: 'lesson-stage', role: 'img', 'aria-label': 'Slide' });
   const caption = el('p', { class: 'lesson-caption', 'aria-live': 'off' });
   const playBtn = el('button', { type: 'button', class: 'btn btn--ghost btn--sm' }, 'Play');
+  const RESTART = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>';
+  const restartBtn = el('button', { type: 'button', class: 'btn btn--ghost btn--sm lesson-restart', 'aria-label': 'Back to the start', title: 'Back to the start' });
+  restartBtn.innerHTML = RESTART;
+  const nextBtn = el('button', { type: 'button', class: 'btn btn--primary btn--sm lesson-next', hidden: '' }, onNext ? `Next: ${onNext.title} \u2192` : '');
+  if (onNext) nextBtn.addEventListener('click', () => onNext.go());
   const range = el('input', { type: 'range', min: '0', max: String(duration), step: '1', value: '0', 'aria-label': 'Position' });
   const clock = el('span', { class: 'lesson-clock' }, '0:00');
   const transcript = el('ol', { class: 'lesson-transcript' });
@@ -240,7 +247,7 @@ function createPlayer(seg, startAt, onPosition) {
   musicBox.hidden = !seg.audio;
 
   const root = el('div', { class: 'lesson-player' },
-    el('div', { class: 'lesson-controls' }, playBtn, range, clock), musicBox, stage, caption, details);
+    el('div', { class: 'lesson-controls' }, restartBtn, playBtn, range, clock), musicBox, stage, nextBtn, caption, details);
   if (!slides.length) stage.hidden = true;
   if (!cues.length) { caption.hidden = true; details.hidden = true; }
 
@@ -354,7 +361,13 @@ function createPlayer(seg, startAt, onPosition) {
     return t;
   }
 
+  function atEnd() { return t >= duration - 1; } // the position slider steps in whole seconds
+  function label() {
+    playBtn.textContent = playing ? 'Pause' : (atEnd() ? 'Replay' : 'Play');
+    nextBtn.hidden = !(onNext && !playing && atEnd());
+  }
   function render() {
+    label();
     range.value = String(t);
     clock.textContent = `${formatTime(t)} / ${formatTime(duration)}`;
     const si = activeIndex(slides, t);
@@ -382,9 +395,9 @@ function createPlayer(seg, startAt, onPosition) {
     raf = requestAnimationFrame(tick);
   }
   function play() {
-    if (t >= duration) t = 0;
+    if (atEnd()) t = 0;
     playing = true;
-    playBtn.textContent = 'Pause';
+    label();
     last = performance.now();
     if (mode === 'web' && !ctx && !openContext()) useElement(); // context is made on the Play tap
     if (mode === 'web') {
@@ -402,7 +415,7 @@ function createPlayer(seg, startAt, onPosition) {
   function pause() {
     if (playing) t = position();
     playing = false;
-    playBtn.textContent = 'Play';
+    label();
     cancelAnimationFrame(raf);
     stopSources();
     if (ctx && ctx.state === 'running') ctx.suspend().catch(() => {});
@@ -421,6 +434,7 @@ function createPlayer(seg, startAt, onPosition) {
   }
 
   playBtn.addEventListener('click', () => (playing ? pause() : play()));
+  restartBtn.addEventListener('click', () => { seek(0); if (!playing) play(); });
   range.addEventListener('input', () => seek(Number(range.value)));
   paintMusic();
   render();
