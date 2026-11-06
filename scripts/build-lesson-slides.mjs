@@ -78,14 +78,14 @@ S['The test'] = (t) => svg('The stop-structure test',
     text(346, 270, 'Not a level', { size: 14, fill: 'var(--red)' })));
 
 S['One sentence'] = (t) => {
-  const c = candles(20, 44, { x: 32, y: 84, w: 400, h: 230 });
+  const c = candles(20, 44, { x: 32, y: 84, w: 340, h: 230 });
   return svg('Six bars turned at the high; the stop goes behind it',
     title('The stop goes behind the high', 'Invented prior-day high 24,186.50') + c.svg +
-    rv(t[0] - t[0], line(32, c.y(HI), 440, c.y(HI), 'var(--cyan)', { sw: 1.5, dash: '5 4' }) +
-      text(446, c.y(HI) + 5, '24,186.50', { size: 13, cls: 'sv-n', fill: 'var(--cyan)' })) +
-    rv(0.4, text(432, 300, 'Six bars up into it, then turned', { size: 12, cls: 'sv-m', anchor: 'end' })) +
-    rv(t[1] - t[0], rect(32, c.y(HI) - 22, 400, 14, { fill: 'var(--red)', op: 0.22, rx: 2 }) +
-      text(446, c.y(HI) - 12, 'Stop behind', { size: 12, fill: 'var(--red)' })) +
+    rv(t[0] - t[0], line(32, c.y(HI), 380, c.y(HI), 'var(--cyan)', { sw: 1.5, dash: '5 4' }) +
+      text(386, c.y(HI) + 5, '24,186.50', { size: 13, cls: 'sv-n', fill: 'var(--cyan)' })) +
+    rv(0.4, text(372, 300, 'Six bars up into it, then turned', { size: 12, cls: 'sv-m', anchor: 'end' })) +
+    rv(t[1] - t[0], rect(32, c.y(HI) - 22, 340, 14, { fill: 'var(--red)', op: 0.22, rx: 2 }) +
+      text(386, c.y(HI) - 12, 'Stop behind', { size: 12, fill: 'var(--red)' })) +
     rv(t[3] - t[0], rect(470, 90, 150, 112, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) +
       text(482, 114, 'Write one sentence', { size: 13, weight: 700 }) +
       text(482, 136, 'The stop goes behind', { size: 12, cls: 'sv-m' }) +
@@ -112,7 +112,7 @@ S['Zones'] = (t) => svg('A level is a zone with a near edge and a far edge',
     text(480, 107, 'The stop goes behind it', { size: 13, fill: 'var(--red)' })));
 
 S['Example zone'] = (t) => {
-  const c = candles(20, 44, { x: 32, y: 84, w: 400, h: 230 });
+  const c = candles(20, 44, { x: 32, y: 84, w: 340, h: 230 });
   const yN = c.y(NEAR), yF = c.y(HI);
   return svg('Zone from 24,180.25 to 24,186.50',
     title('Invented example: prior-day high', 'Zone 24,180.25 to 24,186.50, six and a quarter points') + c.svg +
