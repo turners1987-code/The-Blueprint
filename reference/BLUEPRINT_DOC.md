@@ -390,7 +390,8 @@ Deferred: downloads page; privacy policy payments section (+ sw.js/llms.txt list
 
 - Gating mechanism for Full Access. **Decided 2026-11-05 (D70):** a private repo plus a
   Cloudflare Pages Function gate that checks KV entitlements; GitHub Pro is needed for that.
-  Not yet built (BACKLOG item 7); until then the client-side gate in section 10 stands.
+  Built 2026-11-06 (BACKLOG item 7): `functions/_middleware.ts` and `/api/session`. The
+  client-side gate in section 10 stays as the UX layer. The repo stays public until Shane makes it private.
 - Whether to enforce the journal's gate server-side. The pricing page lists the journal under
   Full Access and `js/gate.js` gates it, but only client-side, so it is gated and not
   protected. A hosted journal for paying customers would mean accounts and a backend — a

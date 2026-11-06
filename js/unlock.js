@@ -59,11 +59,14 @@ if (entry && done) {
     if (result.reason === 'offline') return fail('Could not reach the license server. Check your connection and try again.');
     if (!result.ok) return fail('That code was not accepted. Check it against your receipt and try again.');
     input.value = '';
+    // Ask the server for the paid-content session cookie. Best effort: the page still unlocks client-side.
+    try { await fetch('/api/session', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ license_key: code }) }); } catch { /* offline or no function */ }
     show(true, code);
   });
 
   remove.addEventListener('click', () => {
     clearRecord();
+    try { fetch('/api/session', { method: 'DELETE' }).catch(() => {}); } catch { /* ignore */ }
     show(false);
     input.focus();
   });

@@ -10,7 +10,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 4. [x] Tier-aware gate
 5. [x] Account page and /api/reset-activations
 6. [x] BP Key Levels guide page and card
-7. Cloudflare Pages Function gate for paid pages, then repo private
+7. [x] Cloudflare Pages Function gate for paid pages, then repo private
 8. Privacy policy payments section
 9a. Learning-layer pilot, Module 06: shared lesson player (slides, timestamp-driven, captions, clickable transcript) and segment layout (sidebar, per-segment resume)
 9b. Learning-layer pilot, Module 06: split the module into 3 to 6 segments; write the narration script and slide timings per segment
@@ -86,4 +86,5 @@ Every item below is now buildable. Shane's approval here is the tier D sign-off 
 
 ## Needs Shane
 
+- Add the Cloudflare secret GATE_SECRET (any long random string) for item 7. Until set, /api/session returns 503 and paid pages stay locked server-side once the function is deployed. Recommended: generate with `openssl rand -hex 32`.
 - Learning-layer rollout to the other 24 modules (free path 00-03 and 16-20 first, then the paid modules; 2 runs per module). Waiting on Shane to review the Module 06 pilot (items 9a to 9e). Do not start it.
