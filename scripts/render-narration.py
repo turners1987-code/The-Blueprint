@@ -4,9 +4,9 @@
 Usage (run with the Kokoro venv's Python, outside the repo):
   C:\kokoro-venv\Scripts\python.exe scripts/render-narration.py <lesson.json> <music-pool-folder>
 
-The folder holds the soundtrack tracks listed in POOL. One track per module
-(module number mod the pool size), the same beat under every segment of that
-module, so neighbouring modules sound different. The track used is
+The folder holds the soundtrack tracks listed in POOL and ENDING. One main
+track per module (module number mod the pool size), the same beat under every
+segment of that module except the last, which gets the ENDING track. The track used is
 written to each segment as "music" (title, producer, url) for the credits on
 ai.html. The pool folder is never copied into the repo.
 
@@ -28,12 +28,17 @@ from kokoro import KPipeline
 SR, GAP, VOICE, MUSIC_DB = 24000, 0.35, 'bf_emma', -12
 FADE_IN, FADE_OUT = 1.5, 2.0
 
-# (file, title, producer, page). One track per module: module number mod the
-# pool size. Add tracks here as Shane approves them (reference/research/
-# music-candidates.md, "Soundtrack"). Pixabay Content License.
+# The course soundtrack, picked by ear by Shane (Nov 6). Pixabay Content License.
+# (file, title, producer, page). One main track per module (module number mod
+# the pool size), the same beat under every segment of that module. ENDING is
+# used sparingly: only under a module's last narrated segment.
 POOL = [
     ('vaitsez-rap-rap-beat-beats-music-486586.mp3', 'Rap - Rap Beat Beats Music', 'vaitsez', 'https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/'),
+    ('pietix-cinematic-coup-scene-1-bass-525683.mp3', 'Cinematic coup scene 1 bass', 'pietiX', 'https://pixabay.com/music/instrumental-cinematic-coup-scene-1-bass-525683/'),
+    ('vaitsez-vlog-vlog-beat-620108.mp3', 'Vlog - Vlog Beat', 'vaitsez', 'https://pixabay.com/music/trap-vlog-vlog-beat-620108/'),
+    ('gr0za-rap-rap-beat-beats-557557.mp3', 'Rap - Rap Beat Beats', 'GR0ZA', 'https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/'),
 ]
+ENDING = ('kontraa-wega-old-school-hiphop-music-422621.mp3', 'Wega | Old School Hiphop Music', 'kontraa', 'https://pixabay.com/music/beats-wega-old-school-hiphop-music-422621/')
 
 def main(lesson_path, pool_dir):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -46,10 +51,9 @@ def main(lesson_path, pool_dir):
     pipe = KPipeline(lang_code='b')
     gap = np.zeros(int(GAP * SR), dtype=np.float32)
     tmp = tempfile.mkdtemp()
-    for k, s in enumerate(d['segments']):
-        if not s.get('cues'):
-            continue
-        fname, mtitle, producer, page = POOL[int(nn) % len(POOL)]
+    narrated = [s for s in d['segments'] if s.get('cues')]
+    for k, s in enumerate(narrated):
+        fname, mtitle, producer, page = ENDING if s is narrated[-1] else POOL[int(nn) % len(POOL)]
         music = os.path.join(pool_dir, fname)
         if not os.path.isfile(music):
             sys.exit(f'missing track in pool folder: {fname}')
