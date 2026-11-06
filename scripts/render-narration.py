@@ -19,6 +19,12 @@ The player blends them (mix gain g, voice gain 1-g) so the voice never changes
 and the music sits at g x -12 dB (default g 0.5 = -18 dB). Cue starts and the
 segment duration are then written back into the lesson JSON. The music file is
 never copied into the repo, and no music-only file is ever written.
+
+After a render, run these from the repo root so the slides, credits and cache
+follow the new timings:
+  node scripts/build-lesson-slides.mjs <NN>   # reveal delays match the new cue starts
+  node scripts/build-credits.mjs              # rewrites the "Lesson music" lines on ai.html
+and bump CACHE_VERSION in sw.js.
 """
 import hashlib
 import json, math, os, subprocess, sys, tempfile

@@ -1,4 +1,4 @@
-// Synthetic 5-minute bars for the Module 06 drill and slide snippets.
+// Synthetic 5-minute bars for the lesson drills and slide chart snippets.
 // Every price is invented. Nothing here comes from a real session.
 //
 // The bars are built the way real ones form: each bar is a short random walk of
@@ -9,12 +9,20 @@
 // never exceeded, which is what the drill's answer checks.
 //
 // Deterministic: fixed seeds, so npm test and the slides are stable.
-// Run: node scripts/synth-bars.mjs  (rewrites rounds[].bars in the lesson JSON)
+//
+// A chart's story is data: { seed, start, regimes, pin?, answer?, line? }.
+//   regimes: [{ kind, n, drift, vol, cap?, center? } | { kind: 'fixed', fixed: {...} }]
+//   kind is one of approach, test (needs cap), reject, chop (needs center), fixed.
+//   pin: { index, high? , low?, open?, close? } makes that bar print the exact
+//   extreme and keeps every other bar inside it.
+// makeBars(story) is also used by scripts/lesson-slides/ for slide charts.
+// Run: node scripts/synth-bars.mjs [lesson.json ...]
+//   (rewrites drill.rounds[].bars from each round's story; default: every lesson)
 import { readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const FILE = path.join(path.dirname(fileURLToPath(import.meta.url)), '../data/lessons/06-what-counts-as-a-level.json');
 const TICK = 0.25, STEP = 300, T0 = 1704189000; // 09:30 ET on an invented day
 const SUB = 14; // sub-steps per bar
 
@@ -27,7 +35,7 @@ const q = (p) => Math.round(p / TICK) * TICK;
 
 // regimes: [{ n, drift (points per bar), vol (points per sub-step), cap?: { price, side } }]
 // cap keeps the walk from closing beyond the level while it is being tested.
-function walk(seed, start, regimes) {
+export function walk(seed, start, regimes) {
   const r = rng(seed);
   const bars = [];
   let price = start, volState = 1;
@@ -62,7 +70,7 @@ function walk(seed, start, regimes) {
 
 // Make one bar print the exact extreme, with the body edge the lesson names, and
 // keep every other bar inside it.
-function pin(bars, i, { high, low, open, close }) {
+export function pin(bars, i, { high, low, open, close }) {
   const b = bars[i];
   if (open !== undefined) b[1] = open;
   if (close !== undefined) b[4] = close;
@@ -78,70 +86,37 @@ function pin(bars, i, { high, low, open, close }) {
   return bars;
 }
 
-const cfg = JSON.parse(readFileSync(FILE, 'utf8'));
-const drill = cfg.segments.find((s) => s.drill).drill;
-const rounds = Object.fromEntries(drill.rounds.map((r) => [r.id, r]));
 
-// d1: a grind up into 24,186.50, a test with upper wicks, then the turn. The
-// slide snippet (bars 20..44) needs the turn bar at index 35 with high 24,186.50
-// and a body top of 24,180.25.
-{
-  const HI = 24186.5;
-  let b = walk(11, 24124, [
-    { n: 12, drift: 1.6, vol: 0.5 },
-    { n: 10, drift: 2.4, vol: 0.65 },
-    { n: 8, drift: 2.2, vol: 0.55 },
-    { n: 5, drift: 1.6, vol: 0.6, cap: { price: HI - 1.25, side: 'above' } }, // pressing under it
-    { fixed: { open: 'prev', high: HI, low: 24175.5, close: 24180.25 } },       // index 35: the print
-    { fixed: { open: 'prev', high: 24183.25, low: 24174.75, close: 24175.75 } }, // the turn
-    { n: 23, drift: -1.7, vol: 0.65 },
-  ]);
-  b = pin(b, 35, { high: HI });
-  rounds.d1.bars = b; rounds.d1.answer = HI;
+const KINDS = ['approach', 'test', 'reject', 'chop', 'fixed'];
+export function makeBars(story) {
+  const regimes = story.regimes.map((r) => {
+    if (r.kind !== undefined && !KINDS.includes(r.kind)) throw new Error(`unknown regime kind "${r.kind}"`);
+    if (r.kind === 'test' && !r.cap) throw new Error('regime "test" needs cap');
+    if (r.kind === 'chop' && r.center === undefined) throw new Error('regime "chop" needs center');
+    if (r.kind === 'fixed' && !r.fixed) throw new Error('regime "fixed" needs fixed');
+    const { kind, ...rest } = r;
+    return rest;
+  });
+  let bars = walk(story.seed, story.start, regimes);
+  if (story.pin) { const { index, ...p } = story.pin; bars = pin(bars, index, p); }
+  return bars;
 }
 
-// d2: a sell-off into 24,032.00, a test of the low, then the long side takes it.
-{
-  const LO = 24032;
-  let b = walk(23, 24090, [
-    { n: 12, drift: -1.5, vol: 0.55 },
-    { n: 10, drift: -2.1, vol: 0.7 },
-    { n: 7, drift: -0.5, vol: 0.6, cap: { price: LO + 1.25, side: 'below' } },
-    { fixed: { open: 'prev', high: 24038.0, low: LO, close: 24035.0 } },       // index 29: the print
-    { fixed: { open: 'prev', high: 24041.5, low: 24034.0, close: 24040.75 } },
-    { n: 29, drift: 1.1, vol: 0.6 },
-  ]);
-  b = pin(b, 29, { low: LO });
-  rounds.d2.bars = b; rounds.d2.answer = LO;
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), '../data/lessons');
+  const files = process.argv.slice(2).length ? process.argv.slice(2) : readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => path.join(dir, f));
+  for (const file of files) {
+    const cfg = JSON.parse(readFileSync(file, 'utf8'));
+    let n = 0;
+    for (const seg of cfg.segments) for (const r of seg.drill?.rounds || []) {
+      if (!r.story) continue;
+      r.bars = makeBars(r.story);
+      if (r.story.answer !== undefined) r.answer = r.story.answer;
+      if (r.story.line !== undefined) r.line = r.story.line;
+      const cols = r.bars.map((x) => (x[4] >= x[1] ? 'G' : 'R')).join('');
+      console.log(r.id, r.kind, 'hi', Math.max(...r.bars.map((x) => x[2])), 'lo', Math.min(...r.bars.map((x) => x[3])), cols);
+      n++;
+    }
+    if (n) { writeFileSync(file, JSON.stringify(cfg, null, 2) + '\n'); console.log(`wrote ${n} rounds in ${path.basename(file)}`); }
+  }
 }
-
-// d3: chop across 24,100.00 with nothing behind it (a round number, not a level).
-{
-  const b = walk(37, 24101.5, [
-    { n: 60, drift: 0, vol: 0.85, center: 24100 },
-  ]);
-  rounds.d3.bars = b; rounds.d3.line = 24100;
-}
-
-// d4: a defended high at 24,161.00: two touches, two turns.
-{
-  const HI = 24161;
-  let b = walk(53, 24114, [
-    { n: 16, drift: 1.7, vol: 0.55 },
-    { n: 7, drift: 0.5, vol: 0.65, cap: { price: HI - 0.75, side: 'above' } },
-    { fixed: { open: 'prev', high: HI, low: 24153.5, close: 24157.5 } },        // index 23: the print
-    { n: 9, drift: -1.3, vol: 0.6 },
-    { n: 8, drift: 1.1, vol: 0.6, cap: { price: HI - 0.5, side: 'above' } },   // a second poke, a tick short
-    { n: 19, drift: -1.5, vol: 0.65 },
-  ]);
-  b = pin(b, 23, { high: HI });
-  rounds.d4.bars = b; rounds.d4.line = HI;
-}
-
-for (const r of drill.rounds) {
-  const cols = r.bars.map((x) => (x[4] >= x[1] ? 'G' : 'R')).join('');
-  const hi = Math.max(...r.bars.map((x) => x[2])), lo = Math.min(...r.bars.map((x) => x[3]));
-  console.log(r.id, r.kind, 'hi', hi, 'lo', lo, cols);
-}
-writeFileSync(FILE, JSON.stringify(cfg, null, 2) + '\n');
-console.log('wrote drill bars');
