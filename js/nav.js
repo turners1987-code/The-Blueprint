@@ -50,6 +50,7 @@ function initNav() {
     'dial-in.html': 'dial',
     'tools.html': 'tools',
     'plan-board.html': 'tools',
+    'reading-list.html': 'tools',
     'pricing.html': 'pricing',
     'ai.html': 'ai',
     'index.html': 'home',

@@ -20,7 +20,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 10. [x] Plan Board v1
 11. [x] Setting Up NT8 page
 12. [x] Rule Card
-13. Reading List
+13. [x] Reading List
 14. Sources page
 15. Journal fields
 16. [x] Journal CSV export

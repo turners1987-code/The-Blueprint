@@ -125,3 +125,4 @@ Source: step-10 SUMMARY.md section 1 (D1–D57), G:\My Drive\Blueprint Review\co
 - Rule Card (backlog item 12), taken by default 2026-11-06: built as `tools/rule-card.html` with `css/rule-card.css` (print styles). Lines copied from Modules 02 and 14; dollar examples left out (R only). Added `tools/` to the css/js depth check in scripts/check.mjs and to the nav.js path prefix so the nav resolves one folder deep. Linked from sitemap; not yet from tools.html cards (data-driven).
 
 - Item 8 privacy payments draft: kept to what ls-webhook.ts and reset.ts store; contact address, retention and legal review left as open items in the draft; privacy.html not edited. Taken by default 2026-11-06.
+- D-RL — Reading List (backlog 13): investing group shortened to 8 core index/allocation titles as a pointer for the later finance track; commodity basics section left as a placeholder because the repo holds no commodity-basics titles (none invented). taken by default 2026-11-06
