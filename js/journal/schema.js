@@ -41,7 +41,14 @@
 //     the keys is read as null for each (storage-common prepare() adds them
 //     before validating), so v1-v4 records and exports import unchanged.
 //     Stored records are not rewritten until they are next saved.
-export const JOURNAL_SCHEMA_VERSION = 5;
+// v6: added readiness_score (0, 1 or 2; D42, data only, never a gate),
+//     test_number (integer, at least 1), session_block (text slug) and
+//     sheet_finished_time (ISO 8601 date-time with offset). All four are
+//     nullable but required as keys. Migration: a record without the keys is
+//     read as null for each (storage-common prepare() adds them before
+//     validating), so v1-v5 records and exports import unchanged. Stored
+//     records are not rewritten until they are next saved.
+export const JOURNAL_SCHEMA_VERSION = 6;
 
 // The TAXONOMY version in force: the single source for it in this repo.
 // New records are stamped with it. Bump it whenever reference/TAXONOMY.md
@@ -157,6 +164,10 @@ export const ACCOUNT_TYPES = [
   { slug: 'sim',   label: 'Sim' },
 ];
 
+// Schema v6. Slug shape of session_block: lowercase letters, digits, hyphen, underscore.
+export const SESSION_BLOCK_RE = /^[a-z0-9][a-z0-9_-]*$/;
+export const READINESS_SCORES = [0, 1, 2];
+
 const slugs = (list) => list.map(e => e.slug);
 
 // ── Field rules ───────────────────────────────────────────────
@@ -182,13 +193,14 @@ const NUMBER_FIELDS = {
 // 2026-09-29-k3f9a. Sorts by date. Assigned by js/journal/storage.js on put.
 export const ID_RE = /^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-z]{4,12}$/;
 
-// All 29 record keys. Every one must be present in a record (null when it has
+// All 33 record keys. Every one must be present in a record (null when it has
 // no value); see CAPTURE_CONTRACT 7.2.
 export const RECORD_FIELDS = [
   ...REQUIRED,
   'id',
   'trigger', 'confirmation', 'execution_mark', 'tags',
   'account', 'account_type',
+  'readiness_score', 'test_number', 'session_block', 'sheet_finished_time',
   'exit_time', 'size', ...Object.keys(NUMBER_FIELDS),
 ];
 const KNOWN_FIELDS = new Set(RECORD_FIELDS);
@@ -289,6 +301,19 @@ export function validate(record) {
   checkEnum('direction', DIRECTIONS);
   checkEnum('account_type', slugs(ACCOUNT_TYPES));
 
+  if (!isBlank(record.readiness_score) && !READINESS_SCORES.includes(record.readiness_score)) {
+    fail('readiness_score', 'must be 0, 1 or 2');
+  }
+  if (!isBlank(record.test_number) && !(Number.isInteger(record.test_number) && record.test_number >= 1)) {
+    fail('test_number', 'must be an integer of at least 1');
+  }
+  if (!isBlank(record.session_block) && !(typeof record.session_block === 'string' && SESSION_BLOCK_RE.test(record.session_block))) {
+    fail('session_block', 'must be a slug: lowercase letters, digits, hyphen or underscore');
+  }
+  if (!isBlank(record.sheet_finished_time) && !(typeof record.sheet_finished_time === 'string' && isRealDateTime(record.sheet_finished_time))) {
+    fail('sheet_finished_time', 'must be an ISO 8601 date-time with a UTC offset');
+  }
+
   if (!isBlank(record.account) && typeof record.account !== 'string') {
     fail('account', 'must be a string');
   }
@@ -376,6 +401,10 @@ export function emptyRecord() {
     environment: null,
     account: null,
     account_type: null,
+    readiness_score: null,
+    test_number: null,
+    session_block: null,
+    sheet_finished_time: null,
     tags: [],
     instrument: null,
     direction: null,

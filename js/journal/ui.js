@@ -155,6 +155,10 @@ function readForm() {
   rec.environment = $('f-environment').value || null;
   rec.account = $('f-account').value.trim() || null;
   rec.account_type = $('f-account-type').value || null;
+  rec.readiness_score = $('f-readiness-score').value === '' ? null : Number($('f-readiness-score').value);
+  rec.sheet_finished_time = isoFromLocal($('f-sheet-finished-time').value);
+  rec.session_block = $('f-session-block').value.trim() || null;
+  rec.test_number = num($('f-test-number').value);
   rec.entry_time = isoFromLocal($('f-entry-time').value);
   rec.exit_time = isoFromLocal($('f-exit-time').value);
   rec.setup = $('f-setup').value || null;
@@ -193,6 +197,10 @@ function fillForm(rec) {
   $('f-environment').value = rec.environment || '';
   $('f-account').value = rec.account || '';
   $('f-account-type').value = rec.account_type || '';
+  $('f-readiness-score').value = rec.readiness_score ?? '';
+  $('f-sheet-finished-time').value = rec.sheet_finished_time ? rec.sheet_finished_time.slice(0, 16) : '';
+  $('f-session-block').value = rec.session_block || '';
+  $('f-test-number').value = rec.test_number ?? '';
   // Wall time as recorded; saving re-stamps it with today's offset.
   $('f-entry-time').value = rec.entry_time ? rec.entry_time.slice(0, 16) : '';
   $('f-exit-time').value = rec.exit_time ? rec.exit_time.slice(0, 16) : '';

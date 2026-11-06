@@ -18,6 +18,10 @@
     "environment",
     "account",
     "account_type",
+    "readiness_score",
+    "test_number",
+    "session_block",
+    "sheet_finished_time",
     "tags",
     "instrument",
     "direction",
@@ -114,6 +118,25 @@
     "account_type": {
       "description": "The kind of account the trade was recorded on. Null for records that predate the field (schema v5). Required as a key.",
       "enum": ["cash", "apex", "lucid", "sim", null]
+    },
+    "readiness_score": {
+      "description": "Pre-market readiness (D42): 2 curious, 1 neutral, 0 needing something from the market. Data the journal can correlate, never a gate. Null when not recorded. Required as a key (schema v6).",
+      "enum": [0, 1, 2, null]
+    },
+    "test_number": {
+      "description": "Which test of the level or setup this trade was, counting from 1. Null when not recorded. Required as a key (schema v6).",
+      "type": ["integer", "null"],
+      "minimum": 1
+    },
+    "session_block": {
+      "description": "The session block the trade was taken in, as a lowercase slug. Free text in slug form, no enum. Null when not recorded. Required as a key (schema v6).",
+      "type": ["string", "null"],
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "sheet_finished_time": {
+      "description": "When the pre-market sheet was finished. ISO 8601 date-time with a UTC offset. Null when not recorded. Required as a key (schema v6).",
+      "type": ["string", "null"],
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
     },
     "tags": {
       "description": "0 or many. Process and behavioral tags (section 5). TAXONOMY does not enumerate tag values, so any non-empty string is accepted. legacy_ tags are not selectable on new trades.",

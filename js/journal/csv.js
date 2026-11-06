@@ -14,12 +14,18 @@
    q2, q3 and note may be empty.
    Left empty on purpose: result_usd (the site reports R, never dollars),
    q1-q3 and note (the journal records have no such fields).
+   Columns 17-20 (readiness_score, test_number, session_block,
+   sheet_finished_time) are the schema v6 fields, appended after the
+   canonical sixteen.
    ============================================================ */
 
 export const CSV_COLUMNS = [
   'id', 'instrument', 'entry_time', 'exit_time', 'side', 'entry_price',
   'stop_price', 'target_price', 'qty', 'setup', 'result_pts', 'result_usd',
   'q1', 'q2', 'q3', 'note',
+  // Schema v6 journal fields, appended after the canonical sixteen so that a
+  // reader keyed on the first sixteen columns is unaffected. Empty when null.
+  'readiness_score', 'test_number', 'session_block', 'sheet_finished_time',
 ];
 
 const isNum = (v) => typeof v === 'number' && Number.isFinite(v);
@@ -52,6 +58,7 @@ export function recordToRow(record) {
     record.id, rootSymbol(record.instrument), record.entry_time, record.exit_time,
     record.direction, entry, record.stop_price, record.target_price, record.size,
     record.setup, resultPoints(record), '', '', '', '', '',
+    record.readiness_score, record.test_number, record.session_block, record.sheet_finished_time,
   ];
 }
 

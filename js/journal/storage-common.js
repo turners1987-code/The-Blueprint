@@ -88,6 +88,10 @@ export async function prepare(record, taken = async () => false, { fillAbsent = 
   for (const key of ['account', 'account_type', 'target_2']) {
     if (copy[key] === undefined) copy[key] = null;
   }
+  // Schema v6 migration: likewise for the four readiness and sheet fields.
+  for (const key of ['readiness_score', 'test_number', 'session_block', 'sheet_finished_time']) {
+    if (copy[key] === undefined) copy[key] = null;
+  }
   // Import normalization (contract 7.2): a legacy export may lack any key, so
   // import fills every absent one with null. put() does not, so a writer
   // cannot emit an incomplete record.

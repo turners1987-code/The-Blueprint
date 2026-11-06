@@ -206,6 +206,19 @@ test('v5 migration: a v4 record or export without the new keys imports, with the
   for (const rec of await store.list()) assert.deepEqual([rec.account, rec.account_type, rec.target_2], [null, null, null]);
 });
 
+test('v5 records without the schema v6 fields import as null and carry into the CSV', async () => {
+  const strip = ({ readiness_score, test_number, session_block, sheet_finished_time, ...v5 }) => v5;
+  const { store } = await fresh();
+  const r = await store.importAll(JSON.stringify({ format: 'blueprint-journal', journal_schema_version: 5, records: examples.map(strip) }));
+  assert.equal(r.count, examples.length);
+  for (const rec of await store.list()) {
+    assert.deepEqual([rec.readiness_score, rec.test_number, rec.session_block, rec.sheet_finished_time], [null, null, null, null]);
+  }
+  await rejects(() => store.put({ ...winner, readiness_score: 3 }), (e) => e.errors.some((x) => x.field === 'readiness_score'));
+  const row = toCanonicalCsv([{ ...winner, readiness_score: 2, test_number: 3, session_block: 'open-drive', sheet_finished_time: '2026-09-29T09:20:00-04:00' }]).split('\r\n')[1].split(',');
+  assert.deepEqual(row.slice(16), ['2', '3', 'open-drive', '2026-09-29T09:20:00-04:00']);
+});
+
 test('a bad account_type or non-numeric target_2 is rejected and nothing is stored', async () => {
   const { store } = await fresh();
   await rejects(() => store.put({ ...winner, account_type: 'funded' }), (e) => {

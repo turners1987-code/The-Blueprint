@@ -95,6 +95,35 @@
                   <div class="field-error" id="err-account_type"></div>
                 </div>
                 <div class="field">
+                  <label for="f-readiness-score">Readiness score</label>
+                  <select id="f-readiness-score" name="readiness_score">
+                    <option value="">— not recorded —</option>
+                    <option value="2">2 — curious</option>
+                    <option value="1">1 — neutral</option>
+                    <option value="0">0 — needing something from the market</option>
+                  </select>
+                  <div class="field-hint">Optional. Recorded on the sheet before the session. Data only, never a gate.</div>
+                  <div class="field-error" id="err-readiness_score"></div>
+                </div>
+                <div class="field">
+                  <label for="f-sheet-finished-time">Sheet finished</label>
+                  <input type="datetime-local" id="f-sheet-finished-time" name="sheet_finished_time">
+                  <div class="field-hint">Optional. When the pre-market sheet was finished.</div>
+                  <div class="field-error" id="err-sheet_finished_time"></div>
+                </div>
+                <div class="field">
+                  <label for="f-session-block">Session block</label>
+                  <input type="text" id="f-session-block" name="session_block" placeholder="open-drive" autocomplete="off">
+                  <div class="field-hint">Optional. A lowercase slug: letters, digits, hyphen or underscore.</div>
+                  <div class="field-error" id="err-session_block"></div>
+                </div>
+                <div class="field">
+                  <label for="f-test-number">Test number</label>
+                  <input type="number" id="f-test-number" name="test_number" step="1" min="1" inputmode="numeric" placeholder="1">
+                  <div class="field-hint">Optional. Which test of the level this trade was, counting from 1.</div>
+                  <div class="field-error" id="err-test_number"></div>
+                </div>
+                <div class="field">
                   <label for="f-direction">Direction <span class="req" aria-hidden="true">*</span></label>
                   <select id="f-direction" name="direction">
                     <option value="">— choose —</option>
