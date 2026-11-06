@@ -28,6 +28,18 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 16. [x] Journal CSV export
 17. Unlock page help line (taken by recommendation Nov 6): under the code box on unlock.html add one line: the code is in your purchase email from Lemon Squeezy, or under My Orders at app.lemonsqueezy.com.
 
+18. Email login with a 6-digit code (approved by Shane Nov 6; tier D sign-off given; this task may edit functions/ but not wrangler.toml or any secret). Goal: a buyer types their email, gets a 6-digit code, enters it, and stays logged in on that device. The access code stays as a backup.
+   a. Email index: in functions/api/ls-webhook.ts, on every event that writes a customer record, also write `email:<lowercased trimmed user_email>` -> customer_id. Add a one-off admin route POST /api/admin/backfill-emails (Authorization: Bearer ADMIN_TOKEN) that walks `cust:*` and writes the missing indexes.
+   b. POST /api/login/start {email}: always answer 200 with the same body ("If that email has access, a code is on its way."), so no one can probe which emails are customers. Only when the email maps to an active entitlement: make a 6-digit code (crypto random), store its SHA-256 hash in KV `otp:<email>` with expirationTtl 600 and an attempts counter, and send it with the Resend API (POST https://api.resend.com/emails, Bearer env.RESEND_API_KEY, from "The Blueprint <login@bptrade.co>", subject "Your Blueprint login code: <code>", plain text plus simple HTML, no tracking pixels or links). Rate limit: 3 sends per email per 15 minutes and 10 per IP per 15 minutes (KV counters with TTL). If RESEND_API_KEY is missing, return 503 {error:"email_not_configured"}.
+   c. POST /api/login/verify {email, code}: constant-time compare against the hash; 5 wrong tries deletes the code. On success, delete the code and issue the bp_session cookie for that customer's entitlement.
+   d. Sessions: raise SESSION_TTL_S in functions/_lib/gate.ts to 90 days and make it sliding (the middleware re-issues the cookie when it is more than 1 day old). The middleware still checks the KV entitlement on every request, so a cancelled or expired subscription locks out even with a valid cookie. Key-based sessions get the same 90-day sliding life.
+   e. GET /api/me returns {signedIn, tier, email (masked, e.g. s***@gmail.com)} from the cookie. js/gate.js: when there is no local license record, ask /api/me and treat a signed-in answer as access for that tier, so email logins are not locked out by the client gate. POST /api/logout clears the cookie.
+   f. unlock.html and js/unlock.js: email login first (email box, "Send code", then a 6-digit box with autocomplete="one-time-code" and inputmode="numeric", "Resend code" after 30 s, and "Use a different email"). Under it a link "Have an access code instead?" that shows the existing code form. Keep the ?next= return. If start answers email_not_configured, show "Email login is being set up. Use your access code for now." and open the code form.
+   g. Account page: show "Signed in as <masked email>" and a Log out button.
+   h. reference/drafts/privacy-payments.md: add one line, as draft wording for Shane: your email is used to send login codes, sent through Resend; codes expire after 10 minutes.
+   i. Tests in scripts/test-gate.mjs: same answer for known and unknown emails; wrong code 5 times kills it; expired code fails; the rate limit fires; verify issues a cookie; a cancelled entitlement with a valid cookie is redirected; 503 without the key. Smoke test: unlock page shows email login first, with no console errors.
+   j. Bump CACHE_VERSION in sw.js. Ship this item even if the Resend key is not set yet (the 503 path covers that).
+
 ## Answers, approved by Shane Nov 5, 2026
 
 Every item below is now buildable. Shane's approval here is the tier D sign-off for these items: do not park them again for tier D reasons. Build only from these answers and files already in the repo. Anything still missing goes back under a new "## Needs Shane" section.
@@ -88,6 +100,7 @@ Every item below is now buildable. Shane's approval here is the tier D sign-off 
 - As recommended: schema v6 adds readiness_score (0, 1 or 2 per D42), test_number (integer), session_block (text slug) and sheet_finished_time (ISO time), all nullable and present as keys; v1 to v5 records read as null. Carry the new fields into the CSV export.
 
 ## Needs Shane
+- Item 18 live test: Shane creates the Resend account, verifies bptrade.co, and adds the RESEND_API_KEY secret in Cloudflare Pages (Production) himself. Then test email login on phone and laptop.
 
 - Module 06 audio re-render (after 9f and 9g ship): British female voice (Kokoro bf_emma), using the 9g narration wording, with a low lo-fi beat mixed under the narration (one track per module from a rotating pool). Music pool ready: C:\Blueprint\music-pool\ (see reference/research/music-candidates.md, Final pool). Runs locally.
 
