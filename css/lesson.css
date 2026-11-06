@@ -54,3 +54,9 @@
 .lesson-check-msg { min-height: 1.4em; margin: var(--space-sm) 0 0; color: var(--text-secondary); }
 .lesson-right { color: var(--green); }
 .lesson-wrong { color: var(--text-primary); border-left: 2px solid var(--red); padding-left: var(--space-sm); }
+
+/* Level-marking drill */
+.lesson-drill { margin-top: var(--space-xl); padding: var(--space-lg); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.lesson-drill-chart { height: 320px; margin: var(--space-md) 0; }
+.lesson-drill-controls { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+.lesson-drill-credit { margin: var(--space-md) 0 0; font-size: 0.8rem; color: var(--text-muted); }

@@ -3,7 +3,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, validateQuestions } from '../js/lesson-core.js';
+import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, validateQuestions, scoreEdge, scoreJudge, validateDrill } from '../js/lesson-core.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 let failed = 0;
@@ -81,6 +81,24 @@ const qtext = JSON.stringify([cfg.segments.map((x) => x.check), cfg.quiz]);
 eq('checks: no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(qtext), false);
 eq('checks: stat carries n', /82\.4%[\s\S]{0,60}n=994/.test(qtext), true);
 eq('checks: answers spread', new Set(cfg.segments.flatMap((x) => x.check.map((c) => c.answer))).size > 1, true);
+
+// 9d: level-marking drill.
+eq('edge hit', scoreEdge(24186, 24186.5, 1.5).hit, true);
+eq('edge miss', scoreEdge(24180, 24186.5, 1.5).hit, false);
+eq('judge right', scoreJudge(false, false).hit, true);
+eq('judge wrong', scoreJudge(true, false).hit, false);
+const drill = cfg.segments.find((x) => x.drill)?.drill;
+eq('module 06 drill valid', validateDrill(drill), []);
+eq('drill has edge and judge rounds', [...new Set(drill.rounds.map((r) => r.kind))].sort(), ['edge', 'judge']);
+eq('edge answers equal the extreme of their bars', drill.rounds.filter((r) => r.kind === 'edge').map((r) => {
+  const hi = Math.max(...r.bars.map((b) => b[2])); const lo = Math.min(...r.bars.map((b) => b[3]));
+  return r.answer === hi || r.answer === lo;
+}), [true, true]);
+eq('drill: no bars from a real session', /real|exported/i.test(drill.intro) && !/not|invented|synthetic/i.test(drill.intro), false);
+eq('drill: bad bar rejected', validateDrill({ rounds: [{ id: 'x', kind: 'edge', prompt: 'p', why: 'w', answer: 1, tolerance: 1, bars: Array(25).fill([1, 5, 4, 3, 4]) }] }).length > 0, true);
+eq('drill: no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(JSON.stringify(drill.rounds.map((r) => [r.prompt, r.why]))), false);
+eq('vendor notice kept', /TradingView/.test(readFileSync(path.join(ROOT, 'js/vendor/NOTICE-lightweight-charts.txt'), 'utf8')), true);
+eq('vendor license kept', /Apache License/.test(readFileSync(path.join(ROOT, 'js/vendor/LICENSE-lightweight-charts.txt'), 'utf8')), true);
 
 if (failed) { console.error(`${failed} lesson check(s) failed`); process.exit(1); }
 console.log('lesson: all checks passed');

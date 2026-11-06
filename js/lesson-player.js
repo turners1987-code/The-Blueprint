@@ -14,6 +14,7 @@
 
 import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck } from './lesson-core.js';
 import { Progress } from './progress.js';
+import { createDrill } from './level-drill.js';
 
 const body = document.querySelector('.module-body[data-lesson]');
 const lesson = document.querySelector('.lesson-content');
@@ -75,6 +76,12 @@ async function init(body, lesson) {
       Progress.recordSegmentTry(config.module, nav_segs[i].id, passed);
       paintStates();
     }));
+  });
+
+  // Drills sit above the segment's check.
+  segs.forEach((seg, i) => {
+    const d = seg.drill && createDrill(seg.drill);
+    if (d) panels[i].insertBefore(d, panels[i].querySelector('.lesson-check'));
   });
 
   const saved = loadResume(store(), config.module, nav_segs.length);

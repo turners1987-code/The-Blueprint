@@ -135,3 +135,42 @@ export function loadResume(store, moduleId, segmentCount) {
 export function saveResume(store, moduleId, state) {
   try { store.setItem(storageKey(moduleId), JSON.stringify(state)); return true; } catch { return false; }
 }
+
+// Level-marking drill (item 9d). Pure scoring, no browser.
+// An "edge" round is hit when the picked price is within `tolerance`
+// points of the answer; a "judge" round is right when the choice matches.
+export function scoreEdge(pick, answer, tolerance) {
+  const off = Math.abs(pick - answer);
+  return { hit: off <= tolerance, off };
+}
+
+export function scoreJudge(choice, isLevel) {
+  return { hit: choice === isLevel };
+}
+
+export function validateDrill(drill) {
+  const errs = [];
+  if (!drill || !Array.isArray(drill.rounds) || drill.rounds.length === 0) return ['drill: no rounds'];
+  const ids = new Set();
+  for (const r of drill.rounds) {
+    const w = `drill ${r.id}`;
+    if (ids.has(r.id)) errs.push(`${w}: duplicate id`);
+    ids.add(r.id);
+    if (!r.prompt || !r.why) errs.push(`${w}: prompt and why are required`);
+    if (!Array.isArray(r.bars) || r.bars.length < 20) { errs.push(`${w}: needs at least 20 bars`); continue; }
+    let prevT = -Infinity;
+    for (const b of r.bars) {
+      const [t, o, h, l, c] = b;
+      if (b.length !== 5 || !b.every(Number.isFinite)) { errs.push(`${w}: malformed bar`); break; }
+      if (t <= prevT) { errs.push(`${w}: bar times must increase`); break; }
+      if (h < Math.max(o, c) || l > Math.min(o, c)) { errs.push(`${w}: bar high/low does not contain open/close`); break; }
+      prevT = t;
+    }
+    if (r.kind === 'edge') {
+      if (!Number.isFinite(r.answer) || !(r.tolerance > 0)) errs.push(`${w}: edge round needs answer and tolerance`);
+    } else if (r.kind === 'judge') {
+      if (!Number.isFinite(r.line) || typeof r.isLevel !== 'boolean') errs.push(`${w}: judge round needs line and isLevel`);
+    } else errs.push(`${w}: unknown kind`);
+  }
+  return errs;
+}

@@ -15,7 +15,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 9a. [x] Learning-layer pilot, Module 06: shared lesson player (slides, timestamp-driven, captions, clickable transcript) and segment layout (sidebar, per-segment resume)
 9b. [x] Learning-layer pilot, Module 06: split the module into 3 to 6 segments; write the narration script and slide timings per segment
 9c. [x] Learning-layer pilot, Module 06: segment checks (3 to 4 questions, pass at 3 of 4), module quiz, three progress states in js/progress.js
-9d. Learning-layer pilot, Module 06: level-marking drill on Lightweight Charts v5.2.1 with synthetic bars (keep the NOTICE)
+9d. [x] Learning-layer pilot, Module 06: level-marking drill on Lightweight Charts v5.2.1 with synthetic bars (keep the NOTICE)
 9e. Learning-layer pilot, Module 06: per-segment notes with .md export; narration audio with Kokoro-82M if it installs in this environment, otherwise leave the placeholder and note it under Needs Shane as a local run
 10. [x] Plan Board v1
 11. Setting Up NT8 page
