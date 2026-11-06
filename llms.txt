@@ -58,3 +58,4 @@ All 25 modules are published. Free modules need no signup; Full Access modules n
 
 - [Journal analysis](https://bptrade.co/journal-analysis.html): read-only review of the trade journal — expectancy by setup, trigger and grade, discipline cohorts, stop survival, exit efficiency, sequence effects, and whether your own trades have accumulated enough history, across enough sessions, for the numbers to mean anything.
 - [Unlock Full Access](https://bptrade.co/unlock.html): enter the access code from your receipt. No account, no password.
+- [Account](https://bptrade.co/account.html): reset the activations of your license key. No password.
