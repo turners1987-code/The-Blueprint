@@ -87,4 +87,3 @@ Every item below is now buildable. Shane's approval here is the tier D sign-off 
 ## Needs Shane
 
 - Learning-layer rollout to the other 24 modules (free path 00-03 and 16-20 first, then the paid modules; 2 runs per module). Waiting on Shane to review the Module 06 pilot (items 9a to 9e). Do not start it.
-- Item 9e narration audio: Kokoro-82M cannot be installed in this cloud environment (Hugging Face returns 403 through the proxy, so the model weights cannot be fetched). The segment audio stays the timer placeholder. Question: run Kokoro-82M locally to produce one audio file per Module 06 segment from the caption cues in data/lessons/06-what-counts-as-a-level.json? Recommended: yes, run locally, then set the `audio` field per segment.
