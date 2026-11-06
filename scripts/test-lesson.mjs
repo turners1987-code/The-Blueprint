@@ -1,9 +1,9 @@
 // Lesson player core: timing lookup, config validation, section
 // assignment and per-segment resume. Pure functions, no browser.
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, validateQuestions, scoreEdge, scoreJudge, validateDrill, loadNotes, saveNotes, notesToMarkdown } from '../js/lesson-core.js';
+import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, validateQuestions, scoreEdge, scoreJudge, validateDrill, loadNotes, saveNotes, notesToMarkdown, musicGains, voiceStemUrl, loadMusicLevel, saveMusicLevel, DEFAULT_MUSIC_LEVEL, MUSIC_KEY } from '../js/lesson-core.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 let failed = 0;
@@ -116,6 +116,55 @@ eq('throwing notes store', saveNotes({ setItem() { throw new Error('x'); } }, 'm
 const segsN = [{ id: 'a', title: 'First' }, { id: 'b', title: 'Second' }, { id: 'c', title: 'Third' }];
 eq('markdown export', notesToMarkdown('Mod', segsN, { a: 'one', b: ' ', c: 'three' }), '# Mod: my notes\n\n## 1. First\n\none\n\n## 3. Third\n\nthree\n');
 eq('markdown empty', notesToMarkdown('Mod', segsN, {}), '# Mod: my notes\n\nNo notes yet.\n');
+
+// Music-only volume: two stems per segment, same length, default g = 0.5.
+function mp3Seconds(file) {
+  const b = readFileSync(file);
+  let i = 0;
+  if (b.toString('latin1', 0, 3) === 'ID3') i = 10 + ((b[6] << 21) | (b[7] << 14) | (b[8] << 7) | b[9]);
+  const rates = { 0: 22050, 1: 24000, 2: 16000 };
+  const kbps = [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160];
+  let samples = 0;
+  while (i + 4 <= b.length) {
+    if (b[i] === 0xff && (b[i + 1] & 0xfe) === 0xf2) { // MPEG-2, layer III
+      const br = kbps[b[i + 2] >> 4] * 1000; const sr = rates[(b[i + 2] >> 2) & 3];
+      if (!br || !sr) break;
+      const len = Math.floor(72 * br / sr) + ((b[i + 2] >> 1) & 1);
+      samples += 576; i += len;
+    } else i++;
+  }
+  return samples / 24000;
+}
+for (const seg of cfg.segments) {
+  const mixFile = path.join(ROOT, 'assets/audio/06', `${seg.id}.mp3`);
+  const voiceFile = path.join(ROOT, 'assets/audio/06', `${seg.id}.voice.mp3`);
+  eq(`${seg.id} audio field points at the mix`, seg.audio, `../assets/audio/06/${seg.id}.mp3`);
+  eq(`${seg.id} voice stem path`, voiceStemUrl(seg.audio), `../assets/audio/06/${seg.id}.voice.mp3`);
+  eq(`${seg.id} has mix and voice files`, [existsSync(mixFile), existsSync(voiceFile)], [true, true]);
+  if (existsSync(mixFile) && existsSync(voiceFile)) {
+    const a = mp3Seconds(mixFile); const v = mp3Seconds(voiceFile);
+    eq(`${seg.id} stems match within 0.05 s`, Math.abs(a - v) <= 0.05, true);
+    eq(`${seg.id} stem length matches duration within 0.2 s`, Math.abs(a - seg.duration) <= 0.2, true);
+  }
+}
+eq('no music-only file on the site', readdirSync(path.join(ROOT, 'assets/audio/06')).filter((f) => /music|bed|beat/i.test(f)), []);
+eq('default music level is 50', DEFAULT_MUSIC_LEVEL, 50);
+eq('default g = 0.5', musicGains(DEFAULT_MUSIC_LEVEL), { mix: 0.5, voice: 0.5 });
+eq('g = 0 is the voice stem alone', musicGains(0), { mix: 0, voice: 1 });
+eq('mute sets g to 0', musicGains(70, true), { mix: 0, voice: 1 });
+eq('g = 1 is the full mix', musicGains(100), { mix: 1, voice: 0 });
+eq('mix and voice gains always sum to 1', [0, 25, 50, 80, 100].every((l) => { const g = musicGains(l); return Math.abs(g.mix + g.voice - 1) < 1e-12; }), true);
+eq('bad level falls back to 50', musicGains('x'), { mix: 0.5, voice: 0.5 });
+const ms = mem();
+eq('fresh music level', loadMusicLevel(ms), { level: 50, muted: false });
+saveMusicLevel(ms, { level: 30, muted: true });
+eq('music level round trip', [MUSIC_KEY, loadMusicLevel(ms)], ['bp_music_level', { level: 30, muted: true }]);
+ms.setItem(MUSIC_KEY, '{oops');
+eq('corrupt music level', loadMusicLevel(ms), { level: 50, muted: false });
+ms.setItem(MUSIC_KEY, JSON.stringify({ level: 900 }));
+eq('out of range music level', loadMusicLevel(ms).level, 50);
+eq('throwing music store', [loadMusicLevel({ getItem() { throw new Error('x'); } }), saveMusicLevel({ setItem() { throw new Error('x'); } }, { level: 1 })], [{ level: 50, muted: false }, false]);
+eq('service worker never caches audio', /assets\/audio\//.test(readFileSync(path.join(ROOT, 'sw.js'), 'utf8')) && !/assets\/audio[^']*'\s*,/.test(readFileSync(path.join(ROOT, 'sw.js'), 'utf8')), true);
 
 if (failed) { console.error(`${failed} lesson check(s) failed`); process.exit(1); }
 console.log('lesson: all checks passed');

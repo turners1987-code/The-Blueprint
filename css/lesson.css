@@ -26,6 +26,12 @@
 .lesson-player { margin-bottom: var(--space-xl); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm, 6px); padding: var(--space-md); }
 .lesson-controls { display: flex; align-items: center; gap: var(--space-md); }
 .lesson-controls input[type="range"] { flex: 1; min-width: 0; accent-color: var(--cyan); }
+.lesson-music { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-top: var(--space-sm); }
+.lesson-music[hidden] { display: none; }
+.lesson-music-icon { display: inline-flex; color: var(--cyan); }
+.lesson-music-label { font-size: 0.85rem; color: var(--text-secondary); }
+.lesson-music-range { flex: 1 1 6rem; min-width: 0; accent-color: var(--cyan); }
+.lesson-music-hint { flex-basis: 100%; font-size: 0.75rem; color: var(--text-muted); }
 .lesson-clock { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
 .lesson-stage { margin-top: var(--space-md); aspect-ratio: 16 / 9; background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .lesson-stage svg { width: 100%; height: 100%; }

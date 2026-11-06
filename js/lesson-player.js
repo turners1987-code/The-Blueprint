@@ -12,7 +12,7 @@
    Without JS, or if the config fails to load, the whole lesson shows.
    ============================================================ */
 
-import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, loadNotes, saveNotes, notesToMarkdown } from './lesson-core.js';
+import { activeIndex, formatTime, validateConfig, assignSections, loadResume, saveResume, scoreCheck, loadNotes, saveNotes, notesToMarkdown, musicGains, voiceStemUrl, loadMusicLevel, saveMusicLevel } from './lesson-core.js';
 import { Progress } from './progress.js';
 import { createDrill } from './level-drill.js';
 
@@ -226,18 +226,133 @@ function createPlayer(seg, startAt, onPosition) {
     return b;
   });
   const details = el('details', { class: 'lesson-transcript-wrap' }, el('summary', {}, 'Transcript'), transcript);
+
+  // Music control: moves only the music. The voice stays the same.
+  const music = loadMusicLevel(store());
+  const NOTE = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>';
+  const noteIcon = el('span', { class: 'lesson-music-icon' });
+  noteIcon.innerHTML = NOTE;
+  const musicRange = el('input', { type: 'range', min: '0', max: '100', step: '1', class: 'lesson-music-range', 'aria-label': 'Music volume (voice stays the same)' });
+  const muteBtn = el('button', { type: 'button', class: 'btn btn--ghost btn--sm lesson-music-mute', 'aria-pressed': 'false' }, 'Mute');
+  const musicBox = el('div', { class: 'lesson-music', role: 'group', 'aria-label': 'Music volume (voice stays the same)' },
+    noteIcon, el('span', { class: 'lesson-music-label' }, 'Music'), musicRange, muteBtn,
+    el('small', { class: 'lesson-music-hint' }, 'Voice stays the same'));
+  musicBox.hidden = !seg.audio;
+
   const root = el('div', { class: 'lesson-player' },
-    el('div', { class: 'lesson-controls' }, playBtn, range, clock), stage, caption, details);
+    el('div', { class: 'lesson-controls' }, playBtn, range, clock), musicBox, stage, caption, details);
   if (!slides.length) stage.hidden = true;
   if (!cues.length) { caption.hidden = true; details.hidden = true; }
 
-  const audio = seg.audio ? new Audio(new URL(seg.audio, document.baseURI)) : null;
+  // Playback. 'web': two stems decoded to AudioBuffers and started on the same
+  // context time, so they stay sample-locked (mix gain g, voice gain 1 - g).
+  // 'el': one <audio> element playing the mix (fallback, no music control).
+  // 'timer': no audio file.
+  let mode = seg.audio ? 'web' : 'timer';
+  const mixUrl = seg.audio ? new URL(seg.audio, document.baseURI) : null;
+  const voiceUrl = seg.audio ? new URL(voiceStemUrl(seg.audio), document.baseURI) : null;
+  let ctx = null;
+  let mixGain = null;
+  let voiceGain = null;
+  let buffers = null;
+  let loading = null;
+  let sources = [];
+  let startedAt = 0;
+  let offset = 0;
+  let elAudio = null;
+  let destroyed = false;
   let t = Math.min(startAt, duration);
   let playing = false;
   let raf = 0;
   let last = 0;
   let shownSlide = -2;
   let shownCue = -2;
+
+  function applyGains() {
+    if (!ctx || !mixGain) return;
+    const g = musicGains(music.level, music.muted);
+    const now = ctx.currentTime;
+    mixGain.gain.setTargetAtTime(g.mix, now, 0.015);
+    voiceGain.gain.setTargetAtTime(g.voice, now, 0.015);
+  }
+  function paintMusic() {
+    musicRange.value = String(music.muted ? 0 : music.level);
+    muteBtn.textContent = music.muted ? 'Unmute' : 'Mute';
+    muteBtn.setAttribute('aria-pressed', String(music.muted));
+    applyGains();
+  }
+  musicRange.addEventListener('input', () => {
+    music.level = Number(musicRange.value);
+    music.muted = false;
+    saveMusicLevel(store(), music);
+    paintMusic();
+  });
+  muteBtn.addEventListener('click', () => {
+    music.muted = !music.muted;
+    saveMusicLevel(store(), music);
+    paintMusic();
+  });
+
+  function openContext() {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return false;
+    try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch { /* unsupported */ }
+    try {
+      ctx = new AC();
+      mixGain = ctx.createGain();
+      voiceGain = ctx.createGain();
+      mixGain.connect(ctx.destination);
+      voiceGain.connect(ctx.destination);
+      const g = musicGains(music.level, music.muted);
+      mixGain.gain.value = g.mix;
+      voiceGain.gain.value = g.voice;
+      return true;
+    } catch { ctx = null; return false; }
+  }
+  async function fetchBuffer(url) {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`audio ${r.status}`);
+    return ctx.decodeAudioData(await r.arrayBuffer());
+  }
+  function loadBuffers() {
+    if (!loading) loading = Promise.all([fetchBuffer(mixUrl), fetchBuffer(voiceUrl)]).then((b) => { buffers = b; });
+    return loading;
+  }
+  function stopSources() {
+    for (const s of sources) { try { s.onended = null; s.stop(); s.disconnect(); } catch { /* already stopped */ } }
+    sources = [];
+  }
+  function startSources(from) {
+    stopSources();
+    if (!ctx || !buffers) return;
+    const when = ctx.currentTime + 0.06;
+    const [mix, voice] = buffers;
+    [[mix, mixGain], [voice, voiceGain]].forEach(([buf, gain]) => {
+      const src = ctx.createBufferSource();
+      src.buffer = buf;
+      src.connect(gain);
+      src.start(when, Math.min(from, buf.duration));
+      sources.push(src);
+    });
+    offset = from;
+    startedAt = when;
+  }
+  function startElement(from) {
+    if (!elAudio) elAudio = new Audio(mixUrl);
+    elAudio.currentTime = from;
+    elAudio.play().catch(() => {});
+  }
+  function useElement() {
+    mode = 'el';
+    musicBox.hidden = true;
+    stopSources();
+    if (ctx) { ctx.close().catch(() => {}); ctx = null; }
+  }
+  function position() {
+    if (mode === 'web') return sources.length ? Math.min(duration, offset + Math.max(0, ctx.currentTime - startedAt)) : t;
+    if (mode === 'el') return elAudio ? elAudio.currentTime : t;
+    return t;
+  }
 
   function render() {
     range.value = String(t);
@@ -246,13 +361,6 @@ function createPlayer(seg, startAt, onPosition) {
     if (si !== shownSlide) {
       shownSlide = si;
       stage.innerHTML = si >= 0 ? (slides[si].svg || '') : '';
-      // Reveal animations are timed from the slide start; join them mid-way after a seek.
-      const elapsed = si >= 0 ? t - slides[si].start : 0;
-      if (elapsed > 0) {
-        for (const g of stage.querySelectorAll('.sv-rv, .sv-dr')) {
-          g.style.animationDelay = `${(parseFloat(g.style.animationDelay) || 0) - elapsed}s`;
-        }
-      }
       stage.setAttribute('aria-label', si >= 0 ? (slides[si].title || 'Slide') : 'Slide');
     }
     const ci = activeIndex(cues, t);
@@ -265,7 +373,8 @@ function createPlayer(seg, startAt, onPosition) {
 
   function tick(now) {
     if (!playing) return;
-    t = audio ? audio.currentTime : Math.min(duration, t + (now - last) / 1000);
+    if (mode === 'timer') t = Math.min(duration, t + (now - last) / 1000);
+    else t = position(); // the audio clock; holds still while the stems load
     last = now;
     render();
     onPosition(t);
@@ -276,28 +385,55 @@ function createPlayer(seg, startAt, onPosition) {
     if (t >= duration) t = 0;
     playing = true;
     playBtn.textContent = 'Pause';
-    if (audio) { audio.currentTime = t; audio.play().catch(() => {}); }
     last = performance.now();
+    if (mode === 'web' && !ctx && !openContext()) useElement(); // context is made on the Play tap
+    if (mode === 'web') {
+      ctx.resume().catch(() => {});
+      if (buffers) startSources(t);
+      else {
+        loadBuffers().then(() => { if (playing && !destroyed) startSources(t); })
+          .catch(() => { if (destroyed) return; useElement(); if (playing) startElement(t); });
+      }
+    } else if (mode === 'el') {
+      startElement(t);
+    }
     raf = requestAnimationFrame(tick);
   }
   function pause() {
+    if (playing) t = position();
     playing = false;
     playBtn.textContent = 'Play';
     cancelAnimationFrame(raf);
-    audio?.pause();
+    stopSources();
+    if (ctx && ctx.state === 'running') ctx.suspend().catch(() => {});
+    elAudio?.pause();
+    render();
     onPosition(t);
   }
   function seek(to) {
     t = Math.max(0, Math.min(duration, to));
-    if (audio) audio.currentTime = t;
-    shownSlide = -2; // restart the slide's reveals from the new position
+    if (playing) {
+      if (mode === 'web' && buffers) startSources(t); // both stems restart from the same offset
+      else if (mode === 'el') elAudio.currentTime = t;
+    }
     render();
     onPosition(t);
   }
 
   playBtn.addEventListener('click', () => (playing ? pause() : play()));
   range.addEventListener('input', () => seek(Number(range.value)));
+  paintMusic();
   render();
 
-  return { root, destroy() { pause(); root.remove(); } };
+  return {
+    root,
+    destroy() {
+      destroyed = true;
+      playing = false;
+      cancelAnimationFrame(raf);
+      stopSources();
+      elAudio?.pause();
+      if (ctx) { ctx.close().catch(() => {}); ctx = null; }
+    },
+  };
 }

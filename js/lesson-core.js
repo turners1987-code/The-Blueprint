@@ -203,3 +203,33 @@ export function notesToMarkdown(moduleTitle, segments, notes) {
   if (parts.length === 1) parts.push('No notes yet.');
   return parts.join('\n\n') + '\n';
 }
+
+// Music-only volume. The player plays two stems from one render: the mix
+// (voice + music at -12 dB) with gain g and the voice-only stem with gain
+// 1 - g. The voice is then constant and the music is g x (-12 dB), so the
+// default g = 0.5 puts it at about -18 dB.
+export const MUSIC_KEY = 'bp_music_level';
+export const DEFAULT_MUSIC_LEVEL = 50;
+
+export function musicGains(level, muted = false) {
+  const n = Number(level);
+  const pct = Number.isFinite(n) ? Math.min(100, Math.max(0, n)) : DEFAULT_MUSIC_LEVEL;
+  const g = muted ? 0 : pct / 100;
+  return { mix: g, voice: 1 - g };
+}
+
+export function voiceStemUrl(audio) { return String(audio).replace(/\.mp3$/i, '.voice.mp3'); }
+
+export function loadMusicLevel(store) {
+  const fallback = { level: DEFAULT_MUSIC_LEVEL, muted: false };
+  try {
+    const raw = JSON.parse(store.getItem(MUSIC_KEY) || 'null');
+    if (!raw || typeof raw !== 'object') return fallback;
+    const ok = Number.isFinite(raw.level) && raw.level >= 0 && raw.level <= 100;
+    return { level: ok ? Math.round(raw.level) : DEFAULT_MUSIC_LEVEL, muted: raw.muted === true };
+  } catch { return fallback; }
+}
+
+export function saveMusicLevel(store, state) {
+  try { store.setItem(MUSIC_KEY, JSON.stringify({ level: state.level, muted: !!state.muted })); return true; } catch { return false; }
+}

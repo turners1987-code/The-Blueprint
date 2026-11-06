@@ -7,7 +7,7 @@
    cache is deleted when the new worker activates.
    ============================================================ */
 
-const CACHE_VERSION = 'v45';
+const CACHE_VERSION = 'v46';
 const CACHE_NAME = `blueprint-${CACHE_VERSION}`;
 
 // App shell: paths are relative to this file (the site root).
@@ -98,6 +98,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  // Narration audio is large and streamed; never precached or stored here.
+  if (new URL(req.url).pathname.includes('/assets/audio/')) return;
 
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);

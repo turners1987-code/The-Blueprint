@@ -4,17 +4,21 @@
 Usage (run with the Kokoro venv's Python, outside the repo):
   C:\kokoro-venv\Scripts\python.exe scripts/render-narration.py <lesson.json> <music.mp3>
 
-Per segment: synthesize each cue, join with 0.35 s gaps, loop the music to the
-segment length, mix it under the voice at -18 dB (fade in 1.5 s, out 2 s),
-export assets/audio/<NN>/<segment id>.mp3 (mono, 96 kbps, 24 kHz), then write
-cue starts and segment duration back into the lesson JSON. The music file is
-never copied into the repo; it exists only mixed inside the mp3s.
+Per segment: synthesize each cue once, join with 0.35 s gaps, then export two
+stems from that one run, with identical encoder settings (mono, 24 kHz, 96 kbps):
+  assets/audio/<NN>/<id>.mp3        voice + music, music at -12 dB (fade in 1.5 s,
+                                    out 2 s, looped to the segment length)
+  assets/audio/<NN>/<id>.voice.mp3  voice only
+The player blends them (mix gain g, voice gain 1-g) so the voice never changes
+and the music sits at g x -12 dB (default g 0.5 = -18 dB). Cue starts and the
+segment duration are then written back into the lesson JSON. The music file is
+never copied into the repo, and no music-only file is ever written.
 """
 import json, math, os, subprocess, sys, tempfile
 import numpy as np, soundfile as sf
 from kokoro import KPipeline
 
-SR, GAP, VOICE, MUSIC_DB = 24000, 0.35, 'bf_emma', -18
+SR, GAP, VOICE, MUSIC_DB = 24000, 0.35, 'bf_emma', -12
 FADE_IN, FADE_OUT = 1.5, 2.0
 
 def main(lesson_path, music):
@@ -42,6 +46,9 @@ def main(lesson_path, music):
         wav = os.path.join(tmp, s['id'] + '.wav')
         sf.write(wav, voice, SR)
         out = os.path.join(outdir, s['id'] + '.mp3')
+        vout = os.path.join(outdir, s['id'] + '.voice.mp3')
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', wav, '-ac', '1',
+                        '-ar', str(SR), '-b:a', '96k', vout], check=True)
         fo = max(0, length - FADE_OUT)
         flt = (f'[1:a]aresample={SR},aformat=channel_layouts=mono,atrim=0:{length:.3f},'
                f'volume={MUSIC_DB}dB,afade=t=in:d={FADE_IN},afade=t=out:st={fo:.3f}:d={FADE_OUT}[m];'
