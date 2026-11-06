@@ -109,7 +109,8 @@
           "why": "Every row carries the stop sentence, written before the session."
         }
       ],
-      "audio": "../assets/audio/06/s1.mp3"
+      "audio": "../assets/audio/06/s1.mp3",
+      "audio_v": "b63e9d95de"
     },
     {
       "id": "s2",
@@ -214,7 +215,8 @@
           "why": "Edges are written before the session and left alone."
         }
       ],
-      "audio": "../assets/audio/06/s2.mp3"
+      "audio": "../assets/audio/06/s2.mp3",
+      "audio_v": "785d757bf1"
     },
     {
       "id": "s3",
@@ -329,7 +331,8 @@
           "why": "It moves as volume builds, so you use and record the price at the moment the trigger fires."
         }
       ],
-      "audio": "../assets/audio/06/s3.mp3"
+      "audio": "../assets/audio/06/s3.mp3",
+      "audio_v": "b5bad24588"
     },
     {
       "id": "s4",
@@ -453,7 +456,8 @@
           "why": "It is a touch rate measured from the open. It says nothing about direction, timing or where an entry would sit."
         }
       ],
-      "audio": "../assets/audio/06/s4.mp3"
+      "audio": "../assets/audio/06/s4.mp3",
+      "audio_v": "3e86d4d3de"
     },
     {
       "id": "s5",
@@ -2302,7 +2306,8 @@
           }
         ]
       },
-      "audio": "../assets/audio/06/s5.mp3"
+      "audio": "../assets/audio/06/s5.mp3",
+      "audio_v": "7bf8f81b59"
     },
     {
       "id": "s6",
@@ -2401,7 +2406,8 @@
           "why": "Module 17, The Session And The Close."
         }
       ],
-      "audio": "../assets/audio/06/s6.mp3"
+      "audio": "../assets/audio/06/s6.mp3",
+      "audio_v": "6410dae323"
     }
   ],
   "quiz": {

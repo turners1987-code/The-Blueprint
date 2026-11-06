@@ -14,6 +14,7 @@ and the music sits at g x -12 dB (default g 0.5 = -18 dB). Cue starts and the
 segment duration are then written back into the lesson JSON. The music file is
 never copied into the repo, and no music-only file is ever written.
 """
+import hashlib
 import json, math, os, subprocess, sys, tempfile
 import numpy as np, soundfile as sf
 from kokoro import KPipeline
@@ -64,6 +65,9 @@ def main(lesson_path, music):
         for c, t in zip(s['cues'], starts):
             c['start'] = t
         s['duration'] = math.ceil(length * 10) / 10
+        # cache-busting version: browsers may keep an audio URL for hours
+        h = hashlib.sha256(open(out, 'rb').read() + open(vout, 'rb').read()).hexdigest()
+        s['audio_v'] = h[:10]
         print(s['id'], f'{length:.2f}s', starts, flush=True)
     nl = '\n'
     open(lesson_path, 'w', encoding='utf-8', newline='').write(

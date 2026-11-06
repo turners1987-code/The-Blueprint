@@ -256,8 +256,9 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
   // 'el': one <audio> element playing the mix (fallback, no music control).
   // 'timer': no audio file.
   let mode = seg.audio ? 'web' : 'timer';
-  const mixUrl = seg.audio ? new URL(seg.audio, document.baseURI) : null;
-  const voiceUrl = seg.audio ? new URL(voiceStemUrl(seg.audio), document.baseURI) : null;
+  const ver = seg.audio_v ? `?v=${encodeURIComponent(seg.audio_v)}` : ''; // a new render gets a new URL
+  const mixUrl = seg.audio ? new URL(seg.audio + ver, document.baseURI) : null;
+  const voiceUrl = seg.audio ? new URL(voiceStemUrl(seg.audio) + ver, document.baseURI) : null;
   let ctx = null;
   let mixGain = null;
   let voiceGain = null;
