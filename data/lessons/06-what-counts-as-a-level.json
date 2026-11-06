@@ -11,7 +11,7 @@
       "cues": [
         {
           "start": 0,
-          "text": "The scenario. You know the moment. Price runs up into a line you drew, and the trade looks right.",
+          "text": "You know the moment. Price runs up into a line you drew, and the trade looks right.",
           "chapter": "The scenario"
         },
         {
@@ -77,7 +77,7 @@
         {
           "start": 43.3,
           "title": "One sentence",
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six bars turned at the high; the stop goes behind it\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The stop goes behind the high</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Invented prior-day high 24,186.50</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"39.083333333333336\" y1=\"280.1349693251534\" x2=\"39.083333333333336\" y2=\"291.4233128834356\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"34.69166666666667\" y=\"281.5460122699387\" width=\"8.783333333333333\" height=\"7.055214723926326\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"53.25\" y1=\"254.7361963190184\" x2=\"53.25\" y2=\"287.1901840490798\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"48.858333333333334\" y=\"261.7914110429448\" width=\"8.783333333333333\" height=\"19.754601226993884\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"67.41666666666666\" y1=\"256.14723926380367\" x2=\"67.41666666666666\" y2=\"267.43558282208585\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"63.02499999999999\" y=\"257.55828220858893\" width=\"8.783333333333333\" height=\"4.233128834355853\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"81.58333333333333\" y1=\"243.4478527607362\" x2=\"81.58333333333333\" y2=\"258.96932515337426\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"77.19166666666666\" y=\"247.68098159509202\" width=\"8.783333333333333\" height=\"9.877300613496914\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"95.74999999999999\" y1=\"220.87116564417178\" x2=\"95.74999999999999\" y2=\"253.3251533742331\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"91.35833333333332\" y=\"230.7484662576687\" width=\"8.783333333333333\" height=\"16.932515337423325\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"109.91666666666666\" y1=\"223.69325153374234\" x2=\"109.91666666666666\" y2=\"242.03680981595093\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"105.52499999999999\" y=\"225.1042944785276\" width=\"8.783333333333333\" height=\"5.6441717791410895\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"124.08333333333333\" y1=\"215.2269938650307\" x2=\"124.08333333333333\" y2=\"233.57055214723925\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"119.69166666666666\" y=\"219.46012269938652\" width=\"8.783333333333333\" height=\"5.6441717791410895\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"138.25\" y1=\"192.65030674846625\" x2=\"138.25\" y2=\"220.87116564417178\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"133.85833333333332\" y=\"202.5276073619632\" width=\"8.783333333333333\" height=\"16.932515337423325\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"152.41666666666666\" y1=\"191.23926380368096\" x2=\"152.41666666666666\" y2=\"215.2269938650307\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"148.02499999999998\" y=\"192.65030674846625\" width=\"8.783333333333333\" height=\"9.877300613496942\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"166.58333333333334\" y1=\"187.00613496932516\" x2=\"166.58333333333334\" y2=\"205.34969325153372\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"162.19166666666666\" y=\"189.8282208588957\" width=\"8.783333333333333\" height=\"2.822085889570559\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"180.75\" y1=\"171.48466257668713\" x2=\"180.75\" y2=\"192.65030674846625\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"176.35833333333332\" y=\"171.48466257668713\" width=\"8.783333333333333\" height=\"18.343558282208562\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"194.91666666666666\" y1=\"160.1963190184049\" x2=\"194.91666666666666\" y2=\"182.77300613496934\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"190.52499999999998\" y=\"161.6073619631902\" width=\"8.783333333333333\" height=\"9.877300613496942\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"209.08333333333334\" y1=\"143.2638036809816\" x2=\"209.08333333333334\" y2=\"168.66257668711654\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"204.69166666666666\" y=\"154.5521472392638\" width=\"8.783333333333333\" height=\"7.055214723926383\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"223.25\" y1=\"137.61963190184048\" x2=\"223.25\" y2=\"154.5521472392638\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"218.85833333333332\" y=\"147.49693251533742\" width=\"8.783333333333333\" height=\"7.055214723926383\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"237.41666666666666\" y1=\"130.5644171779141\" x2=\"237.41666666666666\" y2=\"148.9079754601227\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"233.02499999999998\" y=\"134.79754601226995\" width=\"8.783333333333333\" height=\"12.699386503067473\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"251.58333333333334\" y1=\"106.57668711656441\" x2=\"251.58333333333334\" y2=\"137.61963190184048\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"247.19166666666666\" y=\"129.15337423312883\" width=\"8.783333333333333\" height=\"5.644171779141118\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"265.74999999999994\" y1=\"120.68711656441718\" x2=\"265.74999999999994\" y2=\"133.38650306748468\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"261.3583333333333\" y=\"129.15337423312883\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"279.91666666666663\" y1=\"115.04294478527608\" x2=\"279.91666666666663\" y2=\"136.2085889570552\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"275.525\" y=\"123.50920245398774\" width=\"8.783333333333333\" height=\"5.6441717791410895\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"294.0833333333333\" y1=\"106.57668711656441\" x2=\"294.0833333333333\" y2=\"129.15337423312883\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"289.69166666666666\" y=\"123.50920245398774\" width=\"8.783333333333333\" height=\"4.233128834355824\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"308.24999999999994\" y1=\"115.04294478527608\" x2=\"308.24999999999994\" y2=\"147.49693251533742\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"303.8583333333333\" y=\"127.74233128834356\" width=\"8.783333333333333\" height=\"15.521472392638032\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"322.41666666666663\" y1=\"141.85276073619633\" x2=\"322.41666666666663\" y2=\"158.78527607361963\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"318.025\" y=\"143.2638036809816\" width=\"8.783333333333333\" height=\"12.699386503067501\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"336.5833333333333\" y1=\"153.1411042944785\" x2=\"336.5833333333333\" y2=\"164.42944785276075\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"332.19166666666666\" y=\"155.9631901840491\" width=\"8.783333333333333\" height=\"4.233128834355796\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"350.74999999999994\" y1=\"155.9631901840491\" x2=\"350.74999999999994\" y2=\"181.36196319018404\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"346.3583333333333\" y=\"160.1963190184049\" width=\"8.783333333333333\" height=\"11.288343558282236\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"364.91666666666663\" y1=\"164.42944785276075\" x2=\"364.91666666666663\" y2=\"181.36196319018404\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"360.525\" y=\"171.48466257668713\" width=\"8.783333333333333\" height=\"2.8220858895705305\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"32\" y1=\"106.57668711656441\" x2=\"380\" y2=\"106.57668711656441\" stroke=\"var(--cyan)\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"386\" y=\"111.57668711656441\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">24,186.50</text></g><g class=\"sv-rv\" style=\"animation-delay:0.4s\"><text x=\"372\" y=\"300\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-m\">Six bars up into it, then turned</text></g><g class=\"sv-rv\" style=\"animation-delay:14.3s\"><rect x=\"32\" y=\"84.57668711656441\" width=\"340\" height=\"14\" rx=\"2\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"386\" y=\"94.57668711656441\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Stop behind</text></g><g class=\"sv-rv\" style=\"animation-delay:35.2s\"><rect x=\"470\" y=\"90\" width=\"150\" height=\"112\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"482\" y=\"114\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Write one sentence</text><text x=\"482\" y=\"136\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The stop goes behind</text><text x=\"482\" y=\"154\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">[price] because</text><text x=\"482\" y=\"172\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">[what happened</text><text x=\"482\" y=\"190\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">there].</text></g><g class=\"sv-rv\" style=\"animation-delay:44.7s\"><rect x=\"470\" y=\"214\" width=\"150\" height=\"76\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"482\" y=\"238\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"482\" y=\"258\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A stop chosen after</text><text x=\"482\" y=\"276\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">the entry</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six bars turned at the high; the stop goes behind it\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The stop goes behind the high</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Invented prior-day high 24,186.50</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"39.083333333333336\" y1=\"261.66467065868267\" x2=\"39.083333333333336\" y2=\"285.07784431137725\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"34.69166666666667\" y=\"264.4191616766467\" width=\"8.783333333333333\" height=\"12.395209580838355\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"53.25\" y1=\"261.66467065868267\" x2=\"53.25\" y2=\"287.8323353293413\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"48.858333333333334\" y=\"268.55089820359285\" width=\"8.783333333333333\" height=\"8.263473053892199\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"67.41666666666666\" y1=\"261.66467065868267\" x2=\"67.41666666666666\" y2=\"276.81437125748505\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"63.02499999999999\" y=\"267.1736526946108\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"81.58333333333333\" y1=\"252.02395209580837\" x2=\"81.58333333333333\" y2=\"269.92814371257487\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"77.19166666666666\" y=\"267.1736526946108\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"95.74999999999999\" y1=\"258.9101796407185\" x2=\"95.74999999999999\" y2=\"271.3053892215569\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"91.35833333333332\" y=\"267.1736526946108\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"109.91666666666666\" y1=\"249.2694610778443\" x2=\"109.91666666666666\" y2=\"291.96407185628743\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"105.52499999999999\" y=\"249.2694610778443\" width=\"8.783333333333333\" height=\"17.904191616766468\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"124.08333333333333\" y1=\"234.11976047904193\" x2=\"124.08333333333333\" y2=\"258.9101796407185\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"119.69166666666666\" y=\"234.11976047904193\" width=\"8.783333333333333\" height=\"15.149700598802383\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"138.25\" y1=\"213.46107784431138\" x2=\"138.25\" y2=\"239.62874251497007\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"133.85833333333332\" y=\"217.5928143712575\" width=\"8.783333333333333\" height=\"16.526946107784426\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"152.41666666666666\" y1=\"196.93413173652692\" x2=\"152.41666666666666\" y2=\"217.5928143712575\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"148.02499999999998\" y=\"196.93413173652692\" width=\"8.783333333333333\" height=\"20.65868263473058\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"166.58333333333334\" y1=\"184.53892215568862\" x2=\"166.58333333333334\" y2=\"198.311377245509\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"162.19166666666666\" y=\"196.93413173652692\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"180.75\" y1=\"195.5568862275449\" x2=\"180.75\" y2=\"217.5928143712575\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"176.35833333333332\" y=\"198.311377245509\" width=\"8.783333333333333\" height=\"19.28143712574851\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"194.91666666666666\" y1=\"201.06586826347308\" x2=\"194.91666666666666\" y2=\"217.5928143712575\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"190.52499999999998\" y=\"212.08383233532933\" width=\"8.783333333333333\" height=\"5.50898203592817\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"209.08333333333334\" y1=\"190.04790419161677\" x2=\"209.08333333333334\" y2=\"223.10179640718562\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"204.69166666666666\" y=\"191.4251497005988\" width=\"8.783333333333333\" height=\"20.658682634730525\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"223.25\" y1=\"144.5988023952096\" x2=\"223.25\" y2=\"190.04790419161677\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"218.85833333333332\" y=\"148.7305389221557\" width=\"8.783333333333333\" height=\"41.31736526946108\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"237.41666666666666\" y1=\"133.5808383233533\" x2=\"237.41666666666666\" y2=\"156.9940119760479\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"233.02499999999998\" y=\"148.7305389221557\" width=\"8.783333333333333\" height=\"4.131736526946099\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"251.58333333333334\" y1=\"106.03592814371257\" x2=\"251.58333333333334\" y2=\"166.63473053892216\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"247.19166666666666\" y=\"140.46706586826346\" width=\"8.783333333333333\" height=\"12.395209580838326\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"265.74999999999994\" y1=\"123.94011976047904\" x2=\"265.74999999999994\" y2=\"170.76646706586826\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"261.3583333333333\" y=\"140.46706586826346\" width=\"8.783333333333333\" height=\"24.79041916167668\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"279.91666666666663\" y1=\"150.1077844311377\" x2=\"279.91666666666663\" y2=\"198.311377245509\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"275.525\" y=\"163.88023952095807\" width=\"8.783333333333333\" height=\"34.43113772455092\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"294.0833333333333\" y1=\"185.91616766467064\" x2=\"294.0833333333333\" y2=\"207.95209580838323\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"289.69166666666666\" y=\"185.91616766467064\" width=\"8.783333333333333\" height=\"12.395209580838355\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"308.24999999999994\" y1=\"172.1437125748503\" x2=\"308.24999999999994\" y2=\"194.1796407185629\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"303.8583333333333\" y=\"185.91616766467064\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"322.41666666666663\" y1=\"173.52095808383234\" x2=\"322.41666666666663\" y2=\"194.1796407185629\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"318.025\" y=\"187.2934131736527\" width=\"8.783333333333333\" height=\"6.886227544910184\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"336.5833333333333\" y1=\"162.50299401197606\" x2=\"336.5833333333333\" y2=\"198.311377245509\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"332.19166666666666\" y=\"166.63473053892216\" width=\"8.783333333333333\" height=\"27.544910179640738\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"350.74999999999994\" y1=\"150.1077844311377\" x2=\"350.74999999999994\" y2=\"176.27544910179643\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"346.3583333333333\" y=\"161.125748502994\" width=\"8.783333333333333\" height=\"5.508982035928142\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"364.91666666666663\" y1=\"161.125748502994\" x2=\"364.91666666666663\" y2=\"174.89820359281435\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"360.525\" y=\"161.125748502994\" width=\"8.783333333333333\" height=\"13.77245508982034\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"32\" y1=\"106.03592814371257\" x2=\"380\" y2=\"106.03592814371257\" stroke=\"var(--cyan)\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"386\" y=\"111.03592814371257\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">24,186.50</text></g><g class=\"sv-rv\" style=\"animation-delay:0.4s\"><text x=\"372\" y=\"300\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-m\">Six bars up into it, then turned</text></g><g class=\"sv-rv\" style=\"animation-delay:14.3s\"><rect x=\"32\" y=\"84.03592814371257\" width=\"340\" height=\"14\" rx=\"2\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"386\" y=\"94.03592814371257\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Stop behind</text></g><g class=\"sv-rv\" style=\"animation-delay:35.2s\"><rect x=\"470\" y=\"90\" width=\"150\" height=\"112\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"482\" y=\"114\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Write one sentence</text><text x=\"482\" y=\"136\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The stop goes behind</text><text x=\"482\" y=\"154\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">[price] because</text><text x=\"482\" y=\"172\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">[what happened</text><text x=\"482\" y=\"190\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">there].</text></g><g class=\"sv-rv\" style=\"animation-delay:44.7s\"><rect x=\"470\" y=\"214\" width=\"150\" height=\"76\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"482\" y=\"238\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"482\" y=\"258\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A stop chosen after</text><text x=\"482\" y=\"276\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">the entry</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
         }
       ],
       "duration": 101.3,
@@ -192,7 +192,7 @@
         {
           "start": 25.1,
           "title": "Example zone",
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Zone from 24,180.25 to 24,186.50\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Invented example: prior-day high</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Zone 24,180.25 to 24,186.50, six and a quarter points</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"39.083333333333336\" y1=\"280.1349693251534\" x2=\"39.083333333333336\" y2=\"291.4233128834356\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"34.69166666666667\" y=\"281.5460122699387\" width=\"8.783333333333333\" height=\"7.055214723926326\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"53.25\" y1=\"254.7361963190184\" x2=\"53.25\" y2=\"287.1901840490798\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"48.858333333333334\" y=\"261.7914110429448\" width=\"8.783333333333333\" height=\"19.754601226993884\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"67.41666666666666\" y1=\"256.14723926380367\" x2=\"67.41666666666666\" y2=\"267.43558282208585\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"63.02499999999999\" y=\"257.55828220858893\" width=\"8.783333333333333\" height=\"4.233128834355853\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"81.58333333333333\" y1=\"243.4478527607362\" x2=\"81.58333333333333\" y2=\"258.96932515337426\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"77.19166666666666\" y=\"247.68098159509202\" width=\"8.783333333333333\" height=\"9.877300613496914\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"95.74999999999999\" y1=\"220.87116564417178\" x2=\"95.74999999999999\" y2=\"253.3251533742331\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"91.35833333333332\" y=\"230.7484662576687\" width=\"8.783333333333333\" height=\"16.932515337423325\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"109.91666666666666\" y1=\"223.69325153374234\" x2=\"109.91666666666666\" y2=\"242.03680981595093\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"105.52499999999999\" y=\"225.1042944785276\" width=\"8.783333333333333\" height=\"5.6441717791410895\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"124.08333333333333\" y1=\"215.2269938650307\" x2=\"124.08333333333333\" y2=\"233.57055214723925\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"119.69166666666666\" y=\"219.46012269938652\" width=\"8.783333333333333\" height=\"5.6441717791410895\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"138.25\" y1=\"192.65030674846625\" x2=\"138.25\" y2=\"220.87116564417178\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"133.85833333333332\" y=\"202.5276073619632\" width=\"8.783333333333333\" height=\"16.932515337423325\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"152.41666666666666\" y1=\"191.23926380368096\" x2=\"152.41666666666666\" y2=\"215.2269938650307\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"148.02499999999998\" y=\"192.65030674846625\" width=\"8.783333333333333\" height=\"9.877300613496942\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"166.58333333333334\" y1=\"187.00613496932516\" x2=\"166.58333333333334\" y2=\"205.34969325153372\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"162.19166666666666\" y=\"189.8282208588957\" width=\"8.783333333333333\" height=\"2.822085889570559\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"180.75\" y1=\"171.48466257668713\" x2=\"180.75\" y2=\"192.65030674846625\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"176.35833333333332\" y=\"171.48466257668713\" width=\"8.783333333333333\" height=\"18.343558282208562\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"194.91666666666666\" y1=\"160.1963190184049\" x2=\"194.91666666666666\" y2=\"182.77300613496934\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"190.52499999999998\" y=\"161.6073619631902\" width=\"8.783333333333333\" height=\"9.877300613496942\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"209.08333333333334\" y1=\"143.2638036809816\" x2=\"209.08333333333334\" y2=\"168.66257668711654\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"204.69166666666666\" y=\"154.5521472392638\" width=\"8.783333333333333\" height=\"7.055214723926383\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"223.25\" y1=\"137.61963190184048\" x2=\"223.25\" y2=\"154.5521472392638\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"218.85833333333332\" y=\"147.49693251533742\" width=\"8.783333333333333\" height=\"7.055214723926383\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"237.41666666666666\" y1=\"130.5644171779141\" x2=\"237.41666666666666\" y2=\"148.9079754601227\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"233.02499999999998\" y=\"134.79754601226995\" width=\"8.783333333333333\" height=\"12.699386503067473\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"251.58333333333334\" y1=\"106.57668711656441\" x2=\"251.58333333333334\" y2=\"137.61963190184048\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"247.19166666666666\" y=\"129.15337423312883\" width=\"8.783333333333333\" height=\"5.644171779141118\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"265.74999999999994\" y1=\"120.68711656441718\" x2=\"265.74999999999994\" y2=\"133.38650306748468\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"261.3583333333333\" y=\"129.15337423312883\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"279.91666666666663\" y1=\"115.04294478527608\" x2=\"279.91666666666663\" y2=\"136.2085889570552\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"275.525\" y=\"123.50920245398774\" width=\"8.783333333333333\" height=\"5.6441717791410895\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"294.0833333333333\" y1=\"106.57668711656441\" x2=\"294.0833333333333\" y2=\"129.15337423312883\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"289.69166666666666\" y=\"123.50920245398774\" width=\"8.783333333333333\" height=\"4.233128834355824\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"308.24999999999994\" y1=\"115.04294478527608\" x2=\"308.24999999999994\" y2=\"147.49693251533742\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"303.8583333333333\" y=\"127.74233128834356\" width=\"8.783333333333333\" height=\"15.521472392638032\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"322.41666666666663\" y1=\"141.85276073619633\" x2=\"322.41666666666663\" y2=\"158.78527607361963\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"318.025\" y=\"143.2638036809816\" width=\"8.783333333333333\" height=\"12.699386503067501\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"336.5833333333333\" y1=\"153.1411042944785\" x2=\"336.5833333333333\" y2=\"164.42944785276075\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"332.19166666666666\" y=\"155.9631901840491\" width=\"8.783333333333333\" height=\"4.233128834355796\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"350.74999999999994\" y1=\"155.9631901840491\" x2=\"350.74999999999994\" y2=\"181.36196319018404\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"346.3583333333333\" y=\"160.1963190184049\" width=\"8.783333333333333\" height=\"11.288343558282236\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"364.91666666666663\" y1=\"164.42944785276075\" x2=\"364.91666666666663\" y2=\"181.36196319018404\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"360.525\" y=\"171.48466257668713\" width=\"8.783333333333333\" height=\"2.8220858895705305\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"106.57668711656441\" width=\"400\" height=\"35.276073619631916\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/></g><g class=\"sv-rv\" style=\"animation-delay:20.2s\"><line x1=\"32\" y1=\"141.85276073619633\" x2=\"440\" y2=\"141.85276073619633\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><line x1=\"32\" y1=\"106.57668711656441\" x2=\"440\" y2=\"106.57668711656441\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"52\" y=\"158.85276073619633\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Near edge 24,180.25</text><text x=\"52\" y=\"100.57668711656441\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Far edge 24,186.50</text></g><g class=\"sv-rv\" style=\"animation-delay:30.9s\"><line x1=\"40\" y1=\"141.85276073619633\" x2=\"40\" y2=\"106.57668711656441\" stroke=\"var(--gold)\" stroke-width=\"3\"/><text x=\"52\" y=\"129.21472392638037\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Width is part of your risk</text></g><g class=\"sv-rv\" style=\"animation-delay:40.7s\"><rect x=\"468\" y=\"90\" width=\"152\" height=\"62\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"480\" y=\"112\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One construction</text><text x=\"480\" y=\"132\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">per level type</text></g><g class=\"sv-rv\" style=\"animation-delay:49.0s\"><rect x=\"468\" y=\"166\" width=\"152\" height=\"112\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"480\" y=\"188\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Overlap = one zone</text><rect x=\"484\" y=\"202\" width=\"90\" height=\"22\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.35\"/><rect x=\"520\" y=\"214\" width=\"90\" height=\"22\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.35\"/><text x=\"480\" y=\"262\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It names every slug in it</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Zone from 24,180.25 to 24,186.50\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Invented example: prior-day high</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Zone 24,180.25 to 24,186.50, six and a quarter points</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"39.083333333333336\" y1=\"261.66467065868267\" x2=\"39.083333333333336\" y2=\"285.07784431137725\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"34.69166666666667\" y=\"264.4191616766467\" width=\"8.783333333333333\" height=\"12.395209580838355\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"53.25\" y1=\"261.66467065868267\" x2=\"53.25\" y2=\"287.8323353293413\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"48.858333333333334\" y=\"268.55089820359285\" width=\"8.783333333333333\" height=\"8.263473053892199\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"67.41666666666666\" y1=\"261.66467065868267\" x2=\"67.41666666666666\" y2=\"276.81437125748505\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"63.02499999999999\" y=\"267.1736526946108\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"81.58333333333333\" y1=\"252.02395209580837\" x2=\"81.58333333333333\" y2=\"269.92814371257487\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"77.19166666666666\" y=\"267.1736526946108\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"95.74999999999999\" y1=\"258.9101796407185\" x2=\"95.74999999999999\" y2=\"271.3053892215569\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"91.35833333333332\" y=\"267.1736526946108\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"109.91666666666666\" y1=\"249.2694610778443\" x2=\"109.91666666666666\" y2=\"291.96407185628743\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"105.52499999999999\" y=\"249.2694610778443\" width=\"8.783333333333333\" height=\"17.904191616766468\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"124.08333333333333\" y1=\"234.11976047904193\" x2=\"124.08333333333333\" y2=\"258.9101796407185\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"119.69166666666666\" y=\"234.11976047904193\" width=\"8.783333333333333\" height=\"15.149700598802383\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"138.25\" y1=\"213.46107784431138\" x2=\"138.25\" y2=\"239.62874251497007\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"133.85833333333332\" y=\"217.5928143712575\" width=\"8.783333333333333\" height=\"16.526946107784426\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"152.41666666666666\" y1=\"196.93413173652692\" x2=\"152.41666666666666\" y2=\"217.5928143712575\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"148.02499999999998\" y=\"196.93413173652692\" width=\"8.783333333333333\" height=\"20.65868263473058\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"166.58333333333334\" y1=\"184.53892215568862\" x2=\"166.58333333333334\" y2=\"198.311377245509\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"162.19166666666666\" y=\"196.93413173652692\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"180.75\" y1=\"195.5568862275449\" x2=\"180.75\" y2=\"217.5928143712575\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"176.35833333333332\" y=\"198.311377245509\" width=\"8.783333333333333\" height=\"19.28143712574851\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"194.91666666666666\" y1=\"201.06586826347308\" x2=\"194.91666666666666\" y2=\"217.5928143712575\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"190.52499999999998\" y=\"212.08383233532933\" width=\"8.783333333333333\" height=\"5.50898203592817\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"209.08333333333334\" y1=\"190.04790419161677\" x2=\"209.08333333333334\" y2=\"223.10179640718562\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"204.69166666666666\" y=\"191.4251497005988\" width=\"8.783333333333333\" height=\"20.658682634730525\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"223.25\" y1=\"144.5988023952096\" x2=\"223.25\" y2=\"190.04790419161677\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"218.85833333333332\" y=\"148.7305389221557\" width=\"8.783333333333333\" height=\"41.31736526946108\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"237.41666666666666\" y1=\"133.5808383233533\" x2=\"237.41666666666666\" y2=\"156.9940119760479\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"233.02499999999998\" y=\"148.7305389221557\" width=\"8.783333333333333\" height=\"4.131736526946099\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"251.58333333333334\" y1=\"106.03592814371257\" x2=\"251.58333333333334\" y2=\"166.63473053892216\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"247.19166666666666\" y=\"140.46706586826346\" width=\"8.783333333333333\" height=\"12.395209580838326\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"265.74999999999994\" y1=\"123.94011976047904\" x2=\"265.74999999999994\" y2=\"170.76646706586826\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"261.3583333333333\" y=\"140.46706586826346\" width=\"8.783333333333333\" height=\"24.79041916167668\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"279.91666666666663\" y1=\"150.1077844311377\" x2=\"279.91666666666663\" y2=\"198.311377245509\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"275.525\" y=\"163.88023952095807\" width=\"8.783333333333333\" height=\"34.43113772455092\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"294.0833333333333\" y1=\"185.91616766467064\" x2=\"294.0833333333333\" y2=\"207.95209580838323\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"289.69166666666666\" y=\"185.91616766467064\" width=\"8.783333333333333\" height=\"12.395209580838355\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"308.24999999999994\" y1=\"172.1437125748503\" x2=\"308.24999999999994\" y2=\"194.1796407185629\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"303.8583333333333\" y=\"185.91616766467064\" width=\"8.783333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"322.41666666666663\" y1=\"173.52095808383234\" x2=\"322.41666666666663\" y2=\"194.1796407185629\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"318.025\" y=\"187.2934131736527\" width=\"8.783333333333333\" height=\"6.886227544910184\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"336.5833333333333\" y1=\"162.50299401197606\" x2=\"336.5833333333333\" y2=\"198.311377245509\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"332.19166666666666\" y=\"166.63473053892216\" width=\"8.783333333333333\" height=\"27.544910179640738\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"350.74999999999994\" y1=\"150.1077844311377\" x2=\"350.74999999999994\" y2=\"176.27544910179643\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"346.3583333333333\" y=\"161.125748502994\" width=\"8.783333333333333\" height=\"5.508982035928142\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"364.91666666666663\" y1=\"161.125748502994\" x2=\"364.91666666666663\" y2=\"174.89820359281435\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"360.525\" y=\"161.125748502994\" width=\"8.783333333333333\" height=\"13.77245508982034\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"106.03592814371257\" width=\"400\" height=\"34.431137724550894\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/></g><g class=\"sv-rv\" style=\"animation-delay:20.2s\"><line x1=\"32\" y1=\"140.46706586826346\" x2=\"440\" y2=\"140.46706586826346\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><line x1=\"32\" y1=\"106.03592814371257\" x2=\"440\" y2=\"106.03592814371257\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"52\" y=\"157.46706586826346\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Near edge 24,180.25</text><text x=\"52\" y=\"100.03592814371257\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Far edge 24,186.50</text></g><g class=\"sv-rv\" style=\"animation-delay:30.9s\"><line x1=\"40\" y1=\"140.46706586826346\" x2=\"40\" y2=\"106.03592814371257\" stroke=\"var(--gold)\" stroke-width=\"3\"/><text x=\"52\" y=\"128.25149700598803\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Width is part of your risk</text></g><g class=\"sv-rv\" style=\"animation-delay:40.7s\"><rect x=\"468\" y=\"90\" width=\"152\" height=\"62\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"480\" y=\"112\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One construction</text><text x=\"480\" y=\"132\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">per level type</text></g><g class=\"sv-rv\" style=\"animation-delay:49.0s\"><rect x=\"468\" y=\"166\" width=\"152\" height=\"112\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"480\" y=\"188\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Overlap = one zone</text><rect x=\"484\" y=\"202\" width=\"90\" height=\"22\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.35\"/><rect x=\"520\" y=\"214\" width=\"90\" height=\"22\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.35\"/><text x=\"480\" y=\"262\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It names every slug in it</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
         }
       ],
       "duration": 100.9,
@@ -289,16 +289,16 @@
         },
         {
           "start": 29.7,
-          "text": "Session scope. Each one has a session scope: the bars that build it. Prior-day levels use the regular session, 9:30 a.m. to 4:00 p.m. Eastern. Overnight levels run from 4:00 p.m. to the 9:30 open. The prior week runs Sunday 6:00 p.m. to Friday 4:00 p.m.",
+          "text": "Session scope. Each one has a session scope: the bars that build it. Prior-day levels use the regular session, 9:30 a.m. to 4 p.m. Eastern. Overnight levels run from 4 p.m. to the 9:30 open. The prior week runs Sunday 6 p.m. to Friday 4 p.m.",
           "chapter": "Session scope"
         },
         {
           "start": 51.1,
-          "text": "The 4:00 p.m. boundary matters. A high printed at 4:40 p.m. is not the prior day's high, however close to the close it was. It belongs to the overnight range."
+          "text": "The 4 p.m. boundary matters. A high printed at 4:40 p.m. is not the prior day's high, however close to the close it was. It belongs to the overnight range."
         },
         {
           "start": 63.5,
-          "text": "Keep two saved chart templates, regular session and full session, both ending at 4:00 p.m."
+          "text": "Keep two saved chart templates, regular session and full session, both ending at 4 p.m."
         },
         {
           "start": 70.8,
@@ -333,12 +333,12 @@
         {
           "start": 29.7,
           "title": "Session scope",
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Session scope and the 16:00 boundary\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Each level has a session scope</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The bars that build it, in Eastern time</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"100\" width=\"330\" height=\"50\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"197\" y=\"130\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Regular session 9:30 a.m. to 4:00 p.m.</text><rect x=\"362\" y=\"100\" width=\"246\" height=\"50\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"485\" y=\"130\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Overnight 4:00 p.m. to 9:30 a.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><line x1=\"362\" y1=\"86\" x2=\"362\" y2=\"214\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"362\" y=\"232\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">4:00 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:21.4s\"><rect x=\"400\" y=\"166\" width=\"208\" height=\"30\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"504\" y=\"186\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A 4:40 p.m. high is overnight</text></g><g class=\"sv-rv\" style=\"animation-delay:33.8s\"><rect x=\"32\" y=\"262\" width=\"276\" height=\"56\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"46\" y=\"286\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two saved templates</text><text x=\"46\" y=\"306\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Regular and full, both end at 4:00 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:41.1s\"><rect x=\"330\" y=\"262\" width=\"278\" height=\"56\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"344\" y=\"286\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Prior week</text><text x=\"344\" y=\"306\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sunday 6:00 p.m. to Friday 4:00 p.m.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Session scope and the 16:00 boundary\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Each level has a session scope</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The bars that build it, in Eastern time</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"100\" width=\"330\" height=\"50\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"197\" y=\"130\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Regular session 9:30 a.m. to 4 p.m.</text><rect x=\"362\" y=\"100\" width=\"246\" height=\"50\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"485\" y=\"130\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Overnight 4 p.m. to 9:30 a.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><line x1=\"362\" y1=\"86\" x2=\"362\" y2=\"214\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"362\" y=\"232\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:21.4s\"><rect x=\"400\" y=\"166\" width=\"208\" height=\"30\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"504\" y=\"186\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A 4:40 p.m. high is overnight</text></g><g class=\"sv-rv\" style=\"animation-delay:33.8s\"><rect x=\"32\" y=\"262\" width=\"276\" height=\"56\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"46\" y=\"286\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two saved templates</text><text x=\"46\" y=\"306\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Regular and full, both end at 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:41.1s\"><rect x=\"330\" y=\"262\" width=\"278\" height=\"56\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"344\" y=\"286\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Prior week</text><text x=\"344\" y=\"306\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sunday 6 p.m. to Friday 4 p.m.</text></g></svg>"
         },
         {
           "start": 78.2,
           "title": "In-session list",
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The in-session list: levels that form in front of you\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The in-session list</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Counts once finished forming, and only if your plan named the type</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"37.208333333333336\" y1=\"105.42857142857143\" x2=\"37.208333333333336\" y2=\"112.84615384615384\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"33.97916666666667\" y=\"110.37362637362638\" width=\"6.458333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"47.625\" y1=\"102.13186813186813\" x2=\"47.625\" y2=\"114.49450549450549\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"44.395833333333336\" y=\"107.07692307692308\" width=\"6.458333333333333\" height=\"3.296703296703299\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"58.041666666666664\" y1=\"97.18681318681318\" x2=\"58.041666666666664\" y2=\"110.37362637362638\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"54.8125\" y=\"107.07692307692308\" width=\"6.458333333333333\" height=\"2.4725274725274744\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"68.45833333333333\" y1=\"102.13186813186813\" x2=\"68.45833333333333\" y2=\"121.08791208791209\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"65.22916666666666\" y=\"109.54945054945055\" width=\"6.458333333333333\" height=\"9.065934065934059\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"78.87499999999999\" y1=\"117.79120879120879\" x2=\"78.87499999999999\" y2=\"127.68131868131869\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"75.64583333333331\" y=\"118.61538461538461\" width=\"6.458333333333333\" height=\"7.417582417582423\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"89.29166666666666\" y1=\"124.38461538461539\" x2=\"89.29166666666666\" y2=\"130.97802197802199\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"86.06249999999999\" y=\"126.03296703296704\" width=\"6.458333333333333\" height=\"2.4725274725274744\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"99.70833333333333\" y1=\"126.03296703296704\" x2=\"99.70833333333333\" y2=\"140.86813186813185\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"96.47916666666666\" y=\"128.5054945054945\" width=\"6.458333333333333\" height=\"6.593406593406598\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"110.12499999999999\" y1=\"130.97802197802199\" x2=\"110.12499999999999\" y2=\"140.86813186813185\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"106.89583333333331\" y=\"135.0989010989011\" width=\"6.458333333333333\" height=\"1.6483516483516496\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"120.54166666666666\" y1=\"132.62637362637363\" x2=\"120.54166666666666\" y2=\"149.93406593406593\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"117.31249999999999\" y=\"136.74725274725276\" width=\"6.458333333333333\" height=\"7.417582417582395\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"130.95833333333334\" y1=\"140.86813186813185\" x2=\"130.95833333333334\" y2=\"149.1098901098901\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"127.72916666666667\" y=\"144.16483516483515\" width=\"6.458333333333333\" height=\"2.4725274725274744\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"141.375\" y1=\"143.34065934065933\" x2=\"141.375\" y2=\"160.64835164835165\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"138.14583333333334\" y=\"146.63736263736263\" width=\"6.458333333333333\" height=\"10.714285714285722\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"151.79166666666666\" y1=\"152.4065934065934\" x2=\"151.79166666666666\" y2=\"168.06593406593407\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"148.5625\" y=\"157.35164835164835\" width=\"6.458333333333333\" height=\"4.120879120879124\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"162.20833333333334\" y1=\"154.87912087912088\" x2=\"162.20833333333334\" y2=\"168.8901098901099\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"158.97916666666669\" y=\"161.47252747252747\" width=\"6.458333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"172.625\" y1=\"157.35164835164835\" x2=\"172.625\" y2=\"169.71428571428572\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"169.39583333333334\" y=\"162.2967032967033\" width=\"6.458333333333333\" height=\"4.120879120879124\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"183.04166666666666\" y1=\"159\" x2=\"183.04166666666666\" y2=\"173.01098901098902\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"179.8125\" y=\"166.41758241758242\" width=\"6.458333333333333\" height=\"6.593406593406598\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"193.45833333333334\" y1=\"170.53846153846155\" x2=\"193.45833333333334\" y2=\"186.19780219780222\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"190.22916666666669\" y=\"173.01098901098902\" width=\"6.458333333333333\" height=\"9.065934065934073\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"203.875\" y1=\"181.25274725274727\" x2=\"203.875\" y2=\"187.02197802197804\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"200.64583333333334\" y=\"182.0769230769231\" width=\"6.458333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"214.29166666666666\" y1=\"177.13186813186815\" x2=\"214.29166666666666\" y2=\"194.43956043956047\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"211.0625\" y=\"182.90109890109892\" width=\"6.458333333333333\" height=\"4.94505494505492\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"224.70833333333334\" y1=\"185.3736263736264\" x2=\"224.70833333333334\" y2=\"191.96703296703296\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"221.47916666666669\" y=\"187.84615384615384\" width=\"6.458333333333333\" height=\"3.296703296703299\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"235.125\" y1=\"184.54945054945054\" x2=\"235.125\" y2=\"201.03296703296704\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"231.89583333333334\" y=\"191.14285714285714\" width=\"6.458333333333333\" height=\"4.945054945054949\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"245.54166666666666\" y1=\"196.0879120879121\" x2=\"245.54166666666666\" y2=\"205.97802197802196\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"242.3125\" y=\"196.0879120879121\" width=\"6.458333333333333\" height=\"4.120879120879124\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"255.95833333333334\" y1=\"194.43956043956047\" x2=\"255.95833333333334\" y2=\"209.27472527472528\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"252.72916666666669\" y=\"200.2087912087912\" width=\"6.458333333333333\" height=\"6.59340659340657\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"266.37499999999994\" y1=\"205.15384615384616\" x2=\"266.37499999999994\" y2=\"210.9230769230769\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"263.14583333333326\" y=\"206.80219780219778\" width=\"6.458333333333333\" height=\"4.120879120879124\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"276.79166666666663\" y1=\"205.97802197802196\" x2=\"276.79166666666663\" y2=\"220.8131868131868\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"273.56249999999994\" y=\"210.9230769230769\" width=\"6.458333333333333\" height=\"4.120879120879152\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:9.0s\"><rect x=\"32\" y=\"252\" width=\"250\" height=\"56\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"46\" y=\"276\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Before it finishes forming</text><text x=\"46\" y=\"296\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It is a moving price</text></g><g class=\"sv-rv\" style=\"animation-delay:21.5s\"><rect x=\"310\" y=\"84\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"107\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Opening range, once your window has closed</text></g><g class=\"sv-rv\" style=\"animation-delay:23.7s\"><rect x=\"310\" y=\"128\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"151\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Defended pullback high or low</text></g><g class=\"sv-rv\" style=\"animation-delay:25.9s\"><rect x=\"310\" y=\"172\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"195\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Developing VPOC and value edges, at the trigger</text></g><g class=\"sv-rv\" style=\"animation-delay:28.1s\"><rect x=\"310\" y=\"216\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"239\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Unfinished business</text></g><g class=\"sv-rv\" style=\"animation-delay:30.3s\"><rect x=\"310\" y=\"260\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"283\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stacked imbalance, as a location only</text></g><g class=\"sv-rv\" style=\"animation-delay:37.1s\"><text x=\"310\" y=\"318\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Wrong: the range high at 9:38 on a 9:45 window</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The in-session list: levels that form in front of you\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The in-session list</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Counts once finished forming, and only if your plan named the type</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"37.208333333333336\" y1=\"100.43835616438356\" x2=\"37.208333333333336\" y2=\"135.36986301369862\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"33.97916666666667\" y=\"112.76712328767124\" width=\"6.458333333333333\" height=\"18.493150684931493\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"47.625\" y1=\"119.95890410958904\" x2=\"47.625\" y2=\"155.91780821917808\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"44.395833333333336\" y=\"130.23287671232876\" width=\"6.458333333333333\" height=\"25.684931506849324\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"58.041666666666664\" y1=\"146.67123287671234\" x2=\"58.041666666666664\" y2=\"163.1095890410959\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"54.8125\" y=\"146.67123287671234\" width=\"6.458333333333333\" height=\"9.246575342465746\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"68.45833333333333\" y1=\"136.39726027397262\" x2=\"68.45833333333333\" y2=\"152.83561643835617\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"65.22916666666666\" y=\"146.67123287671234\" width=\"6.458333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"78.87499999999999\" y1=\"137.42465753424656\" x2=\"78.87499999999999\" y2=\"152.83561643835617\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"75.64583333333331\" y=\"147.6986301369863\" width=\"6.458333333333333\" height=\"5.136986301369859\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"89.29166666666666\" y1=\"129.2054794520548\" x2=\"89.29166666666666\" y2=\"155.91780821917808\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"86.06249999999999\" y=\"132.2876712328767\" width=\"6.458333333333333\" height=\"20.547945205479465\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"99.70833333333333\" y1=\"119.95890410958904\" x2=\"99.70833333333333\" y2=\"139.4794520547945\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"96.47916666666666\" y=\"128.17808219178082\" width=\"6.458333333333333\" height=\"4.109589041095887\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"110.12499999999999\" y1=\"128.17808219178082\" x2=\"110.12499999999999\" y2=\"138.45205479452056\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"106.89583333333331\" y=\"128.17808219178082\" width=\"6.458333333333333\" height=\"10.273972602739747\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"120.54166666666666\" y1=\"124.06849315068493\" x2=\"120.54166666666666\" y2=\"140.5068493150685\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"117.31249999999999\" y=\"127.15068493150685\" width=\"6.458333333333333\" height=\"12.328767123287662\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"130.95833333333334\" y1=\"126.12328767123287\" x2=\"130.95833333333334\" y2=\"131.26027397260273\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"127.72916666666667\" y=\"127.15068493150685\" width=\"6.458333333333333\" height=\"3.0821917808219155\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"141.375\" y1=\"130.23287671232876\" x2=\"141.375\" y2=\"139.4794520547945\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"138.14583333333334\" y=\"130.23287671232876\" width=\"6.458333333333333\" height=\"6.164383561643859\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"151.79166666666666\" y1=\"133.31506849315068\" x2=\"151.79166666666666\" y2=\"142.56164383561645\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"148.5625\" y=\"135.36986301369862\" width=\"6.458333333333333\" height=\"4.109589041095887\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"162.20833333333334\" y1=\"139.4794520547945\" x2=\"162.20833333333334\" y2=\"146.67123287671234\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"158.97916666666669\" y=\"139.4794520547945\" width=\"6.458333333333333\" height=\"4.109589041095916\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"172.625\" y1=\"143.58904109589042\" x2=\"172.625\" y2=\"152.83561643835617\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"169.39583333333334\" y=\"143.58904109589042\" width=\"6.458333333333333\" height=\"7.191780821917803\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"183.04166666666666\" y1=\"150.78082191780823\" x2=\"183.04166666666666\" y2=\"164.13698630136986\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"179.8125\" y=\"150.78082191780823\" width=\"6.458333333333333\" height=\"12.328767123287662\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"193.45833333333334\" y1=\"162.08219178082192\" x2=\"193.45833333333334\" y2=\"170.3013698630137\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"190.22916666666669\" y=\"163.1095890410959\" width=\"6.458333333333333\" height=\"7.191780821917803\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"203.875\" y1=\"165.16438356164383\" x2=\"203.875\" y2=\"175.43835616438355\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"200.64583333333334\" y=\"170.3013698630137\" width=\"6.458333333333333\" height=\"5.136986301369859\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"214.29166666666666\" y1=\"174.41095890410958\" x2=\"214.29166666666666\" y2=\"179.54794520547944\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"211.0625\" y=\"174.41095890410958\" width=\"6.458333333333333\" height=\"4.109589041095887\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"224.70833333333334\" y1=\"176.46575342465752\" x2=\"224.70833333333334\" y2=\"180.5753424657534\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"221.47916666666669\" y=\"177.49315068493152\" width=\"6.458333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"235.125\" y1=\"177.49315068493152\" x2=\"235.125\" y2=\"188.7945205479452\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"231.89583333333334\" y=\"177.49315068493152\" width=\"6.458333333333333\" height=\"10.27397260273969\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"245.54166666666666\" y1=\"182.63013698630135\" x2=\"245.54166666666666\" y2=\"188.7945205479452\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"242.3125\" y=\"187.7671232876712\" width=\"6.458333333333333\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"255.95833333333334\" y1=\"187.7671232876712\" x2=\"255.95833333333334\" y2=\"200.0958904109589\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"252.72916666666669\" y=\"187.7671232876712\" width=\"6.458333333333333\" height=\"12.32876712328769\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"266.37499999999994\" y1=\"200.0958904109589\" x2=\"266.37499999999994\" y2=\"209.34246575342468\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"263.14583333333326\" y=\"200.0958904109589\" width=\"6.458333333333333\" height=\"2.054794520547972\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"276.79166666666663\" y1=\"202.15068493150687\" x2=\"276.79166666666663\" y2=\"217.56164383561645\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"273.56249999999994\" y=\"202.15068493150687\" width=\"6.458333333333333\" height=\"15.410958904109577\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:9.0s\"><rect x=\"32\" y=\"252\" width=\"250\" height=\"56\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"46\" y=\"276\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Before it finishes forming</text><text x=\"46\" y=\"296\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It is a moving price</text></g><g class=\"sv-rv\" style=\"animation-delay:21.5s\"><rect x=\"310\" y=\"84\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"107\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Opening range, once your window has closed</text></g><g class=\"sv-rv\" style=\"animation-delay:23.7s\"><rect x=\"310\" y=\"128\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"151\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Defended pullback high or low</text></g><g class=\"sv-rv\" style=\"animation-delay:25.9s\"><rect x=\"310\" y=\"172\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"195\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Developing VPOC and value edges, at the trigger</text></g><g class=\"sv-rv\" style=\"animation-delay:28.1s\"><rect x=\"310\" y=\"216\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"239\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Unfinished business</text></g><g class=\"sv-rv\" style=\"animation-delay:30.3s\"><rect x=\"310\" y=\"260\" width=\"298\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"322\" y=\"283\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stacked imbalance, as a location only</text></g><g class=\"sv-rv\" style=\"animation-delay:37.1s\"><text x=\"310\" y=\"318\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Wrong: the range high at 9:38 on a 9:45 window</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
         }
       ],
       "duration": 131.5,
@@ -546,15 +546,15 @@
         },
         {
           "start": 10.3,
-          "text": "8:50. Templates first: a regular-session template and a full-session template, both ending at 4:00 p.m. Eastern."
+          "text": "8:50 a.m. Templates first: a regular-session template and a full-session template, both ending at 4 p.m. Eastern."
         },
         {
           "start": 19.7,
-          "text": "9:00. Collect the data by scope. From the regular session: high 24,186.50, low 24,032.00, value area high 24,148.00, low 24,071.00, volume point of control 24,112.00, settlement 24,131.50."
+          "text": "9 a.m. Collect the data by scope. From the regular session: high 24,186.50, low 24,032.00, value area high 24,148.00, low 24,071.00, volume point of control 24,112.00, settlement 24,131.50."
         },
         {
           "start": 42.8,
-          "text": "The overnight high is 24,190.00, printed at 4:12 p.m. It is above the regular-session high, but it came after 4:00 p.m., so it belongs to the overnight range. The prior-day high stays 24,186.50.",
+          "text": "The overnight high is 24,190.00, printed at 4:12 p.m. It is above the regular-session high, but it came after 4 p.m., so it belongs to the overnight range. The prior-day high stays 24,186.50.",
           "chapter": "The 4 p.m. boundary"
         },
         {
@@ -595,12 +595,12 @@
         {
           "start": 0,
           "title": "Worked case",
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Worked case: a blank chart, marked by 9:25 a.m.\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Worked case: blank chart</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Invented prices. It stops at 9:25 a.m.: no entry, no outcome</text><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">8:50</text><text x=\"110\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Templates: regular and full, both end at 4:00 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:00</text><text x=\"110\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Collect the data by scope</text></g><g class=\"sv-rv\" style=\"animation-delay:22.7s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Prior-day high 24,186.50</text><text x=\"32\" y=\"252\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Prior-day low 24,032.00</text><text x=\"32\" y=\"274\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Value area 24,071.00 to 24,148.00</text><text x=\"32\" y=\"296\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">VPOC 24,112.00   Settlement 24,131.50</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Worked case: a blank chart, marked by 9:25 a.m.\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Worked case: blank chart</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Invented prices. It stops at 9:25 a.m.: no entry, no outcome</text><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">8:50 a.m.</text><text x=\"110\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Templates: regular and full, both end at 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9 a.m.</text><text x=\"110\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Collect the data by scope</text></g><g class=\"sv-rv\" style=\"animation-delay:22.7s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Prior-day high 24,186.50</text><text x=\"32\" y=\"252\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Prior-day low 24,032.00</text><text x=\"32\" y=\"274\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">Value area 24,071.00 to 24,148.00</text><text x=\"32\" y=\"296\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">VPOC 24,112.00   Settlement 24,131.50</text></g></svg>"
         },
         {
           "start": 42.8,
           "title": "The 16:00 boundary",
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The 4:00 p.m. boundary\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The 4:00 p.m. boundary</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A 4:12 p.m. print belongs to the overnight range</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"80\" width=\"330\" height=\"40\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"197\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Regular session</text><rect x=\"362\" y=\"80\" width=\"246\" height=\"40\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"485\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Overnight</text><line x1=\"362\" y1=\"72\" x2=\"362\" y2=\"130\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"362\" y=\"66\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">4:00 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.4s\"><text x=\"32\" y=\"146\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">High 24,186.50</text><text x=\"608\" y=\"146\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-n\" style=\"fill:var(--gold)\">High 24,190.00 at 4:12 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:15.4s\"><rect x=\"32\" y=\"162\" width=\"576\" height=\"26\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"46\" y=\"180\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Overlapping zones merge: one row, far edge 24,190.00</text></g><g class=\"sv-rv\" style=\"animation-delay:17.4s\"><rect x=\"32\" y=\"200\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"221\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:10</text><text x=\"110\" y=\"221\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write each level as a zone with its far edge</text></g><g class=\"sv-rv\" style=\"animation-delay:29.2s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"261\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:15</text><text x=\"110\" y=\"261\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Everything outside the eleven rows is mid-range</text></g><g class=\"sv-rv\" style=\"animation-delay:38.5s\"><text x=\"32\" y=\"300\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Struck: overnight VWAP, 24,100.00, a Fibonacci line, a trendline</text></g><g class=\"sv-rv\" style=\"animation-delay:71.4s\"><text x=\"32\" y=\"328\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The time went on scope and edges, not on finding more lines</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The 4 p.m. boundary\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The 4 p.m. boundary</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A 4:12 p.m. print belongs to the overnight range</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"80\" width=\"330\" height=\"40\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"197\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Regular session</text><rect x=\"362\" y=\"80\" width=\"246\" height=\"40\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"485\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Overnight</text><line x1=\"362\" y1=\"72\" x2=\"362\" y2=\"130\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"362\" y=\"66\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.4s\"><text x=\"32\" y=\"146\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">High 24,186.50</text><text x=\"608\" y=\"146\" font-size=\"12\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-n\" style=\"fill:var(--gold)\">High 24,190.00 at 4:12 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:15.4s\"><rect x=\"32\" y=\"162\" width=\"576\" height=\"26\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"46\" y=\"180\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Overlapping zones merge: one row, far edge 24,190.00</text></g><g class=\"sv-rv\" style=\"animation-delay:17.4s\"><rect x=\"32\" y=\"200\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"221\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:10</text><text x=\"110\" y=\"221\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write each level as a zone with its far edge</text></g><g class=\"sv-rv\" style=\"animation-delay:29.2s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"261\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:15</text><text x=\"110\" y=\"261\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Everything outside the eleven rows is mid-range</text></g><g class=\"sv-rv\" style=\"animation-delay:38.5s\"><text x=\"32\" y=\"300\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Struck: overnight VWAP, 24,100.00, a Fibonacci line, a trendline</text></g><g class=\"sv-rv\" style=\"animation-delay:71.4s\"><text x=\"32\" y=\"328\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The time went on scope and edges, not on finding more lines</text></g></svg>"
         },
         {
           "start": 121.3,
@@ -666,423 +666,423 @@
             "bars": [
               [
                 1704189000,
-                24120,
-                24121,
-                24118.5,
-                24120.25
+                24124,
+                24124.75,
+                24123.25,
+                24123.5
               ],
               [
                 1704189300,
-                24120.25,
-                24122.25,
-                24119.25,
-                24121
+                24123.5,
+                24125.25,
+                24123.5,
+                24125
               ],
               [
                 1704189600,
-                24121,
+                24125,
+                24126,
                 24124.75,
-                24120.5,
-                24123.75
+                24126
               ],
               [
                 1704189900,
-                24123.75,
-                24127,
-                24123.5,
-                24125.25
+                24126.25,
+                24128.75,
+                24126.25,
+                24128.5
               ],
               [
                 1704190200,
-                24125.25,
-                24128.25,
-                24123.5,
-                24126.75
+                24128.5,
+                24132.5,
+                24128.5,
+                24132.25
               ],
               [
                 1704190500,
-                24126.75,
-                24131.75,
-                24125.75,
-                24130
+                24132,
+                24133.75,
+                24132,
+                24133.75
               ],
               [
                 1704190800,
-                24130,
-                24132.25,
-                24129.5,
-                24131
+                24133.75,
+                24137,
+                24133.5,
+                24137
               ],
               [
                 1704191100,
-                24131,
-                24134.75,
-                24128.75,
-                24133.25
+                24137,
+                24140.25,
+                24136.75,
+                24139.75
               ],
               [
                 1704191400,
-                24133.25,
-                24135.25,
-                24131.5,
-                24134.25
+                24139.75,
+                24140.75,
+                24139.5,
+                24140.75
               ],
               [
                 1704191700,
-                24134.25,
-                24137.25,
-                24134.25,
-                24136.75
+                24140.75,
+                24144.5,
+                24140.5,
+                24144.25
               ],
               [
                 1704192000,
-                24136.75,
-                24138.75,
-                24135.5,
-                24138.75
+                24144.25,
+                24145.25,
+                24143.25,
+                24144.5
               ],
               [
                 1704192300,
-                24138.75,
-                24140.75,
-                24137.5,
-                24139.5
+                24144.25,
+                24147.25,
+                24144.25,
+                24147.25
               ],
               [
                 1704192600,
-                24139.5,
-                24142,
-                24138,
-                24141.5
+                24147.25,
+                24149.25,
+                24147.25,
+                24148
               ],
               [
                 1704192900,
-                24141.5,
-                24144.75,
-                24139.5,
-                24144
+                24148,
+                24150.75,
+                24147.75,
+                24150
               ],
               [
                 1704193200,
-                24144,
-                24147,
-                24142.5,
-                24146
+                24150,
+                24155,
+                24150,
+                24155
               ],
               [
                 1704193500,
-                24146,
-                24147.75,
-                24145,
-                24146.5
+                24155,
+                24157,
+                24153.75,
+                24155.25
               ],
               [
                 1704193800,
-                24146.5,
-                24151.5,
-                24145.75,
-                24149.5
+                24155.25,
+                24157.25,
+                24153,
+                24155.25
               ],
               [
                 1704194100,
-                24149.5,
-                24153,
-                24149.5,
-                24151.5
+                24155,
+                24162.25,
+                24155,
+                24159.5
               ],
               [
                 1704194400,
-                24151.5,
-                24152.75,
-                24150.25,
-                24152.5
+                24159.5,
+                24159.75,
+                24156.75,
+                24158.5
               ],
               [
                 1704194700,
-                24152.5,
-                24154.5,
-                24150.75,
-                24154.25
+                24158.5,
+                24159.75,
+                24156.5,
+                24157.75
               ],
               [
                 1704195000,
-                24154.25,
-                24155.75,
-                24153.75,
+                24157.75,
+                24158.25,
+                24154,
                 24155.5
               ],
               [
                 1704195300,
                 24155.5,
-                24160.25,
-                24154.5,
-                24159
+                24158.25,
+                24153.5,
+                24157
               ],
               [
                 1704195600,
-                24159,
-                24160,
-                24158,
-                24159.75
+                24157.25,
+                24158.25,
+                24155.5,
+                24157.25
               ],
               [
                 1704195900,
-                24159.75,
-                24162.25,
-                24159.5,
-                24161.5
+                24157.25,
+                24160,
+                24156.75,
+                24157.25
               ],
               [
                 1704196200,
-                24161.5,
-                24166.25,
-                24160.5,
-                24164.5
+                24157.25,
+                24158.75,
+                24156.5,
+                24157.25
               ],
               [
                 1704196500,
-                24164.5,
-                24165.75,
-                24162.5,
-                24165.5
-              ],
-              [
-                1704196800,
-                24165.5,
-                24167.25,
-                24164,
-                24166.5
-              ],
-              [
-                1704197100,
-                24166.5,
-                24171.25,
-                24166.25,
-                24169.5
-              ],
-              [
-                1704197400,
-                24169.5,
-                24171.5,
-                24167.25,
-                24171.25
-              ],
-              [
-                1704197700,
-                24171.25,
-                24172.25,
-                24169,
-                24171.75
-              ],
-              [
-                1704198000,
-                24171.75,
-                24175,
-                24171.25,
-                24175
-              ],
-              [
-                1704198300,
-                24175,
-                24177,
-                24173,
-                24176.75
-              ],
-              [
-                1704198600,
-                24176.75,
-                24180,
-                24175.5,
-                24178
-              ],
-              [
-                1704198900,
-                24178,
-                24181,
-                24178,
-                24179.25
-              ],
-              [
-                1704199200,
-                24179.25,
-                24182.25,
-                24179,
-                24181.5
-              ],
-              [
-                1704199500,
-                24181.5,
-                24186.5,
-                24181,
-                24182.5
-              ],
-              [
-                1704199800,
-                24182.5,
-                24184,
-                24181.75,
-                24182.5
-              ],
-              [
-                1704200100,
-                24182.5,
-                24185,
-                24181.25,
-                24183.5
-              ],
-              [
-                1704200400,
-                24183.5,
-                24186.5,
-                24182.5,
-                24182.75
-              ],
-              [
-                1704200700,
-                24182.75,
-                24185,
-                24179.25,
-                24180
-              ],
-              [
-                1704201000,
-                24180,
-                24180.25,
-                24177.25,
-                24177.75
-              ],
-              [
-                1704201300,
-                24177.75,
-                24178.25,
-                24176.25,
-                24177
-              ],
-              [
-                1704201600,
-                24177,
-                24177.75,
-                24173.25,
-                24175
-              ],
-              [
-                1704201900,
-                24175,
-                24176.25,
-                24173.25,
-                24174.5
-              ],
-              [
-                1704202200,
-                24174.5,
-                24175.75,
-                24170.5,
-                24172.25
-              ],
-              [
-                1704202500,
-                24172.25,
-                24173.25,
-                24170.75,
-                24171.5
-              ],
-              [
-                1704202800,
-                24171.5,
-                24172.5,
-                24167.25,
-                24168.25
-              ],
-              [
-                1704203100,
-                24168.25,
-                24169.75,
-                24165,
-                24167
-              ],
-              [
-                1704203400,
-                24167,
-                24169,
-                24164.75,
-                24166.75
-              ],
-              [
-                1704203700,
-                24166.75,
-                24168.25,
-                24164.5,
-                24165.5
-              ],
-              [
-                1704204000,
-                24165.5,
-                24167.75,
-                24163.5,
-                24163.5
-              ],
-              [
-                1704204300,
-                24163.5,
-                24164.25,
-                24159.5,
-                24160.75
-              ],
-              [
-                1704204600,
-                24160.75,
-                24161,
-                24159.25,
+                24157.25,
+                24160.5,
+                24152.75,
                 24160.5
               ],
               [
-                1704204900,
+                1704196800,
                 24160.5,
+                24163.25,
+                24158.75,
+                24163.25
+              ],
+              [
+                1704197100,
+                24163.25,
+                24167,
                 24162.25,
-                24157,
-                24159
+                24166.25
+              ],
+              [
+                1704197400,
+                24166.25,
+                24170,
+                24166.25,
+                24170
+              ],
+              [
+                1704197700,
+                24169.75,
+                24172.25,
+                24169.75,
+                24170
+              ],
+              [
+                1704198000,
+                24169.75,
+                24170.25,
+                24166.25,
+                24166.25
+              ],
+              [
+                1704198300,
+                24166.25,
+                24169.25,
+                24166.25,
+                24167.25
+              ],
+              [
+                1704198600,
+                24167.25,
+                24171.25,
+                24165.25,
+                24171
+              ],
+              [
+                1704198900,
+                24171.25,
+                24179.5,
+                24171.25,
+                24178.75
+              ],
+              [
+                1704199200,
+                24178.75,
+                24181.5,
+                24177.25,
+                24178
+              ],
+              [
+                1704199500,
+                24178,
+                24186.5,
+                24175.5,
+                24180.25
+              ],
+              [
+                1704199800,
+                24180.25,
+                24183.25,
+                24174.75,
+                24175.75
+              ],
+              [
+                1704200100,
+                24176,
+                24178.5,
+                24169.75,
+                24169.75
+              ],
+              [
+                1704200400,
+                24169.75,
+                24172,
+                24168,
+                24172
+              ],
+              [
+                1704200700,
+                24172,
+                24174.5,
+                24170.5,
+                24171.75
+              ],
+              [
+                1704201000,
+                24171.75,
+                24174.25,
+                24170.5,
+                24170.5
+              ],
+              [
+                1704201300,
+                24170.5,
+                24176.25,
+                24169.75,
+                24175.5
+              ],
+              [
+                1704201600,
+                24175.5,
+                24178.5,
+                24173.75,
+                24176.5
+              ],
+              [
+                1704201900,
+                24176.5,
+                24176.5,
+                24174,
+                24174
+              ],
+              [
+                1704202200,
+                24173.75,
+                24177.5,
+                24173.5,
+                24176.75
+              ],
+              [
+                1704202500,
+                24176.75,
+                24177,
+                24175.75,
+                24176
+              ],
+              [
+                1704202800,
+                24176,
+                24176,
+                24173.75,
+                24174.5
+              ],
+              [
+                1704203100,
+                24174.75,
+                24175.25,
+                24173,
+                24173.75
+              ],
+              [
+                1704203400,
+                24173.75,
+                24173.75,
+                24172,
+                24172.75
+              ],
+              [
+                1704203700,
+                24172.75,
+                24172.75,
+                24170.5,
+                24171
+              ],
+              [
+                1704204000,
+                24171,
+                24171,
+                24167.75,
+                24168
+              ],
+              [
+                1704204300,
+                24168,
+                24168.25,
+                24166.25,
+                24166.25
+              ],
+              [
+                1704204600,
+                24166.25,
+                24167.5,
+                24165,
+                24165
+              ],
+              [
+                1704204900,
+                24165.25,
+                24165.25,
+                24164,
+                24164.25
               ],
               [
                 1704205200,
-                24159,
-                24159.75,
-                24157.75,
-                24158
+                24164.25,
+                24164.75,
+                24163.75,
+                24164.5
               ],
               [
                 1704205500,
-                24158,
-                24160,
-                24155,
-                24156.5
+                24164.5,
+                24164.5,
+                24161.75,
+                24162
               ],
               [
                 1704205800,
-                24156.5,
-                24156.5,
-                24153.5,
-                24155.25
+                24162,
+                24163.25,
+                24161.75,
+                24162
               ],
               [
                 1704206100,
-                24155.25,
-                24157,
-                24152.5,
-                24153.25
+                24162,
+                24162,
+                24159,
+                24159
               ],
               [
                 1704206400,
-                24153.25,
-                24153.75,
-                24152,
-                24152
+                24159,
+                24159,
+                24156.75,
+                24158.5
               ],
               [
                 1704206700,
-                24152,
-                24153.5,
-                24149,
-                24150.75
+                24158.5,
+                24158.5,
+                24154.75,
+                24154.75
               ]
             ],
             "answer": 24186.5,
@@ -1096,423 +1096,423 @@
             "bars": [
               [
                 1704189000,
-                24100,
-                24100,
-                24099.25,
-                24099.25
-              ],
-              [
-                1704189300,
-                24099.25,
-                24100.5,
-                24097.5,
-                24097.75
-              ],
-              [
-                1704189600,
-                24097.75,
-                24099.75,
-                24095.75,
-                24096.5
-              ],
-              [
-                1704189900,
-                24096.5,
-                24096.75,
-                24092.25,
-                24093.75
-              ],
-              [
-                1704190200,
-                24093.75,
-                24095.75,
-                24092.75,
-                24093.75
-              ],
-              [
-                1704190500,
-                24093.75,
-                24095.5,
-                24090.5,
-                24090.75
-              ],
-              [
-                1704190800,
-                24090.75,
-                24093,
-                24089.25,
-                24090.25
-              ],
-              [
-                1704191100,
-                24090.25,
-                24091,
-                24086.5,
+                24090,
+                24090,
+                24085.75,
                 24088.25
               ],
               [
-                1704191400,
+                1704189300,
                 24088.25,
-                24089,
+                24088.5,
                 24086,
+                24088.25
+              ],
+              [
+                1704189600,
+                24088.25,
+                24090.25,
+                24087.75,
+                24088.5
+              ],
+              [
+                1704189900,
+                24088.5,
+                24090.75,
+                24086.5,
+                24090.5
+              ],
+              [
+                1704190200,
+                24090.5,
+                24090.5,
+                24082.25,
+                24084
+              ],
+              [
+                1704190500,
+                24084.25,
+                24087,
+                24081.75,
+                24087
+              ],
+              [
+                1704190800,
+                24087,
+                24087.25,
+                24082.25,
+                24083.75
+              ],
+              [
+                1704191100,
+                24083.75,
+                24087.5,
+                24083.75,
                 24086.25
               ],
               [
-                1704191700,
+                1704191400,
                 24086.25,
-                24088.25,
-                24084.5,
-                24085
+                24086.5,
+                24083.75,
+                24086.5
+              ],
+              [
+                1704191700,
+                24086.75,
+                24088.75,
+                24080.5,
+                24080.5
               ],
               [
                 1704192000,
-                24085,
-                24086.75,
+                24080.5,
                 24081,
-                24081.75
+                24076,
+                24076
               ],
               [
                 1704192300,
-                24081.75,
-                24082.25,
-                24078.75,
-                24081
+                24076,
+                24076,
+                24063.5,
+                24063.5
               ],
               [
                 1704192600,
-                24081,
-                24081.25,
-                24076.5,
-                24078.25
+                24063.5,
+                24072.75,
+                24063.5,
+                24072.75
               ],
               [
                 1704192900,
-                24078.25,
-                24080,
-                24075.75,
-                24076.75
+                24072.75,
+                24073.75,
+                24069.75,
+                24071.5
               ],
               [
                 1704193200,
-                24076.75,
-                24077,
-                24073.5,
-                24075
+                24071.5,
+                24077.5,
+                24069.25,
+                24076.25
               ],
               [
                 1704193500,
-                24075,
-                24075.75,
-                24072,
-                24073.5
-              ],
-              [
-                1704193800,
-                24073.5,
-                24075.25,
-                24069,
-                24071
-              ],
-              [
-                1704194100,
-                24071,
-                24071.25,
-                24068.75,
-                24070.25
-              ],
-              [
-                1704194400,
-                24070.25,
-                24071,
-                24066,
-                24067.75
-              ],
-              [
-                1704194700,
-                24067.75,
-                24069.5,
-                24066,
-                24067.5
-              ],
-              [
-                1704195000,
-                24067.5,
-                24068.75,
-                24062.5,
-                24064.75
-              ],
-              [
-                1704195300,
-                24064.75,
-                24066,
-                24060.75,
-                24062.75
-              ],
-              [
-                1704195600,
-                24062.75,
-                24063.75,
-                24061.5,
-                24061.75
-              ],
-              [
-                1704195900,
-                24061.75,
-                24063,
-                24058,
-                24060
-              ],
-              [
-                1704196200,
-                24060,
-                24062.25,
-                24057,
-                24057.5
-              ],
-              [
-                1704196500,
-                24057.5,
-                24057.5,
-                24054.75,
-                24056.75
-              ],
-              [
-                1704196800,
-                24056.75,
-                24057,
-                24053.25,
-                24054.25
-              ],
-              [
-                1704197100,
-                24054.25,
-                24054.75,
-                24051.5,
-                24051.75
-              ],
-              [
-                1704197400,
-                24051.75,
-                24052,
-                24048.5,
-                24050
-              ],
-              [
-                1704197700,
-                24050,
-                24050.5,
-                24047.25,
-                24048.25
-              ],
-              [
-                1704198000,
-                24048.25,
-                24048.25,
-                24047,
-                24047.75
-              ],
-              [
-                1704198300,
-                24047.75,
-                24049.25,
-                24044.75,
-                24045.25
-              ],
-              [
-                1704198600,
-                24045.25,
-                24046.25,
-                24043,
-                24044.25
-              ],
-              [
-                1704198900,
-                24044.25,
-                24044.25,
-                24041.5,
-                24042.25
-              ],
-              [
-                1704199200,
-                24042.25,
-                24043.25,
-                24039.25,
-                24041
-              ],
-              [
-                1704199500,
-                24041,
-                24043,
-                24032,
-                24038.5
-              ],
-              [
-                1704199800,
-                24038.5,
-                24041.25,
-                24038,
-                24039.5
-              ],
-              [
-                1704200100,
-                24039.5,
-                24041,
-                24037.5,
-                24038.25
-              ],
-              [
-                1704200400,
-                24038.25,
-                24041.25,
-                24032,
-                24039.25
-              ],
-              [
-                1704200700,
-                24039.25,
-                24043.75,
-                24038.25,
-                24042
-              ],
-              [
-                1704201000,
-                24042,
-                24045,
-                24041.5,
-                24043.25
-              ],
-              [
-                1704201300,
-                24043.25,
-                24046.25,
-                24042.5,
-                24046
-              ],
-              [
-                1704201600,
-                24046,
-                24048.75,
-                24046,
-                24047
-              ],
-              [
-                1704201900,
-                24047,
-                24051.5,
-                24045.75,
-                24049.5
-              ],
-              [
-                1704202200,
-                24049.5,
-                24052.25,
-                24047.75,
-                24050.25
-              ],
-              [
-                1704202500,
-                24050.25,
-                24053.75,
-                24049.5,
-                24053.25
-              ],
-              [
-                1704202800,
-                24053.25,
-                24053.5,
-                24051.75,
-                24053.25
-              ],
-              [
-                1704203100,
-                24053.25,
-                24057,
-                24051.25,
-                24055.5
-              ],
-              [
-                1704203400,
-                24055.5,
-                24057.5,
-                24055,
-                24057
-              ],
-              [
-                1704203700,
-                24057,
-                24059.5,
-                24056.5,
-                24058.75
-              ],
-              [
-                1704204000,
-                24058.75,
-                24061.25,
-                24058,
-                24060.75
-              ],
-              [
-                1704204300,
-                24060.75,
-                24062.75,
-                24059.75,
-                24061.5
-              ],
-              [
-                1704204600,
-                24061.5,
-                24063.5,
-                24060,
-                24063
-              ],
-              [
-                1704204900,
-                24063,
-                24066,
-                24061.25,
-                24064.25
-              ],
-              [
-                1704205200,
-                24064.25,
-                24066.5,
-                24062.5,
-                24066.5
-              ],
-              [
-                1704205500,
-                24066.5,
-                24069.5,
-                24066.25,
-                24067.75
-              ],
-              [
-                1704205800,
-                24067.75,
-                24070.25,
-                24066.25,
-                24069
-              ],
-              [
-                1704206100,
-                24069,
-                24073.75,
-                24069,
+                24076.25,
+                24078.25,
+                24071.5,
                 24072.25
               ],
               [
-                1704206400,
+                1704193800,
                 24072.25,
-                24075.25,
+                24073,
+                24069,
+                24069.25
+              ],
+              [
+                1704194100,
+                24069.25,
+                24076.5,
+                24069.25,
+                24076.5
+              ],
+              [
+                1704194400,
+                24076.5,
+                24076.5,
+                24071.5,
+                24073
+              ],
+              [
+                1704194700,
+                24073,
+                24073.5,
+                24068.5,
+                24069.5
+              ],
+              [
+                1704195000,
+                24069.5,
+                24072.25,
+                24068,
+                24068.5
+              ],
+              [
+                1704195300,
+                24068.5,
+                24073.75,
+                24067.5,
+                24071.5
+              ],
+              [
+                1704195600,
+                24071.25,
+                24079,
+                24071.25,
+                24079
+              ],
+              [
+                1704195900,
+                24079,
+                24084.5,
+                24078.25,
+                24081
+              ],
+              [
+                1704196200,
+                24081,
+                24081,
+                24077.5,
+                24077.5
+              ],
+              [
+                1704196500,
+                24077.5,
+                24078,
+                24071,
+                24078
+              ],
+              [
+                1704196800,
+                24078,
+                24079.25,
+                24077.5,
+                24079.25
+              ],
+              [
+                1704197100,
+                24079.25,
+                24079.25,
+                24072,
+                24072
+              ],
+              [
+                1704197400,
+                24072,
+                24073.75,
+                24068,
+                24070.5
+              ],
+              [
+                1704197700,
+                24070.5,
+                24070.5,
+                24032,
+                24035
+              ],
+              [
+                1704198000,
+                24035,
+                24041.5,
+                24034,
+                24040.75
+              ],
+              [
+                1704198300,
+                24040.75,
+                24048.75,
+                24040.75,
+                24046.5
+              ],
+              [
+                1704198600,
+                24046.5,
+                24048.25,
+                24046.25,
+                24046.25
+              ],
+              [
+                1704198900,
+                24046.25,
+                24050,
+                24045.25,
+                24050
+              ],
+              [
+                1704199200,
+                24050,
+                24053.25,
+                24049.25,
+                24053
+              ],
+              [
+                1704199500,
+                24053,
+                24055.75,
+                24053,
+                24055.75
+              ],
+              [
+                1704199800,
+                24055.75,
+                24057.5,
+                24053.75,
+                24057.5
+              ],
+              [
+                1704200100,
+                24057.5,
+                24060.25,
+                24054.75,
+                24059.75
+              ],
+              [
+                1704200400,
+                24059.75,
+                24060.25,
+                24056.25,
+                24058.25
+              ],
+              [
+                1704200700,
+                24058.5,
+                24067.5,
+                24058.5,
+                24067.5
+              ],
+              [
+                1704201000,
+                24067.5,
+                24067.5,
+                24063.25,
+                24063.75
+              ],
+              [
+                1704201300,
+                24063.75,
+                24067.25,
+                24063,
+                24066.75
+              ],
+              [
+                1704201600,
+                24066.75,
+                24071.5,
+                24066.25,
+                24071
+              ],
+              [
+                1704201900,
+                24071,
+                24079,
                 24070.75,
-                24073.25
+                24079
+              ],
+              [
+                1704202200,
+                24079,
+                24083,
+                24078.75,
+                24083
+              ],
+              [
+                1704202500,
+                24083,
+                24092.5,
+                24083,
+                24091
+              ],
+              [
+                1704202800,
+                24091.25,
+                24091.75,
+                24087.25,
+                24088
+              ],
+              [
+                1704203100,
+                24088,
+                24093,
+                24088,
+                24092
+              ],
+              [
+                1704203400,
+                24092,
+                24099,
+                24091,
+                24098.75
+              ],
+              [
+                1704203700,
+                24098.75,
+                24104.25,
+                24098.75,
+                24103
+              ],
+              [
+                1704204000,
+                24103.25,
+                24105,
+                24100.5,
+                24104
+              ],
+              [
+                1704204300,
+                24104,
+                24109.25,
+                24102,
+                24109.25
+              ],
+              [
+                1704204600,
+                24109.25,
+                24113,
+                24108.25,
+                24108.25
+              ],
+              [
+                1704204900,
+                24108.25,
+                24108.25,
+                24101.25,
+                24105.5
+              ],
+              [
+                1704205200,
+                24105.5,
+                24107.25,
+                24103.25,
+                24103.25
+              ],
+              [
+                1704205500,
+                24103.25,
+                24104.75,
+                24103,
+                24104.25
+              ],
+              [
+                1704205800,
+                24104.25,
+                24106.25,
+                24104.25,
+                24105.75
+              ],
+              [
+                1704206100,
+                24105.75,
+                24107.5,
+                24105.25,
+                24107.5
+              ],
+              [
+                1704206400,
+                24107.5,
+                24109.25,
+                24107.25,
+                24107.25
               ],
               [
                 1704206700,
-                24073.25,
-                24076.25,
-                24072.25,
-                24075.25
+                24107.25,
+                24109.75,
+                24107.25,
+                24109.25
               ]
             ],
             "answer": 24032,
@@ -1526,422 +1526,422 @@
             "bars": [
               [
                 1704189000,
-                24091.5,
-                24093,
-                24090.5,
-                24091
-              ],
-              [
-                1704189300,
-                24091,
-                24105.75,
-                24089.25,
-                24103.75
-              ],
-              [
-                1704189600,
-                24103.75,
-                24105.25,
-                24098.5,
-                24098.75
-              ],
-              [
-                1704189900,
-                24098.75,
-                24110,
-                24097.25,
-                24109.5
-              ],
-              [
-                1704190200,
-                24109.5,
-                24109.5,
-                24098.75,
-                24100.5
-              ],
-              [
-                1704190500,
-                24100.5,
                 24101.75,
-                24094,
+                24102,
+                24096,
                 24096
               ],
               [
-                1704190800,
-                24096,
-                24106.25,
+                1704189300,
+                24096.25,
+                24096.5,
+                24092.75,
+                24094.25
+              ],
+              [
+                1704189600,
                 24094.25,
-                24106
+                24100,
+                24092.25,
+                24099.25
+              ],
+              [
+                1704189900,
+                24099,
+                24099,
+                24093.25,
+                24094.5
+              ],
+              [
+                1704190200,
+                24094.5,
+                24094.5,
+                24082.25,
+                24082.25
+              ],
+              [
+                1704190500,
+                24082.25,
+                24090,
+                24082.25,
+                24089.25
+              ],
+              [
+                1704190800,
+                24089.25,
+                24098,
+                24087.25,
+                24096
               ],
               [
                 1704191100,
-                24106,
-                24108.25,
+                24096,
                 24097.5,
-                24099.5
-              ],
-              [
-                1704191400,
-                24099.5,
-                24100.25,
-                24094.5,
-                24094.5
-              ],
-              [
-                1704191700,
-                24094.5,
-                24105,
-                24092.75,
-                24105
-              ],
-              [
-                1704192000,
-                24105,
-                24105.5,
-                24096.5,
-                24098.25
-              ],
-              [
-                1704192300,
-                24098.25,
-                24099.5,
-                24088.25,
-                24090.25
-              ],
-              [
-                1704192600,
-                24090.25,
-                24105.25,
                 24090,
-                24103.5
-              ],
-              [
-                1704192900,
-                24103.5,
-                24105.25,
-                24095.5,
-                24096.75
-              ],
-              [
-                1704193200,
-                24096.75,
-                24109.25,
-                24095.75,
-                24108.25
-              ],
-              [
-                1704193500,
-                24108.25,
-                24108.75,
-                24100.5,
-                24101
-              ],
-              [
-                1704193800,
-                24101,
-                24102,
-                24092.5,
-                24093.5
-              ],
-              [
-                1704194100,
-                24093.5,
-                24106.75,
-                24092.25,
-                24106.75
-              ],
-              [
-                1704194400,
-                24106.75,
-                24106.75,
-                24098.5,
-                24099.25
-              ],
-              [
-                1704194700,
-                24099.25,
-                24099.25,
-                24094,
-                24094.75
-              ],
-              [
-                1704195000,
-                24094.75,
-                24106.5,
-                24094,
-                24104.5
-              ],
-              [
-                1704195300,
-                24104.5,
-                24106.5,
-                24096.25,
-                24096.5
-              ],
-              [
-                1704195600,
-                24096.5,
-                24098.25,
-                24089,
-                24090.5
-              ],
-              [
-                1704195900,
-                24090.5,
-                24104.25,
-                24089,
-                24103
-              ],
-              [
-                1704196200,
-                24103,
-                24103.25,
-                24095.5,
-                24096.5
-              ],
-              [
-                1704196500,
-                24096.5,
-                24109.5,
-                24095.75,
-                24108.5
-              ],
-              [
-                1704196800,
-                24108.5,
-                24110.75,
-                24101.25,
-                24101.5
-              ],
-              [
-                1704197100,
-                24101.5,
-                24101.75,
-                24092,
-                24094
-              ],
-              [
-                1704197400,
-                24094,
-                24106,
-                24094,
-                24105
-              ],
-              [
-                1704197700,
-                24105,
-                24106,
-                24098.75,
-                24100.5
-              ],
-              [
-                1704198000,
-                24100.5,
-                24102.25,
-                24091.5,
-                24092.5
-              ],
-              [
-                1704198300,
-                24092.5,
-                24105,
-                24092,
-                24103.25
-              ],
-              [
-                1704198600,
-                24103.25,
-                24103.5,
-                24095.25,
-                24097.25
-              ],
-              [
-                1704198900,
-                24097.25,
-                24098.75,
-                24091.75,
-                24092
-              ],
-              [
-                1704199200,
-                24092,
-                24105,
-                24090.5,
-                24103.25
-              ],
-              [
-                1704199500,
-                24103.25,
-                24103.5,
-                24098.5,
-                24098.5
-              ],
-              [
-                1704199800,
-                24098.5,
-                24110.25,
-                24098,
-                24108.75
-              ],
-              [
-                1704200100,
-                24108.75,
-                24109.75,
-                24102,
-                24102.75
-              ],
-              [
-                1704200400,
-                24102.75,
-                24102.75,
-                24095.25,
-                24095.75
-              ],
-              [
-                1704200700,
-                24095.75,
-                24110,
-                24094.25,
-                24108
-              ],
-              [
-                1704201000,
-                24108,
-                24109.25,
-                24101.25,
-                24102.25
-              ],
-              [
-                1704201300,
-                24102.25,
-                24103.25,
-                24092.5,
-                24094.5
-              ],
-              [
-                1704201600,
-                24094.5,
-                24107.75,
-                24094.5,
-                24107
-              ],
-              [
-                1704201900,
-                24107,
-                24108.25,
-                24098.75,
-                24099.25
-              ],
-              [
-                1704202200,
-                24099.25,
-                24100.75,
-                24090.25,
-                24091.25
-              ],
-              [
-                1704202500,
-                24091.25,
-                24104,
-                24090.25,
-                24102.75
-              ],
-              [
-                1704202800,
-                24102.75,
-                24104,
-                24095,
-                24096.75
-              ],
-              [
-                1704203100,
-                24096.75,
-                24108.75,
-                24095.75,
-                24108.25
-              ],
-              [
-                1704203400,
-                24108.25,
-                24109,
-                24099.75,
-                24101
-              ],
-              [
-                1704203700,
-                24101,
-                24102.75,
-                24094,
-                24095
-              ],
-              [
-                1704204000,
-                24095,
-                24107,
-                24093.5,
-                24105.75
-              ],
-              [
-                1704204300,
-                24105.75,
-                24106,
-                24099.25,
-                24100.25
-              ],
-              [
-                1704204600,
-                24100.25,
-                24101,
-                24093.25,
                 24093.25
               ],
               [
-                1704204900,
+                1704191400,
                 24093.25,
-                24107.25,
-                24091.25,
-                24105.5
+                24095.25,
+                24090.5,
+                24094.75
               ],
               [
-                1704205200,
-                24105.5,
-                24106,
+                1704191700,
+                24095,
+                24097,
+                24091.5,
+                24091.5
+              ],
+              [
+                1704192000,
+                24091.5,
+                24094.5,
+                24091.25,
+                24094
+              ],
+              [
+                1704192300,
+                24094,
+                24095.25,
+                24091.75,
+                24091.75
+              ],
+              [
+                1704192600,
+                24091.75,
+                24097.75,
+                24090.5,
+                24096.5
+              ],
+              [
+                1704192900,
+                24096.5,
+                24108.5,
+                24096.5,
+                24108.5
+              ],
+              [
+                1704193200,
+                24108.5,
+                24109,
+                24101,
+                24104.5
+              ],
+              [
+                1704193500,
+                24104.5,
+                24107,
+                24101.5,
+                24102.75
+              ],
+              [
+                1704193800,
+                24102.75,
+                24102.75,
+                24098.75,
+                24101.75
+              ],
+              [
+                1704194100,
+                24101.75,
+                24103.25,
+                24095,
+                24103.25
+              ],
+              [
+                1704194400,
+                24103.25,
+                24104.75,
+                24098.25,
+                24098.25
+              ],
+              [
+                1704194700,
+                24098.25,
+                24101.75,
+                24091.75,
+                24093
+              ],
+              [
+                1704195000,
+                24093,
+                24098.5,
+                24092,
+                24098.25
+              ],
+              [
+                1704195300,
+                24098.25,
+                24102,
                 24096.25,
+                24101.5
+              ],
+              [
+                1704195600,
+                24101.5,
+                24106,
+                24101.25,
+                24101.25
+              ],
+              [
+                1704195900,
+                24101.25,
+                24104.25,
+                24101.25,
+                24101.75
+              ],
+              [
+                1704196200,
+                24101.75,
+                24104,
+                24100.75,
+                24101.25
+              ],
+              [
+                1704196500,
+                24101.25,
+                24102.25,
+                24097.75,
+                24098.75
+              ],
+              [
+                1704196800,
+                24098.75,
+                24101,
+                24086.75,
+                24094.75
+              ],
+              [
+                1704197100,
+                24094.75,
+                24099,
+                24093.5,
+                24095.75
+              ],
+              [
+                1704197400,
+                24096,
+                24102.25,
+                24096,
+                24100.5
+              ],
+              [
+                1704197700,
+                24100.5,
+                24103.5,
+                24098.5,
+                24103.5
+              ],
+              [
+                1704198000,
+                24103.5,
+                24106.5,
+                24103.5,
+                24103.5
+              ],
+              [
+                1704198300,
+                24103.5,
+                24103.5,
+                24100,
+                24103
+              ],
+              [
+                1704198600,
+                24103,
+                24104.5,
+                24101.25,
+                24103.5
+              ],
+              [
+                1704198900,
+                24103.5,
+                24103.5,
+                24097.75,
+                24097.75
+              ],
+              [
+                1704199200,
+                24097.75,
+                24099,
+                24097.25,
                 24097.25
               ],
               [
-                1704205500,
+                1704199500,
+                24097,
+                24098.75,
+                24095.5,
+                24098.75
+              ],
+              [
+                1704199800,
+                24098.75,
+                24100,
+                24096.75,
+                24097.75
+              ],
+              [
+                1704200100,
+                24097.75,
+                24098.25,
+                24096.5,
+                24096.75
+              ],
+              [
+                1704200400,
+                24096.75,
+                24096.75,
+                24094.5,
+                24096
+              ],
+              [
+                1704200700,
+                24096,
+                24096.5,
+                24095.75,
+                24096.5
+              ],
+              [
+                1704201000,
+                24096.5,
                 24097.25,
-                24098,
-                24091.25,
-                24092.25
+                24096,
+                24097
+              ],
+              [
+                1704201300,
+                24097,
+                24099.5,
+                24096.75,
+                24099.5
+              ],
+              [
+                1704201600,
+                24099.5,
+                24100.75,
+                24098.75,
+                24100.25
+              ],
+              [
+                1704201900,
+                24100.25,
+                24102.25,
+                24100,
+                24102.25
+              ],
+              [
+                1704202200,
+                24102.25,
+                24102.5,
+                24100.75,
+                24100.75
+              ],
+              [
+                1704202500,
+                24100.75,
+                24101,
+                24098.75,
+                24099.25
+              ],
+              [
+                1704202800,
+                24099.5,
+                24100.75,
+                24097.75,
+                24098.5
+              ],
+              [
+                1704203100,
+                24098.5,
+                24099.25,
+                24097.75,
+                24097.75
+              ],
+              [
+                1704203400,
+                24097.75,
+                24097.75,
+                24095.75,
+                24095.75
+              ],
+              [
+                1704203700,
+                24095.75,
+                24099.25,
+                24095.75,
+                24098.5
+              ],
+              [
+                1704204000,
+                24098.5,
+                24099.75,
+                24097.75,
+                24097.75
+              ],
+              [
+                1704204300,
+                24097.75,
+                24098.5,
+                24096.75,
+                24097
+              ],
+              [
+                1704204600,
+                24097,
+                24098.75,
+                24097,
+                24098.75
+              ],
+              [
+                1704204900,
+                24098.75,
+                24100.5,
+                24098.75,
+                24099.5
+              ],
+              [
+                1704205200,
+                24099.5,
+                24099.5,
+                24097.25,
+                24098.5
+              ],
+              [
+                1704205500,
+                24098.75,
+                24100.75,
+                24098.25,
+                24100.5
               ],
               [
                 1704205800,
-                24092.25,
-                24105,
-                24091.5,
+                24100.5,
+                24103.75,
+                24100.5,
                 24103.75
               ],
               [
                 1704206100,
                 24103.75,
                 24105,
-                24097.75,
-                24098.25
+                24103,
+                24103.5
               ],
               [
                 1704206400,
-                24098.25,
-                24109,
-                24097,
-                24107
+                24103.75,
+                24105.5,
+                24102.75,
+                24102.75
               ],
               [
                 1704206700,
-                24107,
-                24108.75,
-                24101.5,
+                24102.75,
+                24103.75,
+                24101.25,
                 24101.75
               ]
             ],
@@ -1956,423 +1956,423 @@
             "bars": [
               [
                 1704189000,
-                24110,
+                24114.25,
+                24116,
                 24112.75,
-                24107.75,
-                24110.5
+                24116
               ],
               [
                 1704189300,
-                24110.5,
-                24112,
-                24108.75,
-                24110.75
+                24116,
+                24120,
+                24116,
+                24120
               ],
               [
                 1704189600,
-                24110.75,
-                24113.75,
-                24110.25,
-                24113
+                24120,
+                24121.75,
+                24118.75,
+                24121.75
               ],
               [
                 1704189900,
-                24113,
-                24117,
-                24110.75,
-                24114.75
+                24121.75,
+                24123.5,
+                24120,
+                24122.5
               ],
               [
                 1704190200,
-                24114.75,
-                24116.5,
-                24114,
-                24114
+                24122.25,
+                24125,
+                24121.25,
+                24125
               ],
               [
                 1704190500,
-                24114,
-                24117.75,
-                24113,
-                24117.25
+                24125,
+                24129.25,
+                24124.75,
+                24128.5
               ],
               [
                 1704190800,
-                24117.25,
-                24120,
-                24116.5,
-                24118.25
+                24128.5,
+                24137.5,
+                24128.5,
+                24135.25
               ],
               [
                 1704191100,
-                24118.25,
-                24121,
-                24116.25,
-                24119
-              ],
-              [
-                1704191400,
-                24119,
-                24120.5,
-                24117.5,
-                24120.5
-              ],
-              [
-                1704191700,
-                24120.5,
-                24122.5,
-                24120.5,
-                24121
-              ],
-              [
-                1704192000,
-                24121,
-                24124.25,
-                24120.5,
-                24123.5
-              ],
-              [
-                1704192300,
-                24123.5,
-                24126,
-                24122,
-                24124
-              ],
-              [
-                1704192600,
-                24124,
-                24126.75,
-                24122.75,
-                24125.75
-              ],
-              [
-                1704192900,
-                24125.75,
-                24127.25,
-                24124.25,
-                24126.25
-              ],
-              [
-                1704193200,
-                24126.25,
-                24128.25,
-                24125,
-                24126.75
-              ],
-              [
-                1704193500,
-                24126.75,
-                24130.25,
-                24125.25,
-                24128
-              ],
-              [
-                1704193800,
-                24128,
-                24131,
-                24127.75,
-                24130.5
-              ],
-              [
-                1704194100,
-                24130.5,
-                24133,
-                24129.25,
-                24131.75
-              ],
-              [
-                1704194400,
-                24131.75,
-                24133,
-                24130,
-                24132.5
-              ],
-              [
-                1704194700,
-                24132.5,
-                24136,
+                24135.25,
+                24137.25,
                 24132,
                 24134.25
               ],
               [
-                1704195000,
+                1704191400,
                 24134.25,
-                24136.5,
-                24133,
-                24135.25
+                24142.25,
+                24134.25,
+                24138
+              ],
+              [
+                1704191700,
+                24138,
+                24142.5,
+                24136.75,
+                24142.5
+              ],
+              [
+                1704192000,
+                24142.5,
+                24147,
+                24142,
+                24146.5
+              ],
+              [
+                1704192300,
+                24146.5,
+                24149,
+                24146.5,
+                24148
+              ],
+              [
+                1704192600,
+                24148,
+                24149.5,
+                24147.25,
+                24149.5
+              ],
+              [
+                1704192900,
+                24149.5,
+                24151.25,
+                24146,
+                24146
+              ],
+              [
+                1704193200,
+                24146,
+                24148,
+                24144,
+                24148
+              ],
+              [
+                1704193500,
+                24148,
+                24148.5,
+                24145,
+                24145
+              ],
+              [
+                1704193800,
+                24145,
+                24148.25,
+                24141.25,
+                24148.25
+              ],
+              [
+                1704194100,
+                24148.25,
+                24148.25,
+                24140.25,
+                24143
+              ],
+              [
+                1704194400,
+                24143,
+                24150.75,
+                24142.75,
+                24145.75
+              ],
+              [
+                1704194700,
+                24146,
+                24147.75,
+                24142.75,
+                24145.5
+              ],
+              [
+                1704195000,
+                24145.5,
+                24150,
+                24144.75,
+                24150
               ],
               [
                 1704195300,
-                24135.25,
-                24136.75,
-                24135.25,
-                24136
+                24150,
+                24150,
+                24144.5,
+                24146.75
               ],
               [
                 1704195600,
-                24136,
-                24140,
-                24135.5,
-                24138.25
+                24147,
+                24153.5,
+                24147,
+                24149.25
               ],
               [
                 1704195900,
-                24138.25,
-                24140,
-                24137.5,
-                24138.75
+                24149.25,
+                24161,
+                24149.25,
+                24157.5
               ],
               [
                 1704196200,
-                24138.75,
-                24142,
-                24137.25,
-                24141.25
+                24157.5,
+                24160.75,
+                24157.5,
+                24160.75
               ],
               [
                 1704196500,
-                24141.25,
-                24142,
-                24139.75,
-                24141.75
+                24160.5,
+                24160.5,
+                24159.75,
+                24159.75
               ],
               [
                 1704196800,
-                24141.75,
-                24144.75,
-                24141.25,
-                24143.5
+                24159.5,
+                24160,
+                24147.75,
+                24147.75
               ],
               [
                 1704197100,
-                24143.5,
-                24145.25,
-                24141.75,
-                24144
+                24147.75,
+                24150.25,
+                24145.5,
+                24145.5
               ],
               [
                 1704197400,
-                24144,
-                24144.75,
-                24142.5,
-                24144.75
+                24145.5,
+                24149.5,
+                24144.5,
+                24148.25
               ],
               [
                 1704197700,
-                24144.75,
-                24147,
-                24143.5,
-                24146.25
+                24148.25,
+                24152.25,
+                24148.25,
+                24151
               ],
               [
                 1704198000,
+                24150.75,
+                24152,
                 24146.25,
-                24150.25,
-                24146,
                 24148.75
               ],
               [
                 1704198300,
                 24148.75,
-                24150.5,
-                24148,
-                24149.25
+                24149.5,
+                24146,
+                24148
               ],
               [
                 1704198600,
-                24149.25,
-                24150.5,
-                24149.25,
-                24150
+                24148,
+                24158,
+                24148,
+                24154.25
               ],
               [
                 1704198900,
-                24150,
-                24153.25,
-                24148.25,
-                24152.5
+                24154,
+                24154.5,
+                24151.75,
+                24153.25
               ],
               [
                 1704199200,
-                24152.5,
-                24155.75,
-                24151,
-                24154.25
+                24153.25,
+                24157,
+                24153.25,
+                24156.75
               ],
               [
                 1704199500,
-                24154.25,
-                24156.25,
-                24153,
-                24154.25
+                24156.75,
+                24159,
+                24156.5,
+                24159
               ],
               [
                 1704199800,
-                24154.25,
-                24156.25,
-                24153,
-                24156
+                24159,
+                24160.5,
+                24159,
+                24159.75
               ],
               [
                 1704200100,
-                24156,
-                24158,
-                24154,
-                24157.25
+                24159.5,
+                24160,
+                24155.75,
+                24158.25
               ],
               [
                 1704200400,
-                24157.25,
-                24160,
-                24156.75,
-                24158
+                24158.25,
+                24160.25,
+                24157.5,
+                24158.25
               ],
               [
                 1704200700,
-                24158,
-                24161,
-                24156.25,
+                24158.25,
+                24160.25,
+                24156,
                 24159.5
               ],
               [
                 1704201000,
                 24159.5,
                 24159.75,
-                24156.5,
-                24157.75
+                24156,
+                24158.5
               ],
               [
                 1704201300,
-                24157.75,
-                24161,
-                24156.75,
-                24158.25
+                24158.5,
+                24158.5,
+                24148.5,
+                24148.75
               ],
               [
                 1704201600,
-                24158.25,
-                24161,
-                24156.5,
-                24156.5
+                24148.75,
+                24149.75,
+                24146,
+                24147.5
               ],
               [
                 1704201900,
-                24156.5,
-                24158.25,
-                24153.25,
-                24154.25
+                24147.5,
+                24150.75,
+                24147.25,
+                24149.75
               ],
               [
                 1704202200,
-                24154.25,
-                24156,
-                24151.25,
-                24152
+                24149.5,
+                24158.25,
+                24149.5,
+                24158.25
               ],
               [
                 1704202500,
-                24152,
-                24153.75,
-                24150.75,
-                24151
+                24158.25,
+                24159,
+                24156.25,
+                24157.75
               ],
               [
                 1704202800,
-                24151,
-                24152.25,
-                24150,
-                24150
+                24157.75,
+                24160.5,
+                24157.75,
+                24160.5
               ],
               [
                 1704203100,
-                24150,
-                24150.5,
-                24145.75,
-                24147.75
+                24160.25,
+                24160.25,
+                24160.25,
+                24160.25
               ],
               [
                 1704203400,
-                24147.75,
-                24149.25,
-                24145.25,
-                24146.25
+                24160.75,
+                24160.75,
+                24160.75,
+                24160.75
               ],
               [
                 1704203700,
-                24146.25,
-                24146.75,
-                24143.5,
-                24145.25
+                24160.5,
+                24160.5,
+                24160.5,
+                24160.5
               ],
               [
                 1704204000,
-                24145.25,
-                24146,
-                24141.25,
-                24142.5
+                24160.25,
+                24160.25,
+                24160.25,
+                24160.25
               ],
               [
                 1704204300,
-                24142.5,
-                24144.25,
-                24140.25,
-                24141
+                24160.75,
+                24160.75,
+                24157.75,
+                24157.75
               ],
               [
                 1704204600,
-                24141,
-                24143,
-                24136.75,
-                24138.75
+                24158,
+                24160.5,
+                24158,
+                24160.5
               ],
               [
                 1704204900,
-                24138.75,
-                24139.25,
-                24138,
-                24138.5
+                24160.25,
+                24160.25,
+                24160.25,
+                24160.25
               ],
               [
                 1704205200,
-                24138.5,
-                24140,
-                24135,
-                24136.5
+                24160.75,
+                24160.75,
+                24160.25,
+                24160.5
               ],
               [
                 1704205500,
-                24136.5,
-                24137.5,
-                24133,
-                24134.25
+                24160.5,
+                24160.5,
+                24158.5,
+                24159
               ],
               [
                 1704205800,
-                24134.25,
-                24135,
-                24132,
-                24132.5
+                24159,
+                24159,
+                24154.25,
+                24154.25
               ],
               [
                 1704206100,
-                24132.5,
-                24133.25,
-                24131.25,
-                24131.75
+                24154.25,
+                24154.75,
+                24152.75,
+                24154.25
               ],
               [
                 1704206400,
-                24131.75,
-                24133.25,
-                24128.25,
-                24129.75
+                24154.5,
+                24154.5,
+                24153,
+                24153
               ],
               [
                 1704206700,
-                24129.75,
-                24131,
-                24126.75,
-                24127
+                24153,
+                24153,
+                24150.25,
+                24150.25
               ]
             ],
             "line": 24161,

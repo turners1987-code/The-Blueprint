@@ -68,3 +68,16 @@ Local folder: C:\Blueprint\music-pool\ (12 files, original Pixabay names). Assig
 Excluded: prettyjohn1 modern-classical-rap-604484 (11 seconds).
 Content ID: only matters if lesson video is posted to YouTube. If a claim appears, download the track's license certificate from its Pixabay page (shown in the download dialog) and dispute with it. Site playback is unaffected.
 Mixing: loop the track to segment length, about 12% volume under narration (a little lower for the boom bap tracks 5, 8, 11), 1.5 s fade in and 2 s fade out per segment. Never serve the music file on its own.
+
+## Soundtrack (Shane's direction, Nov 6 afternoon)
+The 12-track pool did not land by ear. New rule: about 4 tracks total, the course's own sound. Heavy bass, low, rap, upbeat but under the voice; no high-pitched leads, no big guitars. One track per module (module number mod 4), the same beat under every segment of that module; neighbouring modules alternate. Keep: track 6, vaitsez 486586 (the first render). Shane picks the other three by ear from the audition list below; the render script's POOL list is the record of what is approved.
+
+Audition list (unheard pool tracks first, then heavier 808 candidates from the Pixabay search "808 bass rap beat"):
+- https://pixabay.com/music/rap-rap-rap-beat-620112/ (vaitsez, pool 1)
+- https://pixabay.com/music/rap-rap-rap-beat-611918/ (lNPLUSMUSIC, pool 2)
+- https://pixabay.com/music/beats-rap-beat-577788/ (SoundSurfer, pool 3)
+- https://pixabay.com/music/trap-rap-rap-beat-610255/ (GR0ZA, pool 4)
+- https://pixabay.com/music/trap-hard-hard-bass-beat-620128/ (vaitsez, Hard Bass Beat)
+- https://pixabay.com/music/trap-hard-808-bass-trap-beat-123737/ (van_Wiese, hard 808 Bass Trap Beat)
+- https://pixabay.com/music/beats-hard-hitting-trap-style-beat-with-deep-808-bass-377480/ (DesiFreeMusic)
+- https://pixabay.com/music/trap-dark-trap-beat-it-follows-you-141115/ (Dark Trap Beat)
