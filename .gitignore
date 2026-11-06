@@ -7,3 +7,8 @@ data/import/no-setup-audit.json
 # Local Cloudflare secrets
 .dev.vars
 .wrangler/
+
+# Local TTS venv and model weights (never committed)
+kokoro-venv/
+*.pth
+*.onnx
