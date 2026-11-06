@@ -162,14 +162,14 @@ S['Pre-marked list'] = (t) => svg('The list you mark before the session',
 
 S['Session scope'] = (t) => svg('Session scope and the 16:00 boundary',
   title('Each level has a session scope', 'The bars that build it, in Eastern time') +
-  rv(0, rect(32, 100, 330, 50, { fill: 'var(--cyan)', op: 0.22, rx: 0 }) + text(197, 130, 'Regular session 9:30 a.m. to 4:00 p.m.', { size: 14, anchor: 'middle' }) +
-    rect(362, 100, 246, 50, { fill: 'var(--gold)', op: 0.22, rx: 0 }) + text(485, 130, 'Overnight 4:00 p.m. to 9:30 a.m.', { size: 14, anchor: 'middle' })) +
-  rv(6, line(362, 86, 362, 214, 'var(--text-primary)', { sw: 2.5 }) + text(362, 232, '4:00 p.m.', { size: 16, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
+  rv(0, rect(32, 100, 330, 50, { fill: 'var(--cyan)', op: 0.22, rx: 0 }) + text(197, 130, 'Regular session 9:30 a.m. to 4 p.m.', { size: 14, anchor: 'middle' }) +
+    rect(362, 100, 246, 50, { fill: 'var(--gold)', op: 0.22, rx: 0 }) + text(485, 130, 'Overnight 4 p.m. to 9:30 a.m.', { size: 14, anchor: 'middle' })) +
+  rv(6, line(362, 86, 362, 214, 'var(--text-primary)', { sw: 2.5 }) + text(362, 232, '4 p.m.', { size: 16, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
   rv(t[1] - t[0], rect(400, 166, 208, 30, { fill: 'var(--bg-card)', stroke: 'var(--gold)', rx: 4 }) + text(504, 186, 'A 4:40 p.m. high is overnight', { size: 13, anchor: 'middle' })) +
   rv(t[2] - t[0], rect(32, 262, 276, 56, { fill: 'var(--bg-card)', stroke: 'var(--cyan)' }) + text(46, 286, 'Two saved templates', { size: 14, weight: 700 }) +
-    text(46, 306, 'Regular and full, both end at 4:00 p.m.', { size: 12, cls: 'sv-m' })) +
+    text(46, 306, 'Regular and full, both end at 4 p.m.', { size: 12, cls: 'sv-m' })) +
   rv(t[3] - t[0], rect(330, 262, 278, 56, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) + text(344, 286, 'Prior week', { size: 14, weight: 700 }) +
-    text(344, 306, 'Sunday 6:00 p.m. to Friday 4:00 p.m.', { size: 12, cls: 'sv-m' })));
+    text(344, 306, 'Sunday 6 p.m. to Friday 4 p.m.', { size: 12, cls: 'sv-m' })));
 
 S['In-session list'] = (t) => {
   const types = ['Opening range, once your window has closed', 'Defended pullback high or low', 'Developing VPOC and value edges, at the trigger',
@@ -219,8 +219,8 @@ S['List closes'] = (t) => svg('The list closes at 9:25 a.m.',
 // ---- Segment 5: marking a blank chart -----------------------------------------
 // [cue index in segment 5, clock, label]; S5 holds that segment's cue starts
 const STEPS = [
-  [1, '8:50', 'Templates: regular and full, both end at 4:00 p.m.'],
-  [2, '9:00', 'Collect the data by scope'],
+  [1, '8:50 a.m.', 'Templates: regular and full, both end at 4 p.m.'],
+  [2, '9 a.m.', 'Collect the data by scope'],
   [4, '9:10', 'Write each level as a zone with its far edge'],
   [5, '9:15', 'Everything outside the eleven rows is mid-range'],
   [6, '9:18', 'Considered and struck: four lines fail the test'],
@@ -236,11 +236,11 @@ S['Worked case'] = (t) => svg('Worked case: a blank chart, marked by 9:25 a.m.',
   rv(S5[2] - t[0] + 3, text(32, 230, 'Prior-day high 24,186.50', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) + text(32, 252, 'Prior-day low 24,032.00', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) +
     text(32, 274, 'Value area 24,071.00 to 24,148.00', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) + text(32, 296, 'VPOC 24,112.00   Settlement 24,131.50', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' })));
 
-S['The 16:00 boundary'] = (t) => svg('The 4:00 p.m. boundary',
-  title('The 4:00 p.m. boundary', 'A 4:12 p.m. print belongs to the overnight range') +
+S['The 16:00 boundary'] = (t) => svg('The 4 p.m. boundary',
+  title('The 4 p.m. boundary', 'A 4:12 p.m. print belongs to the overnight range') +
   rv(0, rect(32, 80, 330, 40, { fill: 'var(--cyan)', op: 0.22, rx: 0 }) + text(197, 105, 'Regular session', { size: 14, anchor: 'middle' }) +
     rect(362, 80, 246, 40, { fill: 'var(--gold)', op: 0.22, rx: 0 }) + text(485, 105, 'Overnight', { size: 14, anchor: 'middle' }) +
-    line(362, 72, 362, 130, 'var(--text-primary)', { sw: 2.5 }) + text(362, 66, '4:00 p.m.', { size: 13, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
+    line(362, 72, 362, 130, 'var(--text-primary)', { sw: 2.5 }) + text(362, 66, '4 p.m.', { size: 13, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
   rv(0.4, text(32, 146, 'High 24,186.50', { size: 12, cls: 'sv-n', fill: 'var(--cyan)' }) + text(608, 146, 'High 24,190.00 at 4:12 p.m.', { size: 12, cls: 'sv-n', anchor: 'end', fill: 'var(--gold)' })) +
   rv(t[1] - t[0] - 2, rect(32, 162, 576, 26, { fill: 'var(--bg-card)', stroke: 'var(--gold)' }) + text(46, 180, 'Overlapping zones merge: one row, far edge 24,190.00', { size: 13 }), 'sv-rv') +
   stepRows(t[0], 2, 4, 200) +

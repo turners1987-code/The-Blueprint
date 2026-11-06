@@ -4,10 +4,9 @@
 Usage (run with the Kokoro venv's Python, outside the repo):
   C:\kokoro-venv\Scripts\python.exe scripts/render-narration.py <lesson.json> <music-pool-folder>
 
-The folder holds the 12 Pixabay tracks listed in POOL (reference/research/
-music-candidates.md, Final pool). Each segment gets its own track, rotating
-through the pool from the module number, so no two segments in a module share
-a beat and neighbouring modules start on different tracks. The track used is
+The folder holds the soundtrack tracks listed in POOL. One track per module
+(module number mod the pool size), the same beat under every segment of that
+module, so neighbouring modules sound different. The track used is
 written to each segment as "music" (title, producer, url) for the credits on
 ai.html. The pool folder is never copied into the repo.
 
@@ -29,20 +28,11 @@ from kokoro import KPipeline
 SR, GAP, VOICE, MUSIC_DB = 24000, 0.35, 'bf_emma', -12
 FADE_IN, FADE_OUT = 1.5, 2.0
 
-# (file, title, producer, page) in pool order. Pixabay Content License.
+# (file, title, producer, page). One track per module: module number mod the
+# pool size. Add tracks here as Shane approves them (reference/research/
+# music-candidates.md, "Soundtrack"). Pixabay Content License.
 POOL = [
-    ('vaitsez-rap-rap-beat-620112.mp3', 'Rap - Rap Beat', 'vaitsez', 'https://pixabay.com/music/rap-rap-rap-beat-620112/'),
-    ('lnplusmusic-rap-rap-beat-611918.mp3', 'Rap - Rap Beat', 'lNPLUSMUSIC', 'https://pixabay.com/music/rap-rap-rap-beat-611918/'),
-    ('soundsurfer-rap-beat-577788.mp3', 'Rap Beat', 'SoundSurfer', 'https://pixabay.com/music/beats-rap-beat-577788/'),
-    ('gr0za-rap-rap-beat-610255.mp3', 'Rap - Rap Beat', 'GR0ZA', 'https://pixabay.com/music/trap-rap-rap-beat-610255/'),
-    ('the_mountain-hip-hop-boom-bap-567423.mp3', 'Hip Hop Boom Bap', 'The_Mountain', 'https://pixabay.com/music/alternative-hip-hop-hip-hop-boom-bap-567423/'),
     ('vaitsez-rap-rap-beat-beats-music-486586.mp3', 'Rap - Rap Beat Beats Music', 'vaitsez', 'https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/'),
-    ('apalonbeats-rap-rap-beat-beats-566670.mp3', 'Rap - Rap Beat Beats', 'APALONBeats', 'https://pixabay.com/music/beats-rap-rap-beat-beats-566670/'),
-    ('mirostar-old-school-x-hip-hop-beat-boom-bap-560301.mp3', 'Old School x Hip Hop Beat | Boom Bap', 'mirostar', 'https://pixabay.com/music/alternative-hip-hop-old-school-x-hip-hop-beat-boom-bap-560301/'),
-    ('alex-morgan-rap-beat-548629.mp3', 'Rap Beat', 'alex-morgan', 'https://pixabay.com/music/instrumental-rap-beat-548629/'),
-    ('gr0za-rap-rap-beat-beats-557557.mp3', 'Rap - Rap Beat Beats', 'GR0ZA', 'https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/'),
-    ('solarflex-hiphop-beat-old-school-boom-bap-589004.mp3', 'HipHop Beat Old School Boom Bap', 'SolarFLEX', 'https://pixabay.com/music/alternative-hip-hop-hiphop-beat-old-school-boom-bap-589004/'),
-    ('vaitsez-rap-rap-beats-beat-483319.mp3', 'Rap - Rap Beats Beat', 'vaitsez', 'https://pixabay.com/music/rap-rap-rap-beats-beat-483319/'),
 ]
 
 def main(lesson_path, pool_dir):
@@ -59,7 +49,7 @@ def main(lesson_path, pool_dir):
     for k, s in enumerate(d['segments']):
         if not s.get('cues'):
             continue
-        fname, mtitle, producer, page = POOL[(int(nn) + k) % len(POOL)]
+        fname, mtitle, producer, page = POOL[int(nn) % len(POOL)]
         music = os.path.join(pool_dir, fname)
         if not os.path.isfile(music):
             sys.exit(f'missing track in pool folder: {fname}')

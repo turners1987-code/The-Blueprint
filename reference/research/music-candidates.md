@@ -73,3 +73,16 @@ Mixing: loop the track to segment length, about 12% volume under narration (a li
 Main rotation, one per module: vaitsez 486586; pietiX "Cinematic coup scene 1 bass" 525683 (clear); vaitsez "Vlog - Vlog Beat" 620108 (Content ID); GR0ZA 557557 (Content ID).
 Endings only (last segment of a module): kontraa "Wega | Old School Hiphop Music" 422621 (clear). Shane: likes it most, fits least, use sparingly.
 All five are in C:\Blueprint\music-pool\. The other eight pool files stay there unused.
+
+## Soundtrack (Shane's direction, Nov 6 afternoon)
+The 12-track pool did not land by ear. New rule: about 4 tracks total, the course's own sound. Heavy bass, low, rap, upbeat but under the voice; no high-pitched leads, no big guitars. One track per module (module number mod 4), the same beat under every segment of that module; neighbouring modules alternate. Keep: track 6, vaitsez 486586 (the first render). Shane picks the other three by ear from the audition list below; the render script's POOL list is the record of what is approved.
+
+Audition list (unheard pool tracks first, then heavier 808 candidates from the Pixabay search "808 bass rap beat"):
+- https://pixabay.com/music/rap-rap-rap-beat-620112/ (vaitsez, pool 1)
+- https://pixabay.com/music/rap-rap-rap-beat-611918/ (lNPLUSMUSIC, pool 2)
+- https://pixabay.com/music/beats-rap-beat-577788/ (SoundSurfer, pool 3)
+- https://pixabay.com/music/trap-rap-rap-beat-610255/ (GR0ZA, pool 4)
+- https://pixabay.com/music/trap-hard-hard-bass-beat-620128/ (vaitsez, Hard Bass Beat)
+- https://pixabay.com/music/trap-hard-808-bass-trap-beat-123737/ (van_Wiese, hard 808 Bass Trap Beat)
+- https://pixabay.com/music/beats-hard-hitting-trap-style-beat-with-deep-808-bass-377480/ (DesiFreeMusic)
+- https://pixabay.com/music/trap-dark-trap-beat-it-follows-you-141115/ (Dark Trap Beat)
