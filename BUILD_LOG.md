@@ -43,3 +43,4 @@ END 2026-11-06T07:12:46Z | 11 Setting Up NT8 page | tier C | 0df0d0a
 START 2026-11-06T08:12:01Z
 END 2026-11-06T08:22:57Z | 12 Rule Card | tier C | 1e94ac4
 START 2026-11-06T09:09:13Z
+END 2026-11-06T09:13:02Z | 8 Privacy policy payments section (draft) | tier A | c016c95
