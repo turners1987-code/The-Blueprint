@@ -11,7 +11,7 @@ import { buildLesson } from './lesson-slides/index.mjs';
 const DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../data/lessons');
 const all = readdirSync(DIR).filter((f) => f.endsWith('.json')).sort();
 const args = process.argv.slice(2);
-const files = (args.length ? args : all).map((a) => {
+const files = args.length === 0 ? all.map((f) => path.join(DIR, f)) : args.map((a) => {
   if (a.endsWith('.json')) return path.resolve(a);
   const hit = all.find((f) => f.startsWith(`${String(a).padStart(2, '0')}-`));
   if (!hit) throw new Error(`no lesson for "${a}"`);

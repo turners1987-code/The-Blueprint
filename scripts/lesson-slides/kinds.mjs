@@ -155,13 +155,17 @@ export const KINDS = {
       text(d.axis.x, 128, d.axis.time, { size: 22, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' }) +
       d.axis.labels.map((l) => text(l.x, 230, l.text, { size: 15, anchor: 'middle', fill: 'var(--cyan)' })).join('')) : '') + tail(d, ctx),
 
-  // Two columns: what each is, then what it is for.
+  // Two columns: what each is, then what it is for. A line may carry its own
+  // "cue" so it reveals when it is spoken, after its column has appeared.
   compare: (d, ctx) => head(d) +
     d.columns.map((c, i) => {
       const x = 32 + i * 296;
       return rv(delay(ctx, c.cue ?? 0), rect(x, 84, 280, 190, { fill: 'var(--bg-card)', stroke: col(c.tone), sw: 1.5 }) +
         text(x + 16, 112, c.head, { size: 20, weight: 700, fill: col(c.tone) }) +
-        c.lines.map((l) => text(x + 16, 84 + l.y, l.text, { size: l.size ?? 13, cls: cls(l.cls || 'm'), weight: l.weight ?? 400, fill: l.tone ? col(l.tone) : '' })).join('') +
+        c.lines.map((l) => {
+          const t = text(x + 16, 84 + l.y, l.text, { size: l.size ?? 13, cls: cls(l.cls || 'm'), weight: l.weight ?? 400, fill: l.tone ? col(l.tone) : '' });
+          return l.cue === undefined ? t : rv(delay(ctx, l.cue), t);
+        }).join('') +
         (c.art === 'stop' ? rect(x + 16, 190, 248, 30, { fill: 'var(--cyan)', op: 0.25, rx: 0 }) + rect(x + 16, 226, 248, 8, { fill: 'var(--red)', op: 0.4, rx: 0 }) : ''));
     }).join('') + tail(d, ctx),
 

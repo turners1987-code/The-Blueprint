@@ -3,12 +3,12 @@
   "segments": [
     {
       "id": "s1",
-      "title": "Claims you can check and the locked rule",
+      "title": "The claim and the locked rule",
       "sections": [
         "Why Most Trading Advice Cannot Be Checked",
         "Lock The Rule Before You Look"
       ],
-      "duration": 110,
+      "duration": 116.5,
       "cues": [
         {
           "start": 0,
@@ -16,56 +16,72 @@
           "chapter": "The claims"
         },
         {
-          "start": 5.2,
+          "start": 4.9,
           "text": "You have heard all three. Notice what is missing: the rule, when it was written down, what it was compared against, and how many times it was tried."
         },
         {
-          "start": 16.4,
+          "start": 15.8,
           "text": "Without those four things there is nothing to check. All that is left is how confident the person sounds. Confidence is free, which is why there is so much of it."
         },
         {
-          "start": 28.7,
+          "start": 27.8,
           "text": "Now, what a claim you can check looks like.",
           "chapter": "Four parts"
         },
         {
-          "start": 32.8,
+          "start": 31.6,
           "text": "One: a rule stated exactly enough that someone else could run it."
         },
         {
-          "start": 38.1,
+          "start": 36.6,
           "text": "Two: a record of when the rule was fixed."
         },
         {
-          "start": 42.2,
+          "start": 40.4,
           "text": "Three: a comparison that could have made it look bad."
         },
         {
-          "start": 46.7,
+          "start": 44.6,
           "text": "Four: results from conditions that were not used to build it."
         },
         {
-          "start": 51.6,
+          "start": 49.2,
           "text": "The first habit: lock the rule before you look.",
           "chapter": "Lock the rule"
         },
         {
-          "start": 55.7,
-          "text": "Write the rule down in full before you open the data. The entry, the stop, which is the order that closes the trade when you are wrong, the target, when it applies and when it does not."
+          "start": 53,
+          "text": "Write the rule down in full before you open the data."
         },
         {
-          "start": 70.2,
+          "start": 57.6,
+          "text": "The entry. The stop, the order that closes the trade when you are wrong. The target, the price the trade aims for."
+        },
+        {
+          "start": 66.2,
+          "text": "And when the rule applies, and when it does not."
+        },
+        {
+          "start": 70.4,
+          "text": "A rule written in full, and dated, before the data is opened is called a locked rule."
+        },
+        {
+          "start": 77.2,
           "text": "Reverse the order and you have fitted the rule to the data. A fitted rule always looks good on the data that made it. It tells you nothing about your next session."
         },
         {
-          "start": 82.9,
+          "start": 89.6,
           "text": "The rule: write the whole rule down before you open the data, and the data gets a fair chance to say no.",
           "chapter": "The rule"
         },
         {
-          "start": 91.8,
-          "text": "Getting it wrong is writing the rule after you have looked. You will find a version that would have looked good, because the chart already holds the answer. That tells you what the chart did. It does not tell you what the rule does.",
+          "start": 98.2,
+          "text": "Getting it wrong is writing the rule after you have looked. You will find a version that would have looked good, because the chart already holds the answer.",
           "chapter": "Getting it wrong"
+        },
+        {
+          "start": 109.1,
+          "text": "That tells you what the chart did. It does not tell you what the rule does."
         }
       ],
       "slides": [
@@ -102,7 +118,8 @@
                     "size": 15,
                     "cls": "t",
                     "weight": 700,
-                    "tone": "red"
+                    "tone": "red",
+                    "cue": 2
                   }
                 ]
               },
@@ -138,7 +155,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Trading advice compared with what it leaves out\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the advice says, and what it skips</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Confidence is not a record</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">What you hear</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Never fails</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Always holds</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Prints money</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Sounds settled</text></g><g class=\"sv-rv\" style=\"animation-delay:5.2s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">What is missing</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The rule</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">When it was written down</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What it was compared with</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">How many times it was tried</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Trading advice compared with what it leaves out\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the advice says, and what it skips</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Confidence is not a record</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">What you hear</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Never fails</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Always holds</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Prints money</text><g class=\"sv-rv\" style=\"animation-delay:15.8s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Sounds settled</text></g></g><g class=\"sv-rv\" style=\"animation-delay:4.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">What is missing</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The rule</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">When it was written down</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What it was compared with</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">How many times it was tried</text></g></svg>"
         },
         {
           "title": "Four parts of a claim you can check",
@@ -178,8 +195,8 @@
               "size": 26
             }
           },
-          "start": 28.7,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four parts of a claim you can check\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A claim you can check</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Four parts, all four</text><g class=\"sv-rv\" style=\"animation-delay:4.1s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A rule someone else could run</text></g><g class=\"sv-rv\" style=\"animation-delay:9.4s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A record of when it was fixed</text></g><g class=\"sv-rv\" style=\"animation-delay:13.5s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A comparison that could look bad</text></g><g class=\"sv-rv\" style=\"animation-delay:18.0s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Results from fresh conditions</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"26\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Four</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">parts to check</text></g></svg>"
+          "start": 27.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four parts of a claim you can check\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A claim you can check</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Four parts, all four</text><g class=\"sv-rv\" style=\"animation-delay:3.8s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A rule someone else could run</text></g><g class=\"sv-rv\" style=\"animation-delay:8.8s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A record of when it was fixed</text></g><g class=\"sv-rv\" style=\"animation-delay:12.6s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A comparison that could look bad</text></g><g class=\"sv-rv\" style=\"animation-delay:16.8s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Results from fresh conditions</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"26\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Four</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">parts to check</text></g></svg>"
         },
         {
           "title": "Rule first, data second",
@@ -195,33 +212,36 @@
                 "cue": 1,
                 "lines": [
                   {
-                    "text": "Rule written in full",
+                    "text": "Rule written in full, and dated",
                     "y": 56,
                     "size": 14,
                     "cls": "t"
                   },
                   {
                     "text": "Entry, stop, target",
-                    "y": 84
+                    "y": 84,
+                    "cue": 2
                   },
                   {
-                    "text": "When it applies",
-                    "y": 106
+                    "text": "When it applies, and when not",
+                    "y": 106,
+                    "cue": 3
                   },
                   {
-                    "text": "The data can say no",
+                    "text": "That is a locked rule",
                     "y": 140,
                     "size": 15,
                     "cls": "t",
                     "weight": 700,
-                    "tone": "green"
+                    "tone": "green",
+                    "cue": 4
                   }
                 ]
               },
               {
                 "tone": "red",
                 "head": "Data, then rule",
-                "cue": 2,
+                "cue": 5,
                 "lines": [
                   {
                     "text": "Look at the chart",
@@ -253,15 +273,15 @@
                 "type": "note",
                 "x": 32,
                 "y": 312,
-                "text": "Write the whole rule before you open the data.",
+                "text": "Write the whole rule first, and the data can say no.",
                 "size": 15,
                 "cls": "t",
-                "cue": 3
+                "cue": 6
               }
             ]
           },
-          "start": 51.6,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Rule first compared with data first\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule first, then the data</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The order decides what the result means</text><g class=\"sv-rv\" style=\"animation-delay:4.1s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Rule, then data</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule written in full</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Entry, stop, target</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">When it applies</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The data can say no</text></g><g class=\"sv-rv\" style=\"animation-delay:18.6s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Data, then rule</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Look at the chart</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Find a version that fits</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It looks good on that data</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">It tells you nothing new</text></g><g class=\"sv-rv\" style=\"animation-delay:31.3s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write the whole rule before you open the data.</text></g></svg>"
+          "start": 49.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Rule first compared with data first\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule first, then the data</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The order decides what the result means</text><g class=\"sv-rv\" style=\"animation-delay:3.8s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Rule, then data</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule written in full, and dated</text><g class=\"sv-rv\" style=\"animation-delay:8.4s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Entry, stop, target</text></g><g class=\"sv-rv\" style=\"animation-delay:17.0s\"><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">When it applies, and when not</text></g><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">That is a locked rule</text></g></g><g class=\"sv-rv\" style=\"animation-delay:28.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Data, then rule</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Look at the chart</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Find a version that fits</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It looks good on that data</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">It tells you nothing new</text></g><g class=\"sv-rv\" style=\"animation-delay:40.4s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write the whole rule first, and the data can say no.</text></g></svg>"
         }
       ],
       "check": [
@@ -302,11 +322,11 @@
           "q": "What does writing the rule after you have looked really tell you?",
           "options": [
             "What the rule does",
-            "What the chart did",
             "Which stop to use",
-            "How much to risk"
+            "How much to risk",
+            "What the chart did"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "You find a version that would have looked good. That describes the chart, not the rule."
         }
       ],
@@ -319,7 +339,7 @@
         "Test Against A Null",
         "Split The Sample, And Look At Recent Data Separately"
       ],
-      "duration": 145,
+      "duration": 149.6,
       "cues": [
         {
           "start": 0,
@@ -327,78 +347,86 @@
           "chapter": "The null"
         },
         {
-          "start": 3.8,
-          "text": "That something is a null: the same locked rule, run on price paths rebuilt from each session's own one-minute returns, shuffled within thirty-minute blocks."
+          "start": 3.5,
+          "text": "That something is a null: the same locked rule, run on price paths that have been shuffled."
         },
         {
-          "start": 13.5,
-          "text": "Shuffling destroys any real sequence and keeps the session's volatility. The null is the weather. Your rule has to beat the weather."
+          "start": 10.3,
+          "text": "Each session's one-minute price changes are reshuffled inside thirty-minute blocks. That destroys any real sequence and keeps the session's volatility, how much price moved."
         },
         {
-          "start": 22.4,
+          "start": 19.6,
+          "text": "Think of the null as the weather: what the market was going to do anyway."
+        },
+        {
+          "start": 25.7,
           "text": "Run the rule on the null many times over. The average of those runs is the baseline."
         },
         {
-          "start": 29.5,
-          "text": "Now a word everyone uses and nobody defines: edge. Edge is a rule's expectancy after costs, above what the same rule earns on its null."
+          "start": 32.5,
+          "text": "Two terms before the next one. Expectancy is the average result per trade, in R. R is the amount you risked, so a result of two R is twice what you risked."
         },
         {
-          "start": 39.6,
-          "text": "Expectancy is the average result per trade, in R. R is the amount you risked, so a result of two R is twice what you risked."
+          "start": 44.9,
+          "text": "Now, edge. Edge is a rule's expectancy after costs, above what the same rule earns on its null."
         },
         {
-          "start": 50,
+          "start": 52,
           "text": "The rule: if the rule does no better on the real data than on its null, it has no edge.",
           "chapter": "The rule"
         },
         {
-          "start": 58.2,
-          "text": "Markets drift, and ranges expand and contract. A rising tide makes every boat look like a captain."
+          "start": 59.9,
+          "text": "Markets drift, and ranges expand and contract. A rising tide lifts every boat. The boat did not do that."
         },
         {
-          "start": 65.3,
-          "text": "Next, split the sample.",
+          "start": 67.5,
+          "text": "Next, split the sample. The sample is every trade the rule took in the test.",
           "chapter": "The halves"
         },
         {
-          "start": 67.6,
+          "start": 73.5,
           "text": "Divide it in half and check both halves."
         },
         {
-          "start": 71.3,
+          "start": 77,
           "text": "Positive in one half and negative in the other is not an edge. It is one good stretch and one bad one, and you cannot tell which is the exception."
         },
         {
-          "start": 83.2,
+          "start": 88.6,
           "text": "Then look at recent data on its own. A rule that worked in conditions that no longer exist is history, not a tool."
         },
         {
-          "start": 92.6,
+          "start": 97.6,
           "text": "Put together, the null, the two halves, the calendar years and the recent data make one test. It is called Gate 1.",
           "chapter": "Gate 1"
         },
         {
-          "start": 101.5,
-          "text": "Gate 1 is the test of a locked rule on market data. It passes on four things."
+          "start": 106.3,
+          "text": "Gate 1 is the test of a locked rule on historical market data. It passes on four things."
         },
         {
-          "start": 108.6,
+          "start": 113.4,
           "text": "One: at least one hundred trades."
         },
         {
-          "start": 111.6,
+          "start": 116.1,
           "text": "Two: it beats the null."
         },
         {
-          "start": 114.3,
+          "start": 118.5,
           "text": "Three: it is positive in both halves and in each calendar year."
         },
         {
-          "start": 119.5,
-          "text": "Four: a recency check on 2023 to 2026. You report the result in R, with the number of trades, the win rate, the expectancy and the null's expectancy beside it."
+          "start": 123.4,
+          "text": "Four: a recency check, on 2023 to 2026."
         },
         {
-          "start": 131.4,
+          "start": 126.9,
+          "text": "You report the result in R, with four numbers: how many trades, the share that won, the expectancy, and the null's expectancy beside it."
+        },
+        {
+          "start": 136.3,
           "text": "Getting it wrong is reading one total. Each split is one more chance to fail, and a result that survives all of them is worth more than one shown only in aggregate.",
           "chapter": "Getting it wrong"
         }
@@ -424,7 +452,7 @@
                     "cls": "t"
                   },
                   {
-                    "text": "Session returns, in order",
+                    "text": "Price changes, in order",
                     "y": 84
                   },
                   {
@@ -453,12 +481,14 @@
                     "cls": "t"
                   },
                   {
-                    "text": "Returns shuffled in blocks",
-                    "y": 84
+                    "text": "Price changes, shuffled in blocks",
+                    "y": 84,
+                    "cue": 2
                   },
                   {
                     "text": "Volatility kept, sequence gone",
-                    "y": 106
+                    "y": 106,
+                    "cue": 2
                   },
                   {
                     "text": "What the weather earned",
@@ -466,7 +496,8 @@
                     "size": 15,
                     "cls": "t",
                     "weight": 700,
-                    "tone": "gold"
+                    "tone": "gold",
+                    "cue": 3
                   }
                 ]
               }
@@ -479,13 +510,13 @@
                 "text": "No better than the null: no edge.",
                 "size": 15,
                 "cls": "t",
-                "tone": "red",
-                "cue": 6
+                "cue": 7,
+                "tone": "red"
               }
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on real data compared with the rule on its null\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A result needs a comparison</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your rule against the weather</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Real data</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your locked rule</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Session returns, in order</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Real sequence kept</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">What the rule earned</text></g><g class=\"sv-rv\" style=\"animation-delay:3.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The null</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The same locked rule</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Returns shuffled in blocks</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Volatility kept, sequence gone</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">What the weather earned</text></g><g class=\"sv-rv\" style=\"animation-delay:50.0s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">No better than the null: no edge.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on real data compared with the rule on its null\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A result needs a comparison</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your rule against the weather</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Real data</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your locked rule</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Price changes, in order</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Real sequence kept</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">What the rule earned</text></g><g class=\"sv-rv\" style=\"animation-delay:3.5s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The null</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The same locked rule</text><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Price changes, shuffled in blocks</text></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Volatility kept, sequence gone</text></g><g class=\"sv-rv\" style=\"animation-delay:19.6s\"><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">What the weather earned</text></g></g><g class=\"sv-rv\" style=\"animation-delay:52.0s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">No better than the null: no edge.</text></g></svg>"
         },
         {
           "title": "Two halves",
@@ -567,8 +598,8 @@
               }
             ]
           },
-          "start": 65.3,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Two halves of a sample, one positive and one negative\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Split the sample in half</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Both halves have to agree</text><g class=\"sv-rv\" style=\"animation-delay:2.3s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">First half</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Positive</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A good stretch</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Looks like an edge</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">So far</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Second half</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Negative</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A bad stretch</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Which is the exception?</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">You cannot tell</text></g><g class=\"sv-rv\" style=\"animation-delay:17.9s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Then recent data, on its own.</text></g></svg>"
+          "start": 67.5,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Two halves of a sample, one positive and one negative\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Split the sample in half</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Both halves have to agree</text><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">First half</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Positive</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A good stretch</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Looks like an edge</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">So far</text></g><g class=\"sv-rv\" style=\"animation-delay:9.5s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Second half</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Negative</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A bad stretch</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Which is the exception?</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">You cannot tell</text></g><g class=\"sv-rv\" style=\"animation-delay:21.1s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Then recent data, on its own.</text></g></svg>"
         },
         {
           "title": "Gate 1",
@@ -603,13 +634,13 @@
             },
             "aside": {
               "head": "Gate 1",
-              "sub": "in R, with n",
+              "sub": "reported in R",
               "cue": 1,
               "size": 24
             }
           },
-          "start": 92.6,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four parts of Gate 1\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Gate 1: market data</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The test of a locked rule</text><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">At least 100 trades</text></g><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Beats the null</text></g><g class=\"sv-rv\" style=\"animation-delay:21.7s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Positive in both halves and each year</text></g><g class=\"sv-rv\" style=\"animation-delay:26.9s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Recency check, 2023 to 2026</text></g><g class=\"sv-rv\" style=\"animation-delay:8.9s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Gate 1</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">in R, with n</text></g></svg>"
+          "start": 97.6,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four parts of Gate 1\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Gate 1: market data</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The test of a locked rule</text><g class=\"sv-rv\" style=\"animation-delay:15.8s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">At least 100 trades</text></g><g class=\"sv-rv\" style=\"animation-delay:18.5s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Beats the null</text></g><g class=\"sv-rv\" style=\"animation-delay:20.9s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Positive in both halves and each year</text></g><g class=\"sv-rv\" style=\"animation-delay:25.8s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Recency check, 2023 to 2026</text></g><g class=\"sv-rv\" style=\"animation-delay:8.7s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Gate 1</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">reported in R</text></g></svg>"
         }
       ],
       "check": [
@@ -617,11 +648,11 @@
           "q": "What is a null?",
           "options": [
             "A rule that never trades",
-            "The same locked rule run on price paths shuffled within blocks, keeping volatility and destroying sequence",
             "A rule with no stop",
+            "The same locked rule run on price paths shuffled within blocks, keeping volatility and destroying sequence",
             "The best half of the sample"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "The null is the baseline the rule has to beat."
         },
         {
@@ -636,115 +667,115 @@
           "why": "Edge is expectancy above what the same rule earns on its null."
         },
         {
-          "q": "A rule is positive in the first half of the sample and negative in the second. What have you shown?",
-          "options": [
-            "An edge",
-            "One good stretch and one bad one, and you cannot tell which is the exception",
-            "A need for more leverage",
-            "That the null is wrong"
-          ],
-          "answer": 1,
-          "why": "Both halves have to agree."
-        },
-        {
           "q": "Which is part of Gate 1?",
           "options": [
             "Ten live trades",
-            "At least one hundred trades, beating the null, positive in both halves and each calendar year",
             "A confident write-up",
-            "One strong month"
+            "One strong month",
+            "At least one hundred trades, beating the null, positive in both halves and each calendar year"
+          ],
+          "answer": 3,
+          "why": "Gate 1 is the market-data test, reported in R with the number of trades beside it."
+        },
+        {
+          "q": "A result is shown as one total, with no splits. What is the problem?",
+          "options": [
+            "Nothing: the total is the result",
+            "A positive total can hide one good half and one bad half, and each split is one more chance for the result to fail",
+            "The total is always too small",
+            "Totals cannot be written in R"
           ],
           "answer": 1,
-          "why": "Gate 1 is the market-data test, reported in R with n."
+          "why": "A result that survives every split is worth more than one shown only in aggregate."
         }
       ],
       "audio": "../assets/audio/01/s2.mp3"
     },
     {
       "id": "s3",
-      "title": "Your own execution and simulated fills",
+      "title": "Your execution and simulated fills",
       "sections": [
         "Count Your Own Executions Separately",
         "Why Simulated Fills Cannot Measure Edge"
       ],
-      "duration": 128,
+      "duration": 132.2,
       "cues": [
         {
           "start": 0,
-          "text": "A backtest assumes a perfect trader.",
+          "text": "A backtest is your rule run on past market data. It assumes a perfect trader.",
           "chapter": "Your execution"
         },
         {
-          "start": 3,
-          "text": "It takes every signal, at the stated price, without hesitation. You do not. You skip some signals, hesitate on others, and place orders a little differently each time."
+          "start": 6.1,
+          "text": "It takes every signal, every time the rule says trade, at the stated price, without hesitation. You do not. You skip some signals, hesitate on others, and place orders a little differently each time."
         },
         {
-          "start": 14.2,
+          "start": 19.1,
           "text": "The backtest never flinches. It also never traded."
         },
         {
-          "start": 18,
+          "start": 22.6,
           "text": "So keep your own executions in their own count, apart from any backtest. Never blend the two."
         },
         {
-          "start": 25.1,
+          "start": 29.4,
           "text": "The market data answers one question: did the market behave that way. Your record answers another: can you collect on it. The two answers are independent."
         },
         {
-          "start": 35.5,
+          "start": 39.5,
           "text": "The rule: a rule that tests well and that you cannot execute is not yours yet.",
           "chapter": "The rule"
         },
         {
-          "start": 42.2,
+          "start": 46,
           "text": "Your record has its own test. It is called Gate 2.",
           "chapter": "Gate 2"
         },
         {
-          "start": 47.1,
-          "text": "Gate 2 is the test of your own live trades of a rule. It passes on three things."
+          "start": 50.5,
+          "text": "Gate 2 is the test of your own live trades of a rule. Live means real orders in a real market. It passes on three things."
         },
         {
-          "start": 54.5,
+          "start": 60.7,
           "text": "One: at least thirty live trades."
         },
         {
-          "start": 57.6,
+          "start": 63.4,
           "text": "Two: across at least twenty distinct sessions."
         },
         {
-          "start": 61,
+          "start": 66.5,
           "text": "Three: expectancy of at least 0.3 R after commissions."
         },
         {
-          "start": 65.1,
+          "start": 70.3,
           "text": "Sim trades never count toward it. Sim is the simulator, the practice mode on your platform, and the next chapter is why."
         },
         {
-          "start": 74,
+          "start": 79,
           "text": "Now, simulated fills.",
           "chapter": "Simulated fills"
         },
         {
-          "start": 76,
+          "start": 80.6,
           "text": "A limit order is an order to buy or sell at your price or better. The simulator fills it the moment price touches your price. Real markets do not always fill you there."
         },
         {
-          "start": 89,
-          "text": "Price can touch your level, turn around, and never fill you. The trades that get away are often the best ones."
+          "start": 93.3,
+          "text": "Price can touch your level, the price you planned to trade at, then turn around and never fill you. The trades that get away are often the best ones."
         },
         {
-          "start": 97.6,
+          "start": 104.5,
           "text": "Where in the level you get filled is the variable that decides whether a trade pays, and the simulator ignores it."
         },
         {
-          "start": 106.1,
-          "text": "The rule: sim tells you how often something happened. It cannot tell you whether you would have been paid for it.",
-          "chapter": "The rule"
+          "start": 112.8,
+          "text": "The rule for sim: it tells you how often something happened. It cannot tell you whether you would have been paid for it.",
+          "chapter": "The sim rule"
         },
         {
-          "start": 114.7,
-          "text": "Getting it wrong is counting sim trades as evidence. Keep sim as practice, and as a count of occurrences. A simulator that fills every touch is generous. Generosity is not data.",
+          "start": 121.8,
+          "text": "Getting it wrong is counting sim trades as evidence. Keep sim as practice, and as a count of occurrences, never as evidence of edge.",
           "chapter": "Getting it wrong"
         }
       ],
@@ -763,18 +794,20 @@
                 "cue": 0,
                 "lines": [
                   {
-                    "text": "Takes every signal",
+                    "text": "Your rule on past data",
                     "y": 56,
                     "size": 14,
                     "cls": "t"
                   },
                   {
-                    "text": "At the stated price",
-                    "y": 84
+                    "text": "Takes every signal",
+                    "y": 84,
+                    "cue": 1
                   },
                   {
-                    "text": "Without hesitation",
-                    "y": 106
+                    "text": "At the stated price, no hesitation",
+                    "y": 106,
+                    "cue": 1
                   },
                   {
                     "text": "Answers: did the market do it",
@@ -782,7 +815,8 @@
                     "size": 15,
                     "cls": "t",
                     "weight": 700,
-                    "tone": "gold"
+                    "tone": "gold",
+                    "cue": 4
                   }
                 ]
               },
@@ -811,7 +845,8 @@
                     "size": 15,
                     "cls": "t",
                     "weight": 700,
-                    "tone": "cyan"
+                    "tone": "cyan",
+                    "cue": 4
                   }
                 ]
               }
@@ -829,7 +864,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A backtest compared with your own executions\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A backtest is not you</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Two counts, kept apart</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The backtest</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Takes every signal</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">At the stated price</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Without hesitation</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Answers: did the market do it</text></g><g class=\"sv-rv\" style=\"animation-delay:3.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">You</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Skip some signals</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Hesitate on others</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Orders a little different</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Answers: can you collect on it</text></g><g class=\"sv-rv\" style=\"animation-delay:18.0s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Never blend the two counts.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A backtest compared with your own executions\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A backtest is not you</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Two counts, kept apart</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The backtest</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your rule on past data</text><g class=\"sv-rv\" style=\"animation-delay:6.1s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Takes every signal</text></g><g class=\"sv-rv\" style=\"animation-delay:6.1s\"><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">At the stated price, no hesitation</text></g><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Answers: did the market do it</text></g></g><g class=\"sv-rv\" style=\"animation-delay:6.1s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">You</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Skip some signals</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Hesitate on others</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Orders a little different</text><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Answers: can you collect on it</text></g></g><g class=\"sv-rv\" style=\"animation-delay:22.6s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Never blend the two counts.</text></g></svg>"
         },
         {
           "title": "Gate 2",
@@ -871,13 +906,13 @@
                 "text": "Sim trades never count toward it.",
                 "size": 15,
                 "cls": "t",
-                "tone": "red",
-                "cue": 5
+                "cue": 5,
+                "tone": "red"
               }
             ]
           },
-          "start": 42.2,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The three parts of Gate 2\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Gate 2: your own live trades</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three parts, and sim never counts</text><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">At least 30 live trades</text></g><g class=\"sv-rv\" style=\"animation-delay:15.4s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">At least 20 distinct sessions</text></g><g class=\"sv-rv\" style=\"animation-delay:18.8s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Expectancy at least 0.3 R, after commissions</text></g><g class=\"sv-rv\" style=\"animation-delay:4.9s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Gate 2</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">your execution</text></g><g class=\"sv-rv\" style=\"animation-delay:22.9s\"><text x=\"32\" y=\"240\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Sim trades never count toward it.</text></g></svg>"
+          "start": 46,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The three parts of Gate 2\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Gate 2: your own live trades</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three parts, and sim never counts</text><g class=\"sv-rv\" style=\"animation-delay:14.7s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">At least 30 live trades</text></g><g class=\"sv-rv\" style=\"animation-delay:17.4s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">At least 20 distinct sessions</text></g><g class=\"sv-rv\" style=\"animation-delay:20.5s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Expectancy at least 0.3 R, after commissions</text></g><g class=\"sv-rv\" style=\"animation-delay:4.5s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Gate 2</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">your execution</text></g><g class=\"sv-rv\" style=\"animation-delay:24.3s\"><text x=\"32\" y=\"240\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Sim trades never count toward it.</text></g></svg>"
         },
         {
           "title": "Simulator and market",
@@ -912,7 +947,8 @@
                     "size": 15,
                     "cls": "t",
                     "weight": 700,
-                    "tone": "gold"
+                    "tone": "gold",
+                    "cue": 4
                   }
                 ]
               },
@@ -954,12 +990,12 @@
                 "text": "Sim is practice and a count. Not evidence of edge.",
                 "size": 15,
                 "cls": "t",
-                "cue": 4
+                "cue": 5
               }
             ]
           },
-          "start": 74,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The simulator compared with a real market\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A touch is not a fill</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the simulator assumes</text><g class=\"sv-rv\" style=\"animation-delay:2.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The simulator</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Price touches your level</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Order is filled</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every time</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Counts occurrences</text></g><g class=\"sv-rv\" style=\"animation-delay:15.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">A real market</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Price touches your level</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Turns around</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">You are never filled</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Often the best trade</text></g><g class=\"sv-rv\" style=\"animation-delay:32.1s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Sim is practice and a count. Not evidence of edge.</text></g></svg>"
+          "start": 79,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The simulator compared with a real market\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A touch is not a fill</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the simulator assumes</text><g class=\"sv-rv\" style=\"animation-delay:1.6s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The simulator</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Price touches your level</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Order is filled</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every time</text><g class=\"sv-rv\" style=\"animation-delay:33.8s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Counts occurrences</text></g></g><g class=\"sv-rv\" style=\"animation-delay:14.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">A real market</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Price touches your level</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Turns around</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">You are never filled</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Often the best trade</text></g><g class=\"sv-rv\" style=\"animation-delay:42.8s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Sim is practice and a count. Not evidence of edge.</text></g></svg>"
         }
       ],
       "check": [
@@ -967,22 +1003,22 @@
           "q": "Why keep your own executions in a separate count from the backtest?",
           "options": [
             "The backtest is always wrong",
-            "The market data and your record answer different questions, and the two answers are independent",
             "Brokers ask for it",
-            "It is shorter"
+            "It is shorter",
+            "The market data and your record answer different questions, and the two answers are independent"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "One answers whether the market behaved that way; the other whether you can collect on it."
         },
         {
           "q": "Which describes Gate 2?",
           "options": [
-            "Ten sim trades with a good average",
             "At least thirty live trades across at least twenty distinct sessions, with expectancy of at least 0.3 R after commissions",
+            "Ten sim trades with a good average",
             "One long session",
             "Any thirty trades, sim included"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Sim trades never count toward Gate 2."
         },
         {
@@ -1017,7 +1053,7 @@
         "Why Small Samples Mislead",
         "Apply It To This Course Too"
       ],
-      "duration": 116,
+      "duration": 122.6,
       "cues": [
         {
           "start": 0,
@@ -1025,69 +1061,77 @@
           "chapter": "Small samples"
         },
         {
-          "start": 5.2,
+          "start": 4.9,
           "text": "A few wins in a row prove little. So do a few losses."
         },
         {
-          "start": 10.9,
+          "start": 10.3,
           "text": "The count is not the whole story either. Thirty trades across four sessions is one week's conditions, not a sample."
         },
         {
-          "start": 19.1,
-          "text": "If those sessions trended, everything looked like a trend setup. If they were quiet, nothing followed through. Thirty trades in one mood is a large sample of a small thing."
+          "start": 18.2,
+          "text": "If those sessions trended, every trade looked like a trend trade. If they were quiet, nothing followed through. Thirty trades in one mood is a large sample of a small thing."
         },
         {
-          "start": 31,
+          "start": 30.1,
           "text": "The rule: you need trades spread across many different days and conditions, so that no single kind of market does all the work.",
           "chapter": "The rule"
         },
         {
-          "start": 40.3,
+          "start": 39.2,
           "text": "Getting it wrong is counting trades and not sessions. That is why Gate 2 asks for twenty distinct sessions as well as thirty trades.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 50,
+          "start": 48.6,
           "text": "Now, one question to ask of any claim.",
           "chapter": "The question"
         },
         {
-          "start": 53.7,
+          "start": 52,
           "text": "What would have to be true for this to be wrong, and has that been checked?"
         },
         {
-          "start": 60.5,
+          "start": 58.4,
           "text": "If nobody can say what would count as wrong, the claim cannot be tested. If they can, and it has not been checked, it is an idea, not a result."
         },
         {
-          "start": 72.4,
+          "start": 70.1,
           "text": "That includes this course.",
           "chapter": "This course"
         },
         {
-          "start": 74.7,
+          "start": 72,
           "text": "Read every claim through the same lens. One: a rule stated before it was tested."
         },
         {
-          "start": 81,
+          "start": 78.1,
           "text": "Two: compared with a null."
         },
         {
-          "start": 83.7,
+          "start": 80.4,
           "text": "Three: checked in separate halves and in recent data."
         },
         {
-          "start": 87.8,
+          "start": 84.3,
           "text": "Four: kept apart from your own execution record."
         },
         {
-          "start": 91.6,
-          "text": "This course gives you setups, rules and routines. It does not give you results. Whether any of them holds for you is decided by your own record."
+          "start": 87.7,
+          "text": "This course gives you setups. A setup is a level and a read together: where you trade, and what price has to do there."
         },
         {
-          "start": 102.4,
-          "text": "The rule: treat each one as a testable idea. Write the rule down, log every instance, and be suspicious of anyone, this site included, who tells you a trading idea is settled.",
-          "chapter": "The rule"
+          "start": 97.1,
+          "text": "It gives you rules and routines too. It does not give you results. Whether any of them holds for you is decided by your own record."
+        },
+        {
+          "start": 107.3,
+          "text": "So, what to do with them. Treat each one as a testable idea.",
+          "chapter": "Testable ideas"
+        },
+        {
+          "start": 112.6,
+          "text": "Write the rule down, log every instance, and be suspicious of anyone, this site included, who tells you a trading idea is settled."
         }
       ],
       "slides": [
@@ -1095,31 +1139,33 @@
           "title": "Trades are not sessions",
           "kind": "compare",
           "data": {
-            "title": "Thirty trades is not one count",
+            "title": "A small sample is mostly noise",
             "subtitle": "What matters is how many different sessions",
-            "aria": "Thirty trades in few sessions compared with thirty trades in many",
+            "aria": "A small run of trades, and thirty trades in four sessions",
             "columns": [
               {
                 "tone": "red",
-                "head": "30 trades, 4 sessions",
+                "head": "A small run",
                 "cue": 0,
                 "lines": [
                   {
-                    "text": "One week's conditions",
+                    "text": "Feels like information",
                     "y": 56,
                     "size": 14,
                     "cls": "t"
                   },
                   {
-                    "text": "Trending: all looks like trend",
-                    "y": 84
+                    "text": "A few wins prove little",
+                    "y": 84,
+                    "cue": 1
                   },
                   {
-                    "text": "Quiet: nothing follows through",
-                    "y": 106
+                    "text": "So do a few losses",
+                    "y": 106,
+                    "cue": 1
                   },
                   {
-                    "text": "Not a sample",
+                    "text": "Mostly noise",
                     "y": 140,
                     "size": 15,
                     "cls": "t",
@@ -1129,31 +1175,33 @@
                 ]
               },
               {
-                "tone": "green",
-                "head": "30 trades, 20+ sessions",
-                "cue": 3,
+                "tone": "gold",
+                "head": "30 trades, 4 sessions",
+                "cue": 2,
                 "lines": [
                   {
-                    "text": "Many days and conditions",
+                    "text": "One week's conditions",
                     "y": 56,
                     "size": 14,
                     "cls": "t"
                   },
                   {
-                    "text": "No one market does the work",
-                    "y": 84
+                    "text": "Trending: all looks like trend",
+                    "y": 84,
+                    "cue": 3
                   },
                   {
-                    "text": "Gate 2 asks for this",
-                    "y": 106
+                    "text": "Quiet: nothing follows through",
+                    "y": 106,
+                    "cue": 3
                   },
                   {
-                    "text": "Closer to a sample",
+                    "text": "Not a sample",
                     "y": 140,
                     "size": 15,
                     "cls": "t",
                     "weight": 700,
-                    "tone": "green"
+                    "tone": "gold"
                   }
                 ]
               }
@@ -1162,47 +1210,74 @@
               {
                 "type": "note",
                 "x": 32,
-                "y": 312,
-                "text": "Count sessions, not only trades.",
+                "y": 304,
+                "text": "Spread trades across many days and conditions.",
                 "size": 15,
                 "cls": "t",
-                "cue": 5
+                "cue": 4
+              },
+              {
+                "type": "note",
+                "x": 32,
+                "y": 330,
+                "text": "Count sessions, not only trades: 20 sessions as well as 30 trades.",
+                "size": 14,
+                "cls": "t",
+                "cue": 5,
+                "tone": "gold"
               }
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Thirty trades in few sessions compared with thirty trades in many\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Thirty trades is not one count</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What matters is how many different sessions</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">30 trades, 4 sessions</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">One week's conditions</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trending: all looks like trend</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Quiet: nothing follows through</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Not a sample</text></g><g class=\"sv-rv\" style=\"animation-delay:19.1s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">30 trades, 20+ sessions</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Many days and conditions</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No one market does the work</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Gate 2 asks for this</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Closer to a sample</text></g><g class=\"sv-rv\" style=\"animation-delay:40.3s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Count sessions, not only trades.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A small run of trades, and thirty trades in four sessions\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A small sample is mostly noise</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What matters is how many different sessions</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">A small run</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Feels like information</text><g class=\"sv-rv\" style=\"animation-delay:4.9s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A few wins prove little</text></g><g class=\"sv-rv\" style=\"animation-delay:4.9s\"><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">So do a few losses</text></g><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Mostly noise</text></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">30 trades, 4 sessions</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">One week's conditions</text><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trending: all looks like trend</text></g><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Quiet: nothing follows through</text></g><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Not a sample</text></g><g class=\"sv-rv\" style=\"animation-delay:30.1s\"><text x=\"32\" y=\"304\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Spread trades across many days and conditions.</text></g><g class=\"sv-rv\" style=\"animation-delay:39.2s\"><text x=\"32\" y=\"330\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Count sessions, not only trades: 20 sessions as well as 30 trades.</text></g></svg>"
         },
         {
           "title": "The one question",
-          "kind": "list",
+          "kind": "cards",
           "data": {
             "title": "One question for any claim",
-            "subtitle": "What would make it wrong?",
-            "aria": "The question and its two outcomes",
-            "rows": {
+            "subtitle": "Ask it of every claim, this course included",
+            "aria": "The question in two parts, and its two outcomes",
+            "parts": [
+              {
+                "n": "1",
+                "head": "What would make it wrong?",
+                "lines": [
+                  "What would have to be true",
+                  "for this claim to be wrong?"
+                ],
+                "foot": "Someone must be able to say",
+                "cue": 1
+              },
+              {
+                "n": "2",
+                "head": "Has that been checked?",
+                "lines": [
+                  "Has anyone looked for",
+                  "the thing that would break it?"
+                ],
+                "foot": "Looked, not assumed",
+                "cue": 1
+              }
+            ],
+            "verdicts": {
               "cue": 2,
-              "stagger": 1.5,
               "items": [
                 {
-                  "text": "Nobody can say what is wrong",
-                  "tone": "red"
+                  "tone": "red",
+                  "head": "Nobody can say",
+                  "text": "The claim cannot be tested"
                 },
                 {
-                  "text": "Unchecked: an idea, not a result",
-                  "tone": "gold"
+                  "tone": "gold",
+                  "head": "Not checked yet",
+                  "text": "An idea, not a result"
                 }
               ]
-            },
-            "aside": {
-              "head": "Wrong?",
-              "sub": "checked?",
-              "cue": 1,
-              "size": 22
             }
           },
-          "start": 50,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The question and its two outcomes\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One question for any claim</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What would make it wrong?</text><g class=\"sv-rv\" style=\"animation-delay:10.5s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Nobody can say what is wrong</text></g><g class=\"sv-rv\" style=\"animation-delay:12.0s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Unchecked: an idea, not a result</text></g><g class=\"sv-rv\" style=\"animation-delay:3.7s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Wrong?</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">checked?</text></g></svg>"
+          "start": 48.6,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The question in two parts, and its two outcomes\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One question for any claim</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Ask it of every claim, this course included</text><g class=\"sv-rv\" style=\"animation-delay:3.4s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What would make it wrong?</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What would have to be true</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">for this claim to be wrong?</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Someone must be able to say</text></g><g class=\"sv-rv\" style=\"animation-delay:3.4s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Has that been checked?</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Has anyone looked for</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">the thing that would break it?</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Looked, not assumed</text></g><g class=\"sv-rv\" style=\"animation-delay:9.8s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Nobody can say</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The claim cannot be tested</text><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Not checked yet</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">An idea, not a result</text></g></svg>"
         },
         {
           "title": "The same lens",
@@ -1238,12 +1313,12 @@
             "aside": {
               "head": "Ideas",
               "sub": "to test",
-              "cue": 5,
+              "cue": 7,
               "size": 24
             }
           },
-          "start": 72.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four parts of the lens\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The same lens, on this course</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every claim, including these</text><g class=\"sv-rv\" style=\"animation-delay:2.3s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A rule stated before it was tested</text></g><g class=\"sv-rv\" style=\"animation-delay:8.6s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Compared with a null</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Checked in halves and recent data</text></g><g class=\"sv-rv\" style=\"animation-delay:15.4s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Kept apart from your execution</text></g><g class=\"sv-rv\" style=\"animation-delay:19.2s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Ideas</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">to test</text></g></svg>"
+          "start": 70.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four parts of the lens\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The same lens, on this course</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every claim, including these</text><g class=\"sv-rv\" style=\"animation-delay:1.9s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A rule stated before it was tested</text></g><g class=\"sv-rv\" style=\"animation-delay:8.0s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Compared with a null</text></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Checked in halves and recent data</text></g><g class=\"sv-rv\" style=\"animation-delay:14.2s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Kept apart from your execution</text></g><g class=\"sv-rv\" style=\"animation-delay:37.2s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Ideas</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">to test</text></g></svg>"
         }
       ],
       "check": [
@@ -1253,7 +1328,7 @@
             "A solid sample",
             "One week's conditions, not a sample",
             "Enough for Gate 2",
-            "Proof the rule works"
+            "All the evidence a rule needs"
           ],
           "answer": 1,
           "why": "A sample needs trades spread across many days and conditions."
@@ -1284,11 +1359,11 @@
           "q": "What does the course give you to use on its own ideas?",
           "options": [
             "Results to copy",
-            "Setups, rules and routines to test, with your own record deciding",
-            "A list of guaranteed levels",
-            "A reason to skip the journal"
+            "A list of levels that always hold",
+            "A reason to skip the journal",
+            "Setups, rules and routines to test, with your own record deciding"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Whether any of it holds for you is decided by your own record."
         }
       ],
@@ -1296,13 +1371,11 @@
     },
     {
       "id": "s5",
-      "title": "Score a claim, then your assignment",
+      "title": "Can this claim be checked?",
       "sections": [
-        "Can This Claim Be Checked?",
-        "Before Your Next Session",
-        "Where It Goes Next"
+        "Can This Claim Be Checked?"
       ],
-      "duration": 116,
+      "duration": 78.4,
       "cues": [
         {
           "start": 0,
@@ -1310,68 +1383,46 @@
           "chapter": "The score"
         },
         {
-          "start": 7.8,
+          "start": 7.5,
           "text": "Score it. One point for each line that is true."
         },
         {
-          "start": 12.3,
+          "start": 11.7,
           "text": "One: the rule is written exactly enough that someone else could run it."
         },
         {
-          "start": 18,
+          "start": 17.1,
           "text": "Two: the rule was fixed before anyone looked at the data it was tested on."
         },
         {
-          "start": 24.3,
+          "start": 23.1,
           "text": "Three: it was compared with a null, and beat it."
         },
         {
-          "start": 28.8,
+          "start": 27.3,
           "text": "Four: it was positive in both halves of the sample and in recent data on its own."
         },
         {
-          "start": 35.9,
+          "start": 34.1,
           "text": "Five: live trades of it are counted apart from the backtest, with sim left out."
         },
         {
-          "start": 42.3,
-          "text": "The rule: if line one or line two is missing, the claim cannot be checked at all. It is an opinion, and you set it aside.",
+          "start": 40.2,
+          "text": "The threshold. If line one or line two is missing, the claim cannot be checked at all. It is an opinion, and you set it aside.",
           "chapter": "The threshold"
         },
         {
-          "start": 52.7,
-          "text": "With both, anything under five of five is an idea that has not had its test yet. You log it. You do not size it as a result."
+          "start": 50.3,
+          "text": "With both, anything under five of five is an idea that has not had its test yet, and you treat it as one. You log it. You do not size it as a result."
         },
         {
-          "start": 63.9,
-          "text": "Getting it wrong is skipping the date. A rule with no date on it was probably written after the chart. Hindsight is undefeated.",
+          "start": 63.4,
+          "text": "Getting it wrong is skipping the date. A rule with no date on it was probably written after the chart.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 73.2,
-          "text": "Now, your assignment.",
-          "chapter": "Your next session"
-        },
-        {
-          "start": 75.1,
-          "text": "Write one rule you trade, or want to trade, as one sentence: entry, stop, target, and when it applies."
-        },
-        {
-          "start": 82.9,
-          "text": "Put the date beside it. That is the whole assignment."
-        },
-        {
-          "start": 87.4,
-          "text": "Where it goes next.",
-          "chapter": "Where it goes next"
-        },
-        {
-          "start": 89.7,
-          "text": "The dated rule becomes a line you log every instance of, with its outcome in R, in the journal, Module 18. Every trade you log is a point in the count Gate 2 reads."
-        },
-        {
-          "start": 103.1,
-          "text": "Module 21 teaches you to read a rate with its sample size beside it. Module 22 walks a locked rule through Gate 1 and Gate 2 on your own data."
+          "start": 71.3,
+          "text": "After the chart, every rule is right. That is why the date goes on first."
         }
       ],
       "slides": [
@@ -1419,7 +1470,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Five lines that score a claim\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Can this claim be checked?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One point for each line that is true</text><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule someone else could run</text></g><g class=\"sv-rv\" style=\"animation-delay:18.0s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Dated before the data was seen</text></g><g class=\"sv-rv\" style=\"animation-delay:24.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Beat its null</text></g><g class=\"sv-rv\" style=\"animation-delay:28.8s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Positive in halves and recent data</text></g><g class=\"sv-rv\" style=\"animation-delay:35.9s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Live trades counted apart, no sim</text></g><g class=\"sv-rv\" style=\"animation-delay:7.8s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">5 of 5</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is the full score</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Five lines that score a claim\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Can this claim be checked?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One point for each line that is true</text><g class=\"sv-rv\" style=\"animation-delay:11.7s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule someone else could run</text></g><g class=\"sv-rv\" style=\"animation-delay:17.1s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Dated before the data was seen</text></g><g class=\"sv-rv\" style=\"animation-delay:23.1s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Beat its null</text></g><g class=\"sv-rv\" style=\"animation-delay:27.3s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Positive in halves and recent data</text></g><g class=\"sv-rv\" style=\"animation-delay:34.1s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Live trades counted apart, no sim</text></g><g class=\"sv-rv\" style=\"animation-delay:7.5s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">5 of 5</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is the full score</text></g></svg>"
         },
         {
           "title": "The threshold",
@@ -1440,7 +1491,7 @@
                   "cue": 0
                 },
                 {
-                  "score": "Under 5 of 5",
+                  "score": "Under 5",
                   "text": "An idea: log it, do not size it",
                   "tone": "gold",
                   "cue": 1
@@ -1458,16 +1509,120 @@
                 "type": "note",
                 "x": 32,
                 "y": 176,
-                "text": "A rule with no date was written after the chart",
+                "text": "No date: probably written after the chart",
                 "size": 14,
                 "tone": "gold",
                 "cue": 2
               }
             ]
           },
-          "start": 42.3,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The threshold for scoring a claim\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the score means</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Line one and line two come first</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Line 1 or 2</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Missing: an opinion, set aside</text></g><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Under 5 of 5</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">An idea: log it, do not size it</text></g><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">5 of 5</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">All five lines true</text></g><g class=\"sv-rv\" style=\"animation-delay:21.6s\"><text x=\"32\" y=\"176\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">A rule with no date was written after the chart</text></g></svg>"
+          "start": 40.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The threshold for scoring a claim\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the score means</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Line one and line two come first</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Line 1 or 2</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Missing: an opinion, set aside</text></g><g class=\"sv-rv\" style=\"animation-delay:10.1s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Under 5</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">An idea: log it, do not size it</text></g><g class=\"sv-rv\" style=\"animation-delay:10.1s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">5 of 5</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">All five lines true</text></g><g class=\"sv-rv\" style=\"animation-delay:23.2s\"><text x=\"32\" y=\"176\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">No date: probably written after the chart</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "Line one or line two of the five is missing. What is the claim?",
+          "options": [
+            "An idea to size",
+            "A result",
+            "An opinion you set aside",
+            "Nearly checked"
+          ],
+          "answer": 2,
+          "why": "Without a runnable rule fixed before the data, the claim cannot be checked at all."
         },
+        {
+          "q": "A claim has the rule and the date but scores three of five. How do you treat it?",
+          "options": [
+            "As an idea that has not had its test yet: you log it and do not size it as a result",
+            "As a result, sized normally",
+            "As an opinion to set aside",
+            "As settled"
+          ],
+          "answer": 0,
+          "why": "Under five of five is an idea, not a result."
+        },
+        {
+          "q": "Why does the date beside the rule matter?",
+          "options": [
+            "It looks tidy",
+            "The broker asks",
+            "It sets the stop",
+            "A rule with no date was probably written after the chart"
+          ],
+          "answer": 3,
+          "why": "The date is how you show the rule came before the data."
+        },
+        {
+          "q": "Which of these is one of the five lines?",
+          "options": [
+            "The claim comes from a well-known source",
+            "It was compared with a null, and beat it",
+            "It held up over the last five sessions",
+            "It has a name other traders recognise"
+          ],
+          "answer": 1,
+          "why": "The five lines are the rule, the date, the null, the splits and your own execution."
+        }
+      ],
+      "audio": "../assets/audio/01/s5.mp3"
+    },
+    {
+      "id": "s6",
+      "title": "Your next session",
+      "sections": [
+        "Before Your Next Session",
+        "Where It Goes Next"
+      ],
+      "duration": 87.1,
+      "cues": [
+        {
+          "start": 0,
+          "text": "Your assignment. Before your next session, write one rule you trade, or want to trade, as one sentence.",
+          "chapter": "Assignment"
+        },
+        {
+          "start": 7.2,
+          "text": "Entry, stop, target, and when it applies. Then put the date beside it. That is the whole assignment."
+        },
+        {
+          "start": 14.3,
+          "text": "Think of the date as a receipt. Dull to keep. It is also the only thing anyone accepts later."
+        },
+        {
+          "start": 21.9,
+          "text": "Getting it wrong is writing a sentence nobody else could run. If another trader could not take the same trades from your sentence alone, it is not a rule yet. Rewrite it until they could.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 35.3,
+          "text": "The summary. A claim can be checked when its rule was written in full, and dated, before the data was opened.",
+          "chapter": "Summary"
+        },
+        {
+          "start": 43.6,
+          "text": "Then it has to beat its null, hold in both halves and in recent data, and show up in your own live trades, counted apart, with sim left out."
+        },
+        {
+          "start": 54.9,
+          "text": "Where it goes next. The dated rule becomes a line you log every instance of, with its outcome in R, in the journal: Module 18, Journaling and Review.",
+          "chapter": "Where it goes next"
+        },
+        {
+          "start": 65.7,
+          "text": "Every trade you log is a point in the count Gate 2 reads."
+        },
+        {
+          "start": 71,
+          "text": "Module 21, Reading A Probability, teaches you to read a rate with its sample size beside it."
+        },
+        {
+          "start": 77.8,
+          "text": "Module 22, How To Test An Edge, walks a locked rule through Gate 1 and Gate 2 on your own data."
+        }
+      ],
+      "slides": [
         {
           "title": "One sentence and a date",
           "kind": "assignment",
@@ -1483,89 +1638,100 @@
               "Conditions",
               "The date"
             ],
-            "line1": "One rule you trade, as one sentence.",
-            "line2": "Put the date beside it. That is the assignment."
+            "line1": "One rule you trade, or want to trade, as one sentence.",
+            "line2": "Put the date beside it. That is the assignment.",
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "If nobody else could run it, it is not a rule yet.",
+                "size": 14,
+                "tone": "red",
+                "cue": 3
+              }
+            ]
           },
-          "start": 73.2,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The assignment: one rule in one sentence, with a date\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your assignment: one rule, dated</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before your next session</text><g class=\"sv-rv\" style=\"animation-delay:1.9s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Entry</text></g><g class=\"sv-rv\" style=\"animation-delay:3.2s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Stop</text></g><g class=\"sv-rv\" style=\"animation-delay:4.5s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Target</text></g><g class=\"sv-rv\" style=\"animation-delay:5.8s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Conditions</text></g><g class=\"sv-rv\" style=\"animation-delay:7.1s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">The date</text></g><g class=\"sv-rv\" style=\"animation-delay:1.9s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One rule you trade, as one sentence.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Put the date beside it. That is the assignment.</text></g></svg>"
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The assignment: one rule in one sentence, with a date\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your assignment: one rule, dated</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before your next session</text><g class=\"sv-rv\" style=\"animation-delay:7.2s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Entry</text></g><g class=\"sv-rv\" style=\"animation-delay:8.5s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Stop</text></g><g class=\"sv-rv\" style=\"animation-delay:9.8s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Target</text></g><g class=\"sv-rv\" style=\"animation-delay:11.1s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Conditions</text></g><g class=\"sv-rv\" style=\"animation-delay:12.4s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">The date</text></g><g class=\"sv-rv\" style=\"animation-delay:7.2s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One rule you trade, or want to trade, as one sentence.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Put the date beside it. That is the assignment.</text></g><g class=\"sv-rv\" style=\"animation-delay:21.9s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--red)\">If nobody else could run it, it is not a rule yet.</text></g></svg>"
         },
         {
-          "title": "Where it goes next",
+          "title": "Summary",
           "kind": "summary",
           "data": {
-            "title": "Where it goes next",
-            "subtitle": "Three modules this page feeds",
-            "aria": "Where the module goes next",
-            "statement": "Your dated rule becomes a journal line, in R.",
+            "title": "A claim you can check",
+            "subtitle": "A rule, written in full and dated before the data",
+            "aria": "A claim you can check, and where the module goes next",
+            "statement": "Then: beats its null, holds in the splits, live trades counted apart.",
             "links": [
               {
                 "head": "Module 18",
                 "sub": "Journaling & Review",
-                "cue": 1
+                "cue": 2
               },
               {
                 "head": "Module 21",
                 "sub": "Reading A Probability",
-                "cue": 2
+                "cue": 4
               },
               {
                 "head": "Module 22",
                 "sub": "How To Test An Edge",
-                "cue": 2
+                "cue": 5
               }
             ]
           },
-          "start": 87.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Where the module goes next\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three modules this page feeds</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your dated rule becomes a journal line, in R.</text></g><g class=\"sv-rv\" style=\"animation-delay:2.3s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:15.7s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 21</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reading A Probability</text></g><g class=\"sv-rv\" style=\"animation-delay:15.7s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 22</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">How To Test An Edge</text></g></svg>"
+          "start": 35.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A claim you can check, and where the module goes next\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A claim you can check</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A rule, written in full and dated before the data</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Then: beats its null, holds in the splits, live trades counted apart.</text></g><g class=\"sv-rv\" style=\"animation-delay:19.6s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:35.7s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 21</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reading A Probability</text></g><g class=\"sv-rv\" style=\"animation-delay:42.5s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 22</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">How To Test An Edge</text></g></svg>"
         }
       ],
       "check": [
         {
-          "q": "Line one or line two of the five is missing. What is the claim?",
-          "options": [
-            "An idea to size",
-            "An opinion you set aside",
-            "A result",
-            "Nearly checked"
-          ],
-          "answer": 1,
-          "why": "Without a runnable rule fixed before the data, the claim cannot be checked at all."
-        },
-        {
-          "q": "A claim has the rule and the date but scores three of five. How do you treat it?",
-          "options": [
-            "As a result, sized normally",
-            "As an idea that has not had its test yet: you log it and do not size it as a result",
-            "As an opinion to set aside",
-            "As settled"
-          ],
-          "answer": 1,
-          "why": "Under five of five is an idea, not a result."
-        },
-        {
-          "q": "Why does the date beside the rule matter?",
-          "options": [
-            "It looks tidy",
-            "A rule with no date was probably written after the chart",
-            "The broker asks",
-            "It sets the stop"
-          ],
-          "answer": 1,
-          "why": "The date is how you show the rule came before the data."
-        },
-        {
           "q": "What is the assignment?",
           "options": [
             "Read the next module",
-            "Write one rule you trade as one sentence and put the date beside it",
             "Run a Gate 1 test",
-            "Buy a charting package"
+            "Buy a charting package",
+            "Write one rule you trade as one sentence and put the date beside it"
+          ],
+          "answer": 3,
+          "why": "One sentence, one date."
+        },
+        {
+          "q": "Another trader could not take the same trades from your one sentence. What is it?",
+          "options": [
+            "A locked rule",
+            "Not a rule yet: rewrite it until they could",
+            "A result",
+            "Ready for Gate 2"
           ],
           "answer": 1,
-          "why": "One sentence, one date."
+          "why": "A rule is written exactly enough that someone else could run it."
+        },
+        {
+          "q": "Where does the dated rule go next?",
+          "options": [
+            "Into the journal, Module 18, logged every instance with its outcome in R",
+            "Onto the chart as a line",
+            "Into Module 02 as a hard rule",
+            "Nowhere until it has a result"
+          ],
+          "answer": 0,
+          "why": "Every trade you log is a point in the count Gate 2 reads."
+        },
+        {
+          "q": "Which module walks a locked rule through Gate 1 and Gate 2 on your own data?",
+          "options": [
+            "Module 02, The Hard Rules",
+            "Module 18, Journaling & Review",
+            "Module 22, How To Test An Edge",
+            "Module 21, Reading A Probability"
+          ],
+          "answer": 2,
+          "why": "Module 21 teaches reading a rate with its sample size; Module 22 runs the two gates."
         }
       ],
-      "audio": "../assets/audio/01/s5.mp3"
+      "audio": "../assets/audio/01/s6.mp3"
     }
   ],
   "quiz": {
@@ -1575,11 +1741,11 @@
         "q": "What do you need before a trading claim can be checked?",
         "options": [
           "A confident speaker",
-          "A rule stated exactly enough that someone else could run it, and a record of when it was fixed",
           "A long chart history only",
+          "A rule stated exactly enough that someone else could run it, and a record of when it was fixed",
           "A popular name"
         ],
-        "answer": 1,
+        "answer": 2,
         "why": "Without the rule and the date, there is nothing to check."
       },
       {
@@ -1608,33 +1774,33 @@
         "q": "Where does sim count?",
         "options": [
           "Toward Gate 2",
-          "As practice and a count of occurrences, never as evidence of edge",
           "Toward Gate 1",
-          "As a live trade"
+          "As a live trade",
+          "As practice and a count of occurrences, never as evidence of edge"
         ],
-        "answer": 1,
+        "answer": 3,
         "why": "A simulator fills every touch; real markets do not."
       },
       {
         "q": "A rule tests well on market data and you skip half its signals. What is it?",
         "options": [
-          "Yours, as tested",
           "Not yours yet: the market data and your execution are separate answers",
+          "Yours, as tested",
           "A failed rule",
           "Settled"
         ],
-        "answer": 1,
+        "answer": 0,
         "why": "A rule that tests well and that you cannot execute is not yours yet."
       },
       {
         "q": "What is true of the claims in this course?",
         "options": [
           "They are results",
+          "They are settled",
           "They are testable ideas, and your own record decides",
-          "They are guaranteed",
           "They need no testing"
         ],
-        "answer": 1,
+        "answer": 2,
         "why": "The course gives you setups, rules and routines, not results."
       }
     ]
