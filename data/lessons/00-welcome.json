@@ -1,0 +1,1203 @@
+{
+  "module": "00-welcome",
+  "segments": [
+    {
+      "id": "s1",
+      "title": "Why you are here and what this is",
+      "sections": [
+        "Why You Are Here",
+        "What Is The Blueprint?"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "You may know the pattern. A setup from a video looked clean on the replay, so you traded it.",
+          "chapter": "The pattern"
+        },
+        {
+          "start": 7.3,
+          "text": "Some days it worked and some days it did not. A month later you could not say whether it was the setup, the market, or you."
+        },
+        {
+          "start": 17.3,
+          "text": "Nothing was written down. Not the rule, not the stop, which is the order that closes the trade when you are wrong, and not the reason for the exit."
+        },
+        {
+          "start": 28.3,
+          "text": "Without a written rule and a record, every result is a story, and you cannot improve a story. A story gets better every time you tell it. A trade does not."
+        },
+        {
+          "start": 40.1,
+          "text": "Now, what this is. The Blueprint is a trading framework, written down so you can build your own, with its examples on MNQ, the Micro E-mini Nasdaq-100 futures contract.",
+          "chapter": "What it is"
+        },
+        {
+          "start": 51.1,
+          "text": "It has six parts. One: levels, the prices where structure already happened."
+        },
+        {
+          "start": 55.9,
+          "text": "Two: reads, how you judge what price is doing at a level."
+        },
+        {
+          "start": 60.6,
+          "text": "Three: triggers, the event that tells you to act."
+        },
+        {
+          "start": 64.3,
+          "text": "Four: construction, where the stop, the size and the entry go."
+        },
+        {
+          "start": 68.6,
+          "text": "Five: rules, the limits that keep the account alive."
+        },
+        {
+          "start": 72.3,
+          "text": "Six: routines, what you do before, during and after the session."
+        },
+        {
+          "start": 76.6,
+          "text": "The rule: the course writes the framework down so you can learn it, test it against your own record, and keep what holds.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 85.5,
+          "text": "Getting it wrong is treating the course as a promise. This is not a get-rich-quick course. Trading is a skill, and a skill takes time, repetition and honest review. The course cannot tell you whether a setup will pay you. Your record can.",
+          "chapter": "Getting it wrong"
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "Story or record",
+          "kind": "compare",
+          "data": {
+            "title": "A story, or a record",
+            "subtitle": "You cannot improve a story. You can improve a record.",
+            "aria": "A story compared with a record",
+            "columns": [
+              {
+                "tone": "red",
+                "head": "What you had",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "A setup, clean on the replay",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Some days it worked",
+                    "y": 84
+                  },
+                  {
+                    "text": "Some days it did not",
+                    "y": 106
+                  },
+                  {
+                    "text": "Nothing written down",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "red"
+                  }
+                ]
+              },
+              {
+                "tone": "green",
+                "head": "What you need",
+                "cue": 2,
+                "lines": [
+                  {
+                    "text": "The rule, written",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "The stop",
+                    "y": 84
+                  },
+                  {
+                    "text": "The reason for the exit",
+                    "y": 106
+                  },
+                  {
+                    "text": "A record you can read",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "green"
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 312,
+                "text": "Without a written rule and a record, every result is a story.",
+                "size": 15,
+                "cls": "t",
+                "cue": 3
+              }
+            ]
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A story compared with a record\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A story, or a record</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">You cannot improve a story. You can improve a record.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">What you had</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A setup, clean on the replay</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Some days it worked</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Some days it did not</text><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Nothing written down</text></g><g class=\"sv-rv\" style=\"animation-delay:17.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">What you need</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The rule, written</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The stop</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The reason for the exit</text><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">A record you can read</text></g><g class=\"sv-rv\" style=\"animation-delay:28.3s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Without a written rule and a record, every result is a story.</text></g></svg>"
+        },
+        {
+          "start": 40.1,
+          "title": "Six parts",
+          "kind": "list",
+          "data": {
+            "title": "The Blueprint, written down",
+            "subtitle": "Six parts, so you can build your own",
+            "aria": "The six parts of the framework",
+            "rows": {
+              "items": [
+                {
+                  "text": "Levels: where structure happened",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Reads: what price is doing there",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "Triggers: the event that says act",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "Construction: stop, size, entry",
+                  "tone": "cyan",
+                  "cue": 4
+                },
+                {
+                  "text": "Rules: limits that keep you alive",
+                  "tone": "gold",
+                  "cue": 5
+                },
+                {
+                  "text": "Routines: before, during, after",
+                  "tone": "gold",
+                  "cue": 6
+                }
+              ]
+            },
+            "aside": {
+              "head": "MNQ",
+              "sub": "for examples",
+              "cue": 0,
+              "size": 26
+            }
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The six parts of the framework\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The Blueprint, written down</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Six parts, so you can build your own</text><g class=\"sv-rv\" style=\"animation-delay:11.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Levels: where structure happened</text></g><g class=\"sv-rv\" style=\"animation-delay:15.8s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Reads: what price is doing there</text></g><g class=\"sv-rv\" style=\"animation-delay:20.5s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Triggers: the event that says act</text></g><g class=\"sv-rv\" style=\"animation-delay:24.2s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Construction: stop, size, entry</text></g><g class=\"sv-rv\" style=\"animation-delay:28.5s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rules: limits that keep you alive</text></g><g class=\"sv-rv\" style=\"animation-delay:32.2s\"><rect x=\"32\" y=\"304\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"327\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">6</text><text x=\"76\" y=\"327\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Routines: before, during, after</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"26\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">MNQ</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">for examples</text></g></svg>"
+        },
+        {
+          "start": 76.6,
+          "title": "Framework, not promise",
+          "kind": "compare",
+          "data": {
+            "title": "A framework, not a promise",
+            "subtitle": "What the course can and cannot do",
+            "aria": "The course is a framework, not a promise",
+            "columns": [
+              {
+                "tone": "red",
+                "head": "It cannot",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "Say a setup will pay you",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "It is not get-rich-quick",
+                    "y": 84
+                  },
+                  {
+                    "text": "Skill takes time and review",
+                    "y": 106
+                  }
+                ]
+              },
+              {
+                "tone": "green",
+                "head": "Your record can",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "Tell you what holds",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Learn it, test it",
+                    "y": 84
+                  },
+                  {
+                    "text": "Keep what holds",
+                    "y": 106
+                  }
+                ]
+              }
+            ]
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The course is a framework, not a promise\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A framework, not a promise</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the course can and cannot do</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">It cannot</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Say a setup will pay you</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It is not get-rich-quick</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Skill takes time and review</text></g><g class=\"sv-rv\" style=\"animation-delay:8.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Your record can</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tell you what holds</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Learn it, test it</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Keep what holds</text></g></svg>"
+        }
+      ],
+      "duration": 102.7,
+      "check": [
+        {
+          "q": "Without a written rule and a record, what is every result?",
+          "options": [
+            "A data point",
+            "A story, and you cannot improve a story",
+            "A sign the market changed",
+            "A reason to size up"
+          ],
+          "answer": 1,
+          "why": "A story gets better every time you tell it; a record can be read and improved."
+        },
+        {
+          "q": "What can the course tell you about whether a setup will pay you?",
+          "options": [
+            "It shows its own results",
+            "It ranks setups by how often they win",
+            "Nothing: your own record answers that, and the course teaches you how to ask",
+            "It depends on your account size"
+          ],
+          "answer": 2,
+          "why": "The course shows no trading results of its own; it gives you the framework and the tools to find out from your record."
+        },
+        {
+          "q": "What is The Blueprint?",
+          "options": [
+            "A signal service for MNQ",
+            "A list of setups to copy",
+            "A charting platform",
+            "A trading framework written down so you can build your own"
+          ],
+          "answer": 3,
+          "why": "Levels, reads, triggers, construction, rules and routines, illustrated on MNQ."
+        },
+        {
+          "q": "Which is the wrong way to use the course?",
+          "options": [
+            "Treat it as a promise that a setup will pay",
+            "Test each idea on your own record",
+            "Write the rule down before you trade",
+            "Keep what holds and drop the rest"
+          ],
+          "answer": 0,
+          "why": "It is not a get-rich-quick course. Trading is a skill that takes time, repetition and honest review."
+        }
+      ],
+      "audio": "../assets/audio/00/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "Who it is for and how it works",
+      "sections": [
+        "Who This Is For",
+        "How This Course Works"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "Who is this for? Anyone who wants to learn the framework and test it on their own record.",
+          "chapter": "Who it is for"
+        },
+        {
+          "start": 7,
+          "text": "It is written for intraday futures traders, people who open and close trades inside one session. The examples use MNQ, and the framework is written to carry across futures instruments. Your record decides where it holds."
+        },
+        {
+          "start": 20.6,
+          "text": "And it suits anyone curious about how day trading actually works, as long as they want a written framework they can test."
+        },
+        {
+          "start": 29,
+          "text": "Now, how the course works. It is a path, and each module builds on the last.",
+          "chapter": "How it works"
+        },
+        {
+          "start": 35.3,
+          "text": "Modules one to three come first: how to check a claim, the hard rules that keep an account alive, and the mechanics of the instrument."
+        },
+        {
+          "start": 44.8,
+          "text": "Modules four to seven cover why price moves: who is forced to trade, the auction, which is how a market finds its price, what counts as a level, and order flow, the buying and selling at each price."
+        },
+        {
+          "start": 59.2,
+          "text": "Modules eight to fifteen are the Blueprint itself: the three tiers, idea generation, the setups, which are the situations worth a trade, then triggers, trade construction and the written plan."
+        },
+        {
+          "start": 70.6,
+          "text": "Modules sixteen to twenty are the daily process, and twenty-one to twenty-four are the evidence and the capstone."
+        },
+        {
+          "start": 77.6,
+          "text": "The rule: take them in order. Nothing here is alphabetical. Alphabetical would hand you the auction before the rules.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 84.9,
+          "text": "Getting it wrong is jumping to the setups because they look like the interesting part. The lessons on what gives a stop a job come earlier, so you end up placing it by feel.",
+          "chapter": "Getting it wrong"
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "Who it is for",
+          "kind": "list",
+          "data": {
+            "title": "Who this is for",
+            "subtitle": "Anyone who wants a framework they can test",
+            "aria": "Who the course is for",
+            "rows": {
+              "items": [
+                {
+                  "text": "Learn the framework, test it on your record",
+                  "tone": "cyan",
+                  "cue": 0
+                },
+                {
+                  "text": "Intraday futures traders, shown on MNQ",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Anyone curious how day trading works",
+                  "tone": "cyan",
+                  "cue": 2
+                }
+              ]
+            },
+            "aside": {
+              "head": "Your record",
+              "sub": "decides",
+              "cue": 1,
+              "size": 18
+            }
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Who the course is for\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Who this is for</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Anyone who wants a framework they can test</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Learn the framework, test it on your record</text></g><g class=\"sv-rv\" style=\"animation-delay:7.0s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Intraday futures traders, shown on MNQ</text></g><g class=\"sv-rv\" style=\"animation-delay:20.6s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Anyone curious how day trading works</text></g><g class=\"sv-rv\" style=\"animation-delay:7.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"18\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Your record</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">decides</text></g></svg>"
+        },
+        {
+          "start": 29,
+          "title": "The path",
+          "kind": "list",
+          "data": {
+            "title": "The path, in order",
+            "subtitle": "Each module builds on the last",
+            "aria": "The order of the modules",
+            "rows": {
+              "items": [
+                {
+                  "text": "Modules 01 to 03: claims, rules, contract",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Modules 04 to 07: why price moves",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "Modules 08 to 15: the Blueprint itself",
+                  "tone": "gold",
+                  "cue": 3
+                },
+                {
+                  "text": "Modules 16 to 20: the daily process",
+                  "tone": "gold",
+                  "cue": 4
+                },
+                {
+                  "text": "Modules 21 to 24: evidence, capstone",
+                  "tone": "gold",
+                  "cue": 4
+                }
+              ]
+            },
+            "aside": {
+              "head": "In order",
+              "sub": "no skipping",
+              "cue": 5,
+              "size": 20
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 330,
+                "text": "Skip ahead and the stop goes where it feels right",
+                "size": 13,
+                "tone": "red",
+                "cue": 6
+              }
+            ]
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The order of the modules\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The path, in order</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each module builds on the last</text><g class=\"sv-rv\" style=\"animation-delay:6.3s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Modules 01 to 03: claims, rules, contract</text></g><g class=\"sv-rv\" style=\"animation-delay:15.8s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Modules 04 to 07: why price moves</text></g><g class=\"sv-rv\" style=\"animation-delay:30.2s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Modules 08 to 15: the Blueprint itself</text></g><g class=\"sv-rv\" style=\"animation-delay:41.6s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Modules 16 to 20: the daily process</text></g><g class=\"sv-rv\" style=\"animation-delay:41.6s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Modules 21 to 24: evidence, capstone</text></g><g class=\"sv-rv\" style=\"animation-delay:48.6s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">In order</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">no skipping</text></g><g class=\"sv-rv\" style=\"animation-delay:55.9s\"><text x=\"32\" y=\"330\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--red)\">Skip ahead and the stop goes where it feels right</text></g></svg>"
+        }
+      ],
+      "duration": 98.8,
+      "check": [
+        {
+          "q": "Who is the course written for?",
+          "options": [
+            "Only traders with a funded account",
+            "Intraday futures traders, with the examples on MNQ and a framework meant to carry across futures instruments",
+            "Long-term stock investors",
+            "Only people who have never traded"
+          ],
+          "answer": 1,
+          "why": "Your own record decides where the framework holds."
+        },
+        {
+          "q": "What do Modules 08 to 15 cover?",
+          "options": [
+            "The daily process",
+            "Evidence and the capstone",
+            "The Blueprint itself: tiers, idea generation, setups, triggers, construction and the written plan",
+            "Why price moves"
+          ],
+          "answer": 2,
+          "why": "Modules 04 to 07 cover why price moves; 16 to 20 are the daily process."
+        },
+        {
+          "q": "Which modules are the daily process?",
+          "options": [
+            "16 to 20",
+            "04 to 07",
+            "08 to 15",
+            "21 to 24"
+          ],
+          "answer": 0,
+          "why": "Modules 21 to 24 are the evidence and the capstone."
+        },
+        {
+          "q": "The course says concepts arrive in the order you need them. What does skipping ahead do?",
+          "options": [
+            "Saves time with nothing lost",
+            "Has you meet a concept before the lessons it rests on",
+            "Is required for the free modules",
+            "Is only possible with a paid plan"
+          ],
+          "answer": 1,
+          "why": "Jump to the setups and you can end up placing a stop by feel, because what gives a stop a job comes earlier."
+        }
+      ],
+      "audio": "../assets/audio/00/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "What you need and the philosophy",
+      "sections": [
+        "What You'll Need",
+        "The Philosophy"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "What do you need? Right now, nothing. Just read and learn.",
+          "chapter": "What you need"
+        },
+        {
+          "start": 4.4,
+          "text": "Later, when you are ready to practise, a brokerage account, which is the account your orders go through."
+        },
+        {
+          "start": 11.3,
+          "text": "A charting platform. The course uses NinjaTrader 8, with MNQ for its examples."
+        },
+        {
+          "start": 16.5,
+          "text": "A trading journal, the record of every trade. Module eighteen covers the habit."
+        },
+        {
+          "start": 21.6,
+          "text": "And a pen and paper. Write things down. A pen is the cheapest risk control on the list. It also never needs an update."
+        },
+        {
+          "start": 30.8,
+          "text": "One rule before you begin: never risk money you cannot afford to lose.",
+          "chapter": "One rule first"
+        },
+        {
+          "start": 35.9,
+          "text": "Trading involves real risk. Risk is covered in Module two and Module fourteen, but this reminder lives here, at the very beginning, on purpose."
+        },
+        {
+          "start": 45.1,
+          "text": "Getting it wrong is risking money you need and calling it practice. Once the loss matters to your rent, it starts picking your next move, and the plan stops deciding.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 56.5,
+          "text": "Now, the philosophy. It fits in three lines. One: the setup is the plan.",
+          "chapter": "The philosophy"
+        },
+        {
+          "start": 62,
+          "text": "Two: discipline is the execution."
+        },
+        {
+          "start": 64.1,
+          "text": "Three: everything else is noise."
+        },
+        {
+          "start": 66.3,
+          "text": "Everything in this course comes back to those lines. Whether a setup holds up for you is a question your own record answers. The course teaches you how to ask it, and shows no trading results of its own."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "What you need",
+          "kind": "list",
+          "data": {
+            "title": "What you need",
+            "subtitle": "Right now, nothing",
+            "aria": "What you need to follow the course",
+            "rows": {
+              "items": [
+                {
+                  "text": "Right now: nothing. Read and learn",
+                  "tone": "gold",
+                  "cue": 0
+                },
+                {
+                  "text": "Later: a brokerage account",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "A charting platform: NinjaTrader 8",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "A trading journal: Module 18",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "A pen and paper",
+                  "tone": "cyan",
+                  "cue": 4
+                }
+              ]
+            }
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What you need to follow the course\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What you need</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Right now, nothing</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Right now: nothing. Read and learn</text></g><g class=\"sv-rv\" style=\"animation-delay:4.4s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Later: a brokerage account</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A charting platform: NinjaTrader 8</text></g><g class=\"sv-rv\" style=\"animation-delay:16.5s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A trading journal: Module 18</text></g><g class=\"sv-rv\" style=\"animation-delay:21.6s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A pen and paper</text></g></svg>"
+        },
+        {
+          "start": 30.8,
+          "title": "One rule first",
+          "kind": "summary",
+          "data": {
+            "title": "One rule before you begin",
+            "subtitle": "Risk is covered in Modules 02 and 14",
+            "aria": "One rule before you begin",
+            "statement": "Never risk money you cannot afford to lose.",
+            "links": [
+              {
+                "head": "Module 02",
+                "sub": "The Hard Rules",
+                "cue": 1
+              },
+              {
+                "head": "Module 14",
+                "sub": "Trade Construction",
+                "cue": 1
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "Risk money you need, and the loss picks your next move",
+                "size": 14,
+                "tone": "red",
+                "cue": 2
+              }
+            ]
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"One rule before you begin\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One rule before you begin</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Risk is covered in Modules 02 and 14</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Never risk money you cannot afford to lose.</text></g><g class=\"sv-rv\" style=\"animation-delay:5.1s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:5.1s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 14</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trade Construction</text></g><g class=\"sv-rv\" style=\"animation-delay:14.3s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--red)\">Risk money you need, and the loss picks your next move</text></g></svg>"
+        },
+        {
+          "start": 56.5,
+          "title": "The philosophy",
+          "kind": "list",
+          "data": {
+            "title": "The philosophy",
+            "subtitle": "Three lines the whole course comes back to",
+            "aria": "The philosophy in three lines",
+            "rows": {
+              "items": [
+                {
+                  "text": "The setup is the plan.",
+                  "tone": "gold",
+                  "cue": 0
+                },
+                {
+                  "text": "Discipline is the execution.",
+                  "tone": "gold",
+                  "cue": 1
+                },
+                {
+                  "text": "Everything else is noise.",
+                  "tone": "gold",
+                  "cue": 2
+                }
+              ]
+            },
+            "aside": {
+              "head": "The idea",
+              "sub": "behind it all",
+              "cue": 3,
+              "size": 20
+            }
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The philosophy in three lines\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The philosophy</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three lines the whole course comes back to</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The setup is the plan.</text></g><g class=\"sv-rv\" style=\"animation-delay:5.5s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Discipline is the execution.</text></g><g class=\"sv-rv\" style=\"animation-delay:7.6s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Everything else is noise.</text></g><g class=\"sv-rv\" style=\"animation-delay:9.8s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">The idea</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">behind it all</text></g></svg>"
+        }
+      ],
+      "duration": 82,
+      "check": [
+        {
+          "q": "What do you need right now to start the course?",
+          "options": [
+            "A funded brokerage account",
+            "NinjaTrader 8 installed",
+            "Nothing: just read and learn",
+            "A journal subscription"
+          ],
+          "answer": 2,
+          "why": "A brokerage account, a charting platform and a journal come later, when you are ready to practise."
+        },
+        {
+          "q": "Which platform does the course use for its examples?",
+          "options": [
+            "NinjaTrader 8, with MNQ for its examples",
+            "Thinkorswim",
+            "Sierra Chart",
+            "MetaTrader"
+          ],
+          "answer": 0,
+          "why": "The examples are illustrated on MNQ."
+        },
+        {
+          "q": "What is the one rule before you begin?",
+          "options": [
+            "Always use a stop",
+            "Never risk money you cannot afford to lose",
+            "Trade only MNQ",
+            "Journal every trade"
+          ],
+          "answer": 1,
+          "why": "Risk is covered in Modules 02 and 14, and the reminder sits at the very beginning on purpose."
+        },
+        {
+          "q": "What goes wrong when you risk money you cannot afford to lose?",
+          "options": [
+            "You trade more carefully",
+            "You learn faster",
+            "Nothing changes",
+            "The loss starts picking your next move, and the plan stops deciding"
+          ],
+          "answer": 3,
+          "why": "That is why the rule comes before the first lesson."
+        }
+      ],
+      "audio": "../assets/audio/00/s3.mp3"
+    },
+    {
+      "id": "s4",
+      "title": "Where do you stand?",
+      "sections": [
+        "Where Do You Stand?"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "Everyone reads Modules one to three in order. This check tells you which of them to read slowly.",
+          "chapter": "The check"
+        },
+        {
+          "start": 7,
+          "text": "Answer yes or no to each line, about your trading as it stands now. Be honest. Nobody grades this check except your next trade."
+        },
+        {
+          "start": 16.2,
+          "text": "One: you have a daily loss limit, written down and set at your broker, that stops you trading for the day."
+        },
+        {
+          "start": 24.2,
+          "text": "Two: you know the hours you are allowed to trade, and the news releases you stay flat for, meaning you hold no position."
+        },
+        {
+          "start": 33.1,
+          "text": "Three: you have never moved a stop further away after the trade was on."
+        },
+        {
+          "start": 38.5,
+          "text": "Four: you can say, without looking, what one tick and one point of your contract are worth. A tick is the smallest price step. A point is a whole unit of price."
+        },
+        {
+          "start": 50.7,
+          "text": "Five: you know which contract month you trade, and the date you have to roll out of it. Rolling means moving to the next contract month before the current one expires."
+        },
+        {
+          "start": 62.5,
+          "text": "Six: you can turn a stop distance in points into the money at risk per contract, in your head."
+        },
+        {
+          "start": 69.8,
+          "text": "The threshold. Any no on lines one to three means Module two, The Hard Rules, comes before your next trade, live or sim.",
+          "chapter": "The threshold"
+        },
+        {
+          "start": 78.6,
+          "text": "All three yes, but any no on lines four to six, and your gap is the instrument. Work through Module three line by line."
+        },
+        {
+          "start": 87.8,
+          "text": "Six of six: read both anyway. The rest of the course assumes every line."
+        },
+        {
+          "start": 93.3,
+          "text": "Getting it wrong is answering yes to a line you have never checked. A yes you cannot point to is a no. For each yes, name where it is written down or set.",
+          "chapter": "Getting it wrong"
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "Six lines",
+          "kind": "list",
+          "data": {
+            "title": "Where do you stand?",
+            "subtitle": "Six lines, yes or no, about your trading now",
+            "aria": "Six yes or no lines about your trading",
+            "rows": {
+              "items": [
+                {
+                  "text": "A daily loss limit, set at your broker",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "Trading hours and news releases known",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "Never moved a stop further away",
+                  "tone": "cyan",
+                  "cue": 4
+                },
+                {
+                  "text": "Tick and point value, from memory",
+                  "tone": "gold",
+                  "cue": 5
+                },
+                {
+                  "text": "Contract month and roll date known",
+                  "tone": "gold",
+                  "cue": 6
+                },
+                {
+                  "text": "Stop in points to risk per contract",
+                  "tone": "gold",
+                  "cue": 7
+                }
+              ]
+            },
+            "aside": {
+              "head": "Yes or no",
+              "sub": "to each line",
+              "cue": 1,
+              "size": 18
+            }
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six yes or no lines about your trading\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where do you stand?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Six lines, yes or no, about your trading now</text><g class=\"sv-rv\" style=\"animation-delay:16.2s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A daily loss limit, set at your broker</text></g><g class=\"sv-rv\" style=\"animation-delay:24.2s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trading hours and news releases known</text></g><g class=\"sv-rv\" style=\"animation-delay:33.1s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Never moved a stop further away</text></g><g class=\"sv-rv\" style=\"animation-delay:38.5s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tick and point value, from memory</text></g><g class=\"sv-rv\" style=\"animation-delay:50.7s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Contract month and roll date known</text></g><g class=\"sv-rv\" style=\"animation-delay:62.5s\"><rect x=\"32\" y=\"304\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"327\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">6</text><text x=\"76\" y=\"327\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stop in points to risk per contract</text></g><g class=\"sv-rv\" style=\"animation-delay:7.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"18\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Yes or no</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">to each line</text></g></svg>"
+        },
+        {
+          "start": 69.8,
+          "title": "The threshold",
+          "kind": "score",
+          "data": {
+            "title": "Which module comes first",
+            "subtitle": "Read your answers against the threshold",
+            "aria": "The threshold for the six lines",
+            "points": 6,
+            "cue": 0,
+            "verdicts": {
+              "cue": 0,
+              "items": [
+                {
+                  "score": "No: 1-3",
+                  "text": "Module 02 before your next trade",
+                  "tone": "red",
+                  "cue": 0
+                },
+                {
+                  "score": "No: 4-6",
+                  "text": "Module 03, line by line",
+                  "tone": "gold",
+                  "cue": 1
+                },
+                {
+                  "score": "Six of 6",
+                  "text": "Read both anyway",
+                  "tone": "green",
+                  "cue": 2
+                }
+              ]
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 176,
+                "text": "A yes you cannot point to is a no",
+                "size": 14,
+                "tone": "gold",
+                "cue": 3
+              }
+            ]
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The threshold for the six lines\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Which module comes first</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read your answers against the threshold</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:1.8s\"><circle cx=\"480\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"480\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">6</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">No: 1-3</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Module 02 before your next trade</text></g><g class=\"sv-rv\" style=\"animation-delay:8.8s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">No: 4-6</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Module 03, line by line</text></g><g class=\"sv-rv\" style=\"animation-delay:18.0s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Six of 6</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Read both anyway</text></g><g class=\"sv-rv\" style=\"animation-delay:23.5s\"><text x=\"32\" y=\"176\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">A yes you cannot point to is a no</text></g></svg>"
+        }
+      ],
+      "duration": 106.8,
+      "check": [
+        {
+          "q": "Any no on lines one to three of the check sends you where?",
+          "options": [
+            "Module 03",
+            "Module 02, The Hard Rules, before your next trade",
+            "Module 14",
+            "Module 01"
+          ],
+          "answer": 1,
+          "why": "Module 02 comes before your next trade, live or sim."
+        },
+        {
+          "q": "You answer yes to lines one to three and no to line five. What is your gap?",
+          "options": [
+            "Nothing",
+            "The hard rules",
+            "The journal",
+            "The instrument, so Module 03 line by line"
+          ],
+          "answer": 3,
+          "why": "Line five is the contract month and roll date, which is the instrument."
+        },
+        {
+          "q": "You answer yes to all six lines. What does the course say?",
+          "options": [
+            "Skip ahead to Module 04",
+            "Retake the check",
+            "Read Modules 02 and 03 anyway, because the rest of the course assumes every line",
+            "Go straight to the setups"
+          ],
+          "answer": 2,
+          "why": "Six of six: read both anyway."
+        },
+        {
+          "q": "How should you treat a yes you cannot point to?",
+          "options": [
+            "As a no",
+            "As a yes",
+            "As half a point",
+            "As not counted"
+          ],
+          "answer": 0,
+          "why": "For each yes, name where it is written down or set."
+        }
+      ],
+      "audio": "../assets/audio/00/s4.mp3"
+    },
+    {
+      "id": "s5",
+      "title": "Your next session",
+      "sections": [
+        "Before Your Next Session",
+        "Where It Goes Next"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "Before your next session, one assignment. Write one line on paper: the most you will lose in one trading day.",
+          "chapter": "Assignment"
+        },
+        {
+          "start": 7.7,
+          "text": "Keep it where you trade. That is the whole assignment."
+        },
+        {
+          "start": 11.7,
+          "text": "It is one line. It is also the only risk control in the course that fits on a sticky note."
+        },
+        {
+          "start": 19.4,
+          "text": "Getting it wrong is keeping the number in your head. A number in your head can move. A number on paper stays where you wrote it.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 29.3,
+          "text": "Summary. Without a written rule and a record, every result is a story.",
+          "chapter": "Summary"
+        },
+        {
+          "start": 34.5,
+          "text": "The course gives you the rules, the vocabulary and the routines to turn your trading into a record you can read."
+        },
+        {
+          "start": 42.5,
+          "text": "Where it goes next. Module one, How To Know What You Know, is next: how to check any trading claim, including the ones in this course.",
+          "chapter": "Where it goes next"
+        },
+        {
+          "start": 52.5,
+          "text": "Module two, The Hard Rules, turns your one line into the daily kill switch, the limit that ends your day."
+        },
+        {
+          "start": 60.2,
+          "text": "And the journal in Module eighteen, Journaling and Review, is where every trade you take from here on gets recorded against those rules."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "One line",
+          "kind": "assignment",
+          "data": {
+            "title": "Your assignment: one line",
+            "subtitle": "Before your next session",
+            "aria": "The assignment: one line on paper",
+            "cue": 0,
+            "fields": [
+              "Most you lose",
+              "In one day",
+              "One line",
+              "On paper"
+            ],
+            "line1": "The most you will lose in one trading day.",
+            "line2": "Keep it where you trade. That is the assignment.",
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "A number in your head can move. A number on paper stays.",
+                "size": 14,
+                "tone": "red",
+                "cue": 3
+              }
+            ]
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The assignment: one line on paper\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your assignment: one line</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before your next session</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Most you lose</text></g><g class=\"sv-rv\" style=\"animation-delay:1.3s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">In one day</text></g><g class=\"sv-rv\" style=\"animation-delay:2.6s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">One line</text></g><g class=\"sv-rv\" style=\"animation-delay:3.9s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">On paper</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The most you will lose in one trading day.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Keep it where you trade. That is the assignment.</text></g><g class=\"sv-rv\" style=\"animation-delay:19.4s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--red)\">A number in your head can move. A number on paper stays.</text></g></svg>"
+        },
+        {
+          "start": 29.3,
+          "title": "What you get",
+          "kind": "list",
+          "data": {
+            "title": "A record, not a story",
+            "subtitle": "What the course gives you",
+            "aria": "What the course gives you",
+            "rows": {
+              "cue": 1,
+              "stagger": 1.5,
+              "items": [
+                {
+                  "text": "The rules",
+                  "tone": "cyan"
+                },
+                {
+                  "text": "The vocabulary",
+                  "tone": "cyan"
+                },
+                {
+                  "text": "The routines",
+                  "tone": "cyan"
+                }
+              ]
+            },
+            "aside": {
+              "head": "A record",
+              "sub": "not a story",
+              "cue": 0,
+              "size": 20
+            }
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What the course gives you\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A record, not a story</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the course gives you</text><g class=\"sv-rv\" style=\"animation-delay:5.2s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The rules</text></g><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The vocabulary</text></g><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The routines</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">A record</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">not a story</text></g></svg>"
+        },
+        {
+          "start": 42.5,
+          "title": "Where it goes next",
+          "kind": "summary",
+          "data": {
+            "title": "Where it goes next",
+            "subtitle": "Three modules this page feeds",
+            "aria": "Where the module goes next",
+            "statement": "Module 01 is next. Your one line becomes a rule in Module 02.",
+            "links": [
+              {
+                "head": "Module 01",
+                "sub": "How To Know What You Know",
+                "cue": 0
+              },
+              {
+                "head": "Module 02",
+                "sub": "The Hard Rules",
+                "cue": 1
+              },
+              {
+                "head": "Module 18",
+                "sub": "Journaling & Review",
+                "cue": 2
+              }
+            ]
+          },
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Where the module goes next\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three modules this page feeds</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Module 01 is next. Your one line becomes a rule in Module 02.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 01</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">How To Know What You Know</text></g><g class=\"sv-rv\" style=\"animation-delay:10.0s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:17.7s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g></svg>"
+        }
+      ],
+      "duration": 70,
+      "check": [
+        {
+          "q": "What is the assignment?",
+          "options": [
+            "Study Module 01 tonight",
+            "Open a funded account",
+            "Backtest one setup",
+            "Write one line on paper: the most you will lose in one trading day, and keep it where you trade"
+          ],
+          "answer": 3,
+          "why": "It is the whole assignment; Module 02 turns the line into a rule."
+        },
+        {
+          "q": "Which module turns your one line into the daily kill switch?",
+          "options": [
+            "Module 01",
+            "Module 14",
+            "Module 18",
+            "Module 02"
+          ],
+          "answer": 3,
+          "why": "Module 02, The Hard Rules."
+        },
+        {
+          "q": "Where does every trade you take from here on get recorded against the rules?",
+          "options": [
+            "The journal in Module 18, Journaling & Review",
+            "The glossary",
+            "Module 06's level list",
+            "The account page"
+          ],
+          "answer": 0,
+          "why": "The journal is where each trade is recorded."
+        },
+        {
+          "q": "Why keep the number on paper where you trade, not in your head?",
+          "options": [
+            "Brokers require it",
+            "It improves your entries",
+            "A number in your head can move; a number on paper stays where you wrote it",
+            "It replaces the stop"
+          ],
+          "answer": 2,
+          "why": "The fix is a mechanism, not a mindset: paper, kept where you trade."
+        }
+      ],
+      "audio": "../assets/audio/00/s5.mp3"
+    }
+  ],
+  "quiz": {
+    "title": "Module quiz",
+    "questions": [
+      {
+        "q": "Which statement is true of the course?",
+        "options": [
+          "It shows the author’s trading results",
+          "It gives a written framework and the tools to test it on your own record",
+          "It promises a setup that pays",
+          "It starts with the setups"
+        ],
+        "answer": 1,
+        "why": "The course shows no trading results of its own."
+      },
+      {
+        "q": "Complete the philosophy: the setup is the plan, discipline is the execution, and what else?",
+        "options": [
+          "Patience is the edge",
+          "Review is the plan",
+          "Everything else is noise",
+          "Risk is the setup"
+        ],
+        "answer": 2,
+        "why": "Everything in the course comes back to those three lines."
+      },
+      {
+        "q": "Which modules cover why price moves?",
+        "options": [
+          "04 to 07",
+          "01 to 03",
+          "08 to 15",
+          "21 to 24"
+        ],
+        "answer": 0,
+        "why": "Who is forced to trade, the auction, what counts as a level, and order flow."
+      },
+      {
+        "q": "You answer no to line two, the trading hours and news releases. Where do you go?",
+        "options": [
+          "Module 14",
+          "Module 03",
+          "Module 18",
+          "Module 02, before your next trade"
+        ],
+        "answer": 3,
+        "why": "Any no on lines one to three means Module 02 comes before your next trade."
+      },
+      {
+        "q": "What is the one rule before you begin?",
+        "options": [
+          "Never risk money you cannot afford to lose",
+          "Always use a trailing stop",
+          "Trade only at the open",
+          "Hold every position overnight"
+        ],
+        "answer": 0,
+        "why": "Risk is covered in Modules 02 and 14; the reminder lives at the beginning on purpose."
+      },
+      {
+        "q": "Why write the rule and the stop down before you trade?",
+        "options": [
+          "It satisfies the broker",
+          "So a result can be read against the rule, and is not just a story",
+          "It shortens the session",
+          "The journal requires it"
+        ],
+        "answer": 1,
+        "why": "Without a written rule and a record, every result is a story."
+      }
+    ]
+  }
+}

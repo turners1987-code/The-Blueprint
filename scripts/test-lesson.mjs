@@ -105,6 +105,29 @@ eq('drill: no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|
 eq('vendor notice kept', /TradingView/.test(readFileSync(path.join(ROOT, 'js/vendor/NOTICE-lightweight-charts.txt'), 'utf8')), true);
 eq('vendor license kept', /Apache License/.test(readFileSync(path.join(ROOT, 'js/vendor/LICENSE-lightweight-charts.txt'), 'utf8')), true);
 
+// Every other shipped lesson (item 20 builds): valid config, every h2 owned, checks and quiz valid, content rules.
+for (const f of readdirSync(path.join(ROOT, 'data/lessons')).filter((x) => x.endsWith('.json') && !x.startsWith('06-')).sort()) {
+  const c = JSON.parse(readFileSync(path.join(ROOT, 'data/lessons', f), 'utf8'));
+  const page = readFileSync(path.join(ROOT, 'modules', `${c.module}.html`), 'utf8');
+  const heads = [...page.matchAll(/<h2[^>]*>(.*?)<\/h2>/g)].map((m) => m[1].replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').trim());
+  const own = c.segments.flatMap((x) => x.sections);
+  eq(`${f} valid`, validateConfig(c), []);
+  eq(`${f} every h2 owned once`, [heads.filter((h) => !own.includes(h)), own.filter((o) => !heads.includes(o))], [[], []]);
+  eq(`${f} page wires the lesson`, page.includes(`data-lesson="../data/lessons/${f}"`) && page.includes('js/lesson-player.js') && page.includes('css/lesson.css'), true);
+  eq(`${f} 3 to 6 segments`, c.segments.length >= 3 && c.segments.length <= 6, true);
+  for (const seg of c.segments) {
+    eq(`${f} ${seg.id} check 3-4`, validateQuestions(seg.id, seg.check, 3, 4), []);
+    eq(`${f} ${seg.id} chapters`, seg.cues[0].chapter !== undefined && seg.cues.every((x, i) => i === 0 || x.start >= seg.cues[i - 1].start), true);
+    eq(`${f} ${seg.id} audio path`, seg.audio, `../assets/audio/${c.module.slice(0, 2)}/${seg.id}.mp3`);
+    eq(`${f} ${seg.id} slides start at 0, ordered`, seg.slides[0].start === 0 && seg.slides.every((x, i) => i === 0 || x.start >= seg.slides[i - 1].start), true);
+  }
+  eq(`${f} quiz valid`, validateQuestions('quiz', c.quiz?.questions, 4, 20), []);
+  const all = JSON.stringify(c.segments.map((x) => [x.cues.map((y) => y.text), x.check, x.slides.map((y) => y.data)]).concat([c.quiz]));
+  eq(`${f} no banned wording`, /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(all), false);
+  const spoken = c.segments.flatMap((x) => x.cues.map((y) => y.text)).join(' ');
+  eq(`${f} spoken times and calendar words`, /\b0\d:\d\d|:00\b|yesterday|tomorrow|this morning|this week|pre-marked/i.test(spoken), false);
+}
+
 // 9e: notes
 const ns = mem();
 eq('fresh notes', loadNotes(ns, 'm'), {});

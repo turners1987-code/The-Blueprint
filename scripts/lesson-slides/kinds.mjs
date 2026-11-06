@@ -170,7 +170,7 @@ export const KINDS = {
     Array.from({ length: d.points }, (_, i) => rv(delay(ctx, d.cue ?? 0, i, 0.35),
       `<circle cx="${80 + i * 80}" cy="130" r="22" fill="var(--bg-card)" stroke="var(--cyan)" stroke-width="2"/>` +
       text(80 + i * 80, 137, String(i + 1), { size: 18, cls: 'sv-t sv-n', anchor: 'middle' }))).join('') +
-    d.verdicts.items.map((v, i) => rv(delay(ctx, d.verdicts.cue, i, d.verdicts.stagger ?? 7),
+    d.verdicts.items.map((v, i) => rv(v.cue === undefined ? delay(ctx, d.verdicts.cue, i, d.verdicts.stagger ?? 7) : delay(ctx, v.cue),
       rect(32, 190 + i * 50, 576, 40, { fill: 'var(--bg-card)', stroke: col(v.tone), sw: 1.5 }) +
       text(48, 216 + i * 50, v.score, { size: 16, weight: 700, fill: col(v.tone) }) + text(150, 216 + i * 50, v.text, { size: 15 }))).join('') + tail(d, ctx),
 
