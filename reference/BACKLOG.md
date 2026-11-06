@@ -44,7 +44,9 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 
 20. Lesson builds, one module per run, in this order: 00, 01, 02, 03, 16, 17, 18, 19, 20, then 04, 05, 07, 08, 09, 10, 11, 12, 13, 14, 15, 21, 22, 23, 24. Each module is two items: A (build) then B (review by a fresh run), exactly as reference/LESSON_STANDARD.md section 7 says. Item 19 must be done first. Tier C. The build run writes data/lessons/<NN>-<slug>.json, wires data-lesson on the page, builds slides, and reports as the standard asks. The review run fixes against the checklist in section 8 and renders every slide at final reveal state to look at it. Audio is not part of these runs: leave "audio": "../assets/audio/<NN>/<id>.mp3" on each segment and no audio files; the player shows the timer clock until Shane's local batch render. Log each module as "20-<NN>A" or "20-<NN>B" in BUILD_LOG.md.
 
-   Progress: 20-00A done 2026-11-06 (Module 00: 5 segments, 13 slides). Next: 20-00B (fresh-run review), then 01, 02, 03, 16 to 20.
+   Progress: 20-00A done 2026-11-06 (Module 00: 5 segments, 13 slides). Next: 20-01A (Module 01 build), then 02, 03, 16 to 20.
+   20-00A done af51a1a
+   20-00B done 44bc595
 
 21. Record the Nov 6 decisions (tier C, docs only). In reference/BLUEPRINT_DOC.md: (a) Access: email login with a 6-digit code is the primary login (functions/api/login/*, Resend from login@bptrade.co, 90-day sliding session, access code kept as the backup); (b) a "Lesson layer" section pointing at reference/LESSON_STANDARD.md, naming Module 06 as the approved template (Nov 6), the Kokoro bf_emma voice, the two-stem music slider, the soundtrack rule (POOL/ENDING in scripts/render-narration.py, music files never in the repo), the slide kit, synth-bars, and that audio renders are a local batch; (c) module status: all 25 published, lesson layer rolling out per BACKLOG item 20. In reference/DECISIONS.md add dated lines for: email login replaces code-per-device; one soundtrack per module plus an ending track; spoken times written as said; one joke per video that reads on paper; organic synthetic bars only. Keep every existing line. npm test green.
 
