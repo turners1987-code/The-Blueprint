@@ -11,8 +11,8 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 5. [x] Account page and /api/reset-activations
 6. [x] BP Key Levels guide page and card
 7. [x] Cloudflare Pages Function gate for paid pages, then repo private
-8. Privacy policy payments section
-9a. Learning-layer pilot, Module 06: shared lesson player (slides, timestamp-driven, captions, clickable transcript) and segment layout (sidebar, per-segment resume)
+8. Privacy policy payments section (parked, see Needs Shane)
+9a. [x] Learning-layer pilot, Module 06: shared lesson player (slides, timestamp-driven, captions, clickable transcript) and segment layout (sidebar, per-segment resume)
 9b. Learning-layer pilot, Module 06: split the module into 3 to 6 segments; write the narration script and slide timings per segment
 9c. Learning-layer pilot, Module 06: segment checks (3 to 4 questions, pass at 3 of 4), module quiz, three progress states in js/progress.js
 9d. Learning-layer pilot, Module 06: level-marking drill on Lightweight Charts v5.2.1 with synthetic bars (keep the NOTICE)
@@ -88,3 +88,4 @@ Every item below is now buildable. Shane's approval here is the tier D sign-off 
 
 - Add the Cloudflare secret GATE_SECRET (any long random string) for item 7. Until set, /api/session returns 503 and paid pages stay locked server-side once the function is deployed. Recommended: generate with `openssl rand -hex 32`.
 - Learning-layer rollout to the other 24 modules (free path 00-03 and 16-20 first, then the paid modules; 2 runs per module). Waiting on Shane to review the Module 06 pilot (items 9a to 9e). Do not start it.
+- Item 8 (privacy payments draft): this cloud session cannot reach lemonsqueezy.com or docs.lemonsqueezy.com (host does not resolve), so the draft cannot cite Lemon Squeezy's public documentation and nothing was written. Question: allow those two domains in the environment's network settings, or paste the relevant Lemon Squeezy privacy and merchant-of-record pages into the repo. Recommended: allow the domains. The task re-picks item 8 once they resolve.

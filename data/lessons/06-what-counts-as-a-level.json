@@ -1,0 +1,17 @@
+{
+  "module": "06-what-counts-as-a-level",
+  "segments": [
+    { "id": "s1", "title": "The test",
+      "sections": ["The Line You Couldn't Put A Stop Behind", "The Stop-Structure Test"] },
+    { "id": "s2", "title": "Zones and the far edge",
+      "sections": ["Zones And The Far Edge"] },
+    { "id": "s3", "title": "The two lists",
+      "sections": ["The Pre-Marked List And The 16:00 Boundary", "The In-Session List"] },
+    { "id": "s4", "title": "What is not a level",
+      "sections": ["Mid-Range, And The Lines That Are Not Levels", "Locations And Targets", "The Level You Find Afterwards"] },
+    { "id": "s5", "title": "Marking a blank chart",
+      "sections": ["Worked Case: Marking A Blank Chart", "Does Your Chart Pass?"] },
+    { "id": "s6", "title": "Your next session",
+      "sections": ["Before Your Next Session", "Where It Goes Next", "Sources"] }
+  ]
+}
