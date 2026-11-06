@@ -2,7 +2,14 @@
 """Render lesson narration (Kokoro-82M, bf_emma) with a low music bed.
 
 Usage (run with the Kokoro venv's Python, outside the repo):
-  C:\kokoro-venv\Scripts\python.exe scripts/render-narration.py <lesson.json> <music.mp3>
+  C:\kokoro-venv\Scripts\python.exe scripts/render-narration.py <lesson.json> <music-pool-folder>
+
+The folder holds the 12 Pixabay tracks listed in POOL (reference/research/
+music-candidates.md, Final pool). Each segment gets its own track, rotating
+through the pool from the module number, so no two segments in a module share
+a beat and neighbouring modules start on different tracks. The track used is
+written to each segment as "music" (title, producer, url) for the credits on
+ai.html. The pool folder is never copied into the repo.
 
 Per segment: synthesize each cue once, join with 0.35 s gaps, then export two
 stems from that one run, with identical encoder settings (mono, 24 kHz, 96 kbps):
@@ -22,7 +29,23 @@ from kokoro import KPipeline
 SR, GAP, VOICE, MUSIC_DB = 24000, 0.35, 'bf_emma', -12
 FADE_IN, FADE_OUT = 1.5, 2.0
 
-def main(lesson_path, music):
+# (file, title, producer, page) in pool order. Pixabay Content License.
+POOL = [
+    ('vaitsez-rap-rap-beat-620112.mp3', 'Rap - Rap Beat', 'vaitsez', 'https://pixabay.com/music/rap-rap-rap-beat-620112/'),
+    ('lnplusmusic-rap-rap-beat-611918.mp3', 'Rap - Rap Beat', 'lNPLUSMUSIC', 'https://pixabay.com/music/rap-rap-rap-beat-611918/'),
+    ('soundsurfer-rap-beat-577788.mp3', 'Rap Beat', 'SoundSurfer', 'https://pixabay.com/music/beats-rap-beat-577788/'),
+    ('gr0za-rap-rap-beat-610255.mp3', 'Rap - Rap Beat', 'GR0ZA', 'https://pixabay.com/music/trap-rap-rap-beat-610255/'),
+    ('the_mountain-hip-hop-boom-bap-567423.mp3', 'Hip Hop Boom Bap', 'The_Mountain', 'https://pixabay.com/music/alternative-hip-hop-hip-hop-boom-bap-567423/'),
+    ('vaitsez-rap-rap-beat-beats-music-486586.mp3', 'Rap - Rap Beat Beats Music', 'vaitsez', 'https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/'),
+    ('apalonbeats-rap-rap-beat-beats-566670.mp3', 'Rap - Rap Beat Beats', 'APALONBeats', 'https://pixabay.com/music/beats-rap-rap-beat-beats-566670/'),
+    ('mirostar-old-school-x-hip-hop-beat-boom-bap-560301.mp3', 'Old School x Hip Hop Beat | Boom Bap', 'mirostar', 'https://pixabay.com/music/alternative-hip-hop-old-school-x-hip-hop-beat-boom-bap-560301/'),
+    ('alex-morgan-rap-beat-548629.mp3', 'Rap Beat', 'alex-morgan', 'https://pixabay.com/music/instrumental-rap-beat-548629/'),
+    ('gr0za-rap-rap-beat-beats-557557.mp3', 'Rap - Rap Beat Beats', 'GR0ZA', 'https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/'),
+    ('solarflex-hiphop-beat-old-school-boom-bap-589004.mp3', 'HipHop Beat Old School Boom Bap', 'SolarFLEX', 'https://pixabay.com/music/alternative-hip-hop-hiphop-beat-old-school-boom-bap-589004/'),
+    ('vaitsez-rap-rap-beats-beat-483319.mp3', 'Rap - Rap Beats Beat', 'vaitsez', 'https://pixabay.com/music/rap-rap-rap-beats-beat-483319/'),
+]
+
+def main(lesson_path, pool_dir):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     lesson_path = os.path.abspath(lesson_path)
     raw = open(lesson_path, encoding='utf-8', newline='').read()
@@ -33,7 +56,14 @@ def main(lesson_path, music):
     pipe = KPipeline(lang_code='b')
     gap = np.zeros(int(GAP * SR), dtype=np.float32)
     tmp = tempfile.mkdtemp()
-    for s in d['segments']:
+    for k, s in enumerate(d['segments']):
+        if not s.get('cues'):
+            continue
+        fname, mtitle, producer, page = POOL[(int(nn) + k) % len(POOL)]
+        music = os.path.join(pool_dir, fname)
+        if not os.path.isfile(music):
+            sys.exit(f'missing track in pool folder: {fname}')
+        s['music'] = {'title': mtitle, 'producer': producer, 'url': page}
         parts, starts, pos = [], [], 0
         for i, c in enumerate(s['cues']):
             a = np.concatenate([np.asarray(x[2], dtype=np.float32)
@@ -68,7 +98,7 @@ def main(lesson_path, music):
         # cache-busting version: browsers may keep an audio URL for hours
         h = hashlib.sha256(open(out, 'rb').read() + open(vout, 'rb').read()).hexdigest()
         s['audio_v'] = h[:10]
-        print(s['id'], f'{length:.2f}s', starts, flush=True)
+        print(s['id'], f'{length:.2f}s', fname, starts, flush=True)
     nl = '\n'
     open(lesson_path, 'w', encoding='utf-8', newline='').write(
         json.dumps(d, indent=2, ensure_ascii=False) + (nl if raw.endswith(nl) else ''))

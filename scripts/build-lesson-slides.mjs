@@ -60,22 +60,40 @@ const HI = 24186.5, NEAR = 24180.25;
 const S = {};
 
 // ---- Segment 1: the test --------------------------------------------------
-S['The test'] = (t) => svg('The stop-structure test',
-  title('A level has a reason behind it', 'The stop-structure test') +
-  rv(0, rect(32, 90, 270, 200, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) +
-    line(52, 200, 282, 200, 'var(--gold)', { dash: '6 5' }) +
-    text(167, 130, 'A line you drew', { size: 16, anchor: 'middle' }) +
-    text(167, 156, 'Where does the stop go?', { size: 14, cls: 'sv-m', anchor: 'middle' })) +
-  rv(t[1] - t[0], text(167, 240, '?', { size: 40, weight: 700, anchor: 'middle', fill: 'var(--gold)' }) +
-    text(167, 268, 'Two ticks too tight. Twenty points too wide.', { size: 12, cls: 'sv-m', anchor: 'middle' })) +
-  rv(t[3] - t[0], rect(330, 90, 278, 90, { fill: 'var(--bg-card)', stroke: 'var(--green)', sw: 1.5 }) +
-    text(346, 118, 'Something already happened there', { size: 15, weight: 700 }) +
-    text(346, 142, 'A price beyond it ends the reason', { size: 14, cls: 'sv-m' }) +
-    text(346, 164, 'A level: the stop sits behind it', { size: 14, fill: 'var(--green)' })) +
-  rv(t[4] - t[0], rect(330, 196, 278, 94, { fill: 'var(--bg-card)', stroke: 'var(--red)', sw: 1.5 }) +
-    text(346, 224, 'Nothing you can name', { size: 15, weight: 700 }) +
-    text(346, 248, 'No job for a stop to do', { size: 14, cls: 'sv-m' }) +
-    text(346, 270, 'Not a level', { size: 14, fill: 'var(--red)' })));
+S['The scenario'] = (t) => svg('The scenario: a line with nowhere to put the stop',
+  title('The scenario', 'A line you drew, and nowhere to put the stop') +
+  rv(0, rect(32, 90, 576, 200, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) +
+    line(72, 150, 568, 150, 'var(--gold)', { dash: '6 5' }) +
+    text(320, 128, 'A line you drew', { size: 16, anchor: 'middle' }) +
+    // price arriving from below
+    line(140, 262, 140, 172, 'var(--cyan)', { sw: 2 }) + `<polygon points="132,178 140,164 148,178" fill="var(--cyan)"/>` +
+    text(158, 250, 'Price runs up into it', { size: 13, cls: 'sv-m' })) +
+  rv(t[1] - t[0], text(430, 215, '?', { size: 40, weight: 700, anchor: 'middle', fill: 'var(--gold)' }) +
+    text(430, 245, 'Where does the stop go?', { size: 14, anchor: 'middle' }) +
+    text(430, 268, 'Two ticks too tight. Twenty points too wide.', { size: 12, cls: 'sv-m', anchor: 'middle' })) +
+  rv(t[2] - t[0], rect(32, 304, 576, 36, { fill: 'var(--bg-card)', stroke: 'var(--red)', sw: 1.5 }) +
+    text(320, 328, 'The problem was not the entry. It was the line.', { size: 15, weight: 700, anchor: 'middle', fill: 'var(--red)' })));
+
+S['The stop-structure test'] = (t) => svg('The stop-structure test, in two parts',
+  title('The stop-structure test', 'Two parts. Pass both, or it is a line.') +
+  rv(t[1] - t[0], rect(32, 90, 278, 110, { fill: 'var(--bg-card)', stroke: 'var(--cyan)', sw: 1.5 }) +
+    text(48, 116, '1', { size: 22, weight: 700, cls: 'sv-n', fill: 'var(--cyan)' }) +
+    text(76, 116, 'Something already happened', { size: 15, weight: 700 }) +
+    text(76, 140, 'A session high. A volume cluster.', { size: 13, cls: 'sv-m' }) +
+    text(76, 160, 'A value edge.', { size: 13, cls: 'sv-m' }) +
+    text(76, 186, 'You can name it from the chart', { size: 12, cls: 'sv-d' })) +
+  rv(t[2] - t[0], rect(330, 90, 278, 110, { fill: 'var(--bg-card)', stroke: 'var(--cyan)', sw: 1.5 }) +
+    text(346, 116, '2', { size: 22, weight: 700, cls: 'sv-n', fill: 'var(--cyan)' }) +
+    text(374, 116, 'A price beyond it', { size: 15, weight: 700 }) +
+    text(374, 140, 'where the reason for the trade', { size: 13, cls: 'sv-m' }) +
+    text(374, 160, 'is gone.', { size: 13, cls: 'sv-m' }) +
+    text(374, 186, 'The stop sits there', { size: 12, cls: 'sv-d' })) +
+  rv(t[3] - t[0], rect(32, 222, 278, 80, { fill: 'var(--bg-card)', stroke: 'var(--green)', sw: 1.5 }) +
+    text(48, 250, 'Pass both', { size: 15, weight: 700, fill: 'var(--green)' }) +
+    text(48, 274, 'A level. The stop has a job.', { size: 13, cls: 'sv-m' }) +
+    rect(330, 222, 278, 80, { fill: 'var(--bg-card)', stroke: 'var(--red)', sw: 1.5 }) +
+    text(346, 250, 'Fail either', { size: 15, weight: 700, fill: 'var(--red)' }) +
+    text(346, 274, 'A line, however good it looks.', { size: 13, cls: 'sv-m' })));
 
 S['One sentence'] = (t) => {
   const c = candles(20, 44, { x: 32, y: 84, w: 340, h: 230 });
@@ -136,22 +154,22 @@ const PRE = [
 ];
 S['Pre-marked list'] = (t) => svg('The list you mark before the session',
   title('The list you mark before the session', 'Fixed, and built from finished data') +
-  PRE.map(([l, col], i) => rv(5.5 + i * 1.8 - t[0],
+  PRE.map(([l, col], i) => rv((t[i + 1] ?? t[0] + 4 + i * 2) - t[0],
     rect(32, 84 + i * 44, 440, 36, { fill: 'var(--bg-card)', stroke: col, sw: 1.5 }) +
     text(48, 107 + i * 44, `${i + 1}`, { size: 15, cls: 'sv-n', fill: col }) + text(76, 107 + i * 44, l, { size: 16 }))).join('') +
-  rv(0.5, rect(496, 84, 112, 256, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) + text(552, 214, '09:25', { size: 26, weight: 700, anchor: 'middle', fill: 'var(--gold)' }) +
+  rv(0.5, rect(496, 84, 112, 256, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) + text(552, 214, '9:25 a.m.', { size: 26, weight: 700, anchor: 'middle', fill: 'var(--gold)' }) +
     text(552, 240, 'list closes', { size: 13, cls: 'sv-m', anchor: 'middle' })));
 
 S['Session scope'] = (t) => svg('Session scope and the 16:00 boundary',
   title('Each level has a session scope', 'The bars that build it, in Eastern time') +
-  rv(0, rect(32, 100, 330, 50, { fill: 'var(--cyan)', op: 0.22, rx: 0 }) + text(197, 130, 'Regular session 09:30 to 16:00', { size: 14, anchor: 'middle' }) +
-    rect(362, 100, 246, 50, { fill: 'var(--gold)', op: 0.22, rx: 0 }) + text(485, 130, 'Overnight 16:00 to 09:30', { size: 14, anchor: 'middle' })) +
-  rv(6, line(362, 86, 362, 214, 'var(--text-primary)', { sw: 2.5 }) + text(362, 232, '16:00', { size: 16, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
-  rv(39.7 - t[0], rect(400, 166, 208, 30, { fill: 'var(--bg-card)', stroke: 'var(--gold)', rx: 4 }) + text(504, 186, 'A 16:40 high is overnight', { size: 13, anchor: 'middle' })) +
-  rv(51.8 - t[0], rect(32, 262, 276, 56, { fill: 'var(--bg-card)', stroke: 'var(--cyan)' }) + text(46, 286, 'Two saved templates', { size: 14, weight: 700 }) +
-    text(46, 306, 'Regular and full, both end at 16:00', { size: 12, cls: 'sv-m' })) +
-  rv(59.3 - t[0], rect(330, 262, 278, 56, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) + text(344, 286, 'Prior week', { size: 14, weight: 700 }) +
-    text(344, 306, 'Sunday 18:00 to Friday 16:00', { size: 12, cls: 'sv-m' })));
+  rv(0, rect(32, 100, 330, 50, { fill: 'var(--cyan)', op: 0.22, rx: 0 }) + text(197, 130, 'Regular session 9:30 a.m. to 4:00 p.m.', { size: 14, anchor: 'middle' }) +
+    rect(362, 100, 246, 50, { fill: 'var(--gold)', op: 0.22, rx: 0 }) + text(485, 130, 'Overnight 4:00 p.m. to 9:30 a.m.', { size: 14, anchor: 'middle' })) +
+  rv(6, line(362, 86, 362, 214, 'var(--text-primary)', { sw: 2.5 }) + text(362, 232, '4:00 p.m.', { size: 16, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
+  rv(t[1] - t[0], rect(400, 166, 208, 30, { fill: 'var(--bg-card)', stroke: 'var(--gold)', rx: 4 }) + text(504, 186, 'A 4:40 p.m. high is overnight', { size: 13, anchor: 'middle' })) +
+  rv(t[2] - t[0], rect(32, 262, 276, 56, { fill: 'var(--bg-card)', stroke: 'var(--cyan)' }) + text(46, 286, 'Two saved templates', { size: 14, weight: 700 }) +
+    text(46, 306, 'Regular and full, both end at 4:00 p.m.', { size: 12, cls: 'sv-m' })) +
+  rv(t[3] - t[0], rect(330, 262, 278, 56, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) + text(344, 286, 'Prior week', { size: 14, weight: 700 }) +
+    text(344, 306, 'Sunday 6:00 p.m. to Friday 4:00 p.m.', { size: 12, cls: 'sv-m' })));
 
 S['In-session list'] = (t) => {
   const types = ['Opening range, once your window has closed', 'Defended pullback high or low', 'Developing VPOC and value edges, at the trigger',
@@ -159,11 +177,11 @@ S['In-session list'] = (t) => {
   const c = candles(36, 60, { x: 32, y: 84, w: 250, h: 150 });
   return svg('The in-session list: levels that form in front of you',
     title('The in-session list', 'Counts once finished forming, and only if your plan named the type') + c.svg +
-    rv(74.7 - t[0], rect(32, 252, 250, 56, { fill: 'var(--bg-card)', stroke: 'var(--gold)', sw: 1.5 }) +
+    rv(t[1] - t[0], rect(32, 252, 250, 56, { fill: 'var(--bg-card)', stroke: 'var(--gold)', sw: 1.5 }) +
       text(46, 276, 'Before it finishes forming', { size: 13, weight: 700 }) + text(46, 296, 'It is a moving price', { size: 12, cls: 'sv-m' })) +
-    types.map((l, i) => rv(88.3 - t[0] + i * 2.2, rect(310, 84 + i * 44, 298, 36, { fill: 'var(--bg-card)', stroke: 'var(--cyan)' }) +
+    types.map((l, i) => rv(t[2] - t[0] + i * 2.2, rect(310, 84 + i * 44, 298, 36, { fill: 'var(--bg-card)', stroke: 'var(--cyan)' }) +
       text(322, 107 + i * 44, l, { size: 12 }))).join('') +
-    rv(104.8 - t[0], text(310, 318, 'Wrong: the range high at 09:38 on a 09:45 window', { size: 12, fill: 'var(--red)' })) + credit);
+    rv(t[3] - t[0], text(310, 318, 'Wrong: the range high at 9:38 on a 9:45 window', { size: 12, fill: 'var(--red)' })) + credit);
 };
 
 // ---- Segment 4: what is not a level -------------------------------------------
@@ -174,8 +192,8 @@ S['Mid-range'] = (t) => svg('Mid-range is empty space outside every zone',
     rect(32, 130, 400, 160, { stroke: 'var(--text-muted)', dash: '6 6', rx: 0 }) + text(232, 215, 'Mid-range', { size: 22, weight: 700, anchor: 'middle', fill: 'var(--gold)' }) +
     text(232, 240, 'Empty space, tagged so it is counted', { size: 13, cls: 'sv-m', anchor: 'middle' })) +
   ['VWAP', 'Pivots', 'Moving averages', 'Fibonacci', 'Round numbers', 'Fair value gaps', 'Trendlines'].map((l, i) =>
-    chip(452, 84 + i * 36, 156, l, 'var(--red)', 18.9 - t[0] + i * 1.8)).join('') +
-  rv(32.2 - t[0], text(32, 354, 'Where one of these sits inside a real zone, the zone is the level', { size: 11, cls: 'sv-m' })));
+    chip(452, 84 + i * 36, 156, l, 'var(--red)', t[2] - t[0] + i * 1.8)).join('') +
+  rv(t[3] - t[0], text(32, 354, 'Where one of these sits inside a real zone, the zone is the level', { size: 11, cls: 'sv-m' })));
 
 S['Location or target'] = (t) => svg('Location or target',
   title('Same level, two jobs', 'Its job in the trade is what changes') +
@@ -185,63 +203,65 @@ S['Location or target'] = (t) => svg('Location or target',
   rv(8, rect(328, 84, 280, 190, { fill: 'var(--bg-card)', stroke: 'var(--gold)', sw: 1.5 }) + text(344, 112, 'Target', { size: 20, weight: 700, fill: 'var(--gold)' }) +
     text(344, 140, 'Where a trade aims', { size: 14 }) + text(344, 162, 'Written before entry', { size: 13, cls: 'sv-m' }) +
     text(344, 200, 'Never a reason to enter', { size: 15, weight: 700, fill: 'var(--gold)' })) +
-  rv(88.9 - t[0], text(32, 306, 'Every trade at a level also records its test number:', { size: 13, cls: 'sv-m' }) +
+  rv(t[3] - t[0], text(32, 306, 'Every trade at a level also records its test number:', { size: 13, cls: 'sv-m' }) +
     ['1st touch', '2nd touch', '3rd touch'].map((l, i) => rect(32 + i * 110, 316, 100, 26, { stroke: 'var(--border-light)' }) + text(82 + i * 110, 334, l, { size: 12, anchor: 'middle' })).join('')));
 
-S['List closes'] = (t) => svg('The list closes at 09:25',
-  title('The list closes at 09:25', 'Nothing else becomes a level') +
+S['List closes'] = (t) => svg('The list closes at 9:25 a.m.',
+  title('The list closes at 9:25 a.m.', 'Nothing else becomes a level') +
   rv(0, line(40, 170, 600, 170, 'var(--text-muted)', { sw: 3 }) + line(300, 140, 300, 200, 'var(--gold)', { sw: 4 }) +
-    text(300, 128, '09:25', { size: 22, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' }) +
+    text(300, 128, '9:25 a.m.', { size: 22, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' }) +
     text(160, 230, 'List fixed', { size: 15, anchor: 'middle', fill: 'var(--cyan)' }) +
     text(450, 230, 'In-session types only', { size: 15, anchor: 'middle', fill: 'var(--cyan)' })) +
-  rv(107.2 - t[0], rect(330, 244, 270, 40, { fill: 'var(--bg-card)', stroke: 'var(--cyan)' }) + text(344, 269, 'Only types your plan named', { size: 13 })) +
-  rv(118.8 - t[0], rect(32, 290, 568, 46, { fill: 'var(--bg-card)', stroke: 'var(--gold)', sw: 1.5 }) +
-    text(48, 318, 'End-of-day mark-up: count the lines added after 09:25, write the number down', { size: 14 })));
+  rv(t[1] - t[0], rect(330, 244, 270, 40, { fill: 'var(--bg-card)', stroke: 'var(--cyan)' }) + text(344, 269, 'Only types your plan named', { size: 13 })) +
+  rv(t[2] - t[0], rect(32, 290, 568, 46, { fill: 'var(--bg-card)', stroke: 'var(--gold)', sw: 1.5 }) +
+    text(48, 318, 'End-of-day mark-up: count the lines added after 9:25, write the number down', { size: 14 })));
 
 // ---- Segment 5: marking a blank chart -----------------------------------------
+// [cue index in segment 5, clock, label]; S5 holds that segment's cue starts
 const STEPS = [
-  [11.2, '08:50', 'Templates: regular and full, both end at 16:00'],
-  [21.2, '09:00', 'Collect the data by scope'],
-  [64.1, '09:10', 'Write each level as a zone with its far edge'],
-  [77.4, '09:15', 'Everything outside the eleven rows is mid-range'],
-  [84.7, '09:18', 'Considered and struck: four lines fail the test'],
-  [98.4, '09:20', 'Write the in-session line'],
-  [110.5, '09:22', 'Targets in their own column; list closes at 09:25'],
+  [1, '8:50', 'Templates: regular and full, both end at 4:00 p.m.'],
+  [2, '9:00', 'Collect the data by scope'],
+  [4, '9:10', 'Write each level as a zone with its far edge'],
+  [5, '9:15', 'Everything outside the eleven rows is mid-range'],
+  [6, '9:18', 'Considered and struck: four lines fail the test'],
+  [7, '9:20', 'Write the in-session line'],
+  [8, '9:22', 'Targets in their own column; list closes at 9:25'],
 ];
-const stepRows = (t0, from, to, y0) => STEPS.slice(from, to).map(([s, tm, l], i) => rv(s - t0,
+const S5 = cfg.segments.find((x) => x.id === 's5').cues.map((c) => c.start);
+const stepRows = (t0, from, to, y0) => STEPS.slice(from, to).map(([ci, tm, l], i) => rv(S5[ci] - t0,
   rect(32, y0 + i * 40, 576, 32, { fill: 'var(--bg-card)', stroke: 'var(--border-light)' }) + text(46, y0 + 21 + i * 40, tm, { size: 14, cls: 'sv-n', fill: 'var(--gold)' }) + text(110, y0 + 21 + i * 40, l, { size: 14 }))).join('');
 
-S['Worked case'] = (t) => svg('Worked case: a blank chart, marked by 09:25',
-  title('Worked case: blank chart', 'Invented prices. It stops at 09:25: no entry, no outcome') + stepRows(t[0], 0, 2, 90) +
-  rv(25, text(32, 230, 'Prior-day high 24,186.50', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) + text(32, 252, 'Prior-day low 24,032.00', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) +
+S['Worked case'] = (t) => svg('Worked case: a blank chart, marked by 9:25 a.m.',
+  title('Worked case: blank chart', 'Invented prices. It stops at 9:25 a.m.: no entry, no outcome') + stepRows(t[0], 0, 2, 90) +
+  rv(S5[2] - t[0] + 3, text(32, 230, 'Prior-day high 24,186.50', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) + text(32, 252, 'Prior-day low 24,032.00', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) +
     text(32, 274, 'Value area 24,071.00 to 24,148.00', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' }) + text(32, 296, 'VPOC 24,112.00   Settlement 24,131.50', { size: 14, cls: 'sv-n', fill: 'var(--cyan)' })));
 
-S['The 16:00 boundary'] = (t) => svg('The 16:00 boundary',
-  title('The 16:00 boundary', 'A 16:12 print belongs to the overnight range') +
+S['The 16:00 boundary'] = (t) => svg('The 4:00 p.m. boundary',
+  title('The 4:00 p.m. boundary', 'A 4:12 p.m. print belongs to the overnight range') +
   rv(0, rect(32, 80, 330, 40, { fill: 'var(--cyan)', op: 0.22, rx: 0 }) + text(197, 105, 'Regular session', { size: 14, anchor: 'middle' }) +
     rect(362, 80, 246, 40, { fill: 'var(--gold)', op: 0.22, rx: 0 }) + text(485, 105, 'Overnight', { size: 14, anchor: 'middle' }) +
-    line(362, 72, 362, 130, 'var(--text-primary)', { sw: 2.5 }) + text(362, 146, '16:00', { size: 13, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
-  rv(0.4, text(32, 146, 'High 24,186.50', { size: 12, cls: 'sv-n', fill: 'var(--cyan)' }) + text(608, 146, 'High 24,190.00 at 16:12', { size: 12, cls: 'sv-n', anchor: 'end', fill: 'var(--gold)' })) +
+    line(362, 72, 362, 130, 'var(--text-primary)', { sw: 2.5 }) + text(362, 66, '4:00 p.m.', { size: 13, cls: 'sv-n', anchor: 'middle', fill: 'var(--gold)' })) +
+  rv(0.4, text(32, 146, 'High 24,186.50', { size: 12, cls: 'sv-n', fill: 'var(--cyan)' }) + text(608, 146, 'High 24,190.00 at 4:12 p.m.', { size: 12, cls: 'sv-n', anchor: 'end', fill: 'var(--gold)' })) +
   rv(t[1] - t[0] - 2, rect(32, 162, 576, 26, { fill: 'var(--bg-card)', stroke: 'var(--gold)' }) + text(46, 180, 'Overlapping zones merge: one row, far edge 24,190.00', { size: 13 }), 'sv-rv') +
   stepRows(t[0], 2, 4, 200) +
-  rv(84.7 - t[0], text(32, 300, 'Struck: overnight VWAP, 24,100.00, a Fibonacci line, a trendline', { size: 13, fill: 'var(--red)' })) +
-  rv(121.5 - t[0], text(32, 328, 'The time went on scope and edges, not on finding more lines', { size: 13, cls: 'sv-m' })));
+  rv(S5[6] - t[0], text(32, 300, 'Struck: overnight VWAP, 24,100.00, a Fibonacci line, a trendline', { size: 13, fill: 'var(--red)' })) +
+  rv(S5[9] - t[0], text(32, 328, 'The time went on scope and edges, not on finding more lines', { size: 13, cls: 'sv-m' })));
 
 S['Chart score'] = (t) => svg('Does your chart pass?',
   title('Does your chart pass?', 'One point for each true line, out of seven') +
   Array.from({ length: 7 }, (_, i) => rv(i * 0.35, `<circle cx="${80 + i * 80}" cy="130" r="22" fill="var(--bg-card)" stroke="var(--cyan)" stroke-width="2"/>` +
     text(80 + i * 80, 137, String(i + 1), { size: 18, cls: 'sv-t sv-n', anchor: 'middle' }))).join('') +
-  [[19, '7 of 7', 'Ready to plan from', 'var(--green)'], [26, '5 or 6', 'Write the missing lines before 09:25', 'var(--gold)'], [33, 'Under 5', 'No trade at a level that session', 'var(--red)']].map(([d, a, b, col], i) =>
+  [[19, '7 of 7', 'Ready to plan from', 'var(--green)'], [26, '5 or 6', 'Write the missing lines before 9:25', 'var(--gold)'], [33, 'Under 5', 'No trade at a level that session', 'var(--red)']].map(([d, a, b, col], i) =>
     rv(d, rect(32, 190 + i * 50, 576, 40, { fill: 'var(--bg-card)', stroke: col, sw: 1.5 }) + text(48, 216 + i * 50, a, { size: 16, weight: 700, fill: col }) + text(150, 216 + i * 50, b, { size: 15 }))).join(''));
 
 // ---- Segment 6: your next session -----------------------------------------------
 S['One row'] = (t) => {
   const cols = ['Slug', 'Near edge', 'Far edge', 'Side', 'Session scope', 'Stop sentence'];
   return svg('One row: the assignment',
-    title('Your assignment: one row', 'One level from your chart, before tomorrow\'s open') +
-    cols.map((c, i) => rv(5.3 - t[0] + i * 1.3, rect(32 + i * 97, 110, 93, 70, { fill: 'var(--bg-card)', stroke: 'var(--cyan)', sw: 1.5 }) +
+    title('Your assignment: one row', 'One level from your chart, before your next session') +
+    cols.map((c, i) => rv(t[1] - t[0] + i * 1.3, rect(32 + i * 97, 110, 93, 70, { fill: 'var(--bg-card)', stroke: 'var(--cyan)', sw: 1.5 }) +
       text(78 + i * 97, 150, c, { size: 12, weight: 700, anchor: 'middle' }))).join('') +
-    rv(12, text(32, 230, 'Slug, near edge, far edge, side, session scope, stop sentence.', { size: 14, cls: 'sv-m' }) + text(32, 254, 'One row. That is the assignment.', { size: 16 })));
+    rv(t[1] - t[0], text(32, 230, 'Slug, near edge, far edge, side, session scope, stop sentence.', { size: 14, cls: 'sv-m' }) + text(32, 254, 'One row. That is the assignment.', { size: 16 })));
 };
 
 S['Summary'] = (t) => {

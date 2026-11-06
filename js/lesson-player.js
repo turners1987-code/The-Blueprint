@@ -234,6 +234,18 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
   });
   const details = el('details', { class: 'lesson-transcript-wrap' }, el('summary', {}, 'Transcript'), transcript);
 
+  // Chapters: cues that carry a chapter name open a chapter. The strip shows
+  // where you are inside the segment, and a tap jumps to that chapter.
+  const chapters = cues.filter((c) => c.chapter);
+  const chapterBtns = chapters.map((c) => {
+    const b = el('button', { type: 'button', class: 'lesson-chapter' }, c.chapter);
+    b.addEventListener('click', () => { seek(c.start); if (!playing) play(); });
+    return b;
+  });
+  const chapterBar = el('nav', { class: 'lesson-chapters', 'aria-label': 'Chapters' }, ...chapterBtns);
+  chapterBar.hidden = chapters.length < 2;
+  let shownChapter = -1;
+
   // Music control: moves only the music. The voice stays the same.
   const music = loadMusicLevel(store());
   const NOTE = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>';
@@ -247,7 +259,7 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
   musicBox.hidden = !seg.audio;
 
   const root = el('div', { class: 'lesson-player' },
-    el('div', { class: 'lesson-controls' }, restartBtn, playBtn, range, clock), musicBox, stage, nextBtn, caption, details);
+    el('div', { class: 'lesson-controls' }, restartBtn, playBtn, range, clock), musicBox, chapterBar, stage, nextBtn, caption, details);
   if (!slides.length) stage.hidden = true;
   if (!cues.length) { caption.hidden = true; details.hidden = true; }
 
@@ -376,6 +388,11 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
       shownSlide = si;
       stage.innerHTML = si >= 0 ? (slides[si].svg || '') : '';
       stage.setAttribute('aria-label', si >= 0 ? (slides[si].title || 'Slide') : 'Slide');
+    }
+    const chi = activeIndex(chapters, t);
+    if (chi !== shownChapter) {
+      shownChapter = chi;
+      chapterBtns.forEach((b, k) => { if (k === chi) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); });
     }
     const ci = activeIndex(cues, t);
     if (ci !== shownCue) {

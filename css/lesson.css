@@ -26,6 +26,11 @@
 .lesson-player { margin-bottom: var(--space-xl); background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm, 6px); padding: var(--space-md); }
 .lesson-controls { display: flex; align-items: center; gap: var(--space-md); }
 .lesson-controls input[type="range"] { flex: 1; min-width: 0; accent-color: var(--cyan); }
+.lesson-chapters { display: flex; flex-wrap: wrap; gap: var(--space-xs, 6px); margin: var(--space-sm) 0; }
+.lesson-chapters[hidden] { display: none; }
+.lesson-chapter { font: inherit; font-size: 0.78rem; letter-spacing: 0.02em; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; }
+.lesson-chapter:hover { border-color: var(--cyan); color: var(--text-primary); }
+.lesson-chapter[aria-current="true"] { border-color: var(--cyan); background: color-mix(in srgb, var(--cyan) 14%, transparent); color: var(--text-primary); }
 .lesson-restart { display: inline-flex; align-items: center; padding-inline: var(--space-sm); }
 .lesson-next { display: block; margin: var(--space-md) 0 0 auto; }
 .lesson-next[hidden] { display: none; }
