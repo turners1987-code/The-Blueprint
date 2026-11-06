@@ -23,7 +23,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 11. [x] Setting Up NT8 page
 12. [x] Rule Card
 13. [x] Reading List
-14. Sources page
+14. [x] Sources page
 15. Journal fields
 16. [x] Journal CSV export
 17. Unlock page help line (taken by recommendation Nov 6): under the code box on unlock.html add one line: the code is in your purchase email from Lemon Squeezy, or under My Orders at app.lemonsqueezy.com.

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources — The Blueprint</title>
+  <meta name="description" content="Every source named in the modules: the statistics with their n and period, the exchange, broker and regulator pages, and the software licenses in use.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#071426">
+  <meta property="og:title" content="Sources — The Blueprint">
+  <meta property="og:description" content="Every source named in the modules: the statistics with their n and period, the exchange, broker and regulator pages, and the software licenses in use.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bptrade.co/sources.html">
+  <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bptrade.co/assets/og-image.jpg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ai.css">
+  <link rel="stylesheet" href="css/modules.css">
+  <link rel="stylesheet" href="css/guides.css">
+  <link rel="stylesheet" href="css/reading-list.css">
+</head>
+<body>
+
+  <!-- NAV (injected by js/nav.js) -->
+  <div id="nav-root"></div>
+
+  <div class="ai-page" id="main-content" tabindex="-1">
+    <header class="ai-header">
+      <div class="container">
+        <div class="eyebrow">Sources</div>
+        <h1>Sources</h1>
+        <p class="lead mt-sm">Every statistic in the modules comes from one named dataset and carries its n. Every rule, schedule and contract term comes from a page you can open yourself. This is the full list.</p>
+        <p class="reading-list-actions"><a href="tools.html" class="btn btn--ghost btn--sm">All tools</a></p>
+      </div>
+    </header>
+
+    <div class="ai-body">
+      <div class="container reading-list-page guide-content">
+        <h2>Statistics</h2>
+        <p>All figures are from TradingStats (<a href="https://tradingstats.net">tradingstats.net</a>), NQ futures data that applies equally to MNQ, as compiled in the TradingStats source of truth, updated 2026-06-08. They are base rates: how often something happened in past sessions, not a forecast for yours. A touch means the level traded at any point in the session, with no sequence or timing implied.</p>
+        <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead><tr><th>Where</th><th>What was counted</th><th>Figure</th><th>n</th><th>Period and source</th></tr></thead>
+          <tbody>
+<tr><td>Module 06</td><td>In Value sessions (open between the prior VAL and VAH): prior session VPOC touched</td><td>82.4%</td><td>n=994 sessions</td><td>NQ Session Open data, Feb 2014 onward; source of truth updated 2026-06-08</td></tr>
+<tr><td>Module 09</td><td>NFP releases where the direction of the surprise matched the direction of NQ price</td><td>33 of 70 scored</td><td>n=70 scored of 72 releases</td><td>NQ, Jun 2020 to May 2026</td></tr>
+<tr><td>Module 12</td><td>Gap Up sessions (RTH open above the prior session&#x27;s range): prior session high touched</td><td>64.1%</td><td>n=811 sessions</td><td>NQ Session Open data; source of truth updated 2026-06-08</td></tr>
+<tr><td>Module 12</td><td>Gap Up sessions: prior close touched</td><td>46.7%</td><td>n=811 sessions</td><td>Same dataset</td></tr>
+<tr><td>Module 12</td><td>Gap Down sessions (RTH open below the prior session&#x27;s range): prior session low touched</td><td>67.0%</td><td>n=473 sessions</td><td>Same dataset</td></tr>
+<tr><td>Module 12</td><td>Gap Down sessions: prior close touched</td><td>45.9%</td><td>n=473 sessions</td><td>Same dataset</td></tr>
+<tr><td>Module 21</td><td>RTH open in range / above the prior high / below the prior low</td><td>59.6% / 25.5% / 14.9%</td><td>n=3,116 NQ sessions</td><td>Feb 2014 to Mar 2026; Session Open Analysis page, read 2026-11-01</td></tr>
+<tr><td>Module 22</td><td>Initial balance breaks on at least one side</td><td>95%+</td><td>n=3,163 sessions</td><td>NQ initial balance data; source of truth updated 2026-06-08</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Module 21 teaches how to read a probability and why the n comes first.</p>
+
+        <h2>Exchange, broker, agency and legal sources</h2>
+        <p>Each is cited on the module page where it is used, with the date it was read. Rules, hours and menus change; the publisher&#x27;s current page wins.</p>
+        <ul class="reading-list">
+          <li>CME Group: Rulebook Chapters 361 (MNQ) and 353 (MES); contract specification pages for MNQ and MES; the Client Systems Wiki settlement procedures for Nasdaq-100 and E-Mini S&amp;P 500 futures; Equity Index Roll Dates. Modules 03 and 17.</li>
+          <li>NinjaTrader: NT8 Help Guide pages on risks, the Risk window, alerts and Order Flow Volumetric Bars; Risk Settings and Margins pages. Modules 02, 03, 07 and 17.</li>
+          <li>Tradovate: help-center articles on daily loss limits and locking account risk settings. Module 02.</li>
+          <li>Rithmic: Risk Management and R | Trader Pro product pages. Module 02.</li>
+          <li>U.S. Code, 26 U.S.C. §1256, via Cornell Legal Information Institute. Module 03.</li>
+          <li>U.S. Securities and Exchange Commission, Use of Derivatives by Registered Investment Companies and Business Development Companies, Release No. IC-34084 (2020). Module 04.</li>
+          <li>ProShares, TQQQ UltraPro QQQ fund page, and LSEG FTSE Russell, Russell Reconstitution. Module 04.</li>
+          <li>U.S. Bureau of Labor Statistics release schedules (CPI, Employment Situation); U.S. Energy Information Administration Weekly Petroleum Status Report schedule; Board of Governors of the Federal Reserve System, FOMC calendars. Module 16.</li>
+        </ul>
+
+        <h2>Software and licenses</h2>
+        <ul class="reading-list">
+          <li><strong>TradingView Lightweight Charts</strong> v5.2.1, Apache License 2.0, Copyright 2025 TradingView, Inc. Draws the level-marking drill in Module 06, on synthetic bars only. <a href="js/vendor/NOTICE-lightweight-charts.txt">NOTICE</a> and <a href="js/vendor/LICENSE-lightweight-charts.txt">license text</a>.</li>
+          <li><strong>Barlow, Barlow Condensed and Share Tech Mono</strong>, loaded from Google Fonts under the SIL Open Font License.</li>
+        </ul>
+
+        <h2>Other lists</h2>
+        <p>Books are on the <a href="reading-list.html">Reading List</a>, with the seven recommendation lists they were drawn from credited there.</p>
+      </div>
+    </div>
+  </div>
+
+<footer class="site-footer">
+    <div class="container">
+      <a class="footer-seal" href="ai.html" title="How AI is used here"><img src="assets/ai-seal.svg" width="64" height="64" alt="AI-assisted, verified by a human. How AI is used here."></a>
+      <div class="footer-tagline">
+        <span>The Setup is the plan.</span> Discipline is the execution. Everything else is noise.
+      </div>
+      <nav class="footer-links" aria-label="Site policies"><a href="privacy.html">Privacy</a> <a href="support.html">Support</a> <a href="sources.html">Sources</a></nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+</body>
+</html>
