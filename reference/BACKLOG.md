@@ -19,7 +19,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 9e. [x] Learning-layer pilot, Module 06: per-segment notes with .md export; narration audio with Kokoro-82M if it installs in this environment, otherwise leave the placeholder and note it under Needs Shane as a local run
 10. [x] Plan Board v1
 11. [x] Setting Up NT8 page
-12. Rule Card
+12. [x] Rule Card
 13. Reading List
 14. Sources page
 15. Journal fields

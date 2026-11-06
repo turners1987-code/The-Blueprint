@@ -24,7 +24,7 @@ function initNav() {
 
   // ── Where are we? ──────────────────────────────────────────
   const path = window.location.pathname;
-  const prefix = path.includes('/modules/') ? '../' : '';
+  const prefix = /\/(modules|guides|tools)\//.test(path) ? '../' : '';
   const page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
 
   // ── The single link set (desktop + mobile) ─────────────────
