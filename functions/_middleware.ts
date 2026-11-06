@@ -3,7 +3,7 @@
    (set by /api/session) whose tier grants the page and whose KV entitlement is active.
    Fails closed: if the module list cannot be read, paid-module paths are refused. */
 
-import { allowed, pathNeed, type GateEnv } from './_lib/gate.ts';
+import { accessFor, pathNeed, refreshedCookie, type GateEnv } from './_lib/gate.ts';
 
 interface Env extends GateEnv { ASSETS: { fetch(req: Request | string | URL): Promise<Response> }; }
 
@@ -32,10 +32,13 @@ export const onRequest = async ({ request, env, next }: { request: Request; env:
   const need = pathNeed(url.pathname, ids ?? new Set());
   if (!need) return next();
 
-  if (await allowed(need, request.headers.get('Cookie'), env)) {
+  const session = await accessFor(need, request.headers.get('Cookie'), env);
+  if (session) {
     const res = await next();
     const out = new Response(res.body, res);
     out.headers.set('Cache-Control', 'private, no-store');
+    const fresh = await refreshedCookie(session, env.GATE_SECRET);
+    if (fresh) out.headers.append('Set-Cookie', fresh);
     return out;
   }
   // Not entitled. Pages are sent to the unlock screen; other files get 403.

@@ -1,7 +1,7 @@
 /* Entitlement lookup, for our own verification only.
    GET /api/entitlement?customer_id=<id> with header X-Admin-Token. */
 
-import { secretsMatch } from '../_lib/util';
+import { secretsMatch } from '../_lib/util.ts';
 
 interface Env {
   ADMIN_TOKEN?: string;

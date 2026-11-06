@@ -35,6 +35,14 @@
     <div class="unlock-body">
       <div class="container">
 
+        <section class="card unlock-panel" id="account-session" aria-labelledby="account-session-heading" hidden>
+          <h2 id="account-session-heading">Signed in</h2>
+          <p class="unlock-note" id="account-signed-in" role="status"></p>
+          <div class="unlock-actions">
+            <button type="button" class="btn btn--ghost" id="account-logout">Log out</button>
+          </div>
+        </section>
+
         <section class="card unlock-panel" aria-labelledby="account-reset-heading">
           <h2 id="account-reset-heading">Reset activations</h2>
           <p class="unlock-note">This signs the code out of every device it is active on. Enter it again on the devices you use. You can reset a key once every 24 hours.</p>

@@ -5,7 +5,7 @@
    there is no password. The key is sent once and not stored here.
    ============================================================ */
 
-import { readRecord } from './gate.js';
+import { readRecord, fetchMe } from './gate.js';
 
 const form = document.getElementById('reset-form');
 if (form) {
@@ -59,5 +59,19 @@ if (form) {
     } finally {
       submit.disabled = false;
     }
+  });
+}
+
+// Email login: show who is signed in on this device, with a Log out button.
+const sessionBox = document.getElementById('account-session');
+if (sessionBox) {
+  fetchMe().then((me) => {
+    if (!me.signedIn) return;
+    document.getElementById('account-signed-in').textContent = `Signed in as ${me.email}`;
+    sessionBox.hidden = false;
+  });
+  document.getElementById('account-logout').addEventListener('click', async () => {
+    try { await fetch('/api/logout', { method: 'POST' }); } catch { /* cookie stays until it expires */ }
+    sessionBox.hidden = true;
   });
 }

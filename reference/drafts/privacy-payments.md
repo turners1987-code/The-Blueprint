@@ -24,6 +24,8 @@ A short-lived marker (7 days) of each notification ID is also kept so the same n
 
 **Activation resets.** If you ask to reset the activations on a license key from the account page, The Blueprint checks the key with Lemon Squeezy, then removes that key's activations. To allow one reset per key per 24 hours, it stores a marker under a one-way hash (SHA-256) of the key, not the key itself, for 24 hours.
 
+**Email login codes.** Your email is used to send login codes, sent through Resend; codes expire after 10 minutes. *(Draft wording for Shane to approve.)*
+
 **Your choices.** To ask about, correct or delete the entitlement record The Blueprint holds about you, contact us at [CONTACT EMAIL: Shane to supply]. For the data Lemon Squeezy holds as a controller or processor, including access, correction, deletion and complaint rights, use the contact route in Lemon Squeezy's privacy policy.
 
 ---

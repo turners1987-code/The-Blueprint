@@ -4,6 +4,12 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { pathNeed, signSession, verifySession, readCookie, entitlementActive, allowed, createSession } from '../functions/_lib/gate.ts';
 import { onRequest } from '../functions/_middleware.ts';
+import { SESSION_TTL_S, activeSession, maskEmail, refreshedCookie } from '../functions/_lib/gate.ts';
+import { startLogin, verifyLogin, backfillEmails, START_BODY } from '../functions/_lib/login.ts';
+import { onRequestPost as startRoute } from '../functions/api/login/start.ts';
+import { onRequestGet as meRoute } from '../functions/api/me.ts';
+import { onRequestPost as logoutRoute } from '../functions/api/logout.ts';
+import { onRequestPost as backfillRoute } from '../functions/api/admin/backfill-emails.ts';
 
 const SECRET = 'test-secret';
 const NOW = Date.parse('2026-11-06T12:00:00Z');
@@ -110,5 +116,141 @@ const paidId = [...paid][0];
   // fail closed when the module list cannot be read (fresh isolate state aside, a module path is refused or still gated)
   const bad = await call(`/modules/${paidId}.html`, null, { ASSETS: { fetch: async () => { throw new Error('x'); } } });
   assert.notEqual(bad.status, 200);
+}
+
+// ---- sliding 90-day sessions
+assert.equal(SESSION_TTL_S, 90 * 24 * 3600);
+{
+  const fresh = { cid: '5', tier: 'all', exp: Date.now() + SESSION_TTL_S * 1000 };
+  assert.equal(await refreshedCookie(fresh, SECRET), null); // under a day old: no reissue
+  const old = { cid: '5', tier: 'all', exp: Date.now() + (SESSION_TTL_S - 2 * 86400) * 1000 };
+  const c = await refreshedCookie(old, SECRET);
+  assert.match(c, new RegExp(`Max-Age=${SESSION_TTL_S}`));
+  const tok = await signSession(old, SECRET);
+  const res = await call(`/modules/${paidId}.html`, `bp_session=${tok}`);
+  assert.equal(res.status, 200);
+  assert.match(res.headers.get('Set-Cookie'), /^bp_session=/); // middleware slid the session
+  const young = await signSession(fresh, SECRET);
+  assert.equal((await call(`/modules/${paidId}.html`, `bp_session=${young}`)).headers.get('Set-Cookie'), null);
+}
+
+// ---- email login (fake Resend, fake KV with put/delete/list)
+const mem = (seed = {}) => {
+  const m = new Map(Object.entries(seed).map(([k, v]) => [k, typeof v === 'string' ? v : JSON.stringify(v)]));
+  return {
+    m,
+    get: async (k) => m.get(k) ?? null,
+    put: async (k, v) => { m.set(k, v); },
+    delete: async (k) => { m.delete(k); },
+    list: async ({ prefix }) => ({ keys: [...m.keys()].filter((k) => k.startsWith(prefix)).map((name) => ({ name })), list_complete: true }),
+  };
+};
+const mailer = () => { const sent = []; const f = async (url, init) => { sent.push({ url, ...init, json: JSON.parse(init.body) }); return { ok: true }; }; f.sent = sent; return f; };
+const base = () => ({ 'cust:5': { status: 'active', product_id: 1472366, user_email: 'Sam@Gmail.com' }, 'email:sam@gmail.com': '5' });
+const L = (store) => ({ GATE_SECRET: SECRET, RESEND_API_KEY: 'rk', ENTITLEMENTS: store });
+{
+  // same answer for known and unknown emails; mail only for the known one
+  const store = mem(base()); const f = mailer();
+  const a = await startLogin('  SAM@gmail.com ', '1.1.1.1', L(store), f, NOW, () => '123456');
+  const b = await startLogin('nobody@example.com', '1.1.1.1', L(store), f, NOW, () => '654321');
+  assert.deepEqual(a, b); assert.equal(a.status, 200); assert.deepEqual(a.body, START_BODY);
+  assert.equal(f.sent.length, 1);
+  assert.equal(f.sent[0].url, 'https://api.resend.com/emails');
+  assert.equal(f.sent[0].headers.Authorization, 'Bearer rk');
+  assert.equal(f.sent[0].json.from, 'The Blueprint <login@bptrade.co>');
+  assert.equal(f.sent[0].json.subject, 'Your Blueprint login code: 123456');
+  assert.ok(f.sent[0].json.text && f.sent[0].json.html);
+  assert.ok(!/<img|href=/i.test(f.sent[0].json.html)); // no tracking pixels, no links
+  assert.ok(!store.m.get('otp:sam@gmail.com').includes('123456')); // only the hash is stored
+  assert.ok(!store.m.has('otp:nobody@example.com'));
+
+  // verify issues a cookie that opens paid pages; the code is single-use
+  const v = await verifyLogin('sam@gmail.com', '123456', L(store), NOW);
+  assert.deepEqual([v.status, v.body.tier], [200, 'all']);
+  assert.match(v.cookie, /^bp_session=.*HttpOnly/); assert.match(v.cookie, new RegExp(`Max-Age=${SESSION_TTL_S}`));
+  const hdr = v.cookie.split(';')[0];
+  assert.ok(await allowed('modules', hdr, { GATE_SECRET: SECRET, ENTITLEMENTS: store }, NOW));
+  assert.equal((await verifyLogin('sam@gmail.com', '123456', L(store), NOW)).status, 403);
+
+  // /api/me gives the masked email and tier; a cancelled entitlement with a valid cookie is refused
+  const me = await meRoute({ request: new Request('https://bptrade.co/api/me', { headers: { Cookie: hdr } }), env: { GATE_SECRET: SECRET, ENTITLEMENTS: store } });
+  assert.deepEqual(await me.json(), { signedIn: true, tier: 'all', email: 'S***@Gmail.com' });
+  const gone = mem({ ...base(), 'cust:5': { status: 'expired', product_id: 1472366, user_email: 'sam@gmail.com' } });
+  assert.equal((await activeSession(hdr, { GATE_SECRET: SECRET, ENTITLEMENTS: gone }, NOW)), null);
+  assert.equal((await call(`/modules/${paidId}.html`, hdr.replace(/^/, ''), { ENTITLEMENTS: gone })).status, 302);
+  const meOut = await meRoute({ request: new Request('https://bptrade.co/api/me'), env: { GATE_SECRET: SECRET, ENTITLEMENTS: store } });
+  assert.equal((await meOut.json()).signedIn, false);
+  assert.equal(maskEmail('sam@gmail.com'), 's***@gmail.com');
+  assert.match((await logoutRoute()).headers.get('Set-Cookie'), /Max-Age=0/);
+}
+{
+  // wrong code 5 times kills it, even the right one afterwards
+  const store = mem(base());
+  await startLogin('sam@gmail.com', 'ip', L(store), mailer(), NOW, () => '111111');
+  for (let i = 0; i < 4; i++) assert.equal((await verifyLogin('sam@gmail.com', '000000', L(store), NOW)).status, 403);
+  assert.ok(store.m.has('otp:sam@gmail.com'));
+  assert.equal((await verifyLogin('sam@gmail.com', '000000', L(store), NOW)).status, 403);
+  assert.ok(!store.m.has('otp:sam@gmail.com'));
+  assert.equal((await verifyLogin('sam@gmail.com', '111111', L(store), NOW)).status, 403);
+}
+{
+  // expired code fails
+  const store = mem(base());
+  await startLogin('sam@gmail.com', 'ip', L(store), mailer(), NOW, () => '222222');
+  assert.equal((await verifyLogin('sam@gmail.com', '222222', L(store), NOW + 601e3)).status, 403);
+  // bad shape
+  assert.equal((await verifyLogin('sam@gmail.com', '12ab56', L(store), NOW)).status, 403);
+}
+{
+  // rate limits: 3 sends per email, 10 per IP, per 15 minutes; the answer never changes
+  const store = mem(base()); const f = mailer();
+  for (let i = 0; i < 5; i++) assert.deepEqual((await startLogin('sam@gmail.com', 'ipA', L(store), f, NOW + i, () => '333333')).body, START_BODY);
+  assert.equal(f.sent.length, 3);
+  assert.equal((await startLogin('sam@gmail.com', 'ipA', L(store), f, NOW + 16 * 60e3, () => '333333')).status, 200);
+  assert.equal(f.sent.length, 4); // window passed
+  const store2 = mem(base()); const f2 = mailer();
+  for (let i = 0; i < 12; i++) await startLogin(`u${i}@x.com`, 'ipB', L(store2), f2, NOW, () => '1');
+  const store3 = mem({ ...base() }); // 10 IP hits used up by other addresses, then a real customer
+  const f3 = mailer();
+  for (let i = 0; i < 10; i++) await startLogin(`u${i}@x.com`, 'ipC', L(store3), f3, NOW, () => '1');
+  await startLogin('sam@gmail.com', 'ipC', L(store3), f3, NOW, () => '1');
+  assert.equal(f3.sent.length, 0);
+}
+{
+  // 503 without the Resend key, via the route as well
+  const r = await startLogin('sam@gmail.com', 'ip', { GATE_SECRET: SECRET, ENTITLEMENTS: mem(base()) }, mailer(), NOW);
+  assert.deepEqual([r.status, r.body.error], [503, 'email_not_configured']);
+  const rr = await startRoute({ request: new Request('https://bptrade.co/api/login/start', { method: 'POST', body: JSON.stringify({ email: 'a@b.co' }) }), env: { ENTITLEMENTS: mem() } });
+  assert.equal(rr.status, 503);
+  // a lapsed customer gets the same answer and no mail
+  const f = mailer();
+  const lapsed = mem({ ...base(), 'cust:5': { status: 'expired', product_id: 1472366, user_email: 'sam@gmail.com' } });
+  assert.deepEqual((await startLogin('sam@gmail.com', 'ip', L(lapsed), f, NOW)).body, START_BODY);
+  assert.equal(f.sent.length, 0);
+}
+{
+  // backfill route: auth, then writes missing indexes only
+  const store = mem({ 'cust:7': { user_email: ' Pat@X.com ' }, 'cust:8': { status: 'active' }, 'cust:9': { user_email: 'ok@x.com' }, 'email:ok@x.com': '9' });
+  const call2 = (auth) => backfillRoute({ request: new Request('https://bptrade.co/api/admin/backfill-emails', { method: 'POST', headers: auth ? { Authorization: auth } : {} }), env: { ADMIN_TOKEN: 'adm', ENTITLEMENTS: store } });
+  assert.equal((await call2(null)).status, 401);
+  assert.equal((await call2('Bearer nope')).status, 401);
+  const ok = await call2('Bearer adm');
+  assert.deepEqual(await ok.json(), { ok: true, scanned: 3, written: 1 });
+  assert.equal(store.m.get('email:pat@x.com'), '7');
+}
+{
+  // webhook writes the email index on every event that writes a customer record
+  const { onRequestPost: hook } = await import('../functions/api/ls-webhook.ts');
+  const { createHmac } = await import('node:crypto');
+  const store = mem(); store.get = async (k, t) => { const v = store.m.get(k) ?? null; return t === 'json' && v ? JSON.parse(v) : v; };
+  const fire = async (event, id, attrs) => {
+    const body = JSON.stringify({ meta: { event_name: event, webhook_id: id }, data: { id: '1', attributes: attrs } });
+    const sig = createHmac('sha256', 'whs').update(body).digest('hex');
+    return hook({ request: new Request('https://bptrade.co/api/ls-webhook', { method: 'POST', headers: { 'X-Signature': sig }, body }), env: { LS_WEBHOOK_SECRET: 'whs', ENTITLEMENTS: store } });
+  };
+  assert.equal((await fire('subscription_created', 'w1', { customer_id: 11, user_email: ' New@Buyer.com ', status: 'active', product_id: 1472366 })).status, 200);
+  assert.equal(store.m.get('email:new@buyer.com'), '11');
+  assert.equal((await fire('license_key_created', 'w2', { customer_id: 12, user_email: 'Key@Buyer.com' })).status, 200);
+  assert.equal(store.m.get('email:key@buyer.com'), '12');
 }
 console.log('gate: all tests passed');

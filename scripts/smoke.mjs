@@ -114,6 +114,8 @@ const server = createServer((req, res) => {
   let clean;
   try { clean = decodeURIComponent(raw); } catch { clean = raw; }
   if (clean === '/') clean = '/index.html';
+  // Pages Functions are not served here. /api/me is stubbed the way the real function answers a visitor with no session.
+  if (clean === '/api/me') { res.writeHead(200, { 'Content-Type': 'application/json' }); res.end('{"signedIn":false,"tier":null,"email":""}'); return; }
   const within = path.posix.normalize(clean.replace(/^\/+/, '')); // repo-relative, no leading slash
   const file = path.resolve(ROOT, within);
   if (file !== ROOT && !file.startsWith(ROOT + path.sep)) { res.writeHead(403); res.end('forbidden'); return; }
@@ -424,6 +426,42 @@ for (const { page, seed, label } of LOCKED_CASES) {
   }
 }
 
+// ── Unlock page: email login shows first, the access-code form is hidden ──
+let unlockProblems = [];
+{
+  let api = null; let tab = null;
+  try {
+    tab = await newTab();
+    api = await withTimeout(cdpConnect(tab.webSocketDebuggerUrl), PAGE_TIMEOUT_MS, 'connecting to the tab');
+    const { errors, listen } = collector();
+    listen(api);
+    await api.send('Runtime.enable'); await api.send('Log.enable'); await api.send('Page.enable');
+    const loaded = new Promise((res) => api.on((m) => { if (m.method === 'Page.loadEventFired') res(); }));
+    await api.send('Storage.clearDataForOrigin', { origin: ORIGIN, storageTypes: 'local_storage' });
+    await api.send('Page.navigate', { url: `${ORIGIN}/unlock.html` });
+    await withTimeout(loaded, PAGE_TIMEOUT_MS, 'loading unlock.html');
+    await sleep(SETTLE_MS);
+    const { result } = await api.send('Runtime.evaluate', { returnByValue: true, expression:
+      `(() => { const vis = (id) => { const e = document.getElementById(id); return !!e && !e.hidden && getComputedStyle(e).display !== 'none'; };
+        const otp = document.getElementById('login-otp');
+        return { email: vis('unlock-email'), emailForm: vis('email-form'), otpForm: vis('otp-form'), code: vis('unlock-entry'), done: vis('unlock-done'),
+          link: vis('show-code-form'), ac: otp && otp.getAttribute('autocomplete'), im: otp && otp.getAttribute('inputmode') }; })()` });
+    const v = result.value;
+    if (!v.email || !v.emailForm) unlockProblems.push('email login is not shown first');
+    if (v.otpForm) unlockProblems.push('code box is visible before a code is requested');
+    if (v.code || v.done) unlockProblems.push('access-code form or done state is visible on first load');
+    if (!v.link) unlockProblems.push('no "Have an access code instead?" link');
+    if (v.ac !== 'one-time-code' || v.im !== 'numeric') unlockProblems.push('code box lacks autocomplete=one-time-code / inputmode=numeric');
+    await api.send('Runtime.evaluate', { expression: `document.getElementById('show-code-form').click()` });
+    const { result: r2 } = await api.send('Runtime.evaluate', { returnByValue: true, expression: `(() => { const e = document.getElementById('unlock-entry'); return !e.hidden && getComputedStyle(e).display !== 'none'; })()` });
+    if (!r2.value) unlockProblems.push('"Have an access code instead?" did not open the code form');
+    errors.forEach((e) => unlockProblems.push(e.text));
+  } catch (e) { unlockProblems.push(e && e.message ? e.message : String(e)); }
+  finally { if (api) api.close(); if (tab) await closeTab(tab.id); }
+  if (unlockProblems.length) { failed++; console.log('✗ /unlock.html (email login first)'); unlockProblems.slice(0, 5).forEach((p) => console.log(`    ${p}`)); }
+  else console.log('✓ /unlock.html (email login first)');
+}
+
 // ── Shut down ──────────────────────────────────────────────────
 child.kill();
 await new Promise((res) => { child.on('exit', res); setTimeout(res, 3000); });
@@ -434,6 +472,6 @@ for (const delay of [0, 500]) {
 }
 
 console.log('─'.repeat(40));
-const total = PAGES.length + NOT_FOUND_PROBES.length + LOCKED_CASES.length;
+const total = PAGES.length + NOT_FOUND_PROBES.length + LOCKED_CASES.length + 1;
 console.log(`${total - failed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

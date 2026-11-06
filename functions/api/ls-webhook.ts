@@ -3,7 +3,7 @@
    webhook id, and keeps one entitlement record per customer in KV
    ("cust:<customer_id>"). Dedupe markers live under "evt:<id>". */
 
-import { sha256Hex, timingSafeEqual, toHex } from '../_lib/util';
+import { sha256Hex, timingSafeEqual, toHex } from '../_lib/util.ts';
 
 interface Env {
   LS_WEBHOOK_SECRET?: string;
@@ -13,6 +13,8 @@ interface Env {
 const encoder = new TextEncoder();
 const DEDUPE_TTL_S = 7 * 24 * 60 * 60;
 const SUBSCRIPTION_EVENTS = ['subscription_created', 'subscription_updated', 'subscription_expired'];
+
+const WRITING_EVENTS = [...SUBSCRIPTION_EVENTS, 'subscription_payment_success', 'license_key_created'];
 
 async function signatureValid(body: string, header: string | null, secret: string | undefined): Promise<boolean> {
   if (!header || !secret) return false;
@@ -31,6 +33,12 @@ async function readCustomer(kv: KVNamespace, customerId: string): Promise<Custom
 
 async function writeCustomer(kv: KVNamespace, customerId: string, record: Customer): Promise<void> {
   await kv.put(`cust:${customerId}`, JSON.stringify(record));
+}
+
+// Email index for email login: email:<lowercased trimmed email> -> customer_id.
+async function indexEmail(kv: KVNamespace, email: unknown, customerId: string): Promise<void> {
+  if (typeof email !== 'string' || !email.includes('@')) return;
+  await kv.put(`email:${email.trim().toLowerCase()}`, customerId);
 }
 
 export const onRequestPost = async ({ request, env }: { request: Request; env: Env }): Promise<Response> => {
@@ -70,6 +78,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     }
     const cid = String(customerId);
     const now = new Date().toISOString();
+    if (WRITING_EVENTS.includes(eventName ?? '')) await indexEmail(kv, attrs.user_email, cid);
 
     if (SUBSCRIPTION_EVENTS.includes(eventName ?? '')) {
       const stored = (await readCustomer(kv, cid)) ?? {};

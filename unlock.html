@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enter your access code — The Blueprint</title>
-  <meta name="description" content="Unlock Full Access on The Blueprint with the code from your receipt. No account, no password.">
+  <title>Log in — The Blueprint</title>
+  <meta name="description" content="Log in to The Blueprint with a 6-digit code sent to your email, or use the access code from your receipt.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#071426">
-  <meta property="og:title" content="Enter your access code — The Blueprint">
-  <meta property="og:description" content="Unlock Full Access on The Blueprint with the code from your receipt. No account, no password.">
+  <meta property="og:title" content="Log in — The Blueprint">
+  <meta property="og:description" content="Log in to The Blueprint with a 6-digit code sent to your email, or use the access code from your receipt.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bptrade.co/unlock.html">
   <meta property="og:image" content="https://bptrade.co/assets/og-image.jpg">
@@ -26,17 +26,43 @@
   <div class="unlock-page" id="main-content" tabindex="-1">
     <header class="unlock-header">
       <div class="container">
-        <div class="eyebrow">Full Access</div>
-        <h1>Enter your access code</h1>
-        <p class="lead mt-sm">Full Access is unlocked with the code from your receipt. No account, no password &mdash; the code lives in this browser.</p>
+        <div class="eyebrow">Log in</div>
+        <h1>Log in to The Blueprint</h1>
+        <p class="lead mt-sm">Use the email you bought with. We send a 6-digit code, and this device stays logged in. No password.</p>
       </div>
     </header>
 
     <div class="unlock-body">
       <div class="container">
 
-        <!-- Entry state: shown when no code is stored -->
-        <section class="card unlock-panel" id="unlock-entry" aria-labelledby="unlock-entry-heading">
+        <!-- Email login: shown first when nobody is signed in -->
+        <section class="card unlock-panel" id="unlock-email" aria-labelledby="unlock-email-heading">
+          <h2 id="unlock-email-heading" class="sr-only">Email login</h2>
+          <form class="unlock-form" id="email-form" novalidate>
+            <label class="unlock-label" for="login-email">Email</label>
+            <input class="unlock-input" id="login-email" name="email" type="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@example.com">
+            <div class="unlock-error" id="email-error" role="alert" hidden></div>
+            <div class="unlock-actions">
+              <button type="submit" class="btn btn--primary" id="email-send">Send code</button>
+              <a href="pricing.html">Back to pricing</a>
+            </div>
+          </form>
+          <form class="unlock-form" id="otp-form" novalidate hidden>
+            <p class="unlock-note" id="otp-sent" role="status" aria-live="polite"></p>
+            <label class="unlock-label" for="login-otp">6-digit code</label>
+            <input class="unlock-input" id="login-otp" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]*" spellcheck="false" placeholder="123456">
+            <div class="unlock-error" id="otp-error" role="alert" hidden></div>
+            <div class="unlock-actions">
+              <button type="submit" class="btn btn--primary" id="otp-submit">Log in</button>
+              <button type="button" class="unlock-remove" id="otp-resend" disabled>Resend code</button>
+              <button type="button" class="unlock-remove" id="otp-change">Use a different email</button>
+            </div>
+          </form>
+          <p class="unlock-note"><a href="#" id="show-code-form">Have an access code instead?</a></p>
+        </section>
+
+        <!-- Access code entry: the backup, shown on request -->
+        <section class="card unlock-panel" id="unlock-entry" aria-labelledby="unlock-entry-heading" hidden>
           <h2 id="unlock-entry-heading" class="sr-only">Access code</h2>
           <form class="unlock-form" id="unlock-form" novalidate>
             <label class="unlock-label" for="unlock-code">Access code</label>
@@ -49,6 +75,7 @@
           </form>
           <p class="unlock-note">The code is stored in this browser only. Enter it again on another device, or after clearing your browser data.</p>
           <p class="unlock-note">Your code is in your purchase email from Lemon Squeezy, or under My Orders at app.lemonsqueezy.com.</p>
+          <p class="unlock-note"><a href="#" id="show-email-form">Log in with email instead</a></p>
         </section>
 
         <!-- Success state: shown when a code is stored -->

@@ -11,7 +11,9 @@ import { LS_PRODUCT_TIERS, LS_ACCEPT_TEST_KEYS, LS_VALIDATE_URL } from '../../js
 import { tierForProduct, tierGrants } from '../../js/tiers.js';
 
 export const COOKIE = 'bp_session';
-export const SESSION_TTL_S = 24 * 60 * 60;
+export const SESSION_TTL_S = 90 * 24 * 60 * 60;
+// Sliding session: the middleware re-issues the cookie once it is more than this old.
+export const REFRESH_AFTER_S = 24 * 60 * 60;
 const ACTIVE_STATUSES = ['active', 'on_trial'];
 const KEY_STATUSES = ['active', 'inactive'];
 const encoder = new TextEncoder();
@@ -71,17 +73,48 @@ export function entitlementActive(record: any, now = Date.now()): boolean {
   return false;
 }
 
-async function readEntitlement(kv: KvRead, cid: string): Promise<any | null> {
+export async function readEntitlement(kv: KvRead, cid: string): Promise<any | null> {
   const raw = await kv.get(`cust:${cid}`);
   if (!raw) return null;
   try { return JSON.parse(raw); } catch { return null; }
 }
 
+// Cookie valid and the KV entitlement still active. Returns the session and record, else null.
+export async function activeSession(cookieHeader: string | null, env: GateEnv, now = Date.now()): Promise<{ session: Session; record: any } | null> {
+  const session = await verifySession(readCookie(cookieHeader), env.GATE_SECRET, now);
+  if (!session) return null;
+  try {
+    const record = await readEntitlement(env.ENTITLEMENTS, session.cid);
+    return entitlementActive(record, now) ? { session, record } : null;
+  } catch { return null; }
+}
+
 // Used by the middleware: cookie valid, tier grants the need, entitlement still active.
 export async function allowed(need: string, cookieHeader: string | null, env: GateEnv, now = Date.now()): Promise<boolean> {
-  const s = await verifySession(readCookie(cookieHeader), env.GATE_SECRET, now);
-  if (!s || !tierGrants(s.tier, need)) return false;
-  try { return entitlementActive(await readEntitlement(env.ENTITLEMENTS, s.cid), now); } catch { return false; }
+  return (await accessFor(need, cookieHeader, env, now)) !== null;
+}
+
+// Like allowed(), but returns the session so the middleware can slide it.
+export async function accessFor(need: string, cookieHeader: string | null, env: GateEnv, now = Date.now()): Promise<Session | null> {
+  const a = await activeSession(cookieHeader, env, now);
+  return a && tierGrants(a.session.tier, need) ? a.session : null;
+}
+
+export async function issueCookie(cid: string, tier: string, secret: string, now = Date.now()): Promise<string> {
+  const token = await signSession({ cid, tier, exp: now + SESSION_TTL_S * 1000 }, secret);
+  return `${COOKIE}=${token}; Max-Age=${SESSION_TTL_S}; Path=/; Secure; HttpOnly; SameSite=Lax`;
+}
+
+// Sliding session: a fresh cookie when the current one is more than a day old, else null.
+export async function refreshedCookie(s: Session, secret: string | undefined, now = Date.now()): Promise<string | null> {
+  if (!secret || s.exp - now >= (SESSION_TTL_S - REFRESH_AFTER_S) * 1000) return null;
+  return issueCookie(s.cid, s.tier, secret, now);
+}
+
+export function maskEmail(email: unknown): string {
+  if (typeof email !== 'string') return '';
+  const at = email.indexOf('@');
+  return at < 1 ? '' : `${email[0]}***${email.slice(at)}`;
 }
 
 // ---- create a session from a license key -----------------------------------
@@ -115,13 +148,7 @@ export async function createSession(licenseKey: unknown, env: GateEnv, fetchFn: 
   try { record = await readEntitlement(env.ENTITLEMENTS, String(cid)); } catch { return { status: 500, body: { ok: false, error: 'kv' } }; }
   if (!entitlementActive(record, now)) return { status: 403, body: { ok: false, error: 'no_active_entitlement' } };
 
-  const exp = now + SESSION_TTL_S * 1000;
-  const token = await signSession({ cid: String(cid), tier, exp }, env.GATE_SECRET);
-  return {
-    status: 200,
-    body: { ok: true, tier },
-    cookie: `${COOKIE}=${token}; Max-Age=${SESSION_TTL_S}; Path=/; Secure; HttpOnly; SameSite=Lax`,
-  };
+  return { status: 200, body: { ok: true, tier }, cookie: await issueCookie(String(cid), tier, env.GATE_SECRET, now) };
 }
 
 export const CLEAR_COOKIE = `${COOKIE}=; Max-Age=0; Path=/; Secure; HttpOnly; SameSite=Lax`;

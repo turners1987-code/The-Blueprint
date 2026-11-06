@@ -113,6 +113,24 @@ export async function refreshIfStale() {
   if (rec && Date.now() - rec.validatedAt > REVALIDATE_AFTER_MS) await validateKey(rec.key);
 }
 
+// Who the server-side session cookie says is signed in (email login). Never throws.
+export async function fetchMe() {
+  const none = { signedIn: false, tier: null, email: '' };
+  try {
+    const res = await fetch('/api/me', { credentials: 'same-origin' });
+    if (!res.ok) return none;
+    const me = await res.json();
+    return me && me.signedIn === true ? { signedIn: true, tier: me.tier, email: me.email || '' } : none;
+  } catch { return none; }
+}
+
+// With no local license record, an email-login session can still open the page.
+async function sessionGrants(need) {
+  if (readRecord()) return false;
+  const me = await fetchMe();
+  return me.signedIn && tierGrants(me.tier, need);
+}
+
 const here = (rel) => new URL(rel, import.meta.url).href;
 
 async function findModule() {
@@ -174,11 +192,11 @@ async function decide() {
     const mod = await findModule();
     // A module we cannot find, or one that is free, is open. Only a
     // known paid module without a code is locked.
-    if (mod && mod.tier === 'paid' && !hasAccess('modules')) {
+    if (mod && mod.tier === 'paid' && !hasAccess('modules') && !(await sessionGrants('modules'))) {
       lock(gated, mod.title, mod.summary || '');
       return;
     }
-  } else if (!hasAccess(gated.dataset.gateNeed || 'journal')) {
+  } else if (!hasAccess(gated.dataset.gateNeed || 'journal') && !(await sessionGrants(gated.dataset.gateNeed || 'journal'))) {
     lock(gated, gated.dataset.gateTitle || document.title, gated.dataset.gateBlurb || '');
     return;
   }
