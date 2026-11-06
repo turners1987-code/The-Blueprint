@@ -65,3 +65,4 @@ END 2026-11-06T19:19:15Z | 19 Lesson slide kit | tier C | dec63ba
 
 - 2026-11-06 15:02: redeploy to load the rotated ADMIN_TOKEN secret (no code change)
 - 2026-11-06 15:05: item 18 live-tested by Shane: Resend verified, RESEND_API_KEY set, ADMIN_TOKEN rotated, backfill wrote 1 email index, email login worked on his phone
+START 2026-11-06T20:09:30Z
