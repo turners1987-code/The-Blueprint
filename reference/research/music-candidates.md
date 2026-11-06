@@ -68,3 +68,8 @@ Local folder: C:\Blueprint\music-pool\ (12 files, original Pixabay names). Assig
 Excluded: prettyjohn1 modern-classical-rap-604484 (11 seconds).
 Content ID: only matters if lesson video is posted to YouTube. If a claim appears, download the track's license certificate from its Pixabay page (shown in the download dialog) and dispute with it. Site playback is unaffected.
 Mixing: loop the track to segment length, about 12% volume under narration (a little lower for the boom bap tracks 5, 8, 11), 1.5 s fade in and 2 s fade out per segment. Never serve the music file on its own.
+
+### Soundtrack, picked by Shane Nov 6 (the record is POOL/ENDING in scripts/render-narration.py)
+Main rotation, one per module: vaitsez 486586; pietiX "Cinematic coup scene 1 bass" 525683 (clear); vaitsez "Vlog - Vlog Beat" 620108 (Content ID); GR0ZA 557557 (Content ID).
+Endings only (last segment of a module): kontraa "Wega | Old School Hiphop Music" 422621 (clear). Shane: likes it most, fits least, use sparingly.
+All five are in C:\Blueprint\music-pool\. The other eight pool files stay there unused.
