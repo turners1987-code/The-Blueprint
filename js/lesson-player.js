@@ -388,6 +388,16 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
       shownSlide = si;
       stage.innerHTML = si >= 0 ? (slides[si].svg || '') : '';
       stage.setAttribute('aria-label', si >= 0 ? (slides[si].title || 'Slide') : 'Slide');
+      // Landing mid-slide (seek, resume, chapter tap): reveals are timed from the
+      // slide's start, so shift every delay back by how far in we already are.
+      // A negative delay makes the browser jump straight to that point.
+      const into = si >= 0 ? t - slides[si].start : 0;
+      if (into > 0.05) {
+        stage.querySelectorAll('[style*="animation-delay"]').forEach((el) => {
+          const d = parseFloat(el.style.animationDelay);
+          if (!Number.isNaN(d)) el.style.animationDelay = `${(d - into).toFixed(2)}s`;
+        });
+      }
     }
     const chi = activeIndex(chapters, t);
     if (chi !== shownChapter) {
