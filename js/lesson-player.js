@@ -291,5 +291,5 @@ function createPlayer(seg, startAt, onPosition) {
   range.addEventListener('input', () => seek(Number(range.value)));
   render();
 
-  return { root, destroy() { pause(); } };
+  return { root, destroy() { pause(); root.remove(); } };
 }
