@@ -60,6 +60,11 @@ for (const seg of cfg.segments) {
   eq(`${seg.id} within duration`, [...seg.cues, ...seg.slides].every((x) => x.start < seg.duration), true);
   eq(`${seg.id} slide svg`, seg.slides.every((x) => x.svg.startsWith('<svg') && x.svg.endsWith('</svg>')), true);
 }
+// 9f: designed slide visuals, with reveals timed to cues, no external assets.
+eq('9f slide count unchanged', cfg.segments.map((x) => x.slides.length), [2, 2, 3, 3, 3, 2]);
+eq('9f every slide has a reveal and a 16:9 viewBox', cfg.segments.every((x) => x.slides.every((sl) => sl.svg.includes('sv-rv') && sl.svg.includes('viewBox="0 0 640 360"'))), true);
+eq('9f slides load nothing external', cfg.segments.some((x) => x.slides.some((sl) => /<image|<script|href=|url\(http|https?:/.test(sl.svg.replace('xmlns="http://www.w3.org/2000/svg"', '')))), false);
+eq('9f slide text: no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(cfg.segments.flatMap((x) => x.slides.map((sl) => sl.svg)).join(' ')), false);
 const narration = cfg.segments.flatMap((x) => x.cues.map((c) => c.text)).join(' ');
 eq('no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(narration), false);
 eq('stat carries n', /82\.4%[\s\S]{0,160}n=994/.test(narration), true);

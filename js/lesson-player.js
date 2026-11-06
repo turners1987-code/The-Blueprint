@@ -246,6 +246,13 @@ function createPlayer(seg, startAt, onPosition) {
     if (si !== shownSlide) {
       shownSlide = si;
       stage.innerHTML = si >= 0 ? (slides[si].svg || '') : '';
+      // Reveal animations are timed from the slide start; join them mid-way after a seek.
+      const elapsed = si >= 0 ? t - slides[si].start : 0;
+      if (elapsed > 0) {
+        for (const g of stage.querySelectorAll('.sv-rv, .sv-dr')) {
+          g.style.animationDelay = `${(parseFloat(g.style.animationDelay) || 0) - elapsed}s`;
+        }
+      }
       stage.setAttribute('aria-label', si >= 0 ? (slides[si].title || 'Slide') : 'Slide');
     }
     const ci = activeIndex(cues, t);
@@ -283,6 +290,7 @@ function createPlayer(seg, startAt, onPosition) {
   function seek(to) {
     t = Math.max(0, Math.min(duration, to));
     if (audio) audio.currentTime = t;
+    shownSlide = -2; // restart the slide's reveals from the new position
     render();
     onPosition(t);
   }
