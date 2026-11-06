@@ -69,9 +69,9 @@ Needs Shane. These rules bind the runners now.
   paid advice. (Fla. Stat. 626.112(1)(b) solicitation line; 626.7315(4) fee advice.)
 - Tax pages describe rules with their IRS publication and tax year; they never compute a
   reader's own tax.
-- Florida: ch. 517 has no publisher exclusion, so the posture above is the safeguard, and
-  the lawyer question (Needs Shane) decides whether anything more is needed before the track
-  is published. Build proceeds; publishing of the Finance track waits for that answer.
+- Florida: ch. 517 has no publisher exclusion; the posture above (general education, no
+  personal advice) is the safeguard. Shane's call, Nov 6: nothing to wait on; the Finance
+  track publishes as each module clears review.
 
 **Options track, extra**
 - Every options module carries the ODD block: options involve substantial risk; read OCC's
@@ -154,9 +154,7 @@ the Blueprint framework meets options.
    The page is written from the sources in section 3 under the rules in section 2; the lesson
    follows LESSON_STANDARD.md.
 3. Audio: Shane's local batch, per track, after review.
-4. Publishing: Options can publish as each module clears review. Finance publishes only after
-   the Needs Shane lawyer answer; until then its pages carry `status: drafting` and are
-   unlinked.
+4. Publishing: both tracks publish as each module clears review.
 
 Runner items 22 to 24 in BACKLOG.md carry this. Item 20 (futures lessons) finishes first; the
 runners take the track items after it, so nothing here slows the current rollout.
