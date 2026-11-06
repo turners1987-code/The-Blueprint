@@ -8,7 +8,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
 2. [x] Record Oct 31 pricing, with founding rate $19/$190 for the first 100 subscribers
 3. [x] New pricing.html
 4. [x] Tier-aware gate
-5. Account page and /api/reset-activations
+5. [x] Account page and /api/reset-activations
 6. [x] BP Key Levels guide page and card
 7. Cloudflare Pages Function gate for paid pages, then repo private
 8. Privacy policy payments section
