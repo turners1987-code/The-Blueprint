@@ -89,6 +89,6 @@ Every item below is now buildable. Shane's approval here is the tier D sign-off 
 
 ## Needs Shane
 
-- Module 06 audio re-render (after 9f and 9g ship): British female voice (Kokoro bf_emma), narration says "pre marked" for every "pre-marked" so the voice pronounces it cleanly, and a low lo-fi beat mixed under the narration. Waiting on Shane to pick the music track. Runs locally.
+- Module 06 audio re-render (after 9f and 9g ship): British female voice (Kokoro bf_emma), using the 9g narration wording, with a low lo-fi beat mixed under the narration (one track per module from a rotating pool). Waiting on the music pool. Runs locally.
 
 - Learning-layer rollout to the other 24 modules (free path 00-03 and 16-20 first, then the paid modules; 2 runs per module). Waiting on Shane to review the Module 06 pilot (items 9a to 9e). Do not start it.
