@@ -104,7 +104,6 @@ Every item below is now buildable. Shane's approval here is the tier D sign-off 
 - As recommended: schema v6 adds readiness_score (0, 1 or 2 per D42), test_number (integer), session_block (text slug) and sheet_finished_time (ISO time), all nullable and present as keys; v1 to v5 records read as null. Carry the new fields into the CSV export.
 
 ## Needs Shane
-- Item 18 live test: Shane creates the Resend account, verifies bptrade.co, and adds the RESEND_API_KEY secret in Cloudflare Pages (Production) himself. Then test email login on phone and laptop.
 
 - Audio batch renders (local, Shane): after each group of modules clears item 20B, Shane runs scripts/render-narration.py for the group in one Claude Code prompt (about 10 minutes per module), which also rebuilds slides, credits and CACHE_VERSION.
 
