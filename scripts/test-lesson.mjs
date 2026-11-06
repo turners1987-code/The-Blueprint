@@ -50,5 +50,19 @@ const claimed = cfg.segments.flatMap((x) => x.sections);
 eq('every claimed section exists', claimed.filter((c) => !h2s.includes(c)), []);
 eq('every h2 is claimed', h2s.filter((h) => !claimed.includes(h)), []);
 
+// 9b: every segment carries narration cues and slides, in order, inside its duration.
+for (const seg of cfg.segments) {
+  const ordered = (a) => a.every((x, i) => i === 0 || x.start >= a[i - 1].start);
+  eq(`${seg.id} has cues`, seg.cues?.length > 0, true);
+  eq(`${seg.id} has slides`, seg.slides?.length > 0, true);
+  eq(`${seg.id} slides start at 0`, seg.slides?.[0]?.start, 0);
+  eq(`${seg.id} slides ordered`, ordered(seg.slides || []), true);
+  eq(`${seg.id} within duration`, [...seg.cues, ...seg.slides].every((x) => x.start < seg.duration), true);
+  eq(`${seg.id} slide svg`, seg.slides.every((x) => x.svg.startsWith('<svg') && x.svg.endsWith('</svg>')), true);
+}
+const narration = cfg.segments.flatMap((x) => x.cues.map((c) => c.text)).join(' ');
+eq('no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|\$\d/i.test(narration), false);
+eq('stat carries n', /82\.4%[\s\S]{0,160}n=994/.test(narration), true);
+
 if (failed) { console.error(`${failed} lesson check(s) failed`); process.exit(1); }
 console.log('lesson: all checks passed');

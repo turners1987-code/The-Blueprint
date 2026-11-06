@@ -1,17 +1,399 @@
 {
   "module": "06-what-counts-as-a-level",
   "segments": [
-    { "id": "s1", "title": "The test",
-      "sections": ["The Line You Couldn't Put A Stop Behind", "The Stop-Structure Test"] },
-    { "id": "s2", "title": "Zones and the far edge",
-      "sections": ["Zones And The Far Edge"] },
-    { "id": "s3", "title": "The two lists",
-      "sections": ["The Pre-Marked List And The 16:00 Boundary", "The In-Session List"] },
-    { "id": "s4", "title": "What is not a level",
-      "sections": ["Mid-Range, And The Lines That Are Not Levels", "Locations And Targets", "The Level You Find Afterwards"] },
-    { "id": "s5", "title": "Marking a blank chart",
-      "sections": ["Worked Case: Marking A Blank Chart", "Does Your Chart Pass?"] },
-    { "id": "s6", "title": "Your next session",
-      "sections": ["Before Your Next Session", "Where It Goes Next", "Sources"] }
+    {
+      "id": "s1",
+      "title": "The test",
+      "sections": [
+        "The Line You Couldn't Put A Stop Behind",
+        "The Stop-Structure Test"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "You know the moment. Price comes down into a line you drew, and the trade looks right."
+        },
+        {
+          "start": 8,
+          "text": "Then you go to place the stop and there is nowhere to put it. Two ticks feels too tight. Twenty points feels arbitrary."
+        },
+        {
+          "start": 18,
+          "text": "The problem was not the entry. It was the line."
+        },
+        {
+          "start": 22,
+          "text": "Here is the test. A price counts as a level if you can name something that already happened there, and a price beyond it at which the reason for the trade is gone."
+        },
+        {
+          "start": 36,
+          "text": "A stop sits behind that price. A line that fails the test is not a level."
+        },
+        {
+          "start": 44,
+          "text": "Take yesterday's regular-session high, 24,186.50. Six five-minute bars traded up into it and turned, and nothing traded above it. This is an invented price on a composite chart."
+        },
+        {
+          "start": 56,
+          "text": "If you are short from that high and price trades through it and stays, the sellers who defended it are gone, and so is your reason for being short."
+        },
+        {
+          "start": 68,
+          "text": "The test does not ask whether price reacted at a line, or how many times. Price reacts everywhere, in hindsight. It asks whether the structure gives your stop a job."
+        },
+        {
+          "start": 81,
+          "text": "The rule: write one sentence. The stop goes behind this price because of what happened there. If you cannot fill both blanks from the chart, it is not a level."
+        },
+        {
+          "start": 94,
+          "text": "Getting it wrong looks like a stop chosen after the entry, as a number of points that felt right. You picked where you wanted to trade, then looked for a reason."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "The test",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The test\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">The stop-structure test</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Something already happened there</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">A price beyond it ends the reason for the trade</text></svg>"
+        },
+        {
+          "start": 44,
+          "title": "One sentence",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"One sentence\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">The one-sentence rule</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">The stop goes behind [price]</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">because [what happened there].</text></svg>"
+        }
+      ],
+      "duration": 109
+    },
+    {
+      "id": "s2",
+      "title": "Zones and the far edge",
+      "sections": [
+        "Zones And The Far Edge"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "Structure is never one price. A high is made by bars, a value edge sits beside rows of volume, a node has a top and a bottom."
+        },
+        {
+          "start": 12,
+          "text": "So every level is written as a zone: a price band with two edges."
+        },
+        {
+          "start": 18,
+          "text": "The far edge is the edge on the far side from where price arrives. For a level above price it is the top of the zone. For a level below, the bottom. The stop goes behind it."
+        },
+        {
+          "start": 34,
+          "text": "On the same high, the bar printed 24,186.50 and its body closed at 24,180.25. One construction runs the zone from 24,180.25 to 24,186.50, six and a quarter points."
+        },
+        {
+          "start": 46,
+          "text": "Price arrives from underneath, so the near edge is 24,180.25 and the far edge is 24,186.50."
+        },
+        {
+          "start": 53,
+          "text": "The zone's width is part of your risk, and where inside the zone you get filled decides how far the stop is. Module 14 turns both into numbers."
+        },
+        {
+          "start": 65,
+          "text": "Choose a construction once per level type and keep it, so a level that failed can be told apart from a level that was drawn differently."
+        },
+        {
+          "start": 76,
+          "text": "The rule: every level is a zone with a near edge and a far edge. Where two zones overlap, they become one zone that names every slug in it."
+        },
+        {
+          "start": 88,
+          "text": "Getting it wrong is a single line with a stop two ticks beyond it, or a zone redrawn wider after price traded through it so the trade is still fine."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "Zones",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Zones\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">A level is a zone</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Near edge: where price arrives</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Far edge: the stop goes behind it</text></svg>"
+        },
+        {
+          "start": 34,
+          "title": "Example zone",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Example zone\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Invented example: prior-day high</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Near edge 24,180.25</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Far edge 24,186.50</text></svg>"
+        }
+      ],
+      "duration": 103
+    },
+    {
+      "id": "s3",
+      "title": "The two lists",
+      "sections": [
+        "The Pre-Marked List And The 16:00 Boundary",
+        "The In-Session List"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "The pre-marked list is fixed, and it is built before the session from finished data."
+        },
+        {
+          "start": 7,
+          "text": "It holds the prior day's high, low, value edges and VPOC, settlement, the overnight high, low and POC, the prior week's high and low, and nodes from a multi-session profile."
+        },
+        {
+          "start": 20,
+          "text": "Each one has a session scope: the bars that build it. Prior-day levels use the regular session, 09:30 to 16:00 Eastern. Overnight levels run from 16:00 to the 09:30 open. The prior week runs Sunday 18:00 to Friday 16:00."
+        },
+        {
+          "start": 36,
+          "text": "The 16:00 boundary matters. A high printed at 16:40 is not the prior day's high, however close to the close it was. It belongs to the overnight range."
+        },
+        {
+          "start": 48,
+          "text": "Keep two saved chart templates, regular session and full session, both ending at 16:00."
+        },
+        {
+          "start": 54,
+          "text": "The rule: only these slugs go on the pre-marked list, each with its zone, far edge and session scope."
+        },
+        {
+          "start": 63,
+          "text": "Some structure does not exist at 09:25. It forms in front of you, and the in-session list is just as fixed."
+        },
+        {
+          "start": 72,
+          "text": "A level counts only once it has finished forming, and only if your plan named its type before 09:25. Before that moment it is a moving price, and the thing behind the stop has not finished happening."
+        },
+        {
+          "start": 88,
+          "text": "The types are the opening range once your written window has closed, the defended pullback high or low, the developing VPOC and value edges at the price they show when your trigger fires, unfinished business, and the stacked imbalance as a location only."
+        },
+        {
+          "start": 106,
+          "text": "Getting it wrong is using the opening-range high at 09:38 when your window runs to 09:45, or chasing a developing VPOC as it slides with price."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "Pre-marked list",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Pre-marked list\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Pre-marked list: fixed</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Prior day, settlement, overnight</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Prior week, multi-session profile</text></svg>"
+        },
+        {
+          "start": 20,
+          "title": "Session scope",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Session scope\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Session scope</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Prior day: 09:30 to 16:00 ET</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Overnight: 16:00 to 09:30 ET</text></svg>"
+        },
+        {
+          "start": 63,
+          "title": "In-session list",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"In-session list\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">In-session list: fixed</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Counts only once finished forming</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Type named on the plan before 09:25</text></svg>"
+        }
+      ],
+      "duration": 119
+    },
+    {
+      "id": "s4",
+      "title": "What is not a level",
+      "sections": [
+        "Mid-Range, And The Lines That Are Not Levels",
+        "Locations And Targets",
+        "The Level You Find Afterwards"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "Mid-range is the location tag for any price outside every zone on your list. It is not a kind of level. It is the absence of one."
+        },
+        {
+          "start": 12,
+          "text": "It gets a name so a trade taken there is counted rather than hidden. Most of a chart, most of the time, is mid-range, and that asks nothing of you."
+        },
+        {
+          "start": 24,
+          "text": "Some lines look like levels and fail the test: VWAP, pivots, moving averages, Fibonacci lines, round numbers, fair value gaps, and chart patterns such as trendlines and triangles."
+        },
+        {
+          "start": 36,
+          "text": "Where one of these sits inside a real zone, the zone is the level. Where it sits outside every zone, the price is mid-range, whatever is drawn there."
+        },
+        {
+          "start": 48,
+          "text": "A trade there is tagged mid-range, and it fails the first check of the grade rubric."
+        },
+        {
+          "start": 56,
+          "text": "Now separate locations from targets. A location is where a trade happens, with the stop behind the zone's far edge. A target is a level a trade aims at, written before entry. It is never a reason to enter."
+        },
+        {
+          "start": 72,
+          "text": "The same level can be either. Its job in the trade is what changes."
+        },
+        {
+          "start": 78,
+          "text": "On sessions that opened inside the prior session's value area, the prior session's VPOC was touched 82.4% of the time. That is TradingStats NQ app data, n=994 sessions. It is a touch rate measured from the open. It says nothing about direction or timing, and it is a target figure only."
+        },
+        {
+          "start": 100,
+          "text": "Every trade at a level also records the test number: first touch of the zone that session, second, and so on."
+        },
+        {
+          "start": 109,
+          "text": "The last part is about you, not the chart. Look at any chart after the close and levels are everywhere, because hindsight hands you the turn first and the reason second."
+        },
+        {
+          "start": 122,
+          "text": "The rule: the pre-marked list is closed at 09:25, and the in-session list adds only the types named on your plan. Nothing else becomes a level during the session."
+        },
+        {
+          "start": 134,
+          "text": "At the end-of-day mark-up, count the lines you drew or noticed after 09:25 and write the number down."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "Mid-range",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Mid-range\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Mid-range</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Outside every zone on your list</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Tag it so it is counted</text></svg>"
+        },
+        {
+          "start": 56,
+          "title": "Location or target",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Location or target\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Location or target</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Location: the stop sits behind it</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Target: never a reason to enter</text></svg>"
+        },
+        {
+          "start": 109,
+          "title": "List closes",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"List closes\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">The list closes at 09:25</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Nothing else becomes a level</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Count lines added afterwards</text></svg>"
+        }
+      ],
+      "duration": 144
+    },
+    {
+      "id": "s5",
+      "title": "Marking a blank chart",
+      "sections": [
+        "Worked Case: Marking A Blank Chart",
+        "Does Your Chart Pass?"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "This is a worked case on a composite chart. Every price is invented, and it stops at 09:25, before the open. There is no entry and no outcome."
+        },
+        {
+          "start": 12,
+          "text": "08:50. Templates first: a regular-session template and a full-session template, both ending at 16:00 Eastern."
+        },
+        {
+          "start": 19,
+          "text": "09:00. Collect the data by scope. From the regular session: high 24,186.50, low 24,032.00, value area high 24,148.00, low 24,071.00, VPOC 24,112.00, settlement 24,131.50."
+        },
+        {
+          "start": 29,
+          "text": "The overnight high is 24,190.00, printed at 16:12. It is above the regular-session high, but it came after 16:00, so it belongs to the overnight range. The prior-day high stays 24,186.50."
+        },
+        {
+          "start": 42,
+          "text": "09:10. Write each level as a zone with its far edge. The prior-day high and overnight high zones overlap, so they become one row with the far edge at 24,190.00."
+        },
+        {
+          "start": 55,
+          "text": "09:15. Everything outside those eleven rows is mid-range. Nothing is due there."
+        },
+        {
+          "start": 61,
+          "text": "09:18. Lines considered and not marked: the overnight VWAP, the round number at 24,100.00, a Fibonacci line, and a trendline. None passes the test."
+        },
+        {
+          "start": 71,
+          "text": "09:20. Write the in-session line: which types you will watch, and each one's ready condition. The fifteen-minute opening-range window is this list's own choice, written once."
+        },
+        {
+          "start": 82,
+          "text": "09:22. Targets go in their own column. The 09:25 list closes: eleven rows, one in-session line, one target column."
+        },
+        {
+          "start": 91,
+          "text": "Notice where the time went. Not on finding more lines; the case struck four. It went on scope and edges."
+        },
+        {
+          "start": 100,
+          "text": "Now score your own chart. One point for each true line: every row is a listed slug, every row has both edges and a side, every row has its stop sentence, every row names its scope, each slug has a written construction, the plan names its in-session types, and targets are marked apart."
+        },
+        {
+          "start": 122,
+          "text": "Seven of seven: ready to plan from. Five or six: write the missing lines before 09:25. Under five: no trade at a level that session. A row that fails the zones line or the stop sentence line is struck for the day."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "Worked case",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Worked case\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Worked case: blank chart</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Invented prices, stops at 09:25</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">No entry, no outcome</text></svg>"
+        },
+        {
+          "start": 29,
+          "title": "The 16:00 boundary",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The 16:00 boundary\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">The 16:00 boundary</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">16:12 print is overnight</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Prior-day high stays 24,186.50</text></svg>"
+        },
+        {
+          "start": 100,
+          "title": "Chart score",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Chart score\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Does your chart pass?</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">7 of 7: ready to plan from</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Under 5: no trade at a level</text></svg>"
+        }
+      ],
+      "duration": 141
+    },
+    {
+      "id": "s6",
+      "title": "Your next session",
+      "sections": [
+        "Before Your Next Session",
+        "Where It Goes Next",
+        "Sources"
+      ],
+      "cues": [
+        {
+          "start": 0,
+          "text": "Before tomorrow's open, take one level from your chart and write it as one row."
+        },
+        {
+          "start": 7,
+          "text": "The row holds the slug, near edge, far edge, side of price, session scope, and the stop sentence. One row. That is the whole assignment."
+        },
+        {
+          "start": 18,
+          "text": "A level is a zone of finished structure with a far edge a stop can sit behind, taken from a fixed list."
+        },
+        {
+          "start": 27,
+          "text": "Everything else is mid-range, however it looks. And a level that price is expected to reach is a target, never a reason to enter."
+        },
+        {
+          "start": 38,
+          "text": "Next is Module 07, Reading Order Flow, which teaches the footprint read behind the stacked-imbalance location."
+        },
+        {
+          "start": 45,
+          "text": "Modules 10 and 11 are the two reads at these zones. Module 13 is the trigger that must happen inside a zone before entry."
+        },
+        {
+          "start": 55,
+          "text": "The level list is written each morning on the sheet in Module 16, and every branch of your plan in Module 15 names one of its zones."
+        }
+      ],
+      "slides": [
+        {
+          "start": 0,
+          "title": "One row",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"One row\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">Your assignment</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Slug, near edge, far edge, side</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Session scope and the stop sentence</text></svg>"
+        },
+        {
+          "start": 18,
+          "title": "Summary",
+          "svg": "<svg viewBox=\"0 0 640 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Summary\" font-family=\"inherit\"><text x=\"40\" y=\"52\" font-size=\"24\" font-weight=\"700\" fill=\"currentColor\">A level is a zone of finished structure</text><text x=\"40\" y=\"86\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">with a far edge a stop can sit behind</text><text x=\"40\" y=\"120\" font-size=\"18\" font-weight=\"400\" fill=\"currentColor\">Everything else is mid-range</text></svg>"
+        }
+      ],
+      "duration": 69
+    }
   ]
 }
