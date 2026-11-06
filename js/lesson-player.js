@@ -357,8 +357,19 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
     offset = from;
     startedAt = when;
   }
+  function useTimer() {
+    // No narration yet (a module whose audio is not rendered): the clock runs on
+    // its own so the slides and captions still play through.
+    mode = 'timer';
+    musicBox.hidden = true;
+    if (elAudio) { try { elAudio.pause(); } catch { /* ignore */ } elAudio = null; }
+    last = performance.now();
+  }
   function startElement(from) {
-    if (!elAudio) elAudio = new Audio(mixUrl);
+    if (!elAudio) {
+      elAudio = new Audio(mixUrl);
+      elAudio.addEventListener('error', () => { if (!destroyed) useTimer(); });
+    }
     elAudio.currentTime = from;
     elAudio.play().catch(() => {});
   }
@@ -433,7 +444,12 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
       if (buffers) startSources(t);
       else {
         loadBuffers().then(() => { if (playing && !destroyed) startSources(t); })
-          .catch(() => { if (destroyed) return; useElement(); if (playing) startElement(t); });
+          .catch((e) => {
+            if (destroyed) return;
+            // A missing file (404) means the narration is not rendered yet: run the timer.
+            if (/audio 4\d\d/.test(String(e && e.message))) { useTimer(); return; }
+            useElement(); if (playing) startElement(t);
+          });
       }
     } else if (mode === 'el') {
       startElement(t);
