@@ -1,0 +1,1863 @@
+{
+  "module": "02-the-hard-rules",
+  "segments": [
+    {
+      "id": "s1",
+      "title": "The day that ends the account",
+      "sections": [
+        "The Day That Ends The Account",
+        "Rule 1: The Trading Window"
+      ],
+      "duration": 151,
+      "cues": [
+        {
+          "start": 0,
+          "text": "The first trade wins. The next one comes a little faster, from a little further from your level. Then one loses, and the next is taken to get it back.",
+          "chapter": "The day"
+        },
+        {
+          "start": 11.9,
+          "text": "By late morning the read you had at 9:30 was right, and the day is gone anyway."
+        },
+        {
+          "start": 19,
+          "text": "An edge, if you have one, shows up in your record over months of trades. One bad day can take the account before that record exists."
+        },
+        {
+          "start": 29.4,
+          "text": "So the five hard rules are not there to make you money. They are there so you are still trading when your record is big enough to judge. They predict nothing about price. They are simply on, every session."
+        },
+        {
+          "start": 44.7,
+          "text": "Here are the five. One: the trading window, the hours you may trade.",
+          "chapter": "The five rules"
+        },
+        {
+          "start": 50.3,
+          "text": "Two: the news windows, the minutes around big scheduled releases."
+        },
+        {
+          "start": 54.8,
+          "text": "Three: four reasons to flatten by hand, which means to close a position yourself."
+        },
+        {
+          "start": 60.8,
+          "text": "Four: the kill switch, your daily loss limit."
+        },
+        {
+          "start": 64.5,
+          "text": "Five: the post-loss reset, a routine you run after every losing trade. It is the one only you can enforce."
+        },
+        {
+          "start": 72.8,
+          "text": "The first four are enforced by a clock, a calendar or a platform setting. A platform setting has one great quality: it cannot be talked into anything."
+        },
+        {
+          "start": 83.6,
+          "text": "Now, rule one: the trading window.",
+          "chapter": "Rule 1: the window"
+        },
+        {
+          "start": 86.6,
+          "text": "The window is the hours in which you may place a trade: 6 a.m. to 4 p.m. Eastern. Inside it sits the focus block, 9:30 to 11 a.m., the first stretch of the cash session, the regular stock-market hours, when your levels meet the most traffic."
+        },
+        {
+          "start": 104.4,
+          "text": "Nothing new is entered from 3:55 p.m. The last five minutes are for closing, not opening."
+        },
+        {
+          "start": 111.1,
+          "text": "Before 9:30, you may trade only once that day's pre-market sheet is complete. No completed sheet, no trade, at any hour."
+        },
+        {
+          "start": 119.7,
+          "text": "The rule: no execution outside 6 a.m. to 4 p.m. Eastern, and no new entries from 3:55 p.m.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 127.2,
+          "text": "Getting it wrong is one trade at 4:20 because the level was right there. The journal tag for breaking any hard rule is Broke Rule, and winners get it too.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 139.1,
+          "text": "It reveals a trade that came from the screen, not the plan. The fix: the window is the first line of your plan, with an alarm at 3:55."
+        }
+      ],
+      "slides": [
+        {
+          "title": "One bad day",
+          "kind": "compare",
+          "data": {
+            "title": "One day against a record",
+            "subtitle": "Why the rules come first",
+            "aria": "What one bad day does compared with what an edge needs",
+            "columns": [
+              {
+                "tone": "red",
+                "head": "One bad day",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "A win, then a loss",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Each entry comes faster",
+                    "y": 84,
+                    "cue": 1
+                  },
+                  {
+                    "text": "Taken to get it back",
+                    "y": 106,
+                    "cue": 1
+                  },
+                  {
+                    "text": "The account goes first",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "red",
+                    "cue": 2
+                  }
+                ]
+              },
+              {
+                "tone": "cyan",
+                "head": "An edge",
+                "cue": 2,
+                "lines": [
+                  {
+                    "text": "Shows in a record",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Over months of trades",
+                    "y": 84
+                  },
+                  {
+                    "text": "Needs the account alive",
+                    "y": 106
+                  },
+                  {
+                    "text": "That is the rules' job",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "cyan",
+                    "cue": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What one bad day does compared with what an edge needs\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One day against a record</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Why the rules come first</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">One bad day</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A win, then a loss</text><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each entry comes faster</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Taken to get it back</text></g><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">The account goes first</text></g></g><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">An edge</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Shows in a record</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Over months of trades</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Needs the account alive</text><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">That is the rules' job</text></g></g></svg>"
+        },
+        {
+          "title": "Five rules",
+          "kind": "list",
+          "data": {
+            "title": "Five rules, always on",
+            "subtitle": "From the mechanical to the psychological",
+            "aria": "The five hard rules in order",
+            "rows": {
+              "items": [
+                {
+                  "text": "The trading window",
+                  "tone": "cyan",
+                  "cue": 0
+                },
+                {
+                  "text": "The news windows",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Four reasons to flatten",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "The kill switch",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "The post-loss reset",
+                  "tone": "gold",
+                  "cue": 4
+                }
+              ]
+            },
+            "aside": {
+              "head": "Rules 1-4",
+              "sub": "mechanical",
+              "cue": 5,
+              "size": 20
+            }
+          },
+          "start": 44.7,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The five hard rules in order\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Five rules, always on</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">From the mechanical to the psychological</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The trading window</text></g><g class=\"sv-rv\" style=\"animation-delay:5.6s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The news windows</text></g><g class=\"sv-rv\" style=\"animation-delay:10.1s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Four reasons to flatten</text></g><g class=\"sv-rv\" style=\"animation-delay:16.1s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The kill switch</text></g><g class=\"sv-rv\" style=\"animation-delay:19.8s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The post-loss reset</text></g><g class=\"sv-rv\" style=\"animation-delay:28.1s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Rules 1-4</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">mechanical</text></g></svg>"
+        },
+        {
+          "title": "The window",
+          "kind": "timeline",
+          "data": {
+            "title": "Rule 1: the trading window",
+            "subtitle": "Eastern time. No execution outside it",
+            "aria": "The trading window with its focus block and the 3:55 p.m. cutoff",
+            "bands": [
+              {
+                "x": 40,
+                "y": 104,
+                "w": 560,
+                "h": 50,
+                "tone": "cyan",
+                "label": "Window: 6 a.m. to 4 p.m."
+              },
+              {
+                "x": 236,
+                "y": 178,
+                "w": 84,
+                "h": 44,
+                "tone": "gold",
+                "label": "Focus"
+              }
+            ],
+            "boundary": {
+              "x": 595,
+              "y1": 96,
+              "y2": 236,
+              "label": "3:55 p.m.",
+              "labelY": 258,
+              "labelSize": 14,
+              "cue": 2
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 236,
+                "y": 244,
+                "text": "9:30 to 11 a.m.",
+                "size": 13,
+                "cls": "n",
+                "tone": "gold",
+                "cue": 1
+              },
+              {
+                "type": "card",
+                "box": [
+                  32,
+                  282,
+                  576,
+                  34
+                ],
+                "tone": "red",
+                "head": "No entry outside the window. Broke Rule, winners too.",
+                "hy": 22,
+                "hx": 16,
+                "headWeight": 400,
+                "headSize": 14,
+                "cue": 5
+              }
+            ]
+          },
+          "start": 83.6,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The trading window with its focus block and the 3:55 p.m. cutoff\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule 1: the trading window</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Eastern time. No execution outside it</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"40\" y=\"104\" width=\"560\" height=\"50\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"320\" y=\"134\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Window: 6 a.m. to 4 p.m.</text><rect x=\"236\" y=\"178\" width=\"84\" height=\"44\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"278\" y=\"205\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Focus</text></g><g class=\"sv-rv\" style=\"animation-delay:20.8s\"><line x1=\"595\" y1=\"96\" x2=\"595\" y2=\"236\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"595\" y=\"258\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">3:55 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:3.0s\"><text x=\"236\" y=\"244\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:30 to 11 a.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:43.6s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No entry outside the window. Broke Rule, winners too.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "What does the trading window allow?",
+          "options": [
+            "Execution any time the market is open",
+            "Execution from 6 a.m. to 4 p.m. Eastern only",
+            "Execution from 9:30 a.m. to 11 a.m. only",
+            "Execution until you reach your daily loss limit"
+          ],
+          "answer": 1,
+          "why": "Outside the window there is no execution of any kind. The focus block is where the plan expects most trades, not the only place."
+        },
+        {
+          "q": "Why do the hard rules exist?",
+          "options": [
+            "To predict price",
+            "So you are still trading on the day your record is big enough to judge",
+            "To make each trade bigger",
+            "To replace your plan"
+          ],
+          "answer": 1,
+          "why": "They predict nothing about price. They keep one bad day from taking the account before the record exists."
+        },
+        {
+          "q": "What is true of a 3:57 p.m. entry?",
+          "options": [
+            "It is allowed because it is inside the window",
+            "It is allowed if the level is clear",
+            "It breaks the rule: nothing new is entered from 3:55 p.m.",
+            "It is only allowed on winning days"
+          ],
+          "answer": 2,
+          "why": "The last five minutes of the window are for closing, not opening."
+        },
+        {
+          "q": "A trade is taken at 4:20 p.m. and wins. What is the journal tag?",
+          "options": [
+            "No tag, because it won",
+            "Too Early",
+            "Broke Rule",
+            "Execution Pass"
+          ],
+          "answer": 2,
+          "why": "Any entry outside the window is tagged Broke Rule, with no exceptions for winners."
+        }
+      ],
+      "audio": "../assets/audio/02/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "News windows and four exits",
+      "sections": [
+        "Rule 2: The News Windows",
+        "Rule 3: Four Reasons To Flatten By Hand"
+      ],
+      "duration": 157.6,
+      "cues": [
+        {
+          "start": 0,
+          "text": "Some scheduled releases move index futures in a way no level survives. Rule two sorts them into two tiers.",
+          "chapter": "Rule 2: the news"
+        },
+        {
+          "start": 7.8,
+          "text": "Tier One is inflation, jobs, the Fed's rate decision and retail sales: CPI, PPI, PCE, NFP, FOMC and Retail Sales.",
+          "chapter": "Two tiers"
+        },
+        {
+          "start": 16,
+          "text": "Call the release time T. Be flat at T minus 5, with no open position and no resting orders, and take no new entries until T plus 2."
+        },
+        {
+          "start": 27.2,
+          "text": "Tier Two is home sales, EIA, consumer sentiment, JOLTS and Fed speakers. Manage your position through it, and never exit a working position because of it."
+        },
+        {
+          "start": 37.6,
+          "text": "Around a Tier One number price can jump through your stop instead of trading at it. A position held through CPI is a coin toss with a stop attached, and the stop is only a suggestion."
+        },
+        {
+          "start": 51.8,
+          "text": "The rule: Tier One, flat at T minus 5, no entries until T plus 2. Tier Two, manage through.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 59.6,
+          "text": "Getting it wrong takes two forms. Holding through Tier One reveals a trade that became a bet on the release. Exiting for Tier Two reveals a trader who wanted a reason to leave.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 72.6,
+          "text": "The fix: write each Tier One time on your plan with its T minus 5 and T plus 2. A position open at T minus 5 is Broke Rule."
+        },
+        {
+          "start": 84.2,
+          "text": "Now, rule three. A manual flatten is closing a working position yourself, before its target or its stop has done it. There are four reasons to do that, and only four.",
+          "chapter": "Rule 3: four reasons"
+        },
+        {
+          "start": 96.5,
+          "text": "One: the stop was hit. Price traded through it and the order did not fill, so you close the rest by hand."
+        },
+        {
+          "start": 105.4,
+          "text": "Two: a Tier One release is within five minutes."
+        },
+        {
+          "start": 109.5,
+          "text": "Three: your thesis broke on a candle close. The invalidation you wrote at entry happened, judged on the close of the candle you named."
+        },
+        {
+          "start": 119.2,
+          "text": "Four: the session is over. It is 4 p.m. Eastern, and nothing stays open past the window."
+        },
+        {
+          "start": 126.3,
+          "text": "The rule: four reasons to flatten by hand. Every other manual exit is logged Too Early.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 133.1,
+          "text": "Getting it wrong is an exit that is none of the four: it stalled, or a red candle looked big. The journal tag is Too Early, and its execution mark, the pass or fail you give every exit, is Fail.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 148.7,
+          "text": "The fix: write one of the four reasons beside every manual exit, and count your Too Early exits each week."
+        }
+      ],
+      "slides": [
+        {
+          "title": "Two tiers",
+          "kind": "compare",
+          "data": {
+            "title": "Two tiers of release",
+            "subtitle": "Each tier gets one treatment",
+            "aria": "Tier One releases compared with Tier Two releases",
+            "columns": [
+              {
+                "tone": "red",
+                "head": "Tier One",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "CPI, PPI, PCE, NFP",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "FOMC, Retail Sales",
+                    "y": 84
+                  },
+                  {
+                    "text": "Book thins, price can jump",
+                    "y": 106
+                  },
+                  {
+                    "text": "Flat at T minus 5",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "red",
+                    "cue": 2
+                  }
+                ]
+              },
+              {
+                "tone": "cyan",
+                "head": "Tier Two",
+                "cue": 3,
+                "lines": [
+                  {
+                    "text": "Home sales, EIA",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Sentiment, JOLTS",
+                    "y": 84
+                  },
+                  {
+                    "text": "Fed speakers",
+                    "y": 106
+                  },
+                  {
+                    "text": "Manage through",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "cyan",
+                    "cue": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tier One releases compared with Tier Two releases\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two tiers of release</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each tier gets one treatment</text><g class=\"sv-rv\" style=\"animation-delay:7.8s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Tier One</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">CPI, PPI, PCE, NFP</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">FOMC, Retail Sales</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Book thins, price can jump</text><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Flat at T minus 5</text></g></g><g class=\"sv-rv\" style=\"animation-delay:27.2s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Tier Two</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Home sales, EIA</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sentiment, JOLTS</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Fed speakers</text><g class=\"sv-rv\" style=\"animation-delay:27.2s\"><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Manage through</text></g></g></svg>"
+        },
+        {
+          "title": "The release clock",
+          "kind": "timeline",
+          "data": {
+            "title": "Around a Tier One release",
+            "subtitle": "T is the release time",
+            "aria": "Flat at T minus 5, no entries until T plus 2",
+            "axis": {
+              "x": 300,
+              "time": "T",
+              "labels": [
+                {
+                  "x": 150,
+                  "text": "T minus 5: flat"
+                },
+                {
+                  "x": 450,
+                  "text": "T plus 2: entries return"
+                }
+              ]
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "Tier One: flat, no entries. Tier Two: manage through.",
+                "size": 14,
+                "cls": "t",
+                "tone": "cyan",
+                "cue": 0
+              },
+              {
+                "type": "note",
+                "x": 32,
+                "y": 330,
+                "text": "Open at T minus 5: Broke Rule.",
+                "size": 14,
+                "cls": "t",
+                "tone": "red",
+                "cue": 2
+              }
+            ]
+          },
+          "start": 51.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Flat at T minus 5, no entries until T plus 2\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Around a Tier One release</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">T is the release time</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"40\" y1=\"170\" x2=\"600\" y2=\"170\" stroke=\"var(--text-muted)\" stroke-width=\"3\"/><line x1=\"300\" y1=\"140\" x2=\"300\" y2=\"200\" stroke=\"var(--gold)\" stroke-width=\"4\"/><text x=\"300\" y=\"128\" font-size=\"22\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">T</text><text x=\"150\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">T minus 5: flat</text><text x=\"450\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">T plus 2: entries return</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Tier One: flat, no entries. Tier Two: manage through.</text></g><g class=\"sv-rv\" style=\"animation-delay:20.8s\"><text x=\"32\" y=\"330\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Open at T minus 5: Broke Rule.</text></g></svg>"
+        },
+        {
+          "title": "Four reasons",
+          "kind": "list",
+          "data": {
+            "title": "Rule 3: four reasons to flatten",
+            "subtitle": "Closing a position with your own hand",
+            "aria": "The four reasons to flatten by hand",
+            "rows": {
+              "items": [
+                {
+                  "text": "The stop was hit",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Tier One within 5 minutes",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "Thesis broke on a candle close",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "Session over: 4 p.m.",
+                  "tone": "cyan",
+                  "cue": 4
+                }
+              ]
+            },
+            "aside": {
+              "head": "Only four",
+              "sub": "rest: Too Early",
+              "cue": 0,
+              "size": 22
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 330,
+                "text": "Too Early: execution mark Fail, whatever price did next.",
+                "size": 14,
+                "cls": "t",
+                "tone": "red",
+                "cue": 6
+              }
+            ]
+          },
+          "start": 84.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four reasons to flatten by hand\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule 3: four reasons to flatten</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Closing a position with your own hand</text><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The stop was hit</text></g><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tier One within 5 minutes</text></g><g class=\"sv-rv\" style=\"animation-delay:25.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Thesis broke on a candle close</text></g><g class=\"sv-rv\" style=\"animation-delay:35.0s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Session over: 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Only four</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">rest: Too Early</text></g><g class=\"sv-rv\" style=\"animation-delay:48.9s\"><text x=\"32\" y=\"330\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Too Early: execution mark Fail, whatever price did next.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "When must you be flat for a Tier One release?",
+          "options": [
+            "At the release time",
+            "Two minutes before",
+            "Five minutes before, with no resting orders",
+            "Only if you are losing"
+          ],
+          "answer": 2,
+          "why": "Be flat at T minus 5, with no open position and no resting orders. No new entries until T plus 2."
+        },
+        {
+          "q": "What do you do with a working trade when a Tier Two release is coming?",
+          "options": [
+            "Exit it",
+            "Manage it through the release",
+            "Double it",
+            "Move the stop to break-even"
+          ],
+          "answer": 1,
+          "why": "Tier Two prints rarely move price in a way your stop cannot handle. Exiting for one is leaving on a feeling."
+        },
+        {
+          "q": "Which of these is one of the four reasons to flatten by hand?",
+          "options": [
+            "The trade stalled",
+            "You are up and want to keep it",
+            "The invalidation you wrote at entry happened on a candle close",
+            "A red candle looked big"
+          ],
+          "answer": 2,
+          "why": "The four: stop hit, Tier One within five minutes, thesis broken on a candle close, session over."
+        },
+        {
+          "q": "You close a trade because it stalled. What happens in the journal?",
+          "options": [
+            "It is tagged Too Early and the execution mark is Fail",
+            "It is tagged Broke Rule and the execution mark is Pass",
+            "Nothing, if it was in profit",
+            "It is tagged Tier Two"
+          ],
+          "answer": 0,
+          "why": "Any manual exit outside the four reasons is Too Early, with a Fail mark, whatever the trade went on to do."
+        }
+      ],
+      "audio": "../assets/audio/02/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "The kill switch",
+      "sections": [
+        "Rule 4: The Kill Switch"
+      ],
+      "duration": 160,
+      "cues": [
+        {
+          "start": 0,
+          "text": "This rule is counted in R, so the unit comes first. R is the fixed amount you risk on one trade, chosen before the trade. Every outcome in the journal is in R, so trades of different sizes compare on one scale.",
+          "chapter": "R first"
+        },
+        {
+          "start": 16.4,
+          "text": "The kill switch is your daily max loss: 2R, twice your base risk. When the day's loss reaches it, trading stops until the next session.",
+          "chapter": "The switch"
+        },
+        {
+          "start": 26.4,
+          "text": "It is fixed: never raised during the session, never adjusted after it fires. It ends the session and nothing more."
+        },
+        {
+          "start": 34.6,
+          "text": "Now, where it lives. It only works if your hand cannot undo it at 10:40, so it belongs outside the window you trade from.",
+          "chapter": "Where it lives"
+        },
+        {
+          "start": 44.3,
+          "text": "NinjaTrader 8 has no daily loss limit. Its Risk window holds templates for simulation accounts only. Live accounts use NinjaTrader's Dashboard."
+        },
+        {
+          "start": 52.9,
+          "text": "On NinjaTrader Brokerage, set the Daily Loss Limit in the Dashboard's Risk Settings, and turn on Prevent Changes When Trading is Locked. Then you cannot raise it for the rest of that trading day."
+        },
+        {
+          "start": 66.3,
+          "text": "On Tradovate, turn on the Daily Loss toggle, and Lock Risk Settings if Hit."
+        },
+        {
+          "start": 72.3,
+          "text": "On Rithmic, the account provider sets the limit, not you, so 2R is a written rule only. Write it anyway: 2R is written, not enforced."
+        },
+        {
+          "start": 82.3,
+          "text": "A funded or evaluation account usually carries the firm's own limit. Treat it as a backstop, not your switch."
+        },
+        {
+          "start": 90.2,
+          "text": "Two things the limit does not do. It is a trigger that sends a market order, so the fill can land past your number. And it may not see an open loss: some venues count realized loss only, meaning closed trades, so your resting stop bounds the open one.",
+          "chapter": "What it does not do"
+        },
+        {
+          "start": 109.1,
+          "text": "A loss limit is a smoke alarm. It is loud, and it arrives after the smoke."
+        },
+        {
+          "start": 115.8,
+          "text": "When it fires, the account goes liquidation-only: positions closed, working orders cancelled, only orders that reduce a position accepted. Then three steps. Note the time and kill switch in the journal. Close the platform. Step away from the desk.",
+          "chapter": "When it fires"
+        },
+        {
+          "start": 131.1,
+          "text": "The rule: daily max loss is 2R, fixed, set at the account level with the lock on, never raised during the session.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 140,
+          "text": "Getting it wrong is raising the limit at 10:40, or opening a second account. It reveals a trader trying to win the day back, when the day has become the unit instead of the trade. The fix is the lock, turned on before the session, so a calmer you decides.",
+          "chapter": "Getting it wrong"
+        }
+      ],
+      "slides": [
+        {
+          "title": "R and the switch",
+          "kind": "compare",
+          "data": {
+            "title": "Rule 4: counted in R",
+            "subtitle": "The only unit this course uses",
+            "aria": "R and the kill switch",
+            "columns": [
+              {
+                "tone": "cyan",
+                "head": "R",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "Your fixed risk per trade",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Chosen before the trade",
+                    "y": 84
+                  },
+                  {
+                    "text": "The stop sets the contracts",
+                    "y": 106
+                  },
+                  {
+                    "text": "Outcomes logged in R",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "cyan",
+                    "cue": 0
+                  }
+                ]
+              },
+              {
+                "tone": "red",
+                "head": "Kill switch",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "Daily max loss: 2R",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Reached: trading stops",
+                    "y": 84
+                  },
+                  {
+                    "text": "Never raised, never adjusted",
+                    "y": 106,
+                    "cue": 2
+                  },
+                  {
+                    "text": "Ends the session, nothing more",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "red",
+                    "cue": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"R and the kill switch\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule 4: counted in R</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The only unit this course uses</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">R</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your fixed risk per trade</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Chosen before the trade</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The stop sets the contracts</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Outcomes logged in R</text></g></g><g class=\"sv-rv\" style=\"animation-delay:16.4s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Kill switch</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Daily max loss: 2R</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reached: trading stops</text><g class=\"sv-rv\" style=\"animation-delay:26.4s\"><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never raised, never adjusted</text></g><g class=\"sv-rv\" style=\"animation-delay:26.4s\"><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Ends the session, nothing more</text></g></g></svg>"
+        },
+        {
+          "title": "Where it lives",
+          "kind": "list",
+          "data": {
+            "title": "Where the limit lives",
+            "subtitle": "Outside the window you trade from",
+            "aria": "Where the daily loss limit is set on each venue",
+            "rows": {
+              "items": [
+                {
+                  "text": "NT8 itself: no daily limit",
+                  "tone": "red",
+                  "cue": 1
+                },
+                {
+                  "text": "NinjaTrader Brokerage: Dashboard",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "Tradovate: Risk Settings, lock",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "Rithmic: set by the provider",
+                  "tone": "gold",
+                  "cue": 4
+                }
+              ]
+            },
+            "aside": {
+              "head": "Lock on",
+              "sub": "cannot undo",
+              "cue": 0,
+              "size": 22
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 330,
+                "text": "Funded accounts: the firm's limit is a backstop.",
+                "size": 14,
+                "cls": "t",
+                "tone": "gold",
+                "cue": 5
+              }
+            ]
+          },
+          "start": 34.6,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Where the daily loss limit is set on each venue\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where the limit lives</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Outside the window you trade from</text><g class=\"sv-rv\" style=\"animation-delay:9.7s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">NT8 itself: no daily limit</text></g><g class=\"sv-rv\" style=\"animation-delay:18.3s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">NinjaTrader Brokerage: Dashboard</text></g><g class=\"sv-rv\" style=\"animation-delay:31.7s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tradovate: Risk Settings, lock</text></g><g class=\"sv-rv\" style=\"animation-delay:37.7s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rithmic: set by the provider</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Lock on</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">cannot undo</text></g><g class=\"sv-rv\" style=\"animation-delay:47.7s\"><text x=\"32\" y=\"330\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Funded accounts: the firm's limit is a backstop.</text></g></svg>"
+        },
+        {
+          "title": "What it does not do",
+          "kind": "steps",
+          "data": {
+            "title": "Limits are triggers, not caps",
+            "subtitle": "What the limit does not do",
+            "aria": "What the loss limit does not do, and what to do when it fires",
+            "y": 90,
+            "items": [
+              {
+                "time": "Fill",
+                "text": "A market order: the fill can land past your number",
+                "cue": 0
+              },
+              {
+                "time": "Open",
+                "text": "Realized-only venues: your stop bounds the open loss",
+                "cue": 0
+              },
+              {
+                "time": "Note",
+                "text": "Time and kill switch in the journal",
+                "cue": 2
+              },
+              {
+                "time": "Close",
+                "text": "The platform",
+                "cue": 2
+              },
+              {
+                "time": "Leave",
+                "text": "The desk. No second account, app or simulator",
+                "cue": 2
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 330,
+                "text": "Getting it wrong: raising it at 10:40 to win the day back.",
+                "size": 14,
+                "cls": "t",
+                "tone": "red",
+                "cue": 4
+              }
+            ]
+          },
+          "start": 90.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What the loss limit does not do, and what to do when it fires\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Limits are triggers, not caps</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the limit does not do</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Fill</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A market order: the fill can land past your number</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Open</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Realized-only venues: your stop bounds the open loss</text></g><g class=\"sv-rv\" style=\"animation-delay:25.6s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Note</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Time and kill switch in the journal</text></g><g class=\"sv-rv\" style=\"animation-delay:25.6s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Close</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The platform</text></g><g class=\"sv-rv\" style=\"animation-delay:25.6s\"><rect x=\"32\" y=\"250\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Leave</text><text x=\"124\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The desk. No second account, app or simulator</text></g><g class=\"sv-rv\" style=\"animation-delay:49.8s\"><text x=\"32\" y=\"330\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong: raising it at 10:40 to win the day back.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "What is the kill switch in this course?",
+          "options": [
+            "A stop on each trade",
+            "A daily max loss of 2R, set at the account level",
+            "A weekly day off after a red day",
+            "A smaller size after a loss"
+          ],
+          "answer": 1,
+          "why": "2R, twice your base risk, fixed. It ends the session and nothing more."
+        },
+        {
+          "q": "Where is the daily loss limit set on NinjaTrader 8 itself?",
+          "options": [
+            "In the Risk window",
+            "In the chart settings",
+            "It has no daily loss limit; live accounts use the Dashboard",
+            "In the order entry panel"
+          ],
+          "answer": 2,
+          "why": "NT8's Risk window holds templates for simulation accounts only. Live accounts use the Dashboard's Risk Settings."
+        },
+        {
+          "q": "Your venue offers no lock. What do you do?",
+          "options": [
+            "Skip the rule",
+            "Write 2R in your plan, say it is written, not enforced, and close the platform at 2R",
+            "Raise the limit",
+            "Trade a second account"
+          ],
+          "answer": 1,
+          "why": "Where no lock exists, the rule is written and you enforce it by closing the platform."
+        },
+        {
+          "q": "A loss limit fires. What is the first step?",
+          "options": [
+            "Open a second account",
+            "Note the time and kill switch in the journal",
+            "Raise the limit and keep trading",
+            "Switch to the simulator"
+          ],
+          "answer": 1,
+          "why": "Note it, close the platform, step away from the desk."
+        }
+      ],
+      "audio": "../assets/audio/02/s3.mp3"
+    },
+    {
+      "id": "s4",
+      "title": "The post-loss reset",
+      "sections": [
+        "Rule 5: The Post-Loss Reset"
+      ],
+      "duration": 153.4,
+      "cues": [
+        {
+          "start": 0,
+          "text": "The first four rules are enforced by a clock, a calendar and a setting. This one is enforced by you, which is why it comes last.",
+          "chapter": "Rule 5: the reset"
+        },
+        {
+          "start": 10.4,
+          "text": "The post-loss reset is a fixed routine, run after every losing trade and before any new entry. It is short, rehearsed, and the same every time, so it runs on a bad day without having to be remembered."
+        },
+        {
+          "start": 25.3,
+          "text": "Three parts. First, the cancel. Cancel every working entry order. A resting order placed before the loss belongs to the trader you were before it. If the setup is still there after the reset, you place it again.",
+          "chapter": "The routine"
+        },
+        {
+          "start": 40.2,
+          "text": "Second, the physical step. Feet flat on the floor. One long exhale. Then three or four rounds of box breathing: in for four, hold for four, out for four, hold for four."
+        },
+        {
+          "start": 52.8,
+          "text": "Third, three questions, answered aloud."
+        },
+        {
+          "start": 55.5,
+          "text": "One: what is the chart telling me?"
+        },
+        {
+          "start": 58.9,
+          "text": "Two: are any setups forming?"
+        },
+        {
+          "start": 61.5,
+          "text": "Three: what would need to happen for a setup to present itself?"
+        },
+        {
+          "start": 66.8,
+          "text": "Answer in sentences. Price is back inside the prior session's range and nothing is at a level is an answer. It's going to come back is a prayer with a ticker. If you cannot answer clearly, the next trade waits."
+        },
+        {
+          "start": 82.4,
+          "text": "The pattern this rule exists to stop is the re-entry loop: entries taken one after another without a fresh setup. It usually starts with a win, not a loss, and each trade comes faster and from further from a level.",
+          "chapter": "The loop"
+        },
+        {
+          "start": 98,
+          "text": "There is no cap on trade count in this course. The 2R switch is the cap, the reset is the brake before it, and the journal shows your trade count per session, so you can see the loop for yourself."
+        },
+        {
+          "start": 113.6,
+          "text": "The rule: after every loss, the full reset before any new entry.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 118.9,
+          "text": "Getting it wrong is an entry within a minute of a stop-out, or an old resting order that fills during the reset. It reveals a trade that came from the last trade, not from the chart.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 133,
+          "text": "The fix: before the next entry, write the answer to question three in one line in the journal. A blank line means no trade. And rehearse the reset once on a quiet day, with no position on, so the first time you run it is not the day you need it."
+        }
+      ],
+      "slides": [
+        {
+          "title": "Cancel and step",
+          "kind": "cards",
+          "data": {
+            "title": "Rule 5: the post-loss reset",
+            "subtitle": "After every loss, before any new entry",
+            "aria": "The cancel and the physical step of the reset",
+            "parts": [
+              {
+                "n": "1",
+                "head": "Cancel",
+                "lines": [
+                  "Every working entry order",
+                  "Place it again after, if valid"
+                ],
+                "foot": "Before anything else",
+                "cue": 2
+              },
+              {
+                "n": "2",
+                "head": "Step",
+                "lines": [
+                  "Feet flat. One long exhale.",
+                  "Box breathing, 3 or 4 rounds"
+                ],
+                "foot": "In 4, hold 4, out 4, hold 4",
+                "cue": 3
+              }
+            ],
+            "verdicts": {
+              "cue": 1,
+              "items": [
+                {
+                  "head": "Short and rehearsed",
+                  "text": "Runs without being remembered",
+                  "tone": "cyan"
+                },
+                {
+                  "head": "Enforced by you",
+                  "text": "So it comes last",
+                  "tone": "gold"
+                }
+              ]
+            }
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The cancel and the physical step of the reset\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule 5: the post-loss reset</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">After every loss, before any new entry</text><g class=\"sv-rv\" style=\"animation-delay:25.3s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Cancel</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every working entry order</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Place it again after, if valid</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Before anything else</text></g><g class=\"sv-rv\" style=\"animation-delay:40.2s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Step</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Feet flat. One long exhale.</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Box breathing, 3 or 4 rounds</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">In 4, hold 4, out 4, hold 4</text></g><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Short and rehearsed</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Runs without being remembered</text><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Enforced by you</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">So it comes last</text></g></svg>"
+        },
+        {
+          "title": "Three questions",
+          "kind": "list",
+          "data": {
+            "title": "Then three questions, aloud",
+            "subtitle": "Answer in sentences",
+            "aria": "The three post-loss questions",
+            "rows": {
+              "items": [
+                {
+                  "text": "What is the chart telling me?",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Are any setups forming?",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "What would a setup need to present itself?",
+                  "tone": "cyan",
+                  "cue": 3
+                }
+              ]
+            },
+            "aside": {
+              "head": "Out loud",
+              "sub": "unclear: wait",
+              "cue": 0,
+              "size": 22
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 280,
+                "text": "A clear answer names a level and what must happen at it.",
+                "size": 14,
+                "cls": "t",
+                "tone": "gold",
+                "cue": 4
+              }
+            ]
+          },
+          "start": 52.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The three post-loss questions\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Then three questions, aloud</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Answer in sentences</text><g class=\"sv-rv\" style=\"animation-delay:2.7s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What is the chart telling me?</text></g><g class=\"sv-rv\" style=\"animation-delay:6.1s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Are any setups forming?</text></g><g class=\"sv-rv\" style=\"animation-delay:8.7s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What would a setup need to present itself?</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Out loud</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">unclear: wait</text></g><g class=\"sv-rv\" style=\"animation-delay:14.0s\"><text x=\"32\" y=\"280\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">A clear answer names a level and what must happen at it.</text></g></svg>"
+        },
+        {
+          "title": "The re-entry loop",
+          "kind": "compare",
+          "data": {
+            "title": "The re-entry loop",
+            "subtitle": "What the reset interrupts",
+            "aria": "The re-entry loop and the brake before the cap",
+            "columns": [
+              {
+                "tone": "red",
+                "head": "The loop",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "Starts with a win",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "Each entry comes faster",
+                    "y": 84
+                  },
+                  {
+                    "text": "Further from a level each time",
+                    "y": 106
+                  },
+                  {
+                    "text": "Taken to get it back",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "red",
+                    "cue": 0
+                  }
+                ]
+              },
+              {
+                "tone": "cyan",
+                "head": "The brakes",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "The reset: the brake",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "The 2R switch: the cap",
+                    "y": 84
+                  },
+                  {
+                    "text": "The journal: trade count",
+                    "y": 106
+                  },
+                  {
+                    "text": "You can see the loop",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "cyan",
+                    "cue": 1
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 312,
+                "text": "Blank answer to question three: no trade.",
+                "size": 15,
+                "cls": "t",
+                "tone": "gold",
+                "cue": 4
+              }
+            ]
+          },
+          "start": 82.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The re-entry loop and the brake before the cap\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The re-entry loop</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the reset interrupts</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">The loop</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Starts with a win</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each entry comes faster</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Further from a level each time</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Taken to get it back</text></g></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The brakes</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The reset: the brake</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The 2R switch: the cap</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The journal: trade count</text><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">You can see the loop</text></g></g><g class=\"sv-rv\" style=\"animation-delay:50.6s\"><text x=\"32\" y=\"312\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Blank answer to question three: no trade.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "What comes first in the post-loss reset?",
+          "options": [
+            "The three questions",
+            "Cancel every working entry order",
+            "Box breathing",
+            "Re-enter to recover"
+          ],
+          "answer": 1,
+          "why": "Cancel first. A resting order from before the loss belongs to the trader you were before it."
+        },
+        {
+          "q": "Which is a clear answer to the three questions?",
+          "options": [
+            "It's going to come back",
+            "I need to make it back",
+            "Price is back inside the prior session's range, nothing is at a level, and a setup needs acceptance beyond the high",
+            "I feel fine"
+          ],
+          "answer": 2,
+          "why": "A clear answer is a sentence about the chart: where price is and what would need to happen."
+        },
+        {
+          "q": "Where does the re-entry loop usually start?",
+          "options": [
+            "After the largest loss",
+            "With a win, then entries come faster and from further from a level",
+            "At the close",
+            "After the kill switch fires"
+          ],
+          "answer": 1,
+          "why": "The first trade wins, the next feels easy, and entries start coming from the middle of the range with no trigger."
+        },
+        {
+          "q": "What must be in the journal before the next entry after a loss?",
+          "options": [
+            "Nothing",
+            "The answer to question three, in one line; a blank line means no trade",
+            "A bigger target",
+            "A new stop"
+          ],
+          "answer": 1,
+          "why": "Writing the third answer is the gate. Blank means the next trade waits."
+        }
+      ],
+      "audio": "../assets/audio/02/s4.mp3"
+    },
+    {
+      "id": "s5",
+      "title": "One session, three rules firing",
+      "sections": [
+        "Worked Case: One Session, Three Rules Firing"
+      ],
+      "duration": 141.5,
+      "cues": [
+        {
+          "start": 0,
+          "text": "This is a composite session, invented prices, built to show how the rules interact. It is hypothetical and not a trade record. Hypothetical results have inherent limits: they are not actual trading and do not reflect real fills, slippage or the pressure of risk.",
+          "chapter": "The setup"
+        },
+        {
+          "start": 17.1,
+          "text": "The pre-market sheet was finished at 7:40. CPI is on it at 8:30, so T minus 5 is 8:25 and T plus 2 is 8:32."
+        },
+        {
+          "start": 27.2,
+          "text": "The kill switch is set at 2R, at the account level, with the lock on."
+        },
+        {
+          "start": 33.5,
+          "text": "Every trade comes from a branch on the sheet, written before the entry: a level, a read of what price is doing there, a trigger, a stop and an invalidation."
+        },
+        {
+          "start": 45.4,
+          "text": "At 7:58 the first trade is open. At 8:25 it is five minutes before CPI, so the trader flattens by hand. The reason is the second of the four: Tier One release within five minutes. Execution mark: pass.",
+          "chapter": "8:25"
+        },
+        {
+          "start": 60.3,
+          "text": "At 8:32 entries are allowed again. Price has moved, and nothing is at a level, so nothing is taken."
+        },
+        {
+          "start": 68.1,
+          "text": "At 9:56 a second trade, built to plan, reaches its resting stop. The trader runs the reset: cancels working orders, feet, exhale, four rounds, the three answers aloud, and one line in the journal.",
+          "chapter": "9:56"
+        },
+        {
+          "start": 81.5,
+          "text": "At 10:41 a third trade, again built to plan, reaches its stop. With fees, the day's loss is now past 2R."
+        },
+        {
+          "start": 90.1,
+          "text": "The limit fires. The account goes liquidation-only, and the risk settings lock until the reset.",
+          "chapter": "10:41"
+        },
+        {
+          "start": 96.5,
+          "text": "At 10:42 the pull to re-enter is strong. The trader writes kill switch and the time in the journal, closes the platform and leaves the desk."
+        },
+        {
+          "start": 106.9,
+          "text": "Notice what the rules did and did not do. Neither loss was a mistake. Both were planned trades with the invalidation written before the entry, and the rules never asked them to win.",
+          "chapter": "What the rules did"
+        },
+        {
+          "start": 119.9,
+          "text": "They fired at 8:25, at 9:56 and at 10:41. The one decision that was the trader's alone came at 10:42, and the lock had already made it."
+        },
+        {
+          "start": 130.7,
+          "text": "The market stayed open after 10:42. It does that. What price did afterwards is not part of the lesson, and it is not your money."
+        }
+      ],
+      "slides": [
+        {
+          "title": "The plan",
+          "kind": "steps",
+          "data": {
+            "title": "Worked case: the plan",
+            "subtitle": "Composite session, a.m. Eastern. Invented prices, no outcome",
+            "aria": "The sheet and the news times for the composite session",
+            "y": 90,
+            "items": [
+              {
+                "time": "7:40",
+                "text": "Pre-market sheet complete",
+                "cue": 1
+              },
+              {
+                "time": "8:25",
+                "text": "T minus 5 for CPI at 8:30",
+                "cue": 1
+              },
+              {
+                "time": "8:32",
+                "text": "T plus 2: entries allowed again",
+                "cue": 1
+              },
+              {
+                "time": "Account",
+                "text": "Kill switch 2R, lock on",
+                "cue": 2
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 280,
+                "text": "Level, read, trigger, stop and invalidation: written first.",
+                "size": 14,
+                "cls": "t",
+                "tone": "cyan",
+                "cue": 3
+              }
+            ],
+            "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The sheet and the news times for the composite session\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Worked case: the plan</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Composite session, a.m. Eastern. Invented prices, no outcome</text><g class=\"sv-rv\" style=\"animation-delay:17.1s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">7:40</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Pre-market sheet complete</text></g><g class=\"sv-rv\" style=\"animation-delay:17.1s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">8:25</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">T minus 5 for CPI at 8:30</text></g><g class=\"sv-rv\" style=\"animation-delay:17.1s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">8:32</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">T plus 2: entries allowed again</text></g><g class=\"sv-rv\" style=\"animation-delay:27.2s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Account</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Kill switch 2R, lock on</text></g><g class=\"sv-rv\" style=\"animation-delay:33.5s\"><text x=\"32\" y=\"280\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Level, read, trigger, stop and invalidation: written first.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
+        },
+        {
+          "title": "Rules firing",
+          "kind": "steps",
+          "data": {
+            "title": "Worked case: rules firing",
+            "subtitle": "Three rules, a.m. Eastern, none of them a decision",
+            "aria": "The three times the rules fire in the composite session",
+            "y": 90,
+            "items": [
+              {
+                "time": "8:25",
+                "text": "Flatten by hand: Tier One within 5 minutes. Pass",
+                "cue": 0
+              },
+              {
+                "time": "9:56",
+                "text": "Stop reached. Reset: cancel, step, three answers",
+                "cue": 2
+              },
+              {
+                "time": "10:41",
+                "text": "Daily limit fires. Liquidation-only, lock on",
+                "cue": 4
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 250,
+                "text": "10:42: log kill switch, close the platform, leave the desk.",
+                "size": 14,
+                "cls": "t",
+                "tone": "gold",
+                "cue": 5
+              }
+            ],
+            "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
+          },
+          "start": 45.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The three times the rules fire in the composite session\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Worked case: rules firing</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three rules, a.m. Eastern, none of them a decision</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">8:25</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Flatten by hand: Tier One within 5 minutes. Pass</text></g><g class=\"sv-rv\" style=\"animation-delay:22.7s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:56</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stop reached. Reset: cancel, step, three answers</text></g><g class=\"sv-rv\" style=\"animation-delay:44.7s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:41</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Daily limit fires. Liquidation-only, lock on</text></g><g class=\"sv-rv\" style=\"animation-delay:51.1s\"><text x=\"32\" y=\"250\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">10:42: log kill switch, close the platform, leave the desk.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
+        },
+        {
+          "title": "What the rules did",
+          "kind": "compare",
+          "data": {
+            "title": "What the rules did",
+            "subtitle": "Planned trades, no mistakes to find",
+            "aria": "What the rules decided and what was left to the trader",
+            "columns": [
+              {
+                "tone": "cyan",
+                "head": "The rules decided",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "8:25 flatten",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "9:56 reset",
+                    "y": 84
+                  },
+                  {
+                    "text": "10:41 limit and lock",
+                    "y": 106
+                  },
+                  {
+                    "text": "Neither loss a mistake",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "cyan",
+                    "cue": 0
+                  }
+                ]
+              },
+              {
+                "tone": "gold",
+                "head": "Left to the trader",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "10:42: the pull to re-enter",
+                    "y": 56,
+                    "size": 14,
+                    "cls": "t"
+                  },
+                  {
+                    "text": "The lock had made the choice",
+                    "y": 84
+                  },
+                  {
+                    "text": "Close the platform",
+                    "y": 106
+                  },
+                  {
+                    "text": "Not your money, what came next",
+                    "y": 140,
+                    "size": 15,
+                    "cls": "t",
+                    "weight": 700,
+                    "tone": "gold",
+                    "cue": 2
+                  }
+                ]
+              }
+            ],
+            "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
+          },
+          "start": 106.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What the rules decided and what was left to the trader\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the rules did</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Planned trades, no mistakes to find</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The rules decided</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">8:25 flatten</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">9:56 reset</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">10:41 limit and lock</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Neither loss a mistake</text></g></g><g class=\"sv-rv\" style=\"animation-delay:13.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Left to the trader</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">10:42: the pull to re-enter</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The lock had made the choice</text><text x=\"344\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Close the platform</text><g class=\"sv-rv\" style=\"animation-delay:23.8s\"><text x=\"344\" y=\"224\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Not your money, what came next</text></g></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "Why does the trader flatten at 8:25 in the case?",
+          "options": [
+            "The trade hit its stop",
+            "A Tier One release is five minutes away",
+            "The window closed",
+            "The kill switch fired"
+          ],
+          "answer": 1,
+          "why": "CPI at 8:30 means T minus 5 is 8:25. The second of the four reasons applies."
+        },
+        {
+          "q": "What happens after the second stop-out at 9:56?",
+          "options": [
+            "Nothing, the plan continues",
+            "The full reset before any new entry",
+            "The limit fires",
+            "A second account opens"
+          ],
+          "answer": 1,
+          "why": "After every loss, the reset runs before any new entry."
+        },
+        {
+          "q": "What is the account state when the limit fires at 10:41?",
+          "options": [
+            "Liquidation-only, with the risk settings locked until the reset",
+            "Normal, with a warning",
+            "Paused for an hour",
+            "Locked, but orders still accepted"
+          ],
+          "answer": 0,
+          "why": "Open positions are closed, working orders cancelled, and only orders that reduce a position are accepted."
+        },
+        {
+          "q": "Which was a mistake in the case?",
+          "options": [
+            "The 8:25 flatten",
+            "The first stop-out",
+            "The second stop-out",
+            "Neither loss was a mistake; both were planned trades"
+          ],
+          "answer": 3,
+          "why": "Both losses were planned trades with the invalidation written first. The rules never asked them to win."
+        }
+      ],
+      "audio": "../assets/audio/02/s5.mp3"
+    },
+    {
+      "id": "s6",
+      "title": "Which rule is yours to fix",
+      "sections": [
+        "Which Rule Is Yours To Fix",
+        "Before Your Next Session",
+        "Where It Goes Next",
+        "Sources"
+      ],
+      "duration": 146,
+      "cues": [
+        {
+          "start": 0,
+          "text": "Which rule is yours to fix? Score each line 2, 1 or 0. Two means a mechanism enforces it. One means it is written down and you enforce it by hand. Zero means neither.",
+          "chapter": "The score"
+        },
+        {
+          "start": 13.4,
+          "text": "Line one, the kill switch. Two means it is set at the account level, with the lock on."
+        },
+        {
+          "start": 20.9,
+          "text": "Line two, the window. Two means it is on your plan, with an alarm at 3:55."
+        },
+        {
+          "start": 27.6,
+          "text": "Line three, the news. Two means every Tier One time is written down with its T minus 5 and T plus 2."
+        },
+        {
+          "start": 36.5,
+          "text": "Line four, manual flatten. Two means your last ten manual exits each carry one of the four reasons, or a Too Early tag."
+        },
+        {
+          "start": 45.9,
+          "text": "Line five, the reset. Two means it is rehearsed, and the third answer is written before every post-loss entry."
+        },
+        {
+          "start": 53.7,
+          "text": "The threshold: any zero is fixed before your next session. The kill switch line must score 2 wherever your venue allows it. A total under 7 out of 10 means the rules are a wish, not a system. Start with the lowest line.",
+          "chapter": "The threshold"
+        },
+        {
+          "start": 70.4,
+          "text": "A rule that scores zero is not a rule. It is a nice thought."
+        },
+        {
+          "start": 76.4,
+          "text": "Getting it wrong is giving yourself a 2 for good intentions. A 2 means a mechanism enforces it.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 83.9,
+          "text": "Before you trade again, set your daily loss limit at the account level at 2R, with the lock on, or confirm that it already is.",
+          "chapter": "Your assignment"
+        },
+        {
+          "start": 93.9,
+          "text": "If your venue lets you set no limit, write this line at the top of your next plan: Kill switch, 2R. At 2R, close the platform. That is the whole assignment."
+        },
+        {
+          "start": 106.2,
+          "text": "Where it goes next. Every manual exit now gets an execution mark in the journal, pass or fail. Module 18, Journaling and Review, teaches the mark and the weekly count of Too Early exits, and shows trade count per session, where a re-entry loop shows up as a cluster.",
+          "chapter": "Where it goes next"
+        },
+        {
+          "start": 125.2,
+          "text": "Module 3, The Instrument: Futures Mechanics, covers ticks, points and what each is worth: the arithmetic that turns 2R into the figure you type into the setting."
+        },
+        {
+          "start": 136,
+          "text": "Vendor settings and menus change without notice. If a path in the sources no longer matches your screen, the vendor's current page wins."
+        }
+      ],
+      "slides": [
+        {
+          "title": "Five lines",
+          "kind": "list",
+          "data": {
+            "title": "Which rule is yours to fix?",
+            "subtitle": "Score each line 2, 1 or 0",
+            "aria": "The five lines you score",
+            "rows": {
+              "items": [
+                {
+                  "text": "Kill switch",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Window",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "News",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "Manual flatten",
+                  "tone": "cyan",
+                  "cue": 4
+                },
+                {
+                  "text": "Reset",
+                  "tone": "cyan",
+                  "cue": 5
+                }
+              ]
+            },
+            "aside": {
+              "head": "2, 1, 0",
+              "sub": "how enforced",
+              "cue": 0,
+              "size": 22
+            }
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The five lines you score\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Which rule is yours to fix?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Score each line 2, 1 or 0</text><g class=\"sv-rv\" style=\"animation-delay:13.4s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Kill switch</text></g><g class=\"sv-rv\" style=\"animation-delay:20.9s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Window</text></g><g class=\"sv-rv\" style=\"animation-delay:27.6s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">News</text></g><g class=\"sv-rv\" style=\"animation-delay:36.5s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Manual flatten</text></g><g class=\"sv-rv\" style=\"animation-delay:45.9s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Reset</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">2, 1, 0</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">how enforced</text></g></svg>"
+        },
+        {
+          "title": "The threshold",
+          "kind": "score",
+          "data": {
+            "title": "What the total means",
+            "subtitle": "Five lines, 2 points each",
+            "aria": "The threshold for the five-line score",
+            "points": 5,
+            "cue": 0,
+            "verdicts": {
+              "cue": 0,
+              "items": [
+                {
+                  "score": "Any zero",
+                  "text": "Fixed before your next session",
+                  "tone": "red",
+                  "cue": 0
+                },
+                {
+                  "score": "Under 7",
+                  "text": "A wish, not a system",
+                  "tone": "gold",
+                  "cue": 0
+                },
+                {
+                  "score": "Kill switch",
+                  "text": "Must score 2 where allowed",
+                  "tone": "cyan",
+                  "cue": 0
+                }
+              ]
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 346,
+                "text": "Start with the lowest line.",
+                "size": 13,
+                "cls": "t",
+                "tone": "cyan",
+                "cue": 0
+              }
+            ]
+          },
+          "start": 53.7,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The threshold for the five-line score\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the total means</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Five lines, 2 points each</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Any zero</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Fixed before your next session</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Under 7</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A wish, not a system</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Kill switch</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Must score 2 where allowed</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"346\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Start with the lowest line.</text></g></svg>"
+        },
+        {
+          "title": "One setting",
+          "kind": "assignment",
+          "data": {
+            "title": "Your assignment: one setting",
+            "subtitle": "Before your next session",
+            "aria": "The assignment: set the daily loss limit at 2R with the lock on",
+            "cue": 0,
+            "fields": [
+              "Daily loss",
+              "At the account",
+              "2R",
+              "Lock on"
+            ],
+            "line1": "No setting on your venue? Write it instead:",
+            "line2": "Kill switch: 2R. At 2R, close the platform."
+          },
+          "start": 83.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The assignment: set the daily loss limit at 2R with the lock on\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your assignment: one setting</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before your next session</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Daily loss</text></g><g class=\"sv-rv\" style=\"animation-delay:1.3s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">At the account</text></g><g class=\"sv-rv\" style=\"animation-delay:2.6s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">2R</text></g><g class=\"sv-rv\" style=\"animation-delay:3.9s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Lock on</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No setting on your venue? Write it instead:</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Kill switch: 2R. At 2R, close the platform.</text></g></svg>"
+        },
+        {
+          "title": "Where next",
+          "kind": "summary",
+          "data": {
+            "title": "Where it goes next",
+            "subtitle": "Three modules this page feeds",
+            "aria": "Where the module goes next",
+            "statement": "Every manual exit now gets an execution mark: pass or fail.",
+            "links": [
+              {
+                "head": "Module 18",
+                "sub": "Journaling & Review",
+                "cue": 0
+              },
+              {
+                "head": "Module 03",
+                "sub": "The Instrument: Futures Mechanics",
+                "cue": 1
+              }
+            ]
+          },
+          "start": 106.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Where the module goes next\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three modules this page feeds</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Every manual exit now gets an execution mark: pass or fail.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 03</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Instrument: Futures Mechanics</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "What does a score of 2 mean on a line?",
+          "options": [
+            "You intend to follow it",
+            "A mechanism enforces it",
+            "It is written down and you enforce it by hand",
+            "You have never broken it"
+          ],
+          "answer": 1,
+          "why": "2 is a mechanism. 1 is written and enforced by hand. 0 is neither."
+        },
+        {
+          "q": "What total means the rules are a wish, not a system?",
+          "options": [
+            "Under 7 out of 10",
+            "Exactly 10",
+            "Under 10",
+            "Under 3"
+          ],
+          "answer": 0,
+          "why": "Under 7 out of 10, and any single zero, is fixed before your next session."
+        },
+        {
+          "q": "What is the assignment?",
+          "options": [
+            "Study more",
+            "Set your daily loss limit at 2R at the account level with the lock on, or write the line in your plan",
+            "Raise your size",
+            "Read the next module"
+          ],
+          "answer": 1,
+          "why": "If your venue offers no lock, write: Kill switch, 2R. At 2R, close the platform."
+        },
+        {
+          "q": "Which module teaches the execution mark and the weekly count of Too Early exits?",
+          "options": [
+            "Module 03",
+            "Module 06",
+            "Module 18",
+            "Module 01"
+          ],
+          "answer": 2,
+          "why": "Module 18, Journaling and Review."
+        }
+      ],
+      "audio": "../assets/audio/02/s6.mp3"
+    }
+  ],
+  "quiz": {
+    "title": "Module quiz",
+    "questions": [
+      {
+        "q": "What are the hard rules for?",
+        "options": [
+          "Predicting price",
+          "Keeping you trading until your record is big enough to judge",
+          "Making each trade bigger",
+          "Replacing the plan"
+        ],
+        "answer": 1,
+        "why": "They predict nothing about price; they decide how long a bad day can last and what it can cost."
+      },
+      {
+        "q": "Which entry breaks the trading window rule?",
+        "options": [
+          "10:15 a.m.",
+          "9:35 a.m.",
+          "3:57 p.m.",
+          "1:30 p.m."
+        ],
+        "answer": 2,
+        "why": "Nothing new is entered from 3:55 p.m."
+      },
+      {
+        "q": "When must you be flat for a Tier One release?",
+        "options": [
+          "At T plus 2",
+          "At T minus 5",
+          "At T",
+          "Never"
+        ],
+        "answer": 1,
+        "why": "Flat at T minus 5, no new entries until T plus 2."
+      },
+      {
+        "q": "A working trade is nearly at target and a Tier Two print is coming. What do you do?",
+        "options": [
+          "Exit for the print",
+          "Manage through it",
+          "Double the size",
+          "Move the stop away"
+        ],
+        "answer": 1,
+        "why": "Tier Two: manage through, and never exit a working position because of it."
+      },
+      {
+        "q": "Which manual exit is logged Too Early?",
+        "options": [
+          "A stop hit that did not fill",
+          "Closing because the trade stalled",
+          "Flattening five minutes before CPI",
+          "Closing at 4 p.m."
+        ],
+        "answer": 1,
+        "why": "Anything outside the four reasons is Too Early, with an execution mark of Fail."
+      },
+      {
+        "q": "The daily kill switch is set at...",
+        "options": [
+          "1R",
+          "2R",
+          "5R",
+          "Whatever you feel like each morning"
+        ],
+        "answer": 1,
+        "why": "2R, fixed, never raised during the session."
+      },
+      {
+        "q": "NT8's Risk window holds a daily loss limit for live accounts.",
+        "options": [
+          "True",
+          "False: it holds simulation templates; live accounts use the broker's Dashboard",
+          "True, on Tradovate only",
+          "False: the limit lives on the chart"
+        ],
+        "answer": 1,
+        "why": "NT8 has no daily loss limit of its own; the venue sets it."
+      },
+      {
+        "q": "What comes first in the post-loss reset?",
+        "options": [
+          "Three questions",
+          "Box breathing",
+          "Cancel every working entry order",
+          "Place a new order"
+        ],
+        "answer": 2,
+        "why": "Cancel, then the physical step, then the three questions aloud."
+      }
+    ]
+  }
+}
