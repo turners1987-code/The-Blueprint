@@ -141,6 +141,20 @@ export const KINDS = {
       rect(170, 96, 300, 14, { fill: 'var(--red)', op: 0.25, rx: 2 }) +
       text(480, 107, d.arrival.stop, { size: 13, fill: 'var(--red)' })) + tail(d, ctx),
 
+  // A centred statement with lines that arrive as they are spoken. For quiet,
+  // unhurried segments (the welcome) where a card grid would shout.
+  hero: (d, ctx) => {
+    const y = d.y ?? 128;
+    return rv(0, text(320, y, d.title, { size: d.size ?? 34, weight: 700, anchor: 'middle' }) +
+      (d.subtitle ? text(320, y + 34, d.subtitle, { size: 16, cls: 'sv-m', anchor: 'middle' }) : '')) +
+      (d.lines || []).map((l, i) => rv(delay(ctx, l.cue), text(320, y + 84 + i * 34, l.text, {
+        size: l.size ?? 17, anchor: 'middle', fill: l.tone ? col(l.tone) : '', cls: l.muted ? 'sv-m' : 'sv-t',
+      }))).join('') + tail(d, ctx);
+  },
+
+  // Title, subtitle and free blocks only.
+  calm: (d, ctx) => head(d) + tail(d, ctx),
+
   // Numbered rows revealed one per cue, with an optional side panel.
   list: (d, ctx) => head(d) +
     BLOCKS.rows({ ...d.rows, x: 32, y: 84, w: 440, numbered: true, sw: 1.5, size: 16 }, ctx) +

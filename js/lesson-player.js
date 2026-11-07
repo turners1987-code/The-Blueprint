@@ -256,7 +256,7 @@ function createPlayer(seg, startAt, onPosition, onNext = null) {
   const musicBox = el('div', { class: 'lesson-music', role: 'group', 'aria-label': 'Music volume (voice stays the same)' },
     noteIcon, el('span', { class: 'lesson-music-label' }, 'Music'), musicRange, muteBtn,
     el('small', { class: 'lesson-music-hint' }, 'Voice stays the same'));
-  musicBox.hidden = !seg.audio;
+  musicBox.hidden = !seg.audio || !!seg.no_music; // a quiet segment has no music to adjust
 
   const root = el('div', { class: 'lesson-player' },
     el('div', { class: 'lesson-controls' }, restartBtn, playBtn, range, clock), musicBox, chapterBar, stage, nextBtn, caption, details);
