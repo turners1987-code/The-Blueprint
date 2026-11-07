@@ -8,7 +8,7 @@
         "The Stop That Cost More Than You Planned",
         "The Contract"
       ],
-      "duration": 146.1,
+      "duration": 129.1,
       "cues": [
         {
           "start": 0,
@@ -16,58 +16,58 @@
           "chapter": "The stop"
         },
         {
-          "start": 16,
+          "start": 11.6,
           "text": "Price did not gap. You sized the trade on a feeling about a few points, on a contract whose points you had never priced."
         },
         {
-          "start": 25.7,
+          "start": 19.1,
           "text": "Every risk decision on this site is in R, your base risk per trade. The platform does not take R. It takes contracts, and it fills in ticks."
         },
         {
-          "start": 36.8,
+          "start": 28,
           "text": "The space between those two units is where a planned 1R loss quietly becomes 2.5R. This module closes that space."
         },
         {
-          "start": 45.1,
+          "start": 36.5,
           "text": "It works mechanically, with MNQ, the Micro E-mini Nasdaq-100 future, as the example and MES, the Micro E-mini S&P 500 future, beside it."
         },
         {
-          "start": 54.4,
+          "start": 48.1,
           "text": "Now, the contract. When you buy one MNQ you do not buy a share of anything. You enter an agreement whose value is set by a formula.",
           "chapter": "The contract"
         },
         {
-          "start": 65.2,
+          "start": 56.9,
           "text": "The Nasdaq-100 index, multiplied by a fixed dollar amount. For MNQ that amount is two dollars. For MES it is five dollars, on the S&P 500."
         },
         {
-          "start": 75.6,
+          "start": 68.1,
           "text": "That amount is the contract multiplier. It is also the point value: what one full index point is worth on one contract."
         },
         {
-          "start": 84.5,
+          "start": 76.4,
           "text": "Every point the index moves, one MNQ changes by two dollars and one MES by five, in your favour or against you."
         },
         {
-          "start": 93.5,
+          "start": 84.5,
           "text": "Nothing is ever delivered. The rulebook says it in six words: Delivery shall be by cash settlement. At expiry, the day the contract ends, it is closed out against a final index price, and the difference is paid in cash."
         },
         {
-          "start": 109.1,
+          "start": 98.2,
           "text": "No truck pulls up with a Nasdaq. That is what cash settlement means."
         },
         {
-          "start": 114.7,
+          "start": 103.3,
           "text": "The rule: before you trade any futures contract, know what it is a multiple of, and by how much.",
           "chapter": "The rule"
         },
         {
-          "start": 122.6,
+          "start": 109.8,
           "text": "Getting it wrong is carrying one contract's arithmetic onto another: two products on the same index, or two indexes that look alike on a chart.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 132.6,
+          "start": 119.1,
           "text": "It reveals that you are reading the chart, not the instrument. The fix is a card beside your screen with five lines. The first is the contract unit and its point value."
         }
       ],
@@ -96,7 +96,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A planned 1R loss that became 2.5R because the contract was never priced\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The stop that cost more</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Level held, stop in place, loss larger</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"200\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><line x1=\"72\" y1=\"150\" x2=\"568\" y2=\"150\" stroke=\"var(--gold)\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><text x=\"320\" y=\"128\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Level held. Stop where the structure said.</text><line x1=\"140\" y1=\"262\" x2=\"140\" y2=\"172\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><polygon points=\"132,178 140,164 148,178\" fill=\"var(--cyan)\"/><text x=\"158\" y=\"250\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Loss bigger than planned</text></g><g class=\"sv-rv\" style=\"animation-delay:36.8s\"><text x=\"430\" y=\"215\" font-size=\"40\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">2.5R</text><text x=\"430\" y=\"245\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Planned: 1R</text><text x=\"430\" y=\"268\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Sized on a feeling</text></g><g class=\"sv-rv\" style=\"animation-delay:25.7s\"><rect x=\"32\" y=\"304\" width=\"576\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"320\" y=\"328\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Contracts and ticks, not R</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A planned 1R loss that became 2.5R because the contract was never priced\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The stop that cost more</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Level held, stop in place, loss larger</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"200\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><line x1=\"72\" y1=\"150\" x2=\"568\" y2=\"150\" stroke=\"var(--gold)\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><text x=\"320\" y=\"128\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Level held. Stop where the structure said.</text><line x1=\"140\" y1=\"262\" x2=\"140\" y2=\"172\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><polygon points=\"132,178 140,164 148,178\" fill=\"var(--cyan)\"/><text x=\"158\" y=\"250\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Loss bigger than planned</text></g><g class=\"sv-rv\" style=\"animation-delay:28.0s\"><text x=\"430\" y=\"215\" font-size=\"40\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">2.5R</text><text x=\"430\" y=\"245\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Planned: 1R</text><text x=\"430\" y=\"268\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Sized on a feeling</text></g><g class=\"sv-rv\" style=\"animation-delay:19.1s\"><rect x=\"32\" y=\"304\" width=\"576\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"320\" y=\"328\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Contracts and ticks, not R</text></g></svg>"
         },
         {
           "title": "The multiplier",
@@ -166,8 +166,8 @@
               }
             ]
           },
-          "start": 54.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"MNQ and MES compared by index and multiplier\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The contract is a multiple</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">An index times a fixed dollar amount</text><g class=\"sv-rv\" style=\"animation-delay:10.8s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Nasdaq-100 Index</text><g class=\"sv-rv\" style=\"animation-delay:10.8s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 2 per point</text></g><g class=\"sv-rv\" style=\"animation-delay:39.1s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Cash settled at expiry</text></g></g><g class=\"sv-rv\" style=\"animation-delay:10.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">S&amp;P 500 Index</text><g class=\"sv-rv\" style=\"animation-delay:10.8s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 5 per point</text></g><g class=\"sv-rv\" style=\"animation-delay:39.1s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Cash settled at expiry</text></g></g><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The multiplier is also the point value.</text></g></svg>"
+          "start": 48.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"MNQ and MES compared by index and multiplier\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The contract is a multiple</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">An index times a fixed dollar amount</text><g class=\"sv-rv\" style=\"animation-delay:8.8s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Nasdaq-100 Index</text><g class=\"sv-rv\" style=\"animation-delay:8.8s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 2 per point</text></g><g class=\"sv-rv\" style=\"animation-delay:36.4s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Cash settled at expiry</text></g></g><g class=\"sv-rv\" style=\"animation-delay:8.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">S&amp;P 500 Index</text><g class=\"sv-rv\" style=\"animation-delay:8.8s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 5 per point</text></g><g class=\"sv-rv\" style=\"animation-delay:36.4s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Cash settled at expiry</text></g></g><g class=\"sv-rv\" style=\"animation-delay:20.0s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The multiplier is also the point value.</text></g></svg>"
         },
         {
           "title": "Know the multiple",
@@ -234,8 +234,8 @@
               }
             ]
           },
-          "start": 114.7,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Know what it is a multiple of</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before you trade any futures contract</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Know the index it follows</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Know the multiplier</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Know the point value</text></g><g class=\"sv-rv\" style=\"animation-delay:7.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">One contract's arithmetic</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Carried onto another</text><g class=\"sv-rv\" style=\"animation-delay:17.9s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reading the chart only</text></g></g><g class=\"sv-rv\" style=\"animation-delay:17.9s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Line one of the card: unit and point value.</text></g></svg>"
+          "start": 103.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Know what it is a multiple of</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before you trade any futures contract</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Know the index it follows</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Know the multiplier</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Know the point value</text></g><g class=\"sv-rv\" style=\"animation-delay:6.5s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">One contract's arithmetic</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Carried onto another</text><g class=\"sv-rv\" style=\"animation-delay:15.8s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reading the chart only</text></g></g><g class=\"sv-rv\" style=\"animation-delay:15.8s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Line one of the card: unit and point value.</text></g></svg>"
         }
       ],
       "check": [
@@ -284,7 +284,13 @@
           "why": "Two products on one index, or two similar indexes, still have their own units and multipliers."
         }
       ],
-      "audio": "../assets/audio/03/s1.mp3"
+      "audio": "../assets/audio/03/s1.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats",
+        "producer": "GR0ZA",
+        "url": "https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/"
+      },
+      "audio_v": "c47408a52d"
     },
     {
       "id": "s2",
@@ -292,7 +298,7 @@
       "sections": [
         "Ticks, Points And What They Are Worth"
       ],
-      "duration": 146.7,
+      "duration": 134.6,
       "cues": [
         {
           "start": 0,
@@ -300,79 +306,79 @@
           "chapter": "Ticks and points"
         },
         {
-          "start": 6.7,
+          "start": 5.9,
           "text": "That step is the tick. For MNQ and MES it is a quarter of an index point, so one point is four ticks."
         },
         {
-          "start": 16,
+          "start": 13.6,
           "text": "Tick value is what one tick is worth on one contract: tick size times the multiplier."
         },
         {
-          "start": 22.8,
+          "start": 19.9,
           "text": "For MNQ, a quarter times two dollars is fifty cents a tick. For MES, a quarter times five dollars is a dollar and a quarter."
         },
         {
-          "start": 32.8,
+          "start": 28.9,
           "text": "The two contracts share a ruler. They do not share a bill."
         },
         {
-          "start": 38.1,
+          "start": 33,
           "text": "Now, the conversion. Three steps, in this order, every time.",
           "chapter": "The conversion"
         },
         {
-          "start": 42.6,
+          "start": 37.5,
           "text": "One: points to ticks. Stop distance in points, divided by tick size. On MNQ and MES, points times four."
         },
         {
-          "start": 50.4,
+          "start": 45.8,
           "text": "Two: ticks to risk per contract. Stop ticks times tick value."
         },
         {
-          "start": 55.3,
+          "start": 50.8,
           "text": "Three: contracts. Your base R divided by the risk per contract, rounded down."
         },
         {
-          "start": 60.9,
+          "start": 56.7,
           "text": "As one line: contracts equals R divided by stop ticks times tick value."
         },
         {
-          "start": 66.5,
+          "start": 62.4,
           "text": "Rounding is always down. Two and a half contracts is two, never three. Rounding up is a small, silent rise in risk on every trade."
         },
         {
-          "start": 76.6,
+          "start": 71.2,
           "text": "Other contracts follow the same three steps. Only tick size and tick value change, and they change more than you would expect.",
           "chapter": "Other contracts"
         },
         {
-          "start": 85.5,
+          "start": 79.3,
           "text": "MYM, the micro Dow, ticks a full point."
         },
         {
-          "start": 89.3,
+          "start": 83,
           "text": "M2K, the micro Russell 2000, ticks a tenth of a point."
         },
         {
-          "start": 94.2,
+          "start": 88.1,
           "text": "Micro gold and micro euro are deliverable: a position held into expiry ends in delivery, not cash."
         },
         {
-          "start": 101.3,
+          "start": 95.4,
           "text": "Read the spec page, the exchange's specification sheet for the contract you trade. Never carry another contract's numbers onto it."
         },
         {
-          "start": 109.5,
+          "start": 104.2,
           "text": "The rule: size comes from R and stop ticks, through the tick value. The order is your level, the zone you marked; then stop, risk, size, entry.",
           "chapter": "The rule"
         },
         {
-          "start": 120.3,
+          "start": 113,
           "text": "Getting it wrong is picking the size first, three contracts every trade, and letting it set the risk. Or setting a loss and squeezing the stop until it fits.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 131.8,
+          "start": 122.8,
           "text": "It reveals the size was chosen before the structure was read. The fix: write the stop in ticks before the size, with the arithmetic beside it. A size with no arithmetic is not a plan yet."
         }
       ],
@@ -456,7 +462,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tick size and tick value for MNQ and MES\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Tick and tick value</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Per contract; value in dollars</text><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tick: 0.25 point</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 2</text></g><g class=\"sv-rv\" style=\"animation-delay:22.8s\"><text x=\"48\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Tick value: 0.50</text></g></g><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tick: 0.25 point</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 5</text></g><g class=\"sv-rv\" style=\"animation-delay:22.8s\"><text x=\"344\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Tick value: 1.25</text></g></g><g class=\"sv-rv\" style=\"animation-delay:32.8s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Same ruler. Different bill.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tick size and tick value for MNQ and MES\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Tick and tick value</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Per contract; value in dollars</text><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tick: 0.25 point</text></g><g class=\"sv-rv\" style=\"animation-delay:13.6s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 2</text></g><g class=\"sv-rv\" style=\"animation-delay:19.9s\"><text x=\"48\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Tick value: 0.50</text></g></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tick: 0.25 point</text></g><g class=\"sv-rv\" style=\"animation-delay:13.6s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Multiplier: 5</text></g><g class=\"sv-rv\" style=\"animation-delay:19.9s\"><text x=\"344\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Tick value: 1.25</text></g></g><g class=\"sv-rv\" style=\"animation-delay:28.9s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Same ruler. Different bill.</text></g></svg>"
         },
         {
           "title": "The conversion",
@@ -494,8 +500,8 @@
               }
             ]
           },
-          "start": 38.1,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Points to ticks, ticks to risk per contract, then contracts\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The conversion</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three steps, in this order, every time</text><g class=\"sv-rv\" style=\"animation-delay:4.5s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Step 1</text><text x=\"124\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Points to ticks: points ÷ tick size (points × 4)</text></g><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"124\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"145\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Step 2</text><text x=\"124\" y=\"145\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Risk per contract: stop ticks × tick value</text></g><g class=\"sv-rv\" style=\"animation-delay:17.2s\"><rect x=\"32\" y=\"164\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"185\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Step 3</text><text x=\"124\" y=\"185\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Contracts: base R ÷ risk per contract, round down</text></g><g class=\"sv-rv\" style=\"animation-delay:22.8s\"><rect x=\"32\" y=\"204\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"225\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">One line</text><text x=\"124\" y=\"225\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Contracts = R ÷ (stop ticks × tick value)</text></g><g class=\"sv-rv\" style=\"animation-delay:28.4s\"><rect x=\"32\" y=\"244\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"265\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Rounding</text><text x=\"124\" y=\"265\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2.5 contracts is 2, never 3</text></g></svg>"
+          "start": 33,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Points to ticks, ticks to risk per contract, then contracts\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The conversion</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three steps, in this order, every time</text><g class=\"sv-rv\" style=\"animation-delay:4.5s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Step 1</text><text x=\"124\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Points to ticks: points ÷ tick size (points × 4)</text></g><g class=\"sv-rv\" style=\"animation-delay:12.8s\"><rect x=\"32\" y=\"124\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"145\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Step 2</text><text x=\"124\" y=\"145\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Risk per contract: stop ticks × tick value</text></g><g class=\"sv-rv\" style=\"animation-delay:17.8s\"><rect x=\"32\" y=\"164\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"185\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Step 3</text><text x=\"124\" y=\"185\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Contracts: base R ÷ risk per contract, round down</text></g><g class=\"sv-rv\" style=\"animation-delay:23.7s\"><rect x=\"32\" y=\"204\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"225\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">One line</text><text x=\"124\" y=\"225\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Contracts = R ÷ (stop ticks × tick value)</text></g><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><rect x=\"32\" y=\"244\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"265\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Rounding</text><text x=\"124\" y=\"265\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2.5 contracts is 2, never 3</text></g></svg>"
         },
         {
           "title": "Other contracts",
@@ -553,8 +559,8 @@
               }
             ]
           },
-          "start": 76.6,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How tick size and settlement differ across micro contracts\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Other contracts, same steps</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Only the tick figures change</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Tick size varies</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">MNQ, MES: 0.25 point</text><g class=\"sv-rv\" style=\"animation-delay:8.9s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">MYM: 1.0 point</text></g><g class=\"sv-rv\" style=\"animation-delay:12.7s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">M2K: 0.10 point</text></g></g><g class=\"sv-rv\" style=\"animation-delay:17.6s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Settlement varies</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">MNQ, MES, MYM: cash</text><g class=\"sv-rv\" style=\"animation-delay:17.6s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">MGC, M6E: deliverable</text></g><g class=\"sv-rv\" style=\"animation-delay:24.7s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read the CME spec page</text></g></g></svg>"
+          "start": 71.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How tick size and settlement differ across micro contracts\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Other contracts, same steps</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Only the tick figures change</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Tick size varies</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">MNQ, MES: 0.25 point</text><g class=\"sv-rv\" style=\"animation-delay:8.1s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">MYM: 1.0 point</text></g><g class=\"sv-rv\" style=\"animation-delay:11.8s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">M2K: 0.10 point</text></g></g><g class=\"sv-rv\" style=\"animation-delay:16.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Settlement varies</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">MNQ, MES, MYM: cash</text><g class=\"sv-rv\" style=\"animation-delay:16.9s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">MGC, M6E: deliverable</text></g><g class=\"sv-rv\" style=\"animation-delay:24.2s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read the CME spec page</text></g></g></svg>"
         },
         {
           "title": "Size from R",
@@ -609,8 +615,8 @@
               }
             ]
           },
-          "start": 109.5,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The sizing rule and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Size comes from R</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never the other way round</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Level, stop, risk, size, entry</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Size = R ÷ (ticks × value)</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Arithmetic beside the size</text></g><g class=\"sv-rv\" style=\"animation-delay:10.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Size picked first</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Stop squeezed to fit</text><g class=\"sv-rv\" style=\"animation-delay:22.3s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No arithmetic on the plan</text></g></g></svg>"
+          "start": 104.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The sizing rule and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Size comes from R</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never the other way round</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Level, stop, risk, size, entry</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Size = R ÷ (ticks × value)</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Arithmetic beside the size</text></g><g class=\"sv-rv\" style=\"animation-delay:8.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Size picked first</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Stop squeezed to fit</text><g class=\"sv-rv\" style=\"animation-delay:18.6s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No arithmetic on the plan</text></g></g></svg>"
         }
       ],
       "check": [
@@ -659,7 +665,13 @@
           "why": "Size is the result of R and the stop. A size chosen first sets the risk."
         }
       ],
-      "audio": "../assets/audio/03/s2.mp3"
+      "audio": "../assets/audio/03/s2.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats",
+        "producer": "GR0ZA",
+        "url": "https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/"
+      },
+      "audio_v": "e376c6e46f"
     },
     {
       "id": "s3",
@@ -668,7 +680,7 @@
         "Sessions And The 16:00 Boundary",
         "Settlement, Expiry And The Roll"
       ],
-      "duration": 159.2,
+      "duration": 145.4,
       "cues": [
         {
           "start": 0,
@@ -676,73 +688,73 @@
           "chapter": "Trading hours"
         },
         {
-          "start": 9.7,
+          "start": 9.5,
           "text": "CME publishes in Central time. This course writes every time in Eastern."
         },
         {
-          "start": 14.9,
+          "start": 15.3,
           "text": "RTH, regular trading hours, is 9:30 a.m. to 4 p.m. Eastern, the US cash stock session. ETH, extended hours, is the rest."
         },
         {
-          "start": 23.9,
+          "start": 25.1,
           "text": "Where does a day end? CME's day starts at the evening open: Tuesday begins Monday at 6 p.m. Eastern.",
           "chapter": "Where your day ends"
         },
         {
-          "start": 31.7,
+          "start": 32.8,
           "text": "This course ends the day at 4 p.m. Eastern, the cash close. A convention the framework chooses, not a market fact."
         },
         {
-          "start": 40.3,
+          "start": 40.7,
           "text": "Two reasons. The levels you mark for your next session, the prices you plan to trade from, come from the cash session. And the daily settlement, the exchange's official closing price, falls in the last thirty seconds before 4 p.m."
         },
         {
-          "start": 55.9,
+          "start": 54.8,
           "text": "Your platform may define the prior day differently. Neither is wrong; know which you are looking at."
         },
         {
-          "start": 63,
+          "start": 61.3,
           "text": "The rule: every time on your plan is in Eastern, and your day ends at 4 p.m. Eastern.",
           "chapter": "The time rule"
         },
         {
-          "start": 70.5,
+          "start": 67.5,
           "text": "Getting it wrong is a Central time read as Eastern. The fix: end your chart's session template at 4 p.m. Eastern, and write the hours on the card as line three.",
           "chapter": "The wrong clock"
         },
         {
-          "start": 82.8,
+          "start": 78,
           "text": "Now, settlement in full. The daily settlement uses the lead month, the contract expected to be most active.",
           "chapter": "Settlement"
         },
         {
-          "start": 90.2,
+          "start": 85.5,
           "text": "MNQ and MES are listed quarterly: March, June, September and December. Each month is its own contract."
         },
         {
-          "start": 97.3,
+          "start": 93.5,
           "text": "The final settlement is set once, at expiry, from the opening prices of the index stocks on the third Friday. Trading in the expiring month stops at 9:30 a.m. Eastern that day."
         },
         {
-          "start": 110,
+          "start": 105.2,
           "text": "The roll is moving from the expiring month to the next: your charts, your levels, and any position you keep.",
           "chapter": "The roll"
         },
         {
-          "start": 118.2,
+          "start": 112.1,
           "text": "Most traders move before the last morning, so the expiring contract thins out. The customary roll date is the Monday before the third Friday."
         },
         {
-          "start": 127.9,
+          "start": 121.2,
           "text": "The roll date is published in advance. It is the one date here that sends an invitation."
         },
         {
-          "start": 135,
+          "start": 127.3,
           "text": "The rule: know the expiry date and your roll date for the contract you trade, before the week they fall in.",
           "chapter": "The roll rule"
         },
         {
-          "start": 143.5,
+          "start": 134.2,
           "text": "Getting it wrong is an order sent to the expiring month. The fix: the roll date is line five on the card, and in roll week you read the contract month on the ticket before your first order.",
           "chapter": "The wrong month"
         }
@@ -813,7 +825,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The trading day with the regular and extended hours\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Trading hours, in Eastern</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sunday 6 p.m. to Friday 5 p.m., halt 5 to 6 p.m.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"40\" y=\"104\" width=\"364\" height=\"50\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"222\" y=\"134\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">ETH: extended hours</text><rect x=\"404\" y=\"104\" width=\"152\" height=\"50\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"480\" y=\"134\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">RTH</text><rect x=\"556\" y=\"104\" width=\"24\" height=\"50\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"568\" y=\"134\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\"></text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"580\" y1=\"96\" x2=\"580\" y2=\"170\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"580\" y=\"192\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">5 p.m. halt</text></g><g class=\"sv-rv\" style=\"animation-delay:14.9s\"><text x=\"404\" y=\"222\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">RTH: 9:30 a.m. to 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:9.7s\"><text x=\"40\" y=\"222\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">CME's own times are Central</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The trading day with the regular and extended hours\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Trading hours, in Eastern</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sunday 6 p.m. to Friday 5 p.m., halt 5 to 6 p.m.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"40\" y=\"104\" width=\"364\" height=\"50\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"222\" y=\"134\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">ETH: extended hours</text><rect x=\"404\" y=\"104\" width=\"152\" height=\"50\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"480\" y=\"134\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">RTH</text><rect x=\"556\" y=\"104\" width=\"24\" height=\"50\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"568\" y=\"134\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\"></text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"580\" y1=\"96\" x2=\"580\" y2=\"170\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"580\" y=\"192\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">5 p.m. halt</text></g><g class=\"sv-rv\" style=\"animation-delay:15.3s\"><text x=\"404\" y=\"222\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">RTH: 9:30 a.m. to 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:9.5s\"><text x=\"40\" y=\"222\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">CME's own times are Central</text></g></svg>"
         },
         {
           "title": "Where the day ends",
@@ -903,8 +915,8 @@
               }
             ]
           },
-          "start": 23.9,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Where CME ends a day and where this course ends it, with the rule\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two definitions of a day</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">CME's day and this course's day</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">CME's day</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Starts at the evening open</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tuesday begins Monday, 6 p.m.</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Runs to the 5 p.m. halt</text></g><g class=\"sv-rv\" style=\"animation-delay:7.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">This course's day</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Ends at 4 p.m. Eastern</text><g class=\"sv-rv\" style=\"animation-delay:7.8s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The cash close</text></g><g class=\"sv-rv\" style=\"animation-delay:16.4s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Levels come from RTH</text></g></g><g class=\"sv-rv\" style=\"animation-delay:39.1s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule: every time in Eastern. The day ends at 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:46.6s\"><rect x=\"32\" y=\"322\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"344\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: a Central time read as Eastern</text></g></svg>"
+          "start": 25.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Where CME ends a day and where this course ends it, with the rule\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two definitions of a day</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">CME's day and this course's day</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">CME's day</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Starts at the evening open</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tuesday begins Monday, 6 p.m.</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Runs to the 5 p.m. halt</text></g><g class=\"sv-rv\" style=\"animation-delay:7.7s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">This course's day</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Ends at 4 p.m. Eastern</text><g class=\"sv-rv\" style=\"animation-delay:7.7s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The cash close</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Levels come from RTH</text></g></g><g class=\"sv-rv\" style=\"animation-delay:36.2s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule: every time in Eastern. The day ends at 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:42.4s\"><rect x=\"32\" y=\"322\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"344\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: a Central time read as Eastern</text></g></svg>"
         },
         {
           "title": "Settlement and expiry",
@@ -955,8 +967,8 @@
               }
             ]
           },
-          "start": 82.8,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Daily settlement, quarterly months and the expiry on the third Friday\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Settlement and expiry</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Quarterly months, one final settlement</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"40\" y1=\"170\" x2=\"600\" y2=\"170\" stroke=\"var(--text-muted)\" stroke-width=\"3\"/><line x1=\"520\" y1=\"140\" x2=\"520\" y2=\"200\" stroke=\"var(--gold)\" stroke-width=\"4\"/><text x=\"520\" y=\"128\" font-size=\"22\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">9:30 a.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"100\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Daily settlement</text></g><g class=\"sv-rv\" style=\"animation-delay:7.4s\"><text x=\"300\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Quarterly months</text></g><g class=\"sv-rv\" style=\"animation-delay:14.5s\"><text x=\"520\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Third Friday: stops</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"290\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Daily: last thirty seconds before 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:7.4s\"><text x=\"32\" y=\"314\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">March, June, September, December</text></g></svg>"
+          "start": 78,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Daily settlement, quarterly months and the expiry on the third Friday\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Settlement and expiry</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Quarterly months, one final settlement</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"40\" y1=\"170\" x2=\"600\" y2=\"170\" stroke=\"var(--text-muted)\" stroke-width=\"3\"/><line x1=\"520\" y1=\"140\" x2=\"520\" y2=\"200\" stroke=\"var(--gold)\" stroke-width=\"4\"/><text x=\"520\" y=\"128\" font-size=\"22\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">9:30 a.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"100\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Daily settlement</text></g><g class=\"sv-rv\" style=\"animation-delay:7.5s\"><text x=\"300\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Quarterly months</text></g><g class=\"sv-rv\" style=\"animation-delay:15.5s\"><text x=\"520\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Third Friday: stops</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"290\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Daily: last thirty seconds before 4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:7.5s\"><text x=\"32\" y=\"314\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">March, June, September, December</text></g></svg>"
         },
         {
           "title": "The roll",
@@ -1048,8 +1060,8 @@
               }
             ]
           },
-          "start": 110,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The expiring month and the next month, with the rule\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The roll</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">From the expiring month to the next</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Expiring month</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Thins out before expiry</text><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Stops at 9:30 a.m., Friday</text></g><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Customary roll: the Monday</text></g></g><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Next month</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Where the volume moves</text><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Charts and levels go here</text></g><g class=\"sv-rv\" style=\"animation-delay:33.5s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read the month on the ticket</text></g></g><g class=\"sv-rv\" style=\"animation-delay:25.0s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule: know expiry and roll date before that week</text></g><g class=\"sv-rv\" style=\"animation-delay:33.5s\"><rect x=\"32\" y=\"322\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"344\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: an order sent to the expiring month</text></g></svg>"
+          "start": 105.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The expiring month and the next month, with the rule\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The roll</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">From the expiring month to the next</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Expiring month</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Thins out before expiry</text><g class=\"sv-rv\" style=\"animation-delay:6.9s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Stops at 9:30 a.m., Friday</text></g><g class=\"sv-rv\" style=\"animation-delay:6.9s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Customary roll: the Monday</text></g></g><g class=\"sv-rv\" style=\"animation-delay:6.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Next month</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Where the volume moves</text><g class=\"sv-rv\" style=\"animation-delay:6.9s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Charts and levels go here</text></g><g class=\"sv-rv\" style=\"animation-delay:29.0s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read the month on the ticket</text></g></g><g class=\"sv-rv\" style=\"animation-delay:22.1s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule: know expiry and roll date before that week</text></g><g class=\"sv-rv\" style=\"animation-delay:29.0s\"><rect x=\"32\" y=\"322\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"344\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: an order sent to the expiring month</text></g></svg>"
         }
       ],
       "check": [
@@ -1098,7 +1110,13 @@
           "why": "An order sent to the expiring month on roll week is the mistake the check prevents."
         }
       ],
-      "audio": "../assets/audio/03/s3.mp3"
+      "audio": "../assets/audio/03/s3.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats",
+        "producer": "GR0ZA",
+        "url": "https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/"
+      },
+      "audio_v": "4bf3e96368"
     },
     {
       "id": "s4",
@@ -1108,7 +1126,7 @@
         "Funded And Evaluation Accounts",
         "Tax, In One Paragraph"
       ],
-      "duration": 158.1,
+      "duration": 143.5,
       "cues": [
         {
           "start": 0,
@@ -1116,73 +1134,73 @@
           "chapter": "Margin"
         },
         {
-          "start": 11.2,
+          "start": 8.6,
           "text": "Initial margin opens the position. Maintenance margin is the lower level your account must stay above to keep it."
         },
         {
-          "start": 19,
+          "start": 16.2,
           "text": "Leverage in one line. At an index level of 20,000, one MNQ is 40,000 dollars of exposure, and a loss is measured against all of it, not against the margin."
         },
         {
-          "start": 30.9,
+          "start": 27.6,
           "text": "Brokers change margin when they choose, so this module quotes no figure. CME's margin pages and your broker's page have the live numbers."
         },
         {
-          "start": 40.2,
+          "start": 36.7,
           "text": "R decides size. Margin only caps it. The rule: size from R and stop ticks; margin is a ceiling, never a target.",
           "chapter": "The rule"
         },
         {
-          "start": 49.2,
+          "start": 44.8,
           "text": "Getting it wrong is thinking the margin covers six, so six. It reveals the broker's permission is being read as advice.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 57.8,
+          "start": 52.5,
           "text": "Margin will happily let you trade six. Margin does not know where your stop is."
         },
         {
-          "start": 64.1,
+          "start": 58,
           "text": "Now, funded and evaluation accounts: the same contract with four constraints written by the firm, not the exchange.",
           "chapter": "Funded accounts"
         },
         {
-          "start": 71.6,
+          "start": 65.5,
           "text": "One: a daily loss limit, a loss that stops trading for the day."
         },
         {
-          "start": 77.2,
+          "start": 70.3,
           "text": "Two: a drawdown limit, a loss from a reference balance that ends the account."
         },
         {
-          "start": 83.2,
+          "start": 75.7,
           "text": "Three: allowed hours, the times positions must be flat."
         },
         {
-          "start": 87.3,
+          "start": 80,
           "text": "Four: allowed contracts, which products and how many at once."
         },
         {
-          "start": 91.8,
+          "start": 84.4,
           "text": "None of these change what a tick is worth. They change the room you have, and firms change their terms, so read your firm's own pages."
         },
         {
-          "start": 102.3,
+          "start": 92.6,
           "text": "Evaluation accounts are simulated, and some funded accounts are too. A simulated fill is not a fill at the exchange, so those trades are tagged sim in your journal, the record of every trade, and never pooled with live trades.",
           "chapter": "Sim results"
         },
         {
-          "start": 117.9,
+          "start": 106.5,
           "text": "The firm's limits are a backstop around your rules, not a replacement. Getting it wrong is trading up to the firm's limit instead of your own 2R kill switch, the daily loss limit from Module 2, or counting a passed evaluation as evidence.",
           "chapter": "Firm limits"
         },
         {
-          "start": 134.6,
+          "start": 121.1,
           "text": "Tax, in one paragraph. In the US, regulated futures like MNQ and MES are generally Section 1256 contracts, taxed as 60 percent long-term and 40 percent short-term, and a position still open at year end is treated as sold that day.",
           "chapter": "Tax"
         },
         {
-          "start": 150.6,
+          "start": 137.9,
           "text": "That is a fact about the tax code, not tax advice. Check with a tax professional."
         }
       ],
@@ -1244,7 +1262,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What margin is and what it is not\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Margin is not your risk</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A deposit, not a price and not a cap</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Margin is</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A good-faith deposit</text><g class=\"sv-rv\" style=\"animation-delay:11.2s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Initial: to open</text></g><g class=\"sv-rv\" style=\"animation-delay:11.2s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Maintenance: to stay open</text></g></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Margin is not</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A price you pay</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The most you can lose</text></g><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The loss is on the whole exposure</text></g></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What margin is and what it is not\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Margin is not your risk</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A deposit, not a price and not a cap</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Margin is</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A good-faith deposit</text><g class=\"sv-rv\" style=\"animation-delay:8.6s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Initial: to open</text></g><g class=\"sv-rv\" style=\"animation-delay:8.6s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Maintenance: to stay open</text></g></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Margin is not</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A price you pay</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The most you can lose</text></g><g class=\"sv-rv\" style=\"animation-delay:16.2s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The loss is on the whole exposure</text></g></g></svg>"
         },
         {
           "title": "R sets size, margin caps it",
@@ -1312,8 +1330,8 @@
               }
             ]
           },
-          "start": 40.2,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The margin rule and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">R sets the size</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Margin is a ceiling, never a target</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">R decides</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">R ÷ (stop ticks × value)</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Round down</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Margin caps</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Check it as a ceiling</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never a target</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Smaller? Write the reason</text></g><g class=\"sv-rv\" style=\"animation-delay:9.0s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: the margin covers six, so six</text></g></svg>"
+          "start": 36.7,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The margin rule and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">R sets the size</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Margin is a ceiling, never a target</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">R decides</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">R ÷ (stop ticks × value)</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Round down</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Margin caps</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Check it as a ceiling</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never a target</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Smaller? Write the reason</text></g><g class=\"sv-rv\" style=\"animation-delay:8.1s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: the margin covers six, so six</text></g></svg>"
         },
         {
           "title": "Four parts",
@@ -1353,8 +1371,8 @@
               "size": 20
             }
           },
-          "start": 64.1,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four constraints of a funded or evaluation account\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Funded accounts: four parts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written by the firm, not the exchange</text><g class=\"sv-rv\" style=\"animation-delay:7.5s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Daily loss limit</text></g><g class=\"sv-rv\" style=\"animation-delay:13.1s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Drawdown limit</text></g><g class=\"sv-rv\" style=\"animation-delay:19.1s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Allowed hours</text></g><g class=\"sv-rv\" style=\"animation-delay:23.2s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Allowed contracts</text></g><g class=\"sv-rv\" style=\"animation-delay:27.7s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">The firm's</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">not CME's</text></g></svg>"
+          "start": 58,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four constraints of a funded or evaluation account\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Funded accounts: four parts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written by the firm, not the exchange</text><g class=\"sv-rv\" style=\"animation-delay:7.5s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Daily loss limit</text></g><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Drawdown limit</text></g><g class=\"sv-rv\" style=\"animation-delay:17.7s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Allowed hours</text></g><g class=\"sv-rv\" style=\"animation-delay:22.0s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Allowed contracts</text></g><g class=\"sv-rv\" style=\"animation-delay:26.4s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">The firm's</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">not CME's</text></g></svg>"
         },
         {
           "title": "Sim and the firm's limit",
@@ -1438,8 +1456,8 @@
               }
             ]
           },
-          "start": 102.3,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Live trades against sim trades, and the firm's limit as a backstop\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Sim results and firm limits</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A backstop, not a plan</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Live trades</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Filled at the exchange</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Measured as live</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Sim trades</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Evaluation, some funded</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tagged sim in the journal</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never pooled with live</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule: the firm's limit is a backstop. Your 2R sits inside.</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"32\" y=\"322\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"344\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: trading to the firm's limit, not your 2R</text></g></svg>"
+          "start": 92.6,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Live trades against sim trades, and the firm's limit as a backstop\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Sim results and firm limits</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A backstop, not a plan</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Live trades</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Filled at the exchange</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Measured as live</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Sim trades</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Evaluation, some funded</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tagged sim in the journal</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never pooled with live</text></g><g class=\"sv-rv\" style=\"animation-delay:13.9s\"><rect x=\"32\" y=\"282\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"48\" y=\"304\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rule: the firm's limit is a backstop. Your 2R sits inside.</text></g><g class=\"sv-rv\" style=\"animation-delay:13.9s\"><rect x=\"32\" y=\"322\" width=\"576\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"344\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Wrong: trading to the firm's limit, not your 2R</text></g></svg>"
         },
         {
           "title": "Tax, in one paragraph",
@@ -1494,8 +1512,8 @@
               }
             ]
           },
-          "start": 134.6,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How regulated futures are generally taxed, and what this module does not cover\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Tax, in one paragraph</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">US federal law; not tax advice</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Section 1256</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Regulated futures, MNQ, MES</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">60% long-term, 40% short-term</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Open at year end: marked</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Not covered</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your country</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your account and return</text><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Ask a tax professional</text></g></g></svg>"
+          "start": 121.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How regulated futures are generally taxed, and what this module does not cover\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Tax, in one paragraph</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">US federal law; not tax advice</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Section 1256</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Regulated futures, MNQ, MES</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">60% long-term, 40% short-term</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Open at year end: marked</text></g><g class=\"sv-rv\" style=\"animation-delay:16.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Not covered</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your country</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your account and return</text><g class=\"sv-rv\" style=\"animation-delay:16.8s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Ask a tax professional</text></g></g></svg>"
         }
       ],
       "check": [
@@ -1544,7 +1562,13 @@
           "why": "The firm's limit is a backstop around your own rules."
         }
       ],
-      "audio": "../assets/audio/03/s4.mp3"
+      "audio": "../assets/audio/03/s4.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats",
+        "producer": "GR0ZA",
+        "url": "https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/"
+      },
+      "audio_v": "f0e7749b4e"
     },
     {
       "id": "s5",
@@ -1552,7 +1576,7 @@
       "sections": [
         "Worked Case: One R On Two Contracts"
       ],
-      "duration": 137.6,
+      "duration": 128.7,
       "cues": [
         {
           "start": 0,
@@ -1560,60 +1584,60 @@
           "chapter": "The plan"
         },
         {
-          "start": 12.3,
+          "start": 12.7,
           "text": "Risk per trade is 1R. The numbers are chosen because they divide easily, not as a recommendation. Module 14 covers choosing yours."
         },
         {
-          "start": 21.2,
+          "start": 22.1,
           "text": "The structure puts the stop 80 ticks away, 20 points. The same 80 ticks is used on both contracts, so only the arithmetic changes."
         },
         {
-          "start": 30.9,
+          "start": 31.2,
           "text": "On MNQ, 80 ticks at the MNQ tick value puts 0.4R on each contract.",
           "chapter": "On MNQ"
         },
         {
-          "start": 36.9,
+          "start": 37.8,
           "text": "One R divided by 0.4R is two and a half, rounded down to 2 contracts, risking 0.8R. Rounding up to 3 would risk 1.2R."
         },
         {
-          "start": 46.6,
+          "start": 48.2,
           "text": "On MES, the same 80 ticks puts a full 1R on each contract. One contract, risking exactly 1R.",
           "chapter": "On MES"
         },
         {
-          "start": 54.1,
+          "start": 55.9,
           "text": "Same R, different contracts: two MNQ or one MES on this stop. Neither is more aggressive. Each is 1R or under, and that is all the size line is for."
         },
         {
-          "start": 66,
+          "start": 66.3,
           "text": "Now the structure is wider. The stop is 160 ticks. On MNQ each contract carries 0.8R, so the size is 1 contract.",
           "chapter": "A wider stop"
         },
         {
-          "start": 74.9,
+          "start": 76.5,
           "text": "On MES each contract would carry 2R, more than your whole risk for the trade. So the size is 0, and there is no MES trade here."
         },
         {
-          "start": 85.7,
+          "start": 85.5,
           "text": "You do not raise R to make it fit. You do not squeeze the stop to make it fit. The arithmetic does not negotiate."
         },
         {
-          "start": 95.4,
+          "start": 93.2,
           "text": "A wider stop cut the size on both contracts. It never raised the risk."
         },
         {
-          "start": 101.4,
+          "start": 98.7,
           "text": "Check it against the 2R kill switch from Module 2. At the MNQ size, two losses come to 1.6R, inside it. On MES, two full losses reach 2R, and the switch fires.",
           "chapter": "The kill switch"
         },
         {
-          "start": 114,
+          "start": 110.8,
           "text": "The rule: size comes from three numbers you know before the session: your base R, the stop in ticks, and the tick value. No margin figure, no index level, no view on where price goes.",
           "chapter": "The rule"
         },
         {
-          "start": 127.8,
+          "start": 122,
           "text": "Getting it wrong is letting a size you like set the stop. The case ran the other way: stop first, size last.",
           "chapter": "Getting it wrong"
         }
@@ -1647,7 +1671,7 @@
             "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The base risk and the stop distance for the composite plan\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Worked case: the plan</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Composite plan. Invented numbers, no outcome</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Plan</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Composite. Belongs to no one. Stops before any outcome</text></g><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Base</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Risk per trade is 1R</text></g><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Stop</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">80 ticks, 20 points, on both contracts</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The base risk and the stop distance for the composite plan\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Worked case: the plan</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Composite plan. Invented numbers, no outcome</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Plan</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Composite. Belongs to no one. Stops before any outcome</text></g><g class=\"sv-rv\" style=\"animation-delay:12.7s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Base</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Risk per trade is 1R</text></g><g class=\"sv-rv\" style=\"animation-delay:22.1s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Stop</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">80 ticks, 20 points, on both contracts</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
         },
         {
           "title": "One R, two contracts",
@@ -1724,8 +1748,8 @@
             ],
             "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
           },
-          "start": 30.9,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"MNQ and MES sized on the same 80-tick stop\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The same 80 ticks</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Risk per contract, then contracts, in R</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">0.4R per contract</text><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">1 ÷ 0.4 = 2.5, rounded down</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><text x=\"48\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">2 contracts: 0.8R</text></g></g><g class=\"sv-rv\" style=\"animation-delay:15.7s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">1R per contract</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">1 ÷ 1 = 1</text><text x=\"344\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">1 contract: 1R</text></g><g class=\"sv-rv\" style=\"animation-delay:23.2s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Same R. Two MNQ or one MES.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
+          "start": 31.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"MNQ and MES sized on the same 80-tick stop\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The same 80 ticks</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Risk per contract, then contracts, in R</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">0.4R per contract</text><g class=\"sv-rv\" style=\"animation-delay:6.6s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">1 ÷ 0.4 = 2.5, rounded down</text></g><g class=\"sv-rv\" style=\"animation-delay:6.6s\"><text x=\"48\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">2 contracts: 0.8R</text></g></g><g class=\"sv-rv\" style=\"animation-delay:17.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">1R per contract</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">1 ÷ 1 = 1</text><text x=\"344\" y=\"200\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">1 contract: 1R</text></g><g class=\"sv-rv\" style=\"animation-delay:24.7s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Same R. Two MNQ or one MES.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
         },
         {
           "title": "A wider stop",
@@ -1801,8 +1825,8 @@
             ],
             "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
           },
-          "start": 66,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"MNQ and MES sized on a 160-tick stop\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A wider stop</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">160 ticks, 40 points</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">0.8R per contract</text><text x=\"48\" y=\"168\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">1 contract</text></g><g class=\"sv-rv\" style=\"animation-delay:8.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2R per contract</text><text x=\"344\" y=\"168\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">0 contracts</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Raise R? No. Squeeze the stop? No.</text></g><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><text x=\"32\" y=\"324\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A wider stop cuts the size. It never adds risk.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
+          "start": 66.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"MNQ and MES sized on a 160-tick stop\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A wider stop</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">160 ticks, 40 points</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">0.8R per contract</text><text x=\"48\" y=\"168\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">1 contract</text></g><g class=\"sv-rv\" style=\"animation-delay:10.2s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2R per contract</text><text x=\"344\" y=\"168\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">0 contracts</text></g><g class=\"sv-rv\" style=\"animation-delay:19.2s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Raise R? No. Squeeze the stop? No.</text></g><g class=\"sv-rv\" style=\"animation-delay:26.9s\"><text x=\"32\" y=\"324\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A wider stop cuts the size. It never adds risk.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
         },
         {
           "title": "The kill switch",
@@ -1849,7 +1873,7 @@
             ],
             "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
           },
-          "start": 101.4,
+          "start": 98.7,
           "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Two losses on MNQ and on MES against the 2R kill switch\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Against the 2R kill switch</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Two full losses each</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">MNQ, 2 contracts</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Two losses: 1.6R</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Inside the 2R switch</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">MES, 1 contract</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Two losses: 2R</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The switch fires</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
         },
         {
@@ -1917,8 +1941,8 @@
             ],
             "credit": "Hypothetical illustration. Not actual trading; no real fills or slippage."
           },
-          "start": 114,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The sizing rule from the worked case and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Size from three numbers</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Known before the session</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Base R</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Stop in ticks</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tick value</text></g><g class=\"sv-rv\" style=\"animation-delay:13.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A size you like</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sets the stop</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Case: stop first, size last</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">No margin figure. No view on where price goes.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
+          "start": 110.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The sizing rule from the worked case and the way it is broken\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Size from three numbers</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Known before the session</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Base R</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Stop in ticks</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tick value</text></g><g class=\"sv-rv\" style=\"animation-delay:11.2s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A size you like</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sets the stop</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Case: stop first, size last</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">No margin figure. No view on where price goes.</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not actual trading; no real fills or slippage.</text></svg>"
         }
       ],
       "check": [
@@ -1967,7 +1991,13 @@
           "why": "The case ran stop first, size last. A size chosen first sets the risk."
         }
       ],
-      "audio": "../assets/audio/03/s5.mp3"
+      "audio": "../assets/audio/03/s5.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats",
+        "producer": "GR0ZA",
+        "url": "https://pixabay.com/music/lofi-rap-rap-beat-beats-557557/"
+      },
+      "audio_v": "47c5c56978"
     },
     {
       "id": "s6",
@@ -1978,7 +2008,7 @@
         "Where It Goes Next",
         "Sources"
       ],
-      "duration": 122.8,
+      "duration": 107.6,
       "cues": [
         {
           "start": 0,
@@ -1986,63 +2016,63 @@
           "chapter": "The score"
         },
         {
-          "start": 9.3,
+          "start": 8.5,
           "text": "One: contract unit and point value."
         },
         {
-          "start": 12.3,
+          "start": 11.8,
           "text": "Two: tick size and tick value."
         },
         {
-          "start": 15.4,
+          "start": 14.9,
           "text": "Three: session hours, including the daily halt, in Eastern."
         },
         {
-          "start": 19.5,
+          "start": 19.3,
           "text": "Four: settlement method, and when trading in the expiring month stops."
         },
         {
-          "start": 24.4,
+          "start": 24.3,
           "text": "Five: your next roll date."
         },
         {
-          "start": 27,
+          "start": 27.2,
           "text": "One point for each match. Five of five: you know your instrument. Three or four: the missing lines go on the card before your next session. Under three: no live order until all five are written down."
         },
         {
-          "start": 41.5,
+          "start": 39.4,
           "text": "The rule: one line overrides the score. If you missed the tick value, you have been sizing without it, so treat the total as under three.",
           "chapter": "The rule"
         },
         {
-          "start": 52,
+          "start": 47.5,
           "text": "Four out of five with the tick value missing is a zero in a nice jacket."
         },
         {
-          "start": 58.7,
+          "start": 52.9,
           "text": "Your assignment. Open your contract's spec page on CME's site and write those five lines on a card, copied from the page, not from memory.",
           "chapter": "Assignment"
         },
         {
-          "start": 68.7,
+          "start": 62,
           "text": "Keep the card beside the screen. That is the whole assignment. No card, no order."
         },
         {
-          "start": 75.1,
+          "start": 67.5,
           "text": "Getting it wrong is filling the card from memory and never checking it against the page.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 81.8,
+          "start": 73.1,
           "text": "Where it goes next. The whole module in one line: size is the result of R, stop ticks and tick value, and everything else, margin, the firm's limits, the contract's size, is a ceiling around that number.",
           "chapter": "Where it goes next"
         },
         {
-          "start": 96.3,
+          "start": 85.5,
           "text": "The 2R kill switch from Module 2 is a figure in the account setting: 2 times your base R. The tick arithmetic here is how you check it against the trades you plan."
         },
         {
-          "start": 109.3,
+          "start": 95.9,
           "text": "Module 6, What Counts As A Level, puts the 4 p.m. boundary to work on the levels themselves. Module 14, Trade Construction, covers choosing your base R and the full sizing step."
         }
       ],
@@ -2084,7 +2114,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The five lines of the contract card\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Five questions, from memory</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">For the contract you trade</text><g class=\"sv-rv\" style=\"animation-delay:9.3s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">1</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Contract unit and point value</text></g><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">2</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tick size and tick value</text></g><g class=\"sv-rv\" style=\"animation-delay:15.4s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Session hours, including the halt, in Eastern</text></g><g class=\"sv-rv\" style=\"animation-delay:19.5s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Settlement, and when the expiring month stops</text></g><g class=\"sv-rv\" style=\"animation-delay:24.4s\"><rect x=\"32\" y=\"250\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"124\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your next roll date</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The five lines of the contract card\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Five questions, from memory</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">For the contract you trade</text><g class=\"sv-rv\" style=\"animation-delay:8.5s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">1</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Contract unit and point value</text></g><g class=\"sv-rv\" style=\"animation-delay:11.8s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">2</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tick size and tick value</text></g><g class=\"sv-rv\" style=\"animation-delay:14.9s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Session hours, including the halt, in Eastern</text></g><g class=\"sv-rv\" style=\"animation-delay:19.3s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Settlement, and when the expiring month stops</text></g><g class=\"sv-rv\" style=\"animation-delay:24.3s\"><rect x=\"32\" y=\"250\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"124\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Your next roll date</text></g></svg>"
         },
         {
           "title": "What the score means",
@@ -2131,8 +2161,8 @@
               }
             ]
           },
-          "start": 27,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The verdict for each score band, and the tick value override\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the score means</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One point for each answer that matches</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">5 of 5</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">You know your instrument</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">3 or 4</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Missing lines go on the card first</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Under 3</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No live order until all five are written</text></g><g class=\"sv-rv\" style=\"animation-delay:14.5s\"><text x=\"32\" y=\"350\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">No tick value: treat it as under 3, whatever the total.</text></g></svg>"
+          "start": 27.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The verdict for each score band, and the tick value override\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the score means</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One point for each answer that matches</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">5 of 5</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">You know your instrument</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">3 or 4</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Missing lines go on the card first</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Under 3</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No live order until all five are written</text></g><g class=\"sv-rv\" style=\"animation-delay:12.2s\"><text x=\"32\" y=\"350\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">No tick value: treat it as under 3, whatever the total.</text></g></svg>"
         },
         {
           "title": "The assignment",
@@ -2164,8 +2194,8 @@
               }
             ]
           },
-          "start": 58.7,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Write five lines on a card from the CME spec page\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your assignment: the card</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before your next session</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Unit, point</text></g><g class=\"sv-rv\" style=\"animation-delay:1.3s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Tick, value</text></g><g class=\"sv-rv\" style=\"animation-delay:2.6s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Hours, ET</text></g><g class=\"sv-rv\" style=\"animation-delay:3.9s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Settlement</text></g><g class=\"sv-rv\" style=\"animation-delay:5.2s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Next roll</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Five lines from the CME spec page:</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Beside the screen. No card, no order.</text></g><g class=\"sv-rv\" style=\"animation-delay:16.4s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">From memory is a draft. The spec page is the check.</text></g></svg>"
+          "start": 52.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Write five lines on a card from the CME spec page\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your assignment: the card</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before your next session</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Unit, point</text></g><g class=\"sv-rv\" style=\"animation-delay:1.3s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Tick, value</text></g><g class=\"sv-rv\" style=\"animation-delay:2.6s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Hours, ET</text></g><g class=\"sv-rv\" style=\"animation-delay:3.9s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Settlement</text></g><g class=\"sv-rv\" style=\"animation-delay:5.2s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Next roll</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Five lines from the CME spec page:</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Beside the screen. No card, no order.</text></g><g class=\"sv-rv\" style=\"animation-delay:14.6s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">From memory is a draft. The spec page is the check.</text></g></svg>"
         },
         {
           "title": "Where it goes next",
@@ -2193,8 +2223,8 @@
               }
             ]
           },
-          "start": 81.8,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The summary of the module and where it goes next\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Size from R, in ticks</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three modules that use this arithmetic</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Size is the result of R, stop ticks and tick value.</text></g><g class=\"sv-rv\" style=\"animation-delay:14.5s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:27.5s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 06</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What Counts As A Level</text></g><g class=\"sv-rv\" style=\"animation-delay:27.5s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 14</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trade Construction</text></g></svg>"
+          "start": 73.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The summary of the module and where it goes next\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Size from R, in ticks</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three modules that use this arithmetic</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Size is the result of R, stop ticks and tick value.</text></g><g class=\"sv-rv\" style=\"animation-delay:12.4s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:22.8s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 06</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What Counts As A Level</text></g><g class=\"sv-rv\" style=\"animation-delay:22.8s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 14</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trade Construction</text></g></svg>"
         }
       ],
       "check": [
@@ -2243,7 +2273,13 @@
           "why": "The spec page is the check."
         }
       ],
-      "audio": "../assets/audio/03/s6.mp3"
+      "audio": "../assets/audio/03/s6.mp3",
+      "music": {
+        "title": "Wega | Old School Hiphop Music",
+        "producer": "kontraa",
+        "url": "https://pixabay.com/music/beats-wega-old-school-hiphop-music-422621/"
+      },
+      "audio_v": "4fd366fbb6"
     }
   ],
   "quiz": {
