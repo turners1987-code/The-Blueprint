@@ -1,0 +1,2399 @@
+{
+  "module": "15-writing-the-plan",
+  "segments": [
+    {
+      "id": "s1",
+      "title": "The scenario and the branch",
+      "sections": [
+        "The Plan That Was A Forecast",
+        "The Branch: If, Then, Unless"
+      ],
+      "cues": [
+        {
+          "chapter": "The scenario",
+          "text": "You wrote a plan before the open. It said the overnight looked firm and the session should go higher.",
+          "start": 0
+        },
+        {
+          "text": "At 9:41 a.m. price dropped forty points, and you bought it, because the plan said higher.",
+          "start": 7
+        },
+        {
+          "text": "At 9:52 you bought it again. By 10 a.m. you had been stopped out twice, and you could not say where the plan had told you that you were wrong.",
+          "start": 13
+        },
+        {
+          "text": "It never said. That was a forecast with a direction in it, and a forecast has no price at which it ends.",
+          "start": 24.1
+        },
+        {
+          "text": "The forecast was never wrong. It was never anything, either.",
+          "start": 32.2
+        },
+        {
+          "chapter": "The branch",
+          "text": "Now, the branch. Your plan is a short list of branches. A branch is one if-then line: if price does a named thing at a named level, you do a named thing, until a named price says you were wrong.",
+          "start": 35.9
+        },
+        {
+          "text": "A branch has three parts, always in this order.",
+          "start": 50.7
+        },
+        {
+          "text": "One: the thesis. If a behaviour at a zone, and a trigger fires, then a target level. Four slots, each one something you can point to on a chart.",
+          "start": 54.1
+        },
+        {
+          "text": "Two: the invalidation. The price, judged on a candle close, at which the thesis is wrong.",
+          "start": 64.8
+        },
+        {
+          "text": "Three: the conviction. Strong, moderate or thin.",
+          "start": 70.7
+        },
+        {
+          "text": "Levels are written as zones, price bands with two edges, so a branch always knows its far edge, the one on the side away from where price arrives.",
+          "start": 73.3
+        },
+        {
+          "chapter": "The example",
+          "text": "Here is a full branch, from a composite plan, invented prices. If price accepts above the pd-high zone, the prior-day high, 21,684 to 21,690, and a Pause N Go fires on the pullback, then prior-week-high is the target.",
+          "start": 83.7
+        },
+        {
+          "text": "Accepts means a 5-minute bar closes above the zone. A Pause N Go is two quiet one-minute bars inside the zone, then a close above their high.",
+          "start": 97.8
+        },
+        {
+          "text": "Invalidation: a 5-minute close back below 21,684. Conviction: moderate. Nothing in it says the market will go up. It says what you do if it does one particular thing in one particular place.",
+          "start": 107.8
+        },
+        {
+          "chapter": "The rule",
+          "text": "The rule: every directional line of the plan is a branch: thesis, invalidation, conviction, in that order.",
+          "start": 120
+        },
+        {
+          "chapter": "Getting it wrong",
+          "text": "Getting it wrong is a plan that opens with NQ higher, or looking for longs. You are planning the market's actions instead of your own.",
+          "start": 126.3
+        },
+        {
+          "text": "The fix: every directional line begins with the word if. A line that begins with anything else is struck through before 9:25 a.m.",
+          "start": 135.6
+        }
+      ],
+      "slides": [
+        {
+          "title": "A plan that was a forecast",
+          "kind": "scenario",
+          "data": {
+            "title": "A plan that was a forecast",
+            "subtitle": "It said higher. It never said wrong",
+            "aria": "The plan says the session goes higher; price drops, you buy it twice, and the plan never named a price at which it was wrong",
+            "panel": {
+              "label": "The plan said: higher",
+              "note": "No price said you were wrong"
+            },
+            "question": {
+              "mark": "?",
+              "head": "Where were you wrong?",
+              "sub": "The plan never said",
+              "cue": 3
+            },
+            "banner": {
+              "text": "A forecast has no end",
+              "tone": "gold",
+              "cue": 4
+            }
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The plan says the session goes higher; price drops, you buy it twice, and the plan never named a price at which it was wrong\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A plan that was a forecast</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It said higher. It never said wrong</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"200\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><line x1=\"72\" y1=\"150\" x2=\"568\" y2=\"150\" stroke=\"var(--gold)\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><text x=\"320\" y=\"128\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">The plan said: higher</text><line x1=\"140\" y1=\"262\" x2=\"140\" y2=\"172\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><polygon points=\"132,178 140,164 148,178\" fill=\"var(--cyan)\"/><text x=\"158\" y=\"250\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No price said you were wrong</text></g><g class=\"sv-rv\" style=\"animation-delay:24.1s\"><text x=\"430\" y=\"215\" font-size=\"40\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">?</text><text x=\"430\" y=\"245\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Where were you wrong?</text><text x=\"430\" y=\"268\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">The plan never said</text></g><g class=\"sv-rv\" style=\"animation-delay:32.2s\"><rect x=\"32\" y=\"304\" width=\"576\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"320\" y=\"328\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">A forecast has no end</text></g></svg>"
+        },
+        {
+          "title": "A branch has three parts",
+          "kind": "list",
+          "data": {
+            "title": "A branch has three parts",
+            "subtitle": "Always in this order",
+            "aria": "A branch holds a thesis, an invalidation and a conviction, in that order; levels are written as zones with two edges",
+            "rows": {
+              "items": [
+                {
+                  "text": "Thesis: if, at a zone, then a target",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "Invalidation: the price that ends it",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "Conviction: strong, moderate or thin",
+                  "tone": "cyan",
+                  "cue": 4
+                }
+              ]
+            },
+            "aside": {
+              "cue": 0,
+              "head": "One branch",
+              "sub": "if, then, unless",
+              "size": 18
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 262,
+                "text": "Levels are zones: two edges, a known far edge.",
+                "size": 14,
+                "cue": 5,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 35.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A branch holds a thesis, an invalidation and a conviction, in that order; levels are written as zones with two edges\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A branch has three parts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Always in this order</text><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Thesis: if, at a zone, then a target</text></g><g class=\"sv-rv\" style=\"animation-delay:28.9s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Invalidation: the price that ends it</text></g><g class=\"sv-rv\" style=\"animation-delay:34.8s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Conviction: strong, moderate or thin</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"18\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">One branch</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">if, then, unless</text></g><g class=\"sv-rv\" style=\"animation-delay:37.4s\"><text x=\"32\" y=\"262\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">Levels are zones: two edges, a known far edge.</text></g></svg>"
+        },
+        {
+          "title": "One full branch",
+          "kind": "calm",
+          "data": {
+            "title": "One full branch",
+            "subtitle": "A composite plan, invented prices",
+            "aria": "If price accepts above the pd-high zone, 21,684 to 21,690, and a Pause N Go fires on the pullback, the target is prior-week-high; invalidation a 5-minute close below 21,684; conviction moderate",
+            "blocks": [
+              {
+                "type": "card",
+                "box": [
+                  32,
+                  84,
+                  576,
+                  130
+                ],
+                "tone": "cyan",
+                "head": "If, then",
+                "headTone": "cyan",
+                "hx": 16,
+                "hy": 28,
+                "headSize": 15,
+                "lead": 58,
+                "pitch": 24,
+                "size": 15,
+                "cls": "t",
+                "lines": [
+                  "If price accepts above the pd-high zone, 21,684 to 21,690,",
+                  "and a Pause N Go fires on the pullback,",
+                  "then prior-week-high is the target."
+                ],
+                "cue": 0
+              },
+              {
+                "type": "card",
+                "box": [
+                  32,
+                  232,
+                  280,
+                  70
+                ],
+                "tone": "red",
+                "head": "Invalidation",
+                "headTone": "red",
+                "hx": 16,
+                "hy": 28,
+                "headSize": 15,
+                "lead": 54,
+                "size": 14,
+                "lines": [
+                  "A 5-minute close below 21,684"
+                ],
+                "cue": 2
+              },
+              {
+                "type": "card",
+                "box": [
+                  328,
+                  232,
+                  280,
+                  70
+                ],
+                "tone": "gold",
+                "head": "Conviction",
+                "headTone": "gold",
+                "hx": 16,
+                "hy": 28,
+                "headSize": 15,
+                "lead": 54,
+                "size": 14,
+                "lines": [
+                  "Moderate: one level in the zone"
+                ],
+                "cue": 2
+              }
+            ]
+          },
+          "start": 83.7,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"If price accepts above the pd-high zone, 21,684 to 21,690, and a Pause N Go fires on the pullback, the target is prior-week-high; invalidation a 5-minute close below 21,684; conviction moderate\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One full branch</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A composite plan, invented prices</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"130\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"48\" y=\"112\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">If, then</text><text x=\"48\" y=\"142\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">If price accepts above the pd-high zone, 21,684 to 21,690,</text><text x=\"48\" y=\"166\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">and a Pause N Go fires on the pullback,</text><text x=\"48\" y=\"190\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">then prior-week-high is the target.</text></g><g class=\"sv-rv\" style=\"animation-delay:24.1s\"><rect x=\"32\" y=\"232\" width=\"280\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"48\" y=\"260\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Invalidation</text><text x=\"48\" y=\"286\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A 5-minute close below 21,684</text></g><g class=\"sv-rv\" style=\"animation-delay:24.1s\"><rect x=\"328\" y=\"232\" width=\"280\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"344\" y=\"260\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Conviction</text><text x=\"344\" y=\"286\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Moderate: one level in the zone</text></g></svg>"
+        },
+        {
+          "title": "A branch, and what is not one",
+          "kind": "compare",
+          "data": {
+            "title": "A branch, and what is not one",
+            "subtitle": "Every directional line starts with if",
+            "aria": "A branch names a level, a behaviour and a price that ends it; NQ higher and looking for longs are forecasts, not branches",
+            "columns": [
+              {
+                "head": "A branch",
+                "tone": "cyan",
+                "cue": 0,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "If price does a named thing",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 88,
+                    "text": "at a named level,",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 114,
+                    "text": "you do a named thing,",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 140,
+                    "text": "until a named price ends it",
+                    "size": 14,
+                    "cue": 0
+                  }
+                ]
+              },
+              {
+                "head": "Not a branch",
+                "tone": "red",
+                "cue": 1,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "NQ higher",
+                    "size": 14,
+                    "cue": 1
+                  },
+                  {
+                    "y": 88,
+                    "text": "Looking for longs",
+                    "size": 14,
+                    "cue": 1
+                  },
+                  {
+                    "y": 122,
+                    "text": "You plan the market's",
+                    "size": 13,
+                    "cue": 1
+                  },
+                  {
+                    "y": 142,
+                    "text": "actions, not your own",
+                    "size": 13,
+                    "cue": 1
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 308,
+                "text": "Anything that does not begin with if is struck through.",
+                "size": 14,
+                "cue": 2,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 120,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A branch names a level, a behaviour and a price that ends it; NQ higher and looking for longs are forecasts, not branches\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A branch, and what is not one</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every directional line starts with if</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">A branch</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">If price does a named thing</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"172\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">at a named level,</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"198\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">you do a named thing,</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">until a named price ends it</text></g></g><g class=\"sv-rv\" style=\"animation-delay:6.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Not a branch</text><g class=\"sv-rv\" style=\"animation-delay:6.3s\"><text x=\"344\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">NQ higher</text></g><g class=\"sv-rv\" style=\"animation-delay:6.3s\"><text x=\"344\" y=\"172\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Looking for longs</text></g><g class=\"sv-rv\" style=\"animation-delay:6.3s\"><text x=\"344\" y=\"206\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">You plan the market's</text></g><g class=\"sv-rv\" style=\"animation-delay:6.3s\"><text x=\"344\" y=\"226\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">actions, not your own</text></g></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">Anything that does not begin with if is struck through.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "A forecast and a branch differ because a branch has…",
+          "options": [
+            "A direction",
+            "A confident tone",
+            "A price at which it is wrong",
+            "A bigger target"
+          ],
+          "answer": 2,
+          "why": "A branch ends at a named price. A forecast has none, so nothing can prove it wrong."
+        },
+        {
+          "q": "A branch has three parts, in this order…",
+          "options": [
+            "Thesis, invalidation, conviction",
+            "Conviction, thesis, invalidation",
+            "Target, size, stop",
+            "Bias, level, trigger"
+          ],
+          "answer": 0,
+          "why": "The thesis is the if-then line, then the price that ends it, then the conviction."
+        },
+        {
+          "q": "The far edge of a zone is…",
+          "options": [
+            "The edge price reaches first",
+            "The middle of the band",
+            "The edge on the side away from where price arrives",
+            "Always the top"
+          ],
+          "answer": 2,
+          "why": "Price arriving from below meets the bottom first, so the far edge is the top. Arriving from above, it is the bottom."
+        },
+        {
+          "q": "A plan that opens with looking for longs reveals…",
+          "options": [
+            "A cautious trader",
+            "That you are planning the market's actions instead of your own",
+            "A good level",
+            "A strong conviction"
+          ],
+          "answer": 1,
+          "why": "The session is then spent checking whether the market agrees with you. Every directional line should begin with if."
+        }
+      ],
+      "duration": 146,
+      "audio": "../assets/audio/15/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "The level and the trigger",
+      "sections": [
+        "Every Branch Needs A Level And A Trigger"
+      ],
+      "cues": [
+        {
+          "chapter": "The two halves",
+          "text": "A branch has an if clause, and the if clause holds two things. The level says where. The trigger says when.",
+          "start": 0
+        },
+        {
+          "text": "The level is a zone from your level list, the named prices you mark before the session. Each has a slug, the short name you log it under, like pd-high for the prior-day high or on-low for the overnight low.",
+          "start": 7.8
+        },
+        {
+          "text": "The behaviour at the level is a read you can see on a closed bar. Acceptance is one: a 5-minute close beyond the zone within 15 minutes of the first touch.",
+          "start": 22.6
+        },
+        {
+          "text": "The trigger is the price event at the level that tells you to enter now, like a Pause N Go, or a level reclaim on a 5-minute close. Order flow can confirm a trigger. It is never the trigger.",
+          "start": 34.1
+        },
+        {
+          "chapter": "Not an if",
+          "text": "Now, what only looks like an if. Six things.",
+          "start": 48.5
+        },
+        {
+          "text": "One: an indicator. VWAP, pivots and moving averages are not locations here.",
+          "start": 51.9
+        },
+        {
+          "text": "Two: a day type. Trend day is a label for the whole session, and no price can confirm it at 9:45.",
+          "start": 56.3
+        },
+        {
+          "text": "Three: the opening range breaking, with no trigger named.",
+          "start": 64.1
+        },
+        {
+          "text": "Four: the overnight's direction. The overnight builds levels for your list. It never supplies a direction.",
+          "start": 67.4
+        },
+        {
+          "text": "Five: order flow on its own.",
+          "start": 73.3
+        },
+        {
+          "text": "Six: a rejection at a range extreme. It can end or cancel a branch, but it carries no entry of its own.",
+          "start": 75.6
+        },
+        {
+          "text": "Round numbers are easy to remember. So is a phone number. Neither is a level.",
+          "start": 83.7
+        },
+        {
+          "chapter": "The rule",
+          "text": "The rule: every branch names a zone from the level list and a trigger from Module 13 that must fire there. A branch missing either is not written.",
+          "start": 89.3
+        },
+        {
+          "chapter": "Getting it wrong",
+          "text": "Getting it wrong is a trigger with no level: buy the first Pause N Go after the open. You are reacting to movement, not to a place, and a trade from the middle of the range has nothing behind its stop.",
+          "start": 99.6
+        },
+        {
+          "text": "The fix: write the slug before any other word of the thesis. If you cannot name a slug, the branch does not exist.",
+          "start": 114.8
+        }
+      ],
+      "slides": [
+        {
+          "title": "Where, and when",
+          "kind": "cards",
+          "data": {
+            "title": "Where, and when",
+            "subtitle": "An if clause holds a level and a trigger",
+            "aria": "The level says where: a zone from your list with a slug. The trigger says when: the price event at the level. A behaviour is seen on a closed bar; order flow confirms but never triggers",
+            "parts": [
+              {
+                "n": "1",
+                "head": "The level",
+                "lines": [
+                  "A zone from your list,",
+                  "with its slug"
+                ],
+                "foot": "pd-high, on-low",
+                "cue": 1
+              },
+              {
+                "n": "2",
+                "head": "The trigger",
+                "lines": [
+                  "The price event that",
+                  "says enter now"
+                ],
+                "foot": "Pause N Go, reclaim",
+                "cue": 3
+              }
+            ],
+            "verdicts": {
+              "cue": 2,
+              "items": [
+                {
+                  "head": "Behaviour",
+                  "text": "Seen on a closed bar",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "head": "Order flow",
+                  "text": "Confirms, never triggers",
+                  "tone": "gold",
+                  "cue": 3
+                }
+              ]
+            }
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The level says where: a zone from your list with a slug. The trigger says when: the price event at the level. A behaviour is seen on a closed bar; order flow confirms but never triggers\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where, and when</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">An if clause holds a level and a trigger</text><g class=\"sv-rv\" style=\"animation-delay:7.8s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The level</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A zone from your list,</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">with its slug</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">pd-high, on-low</text></g><g class=\"sv-rv\" style=\"animation-delay:34.1s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The trigger</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The price event that</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">says enter now</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Pause N Go, reclaim</text></g><g class=\"sv-rv\" style=\"animation-delay:22.6s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Behaviour</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Seen on a closed bar</text></g><g class=\"sv-rv\" style=\"animation-delay:34.1s\"><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Order flow</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Confirms, never triggers</text></g></svg>"
+        },
+        {
+          "title": "Six look-alikes",
+          "kind": "list",
+          "data": {
+            "title": "Six look-alikes",
+            "subtitle": "They sound like an if. None is one",
+            "aria": "An indicator, a day type, the opening range breaking, the overnight's direction, order flow alone and a rejection at a range extreme are not a level and trigger",
+            "rows": {
+              "items": [
+                {
+                  "text": "An indicator",
+                  "tone": "red",
+                  "cue": 1
+                },
+                {
+                  "text": "A day type",
+                  "tone": "red",
+                  "cue": 2
+                },
+                {
+                  "text": "The opening range breaking",
+                  "tone": "red",
+                  "cue": 3
+                },
+                {
+                  "text": "The overnight's direction",
+                  "tone": "red",
+                  "cue": 4
+                },
+                {
+                  "text": "Order flow on its own",
+                  "tone": "red",
+                  "cue": 5
+                },
+                {
+                  "text": "A rejection at a range extreme",
+                  "tone": "red",
+                  "cue": 6
+                }
+              ],
+              "pitch": 40,
+              "h": 34
+            },
+            "aside": {
+              "cue": 0,
+              "head": "Not an if",
+              "sub": "six look-alikes",
+              "size": 18
+            }
+          },
+          "start": 48.5,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"An indicator, a day type, the opening range breaking, the overnight's direction, order flow alone and a rejection at a range extreme are not a level and trigger\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Six look-alikes</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">They sound like an if. None is one</text><g class=\"sv-rv\" style=\"animation-delay:3.4s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">An indicator</text></g><g class=\"sv-rv\" style=\"animation-delay:7.8s\"><rect x=\"32\" y=\"124\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"147\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">2</text><text x=\"76\" y=\"147\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A day type</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"32\" y=\"164\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"187\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">3</text><text x=\"76\" y=\"187\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The opening range breaking</text></g><g class=\"sv-rv\" style=\"animation-delay:18.9s\"><rect x=\"32\" y=\"204\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"227\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">4</text><text x=\"76\" y=\"227\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The overnight's direction</text></g><g class=\"sv-rv\" style=\"animation-delay:24.8s\"><rect x=\"32\" y=\"244\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"267\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">5</text><text x=\"76\" y=\"267\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Order flow on its own</text></g><g class=\"sv-rv\" style=\"animation-delay:27.1s\"><rect x=\"32\" y=\"284\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"307\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">6</text><text x=\"76\" y=\"307\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A rejection at a range extreme</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"18\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Not an if</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">six look-alikes</text></g></svg>"
+        },
+        {
+          "title": "Written, and not written",
+          "kind": "compare",
+          "data": {
+            "title": "Written, and not written",
+            "subtitle": "Both halves, or no branch",
+            "aria": "A written branch names a zone from the level list and a trigger that must fire there; a trigger with no level is not written, so the slug comes first",
+            "columns": [
+              {
+                "head": "Written",
+                "tone": "cyan",
+                "cue": 0,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "A zone from the level list",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 92,
+                    "text": "A trigger from Module 13",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 122,
+                    "text": "that must fire there",
+                    "size": 14,
+                    "cue": 0
+                  }
+                ]
+              },
+              {
+                "head": "Not written",
+                "tone": "red",
+                "cue": 1,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "A trigger with no level",
+                    "size": 14,
+                    "cue": 1
+                  },
+                  {
+                    "y": 92,
+                    "text": "Buy the first Pause N Go",
+                    "size": 14,
+                    "cue": 1
+                  },
+                  {
+                    "y": 118,
+                    "text": "after the open",
+                    "size": 14,
+                    "cue": 1
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 308,
+                "text": "Slug first. No slug, no branch.",
+                "size": 16,
+                "cue": 2,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 89.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A written branch names a zone from the level list and a trigger that must fire there; a trigger with no level is not written, so the slug comes first\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Written, and not written</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Both halves, or no branch</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Written</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A zone from the level list</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"176\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A trigger from Module 13</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"206\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">that must fire there</text></g></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Not written</text><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><text x=\"344\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A trigger with no level</text></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><text x=\"344\" y=\"176\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Buy the first Pause N Go</text></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><text x=\"344\" y=\"202\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">after the open</text></g></g><g class=\"sv-rv\" style=\"animation-delay:25.5s\"><text x=\"32\" y=\"308\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">Slug first. No slug, no branch.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "The level says…",
+          "options": [
+            "When",
+            "Where",
+            "How big",
+            "How sure"
+          ],
+          "answer": 1,
+          "why": "The level is the zone, where. The trigger is when."
+        },
+        {
+          "q": "Which of these is a trigger?",
+          "options": [
+            "VWAP",
+            "A day type",
+            "A Pause N Go at the zone",
+            "The overnight direction"
+          ],
+          "answer": 2,
+          "why": "A trigger is a price event at the level. Indicators and labels are not."
+        },
+        {
+          "q": "Order flow, in a branch, is…",
+          "options": [
+            "The trigger",
+            "The level",
+            "Never used",
+            "Able to confirm a trigger, never to replace it"
+          ],
+          "answer": 3,
+          "why": "Absorption or failing delta can confirm a trigger at a level. It does not replace the price event."
+        },
+        {
+          "q": "A branch that says buy the first Pause N Go after the open reveals…",
+          "options": [
+            "A trigger with no level: you react to movement, not a place",
+            "A strong conviction",
+            "A well-placed stop",
+            "A target problem"
+          ],
+          "answer": 0,
+          "why": "A trade from the middle of the range has nothing behind its stop. Write the slug first."
+        }
+      ],
+      "duration": 125,
+      "audio": "../assets/audio/15/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "The invalidation and the nothing case",
+      "sections": [
+        "The Invalidation Is A Price",
+        "The Nothing Case"
+      ],
+      "cues": [
+        {
+          "chapter": "The invalidation",
+          "text": "Now, the invalidation. It is a price, judged on a candle close of a stated timeframe, where the thesis is wrong. It sits at or behind the far edge, written before the session and never moved during it.",
+          "start": 0
+        },
+        {
+          "text": "Show it: a 5-minute close back below 21,684. That line has a number, a timeframe and a direction. Anyone with the chart can say whether it happened, and on which bar.",
+          "start": 14.1
+        },
+        {
+          "text": "It is not the stop. The stop is a resting order behind the far edge, placed at entry. The invalidation is the close that tells you the thesis is over, whether or not the stop has filled.",
+          "start": 25.6
+        },
+        {
+          "text": "An idea with no written invalidation is No Setup, the journal tag for a trade taken on feel.",
+          "start": 39.3
+        },
+        {
+          "chapter": "The rule",
+          "text": "The rule: every branch carries one invalidation price with its candle timeframe. No written invalidation means No Setup.",
+          "start": 45.9
+        },
+        {
+          "chapter": "Getting it wrong",
+          "text": "Getting it wrong is out if it starts looking weak. You have not decided where you are wrong, so when the market says no, you argue with it.",
+          "start": 52.6
+        },
+        {
+          "text": "The fix: an invalidation line is accepted only with a number and a timeframe. Missing either, it is crossed out.",
+          "start": 63
+        },
+        {
+          "chapter": "The nothing case",
+          "text": "Now, the nothing case. It is the line of the plan that says where no branch applies, written as a price range with two numbers, ending with the words no trade.",
+          "start": 70.4
+        },
+        {
+          "text": "Show it: between 21,562 and 21,684, without acceptance outside it, no trade.",
+          "start": 81.9
+        },
+        {
+          "text": "It covers more than the middle of the range. One: any level with no branch attached.",
+          "start": 86.3
+        },
+        {
+          "text": "Two: a rejection read with no branch.",
+          "start": 92.2
+        },
+        {
+          "text": "Three: a gap open, when no gap branch was written.",
+          "start": 94.8
+        },
+        {
+          "text": "Doing nothing is a position. It is the only one with no slippage.",
+          "start": 98.5
+        },
+        {
+          "chapter": "The rule",
+          "text": "The rule: every plan has a nothing case, a price range with two numbers, ending with the words no trade.",
+          "start": 103.3
+        },
+        {
+          "chapter": "Getting it wrong",
+          "text": "Getting it wrong is two branches and no nothing case, then a trade at 10:15 from a level that had no branch. The unplanned space gets filled by impulse.",
+          "start": 110.7
+        },
+        {
+          "text": "The fix: say the nothing case aloud before the open. Trade from inside it, and the journal tag is No Setup.",
+          "start": 121.5
+        }
+      ],
+      "slides": [
+        {
+          "title": "The invalidation is a price",
+          "kind": "timeline",
+          "data": {
+            "title": "The invalidation is a price",
+            "subtitle": "A number, a timeframe, a direction",
+            "aria": "An invalidation line reads a 5-minute close back below 21,684: a number, a timeframe and a direction",
+            "bands": [
+              {
+                "x": 32,
+                "y": 84,
+                "w": 280,
+                "h": 60,
+                "tone": "red",
+                "label": "Below: thesis wrong"
+              },
+              {
+                "x": 328,
+                "y": 84,
+                "w": 280,
+                "h": 60,
+                "tone": "cyan",
+                "label": "Above: thesis holds"
+              }
+            ],
+            "boundary": {
+              "x": 320,
+              "y1": 84,
+              "y2": 300,
+              "labelY": 330,
+              "label": "5-minute close below 21,684",
+              "cue": 1,
+              "labelSize": 16
+            },
+            "blocks": [
+              {
+                "type": "card",
+                "box": [
+                  32,
+                  170,
+                  250,
+                  70
+                ],
+                "tone": "red",
+                "head": "The invalidation",
+                "headTone": "red",
+                "hx": 14,
+                "hy": 26,
+                "lead": 50,
+                "size": 13,
+                "lines": [
+                  "A close that ends the thesis"
+                ],
+                "cue": 2
+              },
+              {
+                "type": "card",
+                "box": [
+                  358,
+                  170,
+                  250,
+                  70
+                ],
+                "tone": "gold",
+                "head": "The stop",
+                "headTone": "gold",
+                "hx": 14,
+                "hy": 26,
+                "lead": 50,
+                "size": 13,
+                "lines": [
+                  "A resting order behind the edge"
+                ],
+                "cue": 2
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"An invalidation line reads a 5-minute close back below 21,684: a number, a timeframe and a direction\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The invalidation is a price</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A number, a timeframe, a direction</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"60\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"172\" y=\"119\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Below: thesis wrong</text><rect x=\"328\" y=\"84\" width=\"280\" height=\"60\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"468\" y=\"119\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Above: thesis holds</text></g><g class=\"sv-rv\" style=\"animation-delay:14.1s\"><line x1=\"320\" y1=\"84\" x2=\"320\" y2=\"300\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"320\" y=\"330\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">5-minute close below 21,684</text></g><g class=\"sv-rv\" style=\"animation-delay:25.6s\"><rect x=\"32\" y=\"170\" width=\"250\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"46\" y=\"196\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">The invalidation</text><text x=\"46\" y=\"220\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A close that ends the thesis</text></g><g class=\"sv-rv\" style=\"animation-delay:25.6s\"><rect x=\"358\" y=\"170\" width=\"250\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"372\" y=\"196\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The stop</text><text x=\"372\" y=\"220\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A resting order behind the edge</text></g></svg>"
+        },
+        {
+          "title": "A line, and not a line",
+          "kind": "compare",
+          "data": {
+            "title": "A line, and not a line",
+            "subtitle": "The invalidation must carry two things",
+            "aria": "An invalidation has a price and a candle timeframe; out if it starts looking weak has neither and is tagged No Setup",
+            "columns": [
+              {
+                "head": "Accepted",
+                "tone": "cyan",
+                "cue": 0,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "A price: 21,684",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 92,
+                    "text": "A timeframe: 5-minute close",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 128,
+                    "text": "One per branch",
+                    "size": 13,
+                    "tone": "cyan",
+                    "cue": 0
+                  }
+                ]
+              },
+              {
+                "head": "Crossed out",
+                "tone": "red",
+                "cue": 1,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "Out if it starts looking weak",
+                    "size": 14,
+                    "cue": 1
+                  },
+                  {
+                    "y": 92,
+                    "text": "Below the low",
+                    "size": 14,
+                    "cue": 1
+                  },
+                  {
+                    "y": 128,
+                    "text": "Tag: No Setup",
+                    "size": 13,
+                    "tone": "red",
+                    "cue": 1
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 308,
+                "text": "No number or no timeframe: crossed out.",
+                "size": 14,
+                "cue": 2,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 45.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"An invalidation has a price and a candle timeframe; out if it starts looking weak has neither and is tagged No Setup\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A line, and not a line</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The invalidation must carry two things</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Accepted</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A price: 21,684</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"176\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A timeframe: 5-minute close</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"212\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--cyan)\">One per branch</text></g></g><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Crossed out</text><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><text x=\"344\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Out if it starts looking weak</text></g><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><text x=\"344\" y=\"176\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Below the low</text></g><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><text x=\"344\" y=\"212\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--red)\">Tag: No Setup</text></g></g><g class=\"sv-rv\" style=\"animation-delay:17.1s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">No number or no timeframe: crossed out.</text></g></svg>"
+        },
+        {
+          "title": "Nothing between the zones",
+          "kind": "stack",
+          "data": {
+            "title": "Nothing between the zones",
+            "subtitle": "No two-number range, no nothing case",
+            "aria": "Between the two zones, from 21,562 to 21,684, the action is no trade",
+            "zone": "A zone with a branch",
+            "gap": {
+              "head": "no trade",
+              "sub": "21,562 to 21,684, no acceptance outside"
+            },
+            "blocks": [
+              {
+                "type": "card",
+                "box": [
+                  450,
+                  130,
+                  158,
+                  160
+                ],
+                "tone": "gold",
+                "head": "Also in it",
+                "headTone": "gold",
+                "hx": 12,
+                "hy": 26,
+                "lead": 52,
+                "pitch": 26,
+                "size": 12,
+                "lines": [
+                  "A level, no branch",
+                  "A rejection read",
+                  "A gap open"
+                ],
+                "cue": 2
+              }
+            ]
+          },
+          "start": 70.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Between the two zones, from 21,562 to 21,684, the action is no trade\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Nothing between the zones</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No two-number range, no nothing case</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"400\" height=\"46\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.25\"/><text x=\"46\" y=\"113\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A zone with a branch</text><rect x=\"32\" y=\"290\" width=\"400\" height=\"46\" rx=\"0\" fill=\"var(--cyan)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.25\"/><text x=\"46\" y=\"319\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A zone with a branch</text><rect x=\"32\" y=\"130\" width=\"400\" height=\"160\" rx=\"0\" fill=\"none\" stroke=\"var(--text-muted)\" stroke-width=\"1\" stroke-dasharray=\"6 6\"/><text x=\"232\" y=\"215\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">no trade</text><text x=\"232\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">21,562 to 21,684, no acceptance outside</text></g><g class=\"sv-rv\" style=\"animation-delay:15.9s\"><rect x=\"450\" y=\"130\" width=\"158\" height=\"160\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"462\" y=\"156\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Also in it</text><text x=\"462\" y=\"182\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A level, no branch</text><text x=\"462\" y=\"208\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A rejection read</text><text x=\"462\" y=\"234\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A gap open</text></g></svg>"
+        },
+        {
+          "title": "The one line to say aloud",
+          "kind": "hero",
+          "data": {
+            "title": "The nothing case",
+            "subtitle": "Two numbers, then no trade",
+            "y": 120,
+            "aria": "Every plan has a nothing case written as a price range with two numbers and ending with no trade; trading from inside it is tagged No Setup",
+            "lines": [
+              {
+                "text": "Between two prices: no trade.",
+                "cue": 0,
+                "tone": "gold",
+                "size": 18
+              },
+              {
+                "text": "Two branches and no nothing case: a trade at 10:15 from nowhere.",
+                "cue": 1,
+                "size": 14,
+                "muted": true
+              },
+              {
+                "text": "Say it aloud. Inside it, the tag is No Setup.",
+                "cue": 2,
+                "size": 16,
+                "tone": "cyan"
+              }
+            ]
+          },
+          "start": 103.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Every plan has a nothing case written as a price range with two numbers and ending with no trade; trading from inside it is tagged No Setup\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"120\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">The nothing case</text><text x=\"320\" y=\"154\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Two numbers, then no trade</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"204\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Between two prices: no trade.</text></g><g class=\"sv-rv\" style=\"animation-delay:7.4s\"><text x=\"320\" y=\"238\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Two branches and no nothing case: a trade at 10:15 from nowhere.</text></g><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><text x=\"320\" y=\"272\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Say it aloud. Inside it, the tag is No Setup.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "An invalidation line is accepted only if it contains…",
+          "options": [
+            "A direction and a mood",
+            "A target and a size",
+            "A number and a timeframe",
+            "A conviction and a level"
+          ],
+          "answer": 2,
+          "why": "A price with its candle timeframe, such as a 5-minute close."
+        },
+        {
+          "q": "The invalidation and the stop are…",
+          "options": [
+            "The same order",
+            "Different: the invalidation is the close that ends the thesis",
+            "Both set after entry",
+            "Both moved when price stalls"
+          ],
+          "answer": 1,
+          "why": "The stop is a resting order placed at entry. The invalidation is the close defined in advance, whether or not the stop has filled."
+        },
+        {
+          "q": "A nothing case is written as…",
+          "options": [
+            "A price range with two numbers, ending with no trade",
+            "One price",
+            "A mood",
+            "A list of levels with targets"
+          ],
+          "answer": 0,
+          "why": "Two numbers bound the range, and the action in it is no trade."
+        },
+        {
+          "q": "A trade at 10:15 from a level that had no branch reveals…",
+          "options": [
+            "A thin conviction",
+            "A strong setup",
+            "A plan covering what you hope price does, not everything it can do",
+            "A target that was too near"
+          ],
+          "answer": 2,
+          "why": "The unplanned space gets filled by impulse. Trade from inside the nothing case and the journal tag is No Setup."
+        }
+      ],
+      "duration": 131,
+      "audio": "../assets/audio/15/s3.mp3"
+    },
+    {
+      "id": "s4",
+      "title": "The specificity test and the final read",
+      "sections": [
+        "The Specificity Test",
+        "The Final Read: One Paragraph"
+      ],
+      "cues": [
+        {
+          "chapter": "The test",
+          "text": "Now, the specificity test. After the session, with only the line and the chart, you can mark the bar where it triggered and the price where it ended, without guessing. A line that fails is not a plan line.",
+          "start": 0
+        },
+        {
+          "text": "Six slots, checked one at a time. One: a level, a slug written as a zone.",
+          "start": 14.4
+        },
+        {
+          "text": "Two: a behaviour you can see on a closed bar.",
+          "start": 20.4
+        },
+        {
+          "text": "Three: a trigger.",
+          "start": 24.1
+        },
+        {
+          "text": "Four: a target that is a level.",
+          "start": 25.2
+        },
+        {
+          "text": "Five: an invalidation price with its timeframe.",
+          "start": 27.8
+        },
+        {
+          "text": "Six: a conviction.",
+          "start": 30.4
+        },
+        {
+          "chapter": "The example",
+          "text": "Here is what the test does to a common line: looking for longs above the prior-day high. It fails on behaviour, trigger, target, invalidation and conviction.",
+          "start": 31.5
+        },
+        {
+          "text": "Rewritten: if price accepts above the pd-high zone and a Pause N Go fires on the pullback, then prior-week-high. Invalidation: a 5-minute close below the zone's bottom edge. Conviction: moderate.",
+          "start": 41.1
+        },
+        {
+          "text": "Short if it fails at VWAP fails on the level, because VWAP is not a location. Find the slug nearest that price, or put it in the nothing case.",
+          "start": 52.2
+        },
+        {
+          "chapter": "The rule",
+          "text": "The rule: a branch passes only with all six slots filled. Five of six is not a branch.",
+          "start": 63
+        },
+        {
+          "chapter": "Getting it wrong",
+          "text": "Getting it wrong is a plan that always seems to have been right, because every line was loose enough to fit whatever happened. A plan that is never wrong is not brave. It is just vague.",
+          "start": 69.6
+        },
+        {
+          "text": "The fix: each evening, mark two bars per branch, where it triggered and where it ended. If you had to guess at either, rewrite it.",
+          "start": 83
+        },
+        {
+          "chapter": "The final read",
+          "text": "Now, the final read. It is the plan as it stands at 9:25 a.m.: one sentence of context, one sentence per branch, and one sentence for the nothing case.",
+          "start": 92.2
+        },
+        {
+          "text": "Three things never go in it. One: a day-type label, like trend day.",
+          "start": 103
+        },
+        {
+          "text": "Two: a directional call, like bullish.",
+          "start": 107.8
+        },
+        {
+          "text": "Three: a target for the day's profit. The targets in your plan are levels, not amounts.",
+          "start": 110
+        },
+        {
+          "chapter": "The rule",
+          "text": "The rule: the final read is one paragraph, finished by 9:25 a.m., with no day-type label and no directional call.",
+          "start": 115.9
+        },
+        {
+          "chapter": "Getting it wrong",
+          "text": "Getting it wrong is a plan that runs to a page. You could not decide which branches matter, so you will decide live. The fix: five sentences at most. Cut the branch with the thinnest conviction.",
+          "start": 123.3
+        }
+      ],
+      "slides": [
+        {
+          "title": "The specificity test",
+          "kind": "list",
+          "data": {
+            "title": "The specificity test",
+            "subtitle": "Six slots, checked one at a time",
+            "aria": "A branch passes with a level slug as a zone, a behaviour on a closed bar, a trigger, a target that is a level, an invalidation price with its timeframe and a conviction",
+            "rows": {
+              "items": [
+                {
+                  "text": "Level: a slug, as a zone",
+                  "tone": "cyan",
+                  "cue": 1
+                },
+                {
+                  "text": "Behaviour: seen on a closed bar",
+                  "tone": "cyan",
+                  "cue": 2
+                },
+                {
+                  "text": "Trigger: the event at the level",
+                  "tone": "cyan",
+                  "cue": 3
+                },
+                {
+                  "text": "Target: a level",
+                  "tone": "cyan",
+                  "cue": 4
+                },
+                {
+                  "text": "Invalidation: a price and a timeframe",
+                  "tone": "cyan",
+                  "cue": 5
+                },
+                {
+                  "text": "Conviction: strong, moderate or thin",
+                  "tone": "cyan",
+                  "cue": 6
+                }
+              ],
+              "pitch": 40,
+              "h": 34
+            },
+            "aside": {
+              "cue": 0,
+              "head": "Six slots",
+              "sub": "all six, or none",
+              "size": 18
+            }
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A branch passes with a level slug as a zone, a behaviour on a closed bar, a trigger, a target that is a level, an invalidation price with its timeframe and a conviction\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The specificity test</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Six slots, checked one at a time</text><g class=\"sv-rv\" style=\"animation-delay:14.4s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Level: a slug, as a zone</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><rect x=\"32\" y=\"124\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"147\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"147\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Behaviour: seen on a closed bar</text></g><g class=\"sv-rv\" style=\"animation-delay:24.1s\"><rect x=\"32\" y=\"164\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"187\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"187\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trigger: the event at the level</text></g><g class=\"sv-rv\" style=\"animation-delay:25.2s\"><rect x=\"32\" y=\"204\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"227\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"227\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Target: a level</text></g><g class=\"sv-rv\" style=\"animation-delay:27.8s\"><rect x=\"32\" y=\"244\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"267\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"267\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Invalidation: a price and a timeframe</text></g><g class=\"sv-rv\" style=\"animation-delay:30.4s\"><rect x=\"32\" y=\"284\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"307\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">6</text><text x=\"76\" y=\"307\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Conviction: strong, moderate or thin</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"18\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Six slots</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">all six, or none</text></g></svg>"
+        },
+        {
+          "title": "A loose line, rewritten",
+          "kind": "compare",
+          "data": {
+            "title": "A loose line, rewritten",
+            "subtitle": "The test, applied once",
+            "aria": "Looking for longs above the prior-day high fails on behaviour, trigger, target, invalidation and conviction; the rewrite fills all six slots",
+            "columns": [
+              {
+                "head": "Written as",
+                "tone": "red",
+                "cue": 0,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "Looking for longs",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 82,
+                    "text": "above the prior-day high",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 122,
+                    "text": "Fails on five slots:",
+                    "size": 13,
+                    "cue": 0
+                  },
+                  {
+                    "y": 142,
+                    "text": "behaviour, trigger, target,",
+                    "size": 13,
+                    "cue": 0
+                  },
+                  {
+                    "y": 162,
+                    "text": "invalidation, conviction",
+                    "size": 13,
+                    "cue": 0
+                  }
+                ]
+              },
+              {
+                "head": "Rewritten",
+                "tone": "cyan",
+                "cue": 1,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "Accepts above pd-high zone,",
+                    "size": 13,
+                    "cue": 1
+                  },
+                  {
+                    "y": 82,
+                    "text": "Pause N Go on the pullback,",
+                    "size": 13,
+                    "cue": 1
+                  },
+                  {
+                    "y": 102,
+                    "text": "then prior-week-high.",
+                    "size": 13,
+                    "cue": 1
+                  },
+                  {
+                    "y": 132,
+                    "text": "Invalid: 5-minute close",
+                    "size": 13,
+                    "cue": 1
+                  },
+                  {
+                    "y": 152,
+                    "text": "below the bottom edge.",
+                    "size": 13,
+                    "cue": 1
+                  },
+                  {
+                    "y": 172,
+                    "text": "Conviction: moderate",
+                    "size": 13,
+                    "cue": 1
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 308,
+                "text": "VWAP is not a location: find the slug, or the nothing case.",
+                "size": 14,
+                "cue": 2,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 31.5,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Looking for longs above the prior-day high fails on behaviour, trigger, target, invalidation and conviction; the rewrite fills all six slots\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A loose line, rewritten</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The test, applied once</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Written as</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Looking for longs</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"166\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">above the prior-day high</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"206\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Fails on five slots:</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"226\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">behaviour, trigger, target,</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"246\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">invalidation, conviction</text></g></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Rewritten</text><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><text x=\"344\" y=\"146\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Accepts above pd-high zone,</text></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><text x=\"344\" y=\"166\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Pause N Go on the pullback,</text></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><text x=\"344\" y=\"186\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">then prior-week-high.</text></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><text x=\"344\" y=\"216\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Invalid: 5-minute close</text></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><text x=\"344\" y=\"236\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">below the bottom edge.</text></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><text x=\"344\" y=\"256\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Conviction: moderate</text></g></g><g class=\"sv-rv\" style=\"animation-delay:20.7s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">VWAP is not a location: find the slug, or the nothing case.</text></g></svg>"
+        },
+        {
+          "title": "Five of six is not a branch",
+          "kind": "hero",
+          "data": {
+            "title": "Five of six is not a branch",
+            "subtitle": "Mark two bars each evening",
+            "y": 112,
+            "aria": "A branch passes only with all six slots filled; each evening mark the bar where it triggered and the bar where it ended, and rewrite any you had to guess at",
+            "lines": [
+              {
+                "text": "All six slots, or it is not a branch.",
+                "cue": 0,
+                "tone": "cyan",
+                "size": 18
+              },
+              {
+                "text": "A plan that is never wrong teaches you nothing.",
+                "cue": 1,
+                "size": 16,
+                "muted": true
+              },
+              {
+                "text": "Each evening: the bar it triggered, the bar it ended.",
+                "cue": 2,
+                "size": 16,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 63,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A branch passes only with all six slots filled; each evening mark the bar where it triggered and the bar where it ended, and rewrite any you had to guess at\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"112\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Five of six is not a branch</text><text x=\"320\" y=\"146\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Mark two bars each evening</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"196\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">All six slots, or it is not a branch.</text></g><g class=\"sv-rv\" style=\"animation-delay:6.6s\"><text x=\"320\" y=\"230\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">A plan that is never wrong teaches you nothing.</text></g><g class=\"sv-rv\" style=\"animation-delay:20.0s\"><text x=\"320\" y=\"264\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Each evening: the bar it triggered, the bar it ended.</text></g></svg>"
+        },
+        {
+          "title": "What the final read leaves out",
+          "kind": "list",
+          "data": {
+            "title": "What the final read leaves out",
+            "subtitle": "One paragraph, finished by 9:25 a.m.",
+            "aria": "The final read is one sentence of context, one sentence per branch and one for the nothing case; it never holds a day-type label, a directional call or a profit target",
+            "rows": {
+              "items": [
+                {
+                  "text": "A day-type label",
+                  "tone": "red",
+                  "cue": 1
+                },
+                {
+                  "text": "A directional call",
+                  "tone": "red",
+                  "cue": 2
+                },
+                {
+                  "text": "A target for the day's profit",
+                  "tone": "red",
+                  "cue": 3
+                }
+              ]
+            },
+            "aside": {
+              "cue": 0,
+              "head": "Never in it",
+              "sub": "five at most",
+              "size": 18
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 240,
+                "text": "Strike: trend day, range day, bullish, bearish.",
+                "size": 14,
+                "cue": 4,
+                "tone": "gold"
+              },
+              {
+                "type": "note",
+                "x": 32,
+                "y": 268,
+                "text": "A page-long plan means you will decide live.",
+                "size": 14,
+                "cue": 5,
+                "tone": "second"
+              }
+            ]
+          },
+          "start": 92.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The final read is one sentence of context, one sentence per branch and one for the nothing case; it never holds a day-type label, a directional call or a profit target\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the final read leaves out</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One paragraph, finished by 9:25 a.m.</text><g class=\"sv-rv\" style=\"animation-delay:10.8s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A day-type label</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A directional call</text></g><g class=\"sv-rv\" style=\"animation-delay:17.8s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A target for the day's profit</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"18\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Never in it</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">five at most</text></g><g class=\"sv-rv\" style=\"animation-delay:23.7s\"><text x=\"32\" y=\"240\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">Strike: trend day, range day, bullish, bearish.</text></g><g class=\"sv-rv\" style=\"animation-delay:31.1s\"><text x=\"32\" y=\"268\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--text-secondary)\">A page-long plan means you will decide live.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "The specificity test asks whether, after the session, you can…",
+          "options": [
+            "Agree with the plan",
+            "Mark the bar it triggered and the price it ended, without guessing",
+            "Count the winners",
+            "Find a bigger target"
+          ],
+          "answer": 1,
+          "why": "A line that needs guessing at either is not a plan line."
+        },
+        {
+          "q": "A branch with five of six slots filled is…",
+          "options": [
+            "A branch with thin conviction",
+            "A branch at half size",
+            "Not a branch",
+            "Fine in a quiet market"
+          ],
+          "answer": 2,
+          "why": "Five of six is not a branch. All six slots are required."
+        },
+        {
+          "q": "Short if it fails at VWAP fails the test on…",
+          "options": [
+            "Conviction",
+            "The level, because VWAP is not a location",
+            "The nothing case",
+            "The final read"
+          ],
+          "answer": 1,
+          "why": "Find the slug nearest that price and write the branch there, or put that price in the nothing case."
+        },
+        {
+          "q": "A plan that always seems to have been right reveals…",
+          "options": [
+            "Lines loose enough to fit whatever happened",
+            "A skilled plan",
+            "A strong conviction",
+            "A tight stop"
+          ],
+          "answer": 0,
+          "why": "A plan that cannot be wrong teaches you nothing. Mark two bars per branch each evening."
+        }
+      ],
+      "duration": 138,
+      "audio": "../assets/audio/15/s4.mp3"
+    },
+    {
+      "id": "s5",
+      "title": "Conviction and the worked plan",
+      "sections": [
+        "Conviction Is Not A Direction",
+        "Worked Case: One Plan, Two Branches And Nothing"
+      ],
+      "cues": [
+        {
+          "chapter": "Conviction",
+          "text": "Now, conviction. It is a label of strong, moderate or thin on one branch: how much structure stands behind its thesis. It is not a direction.",
+          "start": 0
+        },
+        {
+          "text": "This sheet has no field called bias. Each branch carries its own conviction, so a plan can hold a moderate long branch above the range and a thin short branch below it.",
+          "start": 9.6
+        },
+        {
+          "text": "Conviction is counted, not felt, from three checks, one point each. One: the zone holds more than one level from your list.",
+          "start": 21.5
+        },
+        {
+          "text": "Two: no other level from your list sits between the zone and the target.",
+          "start": 29.6
+        },
+        {
+          "text": "Three: the target is inside the ATR room frame, the normal travel for the day, and no major scheduled release falls in the 9:30 to 11 a.m. window.",
+          "start": 34.8
+        },
+        {
+          "text": "Three points is strong. Two is moderate. One or none is thin. Write the reason as one clause. Conviction never changes your size. The grade does, in Module 14.",
+          "start": 45.2
+        },
+        {
+          "chapter": "The rule",
+          "text": "The rule: each branch carries its own conviction with a one-clause reason, and conviction never stands for a direction.",
+          "start": 55.9
+        },
+        {
+          "chapter": "Getting it wrong",
+          "text": "Getting it wrong is strong on every branch, every day, or a contract added because you felt sure. That is not conviction. It is a habit with a label.",
+          "start": 63
+        },
+        {
+          "text": "The fix: write each branch backwards. Invalidation first, conviction last. By then you have already written down how you are wrong.",
+          "start": 73.7
+        },
+        {
+          "chapter": "The worked case",
+          "text": "Now, the worked case. A composite plan, invented prices, stopping at 9:25 a.m., before the open. Price is 21,642, inside the prior-day range, 21,520 to 21,690.",
+          "start": 81.5
+        },
+        {
+          "text": "Branch 1, written backwards. Invalidation: a 5-minute close back below 21,684.",
+          "start": 91.1
+        },
+        {
+          "text": "Then the level and trigger: accept above the pd-high zone, 21,684 to 21,690, and a Pause N Go fires on the pullback.",
+          "start": 95.2
+        },
+        {
+          "text": "Target: prior-week-high, 21,790. Conviction: moderate, one level in the zone.",
+          "start": 103.3
+        },
+        {
+          "text": "Branch 2 mirrors it. Invalidation: a 5-minute close back above 21,562.",
+          "start": 107
+        },
+        {
+          "text": "Accept below the pd-val zone, the prior-day value area low, 21,556 to 21,562, and a Pause N Go fires on the pullback.",
+          "start": 111.1
+        },
+        {
+          "text": "Target: pd-low, 21,526. Conviction: moderate, and no trade unless the stop leaves 2 to 1, because the target is only about 30 points away.",
+          "start": 119.3
+        },
+        {
+          "text": "The nothing case: between 21,562 and 21,684, without acceptance outside it, no trade. A gap open above 21,690 or below 21,520, no trade.",
+          "start": 128.1
+        },
+        {
+          "chapter": "The final read",
+          "text": "That is the final read: four sentences, no day type, no direction. Every line names a price you can see.",
+          "start": 136.7
+        },
+        {
+          "chapter": "The same morning, as a wish",
+          "text": "Written as a wish instead: firm overnight, trend day, buy dips, bias long. It scores zero of six and has no nothing case. The chart was identical. Only the writing changed.",
+          "start": 144.1
+        }
+      ],
+      "slides": [
+        {
+          "title": "Conviction is counted",
+          "kind": "score",
+          "data": {
+            "title": "Conviction is counted",
+            "subtitle": "Three checks, one point each",
+            "aria": "Zone with more than one level, a clear path to the target and a target inside the room frame with no major release in the window; three points strong, two moderate, one or none thin",
+            "points": 3,
+            "cue": 2,
+            "verdicts": {
+              "cue": 5,
+              "items": [
+                {
+                  "score": "3 points",
+                  "text": "Strong",
+                  "tone": "cyan",
+                  "cue": 5
+                },
+                {
+                  "score": "2 points",
+                  "text": "Moderate",
+                  "tone": "gold",
+                  "cue": 5
+                },
+                {
+                  "score": "0 or 1",
+                  "text": "Thin",
+                  "tone": "red",
+                  "cue": 5
+                }
+              ]
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 300,
+                "y": 118,
+                "text": "1  Zone: more than one level",
+                "size": 13,
+                "cue": 2,
+                "tone": "second"
+              },
+              {
+                "type": "note",
+                "x": 300,
+                "y": 140,
+                "text": "2  Path: no level in the way",
+                "size": 13,
+                "cue": 3,
+                "tone": "second"
+              },
+              {
+                "type": "note",
+                "x": 300,
+                "y": 162,
+                "text": "3  Room: in the frame, no big release",
+                "size": 13,
+                "cue": 4,
+                "tone": "second"
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Zone with more than one level, a clear path to the target and a target inside the room frame with no major release in the window; three points strong, two moderate, one or none thin\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Conviction is counted</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three checks, one point each</text><g class=\"sv-rv\" style=\"animation-delay:21.5s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:21.9s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:22.2s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:45.2s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">3 points</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Strong</text></g><g class=\"sv-rv\" style=\"animation-delay:45.2s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">2 points</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Moderate</text></g><g class=\"sv-rv\" style=\"animation-delay:45.2s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">0 or 1</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Thin</text></g><g class=\"sv-rv\" style=\"animation-delay:21.5s\"><text x=\"300\" y=\"118\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--text-secondary)\">1  Zone: more than one level</text></g><g class=\"sv-rv\" style=\"animation-delay:29.6s\"><text x=\"300\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--text-secondary)\">2  Path: no level in the way</text></g><g class=\"sv-rv\" style=\"animation-delay:34.8s\"><text x=\"300\" y=\"162\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--text-secondary)\">3  Room: in the frame, no big release</text></g></svg>"
+        },
+        {
+          "title": "Never a direction",
+          "kind": "hero",
+          "data": {
+            "title": "Conviction is not a direction",
+            "subtitle": "It never changes the size",
+            "y": 112,
+            "aria": "Each branch carries its own conviction with a one-clause reason; conviction never stands for a direction or changes size; write each branch backwards",
+            "lines": [
+              {
+                "text": "A label on one branch, with a reason.",
+                "cue": 0,
+                "tone": "cyan",
+                "size": 18
+              },
+              {
+                "text": "Strong on everything is a habit with a label.",
+                "cue": 1,
+                "size": 16,
+                "muted": true
+              },
+              {
+                "text": "Backwards: invalidation first, conviction last.",
+                "cue": 2,
+                "size": 16,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 55.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Each branch carries its own conviction with a one-clause reason; conviction never stands for a direction or changes size; write each branch backwards\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"112\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Conviction is not a direction</text><text x=\"320\" y=\"146\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">It never changes the size</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"196\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">A label on one branch, with a reason.</text></g><g class=\"sv-rv\" style=\"animation-delay:7.1s\"><text x=\"320\" y=\"230\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Strong on everything is a habit with a label.</text></g><g class=\"sv-rv\" style=\"animation-delay:17.8s\"><text x=\"320\" y=\"264\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Backwards: invalidation first, conviction last.</text></g></svg>"
+        },
+        {
+          "title": "Branch 1: accept above, pause",
+          "kind": "chart",
+          "data": {
+            "title": "Branch 1: accept above, pause",
+            "subtitle": "Composite chart, invented prices",
+            "aria": "Price climbs into the pd-high zone, 21,684 to 21,690, closes above it, pulls back into the zone and holds; the invalidation is a 5-minute close back below 21,684",
+            "credit": true,
+            "chart": {
+              "story": {
+                "seed": 1593,
+                "start": 21650,
+                "regimes": [
+                  {
+                    "kind": "approach",
+                    "n": 5,
+                    "drift": 4.6,
+                    "vol": 2.4
+                  },
+                  {
+                    "kind": "test",
+                    "n": 3,
+                    "drift": 1,
+                    "vol": 1.6,
+                    "cap": {
+                      "price": 21689.5,
+                      "side": "above"
+                    }
+                  },
+                  {
+                    "kind": "approach",
+                    "n": 3,
+                    "drift": 3.6,
+                    "vol": 2
+                  },
+                  {
+                    "kind": "test",
+                    "n": 3,
+                    "drift": -2.6,
+                    "vol": 1.5,
+                    "cap": {
+                      "price": 21684.25,
+                      "side": "below"
+                    }
+                  },
+                  {
+                    "kind": "approach",
+                    "n": 2,
+                    "drift": 4.5,
+                    "vol": 1.6
+                  }
+                ]
+              },
+              "from": 0,
+              "to": 16,
+              "box": [
+                32,
+                84,
+                340,
+                236
+              ],
+              "hi": 21714,
+              "lo": 21636
+            },
+            "blocks": [
+              {
+                "type": "zone",
+                "near": 21684,
+                "far": 21690,
+                "cue": 1,
+                "w": 340,
+                "tone": "gold"
+              },
+              {
+                "type": "level",
+                "price": 21684,
+                "label": "21,684",
+                "labelX": 380,
+                "cue": 0,
+                "tone": "red",
+                "x2": 372
+              },
+              {
+                "type": "card",
+                "box": [
+                  450,
+                  100,
+                  158,
+                  64
+                ],
+                "tone": "gold",
+                "head": "Accept",
+                "headTone": "gold",
+                "hx": 12,
+                "lead": 40,
+                "pitch": 17,
+                "size": 12,
+                "lines": [
+                  "A 5-minute close",
+                  "above 21,690"
+                ],
+                "cue": 1
+              },
+              {
+                "type": "card",
+                "box": [
+                  450,
+                  176,
+                  158,
+                  64
+                ],
+                "tone": "cyan",
+                "head": "Pause N Go",
+                "headTone": "cyan",
+                "hx": 12,
+                "lead": 40,
+                "pitch": 17,
+                "size": 12,
+                "lines": [
+                  "On the pullback,",
+                  "inside the zone"
+                ],
+                "cue": 1
+              },
+              {
+                "type": "card",
+                "box": [
+                  450,
+                  252,
+                  158,
+                  64
+                ],
+                "tone": "red",
+                "head": "Invalidation",
+                "headTone": "red",
+                "hx": 12,
+                "lead": 40,
+                "pitch": 17,
+                "size": 12,
+                "lines": [
+                  "5-minute close",
+                  "below 21,684"
+                ],
+                "cue": 0
+              }
+            ]
+          },
+          "start": 91.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Price climbs into the pd-high zone, 21,684 to 21,690, closes above it, pulls back into the zone and holds; the invalidation is a 5-minute close back below 21,684\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Branch 1: accept above, pause</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Composite chart, invented prices</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"42.625\" y1=\"240.57692307692307\" x2=\"42.625\" y2=\"282.93589743589746\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"36.0375\" y=\"240.57692307692307\" width=\"13.175\" height=\"37.06410256410257\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"63.875\" y1=\"240.57692307692307\" x2=\"63.875\" y2=\"255.7051282051282\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"57.2875\" y=\"240.57692307692307\" width=\"13.175\" height=\"9.833333333333343\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"85.125\" y1=\"211.07692307692307\" x2=\"85.125\" y2=\"254.94871794871796\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"78.5375\" y=\"212.5897435897436\" width=\"13.175\" height=\"38.576923076923094\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"106.375\" y1=\"186.87179487179486\" x2=\"106.375\" y2=\"216.37179487179486\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"99.7875\" y=\"202\" width=\"13.175\" height=\"10.589743589743591\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"127.625\" y1=\"198.97435897435898\" x2=\"127.625\" y2=\"211.83333333333331\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"121.0375\" y=\"202\" width=\"13.175\" height=\"3.025641025641022\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"148.875\" y1=\"197.46153846153845\" x2=\"148.875\" y2=\"217.8846153846154\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"142.2875\" y=\"205.02564102564102\" width=\"13.175\" height=\"10.589743589743591\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"170.125\" y1=\"204.26923076923077\" x2=\"170.125\" y2=\"221.66666666666669\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"163.5375\" y=\"206.53846153846155\" width=\"13.175\" height=\"9.076923076923066\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"191.375\" y1=\"181.57692307692307\" x2=\"191.375\" y2=\"206.53846153846155\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"184.7875\" y=\"188.3846153846154\" width=\"13.175\" height=\"18.15384615384616\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"212.625\" y1=\"143\" x2=\"212.625\" y2=\"188.3846153846154\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"206.0375\" y=\"143\" width=\"13.175\" height=\"45.38461538461539\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"233.875\" y1=\"139.97435897435898\" x2=\"233.875\" y2=\"150.56410256410257\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"227.2875\" y=\"140.73076923076923\" width=\"13.175\" height=\"1.5128205128205252\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"255.125\" y1=\"110.47435897435898\" x2=\"255.125\" y2=\"140.73076923076923\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"248.5375\" y=\"130.14102564102564\" width=\"13.175\" height=\"10.589743589743591\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"276.375\" y1=\"109.71794871794872\" x2=\"276.375\" y2=\"130.14102564102564\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"269.7875\" y=\"118.03846153846153\" width=\"13.175\" height=\"12.102564102564102\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"297.625\" y1=\"118.7948717948718\" x2=\"297.625\" y2=\"165.69230769230768\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"291.0375\" y=\"118.7948717948718\" width=\"13.175\" height=\"46.897435897435884\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"318.875\" y1=\"156.6153846153846\" x2=\"318.875\" y2=\"170.9871794871795\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"312.2875\" y=\"164.93589743589743\" width=\"13.175\" height=\"2.2692307692307736\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"340.125\" y1=\"122.57692307692308\" x2=\"340.125\" y2=\"167.2051282051282\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"333.5375\" y=\"136.94871794871796\" width=\"13.175\" height=\"30.25641025641025\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"361.375\" y1=\"108.96153846153845\" x2=\"361.375\" y2=\"136.94871794871796\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"354.7875\" y=\"130.8974358974359\" width=\"13.175\" height=\"6.051282051282044\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:4.1s\"><rect x=\"32\" y=\"156.6153846153846\" width=\"340\" height=\"18.15384615384616\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"32\" y1=\"174.76923076923077\" x2=\"372\" y2=\"174.76923076923077\" stroke=\"var(--red)\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"380\" y=\"179.76923076923077\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">21,684</text></g><g class=\"sv-rv\" style=\"animation-delay:4.1s\"><rect x=\"450\" y=\"100\" width=\"158\" height=\"64\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"462\" y=\"124\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Accept</text><text x=\"462\" y=\"140\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A 5-minute close</text><text x=\"462\" y=\"157\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">above 21,690</text></g><g class=\"sv-rv\" style=\"animation-delay:4.1s\"><rect x=\"450\" y=\"176\" width=\"158\" height=\"64\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"462\" y=\"200\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Pause N Go</text><text x=\"462\" y=\"216\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On the pullback,</text><text x=\"462\" y=\"233\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">inside the zone</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"450\" y=\"252\" width=\"158\" height=\"64\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"462\" y=\"276\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Invalidation</text><text x=\"462\" y=\"292\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">5-minute close</text><text x=\"462\" y=\"309\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">below 21,684</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
+        },
+        {
+          "title": "Branch 2: accept below, pause",
+          "kind": "chart",
+          "data": {
+            "title": "Branch 2: accept below, pause",
+            "subtitle": "Composite chart, invented prices",
+            "aria": "Price falls into the pd-val zone, 21,556 to 21,562, closes below it, pulls back into the zone and holds; the invalidation is a 5-minute close back above 21,562",
+            "credit": true,
+            "chart": {
+              "story": {
+                "seed": 1596,
+                "start": 21579,
+                "regimes": [
+                  {
+                    "kind": "approach",
+                    "n": 5,
+                    "drift": -3.8,
+                    "vol": 1.6
+                  },
+                  {
+                    "kind": "test",
+                    "n": 3,
+                    "drift": -1,
+                    "vol": 1.4,
+                    "cap": {
+                      "price": 21556.5,
+                      "side": "below"
+                    }
+                  },
+                  {
+                    "kind": "approach",
+                    "n": 3,
+                    "drift": -3,
+                    "vol": 1.8
+                  },
+                  {
+                    "kind": "test",
+                    "n": 3,
+                    "drift": 2.4,
+                    "vol": 1.3,
+                    "cap": {
+                      "price": 21561.75,
+                      "side": "above"
+                    }
+                  },
+                  {
+                    "kind": "approach",
+                    "n": 2,
+                    "drift": -3.5,
+                    "vol": 1.5
+                  }
+                ]
+              },
+              "from": 0,
+              "to": 16,
+              "box": [
+                32,
+                84,
+                340,
+                236
+              ],
+              "hi": 21600,
+              "lo": 21534
+            },
+            "blocks": [
+              {
+                "type": "zone",
+                "near": 21556,
+                "far": 21562,
+                "cue": 1,
+                "w": 340,
+                "tone": "gold"
+              },
+              {
+                "type": "level",
+                "price": 21562,
+                "label": "21,562",
+                "labelX": 380,
+                "cue": 0,
+                "tone": "red",
+                "x2": 372
+              },
+              {
+                "type": "card",
+                "box": [
+                  450,
+                  100,
+                  158,
+                  64
+                ],
+                "tone": "gold",
+                "head": "Accept",
+                "headTone": "gold",
+                "hx": 12,
+                "lead": 40,
+                "pitch": 17,
+                "size": 12,
+                "lines": [
+                  "A 5-minute close",
+                  "below 21,556"
+                ],
+                "cue": 1
+              },
+              {
+                "type": "card",
+                "box": [
+                  450,
+                  176,
+                  158,
+                  64
+                ],
+                "tone": "cyan",
+                "head": "Target",
+                "headTone": "cyan",
+                "hx": 12,
+                "lead": 40,
+                "pitch": 17,
+                "size": 12,
+                "lines": [
+                  "pd-low, 21,526,",
+                  "30 points away"
+                ],
+                "cue": 2
+              },
+              {
+                "type": "card",
+                "box": [
+                  450,
+                  252,
+                  158,
+                  64
+                ],
+                "tone": "red",
+                "head": "Invalidation",
+                "headTone": "red",
+                "hx": 12,
+                "lead": 40,
+                "pitch": 17,
+                "size": 12,
+                "lines": [
+                  "5-minute close",
+                  "above 21,562"
+                ],
+                "cue": 0
+              }
+            ]
+          },
+          "start": 107,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Price falls into the pd-val zone, 21,556 to 21,562, closes below it, pulls back into the zone and holds; the invalidation is a 5-minute close back above 21,562\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Branch 2: accept below, pause</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Composite chart, invented prices</text><g class=\"sv-dr\" style=\"animation-delay:0.0s\"><line x1=\"42.625\" y1=\"133.16666666666669\" x2=\"42.625\" y2=\"193.95454545454544\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"36.0375\" y=\"159.0909090909091\" width=\"13.175\" height=\"1.5\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"63.875\" y1=\"159.9848484848485\" x2=\"63.875\" y2=\"209.15151515151513\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"57.2875\" y=\"159.9848484848485\" width=\"13.175\" height=\"43.80303030303028\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"85.125\" y1=\"197.53030303030303\" x2=\"85.125\" y2=\"234.1818181818182\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"78.5375\" y=\"198.42424242424244\" width=\"13.175\" height=\"5.3636363636363455\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"106.375\" y1=\"198.42424242424244\" x2=\"106.375\" y2=\"261.8939393939394\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"99.7875\" y=\"198.42424242424244\" width=\"13.175\" height=\"42.90909090909088\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"127.625\" y1=\"227.03030303030303\" x2=\"127.625\" y2=\"246.69696969696972\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"121.0375\" y=\"240.43939393939394\" width=\"13.175\" height=\"1.5\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"148.875\" y1=\"216.30303030303028\" x2=\"148.875\" y2=\"239.54545454545453\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"142.2875\" y=\"216.30303030303028\" width=\"13.175\" height=\"23.24242424242425\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"170.125\" y1=\"185.0151515151515\" x2=\"170.125\" y2=\"216.30303030303028\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"163.5375\" y=\"185.9090909090909\" width=\"13.175\" height=\"30.393939393939377\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"191.375\" y1=\"185.0151515151515\" x2=\"191.375\" y2=\"204.6818181818182\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"184.7875\" y=\"185.9090909090909\" width=\"13.175\" height=\"4.469696969696969\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"212.625\" y1=\"165.34848484848487\" x2=\"212.625\" y2=\"190.37878787878788\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"206.0375\" y=\"185.0151515151515\" width=\"13.175\" height=\"5.363636363636374\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"233.875\" y1=\"185.0151515151515\" x2=\"233.875\" y2=\"193.06060606060606\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"227.2875\" y=\"185.0151515151515\" width=\"13.175\" height=\"1.5\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"255.125\" y1=\"185.9090909090909\" x2=\"255.125\" y2=\"210.04545454545453\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"248.5375\" y=\"185.9090909090909\" width=\"13.175\" height=\"8.939393939393966\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"276.375\" y1=\"194.84848484848487\" x2=\"276.375\" y2=\"230.6060606060606\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"269.7875\" y=\"194.84848484848487\" width=\"13.175\" height=\"27.71212121212119\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"297.625\" y1=\"220.77272727272728\" x2=\"297.625\" y2=\"229.71212121212122\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"291.0375\" y=\"222.56060606060606\" width=\"13.175\" height=\"3.575757575757592\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"318.875\" y1=\"221.66666666666669\" x2=\"318.875\" y2=\"253.84848484848484\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"312.2875\" y=\"227.03030303030303\" width=\"13.175\" height=\"25.924242424242436\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"340.125\" y1=\"234.1818181818182\" x2=\"340.125\" y2=\"260.1060606060606\" stroke=\"var(--green)\" stroke-width=\"1.4\"/><rect x=\"333.5375\" y=\"235.96969696969697\" width=\"13.175\" height=\"16.9848484848485\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\"/><line x1=\"361.375\" y1=\"235.96969696969697\" x2=\"361.375\" y2=\"278.8787878787879\" stroke=\"var(--red)\" stroke-width=\"1.4\"/><rect x=\"354.7875\" y=\"235.96969696969697\" width=\"13.175\" height=\"42.90909090909091\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\"/></g><g class=\"sv-rv\" style=\"animation-delay:4.1s\"><rect x=\"32\" y=\"219.87878787878788\" width=\"340\" height=\"21.45454545454544\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"32\" y1=\"219.87878787878788\" x2=\"372\" y2=\"219.87878787878788\" stroke=\"var(--red)\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"380\" y=\"224.87878787878788\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">21,562</text></g><g class=\"sv-rv\" style=\"animation-delay:4.1s\"><rect x=\"450\" y=\"100\" width=\"158\" height=\"64\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"462\" y=\"124\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Accept</text><text x=\"462\" y=\"140\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A 5-minute close</text><text x=\"462\" y=\"157\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">below 21,556</text></g><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"450\" y=\"176\" width=\"158\" height=\"64\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1\"/><text x=\"462\" y=\"200\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Target</text><text x=\"462\" y=\"216\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">pd-low, 21,526,</text><text x=\"462\" y=\"233\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">30 points away</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"450\" y=\"252\" width=\"158\" height=\"64\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1\"/><text x=\"462\" y=\"276\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Invalidation</text><text x=\"462\" y=\"292\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">5-minute close</text><text x=\"462\" y=\"309\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">above 21,562</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Composite chart. Invented prices, synthetic bars.</text></svg>"
+        },
+        {
+          "title": "A plan, and a wish",
+          "kind": "compare",
+          "data": {
+            "title": "A plan, and a wish",
+            "subtitle": "The same morning, the same levels",
+            "aria": "The plan names two branches and a nothing case; the wish says firm overnight, trend day, buy dips, bias long, and scores zero of six",
+            "columns": [
+              {
+                "head": "The plan",
+                "tone": "cyan",
+                "cue": 0,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "Two branches",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 90,
+                    "text": "Nothing: 21,562 to 21,684",
+                    "size": 14,
+                    "cue": 0
+                  },
+                  {
+                    "y": 124,
+                    "text": "Four sentences,",
+                    "size": 13,
+                    "cue": 1
+                  },
+                  {
+                    "y": 144,
+                    "text": "no day type, no direction",
+                    "size": 13,
+                    "cue": 1
+                  }
+                ]
+              },
+              {
+                "head": "The wish",
+                "tone": "red",
+                "cue": 2,
+                "lines": [
+                  {
+                    "y": 62,
+                    "text": "Firm overnight, trend day",
+                    "size": 14,
+                    "cue": 2
+                  },
+                  {
+                    "y": 90,
+                    "text": "Buy dips. Bias long.",
+                    "size": 14,
+                    "cue": 2
+                  },
+                  {
+                    "y": 124,
+                    "text": "Zero of six slots,",
+                    "size": 13,
+                    "cue": 2
+                  },
+                  {
+                    "y": 144,
+                    "text": "no nothing case",
+                    "size": 13,
+                    "cue": 2
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 308,
+                "text": "The chart was identical. Only the writing changed.",
+                "size": 14,
+                "cue": 2,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 128.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The plan names two branches and a nothing case; the wish says firm overnight, trend day, buy dips, bias long, and scores zero of six\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A plan, and a wish</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The same morning, the same levels</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The plan</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Two branches</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"48\" y=\"174\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Nothing: 21,562 to 21,684</text></g><g class=\"sv-rv\" style=\"animation-delay:8.6s\"><text x=\"48\" y=\"208\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Four sentences,</text></g><g class=\"sv-rv\" style=\"animation-delay:8.6s\"><text x=\"48\" y=\"228\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">no day type, no direction</text></g></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">The wish</text><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"344\" y=\"146\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Firm overnight, trend day</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"344\" y=\"174\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Buy dips. Bias long.</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"344\" y=\"208\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Zero of six slots,</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"344\" y=\"228\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">no nothing case</text></g></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\" style=\"fill:var(--gold)\">The chart was identical. Only the writing changed.</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "Conviction is counted from…",
+          "options": [
+            "How sure you feel",
+            "Three checks, one point each",
+            "The size of the target",
+            "The last three trades"
+          ],
+          "answer": 1,
+          "why": "Zone, path, and room and clock. Three points is strong, two moderate, one or none thin."
+        },
+        {
+          "q": "Conviction changes your size…",
+          "options": [
+            "Never: size comes from the grade",
+            "Always",
+            "Only when strong",
+            "Only when thin"
+          ],
+          "answer": 0,
+          "why": "Size comes from the grade, in one table, in Module 14."
+        },
+        {
+          "q": "In the worked case, Branch 1 is wrong after…",
+          "options": [
+            "A 5-minute close back above 21,690",
+            "A 1-minute close above 21,690",
+            "The overnight low",
+            "A 5-minute close back below 21,684"
+          ],
+          "answer": 3,
+          "why": "The invalidation is the bottom edge of the pd-high zone, judged on a 5-minute close."
+        },
+        {
+          "q": "Strong on every branch, every day, reveals…",
+          "options": [
+            "Great preparation",
+            "A belief about direction dressed as a label",
+            "A tight stop",
+            "Perfect zones"
+          ],
+          "answer": 1,
+          "why": "A belief about direction keeps you in a trade after its invalidation has printed. Write each branch backwards."
+        }
+      ],
+      "duration": 157,
+      "audio": "../assets/audio/15/s5.mp3"
+    },
+    {
+      "id": "s6",
+      "title": "Score it, then the assignment",
+      "sections": [
+        "Is Your Plan A Plan?",
+        "Before Your Next Session",
+        "Where It Goes Next"
+      ],
+      "cues": [
+        {
+          "chapter": "Score it",
+          "text": "Take your last five written plans and score each one, a point per line that is true for every branch on it.",
+          "start": 0
+        },
+        {
+          "text": "One: a level, a slug written as a zone with both edges. Two: a behaviour you can see on a closed bar.",
+          "start": 8.1
+        },
+        {
+          "text": "Three: a named trigger that must fire in the zone. Four: a target that is a level.",
+          "start": 16.3
+        },
+        {
+          "text": "Five: an invalidation price with its candle timeframe. Six: a conviction, with a one-clause reason.",
+          "start": 22.6
+        },
+        {
+          "text": "Seven: a nothing case, a price range with two numbers, ending no trade. Eight: a final read, one paragraph, no day-type label.",
+          "start": 28.1
+        },
+        {
+          "text": "Eight of eight is a plan. Anything less is not yet one.",
+          "start": 36.3
+        },
+        {
+          "text": "If any of your five plans missed line five, the trades taken from it were No Setup on the plan's own terms. The invalidation line is the first thing to fix.",
+          "start": 40.7
+        },
+        {
+          "text": "If two or more scored under eight for any other reason, find the line you miss most often and fix that one first. Scoring from memory flatters you. Score from the page.",
+          "start": 52.2
+        },
+        {
+          "chapter": "The assignment",
+          "text": "Now, the assignment. Tonight, write one branch for your next session, backwards.",
+          "start": 64.1
+        },
+        {
+          "text": "The invalidation price first. Then the zone and the trigger. Then the target level. Then the conviction, with its reason.",
+          "start": 68.5
+        },
+        {
+          "text": "One sentence. That is the whole assignment.",
+          "start": 75.9
+        },
+        {
+          "chapter": "Where it goes next",
+          "text": "Now, where it goes next.",
+          "start": 78.5
+        },
+        {
+          "text": "Module 16, the pre-market routine, is where this plan is written each morning. Each branch becomes a line on your sheet, and the final read is spoken in the rehearsal.",
+          "start": 80.4
+        },
+        {
+          "text": "Module 17, the session and the close, picks up at 9:30 a.m., with the plan as the only input during the session.",
+          "start": 91.5
+        },
+        {
+          "text": "Module 14, trade construction, turns a triggered branch into a trade.",
+          "start": 99.6
+        },
+        {
+          "text": "Module 18, journaling and review, is where a branch's invalidation decides the execution mark, and its conviction becomes a field your record can sort by.",
+          "start": 103.7
+        },
+        {
+          "text": "A branch, a price that ends it, and a line that says where you do nothing. That is the plan.",
+          "start": 113
+        }
+      ],
+      "slides": [
+        {
+          "title": "The eight lines",
+          "kind": "steps",
+          "data": {
+            "title": "The eight lines",
+            "subtitle": "Score each plan, line by line",
+            "aria": "Level, behaviour, trigger, target, invalidation, conviction, nothing case and final read",
+            "y": 84,
+            "items": [
+              {
+                "time": "1 · 2",
+                "text": "Level as a zone, and a behaviour on a closed bar",
+                "cue": 1
+              },
+              {
+                "time": "3 · 4",
+                "text": "A named trigger, and a target that is a level",
+                "cue": 2
+              },
+              {
+                "time": "5 · 6",
+                "text": "An invalidation with its timeframe, and a conviction",
+                "cue": 3
+              },
+              {
+                "time": "7 · 8",
+                "text": "A nothing case, and a one-paragraph final read",
+                "cue": 4
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Level, behaviour, trigger, target, invalidation, conviction, nothing case and final read\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The eight lines</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Score each plan, line by line</text><g class=\"sv-rv\" style=\"animation-delay:8.1s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">1 · 2</text><text x=\"124\" y=\"105\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Level as a zone, and a behaviour on a closed bar</text></g><g class=\"sv-rv\" style=\"animation-delay:16.3s\"><rect x=\"32\" y=\"124\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"145\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3 · 4</text><text x=\"124\" y=\"145\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A named trigger, and a target that is a level</text></g><g class=\"sv-rv\" style=\"animation-delay:22.6s\"><rect x=\"32\" y=\"164\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"185\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5 · 6</text><text x=\"124\" y=\"185\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">An invalidation with its timeframe, and a conviction</text></g><g class=\"sv-rv\" style=\"animation-delay:28.1s\"><rect x=\"32\" y=\"204\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"225\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">7 · 8</text><text x=\"124\" y=\"225\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A nothing case, and a one-paragraph final read</text></g></svg>"
+        },
+        {
+          "title": "Is your plan a plan?",
+          "kind": "score",
+          "data": {
+            "title": "Is your plan a plan?",
+            "subtitle": "Your last five plans, each scored out of eight",
+            "aria": "Score each of your last five plans on eight lines; eight of eight is a plan, and a missing invalidation line is the first thing to fix",
+            "points": 5,
+            "cue": 0,
+            "verdicts": {
+              "cue": 0,
+              "items": [
+                {
+                  "score": "8 of 8",
+                  "text": "A plan",
+                  "tone": "cyan",
+                  "cue": 0
+                },
+                {
+                  "score": "Line 5",
+                  "text": "Missed: fix the invalidation first",
+                  "tone": "red",
+                  "cue": 1
+                },
+                {
+                  "score": "Under 8",
+                  "text": "Fix the line you miss most",
+                  "tone": "gold",
+                  "cue": 2
+                }
+              ]
+            }
+          },
+          "start": 36.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Score each of your last five plans on eight lines; eight of eight is a plan, and a missing invalidation line is the first thing to fix\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Is your plan a plan?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your last five plans, each scored out of eight</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">8 of 8</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A plan</text></g><g class=\"sv-rv\" style=\"animation-delay:4.4s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Line 5</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Missed: fix the invalidation first</text></g><g class=\"sv-rv\" style=\"animation-delay:15.9s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Under 8</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Fix the line you miss most</text></g></svg>"
+        },
+        {
+          "title": "Before your next session",
+          "kind": "assignment",
+          "data": {
+            "title": "Before your next session",
+            "subtitle": "One branch for your next session, written backwards",
+            "aria": "Write one branch backwards: invalidation first, then the zone and trigger, then the target level, then the conviction with its reason",
+            "cue": 1,
+            "fields": [
+              "Invalidation",
+              "Zone",
+              "Trigger",
+              "Target",
+              "Conviction"
+            ],
+            "line1": "Tonight: one branch, written backwards, in this order.",
+            "line2": "One sentence. That is the whole assignment."
+          },
+          "start": 64.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Write one branch backwards: invalidation first, then the zone and trigger, then the target level, then the conviction with its reason\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Before your next session</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One branch for your next session, written backwards</text><g class=\"sv-rv\" style=\"animation-delay:4.4s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Invalidation</text></g><g class=\"sv-rv\" style=\"animation-delay:5.7s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Zone</text></g><g class=\"sv-rv\" style=\"animation-delay:7.0s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Trigger</text></g><g class=\"sv-rv\" style=\"animation-delay:8.3s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Target</text></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Conviction</text></g><g class=\"sv-rv\" style=\"animation-delay:4.4s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tonight: one branch, written backwards, in this order.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">One sentence. That is the whole assignment.</text></g></svg>"
+        },
+        {
+          "title": "Where it goes next",
+          "kind": "summary",
+          "data": {
+            "title": "Where it goes next",
+            "subtitle": "The sheet, the session, the trade, the record",
+            "aria": "Module 16 writes the plan each morning, Module 17 uses it as the only input, Module 14 turns a triggered branch into a trade, Module 18 records the execution mark and conviction",
+            "statement": "A branch, the price that ends it, and where you do nothing.",
+            "links": [
+              {
+                "head": "Module 16",
+                "sub": "The pre-market routine",
+                "cue": 1
+              },
+              {
+                "head": "Module 17",
+                "sub": "The session and the close",
+                "cue": 2
+              },
+              {
+                "head": "Module 14",
+                "sub": "Trade construction",
+                "cue": 3
+              },
+              {
+                "head": "Module 18",
+                "sub": "Journaling and review",
+                "cue": 4
+              }
+            ]
+          },
+          "start": 78.5,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Module 16 writes the plan each morning, Module 17 uses it as the only input, Module 14 turns a triggered branch into a trade, Module 18 records the execution mark and conviction\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The sheet, the session, the trade, the record</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A branch, the price that ends it, and where you do nothing.</text></g><g class=\"sv-rv\" style=\"animation-delay:1.9s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 16</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The pre-market routine</text></g><g class=\"sv-rv\" style=\"animation-delay:13.0s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 17</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The session and the close</text></g><g class=\"sv-rv\" style=\"animation-delay:21.1s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 14</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trade construction</text></g><g class=\"sv-rv\" style=\"animation-delay:25.2s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling and review</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "A plan scores…",
+          "options": [
+            "Eight of eight to count as a plan",
+            "Six of eight",
+            "Four of eight",
+            "Whatever feels right"
+          ],
+          "answer": 0,
+          "why": "Eight of eight is a plan. Anything less is not yet one."
+        },
+        {
+          "q": "If a plan missed the invalidation line, the trades from it were…",
+          "options": [
+            "Fine, if they won",
+            "Too Early",
+            "A pass on the execution mark",
+            "No Setup on the plan's own terms"
+          ],
+          "answer": 3,
+          "why": "An idea without a written invalidation is No Setup, so the invalidation line is the first thing to fix."
+        },
+        {
+          "q": "The assignment is written in this order…",
+          "options": [
+            "Conviction, target, zone, invalidation",
+            "Zone, trigger, target, conviction",
+            "Invalidation, zone and trigger, target, conviction",
+            "Target, size, stop, entry"
+          ],
+          "answer": 2,
+          "why": "Backwards: the invalidation first, so conviction comes last with the reason, after you have written down how you are wrong."
+        },
+        {
+          "q": "Scoring your last five plans from memory…",
+          "options": [
+            "Is the fastest way",
+            "Flatters you: score from the page",
+            "Is required",
+            "Counts double"
+          ],
+          "answer": 1,
+          "why": "Memory fills in the lines the page does not hold. Score what was written."
+        }
+      ],
+      "duration": 122,
+      "audio": "../assets/audio/15/s6.mp3"
+    }
+  ],
+  "quiz": {
+    "title": "Module quiz",
+    "questions": [
+      {
+        "q": "Which line is a branch?",
+        "options": [
+          "NQ higher",
+          "Looking for longs",
+          "Buy the dip into value",
+          "If price accepts above the pd-high zone and a Pause N Go fires, then prior-week-high; wrong on a 5-minute close below 21,684; moderate"
+        ],
+        "answer": 3,
+        "why": "Only the last holds a level, a trigger, a target, an invalidation and a conviction."
+      },
+      {
+        "q": "A branch is not written when it is missing…",
+        "options": [
+          "A zone from the level list or a trigger that must fire there",
+          "A big target",
+          "A strong conviction",
+          "A bias field"
+        ],
+        "answer": 0,
+        "why": "Both halves of the if clause are required: the level says where, the trigger says when."
+      },
+      {
+        "q": "The invalidation is…",
+        "options": [
+          "The same as the stop",
+          "A price with its candle timeframe, defined before the session",
+          "Set after entry",
+          "A feeling that the trade is weak"
+        ],
+        "answer": 1,
+        "why": "The stop is a resting order. The invalidation is the close that ends the thesis, written in advance."
+      },
+      {
+        "q": "The nothing case is…",
+        "options": [
+          "Optional on quiet days",
+          "A list of levels",
+          "A price range with two numbers, ending with no trade",
+          "A conviction label"
+        ],
+        "answer": 2,
+        "why": "Anything not on the plan is no trade, and writing that down gives a quiet hour a job."
+      },
+      {
+        "q": "A branch passes the specificity test with…",
+        "options": [
+          "Four of six slots",
+          "A confident tone",
+          "A target in points",
+          "All six slots filled"
+        ],
+        "answer": 3,
+        "why": "Five of six is not a branch."
+      },
+      {
+        "q": "Conviction is counted from…",
+        "options": [
+          "Three checks, one point each",
+          "How sure you feel",
+          "The last trade",
+          "The day type"
+        ],
+        "answer": 0,
+        "why": "Zone, path, and room and clock. It is recorded for the journal and never changes size."
+      },
+      {
+        "q": "The final read never holds…",
+        "options": [
+          "A branch",
+          "A day-type label or a directional call",
+          "A nothing case",
+          "A level"
+        ],
+        "answer": 1,
+        "why": "Trend day, range day, bullish and bearish are struck. The paragraph is five sentences at most."
+      },
+      {
+        "q": "In the worked case, a gap open above 21,690 with no gap branch written is…",
+        "options": [
+          "A long",
+          "A short",
+          "No trade: it is in the nothing case",
+          "A conviction of strong"
+        ],
+        "answer": 2,
+        "why": "Anything the plan has no branch for is no trade."
+      }
+    ]
+  }
+}
