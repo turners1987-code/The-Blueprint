@@ -15,7 +15,8 @@ export function candles(chart, cfg, delay = 0) {
   const bars = barsFor(chart, cfg);
   const [bx, by, bw0, bh] = chart.box;
   const sl = bars.slice(chart.from, chart.to);
-  const hi = Math.max(...sl.map((b) => b[2])) + 4, lo = Math.min(...sl.map((b) => b[3])) - 4;
+  // chart.hi / chart.lo (optional) pin the price range so a story's slides share one scale
+  const hi = chart.hi ?? Math.max(...sl.map((b) => b[2])) + 4, lo = chart.lo ?? Math.min(...sl.map((b) => b[3])) - 4;
   const y = (p) => by + (hi - p) / (hi - lo) * bh;
   const step = bw0 / sl.length, bw = Math.max(3, step * 0.62);
   const out = sl.map((b, i) => {
