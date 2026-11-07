@@ -87,3 +87,4 @@ START 2026-11-07T00:38:43Z B 20-16B Module 16 lesson review
 END 2026-11-07T00:51:59Z | 20-16B Module 16 lesson review | tier C | 2a14e85
 START 2026-11-07T01:09:00Z A 20-17A Module 17 lesson build
 END 2026-11-07T01:17:12Z | 20-17A Module 17 lesson build | tier C | ed3a263
+START 2026-11-07T01:38:02Z B 20-17B Module 17 lesson review
