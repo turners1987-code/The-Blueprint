@@ -106,7 +106,8 @@ export const KINDS = {
     rv(delay(ctx, d.banner.cue), rect(32, 304, 576, 36, { fill: 'var(--bg-card)', stroke: col(d.banner.tone), sw: 1.5 }) +
       text(320, 328, d.banner.text, { size: 15, weight: 700, anchor: 'middle', fill: col(d.banner.tone) })) + tail(d, ctx),
 
-  // Numbered parts of a test, then pass / fail verdicts.
+  // Numbered parts of a test, then pass / fail verdicts. A verdict may carry its
+  // own "cue" so it reveals when it is spoken; without one, all reveal on verdicts.cue.
   cards: (d, ctx) => head(d) +
     d.parts.map((p, i) => {
       const x = 32 + i * 298;
@@ -116,11 +117,11 @@ export const KINDS = {
         p.lines.map((l, k) => text(x + 44, 140 + k * 20, l, { size: 13, cls: 'sv-m' })).join('') +
         text(x + 44, 186, p.foot, { size: 12, cls: 'sv-d' }));
     }).join('') +
-    rv(delay(ctx, d.verdicts.cue), d.verdicts.items.map((v, i) => {
+    d.verdicts.items.map((v, i) => {
       const x = 32 + i * 298;
-      return rect(x, 222, 278, 80, { fill: 'var(--bg-card)', stroke: col(v.tone), sw: 1.5 }) +
-        text(x + 16, 250, v.head, { size: 15, weight: 700, fill: col(v.tone) }) + text(x + 16, 274, v.text, { size: 13, cls: 'sv-m' });
-    }).join('')) + tail(d, ctx),
+      return rv(delay(ctx, v.cue ?? d.verdicts.cue), rect(x, 222, 278, 80, { fill: 'var(--bg-card)', stroke: col(v.tone), sw: 1.5 }) +
+        text(x + 16, 250, v.head, { size: 15, weight: 700, fill: col(v.tone) }) + text(x + 16, 274, v.text, { size: 13, cls: 'sv-m' }));
+    }).join('') + tail(d, ctx),
 
   // Candles from a story, with layers (level, zone, edges, strip) and side cards.
   chart: (d, ctx) => {
