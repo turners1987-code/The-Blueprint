@@ -7,7 +7,11 @@
    cache is deleted when the new worker activates.
    ============================================================ */
 
+<<<<<<< HEAD
 const CACHE_VERSION = 'v85';
+=======
+const CACHE_VERSION = 'v83';
+>>>>>>> 0d848d8 (Audio batch 1: credits and cache)
 const CACHE_NAME = `blueprint-${CACHE_VERSION}`;
 
 // App shell: paths are relative to this file (the site root).
