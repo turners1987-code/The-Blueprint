@@ -8,7 +8,7 @@
         "Right About The Market, Wrong About The Morning",
         "Where Each Hard Rule Came From"
       ],
-      "duration": 153.9,
+      "duration": 140,
       "cues": [
         {
           "text": "You marked the level. You wrote the idea. Price did what you said it would. And the session still ended worse than the read deserved.",
@@ -17,83 +17,83 @@
         },
         {
           "text": "Somewhere between 9:30 a.m. and 11 a.m., the trades stopped coming from the plan and started coming from you.",
-          "start": 9.7
+          "start": 8
         },
         {
           "text": "A second entry, taken because the first was easy. A stop-out, your stop hit, answered forty seconds later. An exit, because a red candle looked big.",
-          "start": 17.1
+          "start": 15.8
         },
         {
           "text": "Your read was right. The chart agreed with it. The order ticket had other plans.",
-          "start": 27.1
+          "start": 25.5
         },
         {
           "text": "That gap, between a right read, your written call on what price does at the level, and the trades you place, is what this module is about.",
           "chapter": "The gap",
-          "start": 33.1
+          "start": 30.9
         },
         {
           "text": "Discipline will not close it. Discipline is what working mechanisms look like from the outside.",
-          "start": 43.5
+          "start": 39.1
         },
         {
           "text": "So every mistake here gets three things.",
-          "start": 49.4
+          "start": 45.4
         },
         {
           "text": "One: what it looks like.",
-          "start": 52.4
+          "start": 48.9
         },
         {
           "text": "Two: what it reveals about you.",
-          "start": 54.7
+          "start": 51.4
         },
         {
           "text": "Three: a mechanism that fixes it. A setting, a written line, a rehearsed routine, or a journal field.",
-          "start": 57.3
+          "start": 54.2
         },
         {
           "text": "Now, where each hard rule came from. The five rules in Module 2 look like restrictions. Each is the written answer to something traders do to themselves on a bad day.",
           "chapter": "The five rules",
-          "start": 64.4
+          "start": 61.4
         },
         {
           "text": "One: the trading window, the hours an entry is allowed. It stops the late entry taken because the level was right there.",
-          "start": 76.3
+          "start": 71.8
         },
         {
           "text": "Two: the news windows, the minutes around a release. They stop a trade turning into a bet on a number.",
-          "start": 84.8
+          "start": 79.5
         },
         {
           "text": "Three: the four reasons to flatten by hand. They stop exits on hope, on sunk cost, on a mood.",
-          "start": 92.6
+          "start": 86.1
         },
         {
           "text": "Four: the 2R kill switch, the daily loss limit at your broker, twice the risk on one trade. It stops you negotiating with your own limit.",
-          "start": 100
+          "start": 92.7
         },
         {
           "text": "Five: the post-loss reset, the routine after a loss. It stops the next trade coming from the last one.",
-          "start": 110.1
+          "start": 101.5
         },
         {
           "text": "The rule: keep the rules as written, and when one feels like a cost, read the behaviour it stops, not the rule.",
           "chapter": "The rule",
-          "start": 117.5
+          "start": 108.5
         },
         {
           "text": "Getting it wrong is bargaining. The window is for normal days. The reset is for big losses. It reveals you read a rule as a price, not a decision already made.",
           "chapter": "Getting it wrong",
-          "start": 126.1
+          "start": 115.5
         },
         {
           "text": "The fix: write what each rule stops, in your own words, on a card beside your screen, and read it aloud before the first order.",
-          "start": 137.9
+          "start": 125.8
         },
         {
           "text": "The rule does not get tired at 2:30 p.m. Attention does. That is the whole argument.",
-          "start": 147.6
+          "start": 133.8
         }
       ],
       "slides": [
@@ -121,7 +121,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A session where the read was right and the trades stopped following the plan between 9:30 a.m. and 11 a.m.\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Right read, wrong morning</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Level marked, idea written, price did its part</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"200\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><line x1=\"72\" y1=\"150\" x2=\"568\" y2=\"150\" stroke=\"var(--gold)\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><text x=\"320\" y=\"128\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Level marked. Read was right.</text><line x1=\"140\" y1=\"262\" x2=\"140\" y2=\"172\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><polygon points=\"132,178 140,164 148,178\" fill=\"var(--cyan)\"/><text x=\"158\" y=\"250\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Plan stopped driving trades</text></g><g class=\"sv-rv\" style=\"animation-delay:9.7s\"><text x=\"430\" y=\"215\" font-size=\"40\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">9:30 a.m.</text><text x=\"430\" y=\"245\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Plan stops driving</text><text x=\"430\" y=\"268\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Entries come from you</text></g><g class=\"sv-rv\" style=\"animation-delay:27.1s\"><rect x=\"32\" y=\"304\" width=\"576\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"320\" y=\"328\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Right about the market. Wrong about the morning.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A session where the read was right and the trades stopped following the plan between 9:30 a.m. and 11 a.m.\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Right read, wrong morning</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Level marked, idea written, price did its part</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"200\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><line x1=\"72\" y1=\"150\" x2=\"568\" y2=\"150\" stroke=\"var(--gold)\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><text x=\"320\" y=\"128\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Level marked. Read was right.</text><line x1=\"140\" y1=\"262\" x2=\"140\" y2=\"172\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><polygon points=\"132,178 140,164 148,178\" fill=\"var(--cyan)\"/><text x=\"158\" y=\"250\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Plan stopped driving trades</text></g><g class=\"sv-rv\" style=\"animation-delay:8.0s\"><text x=\"430\" y=\"215\" font-size=\"40\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">9:30 a.m.</text><text x=\"430\" y=\"245\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Plan stops driving</text><text x=\"430\" y=\"268\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Entries come from you</text></g><g class=\"sv-rv\" style=\"animation-delay:25.5s\"><rect x=\"32\" y=\"304\" width=\"576\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"320\" y=\"328\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Right about the market. Wrong about the morning.</text></g></svg>"
         },
         {
           "title": "Three things per mistake",
@@ -154,8 +154,8 @@
               "size": 20
             }
           },
-          "start": 33.1,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Each mistake gets what it looks like, what it reveals, and a mechanism that fixes it\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Three things per mistake</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">None of them is trying harder</text><g class=\"sv-rv\" style=\"animation-delay:19.3s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What it looks like</text></g><g class=\"sv-rv\" style=\"animation-delay:21.6s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What it reveals about you</text></g><g class=\"sv-rv\" style=\"animation-delay:24.2s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A mechanism that fixes it</text></g><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">No effort</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">only mechanisms</text></g></svg>"
+          "start": 30.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Each mistake gets what it looks like, what it reveals, and a mechanism that fixes it\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Three things per mistake</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">None of them is trying harder</text><g class=\"sv-rv\" style=\"animation-delay:18.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What it looks like</text></g><g class=\"sv-rv\" style=\"animation-delay:20.5s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What it reveals about you</text></g><g class=\"sv-rv\" style=\"animation-delay:23.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A mechanism that fixes it</text></g><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">No effort</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">only mechanisms</text></g></svg>"
         },
         {
           "title": "Five rules, five behaviours",
@@ -196,8 +196,8 @@
               "size": 22
             }
           },
-          "start": 64.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Five hard rules and the behaviour each one stops\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Five rules, five behaviours</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each rule answers something you do on a bad day</text><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Window: the late entry</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">News windows: the bet on a number</text></g><g class=\"sv-rv\" style=\"animation-delay:28.2s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Flatten reasons: exits on a mood</text></g><g class=\"sv-rv\" style=\"animation-delay:35.6s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2R kill switch: negotiating the limit</text></g><g class=\"sv-rv\" style=\"animation-delay:45.7s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Post-loss reset: the entry to get it back</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">5 rules</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">one each</text></g></svg>"
+          "start": 61.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Five hard rules and the behaviour each one stops\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Five rules, five behaviours</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each rule answers something you do on a bad day</text><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Window: the late entry</text></g><g class=\"sv-rv\" style=\"animation-delay:18.1s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">News windows: the bet on a number</text></g><g class=\"sv-rv\" style=\"animation-delay:24.7s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Flatten reasons: exits on a mood</text></g><g class=\"sv-rv\" style=\"animation-delay:31.3s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2R kill switch: negotiating the limit</text></g><g class=\"sv-rv\" style=\"animation-delay:40.1s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Post-loss reset: the entry to get it back</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">5 rules</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">one each</text></g></svg>"
         },
         {
           "title": "Read the behaviour",
@@ -261,8 +261,8 @@
               }
             ]
           },
-          "start": 117.5,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Read the behaviour</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Not the rule</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Keep the rules as written</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Rule feels like a cost?</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read what it stops</text></g><g class=\"sv-rv\" style=\"animation-delay:8.6s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Bargaining: normal days only</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reads the rule as a price</text><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Card by the screen, aloud</text></g></g></svg>"
+          "start": 108.5,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Read the behaviour</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Not the rule</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Keep the rules as written</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Rule feels like a cost?</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read what it stops</text></g><g class=\"sv-rv\" style=\"animation-delay:7.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Bargaining: normal days only</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reads the rule as a price</text><g class=\"sv-rv\" style=\"animation-delay:17.3s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Card by the screen, aloud</text></g></g></svg>"
         }
       ],
       "check": [
@@ -311,7 +311,13 @@
           "why": "Bargaining treats the rule as a price. The behaviour it stops is the part to remember."
         }
       ],
-      "audio": "../assets/audio/20/s1.mp3"
+      "audio": "../assets/audio/20/s1.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats Music",
+        "producer": "vaitsez",
+        "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
+      },
+      "audio_v": "a8c750b1cd"
     },
     {
       "id": "s2",
@@ -320,7 +326,7 @@
         "Scheduled Breaks Are Hygiene",
         "The Post-Loss Reset Is A Rehearsed Skill"
       ],
-      "duration": 158.3,
+      "duration": 140,
       "cues": [
         {
           "text": "A scheduled break is written on your plan before the session, at a fixed time, and taken whether the session is going well or badly.",
@@ -329,76 +335,76 @@
         },
         {
           "text": "Never triggered by a result. A pause after a loss is a different thing, coming up next.",
-          "start": 9.7
+          "start": 8.1
         },
         {
           "text": "Attention drains with screen time. A break at a fixed time is the cheapest repair there is: platform closed, away from the desk, back to the plan.",
-          "start": 16.4
+          "start": 14
         },
         {
           "text": "A break carries no promise. It is hygiene, like sleep. It is not a cure.",
-          "start": 26.8
+          "start": 23.4
         },
         {
           "text": "After a day or more away, the first session starts with the full pre-market routine, the sheet you build before the open, and one rehearsal of the reset before the first order.",
-          "start": 32.7
+          "start": 28.7
         },
         {
           "text": "The rule: breaks sit on the plan at fixed times and are taken whatever the result.",
           "chapter": "The break rule",
-          "start": 45
+          "start": 39.6
         },
         {
           "text": "Getting it wrong is skipping the 11 a.m. break because the morning is green. It reveals your P and L runs your breaks.",
           "chapter": "A green morning",
-          "start": 51.3
+          "start": 44.9
         },
         {
           "text": "The fix: an alarm for each, and the platform closed when it rings. Your screen will survive fifteen minutes without you. It has survived worse.",
-          "start": 60.2
+          "start": 52.6
         },
         {
           "text": "Now, the post-loss reset: the routine after every losing trade, before any new entry. It is a skill, built by repetition in the conditions it is for.",
           "chapter": "The reset",
-          "start": 69.9
+          "start": 61.4
         },
         {
           "text": "A routine you have only run while calm, you have never run at all. After a stop-out your pulse is up and your hand is already on the order ticket.",
-          "start": 80.3
+          "start": 71.8
         },
         {
           "text": "One: cancel every working entry order, every entry order still resting. A working order is the impulse, already placed.",
-          "start": 91.8
+          "start": 80.7
         },
         {
           "text": "Two: the physical step. Feet flat, one long exhale, three or four rounds of box breathing.",
-          "start": 99.2
+          "start": 88.8
         },
         {
           "text": "Three: three questions, aloud. What is the chart telling me? Are any setups forming? What would need to happen for one to appear?",
-          "start": 105.5
+          "start": 94.9
         },
         {
           "text": "Four: write the third answer in one line in your journal, your record of every trade. A blank line means no trade.",
-          "start": 114.5
+          "start": 102.9
         },
         {
           "text": "Once a week, with no position on, rehearse it with your heart rate up, straight after a flight of stairs. Count the rehearsals in the journal.",
-          "start": 123
+          "start": 110.4
         },
         {
           "text": "The rule: after every loss, the full reset before any new entry, rehearsed weekly.",
           "chapter": "The reset rule",
-          "start": 133
+          "start": 119
         },
         {
           "text": "Getting it wrong is a reset run at the screen with the chart still moving, or skipped because it was only a small loss.",
           "chapter": "A small loss",
-          "start": 138.6
+          "start": 124.8
         },
         {
           "text": "It reveals the reset is a mood to wait out, not a routine to run. With no rehearsals behind it, it is a plan, not a skill.",
-          "start": 147.9
+          "start": 131.9
         }
       ],
       "slides": [
@@ -479,7 +485,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A scheduled break on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Breaks are hygiene</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On the plan first, taken whatever the result</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">A scheduled break</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On the plan, at a fixed time</text><g class=\"sv-rv\" style=\"animation-delay:9.7s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never triggered by a result</text></g><g class=\"sv-rv\" style=\"animation-delay:26.8s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Hygiene, not a cure</text></g></g><g class=\"sv-rv\" style=\"animation-delay:51.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Skipped: the morning is green</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your P and L runs the breaks</text><g class=\"sv-rv\" style=\"animation-delay:60.2s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Alarm, platform closed</text></g></g><g class=\"sv-rv\" style=\"animation-delay:45.0s\"><text x=\"32\" y=\"300\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fixed times, taken whatever the result.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A scheduled break on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Breaks are hygiene</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On the plan first, taken whatever the result</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">A scheduled break</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On the plan, at a fixed time</text><g class=\"sv-rv\" style=\"animation-delay:8.1s\"><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never triggered by a result</text></g><g class=\"sv-rv\" style=\"animation-delay:23.4s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Hygiene, not a cure</text></g></g><g class=\"sv-rv\" style=\"animation-delay:44.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Skipped: the morning is green</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your P and L runs the breaks</text><g class=\"sv-rv\" style=\"animation-delay:52.6s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Alarm, platform closed</text></g></g><g class=\"sv-rv\" style=\"animation-delay:39.6s\"><text x=\"32\" y=\"300\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fixed times, taken whatever the result.</text></g></svg>"
         },
         {
           "title": "The reset, in order",
@@ -516,8 +522,8 @@
               "size": 22
             }
           },
-          "start": 69.9,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four steps of the post-loss reset and the weekly rehearsal\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The reset, in order</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Run after every loss, before any new entry</text><g class=\"sv-rv\" style=\"animation-delay:21.9s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Cancel every working entry order</text></g><g class=\"sv-rv\" style=\"animation-delay:29.3s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Feet flat, exhale, box breathing</text></g><g class=\"sv-rv\" style=\"animation-delay:35.6s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Three questions, aloud</text></g><g class=\"sv-rv\" style=\"animation-delay:44.6s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write the third answer</text></g><g class=\"sv-rv\" style=\"animation-delay:53.1s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Weekly</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">rehearsed</text></g></svg>"
+          "start": 61.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four steps of the post-loss reset and the weekly rehearsal\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The reset, in order</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Run after every loss, before any new entry</text><g class=\"sv-rv\" style=\"animation-delay:19.3s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Cancel every working entry order</text></g><g class=\"sv-rv\" style=\"animation-delay:27.4s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Feet flat, exhale, box breathing</text></g><g class=\"sv-rv\" style=\"animation-delay:33.5s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Three questions, aloud</text></g><g class=\"sv-rv\" style=\"animation-delay:41.5s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write the third answer</text></g><g class=\"sv-rv\" style=\"animation-delay:49.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Weekly</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">rehearsed</text></g></svg>"
         },
         {
           "title": "A skill, not a mood",
@@ -581,8 +587,8 @@
               }
             ]
           },
-          "start": 133,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A skill, not a mood</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Built by repetition in the conditions it is for</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Full reset after every loss</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before any new entry</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Rehearsed weekly</text></g><g class=\"sv-rv\" style=\"animation-delay:5.6s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Run with the chart moving</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Skipped: only a small loss</text><g class=\"sv-rv\" style=\"animation-delay:14.9s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">No rehearsals: a plan only</text></g></g></svg>"
+          "start": 119,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A skill, not a mood</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Built by repetition in the conditions it is for</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Full reset after every loss</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before any new entry</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Rehearsed weekly</text></g><g class=\"sv-rv\" style=\"animation-delay:5.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Run with the chart moving</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Skipped: only a small loss</text><g class=\"sv-rv\" style=\"animation-delay:12.9s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">No rehearsals: a plan only</text></g></g></svg>"
         }
       ],
       "check": [
@@ -631,7 +637,13 @@
           "why": "A reset treated as a mood fails exactly when the loss is the one that matters."
         }
       ],
-      "audio": "../assets/audio/20/s2.mp3"
+      "audio": "../assets/audio/20/s2.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats Music",
+        "producer": "vaitsez",
+        "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
+      },
+      "audio_v": "94ad7a8898"
     },
     {
       "id": "s3",
@@ -640,7 +652,7 @@
         "The Re-entry Loop After A First Win",
         "Losing Is A Member Of A Distribution"
       ],
-      "duration": 155.7,
+      "duration": 139.7,
       "cues": [
         {
           "text": "The re-entry loop is a run of entries, one after another, without a fresh setup, a level and a read together. It starts after the first win, not a loss.",
@@ -649,77 +661,77 @@
         },
         {
           "text": "The first trade wins. Easy feels like information. The next entry comes a little faster, a little further from a level.",
-          "start": 11.5
+          "start": 9.8
         },
         {
           "text": "Nothing about the market said the second trade was better. The first result did. A win is not a forecast. It is a receipt.",
-          "start": 19.7
+          "start": 17.9
         },
         {
           "text": "Now, the four checks. The second trade faces the same test as the first, written before the order.",
           "chapter": "The four checks",
-          "start": 29
+          "start": 26.2
         },
         {
           "text": "One: the location is a named level, a price marked before the session.",
-          "start": 36
+          "start": 33.1
         },
         {
           "text": "Two: the trigger, the price event that puts you in, fired before entry.",
-          "start": 41.3
+          "start": 38.3
         },
         {
           "text": "Three: the stop is behind structure, past the level, not a fixed count of points.",
-          "start": 46.5
+          "start": 43.1
         },
         {
           "text": "Four: the size matches the plan for that stop. Two checks or fewer is a grade C, the lowest grade, and a C is not taken.",
-          "start": 52.4
+          "start": 48.5
         },
         {
           "text": "The rule: every entry after the first, especially the first after a win, gets the four checks written before the order goes in.",
           "chapter": "The grade rule",
-          "start": 62.5
+          "start": 56.9
         },
         {
           "text": "Getting it wrong is a second entry from mid-range, the space between levels, minutes after the first trade closed, grade filled in afterwards.",
           "chapter": "Filled in after",
-          "start": 71.4
+          "start": 65.2
         },
         {
           "text": "It reveals the first win was read as a forecast. That grade describes what you did. It was never a test.",
-          "start": 80.3
+          "start": 74
         },
         {
           "text": "Now, losing. If a read is right most of the time, the misses are not mistakes. They are the rest of the distribution.",
           "chapter": "Losing",
-          "start": 88.5
+          "start": 81.5
         },
         {
           "text": "A plan trade that hits its stop did what the plan said it might.",
-          "start": 97.4
+          "start": 89
         },
         {
           "text": "Losses arrive in runs. Even with every trade independent, over a few dozen trades, three in a row is the ordinary case.",
-          "start": 103
+          "start": 93.5
         },
         {
           "text": "Two errors sit either side of a losing run. One: reading it as a verdict, changing the plan after three trades.",
-          "start": 111.5
+          "start": 101.9
         },
         {
           "text": "Two: reading it as nothing, when each loss carried a Broke Rule tag, the tag for a hard rule broken. That is not a distribution. It is a habit.",
-          "start": 119.7
+          "start": 109.4
         },
         {
           "text": "The rule: a plan trade that lost gets no negative tag, and setups are judged in cohorts, groups of trades sharing a setup, on the review schedule, never after a run.",
           "chapter": "The cohort rule",
-          "start": 130.8
+          "start": 119
         },
         {
           "text": "Getting it wrong is tagging a plan loss as a bad entry. It reveals you are grading outcomes. Tag at the exit from the checks and the flatten reasons, never from the R column.",
           "chapter": "Grading outcomes",
-          "start": 142.7
+          "start": 129.4
         }
       ],
       "slides": [
@@ -786,7 +798,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What the first win changes on the left, what the market actually said on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Why it starts with a win</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Easy feels like information</text><g class=\"sv-rv\" style=\"animation-delay:11.5s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">After the first win</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Next entry comes faster</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A little further from a level</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A trigger you want to see</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">What the market said</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Nothing about trade two</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The result did the talking</text><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">A win is a receipt</text></g></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What the first win changes on the left, what the market actually said on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Why it starts with a win</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Easy feels like information</text><g class=\"sv-rv\" style=\"animation-delay:9.8s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">After the first win</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Next entry comes faster</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A little further from a level</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A trigger you want to see</text></g><g class=\"sv-rv\" style=\"animation-delay:17.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">What the market said</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Nothing about trade two</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The result did the talking</text><g class=\"sv-rv\" style=\"animation-delay:17.9s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">A win is a receipt</text></g></g></svg>"
         },
         {
           "title": "Four checks, every entry",
@@ -823,8 +835,8 @@
               "size": 30
             }
           },
-          "start": 29,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four checks behind a grade: location, trigger, stop and size\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Four checks, every entry</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written before the order, held to the same test</text><g class=\"sv-rv\" style=\"animation-delay:7.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Location is a named level</text></g><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trigger fired before entry</text></g><g class=\"sv-rv\" style=\"animation-delay:17.5s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stop is behind structure</text></g><g class=\"sv-rv\" style=\"animation-delay:23.4s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Size matches the plan for that stop</text></g><g class=\"sv-rv\" style=\"animation-delay:23.4s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"30\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">C</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is not taken</text></g></svg>"
+          "start": 26.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four checks behind a grade: location, trigger, stop and size\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Four checks, every entry</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written before the order, held to the same test</text><g class=\"sv-rv\" style=\"animation-delay:6.9s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Location is a named level</text></g><g class=\"sv-rv\" style=\"animation-delay:12.1s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trigger fired before entry</text></g><g class=\"sv-rv\" style=\"animation-delay:16.9s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stop is behind structure</text></g><g class=\"sv-rv\" style=\"animation-delay:22.3s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Size matches the plan for that stop</text></g><g class=\"sv-rv\" style=\"animation-delay:22.3s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"30\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">C</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is not taken</text></g></svg>"
         },
         {
           "title": "A test, not a description",
@@ -888,8 +900,8 @@
               }
             ]
           },
-          "start": 62.5,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A test, not a description</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The grade goes on the line before the order</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Four checks before the order</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every entry after the first</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Especially the first after a win</text></g><g class=\"sv-rv\" style=\"animation-delay:8.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Second entry from mid-range</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Grade filled in afterwards</text><g class=\"sv-rv\" style=\"animation-delay:17.8s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">A description, not a test</text></g></g></svg>"
+          "start": 56.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A test, not a description</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The grade goes on the line before the order</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Four checks before the order</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every entry after the first</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Especially the first after a win</text></g><g class=\"sv-rv\" style=\"animation-delay:8.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Second entry from mid-range</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Grade filled in afterwards</text><g class=\"sv-rv\" style=\"animation-delay:17.1s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">A description, not a test</text></g></g></svg>"
         },
         {
           "title": "Losses come in runs",
@@ -937,8 +949,8 @@
               }
             ]
           },
-          "start": 88.5,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A boundary between a plan trade that lost and a rule break, with the tag split\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Losses come in runs</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A plan followed to the letter looks like this</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"270\" height=\"120\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"167\" y=\"161\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Plan trade that lost</text><rect x=\"338\" y=\"96\" width=\"270\" height=\"120\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"473\" y=\"161\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Broke Rule tag</text></g><g class=\"sv-rv\" style=\"animation-delay:23.0s\"><line x1=\"320\" y1=\"84\" x2=\"320\" y2=\"228\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"320\" y=\"252\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">Split</text></g><g class=\"sv-rv\" style=\"animation-delay:31.2s\"><text x=\"32\" y=\"300\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Same loss. Different cause.</text></g></svg>"
+          "start": 81.5,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A boundary between a plan trade that lost and a rule break, with the tag split\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Losses come in runs</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A plan followed to the letter looks like this</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"270\" height=\"120\" rx=\"0\" fill=\"var(--green)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"167\" y=\"161\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Plan trade that lost</text><rect x=\"338\" y=\"96\" width=\"270\" height=\"120\" rx=\"0\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.22\"/><text x=\"473\" y=\"161\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Broke Rule tag</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><line x1=\"320\" y1=\"84\" x2=\"320\" y2=\"228\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\"/><text x=\"320\" y=\"252\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">Split</text></g><g class=\"sv-rv\" style=\"animation-delay:27.9s\"><text x=\"32\" y=\"300\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Same loss. Different cause.</text></g></svg>"
         },
         {
           "title": "Judge in cohorts",
@@ -1002,8 +1014,8 @@
               }
             ]
           },
-          "start": 130.8,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Judge in cohorts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On the review schedule, never after a run</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Plan loss: no negative tag</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Judge setups in cohorts</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Review on a fixed schedule</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Plan loss tagged bad entry</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">You grade outcomes</text><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Tag from the checks, not R</text></g></g></svg>"
+          "start": 119,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Judge in cohorts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On the review schedule, never after a run</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Plan loss: no negative tag</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Judge setups in cohorts</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Review on a fixed schedule</text></g><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Plan loss tagged bad entry</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">You grade outcomes</text><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Tag from the checks, not R</text></g></g></svg>"
         }
       ],
       "check": [
@@ -1052,7 +1064,13 @@
           "why": "A plan trade that lost did what the plan said it might. Tag from the four checks and the four flatten reasons, never from the R column."
         }
       ],
-      "audio": "../assets/audio/20/s3.mp3"
+      "audio": "../assets/audio/20/s3.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats Music",
+        "producer": "vaitsez",
+        "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
+      },
+      "audio_v": "a6e1216866"
     },
     {
       "id": "s4",
@@ -1061,7 +1079,7 @@
         "Curious Or Needing",
         "Rule-Breaking Is The Only Failure"
       ],
-      "duration": 155.4,
+      "duration": 134.3,
       "cues": [
         {
           "text": "There are two ways to sit down in front of a chart.",
@@ -1070,81 +1088,81 @@
         },
         {
           "text": "Curious: you want to see what the market does at your levels, and you would be content to watch it do something you cannot trade.",
-          "start": 4.8
+          "start": 3.7
         },
         {
           "text": "Needing: you want something from the session. A green day, a loss repaid, being right about an earlier idea, or just something to happen.",
-          "start": 14.5
+          "start": 10.9
         },
         {
           "text": "The market is the same either way. What you see in it is not. Boredom is not a setup. It only dresses like one.",
-          "start": 23.8
+          "start": 19.5
         },
         {
           "text": "The readiness score puts a number on it, from 0 to 2, at the top of your pre-market sheet.",
           "chapter": "The score",
-          "start": 33.1
+          "start": 27.3
         },
         {
           "text": "2: curious about what the market does at your levels.",
-          "start": 40.5
+          "start": 33.4
         },
         {
           "text": "1: neutral.",
-          "start": 44.6
+          "start": 37.3
         },
         {
           "text": "0: needing something from the market.",
-          "start": 45.8
+          "start": 39.5
         },
         {
           "text": "It is data for your journal, not a gate. A completed sheet clears you to trade, whatever the score.",
-          "start": 48.4
+          "start": 42.9
         },
         {
           "text": "The rule: score yourself honestly every morning, and use the score as data in the review, never as a permission or a ban in the session.",
           "chapter": "The score rule",
-          "start": 55.8
+          "start": 49.4
         },
         {
           "text": "Getting it wrong is scoring a 2 every day because a 0 feels like failing, or acting on it. It reveals the score has become a verdict on you.",
           "chapter": "A managed score",
-          "start": 65.9
+          "start": 57.8
         },
         {
           "text": "A measurement that is managed stops measuring. The score never touches size.",
-          "start": 77
+          "start": 66.9
         },
         {
           "text": "Now, the only failure. On this course, a trade lost is not a failure. A rule broken is, whether the trade made money or not.",
           "chapter": "The only failure",
-          "start": 81.8
+          "start": 72.2
         },
         {
           "text": "The winning rule-break is the dangerous one. A trade from mid-range that happens to work pays you for the thing you are trying to stop. That pay is the strongest training signal there is.",
-          "start": 91.5
+          "start": 80.4
         },
         {
           "text": "That is why a winning C is a warning, not a result, and why a Broke Rule tag stays on a winner.",
-          "start": 104.5
+          "start": 91.2
         },
         {
           "text": "It also means the failure is in your control. You cannot decide whether the next trade wins. You can decide whether it was taken by the plan.",
-          "start": 113
+          "start": 97.7
         },
         {
           "text": "The rule: a rule broken is tagged whatever the result, and the count of broken rules is the first number of every weekly review, the fixed review of the week's journal.",
           "chapter": "The tag rule",
-          "start": 123.4
+          "start": 106.5
         },
         {
           "text": "Getting it wrong is leaving the tag off a winner. It reveals the result is still grading the behaviour, so the behaviour is being rewarded.",
           "chapter": "Tag left off",
-          "start": 135.3
+          "start": 116.8
         },
         {
           "text": "The fix is a ledger: every tagged trade, winners first, with its R and the rule it broke, totalled in R and never netted against plan trades.",
-          "start": 145
+          "start": 125.5
         }
       ],
       "slides": [
@@ -1211,7 +1229,7 @@
             ]
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Curious on the left, needing on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two ways to sit down</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The market is the same either way</text><g class=\"sv-rv\" style=\"animation-delay:4.8s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Curious</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Watching what happens at levels</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Content to see what you</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">cannot trade</text></g><g class=\"sv-rv\" style=\"animation-delay:14.5s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Needing</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A green day, a loss repaid</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Being right, or any action</text><g class=\"sv-rv\" style=\"animation-delay:23.8s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Boredom is need, quietly</text></g></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Curious on the left, needing on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two ways to sit down</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The market is the same either way</text><g class=\"sv-rv\" style=\"animation-delay:3.7s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Curious</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Watching what happens at levels</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Content to see what you</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">cannot trade</text></g><g class=\"sv-rv\" style=\"animation-delay:10.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Needing</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A green day, a loss repaid</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Being right, or any action</text><g class=\"sv-rv\" style=\"animation-delay:19.5s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Boredom is need, quietly</text></g></g></svg>"
         },
         {
           "title": "The readiness score",
@@ -1244,8 +1262,8 @@
               "size": 24
             }
           },
-          "start": 33.1,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The readiness score from 2 down to 0\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The readiness score</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written at the top of the pre-market sheet</text><g class=\"sv-rv\" style=\"animation-delay:7.4s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2: curious about your levels</text></g><g class=\"sv-rv\" style=\"animation-delay:11.5s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">1: neutral</text></g><g class=\"sv-rv\" style=\"animation-delay:12.7s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">0: needing something</text></g><g class=\"sv-rv\" style=\"animation-delay:15.3s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Data</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">not a gate</text></g></svg>"
+          "start": 27.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The readiness score from 2 down to 0\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The readiness score</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written at the top of the pre-market sheet</text><g class=\"sv-rv\" style=\"animation-delay:6.1s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">2: curious about your levels</text></g><g class=\"sv-rv\" style=\"animation-delay:10.0s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">1: neutral</text></g><g class=\"sv-rv\" style=\"animation-delay:12.2s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">0: needing something</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Data</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">not a gate</text></g></svg>"
         },
         {
           "title": "A measure, not a verdict",
@@ -1309,8 +1327,8 @@
               }
             ]
           },
-          "start": 55.8,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A measure, not a verdict</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It never touches size</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Score honestly each morning</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Use it as data in the review</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never a permission or a ban</text></g><g class=\"sv-rv\" style=\"animation-delay:10.1s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A 2 every day, to look good</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Skipping on a 0, big on a 2</text><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Managed scores measure nothing</text></g></g></svg>"
+          "start": 49.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A measure, not a verdict</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">It never touches size</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Score honestly each morning</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Use it as data in the review</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never a permission or a ban</text></g><g class=\"sv-rv\" style=\"animation-delay:8.4s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A 2 every day, to look good</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Skipping on a 0, big on a 2</text><g class=\"sv-rv\" style=\"animation-delay:17.5s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Managed scores measure nothing</text></g></g></svg>"
         },
         {
           "title": "Only the rule break counts",
@@ -1359,8 +1377,8 @@
               ]
             }
           },
-          "start": 81.8,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A lost plan trade is not a failure, a rule broken is, and a winning rule break is the dangerous one\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Only the rule break counts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A rule broken is the failure, win or lose</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Trade lost</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Built to plan:</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">not a failure</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Cost of a plan</text></g><g class=\"sv-rv\" style=\"animation-delay:9.7s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule broken</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Win or lose:</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">a failure</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Tagged, always</text></g><g class=\"sv-rv\" style=\"animation-delay:22.7s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Winning C</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A warning, not a result</text></g><g class=\"sv-rv\" style=\"animation-delay:22.7s\"><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The tag stays</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Broke Rule on a winner</text></g></svg>"
+          "start": 72.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A lost plan trade is not a failure, a rule broken is, and a winning rule break is the dangerous one\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Only the rule break counts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A rule broken is the failure, win or lose</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Trade lost</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Built to plan:</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">not a failure</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Cost of a plan</text></g><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Rule broken</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Win or lose:</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">a failure</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Tagged, always</text></g><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Winning C</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A warning, not a result</text></g><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The tag stays</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Broke Rule on a winner</text></g></svg>"
         },
         {
           "title": "The first number of the week",
@@ -1424,8 +1442,8 @@
               }
             ]
           },
-          "start": 123.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong and the ledger on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The first number of the week</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Counted, totalled in R, never netted</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tag a broken rule, any result</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The count comes first in</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">every weekly review</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tag left off a winner</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Profit netted against cause</text><g class=\"sv-rv\" style=\"animation-delay:21.6s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Ledger: winners first, in R</text></g></g></svg>"
+          "start": 106.5,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong and the ledger on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The first number of the week</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Counted, totalled in R, never netted</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tag a broken rule, any result</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The count comes first in</text><text x=\"48\" y=\"190\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">every weekly review</text></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tag left off a winner</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Profit netted against cause</text><g class=\"sv-rv\" style=\"animation-delay:19.0s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Ledger: winners first, in R</text></g></g></svg>"
         }
       ],
       "check": [
@@ -1474,7 +1492,13 @@
           "why": "Letting the result grade the behaviour rewards the behaviour, which is the failure this module counts."
         }
       ],
-      "audio": "../assets/audio/20/s4.mp3"
+      "audio": "../assets/audio/20/s4.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats Music",
+        "producer": "vaitsez",
+        "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
+      },
+      "audio_v": "4a6b9beded"
     },
     {
       "id": "s5",
@@ -1483,7 +1507,7 @@
         "The Mechanical Fixes, In One List",
         "Worked Case: The Morning After The First Win"
       ],
-      "duration": 156.9,
+      "duration": 151,
       "cues": [
         {
           "text": "Now, the mechanical fixes in one list. Each is a setting, a line, a rehearsal or a journal field.",
@@ -1492,82 +1516,82 @@
         },
         {
           "text": "None is a resolution to try harder. Trying harder is a wish with a gym membership.",
-          "start": 7.4
+          "start": 7.2
         },
         {
           "text": "Bargaining, trading past 2R: the card by your screen, the limit locked at the account.",
-          "start": 13.8
+          "start": 13.1
         },
         {
           "text": "Exiting on a mood: one of the four reasons, or a Too Early tag, the tag for a hand exit off the plan.",
-          "start": 19.7
+          "start": 19.1
         },
         {
           "text": "Skipped breaks, cold returns: an alarm for each break, and a return-day line on the plan.",
-          "start": 28.6
+          "start": 26
         },
         {
           "text": "Re-entry, a reset that never runs: the written third answer, and a weekly rehearsal.",
-          "start": 35
+          "start": 32.2
         },
         {
           "text": "The second trade after a win: the grade line, written first.",
-          "start": 40.5
+          "start": 38.2
         },
         {
           "text": "Forgiving a winning rule-break: the ledger, never netted.",
-          "start": 45
+          "start": 42.9
         },
         {
           "text": "What is not on the list is deliberate. No cap on trades, no stop after a loss count, no smaller size after a red day.",
-          "start": 48.4
+          "start": 47
         },
         {
           "text": "The 2R kill switch is the cap, and base R, your risk on one trade, stays fixed.",
-          "start": 58
+          "start": 55.1
         },
         {
           "text": "The rule: losing trades are the cost of a plan. Broken rules are the only failure.",
           "chapter": "The rule",
-          "start": 64.7
+          "start": 60.9
         },
         {
           "text": "Now, the example. A hypothetical illustration, not a trade record: a composite MNQ morning, invented prices.",
           "chapter": "The example",
-          "start": 71.1
+          "start": 66.8
         },
         {
           "text": "At 9:22 a.m. the sheet carries two branches, written if-then plans, one long, one short, a nothing case, and a readiness score with one line why.",
-          "start": 77.4
+          "start": 75.3
         },
         {
           "text": "At 9:58 a.m., a second long looks easy from mid-range. The grade line comes first. Location, mid-range. Trigger, none. Stop, nothing behind it. A C, written, not taken.",
-          "start": 87.4
+          "start": 85.2
         },
         {
           "text": "At 10:22 a.m. the other branch fires. The grade line is written first, so whatever the trade does, it carries no negative tag.",
-          "start": 98.2
+          "start": 97
         },
         {
           "text": "At 10:32 a.m., after a loss, the reset: orders cancelled, feet flat, one long exhale, three questions aloud, the third answer written.",
-          "start": 107.1
+          "start": 106
         },
         {
           "text": "Then the 11 a.m. alarm. The break is on the plan, so it is taken, green morning or red.",
-          "start": 115.7
+          "start": 115.5
         },
         {
           "text": "Getting it wrong is the other version of the morning. Without the line at 9:58, the mid-range long goes in, and after its first loss the next entry is taken to get it back.",
           "chapter": "Getting it wrong",
-          "start": 123.1
+          "start": 122
         },
         {
           "text": "The kill switch would end that day at 2R down. It would not save the morning. The line at 9:58 and the reset at 10:32 did.",
-          "start": 136.1
+          "start": 133.2
         },
         {
           "text": "Two moments decided the morning: a line written before an order never placed, and a routine after a loss that sent the next trade back to the chart.",
-          "start": 146.1
+          "start": 142.2
         }
       ],
       "slides": [
@@ -1617,7 +1641,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six mistakes and the mechanical fix for each\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The fixes, in one list</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each is a setting, a line, a rehearsal or a field</text><g class=\"sv-rv\" style=\"animation-delay:13.8s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Bargaining, past 2R: card, account lock</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><rect x=\"32\" y=\"126\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"149\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"149\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Exit on a mood: four reasons, or tag</text></g><g class=\"sv-rv\" style=\"animation-delay:28.6s\"><rect x=\"32\" y=\"168\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"191\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"191\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Skipped breaks: alarms, return-day line</text></g><g class=\"sv-rv\" style=\"animation-delay:35.0s\"><rect x=\"32\" y=\"210\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"233\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"233\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Re-entry, no reset: third answer, weekly drill</text></g><g class=\"sv-rv\" style=\"animation-delay:40.5s\"><rect x=\"32\" y=\"252\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"275\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"275\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Second trade after a win: grade line first</text></g><g class=\"sv-rv\" style=\"animation-delay:45.0s\"><rect x=\"32\" y=\"294\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"317\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">6</text><text x=\"76\" y=\"317\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Winning rule-break: ledger, never netted</text></g><g class=\"sv-rv\" style=\"animation-delay:7.4s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">No effort</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">only mechanisms</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six mistakes and the mechanical fix for each\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The fixes, in one list</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each is a setting, a line, a rehearsal or a field</text><g class=\"sv-rv\" style=\"animation-delay:13.1s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Bargaining, past 2R: card, account lock</text></g><g class=\"sv-rv\" style=\"animation-delay:19.1s\"><rect x=\"32\" y=\"126\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"149\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"149\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Exit on a mood: four reasons, or tag</text></g><g class=\"sv-rv\" style=\"animation-delay:26.0s\"><rect x=\"32\" y=\"168\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"191\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"191\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Skipped breaks: alarms, return-day line</text></g><g class=\"sv-rv\" style=\"animation-delay:32.2s\"><rect x=\"32\" y=\"210\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"233\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"233\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Re-entry, no reset: third answer, weekly drill</text></g><g class=\"sv-rv\" style=\"animation-delay:38.2s\"><rect x=\"32\" y=\"252\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"275\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"275\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Second trade after a win: grade line first</text></g><g class=\"sv-rv\" style=\"animation-delay:42.9s\"><rect x=\"32\" y=\"294\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"317\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">6</text><text x=\"76\" y=\"317\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Winning rule-break: ledger, never netted</text></g><g class=\"sv-rv\" style=\"animation-delay:7.2s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">No effort</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">only mechanisms</text></g></svg>"
         },
         {
           "title": "What is not on the list",
@@ -1681,8 +1705,8 @@
               }
             ]
           },
-          "start": 48.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What is deliberately left off the list on the left, the cap on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What is not on the list</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The kill switch is the cap</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Not on the list</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A cap on trades per session</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A stop after a loss count</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Smaller size after a red day</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">What does the job</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">2R kill switch is the cap</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Base R stays fixed</text><g class=\"sv-rv\" style=\"animation-delay:16.3s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Losing is the cost of a plan</text></g></g></svg>"
+          "start": 47,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What is deliberately left off the list on the left, the cap on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What is not on the list</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The kill switch is the cap</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Not on the list</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A cap on trades per session</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A stop after a loss count</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Smaller size after a red day</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">What does the job</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">2R kill switch is the cap</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Base R stays fixed</text><g class=\"sv-rv\" style=\"animation-delay:13.9s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Losing is the cost of a plan</text></g></g></svg>"
         },
         {
           "title": "A composite morning",
@@ -1721,8 +1745,8 @@
             ],
             "credit": "Hypothetical illustration. Not a trade record."
           },
-          "start": 71.1,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A composite morning in order: the sheet, the grade line that stops an entry, the planned trade, the reset and the break\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A composite morning</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Invented prices. Not a trade record.</text><g class=\"sv-rv\" style=\"animation-delay:6.3s\"><rect x=\"32\" y=\"92\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"113\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:22</text><text x=\"124\" y=\"113\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Sheet: two branches, a nothing case, the score</text></g><g class=\"sv-rv\" style=\"animation-delay:16.3s\"><rect x=\"32\" y=\"132\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"153\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:58</text><text x=\"124\" y=\"153\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Grade line first: C, written, not taken</text></g><g class=\"sv-rv\" style=\"animation-delay:27.1s\"><rect x=\"32\" y=\"172\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"193\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:22</text><text x=\"124\" y=\"193\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The other branch fires, grade line first</text></g><g class=\"sv-rv\" style=\"animation-delay:36.0s\"><rect x=\"32\" y=\"212\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:32</text><text x=\"124\" y=\"233\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">After a loss: the reset, third answer written</text></g><g class=\"sv-rv\" style=\"animation-delay:44.6s\"><rect x=\"32\" y=\"252\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"273\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">11 a.m.</text><text x=\"124\" y=\"273\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The alarm: platform closed, green or red</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not a trade record.</text></svg>"
+          "start": 66.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A composite morning in order: the sheet, the grade line that stops an entry, the planned trade, the reset and the break\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A composite morning</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Invented prices. Not a trade record.</text><g class=\"sv-rv\" style=\"animation-delay:8.5s\"><rect x=\"32\" y=\"92\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"113\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:22</text><text x=\"124\" y=\"113\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Sheet: two branches, a nothing case, the score</text></g><g class=\"sv-rv\" style=\"animation-delay:18.4s\"><rect x=\"32\" y=\"132\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"153\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:58</text><text x=\"124\" y=\"153\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Grade line first: C, written, not taken</text></g><g class=\"sv-rv\" style=\"animation-delay:30.2s\"><rect x=\"32\" y=\"172\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"193\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:22</text><text x=\"124\" y=\"193\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The other branch fires, grade line first</text></g><g class=\"sv-rv\" style=\"animation-delay:39.2s\"><rect x=\"32\" y=\"212\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:32</text><text x=\"124\" y=\"233\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">After a loss: the reset, third answer written</text></g><g class=\"sv-rv\" style=\"animation-delay:48.7s\"><rect x=\"32\" y=\"252\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"273\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">11 a.m.</text><text x=\"124\" y=\"273\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The alarm: platform closed, green or red</text></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not a trade record.</text></svg>"
         },
         {
           "title": "The other version",
@@ -1788,8 +1812,8 @@
             ],
             "credit": "Hypothetical illustration. Not a trade record."
           },
-          "start": 123.1,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Without the grade line the mid-range long goes in and the loop starts; the line at 9:58 and the reset at 10:32 are what saved the morning\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The other version</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Same read, no line at 9:58</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Without the line</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The mid-range long goes in</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The next entry: to get it back</text><g class=\"sv-rv\" style=\"animation-delay:13.0s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Kill switch ends the day, not the loop</text></g></g><g class=\"sv-rv\" style=\"animation-delay:13.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">What saved the morning</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The line at 9:58, never placed</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The reset at 10:32</text><g class=\"sv-rv\" style=\"animation-delay:23.0s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Two moments. Same read.</text></g></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not a trade record.</text></svg>"
+          "start": 122,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Without the grade line the mid-range long goes in and the loop starts; the line at 9:58 and the reset at 10:32 are what saved the morning\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The other version</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Same read, no line at 9:58</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Without the line</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The mid-range long goes in</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The next entry: to get it back</text><g class=\"sv-rv\" style=\"animation-delay:11.2s\"><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Kill switch ends the day, not the loop</text></g></g><g class=\"sv-rv\" style=\"animation-delay:11.2s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">What saved the morning</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The line at 9:58, never placed</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The reset at 10:32</text><g class=\"sv-rv\" style=\"animation-delay:20.2s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Two moments. Same read.</text></g></g><text x=\"616\" y=\"346\" font-size=\"11\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-d\">Hypothetical illustration. Not a trade record.</text></svg>"
         }
       ],
       "check": [
@@ -1838,7 +1862,13 @@
           "why": "The kill switch would end that day at 2R down. It would not save the morning. The line at 9:58 and the reset at 10:32 did."
         }
       ],
-      "audio": "../assets/audio/20/s5.mp3"
+      "audio": "../assets/audio/20/s5.mp3",
+      "music": {
+        "title": "Rap - Rap Beat Beats Music",
+        "producer": "vaitsez",
+        "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
+      },
+      "audio_v": "05a5505434"
     },
     {
       "id": "s6",
@@ -1848,7 +1878,7 @@
         "Before Your Next Session",
         "Where It Goes Next"
       ],
-      "duration": 155.8,
+      "duration": 143.8,
       "cues": [
         {
           "text": "Which of these is yours? Answer from your journal, not from memory, for your last ten sessions or as many as you have. One point for each line that is true.",
@@ -1857,83 +1887,83 @@
         },
         {
           "text": "One: every entry after a loss has a written third answer, timestamped before it.",
-          "start": 11.9
+          "start": 9.7
         },
         {
           "text": "Two: you rehearsed the reset with your heart rate up in each of the last two weeks.",
-          "start": 17.5
+          "start": 15.4
         },
         {
           "text": "Three: no trade at grade C, and every grade line written before its order.",
-          "start": 24.2
+          "start": 20.6
         },
         {
           "text": "Four: no losing A-plus or A trade carries a negative tag.",
-          "start": 29.7
+          "start": 25.9
         },
         {
           "text": "Five: every plan had its breaks written, and every break was taken.",
-          "start": 34.2
+          "start": 30.6
         },
         {
           "text": "Six: a readiness score for every session, and no size changed because of it.",
-          "start": 39.1
+          "start": 35.5
         },
         {
           "text": "Six of six: the mechanisms are in place, and the weekly review keeps them there.",
-          "start": 44.7
+          "start": 41.1
         },
         {
           "text": "Four or five: the first false line is next week's one fix, and only that one. Under four: fix line one before your next session, and add the others one a week.",
-          "start": 50.6
+          "start": 46.7
         },
         {
           "text": "One line overrides the score. If line one is false, it is the fix, whatever the total, because every other line depends on the next trade coming from the chart.",
-          "start": 62.9
+          "start": 56.8
         },
         {
           "text": "Getting it wrong is scoring from memory. Memory agrees with how the day ended. It reveals you want a verdict, not a count. The fix: six lines from the journal, on the review day.",
           "chapter": "Getting it wrong",
-          "start": 74.4
+          "start": 66.8
         },
         {
           "text": "Your assignment. Run the post-loss reset once, with no position on, straight after a flight of stairs or a fast two-minute walk.",
           "chapter": "Your assignment",
-          "start": 87.4
+          "start": 77.9
         },
         {
           "text": "Cancel orders on an empty ticket. Feet flat, one long exhale, four rounds of box breathing. The three questions aloud.",
-          "start": 95.9
+          "start": 86.2
         },
         {
           "text": "Then write the third answer in your journal, with the time. That is the whole assignment.",
-          "start": 103.7
+          "start": 94.4
         },
         {
           "text": "In one line: losing trades are the cost of a plan, broken rules are the only failure, and every fix is a mechanism set before the session.",
           "chapter": "In one line",
-          "start": 110
+          "start": 99.9
         },
         {
           "text": "Where it goes next. Every mechanism here lands in the journal.",
           "chapter": "Where it goes next",
-          "start": 120.4
+          "start": 109.2
         },
         {
           "text": "Module 18, Journaling and Review, teaches the tags and the weekly review where the ledger lives.",
-          "start": 124.9
+          "start": 113.9
         },
         {
           "text": "Module 16 puts the readiness score on the sheet, and Module 17 covers the hours between the open and the close.",
-          "start": 131.2
+          "start": 120.3
         },
         {
           "text": "The rules themselves are in Module 2. Module 19 holds the daily habits, and Module 21 teaches how to read a distribution from your own record.",
-          "start": 139.4
+          "start": 128.1
         },
         {
           "text": "You marked the level. Now the morning follows the plan. The chart can keep its opinions.",
-          "start": 149.5
+          "start": 138.1
         }
       ],
       "slides": [
@@ -1983,7 +2013,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six lines to score from your last ten sessions\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Which of these is yours?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">From your journal, not from memory</text><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Third answer before each entry</text></g><g class=\"sv-rv\" style=\"animation-delay:17.5s\"><rect x=\"32\" y=\"126\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"149\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"149\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Reset rehearsed each of two weeks</text></g><g class=\"sv-rv\" style=\"animation-delay:24.2s\"><rect x=\"32\" y=\"168\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"191\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"191\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No grade C taken, line first</text></g><g class=\"sv-rv\" style=\"animation-delay:29.7s\"><rect x=\"32\" y=\"210\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"233\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"233\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No negative tag on plan losses</text></g><g class=\"sv-rv\" style=\"animation-delay:34.2s\"><rect x=\"32\" y=\"252\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"275\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"275\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Breaks written and taken</text></g><g class=\"sv-rv\" style=\"animation-delay:39.1s\"><rect x=\"32\" y=\"294\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"317\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">6</text><text x=\"76\" y=\"317\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Score recorded, size unchanged</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">6 lines</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">one point each</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six lines to score from your last ten sessions\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Which of these is yours?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">From your journal, not from memory</text><g class=\"sv-rv\" style=\"animation-delay:9.7s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Third answer before each entry</text></g><g class=\"sv-rv\" style=\"animation-delay:15.4s\"><rect x=\"32\" y=\"126\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"149\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"149\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Reset rehearsed each of two weeks</text></g><g class=\"sv-rv\" style=\"animation-delay:20.6s\"><rect x=\"32\" y=\"168\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"191\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"191\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No grade C taken, line first</text></g><g class=\"sv-rv\" style=\"animation-delay:25.9s\"><rect x=\"32\" y=\"210\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"233\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"233\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No negative tag on plan losses</text></g><g class=\"sv-rv\" style=\"animation-delay:30.6s\"><rect x=\"32\" y=\"252\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"275\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"275\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Breaks written and taken</text></g><g class=\"sv-rv\" style=\"animation-delay:35.5s\"><rect x=\"32\" y=\"294\" width=\"440\" height=\"34\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"317\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">6</text><text x=\"76\" y=\"317\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Score recorded, size unchanged</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">6 lines</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">one point each</text></g></svg>"
         },
         {
           "title": "Your score",
@@ -2039,8 +2069,8 @@
               }
             ]
           },
-          "start": 44.7,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six points and the three score bands\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your score</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Line one overrides the total</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:1.8s\"><circle cx=\"480\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"480\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">6</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">6 of 6</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">In place. The weekly review keeps it there.</text></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">4 or 5</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The first false line is next week's one fix.</text></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Under 4</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Fix line one, add the rest one a week.</text></g><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><text x=\"32\" y=\"350\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">If line one is false, it is the fix.</text></g><g class=\"sv-rv\" style=\"animation-delay:29.7s\"><text x=\"608\" y=\"350\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-m\">From the journal, never from memory</text></g></svg>"
+          "start": 41.1,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six points and the three score bands\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your score</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Line one overrides the total</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><circle cx=\"80\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"80\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">1</text></g><g class=\"sv-rv\" style=\"animation-delay:0.3s\"><circle cx=\"160\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"160\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">2</text></g><g class=\"sv-rv\" style=\"animation-delay:0.7s\"><circle cx=\"240\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"240\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">3</text></g><g class=\"sv-rv\" style=\"animation-delay:1.0s\"><circle cx=\"320\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"320\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">4</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><circle cx=\"400\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"400\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">5</text></g><g class=\"sv-rv\" style=\"animation-delay:1.8s\"><circle cx=\"480\" cy=\"130\" r=\"22\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><text x=\"480\" y=\"137\" font-size=\"18\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t sv-n\">6</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"190\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"216\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">6 of 6</text><text x=\"150\" y=\"216\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">In place. The weekly review keeps it there.</text></g><g class=\"sv-rv\" style=\"animation-delay:5.6s\"><rect x=\"32\" y=\"240\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"266\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">4 or 5</text><text x=\"150\" y=\"266\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The first false line is next week's one fix.</text></g><g class=\"sv-rv\" style=\"animation-delay:5.6s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"40\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"316\" font-size=\"16\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Under 4</text><text x=\"150\" y=\"316\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Fix line one, add the rest one a week.</text></g><g class=\"sv-rv\" style=\"animation-delay:15.7s\"><text x=\"32\" y=\"350\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">If line one is false, it is the fix.</text></g><g class=\"sv-rv\" style=\"animation-delay:25.7s\"><text x=\"608\" y=\"350\" font-size=\"13\" font-weight=\"400\" text-anchor=\"end\" class=\"sv-m\">From the journal, never from memory</text></g></svg>"
         },
         {
           "title": "Before your next session",
@@ -2061,8 +2091,8 @@
             "line1": "No position on, heart rate up.",
             "line2": "Write the third answer in your journal, with the time."
           },
-          "start": 87.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The assignment: run the reset once with no position on and write the third answer\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Before your next session</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One rehearsal of the reset</text><g class=\"sv-rv\" style=\"animation-delay:8.5s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Stairs or walk</text></g><g class=\"sv-rv\" style=\"animation-delay:9.8s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Cancel orders</text></g><g class=\"sv-rv\" style=\"animation-delay:11.1s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Box breathing</text></g><g class=\"sv-rv\" style=\"animation-delay:12.4s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">3 questions</text></g><g class=\"sv-rv\" style=\"animation-delay:13.7s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Third answer</text></g><g class=\"sv-rv\" style=\"animation-delay:15.0s\"><rect x=\"517\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"563\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Add the time</text></g><g class=\"sv-rv\" style=\"animation-delay:8.5s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No position on, heart rate up.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write the third answer in your journal, with the time.</text></g></svg>"
+          "start": 77.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The assignment: run the reset once with no position on and write the third answer\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Before your next session</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One rehearsal of the reset</text><g class=\"sv-rv\" style=\"animation-delay:8.3s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Stairs or walk</text></g><g class=\"sv-rv\" style=\"animation-delay:9.6s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Cancel orders</text></g><g class=\"sv-rv\" style=\"animation-delay:10.9s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Box breathing</text></g><g class=\"sv-rv\" style=\"animation-delay:12.2s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">3 questions</text></g><g class=\"sv-rv\" style=\"animation-delay:13.5s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Third answer</text></g><g class=\"sv-rv\" style=\"animation-delay:14.8s\"><rect x=\"517\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"563\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Add the time</text></g><g class=\"sv-rv\" style=\"animation-delay:8.3s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No position on, heart rate up.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Write the third answer in your journal, with the time.</text></g></svg>"
         },
         {
           "title": "Where it goes next",
@@ -2105,8 +2135,8 @@
               }
             ]
           },
-          "start": 110,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The modules this one connects to\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every mechanism lands in the journal</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Losing trades are the cost of a plan. Broken rules are the only failure.</text></g><g class=\"sv-rv\" style=\"animation-delay:14.9s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 16</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Pre-Market Routine</text></g><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 17</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Session And The Close</text></g><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><rect x=\"32\" y=\"270\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"291\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 19</text><text x=\"46\" y=\"308\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Toothbrush Therapy</text></g><g class=\"sv-rv\" style=\"animation-delay:29.4s\"><rect x=\"324\" y=\"270\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"291\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 21</text><text x=\"338\" y=\"308\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reading A Probability</text></g></svg>"
+          "start": 99.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The modules this one connects to\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Every mechanism lands in the journal</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Losing trades are the cost of a plan. Broken rules are the only failure.</text></g><g class=\"sv-rv\" style=\"animation-delay:14.0s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 16</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Pre-Market Routine</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 17</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Session And The Close</text></g><g class=\"sv-rv\" style=\"animation-delay:28.2s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:28.2s\"><rect x=\"32\" y=\"270\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"291\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 19</text><text x=\"46\" y=\"308\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Toothbrush Therapy</text></g><g class=\"sv-rv\" style=\"animation-delay:28.2s\"><rect x=\"324\" y=\"270\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"291\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 21</text><text x=\"338\" y=\"308\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Reading A Probability</text></g></svg>"
         }
       ],
       "check": [
@@ -2155,7 +2185,13 @@
           "why": "You practise the routine in a body that resembles the one you will be in when it matters."
         }
       ],
-      "audio": "../assets/audio/20/s6.mp3"
+      "audio": "../assets/audio/20/s6.mp3",
+      "music": {
+        "title": "Wega | Old School Hiphop Music",
+        "producer": "kontraa",
+        "url": "https://pixabay.com/music/beats-wega-old-school-hiphop-music-422621/"
+      },
+      "audio_v": "1005a63e55"
     }
   ],
   "quiz": {
