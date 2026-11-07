@@ -140,3 +140,4 @@ START 2026-11-07T15:38:50Z B 20-13B Module 13 lesson review
 END 2026-11-07T15:58:39Z | 20-13B Module 13 lesson review | tier C | 9e6f49f
 START 2026-11-07T16:08:45Z A 20-14A Module 14 lesson build
 END 2026-11-07T16:19:00Z | 20-14A Module 14 lesson build | tier C | 19d6653
+START 2026-11-07T16:39:02Z B 20-14B Module 14 lesson review
