@@ -116,3 +116,4 @@ END 2026-11-07T09:12:36Z | 20-07B Module 07 lesson review | tier C | 9d8fb02
 START 2026-11-07T09:38:10Z B 20-08A Module 08 lesson build
 SKIP: previous run active (2026-11-07T10:07:59Z)
 END 2026-11-07T10:09:06Z | 20-08A Module 08 lesson build | tier C | 74bce70
+START 2026-11-07T10:38:33Z B 20-08B Module 08 lesson review
