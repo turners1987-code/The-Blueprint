@@ -65,6 +65,7 @@ In order. Items marked (local) need files on the G: drive and run locally, not i
    20-20B done c1863f9 (Module 20 is still 6 segments, now 25 slides). Next: 20-04A (Module 04 build), then 05, 07 to 15, 21 to 24.
    20-04A done c0942c2 (Module 04: 6 segments, 30 slides). Next: 20-04B (fresh-run review), then 05, 07 to 15, 21 to 24.
    20-04B done ed00638 (Module 04 is still 6 segments, 30 slides). Next: 20-05A (Module 05 build), then 07 to 15, 21 to 24.
+   20-05A done (Module 05: 6 segments, 21 slides; page is 05-the-auction.html). Next: 20-05B (fresh-run review), then 07 to 15, 21 to 24.
 
 21. Record the Nov 6 decisions (tier C, docs only). In reference/BLUEPRINT_DOC.md: (a) Access: email login with a 6-digit code is the primary login (functions/api/login/*, Resend from login@bptrade.co, 90-day sliding session, access code kept as the backup); (b) a "Lesson layer" section pointing at reference/LESSON_STANDARD.md, naming Module 06 as the approved template (Nov 6), the Kokoro bf_emma voice, the two-stem music slider, the soundtrack rule (POOL/ENDING in scripts/render-narration.py, music files never in the repo), the slide kit, synth-bars, and that audio renders are a local batch; (c) module status: all 25 published, lesson layer rolling out per BACKLOG item 20. In reference/DECISIONS.md add dated lines for: email login replaces code-per-device; one soundtrack per module plus an ending track; spoken times written as said; one joke per video that reads on paper; organic synthetic bars only. Keep every existing line. npm test green.
 
