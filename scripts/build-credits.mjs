@@ -23,11 +23,13 @@ export function creditLines() {
 }
 
 export function applyCredits(html) {
-  const re = /(<h3 class="mt-sm">Lesson music<\/h3>\n)((?:\s*<p>[^\n]*<\/p>\n)+)/;
+  // Windows checkouts carry CRLF line endings; match either and write back the same.
+  const nl = html.includes('\r\n') ? '\r\n' : '\n';
+  const re = /(<h3 class="mt-sm">Lesson music<\/h3>\r?\n)((?:[ \t]*<p>[^\r\n]*<\/p>\r?\n)+)/;
   if (!re.test(html)) throw new Error('ai.html: "Lesson music" heading with credit lines not found');
   const lines = creditLines();
   if (!lines.length) throw new Error('no music blocks in any lesson JSON');
-  return html.replace(re, (_, h) => `${h}${lines.join('\n')}\n`);
+  return html.replace(re, (_, h) => `${h}${lines.join(nl)}${nl}`);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
