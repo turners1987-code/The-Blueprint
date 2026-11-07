@@ -12,7 +12,7 @@
       "cues": [
         {
           "start": 0,
-          "text": "Welcome to The Blueprint. Take a breath. There is no music on this one, and no rush. This is the part where you find out what the course is, who it is for, and what you will have when you are done.",
+          "text": "Welcome to The Blueprint. Take a breath. This is the part where you find out what the course is, who it is for, and what you will have when you are done.",
           "chapter": "Welcome"
         },
         {
@@ -76,7 +76,7 @@
         },
         {
           "start": 132.9,
-          "text": "A few practical things. This course is built on NinjaTrader 8 with the Order Flow Plus add-on. The levels, the reads and the journal all live there, so for now the platform is not optional.",
+          "text": "A few practical things. The method itself works on any platform: levels, reads, triggers and rules are about price, not software. The tools are a different story. The indicators, the journal and the setup guides are built for NinjaTrader 8 with the Order Flow Plus add-on, so that is the platform the course caters to.",
           "chapter": "What you need"
         },
         {
@@ -85,7 +85,7 @@
         },
         {
           "start": 161.2,
-          "text": "You will also want a data feed, the journal, and a pen. The pen is still the cheapest risk control in the course."
+          "text": "On another platform, you can still take every module and build the whole plan. You will just do the marking and the journaling by hand until the tools reach you. You will also want a data feed and a pen. The pen is still the cheapest risk control in the course."
         },
         {
           "start": 168.6,
@@ -104,7 +104,7 @@
           "title": "Welcome to The Blueprint",
           "data": {
             "title": "Welcome to The Blueprint",
-            "subtitle": "No music on this one. No rush.",
+            "subtitle": "Take a breath.",
             "aria": "Welcome title card",
             "lines": [
               {
@@ -118,7 +118,7 @@
               }
             ]
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Welcome title card\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"128\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Welcome to The Blueprint</text><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">No music on this one. No rush.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><text x=\"320\" y=\"212\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">A plan that grew messy, or no plan at all.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><text x=\"320\" y=\"246\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Both are normal. Both are why this exists.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Welcome title card\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"128\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Welcome to The Blueprint</text><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Take a breath.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><text x=\"320\" y=\"212\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">A plan that grew messy, or no plan at all.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><text x=\"320\" y=\"246\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Both are normal. Both are why this exists.</text></g></svg>"
         },
         {
           "start": 27.2,
@@ -266,7 +266,7 @@
           "title": "What you need",
           "data": {
             "title": "What you need",
-            "subtitle": "The platform is not optional, for now",
+            "subtitle": "The method: any platform. The tools: NinjaTrader 8.",
             "aria": "What you need",
             "blocks": [
               {
@@ -278,11 +278,11 @@
                 "cue": 0,
                 "stagger": 1.2,
                 "items": [
-                  "NinjaTrader 8",
-                  "Order Flow+ add-on",
-                  "A data feed",
+                  "NinjaTrader 8 + Order Flow+",
+                  "The indicators",
                   "The journal (NT8 only)",
-                  "A pen"
+                  "The setup guides",
+                  "A data feed. A pen."
                 ]
               },
               {
@@ -307,17 +307,17 @@
                 "type": "note",
                 "x": 360,
                 "y": 276,
-                "cue": 1,
+                "cue": 2,
                 "lines": [
-                  "Where to check: Module 03",
-                  "and the setup guide."
+                  "Other platform? Every module still",
+                  "works. Mark and journal by hand."
                 ],
                 "size": 12,
                 "pitch": 18
               }
             ]
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What you need\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What you need</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The platform is not optional, for now</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"116\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">NinjaTrader 8</text></g><g class=\"sv-rv\" style=\"animation-delay:1.2s\"><rect x=\"32\" y=\"132\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"152\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Order Flow+ add-on</text></g><g class=\"sv-rv\" style=\"animation-delay:2.4s\"><rect x=\"32\" y=\"168\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A data feed</text></g><g class=\"sv-rv\" style=\"animation-delay:3.6s\"><rect x=\"32\" y=\"204\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">The journal (NT8 only)</text></g><g class=\"sv-rv\" style=\"animation-delay:4.8s\"><rect x=\"32\" y=\"240\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"260\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A pen</text></g><g class=\"sv-rv\" style=\"animation-delay:12.1s\"><rect x=\"360\" y=\"96\" width=\"248\" height=\"150\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"374\" y=\"120\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Funded accounts</text><text x=\"374\" y=\"142\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Apex, Lucid, Topstep and others</text><text x=\"374\" y=\"160\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">usually include NinjaTrader.</text><text x=\"374\" y=\"178\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Order Flow+: included with some,</text><text x=\"374\" y=\"196\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">a small add-on with the rest.</text></g><g class=\"sv-rv\" style=\"animation-delay:12.1s\"><text x=\"360\" y=\"276\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Where to check: Module 03</text><text x=\"360\" y=\"294\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">and the setup guide.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What you need\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What you need</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The method: any platform. The tools: NinjaTrader 8.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"116\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">NinjaTrader 8 + Order Flow+</text></g><g class=\"sv-rv\" style=\"animation-delay:1.2s\"><rect x=\"32\" y=\"132\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"152\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">The indicators</text></g><g class=\"sv-rv\" style=\"animation-delay:2.4s\"><rect x=\"32\" y=\"168\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">The journal (NT8 only)</text></g><g class=\"sv-rv\" style=\"animation-delay:3.6s\"><rect x=\"32\" y=\"204\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">The setup guides</text></g><g class=\"sv-rv\" style=\"animation-delay:4.8s\"><rect x=\"32\" y=\"240\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"260\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A data feed. A pen.</text></g><g class=\"sv-rv\" style=\"animation-delay:12.1s\"><rect x=\"360\" y=\"96\" width=\"248\" height=\"150\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"374\" y=\"120\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Funded accounts</text><text x=\"374\" y=\"142\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Apex, Lucid, Topstep and others</text><text x=\"374\" y=\"160\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">usually include NinjaTrader.</text><text x=\"374\" y=\"178\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Order Flow+: included with some,</text><text x=\"374\" y=\"196\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">a small add-on with the rest.</text></g><g class=\"sv-rv\" style=\"animation-delay:28.3s\"><text x=\"360\" y=\"276\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Other platform? Every module still</text><text x=\"360\" y=\"294\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">works. Mark and journal by hand.</text></g></svg>"
         },
         {
           "start": 168.6,
@@ -363,7 +363,7 @@
           "why": "Every module adds one piece of your own plan: levels, reads, triggers, construction, rules, routines."
         },
         {
-          "q": "Which platform does the course run on?",
+          "q": "Which platform are the tools and the journal built for?",
           "options": [
             "Any platform",
             "NinjaTrader 8 with Order Flow+",
@@ -371,7 +371,7 @@
             "A spreadsheet"
           ],
           "answer": 1,
-          "why": "The levels, the reads and the journal all live in NinjaTrader 8 with Order Flow+."
+          "why": "The method works on any platform; the indicators, journal and setup guides are built for NinjaTrader 8 with Order Flow+."
         },
         {
           "q": "What is the right order to take the course?",
