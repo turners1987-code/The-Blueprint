@@ -27,7 +27,7 @@ follow the new timings:
 and bump CACHE_VERSION in sw.js.
 """
 import hashlib
-import json, math, os, subprocess, sys, tempfile
+import json, math, os, shutil, subprocess, sys, tempfile
 import numpy as np, soundfile as sf
 from kokoro import KPipeline
 
@@ -61,13 +61,18 @@ def main(lesson_path, pool_dir):
     for k, s in enumerate(narrated):
         fname, mtitle, producer, page = ENDING if s is narrated[-1] else POOL[int(nn) % len(POOL)]
         music = os.path.join(pool_dir, fname)
-        if not os.path.isfile(music):
+        if s.get('no_music'):
+            music = None  # a quiet segment: voice only; the mix stem is a copy of the voice stem
+            s.pop('music', None)
+        elif not os.path.isfile(music):
             sys.exit(f'missing track in pool folder: {fname}')
-        s['music'] = {'title': mtitle, 'producer': producer, 'url': page}
+        else:
+            s['music'] = {'title': mtitle, 'producer': producer, 'url': page}
+        speed = float(s.get('speed', 1.0))  # 0.92 reads slower and warmer; 1.0 is the default
         parts, starts, pos = [], [], 0
         for i, c in enumerate(s['cues']):
             a = np.concatenate([np.asarray(x[2], dtype=np.float32)
-                                for x in pipe(c['text'], voice=VOICE, speed=1.0)])
+                                for x in pipe(c['text'], voice=VOICE, speed=speed)])
             if i:
                 parts.append(gap); pos += len(gap)
             starts.append(round(pos / SR, 1))
@@ -85,9 +90,12 @@ def main(lesson_path, pool_dir):
                f'volume={MUSIC_DB}dB,afade=t=in:d={FADE_IN},afade=t=out:st={fo:.3f}:d={FADE_OUT}[m];'
                f'[0:a]aformat=channel_layouts=mono[v];'
                f'[v][m]amix=inputs=2:duration=first:normalize=0[o]')
-        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', wav,
-                        '-stream_loop', '-1', '-i', music, '-filter_complex', flt,
-                        '-map', '[o]', '-ac', '1', '-ar', str(SR), '-b:a', '64k', out], check=True)
+        if music is None:
+            shutil.copyfile(vout, out)
+        else:
+            subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', wav,
+                            '-stream_loop', '-1', '-i', music, '-filter_complex', flt,
+                            '-map', '[o]', '-ac', '1', '-ar', str(SR), '-b:a', '64k', out], check=True)
         # re-time: slides keep the cue they start on now
         old = [c['start'] for c in s['cues']]
         for sl in s.get('slides', []):

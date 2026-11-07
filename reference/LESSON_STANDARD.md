@@ -92,7 +92,8 @@ the videos show no entries and no outcomes.
 - Slide kinds in the kit (scripts/lesson-slides/): scenario, numbered cards (parts of a test),
   chart with a level line or a zone band, numbered list with a side panel, timeline with a
   boundary, two-column compare (location vs target), score circles with verdict rows,
-  one-row assignment, summary grid with module links. New kinds are added to the kit, not
+  one-row assignment, summary grid with module links, hero (centred statement with lines
+  arriving per cue) and calm (title plus free blocks) for quiet segments. New kinds are added to the kit, not
   hand-drawn in one module.
 
 **Charts.** Bars come from `scripts/synth-bars.mjs`: a seeded random walk per bar (sub-steps,
@@ -120,6 +121,10 @@ is a rising chart).
   render gets a new URL) back into the JSON. Then run `node scripts/build-lesson-slides.mjs`
   so reveal delays match the new timings. Bump `CACHE_VERSION` in sw.js.
 - Budget: under 16 MiB of audio per module at 64 kbps mono 24 kHz (64 kbps from Nov 7: 96 kbps put 15-minute modules at 18 to 23 MB; 64 kbps mono is podcast quality for speech under a low beat).
+
+**Quiet segments.** A welcome or intro segment can carry `"no_music": true` (no beat, the
+music slider is hidden) and `"speed": 0.93` (a slower, warmer read). Module 00 s0 is the
+reference. Only for an intro; every teaching segment keeps the beat and speed 1.0.
 
 ## 6. Player behaviour (already built, do not re-build per module)
 
