@@ -8,7 +8,7 @@
         "Six Hours Of Watching, Nothing To Show",
         "Alerts At Levels, Not Eyes On Every Candle"
       ],
-      "duration": 154.6,
+      "duration": 159.5,
       "cues": [
         {
           "start": 0,
@@ -29,59 +29,67 @@
         },
         {
           "start": 31.2,
-          "text": "This module gives it both. Six parts, mechanical first. We start with alerts."
+          "text": "This module gives it both. Six parts, mechanical first: alerts."
         },
         {
-          "start": 36.4,
-          "text": "Your plan marks each level as a zone, a band with two edges. The near edge is the one price reaches first. The far edge is the one behind it, and your stop goes behind that.",
+          "start": 35.3,
+          "text": "Your plan marks each level as a zone, a band with two edges. The near edge is the one price reaches first. The far edge is the one behind it.",
           "chapter": "Two alerts"
         },
         {
-          "start": 50.2,
+          "start": 46.8,
+          "text": "Your stop, the resting order that takes you out if the level fails, goes behind the far edge."
+        },
+        {
+          "start": 53.9,
           "text": "A level alert is a sound-on alert you set on a zone before the session. Every zone carries two."
         },
         {
-          "start": 57.6,
-          "text": "One: an alert at the near edge. It calls you to the screen, because the level test is happening now, and the trigger can only fire from here."
+          "start": 61.3,
+          "text": "One: an alert at the near edge. It calls you to the screen, because the level test is happening now, and the trigger, the price event that puts you in, can only fire from here."
         },
         {
-          "start": 68.4,
-          "text": "Two: an alert at the far edge. It tells you price has traded through the whole zone. If you are in a trade from that level, your stop is the next thing price meets."
+          "start": 74.7,
+          "text": "Two: an alert at the far edge. Price has traded through the whole zone. If you are in a trade from that level, your stop is the next thing price meets."
         },
         {
-          "start": 81.4,
+          "start": 86.6,
           "text": "Between alerts, the chart does not need you. Price sixty points from a zone is not a trade. It is weather."
         },
         {
-          "start": 89.6,
+          "start": 94.8,
           "text": "In NinjaTrader 8, click the line or rectangle you drew at the level.",
           "chapter": "The setting"
         },
         {
-          "start": 94.8,
+          "start": 100,
           "text": "Choose Alert, and set the action to play a sound."
         },
         {
-          "start": 98.9,
-          "text": "The rearm setting decides whether an alert can fire again after the first time. Choose it on purpose, so a second test of the same zone is not missed. Menus change, and NinjaTrader’s current page wins."
+          "start": 104.1,
+          "text": "Rearm decides whether an alert can fire again after the first time. Choose it on purpose, so a second test of the same zone is not missed. Menus change; NinjaTrader’s current page wins."
         },
         {
-          "start": 112.6,
+          "start": 116.7,
           "text": "The rule: every zone on your plan has its two alerts set before 9:25 a.m., sound on. Between alerts, the chart is not your job.",
           "chapter": "The rule"
         },
         {
-          "start": 122.3,
+          "start": 126.4,
           "text": "Getting it wrong is eyes on every candle from the open to the close, or a missed test because the alert was never set.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 131.6,
+          "start": 135.7,
           "text": "It reveals you do not trust your levels to be where the trade is, so you look for trades everywhere."
         },
         {
-          "start": 139.4,
-          "text": "The fix is one line in the systems check on your pre-market sheet: alerts, two per zone, set, sound on, with the number of zones beside it. A zone without both alerts is not on the plan."
+          "start": 143.5,
+          "text": "The fix is one line in the systems check on your pre-market sheet, the checklist finished before 9:25 a.m.: alerts, two per zone, set, sound on, and the number of zones."
+        },
+        {
+          "start": 155.3,
+          "text": "A zone without both alerts is not on the plan."
         }
       ],
       "slides": [
@@ -122,12 +130,12 @@
             "edges": {
               "far": "Far edge: alert 2",
               "near": "Near edge: alert 1",
-              "cue": 2
+              "cue": 3
             },
             "arrival": {
               "text": "Price arrives",
               "stop": "Stop behind the far edge",
-              "cue": 3
+              "cue": 4
             },
             "blocks": [
               {
@@ -138,12 +146,12 @@
                 "size": 14,
                 "cls": "t",
                 "tone": "gold",
-                "cue": 4
+                "cue": 5
               }
             ]
           },
-          "start": 36.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A zone with a far edge alert and a near edge alert, price arriving from below\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One zone, two alerts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The near edge calls you in. The far edge says it is through.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"190\" y=\"120\" width=\"260\" height=\"70\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.2\"/><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A marked zone</text></g><g class=\"sv-rv\" style=\"animation-delay:21.2s\"><line x1=\"170\" y1=\"120\" x2=\"470\" y2=\"120\" stroke=\"var(--cyan)\" stroke-width=\"2.5\"/><line x1=\"170\" y1=\"190\" x2=\"470\" y2=\"190\" stroke=\"var(--cyan)\" stroke-width=\"2.5\"/><text x=\"480\" y=\"125\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Far edge: alert 2</text><text x=\"480\" y=\"195\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Near edge: alert 1</text></g><g class=\"sv-rv\" style=\"animation-delay:32.0s\"><path d=\"M320 300 V200\" stroke=\"var(--text-secondary)\" stroke-width=\"2.5\" fill=\"none\" marker-end=\"url(#a)\"/><defs><marker id=\"a\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 z\" fill=\"var(--text-secondary)\"/></marker></defs><text x=\"334\" y=\"285\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Price arrives</text><rect x=\"170\" y=\"96\" width=\"300\" height=\"14\" rx=\"2\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.25\"/><text x=\"480\" y=\"107\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Stop behind the far edge</text></g><g class=\"sv-rv\" style=\"animation-delay:45.0s\"><text x=\"32\" y=\"334\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Between alerts, the chart is not your job.</text></g></svg>"
+          "start": 35.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A zone with a far edge alert and a near edge alert, price arriving from below\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One zone, two alerts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The near edge calls you in. The far edge says it is through.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"190\" y=\"120\" width=\"260\" height=\"70\" rx=\"0\" fill=\"var(--gold)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.2\"/><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A marked zone</text></g><g class=\"sv-rv\" style=\"animation-delay:26.0s\"><line x1=\"170\" y1=\"120\" x2=\"470\" y2=\"120\" stroke=\"var(--cyan)\" stroke-width=\"2.5\"/><line x1=\"170\" y1=\"190\" x2=\"470\" y2=\"190\" stroke=\"var(--cyan)\" stroke-width=\"2.5\"/><text x=\"480\" y=\"125\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Far edge: alert 2</text><text x=\"480\" y=\"195\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Near edge: alert 1</text></g><g class=\"sv-rv\" style=\"animation-delay:39.4s\"><path d=\"M320 300 V200\" stroke=\"var(--text-secondary)\" stroke-width=\"2.5\" fill=\"none\" marker-end=\"url(#a)\"/><defs><marker id=\"a\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"4\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 z\" fill=\"var(--text-secondary)\"/></marker></defs><text x=\"334\" y=\"285\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Price arrives</text><rect x=\"170\" y=\"96\" width=\"300\" height=\"14\" rx=\"2\" fill=\"var(--red)\" stroke=\"none\" stroke-width=\"1\" opacity=\"0.25\"/><text x=\"480\" y=\"107\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Stop behind the far edge</text></g><g class=\"sv-rv\" style=\"animation-delay:51.3s\"><text x=\"32\" y=\"334\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Between alerts, the chart is not your job.</text></g></svg>"
         },
         {
           "title": "Alerts in NinjaTrader 8",
@@ -176,7 +184,7 @@
               "size": 22
             }
           },
-          "start": 89.6,
+          "start": 94.8,
           "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Three steps: click the drawing, choose Alert with a sound action, choose the rearm setting\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Alerts in NinjaTrader 8</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Built from the drawing you made at the level</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Click the line or rectangle at the level</text></g><g class=\"sv-rv\" style=\"animation-delay:5.2s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Choose Alert, action: play a sound</text></g><g class=\"sv-rv\" style=\"animation-delay:9.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Choose rearm on purpose</text></g><g class=\"sv-rv\" style=\"animation-delay:9.3s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Rearm</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">on purpose</text></g></svg>"
         },
         {
@@ -241,7 +249,7 @@
               }
             ]
           },
-          "start": 112.6,
+          "start": 116.7,
           "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The rule and the miss</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Two alerts per zone, set before the session</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Two alerts per zone</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Set before 9:25 a.m.</text><text x=\"48\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Sound on</text></g><g class=\"sv-rv\" style=\"animation-delay:9.7s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Eyes on every candle</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Alert never set</text><g class=\"sv-rv\" style=\"animation-delay:26.8s\"><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: one line on the sheet</text></g></g></svg>"
         }
       ],
@@ -283,11 +291,11 @@
           "q": "You watch every one-minute candle from the open. What does that reveal?",
           "options": [
             "You are being thorough",
-            "You do not trust your levels to be where the trade is",
             "The market is unusually active",
-            "Your alerts are set too wide"
+            "Your alerts are set too wide",
+            "You do not trust your levels to be where the trade is"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Watching everything means looking for trades everywhere. The fix is the alerts line on the systems check."
         }
       ],
@@ -300,7 +308,7 @@
         "During The Session, The Plan Is The Only Input",
         "The Close: Nothing New At 15:55, Platform Shut At 16:00"
       ],
-      "duration": 160.3,
+      "duration": 159.1,
       "cues": [
         {
           "start": 0,
@@ -309,87 +317,91 @@
         },
         {
           "start": 8.2,
-          "text": "A trade traces one chain: idea, setup, trigger, construction. A branch written before the session, a level reached with its read on a closed bar, a trigger fired, a construction that fits."
+          "text": "A trade traces one chain: idea, setup, trigger, construction."
         },
         {
-          "start": 20.4,
-          "text": "Nothing else asks for an order. Not a big candle, not a chat room."
+          "start": 11.9,
+          "text": "A branch, one if-then line written before the session. A level reached with its read, what price does there, on a closed bar. A trigger fired. A construction that fits. Nothing else asks for an order."
         },
         {
-          "start": 26,
-          "text": "Price bounces hard at 12:15 off a spot on no plan. It is not yours. One line in the notes, with the time, and no order.",
-          "chapter": "The example"
+          "start": 25.6,
+          "text": "Price bounces hard at 12:15 off a spot on no plan. Not yours. One line in the notes, with the time. No order.",
+          "chapter": "The bounce"
         },
         {
-          "start": 36,
+          "start": 34.6,
           "text": "Price bounced. Price does that all day, for free."
         },
         {
-          "start": 39.8,
-          "text": "An open trade ends at its target, its planned scale, or its stop. Or by your hand, for one of four reasons.",
+          "start": 38.3,
+          "text": "An open trade ends at its target, its planned scale, the one partial exit set before entry, or its stop. Or by your hand, for four reasons.",
           "chapter": "Open trades"
         },
         {
-          "start": 48.3,
+          "start": 48.7,
           "text": "One: the stop was hit."
         },
         {
-          "start": 50.6,
-          "text": "Two: a Tier One release, a major scheduled release, is five minutes away. You flatten at T minus five."
+          "start": 50.9,
+          "text": "Two: a Tier One release, a major scheduled release, five minutes away. You flatten at T minus five."
         },
         {
           "start": 58,
-          "text": "Three: the thesis broke on a candle close."
+          "text": "Three: the thesis, the if-then you wrote for the trade, broke on a candle close."
         },
         {
-          "start": 61.4,
+          "start": 64,
           "text": "Four: the session is over."
         },
         {
-          "start": 63.6,
-          "text": "A trade taking too long has none of those. Time is not a reason to leave. That exit is tagged Too Early."
+          "start": 66.2,
+          "text": "A trade taking too long has none of those. That exit is tagged Too Early: out before any of the four."
         },
         {
-          "start": 72.2,
-          "text": "The rule: no entry from a level that is not on the plan, and no manual exit outside the four reasons.",
-          "chapter": "The rule"
+          "start": 74.4,
+          "text": "The rule: no entry from a level not on the plan, and no manual exit outside the four reasons.",
+          "chapter": "The plan rule"
         },
         {
-          "start": 80.4,
-          "text": "Getting it wrong is a midday entry from a price you found on the screen. It reveals the screen became the plan when the plan went quiet.",
-          "chapter": "Getting it wrong"
+          "start": 81.8,
+          "text": "Getting it wrong is a midday entry from a price found on the screen. It reveals the screen became the plan when the plan went quiet.",
+          "chapter": "The screen as plan"
         },
         {
-          "start": 90.8,
-          "text": "The fix: a notes line beside the chart. Write what the session shows you, with the time. Writing it is the action."
+          "start": 91.9,
+          "text": "The fix: a notes line beside the chart. Write what the session shows you, with the time. Writing is the action."
         },
         {
-          "start": 99.3,
-          "text": "Now, the close. Your day ends at 4 p.m. Eastern, the end of the window from Module 02. The futures keep trading. You do not.",
+          "start": 100,
+          "text": "Now, the close. Your day ends at 4 p.m. Eastern, the Module 02 window. The futures keep trading. You do not.",
           "chapter": "The close"
         },
         {
-          "start": 109,
-          "text": "At 3:55 p.m. an alarm sounds. You cancel any working entry order and take nothing new.",
-          "chapter": "The example"
+          "start": 108.2,
+          "text": "At 3:55 p.m. an alarm sounds. Cancel any working entry order, one still waiting to fill, and take nothing new.",
+          "chapter": "The 3:55 alarm"
         },
         {
-          "start": 115.3,
-          "text": "A trade still open keeps its bracket until 4 p.m. Then you flatten by hand, with the reason session over. Its execution mark, the Pass or Fail you give an exit afterwards, is Pass. Close the platform. Not minimise it. Close it."
+          "start": 116,
+          "text": "A trade still open keeps its bracket, the stop and target already working, until 4 p.m. Then flatten by hand: reason, session over."
         },
         {
-          "start": 131.2,
+          "start": 124.9,
+          "text": "Its execution mark, the Pass or Fail you give an exit afterwards, is Pass. Close the platform. Not minimised. Closed."
+        },
+        {
+          "start": 132.8,
           "text": "The rule: nothing new from 3:55 p.m.; flat and the platform closed at 4 p.m.",
-          "chapter": "The rule"
+          "chapter": "The close rule"
         },
         {
-          "start": 137.2,
+          "start": 138.7,
           "text": "Getting it wrong is an entry at 3:58 because the level was right there. It reveals the screen decided when the day ended, not you.",
-          "chapter": "Getting it wrong"
+          "chapter": "An entry at 3:58"
         },
         {
-          "start": 146.9,
-          "text": "The fix is two repeating alarms: 3:55 p.m., nothing new, and 4 p.m., flat, platform shut. An entry from 3:55 on is tagged Broke Rule, the tag for a broken hard rule."
+          "start": 148.4,
+          "text": "The fix: two repeating alarms, 3:55 p.m., nothing new, and 4 p.m., flat, platform shut. An entry from 3:55 on is tagged Broke Rule, a broken hard rule."
         }
       ],
       "slides": [
@@ -419,7 +431,7 @@
                   "trigger, construction"
                 ],
                 "foot": "Trigger, then construction",
-                "cue": 1
+                "cue": 2
               }
             ],
             "verdicts": {
@@ -439,7 +451,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Two parts of the chain: a branch written before the session, and a marked level with a trigger and a construction that fits\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The plan is the only input</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A trade traces one chain, written before the session</text><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A branch</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written before</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">the session</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Idea, then setup</text></g><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A level in play</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read on a closed bar,</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">trigger, construction</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Trigger, then construction</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Asks for an order</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A branch on the plan</text><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Asks for nothing</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A candle, a chat room, a bounce</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Two parts of the chain: a branch written before the session, and a marked level with a trigger and a construction that fits\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The plan is the only input</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A trade traces one chain, written before the session</text><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A branch</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Written before</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">the session</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Idea, then setup</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A level in play</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Read on a closed bar,</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">trigger, construction</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Trigger, then construction</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Asks for an order</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A branch on the plan</text><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Asks for nothing</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A candle, a chat room, a bounce</text></g></svg>"
         },
         {
           "title": "Four ways out of a trade",
@@ -476,8 +488,8 @@
               "size": 22
             }
           },
-          "start": 36,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four reasons for a manual exit: stop hit, a Tier One release at T minus five, thesis broken on a candle close, session over\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Four ways out of a trade</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Target, planned scale or stop. Or your hand, for one of four reasons.</text><g class=\"sv-rv\" style=\"animation-delay:3.8s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stop hit</text></g><g class=\"sv-rv\" style=\"animation-delay:12.3s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tier One release: flat at T−5</text></g><g class=\"sv-rv\" style=\"animation-delay:14.6s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Thesis broken on a candle close</text></g><g class=\"sv-rv\" style=\"animation-delay:22.0s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Session over</text></g><g class=\"sv-rv\" style=\"animation-delay:25.4s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Too long</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is not a reason</text></g></svg>"
+          "start": 38.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four reasons for a manual exit: stop hit, a Tier One release at T minus five, thesis broken on a candle close, session over\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Four ways out of a trade</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Target, planned scale or stop. Or your hand, for one of four reasons.</text><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stop hit</text></g><g class=\"sv-rv\" style=\"animation-delay:12.6s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tier One release: flat at T−5</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Thesis broken on a candle close</text></g><g class=\"sv-rv\" style=\"animation-delay:25.7s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Session over</text></g><g class=\"sv-rv\" style=\"animation-delay:27.9s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Too long</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is not a reason</text></g></svg>"
         },
         {
           "title": "The day ends at 4 p.m.",
@@ -514,8 +526,8 @@
               }
             ]
           },
-          "start": 90.8,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A timeline with nothing new from 3:55 p.m. and the platform shut at 4 p.m.\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The day ends at 4 p.m.</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Nothing new from 3:55 p.m., flat and shut at 4 p.m.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"40\" y1=\"170\" x2=\"600\" y2=\"170\" stroke=\"var(--text-muted)\" stroke-width=\"3\"/><line x1=\"440\" y1=\"140\" x2=\"440\" y2=\"200\" stroke=\"var(--gold)\" stroke-width=\"4\"/><text x=\"440\" y=\"128\" font-size=\"22\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:8.5s\"><text x=\"200\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">3:55 p.m.: nothing new</text></g><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><text x=\"500\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Flat, platform shut</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"272\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The futures keep trading after 4 p.m. You do not.</text></g></svg>"
+          "start": 100,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A timeline with nothing new from 3:55 p.m. and the platform shut at 4 p.m.\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The day ends at 4 p.m.</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Nothing new from 3:55 p.m., flat and shut at 4 p.m.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><line x1=\"40\" y1=\"170\" x2=\"600\" y2=\"170\" stroke=\"var(--text-muted)\" stroke-width=\"3\"/><line x1=\"440\" y1=\"140\" x2=\"440\" y2=\"200\" stroke=\"var(--gold)\" stroke-width=\"4\"/><text x=\"440\" y=\"128\" font-size=\"22\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-n\" style=\"fill:var(--gold)\">4 p.m.</text></g><g class=\"sv-rv\" style=\"animation-delay:8.2s\"><text x=\"200\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">3:55 p.m.: nothing new</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"500\" y=\"230\" font-size=\"15\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--cyan)\">Flat, platform shut</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"272\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The futures keep trading after 4 p.m. You do not.</text></g></svg>"
         },
         {
           "title": "The close, in two alarms",
@@ -588,8 +600,8 @@
               }
             ]
           },
-          "start": 115.3,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left; the miss and its two alarms on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The close, in two alarms</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Set once, repeating every trading day</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Nothing new from 3:55 p.m.</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Flat at 4 p.m.</text><text x=\"48\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Platform closed</text></g><g class=\"sv-rv\" style=\"animation-delay:15.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Entry at 3:58</text><g class=\"sv-rv\" style=\"animation-delay:21.9s\"><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: two alarms</text></g><g class=\"sv-rv\" style=\"animation-delay:21.9s\"><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Entry from 3:55 on:</text></g><g class=\"sv-rv\" style=\"animation-delay:21.9s\"><text x=\"344\" y=\"220\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">tagged Broke Rule</text></g></g></svg>"
+          "start": 132.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left; the miss and its two alarms on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The close, in two alarms</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Set once, repeating every trading day</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Nothing new from 3:55 p.m.</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Flat at 4 p.m.</text><text x=\"48\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Platform closed</text></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Entry at 3:58</text><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: two alarms</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Entry from 3:55 on:</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><text x=\"344\" y=\"220\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">tagged Broke Rule</text></g></g></svg>"
         }
       ],
       "check": [
@@ -646,7 +658,7 @@
       "sections": [
         "The End-Of-Day Routine"
       ],
-      "duration": 139.3,
+      "duration": 151.1,
       "cues": [
         {
           "start": 0,
@@ -692,34 +704,58 @@
         },
         {
           "start": 54.7,
-          "text": "Step two. For every trade, complete the post-exit half of the journal from Module 18: exit price and reason, the R multiple, which is the result in units of your planned risk, time in trade, any tag, and the mark.",
+          "text": "Step two. For every trade, complete the post-exit half of the journal from Module 18.",
           "chapter": "The mark"
         },
         {
-          "start": 70,
-          "text": "The execution mark is Pass or Fail, set after the exit. Did the exit follow the plan? Pass is a target, the planned scale, a pre-set invalidation, the stop, session end, or a flatten at T minus five. Anything else is Fail."
+          "start": 60.7,
+          "text": "Exit price and reason, the R multiple, which is the result in units of your planned risk, time in trade, any tag, and the mark."
         },
         {
-          "start": 85.9,
-          "text": "The mark is kept apart from the grade, so the grade never reads the outcome. Hindsight is undefeated, and it does not get a vote."
+          "start": 70.4,
+          "text": "The execution mark is Pass or Fail, set after the exit. Did the exit follow the plan? Pass is one of six exits."
         },
         {
-          "start": 95.6,
+          "start": 79.3,
+          "text": "A target. The planned scale."
+        },
+        {
+          "start": 81.5,
+          "text": "A pre-set invalidation, the price that says the idea was wrong. The stop."
+        },
+        {
+          "start": 86.7,
+          "text": "Session end, or a flatten at T minus five."
+        },
+        {
+          "start": 90.5,
+          "text": "Anything else is Fail."
+        },
+        {
+          "start": 92.4,
+          "text": "The mark is kept apart from the grade, the A-plus to C you gave the setup at entry, so the grade never reads the outcome."
+        },
+        {
+          "start": 102,
+          "text": "The outcome arrives after the exit and asks for a vote. It does not get one."
+        },
+        {
+          "start": 108.3,
           "text": "Step three is one line on the day, a sentence of fact: two trades, both from plan branches, one Fail, a manual exit on a stall. Not how the market behaved.",
           "chapter": "One line"
         },
         {
-          "start": 107.5,
+          "start": 120.2,
           "text": "The rule: all five steps are finished within an hour of the close, every trading day, with every trade marked.",
           "chapter": "The rule"
         },
         {
-          "start": 115.3,
+          "start": 128,
           "text": "Getting it wrong is a routine that only runs after losing days, or marks filled in on Sunday from memory. It reveals the review has become a reaction to the result.",
           "chapter": "Getting it wrong"
         },
         {
-          "start": 127.1,
+          "start": 139.9,
           "text": "The fix: a repeating alarm inside the hour, labelled close routine, and five boxes in order. An empty mark the next morning is the first thing you fill in."
         }
       ],
@@ -841,44 +877,49 @@
               {
                 "tone": "green",
                 "head": "Pass",
-                "cue": 1,
+                "cue": 2,
                 "lines": [
                   {
                     "text": "A target",
                     "y": 56,
                     "size": 14,
-                    "cls": "t"
+                    "cls": "t",
+                    "cue": 3
                   },
                   {
                     "text": "The planned scale",
                     "y": 80,
                     "size": 14,
-                    "cls": "t"
+                    "cls": "t",
+                    "cue": 3
                   },
                   {
                     "text": "A pre-set invalidation",
                     "y": 104,
                     "size": 14,
-                    "cls": "t"
+                    "cls": "t",
+                    "cue": 4
                   },
                   {
                     "text": "The stop",
                     "y": 128,
                     "size": 14,
-                    "cls": "t"
+                    "cls": "t",
+                    "cue": 4
                   },
                   {
                     "text": "Session end, or T−5 flat",
                     "y": 152,
                     "size": 14,
-                    "cls": "t"
+                    "cls": "t",
+                    "cue": 5
                   }
                 ]
               },
               {
                 "tone": "red",
                 "head": "Fail",
-                "cue": 1,
+                "cue": 6,
                 "lines": [
                   {
                     "text": "Anything else",
@@ -898,7 +939,7 @@
                     "size": 14,
                     "cls": "t",
                     "tone": "gold",
-                    "cue": 2
+                    "cue": 7
                   }
                 ]
               }
@@ -912,12 +953,12 @@
                 "size": 14,
                 "cls": "t",
                 "tone": "gold",
-                "cue": 2
+                "cue": 7
               }
             ]
           },
           "start": 54.7,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Pass exits on the left, anything else is Fail on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Pass or Fail</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Set after the exit: did it follow the plan?</text><g class=\"sv-rv\" style=\"animation-delay:15.3s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Pass</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A target</text><text x=\"48\" y=\"164\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The planned scale</text><text x=\"48\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A pre-set invalidation</text><text x=\"48\" y=\"212\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The stop</text><text x=\"48\" y=\"236\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Session end, or T−5 flat</text></g><g class=\"sv-rv\" style=\"animation-delay:15.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Fail</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Anything else</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Too Early, a stall exit</text><g class=\"sv-rv\" style=\"animation-delay:31.2s\"><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Kept apart from the grade</text></g></g><g class=\"sv-rv\" style=\"animation-delay:31.2s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">A Pass that left a move behind is still Pass.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Pass exits on the left, anything else is Fail on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Pass or Fail</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Set after the exit: did it follow the plan?</text><g class=\"sv-rv\" style=\"animation-delay:15.7s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Pass</text><g class=\"sv-rv\" style=\"animation-delay:24.6s\"><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A target</text></g><g class=\"sv-rv\" style=\"animation-delay:24.6s\"><text x=\"48\" y=\"164\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The planned scale</text></g><g class=\"sv-rv\" style=\"animation-delay:26.8s\"><text x=\"48\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A pre-set invalidation</text></g><g class=\"sv-rv\" style=\"animation-delay:26.8s\"><text x=\"48\" y=\"212\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The stop</text></g><g class=\"sv-rv\" style=\"animation-delay:32.0s\"><text x=\"48\" y=\"236\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Session end, or T−5 flat</text></g></g><g class=\"sv-rv\" style=\"animation-delay:35.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Fail</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Anything else</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Too Early, a stall exit</text><g class=\"sv-rv\" style=\"animation-delay:37.7s\"><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Kept apart from the grade</text></g></g><g class=\"sv-rv\" style=\"animation-delay:37.7s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">A Pass that left a move behind is still Pass.</text></g></svg>"
         },
         {
           "title": "Inside the hour",
@@ -936,7 +977,7 @@
               {
                 "time": "By 5 p.m.",
                 "text": "All five boxes ticked, in order",
-                "cue": 1
+                "cue": 0
               },
               {
                 "time": "Alarm",
@@ -950,8 +991,8 @@
               }
             ]
           },
-          "start": 107.5,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The close routine from the 4 p.m. close to the next morning\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Inside the hour</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">An alarm, five boxes, and the empty mark first</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4 p.m.</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Flat. Platform closed.</text></g><g class=\"sv-rv\" style=\"animation-delay:7.8s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">By 5 p.m.</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">All five boxes ticked, in order</text></g><g class=\"sv-rv\" style=\"animation-delay:19.6s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Alarm</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A repeating alarm: close routine</text></g><g class=\"sv-rv\" style=\"animation-delay:19.6s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Morning</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">An empty mark is filled in first</text></g></svg>"
+          "start": 120.2,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The close routine from the 4 p.m. close to the next morning\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Inside the hour</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">An alarm, five boxes, and the empty mark first</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">4 p.m.</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Flat. Platform closed.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">By 5 p.m.</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">All five boxes ticked, in order</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Alarm</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A repeating alarm: close routine</text></g><g class=\"sv-rv\" style=\"animation-delay:19.7s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">Morning</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">An empty mark is filled in first</text></g></svg>"
         }
       ],
       "check": [
@@ -991,12 +1032,12 @@
         {
           "q": "Marks filled in on Sunday from memory reveal…",
           "options": [
-            "A habit of reviewing weekly",
             "The review became a reaction to the result, not a record of what you did",
+            "A habit of reviewing weekly",
             "Good use of the weekend",
             "A heavy trading load"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The fix is an alarm inside the hour and five boxes in order."
         }
       ],
@@ -1009,7 +1050,7 @@
         "Screenshots And The Recording",
         "The Mental Close"
       ],
-      "duration": 159.7,
+      "duration": 156.4,
       "cues": [
         {
           "start": 0,
@@ -1018,62 +1059,74 @@
         },
         {
           "start": 10,
-          "text": "The screenshot: one per trade, entry and exit marked, saved with the trade. In a line or two, write the level, the trigger, why the stop and target sat there, and the exit reason. Under a minute each."
+          "text": "The screenshot: one per trade, entry and exit marked, saved with the trade."
         },
         {
-          "start": 24.5,
-          "text": "The recording: record your screen for the whole session, then watch only the minutes around each trade, and around any alert you came to the screen for and did not trade.",
+          "start": 15.2,
+          "text": "In a line or two, write the level, the trigger, why the stop and target sat there, and the exit reason. Under a minute each."
+        },
+        {
+          "start": 24.9,
+          "text": "The recording: record the whole session, then watch only the minutes around each trade, and around any alert you came to the screen for and did not trade.",
           "chapter": "The recording"
         },
         {
-          "start": 36.4,
+          "start": 35.7,
           "text": "Watch for what a chart cannot give back: when the information arrived, how long you took to act, and whether what you did matches what you wrote down."
         },
         {
-          "start": 47.2,
+          "start": 46.4,
           "text": "The rule: one annotated screenshot per trade, every day, and the minutes around each trade watched.",
-          "chapter": "The rule"
+          "chapter": "The review rule"
         },
         {
-          "start": 53.5,
+          "start": 52.8,
           "text": "Getting it wrong is a recording saved every day and never opened, or screenshots of winners only. It reveals the review picks what is comfortable to see. A folder of winners is a scrapbook, not a review.",
-          "chapter": "Getting it wrong"
+          "chapter": "A scrapbook"
         },
         {
-          "start": 67.6,
+          "start": 66.9,
           "text": "The fix: name each clip with the date and entry time, and add a box for every trade: clip watched, yes or no. No tick, routine not finished."
         },
         {
-          "start": 78.4,
-          "text": "Now, the mental close. The platform being shut does not mean the day is over. It keeps running in your head: the exit you would take back, the move you missed at 2:10 p.m., the number on the account.",
+          "start": 77.6,
+          "text": "Now, the mental close. The platform being shut does not mean the day is over.",
           "chapter": "The mental close"
         },
         {
-          "start": 93.2,
+          "start": 83.6,
+          "text": "It keeps running in your head: the exit you would take back, the move you missed at 2:10 p.m., the number on the account."
+        },
+        {
+          "start": 92.9,
           "text": "Carried into the evening, it becomes the next session’s first trade, taken to make up for the last one."
         },
         {
-          "start": 100.6,
-          "text": "The mental close ends it: one written sentence that does not depend on your mood. Day closed: two trades, one Pass, one Fail logged. Then a closing clause, as worded on the page, that the next day starts from its own plan.",
+          "start": 100.3,
+          "text": "The mental close ends it: one written sentence that does not depend on your mood.",
           "chapter": "The sentence"
         },
         {
-          "start": 116.6,
+          "start": 106.3,
+          "text": "Day closed: two trades, one Pass, one Fail logged. Then the closing clause, in the page’s words: the next day starts from its own plan."
+        },
+        {
+          "start": 115.9,
           "text": "A count, a mark and an end. No promise to make anything back, and no grade by the result."
         },
         {
-          "start": 124,
+          "start": 123.4,
           "text": "The rule: the routine ends with one sentence in the journal that starts Day closed, and after it, no charts until the pre-market routine.",
-          "chapter": "The rule"
+          "chapter": "The closing rule"
         },
         {
-          "start": 133.3,
+          "start": 132.7,
           "text": "Getting it wrong is reopening the chart at 8 p.m., or a sentence that ends with a promise to get it back. It reveals the next session is already being traded against this one.",
-          "chapter": "Getting it wrong"
+          "chapter": "The chart at 8 p.m."
         },
         {
-          "start": 146.3,
-          "text": "The fix: a fixed template, and anything outside it is crossed out. If the pull to look again is strong, write it as one line in the notes and leave it there."
+          "start": 145.7,
+          "text": "The fix: a fixed template; anything outside it is crossed out. If the pull to look again is strong, one line in the notes, and leave it there."
         }
       ],
       "slides": [
@@ -1091,7 +1144,7 @@
                 "Why the stop and target sat there",
                 "The exit reason"
               ],
-              "cue": 1,
+              "cue": 2,
               "stagger": 1.4,
               "tone": "cyan"
             },
@@ -1103,7 +1156,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What goes on the screenshot note: the level, the trigger, why the stop and target sat there, the exit reason\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One screenshot per trade</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Entry and exit marked, saved with the trade</text><g class=\"sv-rv\" style=\"animation-delay:10.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The level</text></g><g class=\"sv-rv\" style=\"animation-delay:11.4s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The trigger</text></g><g class=\"sv-rv\" style=\"animation-delay:12.8s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Why the stop and target sat there</text></g><g class=\"sv-rv\" style=\"animation-delay:14.2s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The exit reason</text></g><g class=\"sv-rv\" style=\"animation-delay:10.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Per trade</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">a minute each</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What goes on the screenshot note: the level, the trigger, why the stop and target sat there, the exit reason\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One screenshot per trade</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Entry and exit marked, saved with the trade</text><g class=\"sv-rv\" style=\"animation-delay:15.2s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The level</text></g><g class=\"sv-rv\" style=\"animation-delay:16.6s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The trigger</text></g><g class=\"sv-rv\" style=\"animation-delay:18.0s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Why the stop and target sat there</text></g><g class=\"sv-rv\" style=\"animation-delay:19.4s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The exit reason</text></g><g class=\"sv-rv\" style=\"animation-delay:10.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Per trade</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">a minute each</text></g></svg>"
         },
         {
           "title": "What the recording adds",
@@ -1180,8 +1233,8 @@
               }
             ]
           },
-          "start": 24.5,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What the mark-up shows versus what the recording shows\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the recording adds</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Watch the minutes around each trade, not the whole day</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The mark-up shows</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Where price went</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What it did at each level</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The recording shows</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">When the news arrived</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">How long you took</text><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Whether you did what you wrote</text></g><g class=\"sv-rv\" style=\"animation-delay:22.7s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The rule: one annotated screenshot per trade, every day.</text></g><g class=\"sv-rv\" style=\"animation-delay:43.1s\"><text x=\"32\" y=\"332\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Fix: name the clip by date and entry time. Tick: clip watched.</text></g></svg>"
+          "start": 24.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What the mark-up shows versus what the recording shows\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What the recording adds</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Watch the minutes around each trade, not the whole day</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">The mark-up shows</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Where price went</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">What it did at each level</text></g><g class=\"sv-rv\" style=\"animation-delay:10.8s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The recording shows</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">When the news arrived</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">How long you took</text><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Whether you did what you wrote</text></g><g class=\"sv-rv\" style=\"animation-delay:21.5s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The rule: one annotated screenshot per trade, every day.</text></g><g class=\"sv-rv\" style=\"animation-delay:42.0s\"><text x=\"32\" y=\"332\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Fix: name the clip by date and entry time. Tick: clip watched.</text></g></svg>"
         },
         {
           "title": "The platform is shut. The day is not.",
@@ -1213,7 +1266,7 @@
               {
                 "tone": "gold",
                 "head": "Still running",
-                "cue": 0,
+                "cue": 1,
                 "lines": [
                   {
                     "text": "The exit to take back",
@@ -1239,14 +1292,14 @@
                     "size": 14,
                     "cls": "t",
                     "tone": "red",
-                    "cue": 1
+                    "cue": 2
                   }
                 ]
               }
             ]
           },
-          "start": 78.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The platform is shut on the left; what keeps running in your head on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The platform is shut. The day is not.</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What keeps running in your head</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Shut</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Orders: none working</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Charts: closed</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Still running</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The exit to take back</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The move you missed</text><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The number on the account</text><g class=\"sv-rv\" style=\"animation-delay:14.8s\"><text x=\"344\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Next session’s first trade</text></g></g></svg>"
+          "start": 77.6,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The platform is shut on the left; what keeps running in your head on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The platform is shut. The day is not.</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What keeps running in your head</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Shut</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Orders: none working</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Charts: closed</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Still running</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The exit to take back</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The move you missed</text><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The number on the account</text><g class=\"sv-rv\" style=\"animation-delay:15.3s\"><text x=\"344\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Next session’s first trade</text></g></g></svg>"
         },
         {
           "title": "The mental close",
@@ -1283,7 +1336,7 @@
                 "text": "The rule: end with Day closed, then no charts until pre-market.",
                 "size": 14,
                 "cls": "m",
-                "cue": 2
+                "cue": 3
               },
               {
                 "type": "note",
@@ -1292,12 +1345,12 @@
                 "text": "Fix: a fixed template. Anything outside it is crossed out.",
                 "size": 14,
                 "cls": "m",
-                "cue": 4
+                "cue": 5
               }
             ]
           },
-          "start": 100.6,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The parts of the mental close sentence: Day closed, trades, Pass count, Fail count, closing clause\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The mental close</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One sentence, always the same shape</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Day closed:</text></g><g class=\"sv-rv\" style=\"animation-delay:1.3s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Trades</text></g><g class=\"sv-rv\" style=\"animation-delay:2.6s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Passes</text></g><g class=\"sv-rv\" style=\"animation-delay:3.9s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Fails</text></g><g class=\"sv-rv\" style=\"animation-delay:5.2s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Clause</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A count, a mark and an end. No promise to make anything back.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Day closed: two trades, one Pass, one Fail logged.</text></g><g class=\"sv-rv\" style=\"animation-delay:16.0s\"><text x=\"32\" y=\"282\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Tomorrow starts from tomorrow’s plan.</text></g><g class=\"sv-rv\" style=\"animation-delay:23.4s\"><text x=\"32\" y=\"316\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The rule: end with Day closed, then no charts until pre-market.</text></g><g class=\"sv-rv\" style=\"animation-delay:45.7s\"><text x=\"32\" y=\"340\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Fix: a fixed template. Anything outside it is crossed out.</text></g></svg>"
+          "start": 100.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The parts of the mental close sentence: Day closed, trades, Pass count, Fail count, closing clause\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The mental close</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One sentence, always the same shape</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Day closed:</text></g><g class=\"sv-rv\" style=\"animation-delay:1.3s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Trades</text></g><g class=\"sv-rv\" style=\"animation-delay:2.6s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Passes</text></g><g class=\"sv-rv\" style=\"animation-delay:3.9s\"><rect x=\"323\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"369\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Fails</text></g><g class=\"sv-rv\" style=\"animation-delay:5.2s\"><rect x=\"420\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"466\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Clause</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A count, a mark and an end. No promise to make anything back.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Day closed: two trades, one Pass, one Fail logged.</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><text x=\"32\" y=\"282\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Tomorrow starts from tomorrow’s plan.</text></g><g class=\"sv-rv\" style=\"animation-delay:23.1s\"><text x=\"32\" y=\"316\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The rule: end with Day closed, then no charts until pre-market.</text></g><g class=\"sv-rv\" style=\"animation-delay:45.4s\"><text x=\"32\" y=\"340\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Fix: a fixed template. Anything outside it is crossed out.</text></g></svg>"
         }
       ],
       "check": [
@@ -1337,12 +1390,12 @@
         {
           "q": "A folder of screenshots of winners only reveals…",
           "options": [
-            "The review picks what is comfortable to see",
             "A well-curated reference",
             "A strong month",
-            "Nothing in particular"
+            "Nothing in particular",
+            "The review picks what is comfortable to see"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The fix is a clip-watched box for every trade, winners and losers."
         }
       ],
@@ -1354,72 +1407,80 @@
       "sections": [
         "Worked Case: One Session, Closed"
       ],
-      "duration": 153.4,
+      "duration": 158.6,
       "cues": [
         {
           "start": 0,
-          "text": "A hypothetical illustration, not a trade record: a composite session with invented prices, built to show the routine.",
+          "text": "A hypothetical illustration, not a trade record: a composite session, invented prices, built to show the routine.",
           "chapter": "The plan"
         },
         {
-          "start": 7.1,
-          "text": "Four zones on the plan, two alerts each, set by 9:20 a.m.: the overnight high, the prior-day value high, the prior-day value low and the prior-day low. Two carry branches."
+          "start": 6.7,
+          "text": "Four zones, two alerts each, set by 9:20 a.m.: the overnight high, the prior-day value high, the prior-day value low and the prior-day low."
         },
         {
-          "start": 18.6,
-          "text": "Trade one comes from the first branch. At 9:46 a.m. the near-edge alert sounds. Price accepts above the value high, and the trigger fires on the pullback.",
+          "start": 16,
+          "text": "Value high and value low edge the band where the prior session traded most. Two of the four carry branches."
+        },
+        {
+          "start": 23.8,
+          "text": "Trade one, from the first branch. At 9:46 a.m. the near-edge alert sounds. Price accepts above the value high, closing and holding there, and the trigger fires on the pullback.",
           "chapter": "Trade one"
         },
         {
-          "start": 29,
-          "text": "The trade ends at its stop. The mark is Pass, because the stop is on the list. A planned trade that lost gets no negative tag, and the post-loss reset from Module 02 runs."
+          "start": 35.3,
+          "text": "It ends at its stop. The mark is Pass: the stop is on the list. A planned trade that lost gets no negative tag. The post-loss reset from Module 02 runs."
         },
         {
-          "start": 42,
+          "start": 47.2,
           "text": "At 10:24 a.m. price falls through the value low zone. Both alerts sound. No branch sits there, so nothing is taken. The alerts did their job. So did you, by doing nothing.",
           "chapter": "No trade"
         },
         {
-          "start": 54.2,
-          "text": "Trade two comes from the failed-breakdown branch at the prior-day low: two closes below the zone, one back above, and the trigger fires from the reclaimed zone.",
+          "start": 59.4,
+          "text": "Trade two, from the failed-breakdown branch at the prior-day low: two closes below the zone, one back above, and the trigger fires from the reclaimed zone.",
           "chapter": "Trade two"
         },
         {
-          "start": 64.6,
-          "text": "At 11:12 a.m. the trade has gone sideways for twenty minutes, and you close it by hand. None of the four reasons applies. Too Early, and the mark is Fail."
+          "start": 69.5,
+          "text": "At 11:12 a.m. the trade has gone sideways for twenty minutes, and you close it by hand. None of the four reasons applies. Too Early, mark Fail."
         },
         {
-          "start": 76.1,
+          "start": 79.9,
           "text": "At 12:15 p.m. a sharp bounce at a price on no plan. One line in the notes, no order.",
           "chapter": "The bounce"
         },
         {
-          "start": 83.6,
-          "text": "At 3:55 p.m. the nothing-new alarm sounds, with no orders working. At 3:57 a rearmed alert sounds at the value low zone. It is logged, nothing is taken. At 4 p.m. you are flat and the platform is closed.",
+          "start": 87.3,
+          "text": "At 3:55 p.m. the nothing-new alarm sounds; no orders working. At 3:57 a rearmed alert sounds at the value low zone: logged, nothing taken. At 4 p.m. you are flat, platform closed.",
           "chapter": "The close"
         },
         {
-          "start": 98.4,
-          "text": "At 4:20 p.m. the routine runs. In the mark-up, trade two’s planned target was reached at 3:57, hours after the exit. That goes in the notes. It changes neither mark.",
+          "start": 99.6,
+          "text": "At 4:20 p.m. the routine runs. In the mark-up, trade two’s planned target was reached at 3:57, hours after the exit. A note. It changes neither mark.",
           "chapter": "The routine"
         },
         {
-          "start": 109.9,
+          "start": 110,
           "text": "Post-exit fields: trade one, Pass. Trade two, Too Early, Fail. One line on the day: two trades, both from plan branches, one Fail, a manual exit on a stall."
         },
         {
           "start": 121.1,
-          "text": "Two screenshots are saved. The clip around the manual exit shows the hand moving to the exit button after a stretch of looking at the account, not the chart."
+          "text": "The clip around the manual exit shows the hand moving to the exit button after a stretch of looking at the account, not the chart."
         },
         {
-          "start": 132.2,
+          "start": 130.8,
           "text": "The mental close at 4:41 p.m.: Day closed, two trades, one Pass, one Fail logged.",
           "chapter": "The mental close"
         },
         {
-          "start": 138.2,
-          "text": "Notice what the routine did. The planned loss got no negative tag. The Fail was made visible without anyone having to feel bad about it. Where price went after the exit is a fact for your record.",
+          "start": 136.7,
+          "text": "Notice what the routine did. The planned loss got no negative tag. The Fail was made visible, and no one had to feel bad. Where price went after the exit is a fact for your record.",
           "chapter": "What it shows"
+        },
+        {
+          "start": 150.4,
+          "text": "The rule the session kept: no entry off the plan, nothing new after 3:55 p.m., every trade marked within the hour."
         }
       ],
       "slides": [
@@ -1449,7 +1510,7 @@
             }
           },
           "start": 0,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four zones on the plan: overnight high, prior-day value high, prior-day value low, prior-day low\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A composite session</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Four zones, two alerts each, set before the session</text><g class=\"sv-rv\" style=\"animation-delay:7.1s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Overnight high</text></g><g class=\"sv-rv\" style=\"animation-delay:8.7s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Prior-day value high (PD VAH)</text></g><g class=\"sv-rv\" style=\"animation-delay:10.3s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Prior-day value low (PD VAL)</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Prior-day low (PD Low)</text></g><g class=\"sv-rv\" style=\"animation-delay:7.1s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">2 alerts</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">on every zone</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The four zones on the plan: overnight high, prior-day value high, prior-day value low, prior-day low\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A composite session</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Four zones, two alerts each, set before the session</text><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Overnight high</text></g><g class=\"sv-rv\" style=\"animation-delay:8.3s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Prior-day value high (PD VAH)</text></g><g class=\"sv-rv\" style=\"animation-delay:9.9s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Prior-day value low (PD VAL)</text></g><g class=\"sv-rv\" style=\"animation-delay:11.5s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Prior-day low (PD Low)</text></g><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">2 alerts</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">on every zone</text></g></svg>"
         },
         {
           "title": "The session, in time order",
@@ -1492,8 +1553,8 @@
               }
             ]
           },
-          "start": 18.6,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six moments: trade one, the value low zone with no branch, trade two, a manual exit, a bounce on no plan, and the 3:55 alarm\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The session, in time order</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Hypothetical illustration, invented prices, not a trade record</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:46</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trade one: a branch, ends at its stop</text></g><g class=\"sv-rv\" style=\"animation-delay:23.4s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:24</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Zone traded through, no branch: no trade</text></g><g class=\"sv-rv\" style=\"animation-delay:35.6s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:38</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trade two: failed breakdown, then reclaim</text></g><g class=\"sv-rv\" style=\"animation-delay:46.0s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">11:12</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Closed by hand on a stall: Too Early</text></g><g class=\"sv-rv\" style=\"animation-delay:57.5s\"><rect x=\"32\" y=\"250\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">12:15</text><text x=\"124\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Bounce on no plan: a line in the notes</text></g><g class=\"sv-rv\" style=\"animation-delay:65.0s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"311\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3:55</text><text x=\"124\" y=\"311\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Nothing new. Flat and shut at 4 p.m.</text></g></svg>"
+          "start": 23.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Six moments: trade one, the value low zone with no branch, trade two, a manual exit, a bounce on no plan, and the 3:55 alarm\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The session, in time order</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Hypothetical illustration, invented prices, not a trade record</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">9:46</text><text x=\"124\" y=\"111\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trade one: a branch, ends at its stop</text></g><g class=\"sv-rv\" style=\"animation-delay:23.4s\"><rect x=\"32\" y=\"130\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:24</text><text x=\"124\" y=\"151\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Zone traded through, no branch: no trade</text></g><g class=\"sv-rv\" style=\"animation-delay:35.6s\"><rect x=\"32\" y=\"170\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">10:38</text><text x=\"124\" y=\"191\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Trade two: failed breakdown, then reclaim</text></g><g class=\"sv-rv\" style=\"animation-delay:45.7s\"><rect x=\"32\" y=\"210\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">11:12</text><text x=\"124\" y=\"231\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Closed by hand on a stall: Too Early</text></g><g class=\"sv-rv\" style=\"animation-delay:56.1s\"><rect x=\"32\" y=\"250\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">12:15</text><text x=\"124\" y=\"271\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Bounce on no plan: a line in the notes</text></g><g class=\"sv-rv\" style=\"animation-delay:63.5s\"><rect x=\"32\" y=\"290\" width=\"576\" height=\"32\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"311\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">3:55</text><text x=\"124\" y=\"311\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Nothing new. Flat and shut at 4 p.m.</text></g></svg>"
         },
         {
           "title": "Two exits, two marks",
@@ -1567,8 +1628,8 @@
               }
             ]
           },
-          "start": 98.4,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Trade one ended at its stop and is Pass; trade two was closed by hand and is Fail\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two exits, two marks</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The routine at 4:20 p.m.</text><g class=\"sv-rv\" style=\"animation-delay:11.5s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Trade one: Pass</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Exit at the stop</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">On the list</text><text x=\"48\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No negative tag</text></g><g class=\"sv-rv\" style=\"animation-delay:11.5s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Trade two: Fail</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Closed by hand on a stall</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">None of the four reasons</text><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tagged Too Early</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Its target was reached at 3:57 p.m. It changes neither mark.</text></g></svg>"
+          "start": 99.6,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Trade one ended at its stop and is Pass; trade two was closed by hand and is Fail\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Two exits, two marks</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The routine at 4:20 p.m.</text><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Trade one: Pass</text><text x=\"48\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Exit at the stop</text><text x=\"48\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">On the list</text><text x=\"48\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No negative tag</text></g><g class=\"sv-rv\" style=\"animation-delay:10.4s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Trade two: Fail</text><text x=\"344\" y=\"140\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Closed by hand on a stall</text><text x=\"344\" y=\"168\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">None of the four reasons</text><text x=\"344\" y=\"196\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Tagged Too Early</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"32\" y=\"308\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Its target was reached at 3:57 p.m. It changes neither mark.</text></g></svg>"
         },
         {
           "title": "Day closed",
@@ -1599,10 +1660,22 @@
                 "sub": "Unchanged by it",
                 "cue": 1
               }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "The rule held: no entry off the plan, nothing new after 3:55 p.m., every trade marked.",
+                "size": 14,
+                "cls": "t",
+                "tone": "gold",
+                "cue": 2
+              }
             ]
           },
-          "start": 132.2,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The mental close sentence and four things the routine showed\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Day closed</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the routine did and did not do</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Day closed: two trades, one Pass, one Fail logged.</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The planned loss</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No negative tag</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The Fail</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Visible, not judged</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Price after the exit</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A fact for your record</text></g><g class=\"sv-rv\" style=\"animation-delay:6.0s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Both marks</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Unchanged by it</text></g></svg>"
+          "start": 130.8,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The mental close sentence and four things the routine showed\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Day closed</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What the routine did and did not do</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Day closed: two trades, one Pass, one Fail logged.</text></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The planned loss</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">No negative tag</text></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The Fail</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Visible, not judged</text></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Price after the exit</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A fact for your record</text></g><g class=\"sv-rv\" style=\"animation-delay:5.9s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Both marks</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Unchanged by it</text></g><g class=\"sv-rv\" style=\"animation-delay:19.6s\"><text x=\"32\" y=\"300\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The rule held: no entry off the plan, nothing new after 3:55 p.m., every trade marked.</text></g></svg>"
         }
       ],
       "check": [
@@ -1644,10 +1717,10 @@
           "options": [
             "A negative tag",
             "Too Early",
-            "No negative tag, and the mark is Pass",
-            "Broke Rule"
+            "Broke Rule",
+            "No negative tag, and the mark is Pass"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "The stop is on the Pass list. A planned loss is not a mistake."
         }
       ],
@@ -1662,7 +1735,7 @@
         "Where It Goes Next",
         "Sources"
       ],
-      "duration": 150.2,
+      "duration": 155.7,
       "cues": [
         {
           "start": 0,
@@ -1696,7 +1769,7 @@
         {
           "start": 47.6,
           "text": "The threshold. Six of six, keep going. Four or five: the missing lines are the first thing you set up before your next session.",
-          "chapter": "The rule"
+          "chapter": "The threshold"
         },
         {
           "start": 56.9,
@@ -1722,23 +1795,28 @@
         },
         {
           "start": 99.6,
+          "text": "In one line: the plan decides the session, the clock ends it, and the routine records it.",
+          "chapter": "In one line"
+        },
+        {
+          "start": 106.3,
           "text": "Where it goes next. The post-exit fields and the Pass or Fail mark you fill in at the close are defined in Module 18, Journaling and Review.",
           "chapter": "Where it goes next"
         },
         {
-          "start": 110,
+          "start": 116.7,
           "text": "Module 18 also covers the weekly review, held at a fixed time, where your Too Early count and your mark-up notes are read across the week."
         },
         {
-          "start": 120.1,
+          "start": 126.8,
           "text": "The zones your alerts sit on come from Module 16, the pre-market routine, which finishes by 9:25 a.m. with the alerts set."
         },
         {
-          "start": 128.6,
+          "start": 135.3,
           "text": "The window, the four flatten reasons and the kill switch that frame the session are in Module 02, the hard rules. Module 14 covers how the target and the one planned scale are set before entry."
         },
         {
-          "start": 142.4,
+          "start": 149.1,
           "text": "The sources list the NinjaTrader help pages for alerts. Menus change, and the vendor’s current page wins."
         }
       ],
@@ -1869,27 +1947,27 @@
               {
                 "head": "Module 18",
                 "sub": "Journaling & Review",
-                "cue": 0
+                "cue": 1
               },
               {
                 "head": "Module 16",
                 "sub": "The Pre-Market Routine",
-                "cue": 2
+                "cue": 3
               },
               {
                 "head": "Module 02",
                 "sub": "The Hard Rules",
-                "cue": 3
+                "cue": 4
               },
               {
                 "head": "Module 14",
                 "sub": "Trade Construction",
-                "cue": 3
+                "cue": 4
               }
             ]
           },
           "start": 99.6,
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The close routine and the four modules it connects to\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The routine feeds the journal and the weekly review</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The plan decides the session, the clock ends it, the routine records it.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:20.5s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 16</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Pre-Market Routine</text></g><g class=\"sv-rv\" style=\"animation-delay:29.0s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:29.0s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 14</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trade Construction</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The close routine and the four modules it connects to\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The routine feeds the journal and the weekly review</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">The plan decides the session, the clock ends it, the routine records it.</text></g><g class=\"sv-rv\" style=\"animation-delay:6.7s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:27.2s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 16</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Pre-Market Routine</text></g><g class=\"sv-rv\" style=\"animation-delay:35.7s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 02</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Hard Rules</text></g><g class=\"sv-rv\" style=\"animation-delay:35.7s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 14</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trade Construction</text></g></svg>"
         }
       ],
       "check": [
@@ -1907,12 +1985,12 @@
         {
           "q": "You score 5 of 6, but you missed line three. That counts as…",
           "options": [
+            "Under four",
             "Keep going",
             "Four or five",
-            "Under four",
             "Full marks"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "A miss on line three counts as under four, whatever the total."
         },
         {
@@ -1920,21 +1998,21 @@
           "options": [
             "Module 06",
             "Module 02",
-            "Module 18",
-            "Module 16"
+            "Module 16",
+            "Module 18"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Module 18, Journaling & Review, along with the weekly review."
         },
         {
           "q": "Scoring a line true because it was true most days reveals…",
           "options": [
             "A strong routine",
-            "The routine runs on mood",
             "A rule that is too strict",
+            "The routine runs on mood",
             "Nothing in particular"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Most days is not all five."
         }
       ],
