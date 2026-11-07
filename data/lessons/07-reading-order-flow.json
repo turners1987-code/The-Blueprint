@@ -393,7 +393,7 @@
           "start": 30.5
         },
         {
-          "text": "Three flagged cells on adjacent prices, same side: a stacked imbalance. On the 5-minute footprint, a location, never a trigger.",
+          "text": "Three flagged cells on adjacent prices, same side: a stacked imbalance. On the 5-minute footprint, a location, never a trigger, the price event that puts you in.",
           "start": 34.7
         },
         {
@@ -1153,7 +1153,7 @@
           "start": 131.9
         },
         {
-          "text": "The fix: keep the footprint panel closed. Each zone carries a near-edge and a far-edge alert. The footprint opens when the near-edge alert fires, and closes when price leaves without a trigger.",
+          "text": "The fix: keep the footprint panel closed. Each zone carries a near-edge alert, set on the edge price reaches first, and a far-edge alert. The footprint opens when the near-edge alert fires, and closes when price leaves without a trigger.",
           "start": 145.2
         }
       ],
