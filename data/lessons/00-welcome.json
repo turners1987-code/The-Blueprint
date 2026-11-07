@@ -16,84 +16,84 @@
           "chapter": "Welcome"
         },
         {
-          "start": 17.2,
+          "start": 11.3,
           "text": "If you are here, something about your trading is not working the way you want. Maybe you have a plan that has grown messy and you are not sure what to keep. Maybe you do not have a plan at all, and nobody has told you that is the problem. Both are normal. Both are why this exists."
         },
         {
-          "start": 40.9,
+          "start": 27.2,
           "text": "This is for the trader spinning their wheels. You know enough to be dangerous. You have watched the videos, tried the setups, and had the weeks that felt like progress, followed by the weeks that erased them.",
           "chapter": "Who it is for"
         },
         {
-          "start": 56.1,
+          "start": 39,
           "text": "What you are missing is not another setup. It is a plan you built, that you understand, and that you can defend on a bad day."
         },
         {
-          "start": 67,
+          "start": 47,
           "text": "It is not for someone looking for signals, a room to copy, or a promise. There are no promises here. There is a method, the evidence behind it, and the work."
         },
         {
-          "start": 79.8,
+          "start": 56.8,
           "text": "By the end you will have written your own trading plan, in six parts.",
           "chapter": "What you will build"
         },
         {
-          "start": 85.9,
+          "start": 61.7,
           "text": "The levels you trade from."
         },
         {
-          "start": 88.3,
+          "start": 64.5,
           "text": "The reads that tell you what price is doing there."
         },
         {
-          "start": 92.8,
+          "start": 68.2,
           "text": "The triggers that say act."
         },
         {
-          "start": 95.2,
+          "start": 71.1,
           "text": "The construction of every trade: stop, size, entry."
         },
         {
-          "start": 98.9,
+          "start": 75.7,
           "text": "The rules that keep you in the game."
         },
         {
-          "start": 102.6,
+          "start": 78.8,
           "text": "And the routines before, during and after the session that make it repeatable."
         },
         {
-          "start": 108.2,
+          "start": 84.2,
           "text": "Every module adds one piece, and every piece is yours. Not a copy of someone else's plan. Yours, with your numbers and your reasons. That is the point of the whole thing: you learn to trade, and you become your own trader. Nobody to follow. Nothing to renew."
         },
         {
-          "start": 127.9,
+          "start": 100.2,
           "text": "Each module is a page and a set of short videos like this one. The videos carry most of it; the page has the rest. Watch, then check: every video ends with a few questions, and every module ends with a quiz and one small assignment for your next session.",
           "chapter": "How it runs"
         },
         {
-          "start": 148.3,
+          "start": 116.7,
           "text": "Go in order. The opening modules and the process modules are free, and together they are enough to build the skeleton of a plan. The Blueprint modules in the middle are the method itself, and they are the paid part. Take the free path first. If it earns the rest, you will know."
         },
         {
-          "start": 170,
+          "start": 132.9,
           "text": "A few practical things. This course is built on NinjaTrader 8 with the Order Flow Plus add-on. The levels, the reads and the journal all live there, so for now the platform is not optional.",
           "chapter": "What you need"
         },
         {
-          "start": 184.4,
+          "start": 145,
           "text": "If you trade a funded account with Apex, Lucid, Topstep or the others, NinjaTrader usually comes with it. Order Flow Plus is included with some of those licences and a small add-on with the rest. Module 03 and the setup guide show you where to check."
         },
         {
-          "start": 203.2,
+          "start": 161.2,
           "text": "You will also want a data feed, the journal, and a pen. The pen is still the cheapest risk control in the course."
         },
         {
-          "start": 212.9,
+          "start": 168.6,
           "text": "Here is how to start. Finish this module. Do the one-line assignment at the end; it takes five minutes. Then open Module 01, which is about evidence, and why this course never tells you something is proven when it is not.",
           "chapter": "Start here"
         },
         {
-          "start": 229.8,
+          "start": 182.4,
           "text": "Welcome. Let's get you a plan."
         }
       ],
@@ -118,10 +118,10 @@
               }
             ]
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Welcome title card\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"128\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Welcome to The Blueprint</text><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">No music on this one. No rush.</text></g><g class=\"sv-rv\" style=\"animation-delay:17.2s\"><text x=\"320\" y=\"212\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">A plan that grew messy, or no plan at all.</text></g><g class=\"sv-rv\" style=\"animation-delay:17.2s\"><text x=\"320\" y=\"246\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Both are normal. Both are why this exists.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Welcome title card\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"128\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Welcome to The Blueprint</text><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">No music on this one. No rush.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><text x=\"320\" y=\"212\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">A plan that grew messy, or no plan at all.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.3s\"><text x=\"320\" y=\"246\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Both are normal. Both are why this exists.</text></g></svg>"
         },
         {
-          "start": 40.9,
+          "start": 27.2,
           "kind": "hero",
           "title": "Who it is for",
           "data": {
@@ -147,10 +147,10 @@
             ],
             "size": 28
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Who the course is for\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"110\" font-size=\"28\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">For the trader spinning their wheels</text><text x=\"320\" y=\"144\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">You know enough to be dangerous.</text></g><g class=\"sv-rv\" style=\"animation-delay:15.2s\"><text x=\"320\" y=\"194\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Not another setup.</text></g><g class=\"sv-rv\" style=\"animation-delay:15.2s\"><text x=\"320\" y=\"228\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">A plan you built, understand, and can defend.</text></g><g class=\"sv-rv\" style=\"animation-delay:26.1s\"><text x=\"320\" y=\"262\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">No signals. No room to copy. No promises.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Who the course is for\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"110\" font-size=\"28\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">For the trader spinning their wheels</text><text x=\"320\" y=\"144\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">You know enough to be dangerous.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.8s\"><text x=\"320\" y=\"194\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Not another setup.</text></g><g class=\"sv-rv\" style=\"animation-delay:11.8s\"><text x=\"320\" y=\"228\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">A plan you built, understand, and can defend.</text></g><g class=\"sv-rv\" style=\"animation-delay:19.8s\"><text x=\"320\" y=\"262\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">No signals. No room to copy. No promises.</text></g></svg>"
         },
         {
-          "start": 79.8,
+          "start": 56.8,
           "kind": "list",
           "title": "What you will build",
           "data": {
@@ -198,10 +198,10 @@
               "size": 24
             }
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The six parts of the plan\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your plan, in six parts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One piece per module. Every piece is yours.</text><g class=\"sv-rv\" style=\"animation-delay:6.1s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Levels: where you trade from</text></g><g class=\"sv-rv\" style=\"animation-delay:8.5s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Reads: what price is doing there</text></g><g class=\"sv-rv\" style=\"animation-delay:13.0s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Triggers: the event that says act</text></g><g class=\"sv-rv\" style=\"animation-delay:15.4s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Construction: stop, size, entry</text></g><g class=\"sv-rv\" style=\"animation-delay:19.1s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rules: what keeps you in the game</text></g><g class=\"sv-rv\" style=\"animation-delay:22.8s\"><rect x=\"32\" y=\"304\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"327\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">6</text><text x=\"76\" y=\"327\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Routines: before, during, after</text></g><g class=\"sv-rv\" style=\"animation-delay:28.4s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Yours</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">your numbers</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The six parts of the plan\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your plan, in six parts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One piece per module. Every piece is yours.</text><g class=\"sv-rv\" style=\"animation-delay:4.9s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Levels: where you trade from</text></g><g class=\"sv-rv\" style=\"animation-delay:7.7s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Reads: what price is doing there</text></g><g class=\"sv-rv\" style=\"animation-delay:11.4s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Triggers: the event that says act</text></g><g class=\"sv-rv\" style=\"animation-delay:14.3s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Construction: stop, size, entry</text></g><g class=\"sv-rv\" style=\"animation-delay:18.9s\"><rect x=\"32\" y=\"260\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"283\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">5</text><text x=\"76\" y=\"283\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Rules: what keeps you in the game</text></g><g class=\"sv-rv\" style=\"animation-delay:22.0s\"><rect x=\"32\" y=\"304\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"327\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">6</text><text x=\"76\" y=\"327\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Routines: before, during, after</text></g><g class=\"sv-rv\" style=\"animation-delay:27.4s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"24\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Yours</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">your numbers</text></g></svg>"
         },
         {
-          "start": 127.9,
+          "start": 100.2,
           "kind": "calm",
           "title": "How it runs",
           "data": {
@@ -258,10 +258,10 @@
               }
             ]
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How the course runs\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">How the course runs</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A page and a set of short videos per module</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"116\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Watch the videos</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><rect x=\"32\" y=\"132\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"152\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Answer the checks</text></g><g class=\"sv-rv\" style=\"animation-delay:2.8s\"><rect x=\"32\" y=\"168\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Take the module quiz</text></g><g class=\"sv-rv\" style=\"animation-delay:4.2s\"><rect x=\"32\" y=\"204\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Do the next-session assignment</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><rect x=\"330\" y=\"96\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1\"/><text x=\"344\" y=\"120\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Free path</text><text x=\"344\" y=\"142\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Modules 00 to 03 and 16 to 20</text><text x=\"344\" y=\"160\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Enough to build the skeleton of a plan</text></g><g class=\"sv-rv\" style=\"animation-delay:20.4s\"><rect x=\"330\" y=\"224\" width=\"278\" height=\"96\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"344\" y=\"248\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The Blueprint modules</text><text x=\"344\" y=\"270\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The method itself. The paid part.</text><text x=\"344\" y=\"288\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Take the free path first.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How the course runs\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">How the course runs</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A page and a set of short videos per module</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"116\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Watch the videos</text></g><g class=\"sv-rv\" style=\"animation-delay:1.4s\"><rect x=\"32\" y=\"132\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"152\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Answer the checks</text></g><g class=\"sv-rv\" style=\"animation-delay:2.8s\"><rect x=\"32\" y=\"168\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Take the module quiz</text></g><g class=\"sv-rv\" style=\"animation-delay:4.2s\"><rect x=\"32\" y=\"204\" width=\"270\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"167\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Do the next-session assignment</text></g><g class=\"sv-rv\" style=\"animation-delay:16.5s\"><rect x=\"330\" y=\"96\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1\"/><text x=\"344\" y=\"120\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Free path</text><text x=\"344\" y=\"142\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Modules 00 to 03 and 16 to 20</text><text x=\"344\" y=\"160\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Enough to build the skeleton of a plan</text></g><g class=\"sv-rv\" style=\"animation-delay:16.5s\"><rect x=\"330\" y=\"224\" width=\"278\" height=\"96\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"344\" y=\"248\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The Blueprint modules</text><text x=\"344\" y=\"270\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The method itself. The paid part.</text><text x=\"344\" y=\"288\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Take the free path first.</text></g></svg>"
         },
         {
-          "start": 170,
+          "start": 132.9,
           "kind": "calm",
           "title": "What you need",
           "data": {
@@ -317,10 +317,10 @@
               }
             ]
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What you need\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What you need</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The platform is not optional, for now</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"116\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">NinjaTrader 8</text></g><g class=\"sv-rv\" style=\"animation-delay:1.2s\"><rect x=\"32\" y=\"132\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"152\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Order Flow+ add-on</text></g><g class=\"sv-rv\" style=\"animation-delay:2.4s\"><rect x=\"32\" y=\"168\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A data feed</text></g><g class=\"sv-rv\" style=\"animation-delay:3.6s\"><rect x=\"32\" y=\"204\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">The journal (NT8 only)</text></g><g class=\"sv-rv\" style=\"animation-delay:4.8s\"><rect x=\"32\" y=\"240\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"260\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A pen</text></g><g class=\"sv-rv\" style=\"animation-delay:14.4s\"><rect x=\"360\" y=\"96\" width=\"248\" height=\"150\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"374\" y=\"120\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Funded accounts</text><text x=\"374\" y=\"142\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Apex, Lucid, Topstep and others</text><text x=\"374\" y=\"160\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">usually include NinjaTrader.</text><text x=\"374\" y=\"178\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Order Flow+: included with some,</text><text x=\"374\" y=\"196\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">a small add-on with the rest.</text></g><g class=\"sv-rv\" style=\"animation-delay:14.4s\"><text x=\"360\" y=\"276\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Where to check: Module 03</text><text x=\"360\" y=\"294\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">and the setup guide.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What you need\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">What you need</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The platform is not optional, for now</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"96\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"116\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">NinjaTrader 8</text></g><g class=\"sv-rv\" style=\"animation-delay:1.2s\"><rect x=\"32\" y=\"132\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"152\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">Order Flow+ add-on</text></g><g class=\"sv-rv\" style=\"animation-delay:2.4s\"><rect x=\"32\" y=\"168\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"188\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A data feed</text></g><g class=\"sv-rv\" style=\"animation-delay:3.6s\"><rect x=\"32\" y=\"204\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"224\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">The journal (NT8 only)</text></g><g class=\"sv-rv\" style=\"animation-delay:4.8s\"><rect x=\"32\" y=\"240\" width=\"300\" height=\"30\" rx=\"15\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"182\" y=\"260\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">A pen</text></g><g class=\"sv-rv\" style=\"animation-delay:12.1s\"><rect x=\"360\" y=\"96\" width=\"248\" height=\"150\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1\"/><text x=\"374\" y=\"120\" font-size=\"13\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Funded accounts</text><text x=\"374\" y=\"142\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Apex, Lucid, Topstep and others</text><text x=\"374\" y=\"160\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">usually include NinjaTrader.</text><text x=\"374\" y=\"178\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Order Flow+: included with some,</text><text x=\"374\" y=\"196\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">a small add-on with the rest.</text></g><g class=\"sv-rv\" style=\"animation-delay:12.1s\"><text x=\"360\" y=\"276\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Where to check: Module 03</text><text x=\"360\" y=\"294\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">and the setup guide.</text></g></svg>"
         },
         {
-          "start": 212.9,
+          "start": 168.6,
           "kind": "hero",
           "title": "Start here",
           "data": {
@@ -346,10 +346,10 @@
               }
             ]
           },
-          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How to start\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"128\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Start here</text><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Finish this module. Do the one-line assignment.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"212\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Then Module 01: evidence, and why nothing here</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"246\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is called proven when it is not.</text></g><g class=\"sv-rv\" style=\"animation-delay:16.9s\"><text x=\"320\" y=\"280\" font-size=\"22\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Let's get you a plan.</text></g></svg>"
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"How to start\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"128\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Start here</text><text x=\"320\" y=\"162\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Finish this module. Do the one-line assignment.</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"212\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Then Module 01: evidence, and why nothing here</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><text x=\"320\" y=\"246\" font-size=\"17\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">is called proven when it is not.</text></g><g class=\"sv-rv\" style=\"animation-delay:13.8s\"><text x=\"320\" y=\"280\" font-size=\"22\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Let's get you a plan.</text></g></svg>"
         }
       ],
-      "duration": 232.6,
+      "duration": 185.1,
       "check": [
         {
           "q": "What is the course built to leave you with?",
@@ -396,7 +396,8 @@
           "why": "Finish this module, do the five-minute assignment, then Module 01."
         }
       ],
-      "audio": "../assets/audio/00/s0.mp3"
+      "audio": "../assets/audio/00/s0.mp3",
+      "audio_v": "40567b5a95"
     },
     {
       "id": "s1",
@@ -721,7 +722,7 @@
         "producer": "vaitsez",
         "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
       },
-      "audio_v": "ca9a8ceaf0"
+      "audio_v": "80961e58fa"
     },
     {
       "id": "s2",
@@ -936,7 +937,7 @@
         "producer": "vaitsez",
         "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
       },
-      "audio_v": "a2ad4c8e30"
+      "audio_v": "fb02f649a3"
     },
     {
       "id": "s3",
@@ -1166,7 +1167,7 @@
         "producer": "vaitsez",
         "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
       },
-      "audio_v": "09cdfb7610"
+      "audio_v": "f2cc8a2dc5"
     },
     {
       "id": "s4",
@@ -1380,7 +1381,7 @@
         "producer": "vaitsez",
         "url": "https://pixabay.com/music/trap-rap-rap-beat-beats-music-486586/"
       },
-      "audio_v": "8685a8bc52"
+      "audio_v": "0ad2052d6e"
     },
     {
       "id": "s5",
@@ -1581,7 +1582,7 @@
         "producer": "kontraa",
         "url": "https://pixabay.com/music/beats-wega-old-school-hiphop-music-422621/"
       },
-      "audio_v": "c4dda115cd"
+      "audio_v": "8ced158ad0"
     }
   ],
   "quiz": {
