@@ -119,7 +119,7 @@ is a rising chart).
 - The script writes cue starts, slide starts, `duration` and `audio_v` (a hash, so a new
   render gets a new URL) back into the JSON. Then run `node scripts/build-lesson-slides.mjs`
   so reveal delays match the new timings. Bump `CACHE_VERSION` in sw.js.
-- Budget: under 16 MiB of audio per module at 96 kbps mono 24 kHz.
+- Budget: under 16 MiB of audio per module at 64 kbps mono 24 kHz (64 kbps from Nov 7: 96 kbps put 15-minute modules at 18 to 23 MB; 64 kbps mono is podcast quality for speech under a low beat).
 
 ## 6. Player behaviour (already built, do not re-build per module)
 

@@ -11,7 +11,7 @@ written to each segment as "music" (title, producer, url) for the credits on
 ai.html. The pool folder is never copied into the repo.
 
 Per segment: synthesize each cue once, join with 0.35 s gaps, then export two
-stems from that one run, with identical encoder settings (mono, 24 kHz, 96 kbps):
+stems from that one run, with identical encoder settings (mono, 24 kHz, 64 kbps):
   assets/audio/<NN>/<id>.mp3        voice + music, music at -12 dB (fade in 1.5 s,
                                     out 2 s, looped to the segment length)
   assets/audio/<NN>/<id>.voice.mp3  voice only
@@ -79,7 +79,7 @@ def main(lesson_path, pool_dir):
         out = os.path.join(outdir, s['id'] + '.mp3')
         vout = os.path.join(outdir, s['id'] + '.voice.mp3')
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', wav, '-ac', '1',
-                        '-ar', str(SR), '-b:a', '96k', vout], check=True)
+                        '-ar', str(SR), '-b:a', '64k', vout], check=True)
         fo = max(0, length - FADE_OUT)
         flt = (f'[1:a]aresample={SR},aformat=channel_layouts=mono,atrim=0:{length:.3f},'
                f'volume={MUSIC_DB}dB,afade=t=in:d={FADE_IN},afade=t=out:st={fo:.3f}:d={FADE_OUT}[m];'
@@ -87,7 +87,7 @@ def main(lesson_path, pool_dir):
                f'[v][m]amix=inputs=2:duration=first:normalize=0[o]')
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', wav,
                         '-stream_loop', '-1', '-i', music, '-filter_complex', flt,
-                        '-map', '[o]', '-ac', '1', '-ar', str(SR), '-b:a', '96k', out], check=True)
+                        '-map', '[o]', '-ac', '1', '-ar', str(SR), '-b:a', '64k', out], check=True)
         # re-time: slides keep the cue they start on now
         old = [c['start'] for c in s['cues']]
         for sl in s.get('slides', []):
