@@ -1,0 +1,1613 @@
+{
+  "module": "19-toothbrush-therapy",
+  "segments": [
+    {
+      "id": "s1",
+      "title": "The scenario and the basics",
+      "sections": [
+        "The Basics You Skip On A Busy Morning"
+      ],
+      "duration": 105.8,
+      "cues": [
+        {
+          "start": 0,
+          "text": "It is Tuesday. You have read every page on levels, reads and triggers, and you sit down at 9:27 a.m. with no idea written.",
+          "chapter": "The morning"
+        },
+        {
+          "start": 9.5,
+          "text": "You take a trade from a price you noticed. You nudge the stop when price gets close. You never grade it."
+        },
+        {
+          "start": 17.9,
+          "text": "None of that was a gap in knowledge. Each one was a basic you knew and skipped, on the morning it mattered."
+        },
+        {
+          "start": 26.6,
+          "text": "You did not forget what a trigger is. You skipped it, with great confidence."
+        },
+        {
+          "start": 32.4,
+          "text": "Now, the habit. You brush your teeth without deciding to. It happens at the same point every day, and missing it feels wrong.",
+          "chapter": "The habit"
+        },
+        {
+          "start": 41.5,
+          "text": "This module sets out eight trading habits to run the same way. Not strategies. Not secrets. Routines, done every session."
+        },
+        {
+          "start": 49.5,
+          "text": "Each one is a line on your sheet, the one page you fill in before the open, or a field in your journal. So you can see whether you ran it, instead of trusting that you did."
+        },
+        {
+          "start": 63.8,
+          "text": "The eight fall into four parts of the day, mechanical first.",
+          "chapter": "The four parts"
+        },
+        {
+          "start": 68.5,
+          "text": "Before the open: four habits."
+        },
+        {
+          "start": 71,
+          "text": "At the entry: two."
+        },
+        {
+          "start": 73,
+          "text": "After the exit: one."
+        },
+        {
+          "start": 75.1,
+          "text": "And last, around your desk: the people. That one is about you, not the chart."
+        },
+        {
+          "start": 81.3,
+          "text": "The rule: a habit counts only when it leaves a line on paper every session, whatever the day did.",
+          "chapter": "The rule"
+        },
+        {
+          "start": 88.9,
+          "text": "Getting it wrong is a habit you believe in and cannot show. It reveals you are trusting memory, and memory agrees with how the day ended.",
+          "chapter": "Getting it wrong"
+        },
+        {
+          "start": 99.1,
+          "text": "The fix: no line on paper, no habit. Count only what you can point to."
+        }
+      ],
+      "slides": [
+        {
+          "title": "A busy morning",
+          "kind": "scenario",
+          "data": {
+            "title": "A busy morning",
+            "subtitle": "You knew every one of these",
+            "aria": "A session that starts at 9:27 a.m. with no idea written, a trade from a noticed price, and no grade",
+            "panel": {
+              "label": "No idea written. Trade taken anyway.",
+              "note": "A basic you knew and skipped"
+            },
+            "question": {
+              "mark": "9:27",
+              "head": "No idea on paper",
+              "sub": "Stop nudged, trade never graded",
+              "cue": 1
+            },
+            "banner": {
+              "text": "Not a gap in knowledge. A basic, skipped.",
+              "tone": "gold",
+              "cue": 2
+            }
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A session that starts at 9:27 a.m. with no idea written, a trade from a noticed price, and no grade\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A busy morning</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">You knew every one of these</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"90\" width=\"576\" height=\"200\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><line x1=\"72\" y1=\"150\" x2=\"568\" y2=\"150\" stroke=\"var(--gold)\" stroke-width=\"2\" stroke-dasharray=\"6 5\"/><text x=\"320\" y=\"128\" font-size=\"16\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">No idea written. Trade taken anyway.</text><line x1=\"140\" y1=\"262\" x2=\"140\" y2=\"172\" stroke=\"var(--cyan)\" stroke-width=\"2\"/><polygon points=\"132,178 140,164 148,178\" fill=\"var(--cyan)\"/><text x=\"158\" y=\"250\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A basic you knew and skipped</text></g><g class=\"sv-rv\" style=\"animation-delay:9.5s\"><text x=\"430\" y=\"215\" font-size=\"40\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">9:27</text><text x=\"430\" y=\"245\" font-size=\"14\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-t\">No idea on paper</text><text x=\"430\" y=\"268\" font-size=\"12\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">Stop nudged, trade never graded</text></g><g class=\"sv-rv\" style=\"animation-delay:17.9s\"><rect x=\"32\" y=\"304\" width=\"576\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"320\" y=\"328\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Not a gap in knowledge. A basic, skipped.</text></g></svg>"
+        },
+        {
+          "title": "Eight habits, four parts",
+          "kind": "list",
+          "data": {
+            "title": "Eight habits, four parts",
+            "subtitle": "Mechanical first, the people last",
+            "aria": "Four parts of the day: before the open four habits, at the entry two, after the exit one, and around the desk one",
+            "rows": {
+              "items": [
+                {
+                  "text": "Before the open: 4 habits",
+                  "cue": 4
+                },
+                {
+                  "text": "At the entry: 2 habits",
+                  "cue": 5
+                },
+                {
+                  "text": "After the exit: 1 habit",
+                  "cue": 6
+                },
+                {
+                  "text": "Around the desk: 1 habit",
+                  "cue": 7
+                }
+              ],
+              "tone": "cyan"
+            },
+            "aside": {
+              "head": "8 habits",
+              "sub": "a line each",
+              "cue": 1,
+              "size": 22
+            }
+          },
+          "start": 32.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Four parts of the day: before the open four habits, at the entry two, after the exit one, and around the desk one\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Eight habits, four parts</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Mechanical first, the people last</text><g class=\"sv-rv\" style=\"animation-delay:36.1s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Before the open: 4 habits</text></g><g class=\"sv-rv\" style=\"animation-delay:38.6s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">At the entry: 2 habits</text></g><g class=\"sv-rv\" style=\"animation-delay:40.6s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">After the exit: 1 habit</text></g><g class=\"sv-rv\" style=\"animation-delay:42.7s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Around the desk: 1 habit</text></g><g class=\"sv-rv\" style=\"animation-delay:9.1s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">8 habits</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">a line each</text></g></svg>"
+        },
+        {
+          "title": "A line on paper",
+          "kind": "compare",
+          "data": {
+            "title": "A line on paper",
+            "subtitle": "Count only what you can point to",
+            "aria": "The rule on the left, getting it wrong and its fix on the right",
+            "columns": [
+              {
+                "tone": "green",
+                "head": "The rule",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "A habit leaves a line",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "On paper, every session",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Whatever the day did",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              },
+              {
+                "tone": "red",
+                "head": "Getting it wrong",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "A habit you cannot show",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Memory fills in the line",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Fix: no line, no habit",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "t",
+                    "tone": "gold",
+                    "cue": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 81.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The rule on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A line on paper</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Count only what you can point to</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">The rule</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A habit leaves a line</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On paper, every session</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Whatever the day did</text></g><g class=\"sv-rv\" style=\"animation-delay:7.6s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A habit you cannot show</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Memory fills in the line</text><g class=\"sv-rv\" style=\"animation-delay:17.8s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: no line, no habit</text></g></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "What does a habit have to leave to count?",
+          "options": [
+            "A feeling that it ran",
+            "A line on paper every session",
+            "A good result",
+            "A note from a partner"
+          ],
+          "answer": 1,
+          "why": "A habit counts only when it leaves a line on paper every session, whatever the day did."
+        },
+        {
+          "q": "Which of the four parts of the day comes last?",
+          "options": [
+            "Before the open",
+            "At the entry",
+            "After the exit",
+            "Around the desk"
+          ],
+          "answer": 3,
+          "why": "The mechanical parts come first. The people around your desk come last, because that one is about you, not the chart."
+        },
+        {
+          "q": "You sit down with no idea written and take a trade from a price you noticed. What was the gap?",
+          "options": [
+            "Knowledge of triggers",
+            "A basic you knew and skipped",
+            "A poor level",
+            "The wrong instrument"
+          ],
+          "answer": 1,
+          "why": "None of it was a gap in knowledge. Each was a basic you knew and skipped."
+        },
+        {
+          "q": "You say all eight habits are running but cannot show a line for three. What does that reveal?",
+          "options": [
+            "You are trusting memory",
+            "The habits are in the wrong order",
+            "You have too few habits",
+            "Nothing"
+          ],
+          "answer": 0,
+          "why": "A habit you believe in and cannot show is memory, and memory agrees with how the day ended."
+        }
+      ],
+      "audio": "../assets/audio/19/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "Before the open: idea, two plans, one goal",
+      "sections": [
+        "Before The Open: Your Idea, Two Plans And One Goal"
+      ],
+      "duration": 152.7,
+      "cues": [
+        {
+          "start": 0,
+          "text": "Four habits, all on the sheet before 9:25 a.m.",
+          "chapter": "Before the open"
+        },
+        {
+          "start": 3.9,
+          "text": "One: know your idea. If price reaches a named level, you do this, and you are wrong at this price.",
+          "chapter": "One: know your idea"
+        },
+        {
+          "start": 11.9,
+          "text": "Name the level by its slug, the short name you log it under, like pd-high. The invalidation is the price that ends the idea."
+        },
+        {
+          "start": 21.4,
+          "text": "Add a conviction, counted not felt: one point for each of three checks."
+        },
+        {
+          "start": 26.8,
+          "text": "No day-type call. Trend day is a label no price at 9:45 can prove wrong."
+        },
+        {
+          "start": 33,
+          "text": "The rule: the idea is on paper before 9:25 a.m., with a slug, an invalidation and a counted conviction."
+        },
+        {
+          "start": 40.6,
+          "text": "Getting it wrong is writing feels like a trend day up. A forecast came first, and every bar will be read to agree."
+        },
+        {
+          "start": 49.8,
+          "text": "The fix: write the idea backwards, invalidation first."
+        },
+        {
+          "start": 53.3,
+          "text": "Two: have a plan. One or more branches and a nothing case. It says what you do at each place price can go, never where it will go.",
+          "chapter": "Two: have a plan"
+        },
+        {
+          "start": 64.3,
+          "text": "A branch reads: if price does this at a slug, and the trigger fires, you do that. You are wrong at this price."
+        },
+        {
+          "start": 73.4,
+          "text": "Getting it wrong is looking for longs. That is not a plan. It is a mood."
+        },
+        {
+          "start": 79.9,
+          "text": "The fix: every branch begins with if, names a slug, and carries an invalidation price. Cross out any line missing one."
+        },
+        {
+          "start": 88.3,
+          "text": "Three: have a second plan. Price can reach the other side, so write a branch there too.",
+          "chapter": "Three: a second plan"
+        },
+        {
+          "start": 95.2,
+          "text": "Between the branches sits the nothing case: a price range with two numbers, ending in no trade."
+        },
+        {
+          "start": 102.1,
+          "text": "The rule: a branch on each side of price, and a nothing case."
+        },
+        {
+          "start": 107.5,
+          "text": "Getting it wrong is one branch, long, and nothing below price. The side you did not write gets filled by impulse."
+        },
+        {
+          "start": 115.9,
+          "text": "Four: set your process goal, from one weakness in your last weekly review.",
+          "chapter": "Four: your process goal"
+        },
+        {
+          "start": 121.3,
+          "text": "One sentence about what you do, never what you make. Say it aloud: Today you enter only after the trigger fires at a level on the plan."
+        },
+        {
+          "start": 131.9,
+          "text": "The rule: one goal, marked kept or not kept at the close."
+        },
+        {
+          "start": 137,
+          "text": "Getting it wrong is make two R today. That is a wish about the result, so nothing you do can be checked."
+        },
+        {
+          "start": 145.7,
+          "text": "The fix: name an action the journal records, like the trigger field or the stop price."
+        }
+      ],
+      "slides": [
+        {
+          "title": "Know your idea",
+          "kind": "list",
+          "data": {
+            "title": "Know your idea",
+            "subtitle": "A conditional statement, written before the open",
+            "aria": "An idea: a named level, an invalidation price, a counted conviction, and no day-type call",
+            "rows": {
+              "items": [
+                {
+                  "text": "If price reaches a named level",
+                  "cue": 1
+                },
+                {
+                  "text": "A slug and an invalidation price",
+                  "cue": 2
+                },
+                {
+                  "text": "Conviction: counted, not felt",
+                  "cue": 3
+                },
+                {
+                  "text": "No day-type call",
+                  "cue": 4
+                }
+              ],
+              "tone": "cyan"
+            },
+            "aside": {
+              "head": "9:25 a.m.",
+              "sub": "on paper first",
+              "cue": 5,
+              "size": 18
+            },
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "Fix: write it backwards, invalidation first.",
+                "size": 16,
+                "cls": "t",
+                "cue": 7,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"An idea: a named level, an invalidation price, a counted conviction, and no day-type call\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Know your idea</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A conditional statement, written before the open</text><g class=\"sv-rv\" style=\"animation-delay:3.9s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">If price reaches a named level</text></g><g class=\"sv-rv\" style=\"animation-delay:11.9s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">A slug and an invalidation price</text></g><g class=\"sv-rv\" style=\"animation-delay:21.4s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Conviction: counted, not felt</text></g><g class=\"sv-rv\" style=\"animation-delay:26.8s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No day-type call</text></g><g class=\"sv-rv\" style=\"animation-delay:33.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"18\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">9:25 a.m.</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">on paper first</text></g><g class=\"sv-rv\" style=\"animation-delay:49.8s\"><text x=\"32\" y=\"300\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: write it backwards, invalidation first.</text></g></svg>"
+        },
+        {
+          "title": "The plan",
+          "kind": "compare",
+          "data": {
+            "title": "The plan",
+            "subtitle": "What you do at each place price can go",
+            "aria": "A branch in its written form on the left, getting it wrong and its fix on the right",
+            "columns": [
+              {
+                "tone": "green",
+                "head": "A branch reads",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "If price does X at [slug]",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "and [trigger] fires, you do Y",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Wrong on [price], candle close",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              },
+              {
+                "tone": "red",
+                "head": "Getting it wrong",
+                "cue": 2,
+                "lines": [
+                  {
+                    "text": "Looking for longs",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "A direction and no place",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Fix: if, a slug, a price",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "t",
+                    "tone": "gold",
+                    "cue": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 53.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A branch in its written form on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">The plan</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">What you do at each place price can go</text><g class=\"sv-rv\" style=\"animation-delay:11.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">A branch reads</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">If price does X at [slug]</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">and [trigger] fires, you do Y</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Wrong on [price], candle close</text></g><g class=\"sv-rv\" style=\"animation-delay:20.1s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Looking for longs</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A direction and no place</text><g class=\"sv-rv\" style=\"animation-delay:26.6s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: if, a slug, a price</text></g></g></svg>"
+        },
+        {
+          "title": "A second plan",
+          "kind": "compare",
+          "data": {
+            "title": "A second plan",
+            "subtitle": "One branch each side, and a nothing case",
+            "aria": "One branch on each side of price and the nothing case between them",
+            "columns": [
+              {
+                "tone": "cyan",
+                "head": "Two sides of price",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "A branch above price",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "A branch below price",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Each with its own invalidation",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              },
+              {
+                "tone": "gold",
+                "head": "The nothing case",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "A range with two numbers",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Where no branch applies",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "The action is no trade",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "One side only fills the other with impulse.",
+                "size": 16,
+                "cls": "t",
+                "cue": 3,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 88.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"One branch on each side of price and the nothing case between them\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">A second plan</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One branch each side, and a nothing case</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--cyan)\">Two sides of price</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A branch above price</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A branch below price</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each with its own invalidation</text></g><g class=\"sv-rv\" style=\"animation-delay:6.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The nothing case</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A range with two numbers</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Where no branch applies</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The action is no trade</text></g><g class=\"sv-rv\" style=\"animation-delay:19.2s\"><text x=\"32\" y=\"300\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">One side only fills the other with impulse.</text></g></svg>"
+        },
+        {
+          "title": "One goal, said aloud",
+          "kind": "compare",
+          "data": {
+            "title": "One goal, said aloud",
+            "subtitle": "Marked kept or not kept at the close",
+            "aria": "The process goal on the left, getting it wrong and its fix on the right",
+            "columns": [
+              {
+                "tone": "green",
+                "head": "A process goal",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "One sentence",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "About what you do",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Names an action the journal records",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              },
+              {
+                "tone": "red",
+                "head": "Getting it wrong",
+                "cue": 3,
+                "lines": [
+                  {
+                    "text": "Three goals at once",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Make 2R, a wish about the result",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Fix: one action, one sentence",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "t",
+                    "tone": "gold",
+                    "cue": 4
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 115.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The process goal on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">One goal, said aloud</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Marked kept or not kept at the close</text><g class=\"sv-rv\" style=\"animation-delay:5.4s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">A process goal</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One sentence</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">About what you do</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Names an action the journal records</text></g><g class=\"sv-rv\" style=\"animation-delay:21.1s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Three goals at once</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Make 2R, a wish about the result</text><g class=\"sv-rv\" style=\"animation-delay:29.8s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: one action, one sentence</text></g></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "What does the conviction on an idea count?",
+          "options": [
+            "How strongly you feel",
+            "One point for each of three checks",
+            "Your last three trades",
+            "The size of the stop"
+          ],
+          "answer": 1,
+          "why": "Conviction is counted, not felt: three is strong, two moderate, one or none thin."
+        },
+        {
+          "q": "Which line belongs in a branch?",
+          "options": [
+            "Looking for longs",
+            "Buy the dip",
+            "If price does X at a slug and the trigger fires, you do Y",
+            "Feels like a trend day"
+          ],
+          "answer": 2,
+          "why": "A branch begins with if, names a slug and a trigger, and carries an invalidation price."
+        },
+        {
+          "q": "What is the nothing case?",
+          "options": [
+            "A price range with two numbers where no branch applies, ending in no trade",
+            "A branch for when the first one fails",
+            "A forecast for a quiet session",
+            "A rest day"
+          ],
+          "answer": 0,
+          "why": "The nothing case is a range with two numbers, and the action in it is no trade."
+        },
+        {
+          "q": "Your process goal reads \"make 2R\". What does that reveal?",
+          "options": [
+            "A well-formed goal",
+            "A wish about the result, so no behaviour can be checked",
+            "A goal that is too small",
+            "A goal that needs a slug"
+          ],
+          "answer": 1,
+          "why": "A process goal names an action the journal records, never an amount you make."
+        }
+      ],
+      "audio": "../assets/audio/19/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "At the entry, and after the exit",
+      "sections": [
+        "At The Entry: Your Setups And Your Stop",
+        "After The Exit: Review And Grade Every Trade"
+      ],
+      "duration": 158.8,
+      "cues": [
+        {
+          "start": 0,
+          "text": "Five: only trade your setups. A setup is yours when it sits on your plan as a branch and in your journal as a slug.",
+          "chapter": "Five: your setups"
+        },
+        {
+          "start": 9.9,
+          "text": "The rule: every entry matches a branch you wrote before 9:25 a.m."
+        },
+        {
+          "start": 14.9,
+          "text": "Getting it wrong is a midday trade from a price you found on the screen, or one copied from a chat. It reveals the screen became the plan the moment the plan went quiet."
+        },
+        {
+          "start": 28.1,
+          "text": "The fix: before the order is armed, read the branch it comes from aloud. No branch to read, no order. A trade taken anyway is tagged No Setup, the journal tag for a trade taken on feel."
+        },
+        {
+          "start": 42.4,
+          "text": "Six: honour your stop.",
+          "chapter": "Six: honour your stop"
+        },
+        {
+          "start": 44.5,
+          "text": "The stop is a resting order behind the zone's far edge, sent with the entry as a bracket: an entry and its stop, sent together."
+        },
+        {
+          "start": 54.3,
+          "text": "It is never widened or pulled to breakeven by hand. The one planned scale is the only change the plan allows."
+        },
+        {
+          "start": 62.7,
+          "text": "The rule: every trade has its stop resting from the moment of entry, at the price the plan wrote, until the trade ends."
+        },
+        {
+          "start": 71.8,
+          "text": "A stop you can move is not a stop. It is a suggestion."
+        },
+        {
+          "start": 77.3,
+          "text": "Getting it wrong is a stop dragged two points further away as price closes in, or tightened to breakeven to be safe. It reveals the stop is being treated as an opinion, so the risk you sized for is not the risk you carry."
+        },
+        {
+          "start": 94.1,
+          "text": "The fix: the order template sends the stop with the entry, with automatic breakeven off. A widened stop is tagged Broke Rule, the tag for a broken hard rule. A stop moved closer and hit is tagged Too Early, a manual exit for none of the four reasons on the Pass list."
+        },
+        {
+          "start": 114,
+          "text": "Seven: review and grade every trade.",
+          "chapter": "Seven: review and grade"
+        },
+        {
+          "start": 116.8,
+          "text": "The grade is A plus, A, B or C, given at entry from four checks, before the trade resolves."
+        },
+        {
+          "start": 124.5,
+          "text": "Then, after the exit, the execution mark: Pass or Fail."
+        },
+        {
+          "start": 128.8,
+          "text": "The rule: every trade is graded at entry and marked the same day, with one line in your own words."
+        },
+        {
+          "start": 136.8,
+          "text": "Getting it wrong is grading only the losers, or a week of trades marked on Sunday from memory. It reveals the review is chasing pain instead of recording decisions."
+        },
+        {
+          "start": 148.1,
+          "text": "The fix: the grade is filled before the exit, and the end-of-day routine is not finished while any trade of the day has an empty mark."
+        }
+      ],
+      "slides": [
+        {
+          "title": "Only your setups",
+          "kind": "compare",
+          "data": {
+            "title": "Only your setups",
+            "subtitle": "Matched to a branch from before 9:25 a.m.",
+            "aria": "A setup that is yours on the left, getting it wrong and its fix on the right",
+            "columns": [
+              {
+                "tone": "green",
+                "head": "A setup that is yours",
+                "cue": 0,
+                "lines": [
+                  {
+                    "text": "On your plan as a branch",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "In your journal as a slug",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "With its own count of trades",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              },
+              {
+                "tone": "red",
+                "head": "Getting it wrong",
+                "cue": 2,
+                "lines": [
+                  {
+                    "text": "A price found on the screen",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "A trade copied from a chat",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Fix: no branch, no order",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "t",
+                    "tone": "gold",
+                    "cue": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A setup that is yours on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Only your setups</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Matched to a branch from before 9:25 a.m.</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">A setup that is yours</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">On your plan as a branch</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">In your journal as a slug</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">With its own count of trades</text></g><g class=\"sv-rv\" style=\"animation-delay:14.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A price found on the screen</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A trade copied from a chat</text><g class=\"sv-rv\" style=\"animation-delay:28.1s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: no branch, no order</text></g></g></svg>"
+        },
+        {
+          "title": "Honour your stop",
+          "kind": "compare",
+          "data": {
+            "title": "Honour your stop",
+            "subtitle": "At the price the plan wrote, until the trade ends",
+            "aria": "Your stop on the left, getting it wrong and its fix on the right",
+            "columns": [
+              {
+                "tone": "green",
+                "head": "Your stop",
+                "cue": 3,
+                "lines": [
+                  {
+                    "text": "Resting from the moment of entry",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Sent with the entry, one bracket",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Never widened, never pulled",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              },
+              {
+                "tone": "red",
+                "head": "Getting it wrong",
+                "cue": 5,
+                "lines": [
+                  {
+                    "text": "Dragged away as price closes",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Tightened to breakeven by hand",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Fix: bracket, breakeven off",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "t",
+                    "tone": "gold",
+                    "cue": 6
+                  }
+                ]
+              }
+            ]
+          },
+          "start": 42.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Your stop on the left, getting it wrong and its fix on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Honour your stop</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">At the price the plan wrote, until the trade ends</text><g class=\"sv-rv\" style=\"animation-delay:20.3s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Your stop</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Resting from the moment of entry</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Sent with the entry, one bracket</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Never widened, never pulled</text></g><g class=\"sv-rv\" style=\"animation-delay:34.9s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">Getting it wrong</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Dragged away as price closes</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Tightened to breakeven by hand</text><g class=\"sv-rv\" style=\"animation-delay:51.7s\"><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Fix: bracket, breakeven off</text></g></g></svg>"
+        },
+        {
+          "title": "Grade, then mark",
+          "kind": "cards",
+          "data": {
+            "title": "Grade, then mark",
+            "subtitle": "Two entries per trade, both written the same day",
+            "aria": "The grade is given at entry from four checks, the execution mark after the exit is Pass or Fail",
+            "parts": [
+              {
+                "n": "1",
+                "head": "At entry: the grade",
+                "lines": [
+                  "A+, A, B or C,",
+                  "from four checks"
+                ],
+                "foot": "Before it resolves",
+                "cue": 1
+              },
+              {
+                "n": "2",
+                "head": "After exit: the mark",
+                "lines": [
+                  "Pass or Fail:",
+                  "did the exit follow the plan"
+                ],
+                "foot": "The same day",
+                "cue": 2
+              }
+            ],
+            "verdicts": {
+              "cue": 3,
+              "items": [
+                {
+                  "head": "Every trade",
+                  "text": "Not only the losers",
+                  "tone": "green",
+                  "cue": 4
+                },
+                {
+                  "head": "The same day",
+                  "text": "Not on Sunday, from memory",
+                  "tone": "gold",
+                  "cue": 5
+                }
+              ]
+            }
+          },
+          "start": 114,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The grade is given at entry from four checks, the execution mark after the exit is Pass or Fail\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Grade, then mark</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Two entries per trade, both written the same day</text><g class=\"sv-rv\" style=\"animation-delay:2.8s\"><rect x=\"32\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">At entry: the grade</text><text x=\"76\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A+, A, B or C,</text><text x=\"76\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">from four checks</text><text x=\"76\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">Before it resolves</text></g><g class=\"sv-rv\" style=\"animation-delay:10.5s\"><rect x=\"330\" y=\"90\" width=\"278\" height=\"110\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"116\" font-size=\"22\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"374\" y=\"116\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">After exit: the mark</text><text x=\"374\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Pass or Fail:</text><text x=\"374\" y=\"160\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">did the exit follow the plan</text><text x=\"374\" y=\"186\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-d\">The same day</text></g><g class=\"sv-rv\" style=\"animation-delay:22.8s\"><rect x=\"32\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">Every trade</text><text x=\"48\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Not only the losers</text></g><g class=\"sv-rv\" style=\"animation-delay:34.1s\"><rect x=\"330\" y=\"222\" width=\"278\" height=\"80\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"346\" y=\"250\" font-size=\"15\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">The same day</text><text x=\"346\" y=\"274\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Not on Sunday, from memory</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "When is the grade written?",
+          "options": [
+            "At entry, before the trade resolves",
+            "After the exit",
+            "In the weekly review",
+            "When the target fills"
+          ],
+          "answer": 0,
+          "why": "The grade is given at entry from four checks. The mark is what comes after the exit."
+        },
+        {
+          "q": "You take a trade from a price you found on the screen, with no branch behind it. How is it tagged?",
+          "options": [
+            "Too Early",
+            "Broke Rule",
+            "No Setup",
+            "Pass"
+          ],
+          "answer": 2,
+          "why": "No Setup is the tag for a trade with no named location and read behind it."
+        },
+        {
+          "q": "Your stop is dragged two points further away as price closes in. What does that reveal?",
+          "options": [
+            "Patience",
+            "The stop is treated as an opinion, and the trade is tagged Broke Rule",
+            "A good read of the zone",
+            "A stop that was too tight"
+          ],
+          "answer": 1,
+          "why": "A widened stop is tagged Broke Rule. The risk you sized for is no longer the risk you carry."
+        },
+        {
+          "q": "The end-of-day routine is not finished while...",
+          "options": [
+            "The chat is open",
+            "Price is still moving",
+            "Any trade of the day has an empty mark",
+            "A branch went unused"
+          ],
+          "answer": 2,
+          "why": "Every trade is marked the same day, so an empty mark means the routine is not finished."
+        }
+      ],
+      "audio": "../assets/audio/19/s3.mp3"
+    },
+    {
+      "id": "s4",
+      "title": "Around the desk, and the worked case",
+      "sections": [
+        "Around The Desk: Find Your People",
+        "Worked Case: One Session, Eight Lines"
+      ],
+      "duration": 146.5,
+      "cues": [
+        {
+          "start": 0,
+          "text": "Eight: find your people. Find a trading partner or group that speaks the language, after the session. The sheet is yours. Before 9:25 a.m., nothing from anyone else goes on it.",
+          "chapter": "Eight: find your people"
+        },
+        {
+          "start": 12.1,
+          "text": "What you share is your record, not your calls. Once a week: the review's counts, your grades, your marks, your Too Early count and your Broke Rule ledger. And you read theirs."
+        },
+        {
+          "start": 24.5,
+          "text": "This is the hard one, because the pull toward other traders is strongest on the mornings your own sheet looks uncertain."
+        },
+        {
+          "start": 32.9,
+          "text": "The chat is very sure of itself. That is not the same as being right."
+        },
+        {
+          "start": 39.1,
+          "text": "The rule: outside views stay closed until after the close, and once a week you exchange review fields with a partner or group."
+        },
+        {
+          "start": 48.2,
+          "text": "Getting it wrong is opening the chat at 8:50 and adding a branch at 9:24 that matches a post. It reveals you are asking someone else to carry the uncertainty, so the idea on the sheet is no longer yours to grade."
+        },
+        {
+          "start": 64.3,
+          "text": "The fix: chats, feeds and notes stay closed until the close. The weekly exchange uses the review sheet's lines and nothing else: no screenshots of P and L, and no calls for your next session."
+        },
+        {
+          "start": 77.9,
+          "text": "Now, the worked case. A composite MNQ session, built to show each habit as a line on paper. It belongs to no one, and the prices are invented.",
+          "chapter": "The worked case"
+        },
+        {
+          "start": 88.9,
+          "text": "One: the idea, on the sheet by 9:21 a.m., with its slug, its invalidation and its counted conviction."
+        },
+        {
+          "start": 96.1,
+          "text": "Two and three: an idea on each side of price, and a nothing case between them with two numbers, ending in no trade."
+        },
+        {
+          "start": 105.3,
+          "text": "Four: the process goal, said aloud at 9:15, taken from the last weekly review."
+        },
+        {
+          "start": 111,
+          "text": "Five: the entry matches the first idea. A fast move off an unmarked price gets one line in the notes and no order."
+        },
+        {
+          "start": 120.2,
+          "text": "Six: the stop goes with the entry as a bracket, and it is not touched. Seven: the grade at entry and the mark after the exit, both written the same day."
+        },
+        {
+          "start": 132.2,
+          "text": "Eight: no chat opened before the close. On Sunday, the week's review lines go to a partner."
+        },
+        {
+          "start": 139.1,
+          "text": "Eight lines, all on paper. Where price went after the exit is not on any of them."
+        }
+      ],
+      "slides": [
+        {
+          "title": "Your record, not your calls",
+          "kind": "compare",
+          "data": {
+            "title": "Your record, not your calls",
+            "subtitle": "Once a week, the same fields every time",
+            "aria": "What you share with a partner on the left, what you do not on the right",
+            "columns": [
+              {
+                "tone": "green",
+                "head": "What you share",
+                "cue": 1,
+                "lines": [
+                  {
+                    "text": "Your review counts",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Grades, marks, Too Early count",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "The Broke Rule ledger",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              },
+              {
+                "tone": "red",
+                "head": "What you do not",
+                "cue": 6,
+                "lines": [
+                  {
+                    "text": "Your calls",
+                    "y": 56,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Screenshots of P and L",
+                    "y": 84,
+                    "size": 13,
+                    "cls": "m"
+                  },
+                  {
+                    "text": "Calls for your next session",
+                    "y": 112,
+                    "size": 13,
+                    "cls": "m"
+                  }
+                ]
+              }
+            ],
+            "blocks": [
+              {
+                "type": "note",
+                "x": 32,
+                "y": 300,
+                "text": "Chats stay closed until after the close.",
+                "size": 16,
+                "cls": "t",
+                "cue": 4,
+                "tone": "gold"
+              }
+            ]
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"What you share with a partner on the left, what you do not on the right\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Your record, not your calls</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Once a week, the same fields every time</text><g class=\"sv-rv\" style=\"animation-delay:12.1s\"><rect x=\"32\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--green)\">What you share</text><text x=\"48\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your review counts</text><text x=\"48\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Grades, marks, Too Early count</text><text x=\"48\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Broke Rule ledger</text></g><g class=\"sv-rv\" style=\"animation-delay:64.3s\"><rect x=\"328\" y=\"84\" width=\"280\" height=\"190\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"344\" y=\"112\" font-size=\"20\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--red)\">What you do not</text><text x=\"344\" y=\"140\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your calls</text><text x=\"344\" y=\"168\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Screenshots of P and L</text><text x=\"344\" y=\"196\" font-size=\"13\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Calls for your next session</text></g><g class=\"sv-rv\" style=\"animation-delay:39.1s\"><text x=\"32\" y=\"300\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Chats stay closed until after the close.</text></g></svg>"
+        },
+        {
+          "title": "Eight lines, one session",
+          "kind": "list",
+          "data": {
+            "title": "Eight lines, one session",
+            "subtitle": "A composite session, invented prices, no entries shown",
+            "aria": "The eight habits as eight lines on paper in a composite session",
+            "rows": {
+              "items": [
+                {
+                  "text": "Idea: slug, invalidation, conviction",
+                  "cue": 1
+                },
+                {
+                  "text": "Plan: if, slug, trigger, wrong-on price",
+                  "cue": 2
+                },
+                {
+                  "text": "Second plan: other side, nothing case",
+                  "cue": 2
+                },
+                {
+                  "text": "Process goal, said aloud",
+                  "cue": 3
+                },
+                {
+                  "text": "Setup matches the first idea",
+                  "cue": 4
+                },
+                {
+                  "text": "Stop sent with entry, left alone",
+                  "cue": 5
+                },
+                {
+                  "text": "Grade at entry, mark after exit",
+                  "cue": 5
+                },
+                {
+                  "text": "No chat before the close",
+                  "cue": 6
+                }
+              ],
+              "tone": "cyan",
+              "pitch": 32,
+              "h": 28
+            },
+            "aside": {
+              "head": "On paper",
+              "sub": "all eight",
+              "cue": 7,
+              "size": 20
+            }
+          },
+          "start": 77.9,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The eight habits as eight lines on paper in a composite session\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Eight lines, one session</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">A composite session, invented prices, no entries shown</text><g class=\"sv-rv\" style=\"animation-delay:11.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Idea: slug, invalidation, conviction</text></g><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><rect x=\"32\" y=\"116\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"139\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"139\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Plan: if, slug, trigger, wrong-on price</text></g><g class=\"sv-rv\" style=\"animation-delay:18.2s\"><rect x=\"32\" y=\"148\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"171\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"171\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Second plan: other side, nothing case</text></g><g class=\"sv-rv\" style=\"animation-delay:27.4s\"><rect x=\"32\" y=\"180\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"203\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"203\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Process goal, said aloud</text></g><g class=\"sv-rv\" style=\"animation-delay:33.1s\"><rect x=\"32\" y=\"212\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"235\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"235\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Setup matches the first idea</text></g><g class=\"sv-rv\" style=\"animation-delay:42.3s\"><rect x=\"32\" y=\"244\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"267\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">6</text><text x=\"76\" y=\"267\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Stop sent with entry, left alone</text></g><g class=\"sv-rv\" style=\"animation-delay:42.3s\"><rect x=\"32\" y=\"276\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"299\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">7</text><text x=\"76\" y=\"299\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Grade at entry, mark after exit</text></g><g class=\"sv-rv\" style=\"animation-delay:54.3s\"><rect x=\"32\" y=\"308\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"331\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">8</text><text x=\"76\" y=\"331\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">No chat before the close</text></g><g class=\"sv-rv\" style=\"animation-delay:61.2s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"20\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">On paper</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">all eight</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "What do you share with a partner each week?",
+          "options": [
+            "Your calls for your next session",
+            "Screenshots of P and L",
+            "Review counts, grades, marks and your ledger",
+            "Your open positions"
+          ],
+          "answer": 2,
+          "why": "You share your record, not your calls: the review fields and nothing else."
+        },
+        {
+          "q": "Until when do outside views stay closed?",
+          "options": [
+            "Until after the close",
+            "Until the first trade",
+            "Until 9:45 a.m.",
+            "They stay open"
+          ],
+          "answer": 0,
+          "why": "Chats, feeds and notes stay closed until the close."
+        },
+        {
+          "q": "You open the chat at 8:50 and add a branch at 9:24 that matches a post. What does that reveal?",
+          "options": [
+            "You are well prepared",
+            "The idea on the sheet is no longer yours to grade",
+            "The branch is too wide",
+            "The plan needs a nothing case"
+          ],
+          "answer": 1,
+          "why": "You are asking someone else to carry the uncertainty, so the sheet is no longer yours."
+        },
+        {
+          "q": "In the composite session, what does a fast move off an unmarked price get?",
+          "options": [
+            "An order, sized small",
+            "A No Setup tag",
+            "The second idea",
+            "One line in the notes and no order"
+          ],
+          "answer": 3,
+          "why": "It matches no branch, so it gets one line in the notes and no order."
+        }
+      ],
+      "audio": "../assets/audio/19/s4.mp3"
+    },
+    {
+      "id": "s5",
+      "title": "Your score and where it goes",
+      "sections": [
+        "Which Habit Is Yours?",
+        "Before Your Next Session",
+        "Where It Goes Next"
+      ],
+      "duration": 121.4,
+      "cues": [
+        {
+          "start": 0,
+          "text": "Take your last five sessions. Score one point for each habit that left its line on paper in all five.",
+          "chapter": "Your score"
+        },
+        {
+          "start": 8,
+          "text": "One: know your idea, written before 9:25 a.m."
+        },
+        {
+          "start": 11.6,
+          "text": "Two: a plan, with a branch in the if form."
+        },
+        {
+          "start": 15.9,
+          "text": "Three: a second plan, and a nothing case with two numbers."
+        },
+        {
+          "start": 20.5,
+          "text": "Four: a process goal, marked kept or not kept."
+        },
+        {
+          "start": 24.5,
+          "text": "Five: every entry matched a branch, with no No Setup tags."
+        },
+        {
+          "start": 29.2,
+          "text": "Six: every stop rested from entry to exit at its planned price."
+        },
+        {
+          "start": 34.2,
+          "text": "Seven: every trade graded at entry and marked the same day."
+        },
+        {
+          "start": 38.9,
+          "text": "Eight: no outside view before the close, and review fields exchanged that week."
+        },
+        {
+          "start": 44.3,
+          "text": "Eight of eight: the habits are running. Keep them running.",
+          "chapter": "Reading the score"
+        },
+        {
+          "start": 48.6,
+          "text": "Six or seven: the missing habit is next week's process goal."
+        },
+        {
+          "start": 53.3,
+          "text": "Under six: start with lines one and seven. One sets what you will do. Seven records whether you did it."
+        },
+        {
+          "start": 61.3,
+          "text": "One override: a miss on line six makes the stop next week's process goal, whatever the total."
+        },
+        {
+          "start": 68.2,
+          "text": "Nobody has ever lost sleep over a sheet that was filled in on time."
+        },
+        {
+          "start": 74,
+          "text": "Now, before your next session.",
+          "chapter": "Before your next session"
+        },
+        {
+          "start": 76.4,
+          "text": "Before 9:25 a.m., write one process goal at the top of your sheet. One sentence that starts: Today you. Say it aloud once. That is the whole assignment."
+        },
+        {
+          "start": 87.4,
+          "text": "Where it goes next.",
+          "chapter": "Where it goes next"
+        },
+        {
+          "start": 89.5,
+          "text": "Each habit has a home. The idea and its counted conviction come from Module 9. The two plans and the nothing case come from Module 15, written each morning on the sheet in Module 16."
+        },
+        {
+          "start": 103,
+          "text": "The stop is built in Module 14. The grade, the mark and the weekly review that picks your process goal are in Module 18."
+        },
+        {
+          "start": 112.5,
+          "text": "Module 20 picks up the habits under pressure: the post-loss reset, the loops a bad day runs, and the readiness score."
+        }
+      ],
+      "slides": [
+        {
+          "title": "Which habit is yours?",
+          "kind": "list",
+          "data": {
+            "title": "Which habit is yours?",
+            "subtitle": "Your last five sessions: one point per habit",
+            "aria": "The eight habits scored over your last five sessions",
+            "rows": {
+              "items": [
+                {
+                  "text": "Know your idea",
+                  "cue": 1
+                },
+                {
+                  "text": "Have a plan",
+                  "cue": 2
+                },
+                {
+                  "text": "Have a second plan",
+                  "cue": 3
+                },
+                {
+                  "text": "Set a process goal",
+                  "cue": 4
+                },
+                {
+                  "text": "Only trade your setups",
+                  "cue": 5
+                },
+                {
+                  "text": "Honour your stop",
+                  "cue": 6
+                },
+                {
+                  "text": "Review and grade",
+                  "cue": 7
+                },
+                {
+                  "text": "Find your people",
+                  "cue": 8
+                }
+              ],
+              "tone": "cyan",
+              "pitch": 32,
+              "h": 28
+            },
+            "aside": {
+              "head": "1 point",
+              "sub": "per habit",
+              "cue": 0,
+              "size": 22
+            }
+          },
+          "start": 0,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The eight habits scored over your last five sessions\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Which habit is yours?</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Your last five sessions: one point per habit</text><g class=\"sv-rv\" style=\"animation-delay:8.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Know your idea</text></g><g class=\"sv-rv\" style=\"animation-delay:11.6s\"><rect x=\"32\" y=\"116\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"139\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">2</text><text x=\"76\" y=\"139\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Have a plan</text></g><g class=\"sv-rv\" style=\"animation-delay:15.9s\"><rect x=\"32\" y=\"148\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"171\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">3</text><text x=\"76\" y=\"171\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Have a second plan</text></g><g class=\"sv-rv\" style=\"animation-delay:20.5s\"><rect x=\"32\" y=\"180\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"203\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"203\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Set a process goal</text></g><g class=\"sv-rv\" style=\"animation-delay:24.5s\"><rect x=\"32\" y=\"212\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"235\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">5</text><text x=\"76\" y=\"235\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Only trade your setups</text></g><g class=\"sv-rv\" style=\"animation-delay:29.2s\"><rect x=\"32\" y=\"244\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"267\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">6</text><text x=\"76\" y=\"267\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Honour your stop</text></g><g class=\"sv-rv\" style=\"animation-delay:34.2s\"><rect x=\"32\" y=\"276\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"299\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">7</text><text x=\"76\" y=\"299\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Review and grade</text></g><g class=\"sv-rv\" style=\"animation-delay:38.9s\"><rect x=\"32\" y=\"308\" width=\"440\" height=\"28\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"331\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">8</text><text x=\"76\" y=\"331\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Find your people</text></g><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">1 point</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">per habit</text></g></svg>"
+        },
+        {
+          "title": "Reading the score",
+          "kind": "list",
+          "data": {
+            "title": "Reading the score",
+            "subtitle": "The missing habit is the next goal",
+            "aria": "8 of 8 keeps the habits running, 6 or 7 makes the missing habit the goal, under 6 starts with lines 1 and 7, and a miss on line 6 overrides the total",
+            "rows": {
+              "items": [
+                {
+                  "text": "8 of 8: keep them running",
+                  "cue": 0,
+                  "tone": "green"
+                },
+                {
+                  "text": "6 or 7: the missing habit is the goal",
+                  "cue": 1,
+                  "tone": "gold"
+                },
+                {
+                  "text": "Under 6: start with lines 1 and 7",
+                  "cue": 2,
+                  "tone": "red"
+                },
+                {
+                  "text": "Line 6 missed: the stop is the goal",
+                  "cue": 3,
+                  "tone": "cyan"
+                }
+              ],
+              "tone": "cyan"
+            },
+            "aside": {
+              "head": "Line 6",
+              "sub": "beats the total",
+              "cue": 3,
+              "size": 22
+            }
+          },
+          "start": 44.3,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"8 of 8 keeps the habits running, 6 or 7 makes the missing habit the goal, under 6 starts with lines 1 and 7, and a miss on line 6 overrides the total\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Reading the score</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The missing habit is the next goal</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--green)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"107\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--green)\">1</text><text x=\"76\" y=\"107\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">8 of 8: keep them running</text></g><g class=\"sv-rv\" style=\"animation-delay:4.3s\"><rect x=\"32\" y=\"128\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--gold)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"151\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--gold)\">2</text><text x=\"76\" y=\"151\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">6 or 7: the missing habit is the goal</text></g><g class=\"sv-rv\" style=\"animation-delay:9.0s\"><rect x=\"32\" y=\"172\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--red)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"195\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--red)\">3</text><text x=\"76\" y=\"195\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Under 6: start with lines 1 and 7</text></g><g class=\"sv-rv\" style=\"animation-delay:17.0s\"><rect x=\"32\" y=\"216\" width=\"440\" height=\"36\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"239\" font-size=\"15\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-n\" style=\"fill:var(--cyan)\">4</text><text x=\"76\" y=\"239\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Line 6 missed: the stop is the goal</text></g><g class=\"sv-rv\" style=\"animation-delay:17.0s\"><rect x=\"496\" y=\"84\" width=\"112\" height=\"256\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"552\" y=\"214\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\" style=\"fill:var(--gold)\">Line 6</text><text x=\"552\" y=\"240\" font-size=\"13\" font-weight=\"400\" text-anchor=\"middle\" class=\"sv-m\">beats the total</text></g></svg>"
+        },
+        {
+          "title": "Before your next session",
+          "kind": "assignment",
+          "data": {
+            "title": "Before your next session",
+            "subtitle": "One goal, said aloud",
+            "aria": "The assignment: one process goal, one sentence, said aloud once",
+            "cue": 1,
+            "fields": [
+              "Process goal",
+              "One sentence",
+              "Said aloud"
+            ],
+            "line1": "Before 9:25 a.m., at the top of your sheet.",
+            "line2": "One sentence that starts: Today you."
+          },
+          "start": 74,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The assignment: one process goal, one sentence, said aloud once\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Before your next session</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">One goal, said aloud</text><g class=\"sv-rv\" style=\"animation-delay:2.4s\"><rect x=\"32\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"78\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Process goal</text></g><g class=\"sv-rv\" style=\"animation-delay:3.7s\"><rect x=\"129\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"175\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">One sentence</text></g><g class=\"sv-rv\" style=\"animation-delay:5.0s\"><rect x=\"226\" y=\"110\" width=\"93\" height=\"70\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"272\" y=\"150\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" class=\"sv-t\">Said aloud</text></g><g class=\"sv-rv\" style=\"animation-delay:2.4s\"><text x=\"32\" y=\"230\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Before 9:25 a.m., at the top of your sheet.</text><text x=\"32\" y=\"254\" font-size=\"16\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">One sentence that starts: Today you.</text></g></svg>"
+        },
+        {
+          "title": "Where it goes next",
+          "kind": "summary",
+          "data": {
+            "title": "Where it goes next",
+            "subtitle": "Each habit has a home",
+            "aria": "The modules each habit comes from and feeds",
+            "statement": "Eight habits, each one a line on your paper every session.",
+            "links": [
+              {
+                "head": "Module 09",
+                "sub": "Idea Generation",
+                "cue": 1
+              },
+              {
+                "head": "Module 15",
+                "sub": "Writing The Plan",
+                "cue": 1
+              },
+              {
+                "head": "Module 16",
+                "sub": "The Pre-Market Routine",
+                "cue": 1
+              },
+              {
+                "head": "Module 14",
+                "sub": "Trade Construction",
+                "cue": 2
+              },
+              {
+                "head": "Module 18",
+                "sub": "Journaling & Review",
+                "cue": 2
+              },
+              {
+                "head": "Module 20",
+                "sub": "The Trader's Mind",
+                "cue": 3
+              }
+            ]
+          },
+          "start": 87.4,
+          "svg": "<svg viewBox=\"0 0 640 360\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The modules each habit comes from and feeds\"><style>\n.sv-t{fill:var(--text-primary);font-family:var(--font-body,sans-serif)}\n.sv-m{fill:var(--text-secondary);font-family:var(--font-body,sans-serif)}\n.sv-d{fill:var(--text-muted);font-family:var(--font-body,sans-serif)}\n.sv-n{font-family:var(--font-mono,monospace)}\n.sv-card{fill:var(--bg-card);stroke:var(--border-light);stroke-width:1}\n.sv-rv{animation:sv-in .6s ease both}\n.sv-dr{animation:sv-draw .9s ease both}\n@keyframes sv-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}\n@keyframes sv-draw{from{opacity:0}to{opacity:1}}\n@media (prefers-reduced-motion:reduce){.sv-rv,.sv-dr{animation:none}}\n</style><text x=\"32\" y=\"40\" font-size=\"24\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\">Where it goes next</text><text x=\"32\" y=\"62\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Each habit has a home</text><g class=\"sv-rv\" style=\"animation-delay:0.0s\"><rect x=\"32\" y=\"84\" width=\"576\" height=\"50\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--cyan)\" stroke-width=\"1.5\"/><text x=\"48\" y=\"115\" font-size=\"14\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-t\">Eight habits, each one a line on your paper every session.</text></g><g class=\"sv-rv\" style=\"animation-delay:2.1s\"><rect x=\"32\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 09</text><text x=\"46\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Idea Generation</text></g><g class=\"sv-rv\" style=\"animation-delay:2.1s\"><rect x=\"324\" y=\"154\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"175\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 15</text><text x=\"338\" y=\"192\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Writing The Plan</text></g><g class=\"sv-rv\" style=\"animation-delay:2.1s\"><rect x=\"32\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 16</text><text x=\"46\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Pre-Market Routine</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"324\" y=\"212\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"233\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 14</text><text x=\"338\" y=\"250\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Trade Construction</text></g><g class=\"sv-rv\" style=\"animation-delay:15.6s\"><rect x=\"32\" y=\"270\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"46\" y=\"291\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 18</text><text x=\"46\" y=\"308\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">Journaling &amp; Review</text></g><g class=\"sv-rv\" style=\"animation-delay:25.1s\"><rect x=\"324\" y=\"270\" width=\"284\" height=\"48\" rx=\"4\" fill=\"var(--bg-card)\" stroke=\"var(--border-light)\" stroke-width=\"1\"/><text x=\"338\" y=\"291\" font-size=\"14\" font-weight=\"700\" text-anchor=\"start\" class=\"sv-t\" style=\"fill:var(--gold)\">Module 20</text><text x=\"338\" y=\"308\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\" class=\"sv-m\">The Trader's Mind</text></g></svg>"
+        }
+      ],
+      "check": [
+        {
+          "q": "A habit you believe in but cannot show on paper reveals what?",
+          "options": [
+            "You are trusting memory",
+            "A strong habit",
+            "A slow week",
+            "A grading error"
+          ],
+          "answer": 0,
+          "why": "A habit with no line is memory, and memory agrees with how the day ended."
+        },
+        {
+          "q": "You score 7 of 8, and the line you missed is line 6. What is next week's process goal?",
+          "options": [
+            "The review time",
+            "Line 1",
+            "The stop",
+            "Nothing"
+          ],
+          "answer": 2,
+          "why": "A miss on line six makes the stop next week's process goal, whatever the total."
+        },
+        {
+          "q": "You score under 6. Where do you start?",
+          "options": [
+            "Lines 4 and 5",
+            "Lines 1 and 7",
+            "Line 8",
+            "Line 2"
+          ],
+          "answer": 1,
+          "why": "Line one sets what you will do, and line seven records whether you did it."
+        },
+        {
+          "q": "What is the assignment before your next session?",
+          "options": [
+            "Write one process goal at the top of your sheet and say it aloud",
+            "Review all eight habits",
+            "Join a trading group",
+            "Drop your weakest setup"
+          ],
+          "answer": 0,
+          "why": "One sentence that starts \"Today you\", said aloud once. That is the whole assignment."
+        }
+      ],
+      "audio": "../assets/audio/19/s5.mp3"
+    }
+  ],
+  "quiz": {
+    "title": "Module quiz",
+    "questions": [
+      {
+        "q": "Which of these are written before 9:25 a.m.?",
+        "options": [
+          "Only the grade",
+          "The idea, the plans and the process goal",
+          "The execution mark",
+          "The weekly review"
+        ],
+        "answer": 1,
+        "why": "The idea, both plans, the nothing case and the process goal are all on the sheet before the open."
+      },
+      {
+        "q": "What does \"looking for longs\" reveal about a plan?",
+        "options": [
+          "It names a direction and no place",
+          "It carries an invalidation",
+          "It is two-sided",
+          "It has a nothing case"
+        ],
+        "answer": 0,
+        "why": "It names a direction and no place, so the session decides where you trade."
+      },
+      {
+        "q": "A stop moved closer and hit is tagged what?",
+        "options": [
+          "Broke Rule",
+          "No Setup",
+          "Pass",
+          "Too Early"
+        ],
+        "answer": 3,
+        "why": "A stop moved closer by hand is an exit outside the Pass list, tagged Too Early."
+      },
+      {
+        "q": "What do you share with your partner or group?",
+        "options": [
+          "Your record: counts, grades, marks, ledger",
+          "Calls for your next session",
+          "Screenshots of P and L",
+          "Your open positions"
+        ],
+        "answer": 0,
+        "why": "You share your record, not your calls."
+      },
+      {
+        "q": "Which of these is a process goal?",
+        "options": [
+          "Make 2R",
+          "Feel patient",
+          "Enter only after the trigger fires at a level on the plan",
+          "Win the session"
+        ],
+        "answer": 2,
+        "why": "A process goal names an action the journal records, never a result."
+      },
+      {
+        "q": "A habit counts only when it...",
+        "options": [
+          "Feels automatic",
+          "Leaves a line on paper every session",
+          "Matches the result",
+          "Was learned from a partner"
+        ],
+        "answer": 1,
+        "why": "The line on paper is the proof. Count only what you can point to."
+      },
+      {
+        "q": "Which module builds the stop?",
+        "options": [
+          "Module 9",
+          "Module 14",
+          "Module 16",
+          "Module 18"
+        ],
+        "answer": 1,
+        "why": "The stop is built in Module 14, Trade Construction."
+      }
+    ]
+  }
+}
