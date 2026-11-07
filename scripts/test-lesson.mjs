@@ -105,10 +105,13 @@ eq('drill: no banned wording', /beginner|advanced|validated|unproven|\bkilled\b|
 eq('vendor notice kept', /TradingView/.test(readFileSync(path.join(ROOT, 'js/vendor/NOTICE-lightweight-charts.txt'), 'utf8')), true);
 eq('vendor license kept', /Apache License/.test(readFileSync(path.join(ROOT, 'js/vendor/LICENSE-lightweight-charts.txt'), 'utf8')), true);
 
+// A module's page is its modules.json "file" when set (Module 18 lives in 12-journaling.html), else <id>.html.
+const MODULES = JSON.parse(readFileSync(path.join(ROOT, 'data/modules.json'), 'utf8'));
 // Every other shipped lesson (item 20 builds): valid config, every h2 owned, checks and quiz valid, content rules.
 for (const f of readdirSync(path.join(ROOT, 'data/lessons')).filter((x) => x.endsWith('.json') && !x.startsWith('06-')).sort()) {
   const c = JSON.parse(readFileSync(path.join(ROOT, 'data/lessons', f), 'utf8'));
-  const page = readFileSync(path.join(ROOT, 'modules', `${c.module}.html`), 'utf8');
+  const entry = MODULES.find((m) => m.id === c.module);
+  const page = readFileSync(path.join(ROOT, 'modules', entry?.file ?? `${c.module}.html`), 'utf8');
   const heads = [...page.matchAll(/<h2[^>]*>(.*?)<\/h2>/g)].map((m) => m[1].replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').trim());
   const own = c.segments.flatMap((x) => x.sections);
   eq(`${f} valid`, validateConfig(c), []);
